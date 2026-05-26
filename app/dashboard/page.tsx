@@ -12,7 +12,8 @@ const FINDING_CFG: Record<string, { bg: string; border: string; color: string; i
 
 function ScanDetail({ scan }: { scan: any }) {
   const findings: any[] = scan.findings || []
-  const statusColor = { pass: '#3B6D11', fail: '#A32D2D', uncertain: '#854F0B' }[scan.status as string] || '#854F0B'
+  const statusColors: Record<string, string> = { pass: '#3B6D11', fail: '#A32D2D', uncertain: '#854F0B' }
+  const statusColor = statusColors[scan.status] || '#854F0B'
   return (
     <div style={{ borderTop: '0.5px solid #F0EDE6', marginTop: 10, paddingTop: 12 }}>
       {scan.summary && (
@@ -145,7 +146,8 @@ export default function DashboardPage() {
           ) : (
             scans.map(scan => {
               const isOpen = openScan === scan.id
-              const statusColor = { pass: '#3B6D11', fail: '#A32D2D', uncertain: '#854F0B' }[scan.status] || '#854F0B'
+              const statusColors: Record<string, string> = { pass: '#3B6D11', fail: '#A32D2D', uncertain: '#854F0B' }
+              const statusColor = statusColors[scan.status] || '#854F0B'
               return (
                 <div key={scan.id} style={{ background: '#fff', borderRadius: 12, border: `0.5px solid ${isOpen ? NAVY : '#E0DDD6'}`, marginBottom: 8, overflow: 'hidden', transition: 'border-color 0.15s' }}>
                   <div onClick={() => setOpenScan(isOpen ? null : scan.id)}
