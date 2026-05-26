@@ -569,7 +569,7 @@ export default function SafetyScan() {
               );
 
               if (r.status === "done") return (
-                <PhotoResultCard key={i} photo={photos[i]} index={i} total={photos.length} onReanalyse={reanalyse} />
+                <PhotoResultCard key={i} photo={{ ...photos[i], result: r.result }} index={i} total={photos.length} onReanalyse={reanalyse} />
               );
 
               return null;
