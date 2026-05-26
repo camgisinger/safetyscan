@@ -16,9 +16,17 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify(body),
     })
 
-    const data = await response.json()
-    return NextResponse.json(data, { status: response.status })
-  } catch (error) {
-    return NextResponse.json({ error: 'Request failed' }, { status: 500 })
+    const text = await response.text()
+
+    try {
+      const data = JSON.parse(text)
+      return NextResponse.json(data, { status: response.status })
+    } catch {
+      return NextResponse.json({
+        error: `Parse failed. Status: ${response.status}. Body: ${text.substring(0, 500)}`
+      }, { status: 500 })
+    }
+  } catch (error: any) {
+    return NextResponse.json({ error: error.message || 'Request failed' }, { status: 500 })
   }
 }
