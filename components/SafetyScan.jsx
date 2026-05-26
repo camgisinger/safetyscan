@@ -396,8 +396,6 @@ const LOADING_MESSAGES = [
   "Identifying work type...",
   "Checking Queensland legislation...",
   "Reviewing WHS compliance...",
-  "Analysing structural elements...",
-  "Cross-referencing AS standards...",
   "Checking safety requirements...",
   "Generating site checklist...",
   "Reviewing findings...",
@@ -410,7 +408,7 @@ function LoadingSpinner() {
 
   useEffect(() => {
     const msgTimer = setInterval(() => {
-      setMsgIdx(prev => (prev + 1) % LOADING_MESSAGES.length);
+      setMsgIdx(prev => prev >= LOADING_MESSAGES.length - 1 ? prev : prev + 1);
     }, 2200);
     const progTimer = setInterval(() => {
       setProgress(prev => prev >= 92 ? 92 : prev + Math.random() * 8);
@@ -525,6 +523,7 @@ export default function SafetyScan() {
         @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
         @keyframes progressPulse { 0% { width: 20%; } 50% { width: 85%; } 100% { width: 20%; } }
+        @keyframes dotPulse { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1); } }
         * { box-sizing: border-box; }
         button:active { transform: scale(0.98); }
       `}</style>
@@ -637,13 +636,16 @@ export default function SafetyScan() {
 
             {results.map((r, i) => {
               if (r.status === "loading") return (
-                <div key={i} style={{ background: "#fff", borderRadius: 14, border: "0.5px solid #E0DDD6", padding: "20px 16px", marginBottom: 14, display: "flex", alignItems: "center", gap: 12 }}>
-                  {photos[i] && <img src={photos[i].dataUrl} alt="" style={{ width: 40, height: 40, borderRadius: 6, objectFit: "cover", flexShrink: 0 }} />}
+                <div key={i} style={{ background: "#fff", borderRadius: 14, border: "0.5px solid #E0DDD6", padding: "16px", marginBottom: 14, display: "flex", alignItems: "center", gap: 14 }}>
+                  {photos[i] && <img src={photos[i].dataUrl} alt="" style={{ width: 48, height: 48, borderRadius: 8, objectFit: "cover", flexShrink: 0, opacity: 0.6 }} />}
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 4 }}>Photo {i + 1} — Analysing…</div>
-                    <div style={{ height: 4, background: "#F1EFE8", borderRadius: 2, overflow: "hidden" }}>
-                      <div style={{ height: "100%", width: "70%", background: AMBER, borderRadius: 2, animation: "progressPulse 1.5s ease-in-out infinite" }} />
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                      <div style={{ width: 8, height: 8, borderRadius: "50%", background: AMBER, animation: "dotPulse 1.2s ease-in-out infinite" }} />
+                      <div style={{ width: 8, height: 8, borderRadius: "50%", background: AMBER, animation: "dotPulse 1.2s ease-in-out 0.2s infinite" }} />
+                      <div style={{ width: 8, height: 8, borderRadius: "50%", background: AMBER, animation: "dotPulse 1.2s ease-in-out 0.4s infinite" }} />
+                      <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginLeft: 4 }}>Photo {i + 1} — Analysing</div>
                     </div>
+                    <div style={{ fontSize: 12, color: "#aaa" }}>Checking Queensland compliance...</div>
                   </div>
                 </div>
               );
