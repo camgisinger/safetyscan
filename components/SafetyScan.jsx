@@ -45,9 +45,16 @@ CRITICAL RULES FOR FINDINGS:
 6. A "fail" status should only be given if there is at least one clearly visible critical violation. If issues are minor or unverifiable, use "uncertain" or "pass" with warnings.
 7. Never fail an entire installation based on things you cannot see in the photo.
 
+LEGISLATION CLAUSE REFERENCES:
+For each piece of legislation identified, cite the specific clauses that apply. For example:
+- WHS Regulation 2011 (Qld) → s.225 (scaffolding), s.44 (duty to manage risks)
+- AS/NZS 4576 → cl.4.2 (erection), cl.5.3 (inspection)
+- Electrical Safety Act 2002 (Qld) → s.28 (electrical safety obligation)
+Only cite clauses you are confident apply to what is visible in the photo. If unsure of the exact clause, omit it rather than guess.
+
 Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start with { end with }.
 
-{"work_type":"string","status":"pass|fail|uncertain","confidence":"high|medium|low","legislation":[{"code":"string","description":"string"}],"findings":[{"type":"ok|warning|critical","text":"string"}],"summary":"string","checklist":[{"item":"string","category":"string"}],"compliant_example":{"description":"string","measurements":[{"label":"string","value":"string","standard":"string"}],"visual_indicators":["string"]},"follow_up_questions":[],"photo_quality":"good|poor"}
+{"work_type":"string","status":"pass|fail|uncertain","confidence":"high|medium|low","legislation":[{"code":"string","description":"string","clauses":[{"ref":"string","summary":"string"}]}],"findings":[{"type":"ok|warning|critical","text":"string"}],"summary":"string","checklist":[{"item":"string","category":"string"}],"compliant_example":{"description":"string","measurements":[{"label":"string","value":"string","standard":"string"}],"visual_indicators":["string"]},"follow_up_questions":[],"photo_quality":"good|poor"}
 
 Max 5 findings, 8 checklist items, 4 measurements, 4 visual_indicators.`;
 
@@ -194,14 +201,28 @@ function FindingItem({ type, text }) {
   );
 }
 
-function LegTag({ code, description }) {
+function LegTag({ code, description, clauses }) {
   const [open, setOpen] = useState(false);
   return (
     <div style={{ display: "inline-block", marginRight: 5, marginBottom: 5 }}>
       <div onClick={() => setOpen(!open)} style={{ cursor: "pointer", fontSize: 11, padding: "3px 9px", borderRadius: 20, background: NAVY, color: AMBER, fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 3 }}>
         {code} <span style={{ fontSize: 9, opacity: 0.7 }}>{open ? "▲" : "▼"}</span>
       </div>
-      {open && <div style={{ marginTop: 4, padding: "7px 10px", background: "#fff", border: "0.5px solid #D3D1C7", borderRadius: 7, fontSize: 12, color: "#444", lineHeight: 1.5, maxWidth: 240 }}>{description}</div>}
+      {open && (
+        <div style={{ marginTop: 4, padding: "7px 10px", background: "#fff", border: "0.5px solid #D3D1C7", borderRadius: 7, fontSize: 12, color: "#444", lineHeight: 1.5, maxWidth: 260 }}>
+          <div style={{ marginBottom: 6 }}>{description}</div>
+          {clauses?.length > 0 && (
+            <div style={{ borderTop: "0.5px solid #E0DDD6", paddingTop: 6 }}>
+              {clauses.map((c, i) => (
+                <div key={i} style={{ display: "flex", gap: 8, marginBottom: 4 }}>
+                  <div style={{ fontSize: 11, fontWeight: 600, color: "#F5A623", flexShrink: 0, background: "#0F1923", padding: "1px 6px", borderRadius: 4 }}>{c.ref}</div>
+                  <div style={{ fontSize: 11, color: "#666" }}>{c.summary}</div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -320,7 +341,7 @@ function PhotoResultCard({ photo, index, total, onReanalyse }) {
         {r.legislation?.length > 0 && (
           <div style={{ marginBottom: 14 }}>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.07em", color: "#888", textTransform: "uppercase", marginBottom: 7 }}>Applicable Queensland legislation</div>
-            <div>{r.legislation.map((l, i) => <LegTag key={i} code={l.code} description={l.description} />)}</div>
+            <div>{r.legislation.map((l, i) => <LegTag key={i} code={l.code} description={l.description} clauses={l.clauses} />)}</div>
             <div style={{ fontSize: 10, color: "#ccc", marginTop: 3 }}>Tap each to expand</div>
           </div>
         )}
@@ -389,7 +410,7 @@ export default function SafetyScan() {
             work_type: parsed.work_type || "Unknown work type",
             status: parsed.status || "uncertain",
             confidence: parsed.confidence || "low",
-            legislation: parsed.legislation || [],
+            legislation: (parsed.legislation || []).map(l => ({ ...l, clauses: l.clauses || [] })),
             findings: parsed.findings || [],
             summary: parsed.summary || "",
             checklist: parsed.checklist || [],
