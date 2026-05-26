@@ -54,7 +54,7 @@ Only cite clauses you are confident apply to what is visible in the photo. If un
 
 Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start with { end with }.
 
-{"work_type":"string","status":"pass|fail|uncertain","confidence":"high|medium|low","legislation":[{"code":"string","description":"string","clauses":[{"ref":"string","summary":"string"}]}],"findings":[{"type":"ok|warning|critical","text":"string"}],"summary":"string","checklist":[{"item":"string","category":"string"}],"compliant_example":{"description":"string","measurements":[{"label":"string","value":"string","standard":"string"}],"visual_indicators":["string"]},"follow_up_questions":[],"photo_quality":"good|poor"}
+{"work_type":"string","status":"pass|fail|uncertain","confidence":"high|medium|low","legislation":[{"code":"string","description":"string","clauses":[{"ref":"string","summary":"string"}]}],"findings":[{"type":"ok|warning|critical","text":"string"}],"summary":"string","checklist":[{"item":"string","category":"string"}],"follow_up_questions":[],"photo_quality":"good|poor"}
 
 Max 5 findings, 8 checklist items, 4 measurements, 4 visual_indicators.`;
 
@@ -108,7 +108,7 @@ async function analysePhoto(base64, mediaType, context, extraInfo, extraPhotos =
       },
       body: JSON.stringify({
         model: "claude-sonnet-4-5",
-        max_tokens: 4096,
+        max_tokens: 2000,
         system: SYSTEM_PROMPT,
         messages: [{ role: "user", content: userContent }]
       }),
@@ -386,7 +386,14 @@ function PhotoResultCard({ photo, index, total, onReanalyse }) {
           </div>
         )}
         {tab === "checklist" && (r.checklist?.length > 0 ? <ChecklistTab checklist={r.checklist} /> : <div style={{ padding: 16, textAlign: "center", color: "#aaa", fontSize: 13 }}>No checklist generated.</div>)}
-        {tab === "example" && (r.compliant_example ? <ExampleTab example={r.compliant_example} workType={r.work_type} /> : <div style={{ padding: 16, textAlign: "center", color: "#aaa", fontSize: 13 }}>No example available.</div>)}
+        {tab === "example" && (
+          <div>
+            <CompliantPhotoSlot workType={r.work_type} />
+            <div style={{ padding: "10px 14px", background: "#FAEEDA", border: "0.5px solid #FAC775", borderRadius: 8, fontSize: 12, color: "#633806", lineHeight: 1.5 }}>
+              Compliant example photos for this work type will be added here shortly — giving you a direct visual comparison on the job.
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -473,7 +480,6 @@ export default function SafetyScan() {
             findings: parsed.findings || [],
             summary: parsed.summary || "",
             checklist: parsed.checklist || [],
-            compliant_example: parsed.compliant_example || { description: "", measurements: [], visual_indicators: [] },
             follow_up_questions: parsed.follow_up_questions || [],
             photo_quality: parsed.photo_quality || "good",
           };
