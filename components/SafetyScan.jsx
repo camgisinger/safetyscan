@@ -1,5 +1,6 @@
 "use client"
 import { useState, useRef, useCallback, useEffect } from "react";
+import { supabase } from "../lib/supabase";
 
 if (typeof window !== 'undefined') {
   window.onerror = function(msg, src, line, col, error) {
@@ -441,7 +442,31 @@ export default function SafetyScan() {
   const [results, setResults] = useState([]);
   const [globalError, setGlobalError] = useState(null);
   const [dragOver, setDragOver] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
   const fileRef = useRef();
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data: { user } }) => setCurrentUser(user));
+  }, []);
+
+  const saveScan = async (result) => {
+    if (!currentUser) return;
+    try {
+      await supabase.from('scans').insert({
+        user_id: currentUser.id,
+        work_type: result.work_type,
+        status: result.status,
+        confidence: result.confidence,
+        legislation: result.legislation,
+        findings: result.findings,
+        summary: result.summary,
+        checklist: result.checklist,
+        follow_up_questions: result.follow_up_questions,
+      });
+    } catch (err) {
+      console.error('Failed to save scan:', err);
+    }
+  };
 
   const addFiles = useCallback(async (files) => {
     const arr = Array.from(files).slice(0, MAX_PHOTOS - photos.length);
@@ -484,6 +509,7 @@ export default function SafetyScan() {
             photo_quality: parsed.photo_quality || "good",
           };
           setResults(prev => { const n = [...prev]; n[i] = { status: "done", result: safeResult }; return n; });
+          saveScan(safeResult);
         } catch (e) {
           setResults(prev => { const n = [...prev]; n[i] = { status: "error", error: e.message || "Analysis failed" }; return n; });
         }
@@ -512,6 +538,7 @@ export default function SafetyScan() {
         photo_quality: parsed.photo_quality || "good",
       };
       setResults(prev => { const n = [...prev]; n[photoIndex] = { status: "done", result: safeResult }; return n; });
+      saveScan(safeResult);
     } catch (e) {
       setResults(prev => { const n = [...prev]; n[photoIndex] = { status: "error", error: e.message }; return n; });
     }
