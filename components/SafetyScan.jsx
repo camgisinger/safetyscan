@@ -564,24 +564,24 @@ export default function SafetyScan() {
       `}</style>
 
       <header style={{ background: NAVY, padding: "0 20px", height: 56, display: "flex", alignItems: "center", justifyContent: "space-between", position: "sticky", top: 0, zIndex: 10 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <button onClick={() => router.push('/dashboard')} style={{ background: "transparent", border: "none", color: "rgba(255,255,255,0.5)", fontSize: 13, cursor: "pointer", display: "flex", alignItems: "center", gap: 4, padding: "4px 8px", borderRadius: 6, fontFamily: "inherit" }}>
-            ‹ Dashboard
-          </button>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <ScanIcon />
-            <div>
-              <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: "-0.02em" }}>
-                <span style={{ color: "#fff" }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
-              </div>
-              <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", letterSpacing: "0.05em" }}>CONSTRUCTION COMPLIANCE</div>
+        <button onClick={() => router.push('/dashboard')} style={{ background: "transparent", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 10, padding: 0, fontFamily: "inherit" }}>
+          <ScanIcon />
+          <div>
+            <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: "-0.02em" }}>
+              <span style={{ color: "#fff" }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
             </div>
+            <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", letterSpacing: "0.05em" }}>CONSTRUCTION COMPLIANCE</div>
           </div>
-        </div>
+        </button>
         <div style={{ fontSize: 11, padding: "4px 10px", background: "rgba(245,166,35,0.15)", color: AMBER, borderRadius: 10, border: "0.5px solid rgba(245,166,35,0.3)", fontWeight: 600 }}>Queensland</div>
       </header>
 
       <main style={{ maxWidth: 560, margin: "0 auto", padding: "20px 16px 48px" }}>
+
+        {/* Back to dashboard link */}
+        <button onClick={() => router.push('/dashboard')} style={{ background: "transparent", border: "none", color: "#888", fontSize: 13, cursor: "pointer", display: "flex", alignItems: "center", gap: 4, padding: "0 0 14px 0", fontFamily: "inherit" }}>
+          ‹ Dashboard
+        </button>
 
         {/* Upload panel — always visible until analysing */}
         {!analysing && (
