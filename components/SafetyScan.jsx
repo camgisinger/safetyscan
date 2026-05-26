@@ -31,7 +31,7 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
 
 Max 5 findings, 8 checklist items, 4 measurements, 4 visual_indicators.`;
 
-const MAX_IMAGE_PX = 640;
+const MAX_IMAGE_PX = 512;
 
 async function convertToJpeg(file) {
   // Step 1: read file as data URL via FileReader (works in all environments)
@@ -80,7 +80,7 @@ async function analysePhoto(base64, mediaType, context, extraInfo) {
       },
       body: JSON.stringify({
         model: "claude-sonnet-4-5",
-        max_tokens: 1500,
+        max_tokens: 1000,
         system: SYSTEM_PROMPT,
         messages: [{ role: "user", content: userContent }]
       }),
