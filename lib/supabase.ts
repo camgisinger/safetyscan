@@ -6,3 +6,30 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 export const SCAN_PHOTOS_BUCKET = 'scan-photos'
+
+export type Site = {
+  id: string
+  user_id: string
+  name: string
+  location: string | null
+  archived: boolean
+  created_at: string
+}
+
+export type Scan = {
+  id: string
+  user_id: string
+  site_id: string | null
+  work_type: string
+  status: string
+  confidence: string
+  legislation: any
+  findings: any
+  summary: string
+  checklist: any
+  follow_up_questions: any
+  photo_url: string | null
+  notes: string | null
+  checklist_state: Record<string, boolean> | null
+  created_at: string
+}

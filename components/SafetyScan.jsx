@@ -1,6 +1,6 @@
 "use client"
 import { useState, useRef, useCallback, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "../lib/supabase";
 
 if (typeof window !== 'undefined') {
@@ -444,18 +444,34 @@ export default function SafetyScan() {
   const [globalError, setGlobalError] = useState(null);
   const [dragOver, setDragOver] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
+  const [sites, setSites] = useState([]);
+  const [siteDropdownValue, setSiteDropdownValue] = useState("none");
+  const [newSiteName, setNewSiteName] = useState("");
+  const [scanIds, setScanIds] = useState([]);
+  const [assignSiteId, setAssignSiteId] = useState("");
+  const [assignDone, setAssignDone] = useState(false);
   const fileRef = useRef();
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    supabase.auth.getUser().then(({ data: { user } }) => setCurrentUser(user));
-  }, []);
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setCurrentUser(user);
+      if (user) {
+        supabase.from('sites').select('id, name').eq('archived', false).order('name', { ascending: true })
+          .then(({ data }) => setSites(data || []));
+      }
+    });
+    const urlSiteId = searchParams.get('site_id');
+    if (urlSiteId) setSiteDropdownValue(urlSiteId);
+  }, [searchParams]);
 
-  const saveScan = async (result) => {
-    if (!currentUser) return;
+  const saveScan = async (result, siteId = null) => {
+    if (!currentUser) return null;
     try {
-      await supabase.from('scans').insert({
+      const { data } = await supabase.from('scans').insert({
         user_id: currentUser.id,
+        site_id: siteId || null,
         work_type: result.work_type,
         status: result.status,
         confidence: result.confidence,
@@ -464,9 +480,11 @@ export default function SafetyScan() {
         summary: result.summary,
         checklist: result.checklist,
         follow_up_questions: result.follow_up_questions,
-      });
+      }).select('id').single();
+      return data?.id || null;
     } catch (err) {
       console.error('Failed to save scan:', err);
+      return null;
     }
   };
 
@@ -495,6 +513,24 @@ export default function SafetyScan() {
     setAnalysing(true);
     setGlobalError(null);
     setResults(photos.map(() => ({ status: "loading" })));
+    setScanIds([]);
+    setAssignDone(false);
+
+    // Resolve site ID — create new site if needed
+    let resolvedSiteId = siteDropdownValue === "none" ? null : siteDropdownValue === "new" ? null : siteDropdownValue;
+    if (siteDropdownValue === "new" && newSiteName.trim() && currentUser) {
+      const { data } = await supabase.from('sites').insert({
+        user_id: currentUser.id,
+        name: newSiteName.trim(),
+        archived: false,
+      }).select('id, name').single();
+      if (data) {
+        resolvedSiteId = data.id;
+        setSites(prev => [...prev, data].sort((a, b) => a.name.localeCompare(b.name)));
+        setSiteDropdownValue(data.id);
+      }
+    }
+
     try {
       await Promise.all(photos.map(async (photo, i) => {
         try {
@@ -511,7 +547,8 @@ export default function SafetyScan() {
             photo_quality: parsed.photo_quality || "good",
           };
           setResults(prev => { const n = [...prev]; n[i] = { status: "done", result: safeResult }; return n; });
-          saveScan(safeResult);
+          const scanId = await saveScan(safeResult, resolvedSiteId);
+          if (scanId) setScanIds(prev => { const n = [...prev]; n[i] = scanId; return n; });
         } catch (e) {
           setResults(prev => { const n = [...prev]; n[i] = { status: "error", error: e.message || "Analysis failed" }; return n; });
         }
@@ -546,7 +583,19 @@ export default function SafetyScan() {
     }
   };
 
-  const reset = () => { setPhotos([]); setResults([]); setContext(""); setGlobalError(null); };
+  const assignScansToSite = async () => {
+    if (!assignSiteId) return;
+    const ids = scanIds.filter(Boolean);
+    if (!ids.length) return;
+    await Promise.all(ids.map(id => supabase.from('scans').update({ site_id: assignSiteId }).eq('id', id)));
+    setAssignDone(true);
+    setSiteDropdownValue(assignSiteId);
+  };
+
+  const reset = () => {
+    setPhotos([]); setResults([]); setContext(""); setGlobalError(null);
+    setScanIds([]); setAssignSiteId(""); setAssignDone(false);
+  };
 
   const hasResults = results.some(r => r.status === "done" || r.status === "error");
   const allDone = results.length > 0 && results.every(r => r.status !== "loading");
@@ -641,6 +690,23 @@ export default function SafetyScan() {
                     style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "0.5px solid #C8C5BE", background: "#FAFAF8", fontSize: 13, fontFamily: "inherit", resize: "none", color: "#1a1a1a", lineHeight: 1.5 }} />
                 </div>
 
+                <div style={{ marginBottom: 12 }}>
+                  <label style={{ fontSize: 12, fontWeight: 600, color: "#444", display: "block", marginBottom: 5 }}>
+                    Site <span style={{ fontWeight: 400, color: "#999" }}>(optional)</span>
+                  </label>
+                  <select value={siteDropdownValue} onChange={e => setSiteDropdownValue(e.target.value)}
+                    style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "0.5px solid #C8C5BE", background: "#FAFAF8", fontSize: 13, fontFamily: "inherit", color: "#1a1a1a", cursor: "pointer" }}>
+                    <option value="none">No site</option>
+                    {sites.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
+                    <option value="new">+ Create new site</option>
+                  </select>
+                  {siteDropdownValue === "new" && (
+                    <input value={newSiteName} onChange={e => setNewSiteName(e.target.value)}
+                      placeholder="Site name"
+                      style={{ marginTop: 8, width: "100%", padding: "9px 12px", borderRadius: 8, border: "0.5px solid #C8C5BE", background: "#FAFAF8", fontSize: 13, fontFamily: "inherit", color: "#1a1a1a" }} />
+                  )}
+                </div>
+
                 <button onClick={runAll}
                   style={{ width: "100%", padding: 13, background: NAVY, border: "none", borderRadius: 10, color: "#fff", fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
                   Analyse {photos.length} photo{photos.length > 1 ? "s" : ""} for compliance →
@@ -703,6 +769,28 @@ export default function SafetyScan() {
 
               return null;
             })}
+
+            {allDone && siteDropdownValue === "none" && scanIds.some(Boolean) && sites.length > 0 && !assignDone && (
+              <div style={{ background: "#fff", borderRadius: 12, border: "0.5px solid #E0DDD6", padding: "14px 16px", marginBottom: 10 }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 8 }}>Assign these scans to a site?</div>
+                <div style={{ display: "flex", gap: 8 }}>
+                  <select value={assignSiteId} onChange={e => setAssignSiteId(e.target.value)}
+                    style={{ flex: 1, padding: "9px 11px", borderRadius: 8, border: "0.5px solid #C8C5BE", background: "#FAFAF8", fontSize: 13, fontFamily: "inherit", color: "#1a1a1a", cursor: "pointer" }}>
+                    <option value="">Select a site…</option>
+                    {sites.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
+                  </select>
+                  <button onClick={assignScansToSite} disabled={!assignSiteId}
+                    style={{ padding: "9px 14px", background: assignSiteId ? NAVY : "#E0DDD6", border: "none", borderRadius: 8, color: "#fff", fontSize: 13, fontWeight: 600, cursor: assignSiteId ? "pointer" : "not-allowed", fontFamily: "inherit", flexShrink: 0 }}>
+                    Assign
+                  </button>
+                </div>
+              </div>
+            )}
+            {allDone && assignDone && (
+              <div style={{ padding: "9px 14px", background: "#EAF3DE", borderRadius: 8, fontSize: 12, color: "#3B6D11", marginBottom: 10, fontWeight: 600 }}>
+                ✓ Scans assigned to site
+              </div>
+            )}
 
             {allDone && (
               <div style={{ padding: "10px 14px", background: "#F1EFE8", borderRadius: 8, fontSize: 11, color: "#888", lineHeight: 1.5, borderLeft: `3px solid ${AMBER}` }}>

@@ -2,7 +2,14 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { supabase } from '../../lib/supabase'
+import { supabase, Site, Scan } from '../../lib/supabase'
+
+const NAVY = '#0F1923'
+const AMBER = '#F5A623'
+const OFFWHITE = '#F1EFE8'
+const PASS_GREEN = '#3B6D11'
+const FAIL_RED = '#A32D2D'
+const WARN_AMBER = '#854F0B'
 
 const FINDING_CFG: Record<string, { bg: string; border: string; color: string; icon: string }> = {
   ok:       { bg: '#EAF3DE', border: '#C0DD97', color: '#3B6D11', icon: '✓' },
@@ -10,10 +17,8 @@ const FINDING_CFG: Record<string, { bg: string; border: string; color: string; i
   critical: { bg: '#FCEBEB', border: '#F7C1C1', color: '#A32D2D', icon: '✕' },
 }
 
-function ScanDetail({ scan }: { scan: any }) {
+function ScanDetail({ scan }: { scan: Scan }) {
   const findings: any[] = scan.findings || []
-  const statusColors: Record<string, string> = { pass: '#3B6D11', fail: '#A32D2D', uncertain: '#854F0B' }
-  const statusColor = statusColors[scan.status] || '#854F0B'
   return (
     <div style={{ borderTop: '0.5px solid #F0EDE6', marginTop: 10, paddingTop: 12 }}>
       {scan.summary && (
@@ -37,16 +42,12 @@ function ScanDetail({ scan }: { scan: any }) {
       {findings.length === 0 && !scan.summary && (
         <div style={{ fontSize: 12, color: '#aaa' }}>No details saved for this scan.</div>
       )}
+      <Link href={`/scan/${scan.id}`} style={{ display: 'inline-block', marginTop: 10, fontSize: 12, color: NAVY, fontWeight: 600, textDecoration: 'none' }}>
+        View full scan →
+      </Link>
     </div>
   )
 }
-
-const NAVY = '#0F1923'
-const AMBER = '#F5A623'
-const OFFWHITE = '#F1EFE8'
-const PASS_GREEN = '#3B6D11'
-const FAIL_RED = '#A32D2D'
-const WARN_AMBER = '#854F0B'
 
 function StatusBadge({ status }: { status: string }) {
   const cfg: Record<string, { bg: string; color: string; label: string }> = {
@@ -66,12 +67,19 @@ function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
 }
 
+function formatShortDate(iso: string) {
+  return new Date(iso).toLocaleDateString('en-AU', { day: 'numeric', month: 'short' })
+}
+
 export default function DashboardPage() {
   const [user, setUser] = useState<any>(null)
-  const [scans, setScans] = useState<any[]>([])
-  const [projects, setProjects] = useState<any[]>([])
+  const [recentScans, setRecentScans] = useState<Scan[]>([])
+  const [scanMeta, setScanMeta] = useState<{ id: string; site_id: string | null; created_at: string }[]>([])
+  const [sites, setSites] = useState<Site[]>([])
   const [loading, setLoading] = useState(true)
   const [openScan, setOpenScan] = useState<string | null>(null)
+  const [showArchived, setShowArchived] = useState(false)
+  const [openUnassigned, setOpenUnassigned] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
@@ -79,12 +87,14 @@ export default function DashboardPage() {
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) { router.push('/login'); return }
       setUser(user)
-      const [scansRes, projectsRes] = await Promise.all([
+      const [recentRes, metaRes, sitesRes] = await Promise.all([
         supabase.from('scans').select('*').order('created_at', { ascending: false }).limit(20),
-        supabase.from('projects').select('*').order('created_at', { ascending: false }),
+        supabase.from('scans').select('id, site_id, created_at').order('created_at', { ascending: false }),
+        supabase.from('sites').select('*').order('name', { ascending: true }),
       ])
-      setScans(scansRes.data || [])
-      setProjects(projectsRes.data || [])
+      setRecentScans(recentRes.data || [])
+      setScanMeta(metaRes.data || [])
+      setSites(sitesRes.data || [])
       setLoading(false)
     }
     init()
@@ -102,6 +112,22 @@ export default function DashboardPage() {
       </div>
     )
   }
+
+  // Compute scan counts and last scan date per site from full meta
+  const scansBySite: Record<string, { id: string; created_at: string }[]> = {}
+  for (const s of scanMeta) {
+    const key = s.site_id || 'unassigned'
+    if (!scansBySite[key]) scansBySite[key] = []
+    scansBySite[key].push({ id: s.id, created_at: s.created_at })
+  }
+
+  const activeSites = sites.filter(s => !s.archived)
+  const archivedSites = sites.filter(s => s.archived)
+  const displaySites = showArchived ? sites : activeSites
+  const unassignedMeta = scansBySite['unassigned'] || []
+
+  // Unassigned scans from recentScans for display
+  const unassignedRecent = recentScans.filter(s => !s.site_id)
 
   return (
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif" }}>
@@ -137,26 +163,28 @@ export default function DashboardPage() {
         <section style={{ marginBottom: 28 }}>
           <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 12 }}>Recent scans</div>
 
-          {scans.length === 0 ? (
+          {recentScans.length === 0 ? (
             <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '36px 20px', textAlign: 'center' }}>
               <div style={{ fontSize: 30, marginBottom: 10 }}>📷</div>
               <div style={{ fontSize: 14, fontWeight: 600, color: NAVY, marginBottom: 4 }}>No scans yet</div>
               <div style={{ fontSize: 13, color: '#999' }}>Run your first compliance check to see results here.</div>
             </div>
           ) : (
-            scans.map(scan => {
+            recentScans.map(scan => {
               const isOpen = openScan === scan.id
-              const statusColors: Record<string, string> = { pass: '#3B6D11', fail: '#A32D2D', uncertain: '#854F0B' }
-              const statusColor = statusColors[scan.status] || '#854F0B'
+              const siteName = scan.site_id ? sites.find(s => s.id === scan.site_id)?.name : null
               return (
                 <div key={scan.id} style={{ background: '#fff', borderRadius: 12, border: `0.5px solid ${isOpen ? NAVY : '#E0DDD6'}`, marginBottom: 8, overflow: 'hidden', transition: 'border-color 0.15s' }}>
                   <div onClick={() => setOpenScan(isOpen ? null : scan.id)}
                     style={{ padding: '13px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, cursor: 'pointer' }}>
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                         {scan.work_type || 'Unknown work type'}
                       </div>
-                      <div style={{ fontSize: 11, color: '#aaa' }}>{formatDate(scan.created_at)}</div>
+                      <div style={{ fontSize: 11, color: '#aaa' }}>
+                        {formatDate(scan.created_at)}
+                        {siteName && <span style={{ marginLeft: 6, color: '#bbb' }}>· {siteName}</span>}
+                      </div>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       <StatusBadge status={scan.status} />
@@ -174,22 +202,79 @@ export default function DashboardPage() {
           )}
         </section>
 
-        {/* Projects */}
+        {/* Sites */}
         <section>
-          <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 12 }}>Projects</div>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase' }}>Sites</div>
+            <Link href="/sites" style={{ fontSize: 12, color: NAVY, fontWeight: 600, textDecoration: 'none' }}>Manage sites →</Link>
+          </div>
 
-          {projects.length === 0 ? (
+          {displaySites.length === 0 && unassignedMeta.length === 0 ? (
             <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '24px 20px', textAlign: 'center' }}>
-              <div style={{ fontSize: 13, color: '#999', lineHeight: 1.6 }}>No projects yet. Projects help you organise scans by site or client.</div>
+              <div style={{ fontSize: 13, color: '#999', lineHeight: 1.6 }}>No sites yet. <Link href="/sites" style={{ color: NAVY, fontWeight: 600 }}>Create a site</Link> to organise scans by location or client.</div>
             </div>
           ) : (
-            projects.map(project => (
-              <div key={project.id} style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', padding: '13px 16px', marginBottom: 8 }}>
-                <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: project.location ? 2 : 0 }}>{project.name}</div>
-                {project.location && <div style={{ fontSize: 11, color: '#aaa' }}>{project.location}</div>}
-              </div>
-            ))
+            <>
+              {displaySites.map(site => {
+                const siteScans = scansBySite[site.id] || []
+                const lastScan = siteScans[0]
+                return (
+                  <Link key={site.id} href={`/sites/${site.id}`} style={{ textDecoration: 'none', display: 'block' }}>
+                    <div style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', padding: '13px 16px', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: site.location ? 2 : 0, display: 'flex', alignItems: 'center', gap: 6 }}>
+                          {site.name}
+                          {site.archived && <span style={{ fontSize: 10, padding: '1px 6px', background: '#F1EFE8', color: '#888', borderRadius: 4, fontWeight: 500 }}>Archived</span>}
+                        </div>
+                        {site.location && <div style={{ fontSize: 11, color: '#aaa' }}>{site.location}</div>}
+                        <div style={{ fontSize: 11, color: '#bbb', marginTop: 2 }}>
+                          {siteScans.length} scan{siteScans.length !== 1 ? 's' : ''}
+                          {lastScan ? ` · Last: ${formatShortDate(lastScan.created_at)}` : ''}
+                        </div>
+                      </div>
+                      <span style={{ fontSize: 14, color: '#ccc' }}>›</span>
+                    </div>
+                  </Link>
+                )
+              })}
+
+              {/* Unassigned scans */}
+              {unassignedMeta.length > 0 && (
+                <div style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', marginBottom: 8, overflow: 'hidden' }}>
+                  <div onClick={() => setOpenUnassigned(v => !v)}
+                    style={{ padding: '13px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, cursor: 'pointer' }}>
+                    <div>
+                      <div style={{ fontSize: 13, fontWeight: 600, color: '#888', marginBottom: 2 }}>No site</div>
+                      <div style={{ fontSize: 11, color: '#bbb' }}>{unassignedMeta.length} unassigned scan{unassignedMeta.length !== 1 ? 's' : ''}</div>
+                    </div>
+                    <span style={{ fontSize: 12, color: '#ccc' }}>{openUnassigned ? '▲' : '▼'}</span>
+                  </div>
+                  {openUnassigned && (
+                    <div style={{ borderTop: '0.5px solid #F0EDE6', padding: '8px 16px 12px' }}>
+                      {unassignedRecent.length === 0 ? (
+                        <div style={{ fontSize: 12, color: '#aaa', padding: '8px 0' }}>Load more scans to see unassigned details.</div>
+                      ) : (
+                        unassignedRecent.map(scan => (
+                          <Link key={scan.id} href={`/scan/${scan.id}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 0', borderBottom: '0.5px solid #F5F4F0' }}>
+                            <div>
+                              <div style={{ fontSize: 12, fontWeight: 600, color: NAVY }}>{scan.work_type || 'Unknown'}</div>
+                              <div style={{ fontSize: 11, color: '#aaa' }}>{formatDate(scan.created_at)}</div>
+                            </div>
+                            <StatusBadge status={scan.status} />
+                          </Link>
+                        ))
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
+            </>
           )}
+
+          <button onClick={() => setShowArchived(v => !v)}
+            style={{ marginTop: 8, fontSize: 12, color: '#888', background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'inherit', padding: 0 }}>
+            {showArchived ? 'Hide archived sites' : `Show archived sites (${archivedSites.length})`}
+          </button>
         </section>
 
       </main>
