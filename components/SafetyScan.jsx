@@ -1,6 +1,15 @@
 "use client"
 import { useState, useRef, useCallback } from "react";
 
+if (typeof window !== 'undefined') {
+  window.onerror = function(msg, src, line, col, error) {
+    console.error('Global error:', msg, error)
+  }
+  window.onunhandledrejection = function(event) {
+    console.error('Unhandled promise rejection:', event.reason)
+  }
+}
+
 const NAVY = "#0F1923";
 const AMBER = "#F5A623";
 const OFFWHITE = "#F1EFE8";
@@ -361,15 +370,20 @@ export default function SafetyScan() {
     setAnalysing(true);
     setGlobalError(null);
     setResults(photos.map(() => ({ status: "loading" })));
-    await Promise.all(photos.map(async (photo, i) => {
-      try {
-        const result = await analysePhoto(photo.base64, photo.mediaType || "image/jpeg", context);
-        setResults(prev => { const n = [...prev]; n[i] = { status: "done", result }; return n; });
-      } catch (e) {
-        setResults(prev => { const n = [...prev]; n[i] = { status: "error", error: e.message }; return n; });
-      }
-    }));
-    setAnalysing(false);
+    try {
+      await Promise.all(photos.map(async (photo, i) => {
+        try {
+          const result = await analysePhoto(photo.base64, photo.mediaType || "image/jpeg", context);
+          setResults(prev => { const n = [...prev]; n[i] = { status: "done", result }; return n; });
+        } catch (e) {
+          setResults(prev => { const n = [...prev]; n[i] = { status: "error", error: e.message || "Analysis failed" }; return n; });
+        }
+      }));
+    } catch (e) {
+      setGlobalError(e.message || "Unexpected error during analysis");
+    } finally {
+      setAnalysing(false);
+    }
   };
 
   const reanalyse = async (photoIndex, extraInfo) => {
