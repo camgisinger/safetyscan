@@ -73,7 +73,7 @@ async function analysePhoto(base64, mediaType, context, extraInfo) {
 
   let res, data;
   try {
-    res = await fetch("https://api.anthropic.com/v1/messages", {
+    res = await fetch("/api/analyse", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
