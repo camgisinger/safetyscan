@@ -1,5 +1,5 @@
 "use client"
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 
 if (typeof window !== 'undefined') {
   window.onerror = function(msg, src, line, col, error) {
@@ -204,19 +204,20 @@ function FindingItem({ type, text }) {
 
 function LegTag({ code, description, clauses, isOpen, onToggle }) {
   return (
-    <div style={{ display: "inline-block", marginRight: 5, marginBottom: 5 }}>
-      <div onClick={onToggle} style={{ cursor: "pointer", fontSize: 11, padding: "3px 9px", borderRadius: 20, background: NAVY, color: AMBER, fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 3 }}>
-        {code} <span style={{ fontSize: 9, opacity: 0.7 }}>{isOpen ? "▲" : "▼"}</span>
+    <div style={{ marginBottom: 8 }}>
+      <div onClick={onToggle} style={{ cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, padding: "5px 10px", borderRadius: 20, background: isOpen ? "#fff" : NAVY, color: isOpen ? NAVY : AMBER, fontWeight: 600, border: `1.5px solid ${isOpen ? NAVY : "transparent"}`, transition: "all 0.15s" }}>
+        {code} <span style={{ fontSize: 10, opacity: 0.6 }}>{isOpen ? "▲" : "▼"}</span>
       </div>
       {isOpen && (
-        <div style={{ marginTop: 4, padding: "7px 10px", background: "#fff", border: "0.5px solid #D3D1C7", borderRadius: 7, fontSize: 12, color: "#444", lineHeight: 1.5, maxWidth: 260 }}>
-          <div style={{ marginBottom: 6 }}>{description}</div>
+        <div style={{ marginTop: 6, padding: "12px 14px", background: "#fff", border: `1.5px solid ${NAVY}`, borderRadius: 10, fontSize: 13 }}>
+          <div style={{ color: "#555", lineHeight: 1.5, marginBottom: clauses?.length ? 10 : 0 }}>{description}</div>
           {clauses?.length > 0 && (
-            <div style={{ borderTop: "0.5px solid #E0DDD6", paddingTop: 6, marginTop: 6 }}>
+            <div style={{ borderTop: "0.5px solid #E0DDD6", paddingTop: 10 }}>
+              <div style={{ fontSize: 11, fontWeight: 600, color: "#888", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 8 }}>Applicable clauses</div>
               {clauses.map((c, i) => (
-                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 8, marginBottom: 5 }}>
-                  <span style={{ fontSize: 11, fontWeight: 600, color: "#F5A623", background: "#0F1923", padding: "2px 7px", borderRadius: 4, flexShrink: 0, whiteSpace: "nowrap", marginTop: 1 }}>{c.ref}</span>
-                  <span style={{ fontSize: 12, color: "#555", lineHeight: 1.5 }}>{c.summary}</span>
+                <div key={i} style={{ display: "flex", gap: 10, marginBottom: 8, alignItems: "flex-start" }}>
+                  <div style={{ minWidth: 52, background: NAVY, color: AMBER, fontSize: 11, fontWeight: 700, padding: "3px 8px", borderRadius: 5, textAlign: "center", flexShrink: 0 }}>{c.ref}</div>
+                  <div style={{ fontSize: 12, color: "#444", lineHeight: 1.5, paddingTop: 2 }}>{c.summary}</div>
                 </div>
               ))}
             </div>
@@ -311,13 +312,15 @@ function FollowUp({ questions, onSubmit }) {
       <textarea value={answers} onChange={e => setAnswers(e.target.value)} placeholder="Type your answers here..." rows={2}
         style={{ width: "100%", marginTop: 8, padding: "9px 11px", borderRadius: 7, border: "0.5px solid #EF9F27", background: "#fff", fontSize: 13, fontFamily: "inherit", resize: "none", color: "#1a1a1a", boxSizing: "border-box" }} />
       <div style={{ marginTop: 8 }}>
-        <label style={{ fontSize: 12, color: "#854F0B", fontWeight: 500, display: "block", marginBottom: 5 }}>Attach additional photos (optional)</label>
-        <input type="file" accept="image/*" multiple onChange={async (e) => {
-          const files = Array.from(e.target.files).slice(0, 3);
-          const converted = await Promise.all(files.map(f => convertToJpeg(f)));
-          setExtraPhotos(converted.map(d => ({ dataUrl: d, base64: d.split(",")[1] })));
-          e.target.value = "";
-        }} style={{ fontSize: 12, color: "#633806" }} />
+        <label style={{ marginTop: 10, display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 14px", background: "rgba(255,255,255,0.6)", border: "1px solid #EF9F27", borderRadius: 8, cursor: "pointer", fontSize: 13, color: "#633806", fontWeight: 500 }}>
+          📷 Attach photos
+          <input type="file" accept="image/*" multiple style={{ display: "none" }} onChange={async (e) => {
+            const files = Array.from(e.target.files).slice(0, 3);
+            const converted = await Promise.all(files.map(f => convertToJpeg(f)));
+            setExtraPhotos(converted.map(d => ({ dataUrl: d, base64: d.split(",")[1] })));
+            e.target.value = "";
+          }} />
+        </label>
         {extraPhotos.length > 0 && (
           <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap" }}>
             {extraPhotos.map((p, i) => (
@@ -386,6 +389,43 @@ function PhotoResultCard({ photo, index, total, onReanalyse }) {
         {tab === "example" && (r.compliant_example ? <ExampleTab example={r.compliant_example} workType={r.work_type} /> : <div style={{ padding: 16, textAlign: "center", color: "#aaa", fontSize: 13 }}>No example available.</div>)}
       </div>
     </div>
+  );
+}
+
+const LOADING_MESSAGES = [
+  "Identifying work type...",
+  "Checking Queensland legislation...",
+  "Reviewing WHS compliance...",
+  "Analysing structural elements...",
+  "Cross-referencing AS standards...",
+  "Checking safety requirements...",
+  "Generating site checklist...",
+  "Reviewing findings...",
+  "Almost done...",
+];
+
+function LoadingSpinner() {
+  const [msgIdx, setMsgIdx] = useState(0);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const msgTimer = setInterval(() => {
+      setMsgIdx(prev => (prev + 1) % LOADING_MESSAGES.length);
+    }, 2200);
+    const progTimer = setInterval(() => {
+      setProgress(prev => prev >= 92 ? 92 : prev + Math.random() * 8);
+    }, 800);
+    return () => { clearInterval(msgTimer); clearInterval(progTimer); };
+  }, []);
+
+  return (
+    <>
+      <div style={{ width: 36, height: 36, border: "3px solid #E0DDD6", borderTopColor: AMBER, borderRadius: "50%", animation: "spin 0.7s linear infinite", margin: "0 auto 16px" }} />
+      <div style={{ fontWeight: 700, color: NAVY, fontSize: 15, marginBottom: 12, minHeight: 24, transition: "all 0.3s" }}>{LOADING_MESSAGES[msgIdx]}</div>
+      <div style={{ height: 4, background: "#F1EFE8", borderRadius: 2, overflow: "hidden", maxWidth: 280, margin: "0 auto" }}>
+        <div style={{ height: "100%", width: `${progress}%`, background: AMBER, borderRadius: 2, transition: "width 0.8s ease" }} />
+      </div>
+    </>
   );
 }
 
@@ -484,6 +524,7 @@ export default function SafetyScan() {
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes progressPulse { 0% { width: 20%; } 50% { width: 85%; } 100% { width: 20%; } }
         * { box-sizing: border-box; }
         button:active { transform: scale(0.98); }
       `}</style>
@@ -580,15 +621,8 @@ export default function SafetyScan() {
 
         {/* Loading state */}
         {analysing && (
-          <div style={{ background: "#fff", borderRadius: 16, padding: "32px 20px", border: "0.5px solid #E0DDD6", textAlign: "center", marginBottom: 16 }}>
-            <div style={{ width: 34, height: 34, border: `3px solid #E0DDD6`, borderTopColor: AMBER, borderRadius: "50%", animation: "spin 0.7s linear infinite", margin: "0 auto 14px" }} />
-            <div style={{ fontWeight: 700, color: NAVY, fontSize: 14, marginBottom: 3 }}>Analysing {photos.length} photo{photos.length > 1 ? "s" : ""}…</div>
-            <div style={{ fontSize: 12, color: "#999", marginBottom: 16 }}>Each photo is checked independently</div>
-            <div style={{ display: "flex", justifyContent: "center", gap: 5, flexWrap: "wrap" }}>
-              {["Traffic & signage", "Scaffolding", "Electrical", "Plumbing", "WHS"].map(t => (
-                <div key={t} style={{ fontSize: 10, padding: "3px 7px", background: "#F1EFE8", borderRadius: 7, color: "#888" }}>{t}</div>
-              ))}
-            </div>
+          <div style={{ background: "#fff", borderRadius: 16, padding: "36px 20px", border: "0.5px solid #E0DDD6", textAlign: "center", marginBottom: 16 }}>
+            <LoadingSpinner />
           </div>
         )}
 
@@ -608,7 +642,7 @@ export default function SafetyScan() {
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 4 }}>Photo {i + 1} — Analysing…</div>
                     <div style={{ height: 4, background: "#F1EFE8", borderRadius: 2, overflow: "hidden" }}>
-                      <div style={{ height: "100%", width: "60%", background: AMBER, borderRadius: 2, animation: "pulse 1.5s ease infinite" }} />
+                      <div style={{ height: "100%", width: "70%", background: AMBER, borderRadius: 2, animation: "progressPulse 1.5s ease-in-out infinite" }} />
                     </div>
                   </div>
                 </div>
