@@ -4,6 +4,42 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { supabase } from '../../lib/supabase'
 
+const FINDING_CFG: Record<string, { bg: string; border: string; color: string; icon: string }> = {
+  ok:       { bg: '#EAF3DE', border: '#C0DD97', color: '#3B6D11', icon: '✓' },
+  warning:  { bg: '#FAEEDA', border: '#FAC775', color: '#854F0B', icon: '⚠' },
+  critical: { bg: '#FCEBEB', border: '#F7C1C1', color: '#A32D2D', icon: '✕' },
+}
+
+function ScanDetail({ scan }: { scan: any }) {
+  const findings: any[] = scan.findings || []
+  const statusColor = { pass: '#3B6D11', fail: '#A32D2D', uncertain: '#854F0B' }[scan.status as string] || '#854F0B'
+  return (
+    <div style={{ borderTop: '0.5px solid #F0EDE6', marginTop: 10, paddingTop: 12 }}>
+      {scan.summary && (
+        <div style={{ fontSize: 13, color: '#444', lineHeight: 1.6, marginBottom: 10, padding: '10px 12px', background: '#F8F7F3', borderRadius: 8 }}>
+          {scan.summary}
+        </div>
+      )}
+      {findings.length > 0 && (
+        <div>
+          {findings.map((f: any, i: number) => {
+            const c = FINDING_CFG[f.type] || FINDING_CFG.warning
+            return (
+              <div key={i} style={{ display: 'flex', gap: 8, padding: '8px 10px', borderRadius: 7, background: c.bg, border: `0.5px solid ${c.border}`, marginBottom: 5 }}>
+                <div style={{ color: c.color, fontWeight: 700, fontSize: 12, flexShrink: 0 }}>{c.icon}</div>
+                <div style={{ fontSize: 12, color: '#1a1a1a', lineHeight: 1.5 }}>{f.text}</div>
+              </div>
+            )
+          })}
+        </div>
+      )}
+      {findings.length === 0 && !scan.summary && (
+        <div style={{ fontSize: 12, color: '#aaa' }}>No details saved for this scan.</div>
+      )}
+    </div>
+  )
+}
+
 const NAVY = '#0F1923'
 const AMBER = '#F5A623'
 const OFFWHITE = '#F1EFE8'
@@ -34,6 +70,7 @@ export default function DashboardPage() {
   const [scans, setScans] = useState<any[]>([])
   const [projects, setProjects] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
+  const [openScan, setOpenScan] = useState<string | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -106,17 +143,32 @@ export default function DashboardPage() {
               <div style={{ fontSize: 13, color: '#999' }}>Run your first compliance check to see results here.</div>
             </div>
           ) : (
-            scans.map(scan => (
-              <div key={scan.id} style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', padding: '13px 16px', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                    {scan.work_type || 'Unknown work type'}
+            scans.map(scan => {
+              const isOpen = openScan === scan.id
+              const statusColor = { pass: '#3B6D11', fail: '#A32D2D', uncertain: '#854F0B' }[scan.status] || '#854F0B'
+              return (
+                <div key={scan.id} style={{ background: '#fff', borderRadius: 12, border: `0.5px solid ${isOpen ? NAVY : '#E0DDD6'}`, marginBottom: 8, overflow: 'hidden', transition: 'border-color 0.15s' }}>
+                  <div onClick={() => setOpenScan(isOpen ? null : scan.id)}
+                    style={{ padding: '13px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, cursor: 'pointer' }}>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        {scan.work_type || 'Unknown work type'}
+                      </div>
+                      <div style={{ fontSize: 11, color: '#aaa' }}>{formatDate(scan.created_at)}</div>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <StatusBadge status={scan.status} />
+                      <span style={{ fontSize: 12, color: '#ccc' }}>{isOpen ? '▲' : '▼'}</span>
+                    </div>
                   </div>
-                  <div style={{ fontSize: 11, color: '#aaa' }}>{formatDate(scan.created_at)}</div>
+                  {isOpen && (
+                    <div style={{ padding: '0 16px 14px' }}>
+                      <ScanDetail scan={scan} />
+                    </div>
+                  )}
                 </div>
-                <StatusBadge status={scan.status} />
-              </div>
-            ))
+              )
+            })
           )}
         </section>
 
