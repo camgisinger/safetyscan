@@ -41,7 +41,7 @@ export default function SitePage({ params }: { params: { id: string } }) {
       ])
       if (siteRes.error || !siteRes.data) { router.push('/dashboard'); return }
       setSite(siteRes.data)
-      setScans(scansRes.data || [])
+      setScans((scansRes.data || []) as Scan[])
       setLoading(false)
     }
     init()
