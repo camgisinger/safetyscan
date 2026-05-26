@@ -373,8 +373,20 @@ export default function SafetyScan() {
     try {
       await Promise.all(photos.map(async (photo, i) => {
         try {
-          const result = await analysePhoto(photo.base64, photo.mediaType || "image/jpeg", context);
-          setResults(prev => { const n = [...prev]; n[i] = { status: "done", result }; return n; });
+          const parsed = await analysePhoto(photo.base64, photo.mediaType || "image/jpeg", context);
+          const safeResult = {
+            work_type: parsed.work_type || "Unknown work type",
+            status: parsed.status || "uncertain",
+            confidence: parsed.confidence || "low",
+            legislation: parsed.legislation || [],
+            findings: parsed.findings || [],
+            summary: parsed.summary || "",
+            checklist: parsed.checklist || [],
+            compliant_example: parsed.compliant_example || { description: "", measurements: [], visual_indicators: [] },
+            follow_up_questions: parsed.follow_up_questions || [],
+            photo_quality: parsed.photo_quality || "good",
+          };
+          setResults(prev => { const n = [...prev]; n[i] = { status: "done", result: safeResult }; return n; });
         } catch (e) {
           setResults(prev => { const n = [...prev]; n[i] = { status: "error", error: e.message || "Analysis failed" }; return n; });
         }
@@ -389,8 +401,20 @@ export default function SafetyScan() {
   const reanalyse = async (photoIndex, extraInfo) => {
     setResults(prev => { const n = [...prev]; n[photoIndex] = { status: "loading" }; return n; });
     try {
-      const result = await analysePhoto(photos[photoIndex].base64, photos[photoIndex].mediaType || "image/jpeg", context, extraInfo);
-      setResults(prev => { const n = [...prev]; n[photoIndex] = { status: "done", result }; return n; });
+      const parsed = await analysePhoto(photos[photoIndex].base64, photos[photoIndex].mediaType || "image/jpeg", context, extraInfo);
+      const safeResult = {
+        work_type: parsed.work_type || "Unknown work type",
+        status: parsed.status || "uncertain",
+        confidence: parsed.confidence || "low",
+        legislation: parsed.legislation || [],
+        findings: parsed.findings || [],
+        summary: parsed.summary || "",
+        checklist: parsed.checklist || [],
+        compliant_example: parsed.compliant_example || { description: "", measurements: [], visual_indicators: [] },
+        follow_up_questions: parsed.follow_up_questions || [],
+        photo_quality: parsed.photo_quality || "good",
+      };
+      setResults(prev => { const n = [...prev]; n[photoIndex] = { status: "done", result: safeResult }; return n; });
     } catch (e) {
       setResults(prev => { const n = [...prev]; n[photoIndex] = { status: "error", error: e.message }; return n; });
     }
