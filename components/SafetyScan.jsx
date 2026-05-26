@@ -38,7 +38,7 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
 
 {"work_type":"string","status":"pass|fail|uncertain","confidence":"high|medium|low","legislation":[{"code":"string","description":"string"}],"findings":[{"type":"ok|warning|critical","text":"string"}],"summary":"string","checklist":[{"item":"string","category":"string"}],"compliant_example":{"description":"string","measurements":[{"label":"string","value":"string","standard":"string"}],"visual_indicators":["string"]},"follow_up_questions":[],"photo_quality":"good|poor"}
 
-Max 5 findings, 8 checklist items, 4 measurements, 4 visual_indicators.`;
+Max 5 findings, 8 checklist items, 4 measurements, 4 visual_indicators. Be concise. Keep findings under 4 items, checklist under 6 items, measurements under 3 items, visual_indicators under 3 items.`;
 
 const MAX_IMAGE_PX = 512;
 
@@ -89,7 +89,7 @@ async function analysePhoto(base64, mediaType, context, extraInfo) {
       },
       body: JSON.stringify({
         model: "claude-sonnet-4-5",
-        max_tokens: 1000,
+        max_tokens: 4096,
         system: SYSTEM_PROMPT,
         messages: [{ role: "user", content: userContent }]
       }),
