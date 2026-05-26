@@ -92,9 +92,10 @@ async function convertToJpeg(file) {
 }
 
 
-async function analysePhoto(base64, mediaType, context, extraInfo) {
+async function analysePhoto(base64, mediaType, context, extraInfo, extraPhotos = []) {
   const userContent = [
     { type: "image", source: { type: "base64", media_type: "image/jpeg", data: base64 } },
+    ...extraPhotos.map(p => ({ type: "image", source: { type: "base64", media_type: "image/jpeg", data: p.base64 } })),
     { type: "text", text: `Analyse this construction site photo for Queensland compliance.${context ? `\n\nContext: ${context}` : ""}${extraInfo ? `\n\nAdditional info: ${extraInfo}` : ""}` }
   ];
 
@@ -201,22 +202,21 @@ function FindingItem({ type, text }) {
   );
 }
 
-function LegTag({ code, description, clauses }) {
-  const [open, setOpen] = useState(false);
+function LegTag({ code, description, clauses, isOpen, onToggle }) {
   return (
     <div style={{ display: "inline-block", marginRight: 5, marginBottom: 5 }}>
-      <div onClick={() => setOpen(!open)} style={{ cursor: "pointer", fontSize: 11, padding: "3px 9px", borderRadius: 20, background: NAVY, color: AMBER, fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 3 }}>
-        {code} <span style={{ fontSize: 9, opacity: 0.7 }}>{open ? "▲" : "▼"}</span>
+      <div onClick={onToggle} style={{ cursor: "pointer", fontSize: 11, padding: "3px 9px", borderRadius: 20, background: NAVY, color: AMBER, fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 3 }}>
+        {code} <span style={{ fontSize: 9, opacity: 0.7 }}>{isOpen ? "▲" : "▼"}</span>
       </div>
-      {open && (
+      {isOpen && (
         <div style={{ marginTop: 4, padding: "7px 10px", background: "#fff", border: "0.5px solid #D3D1C7", borderRadius: 7, fontSize: 12, color: "#444", lineHeight: 1.5, maxWidth: 260 }}>
           <div style={{ marginBottom: 6 }}>{description}</div>
           {clauses?.length > 0 && (
-            <div style={{ borderTop: "0.5px solid #E0DDD6", paddingTop: 6 }}>
+            <div style={{ borderTop: "0.5px solid #E0DDD6", paddingTop: 6, marginTop: 6 }}>
               {clauses.map((c, i) => (
-                <div key={i} style={{ display: "flex", gap: 8, marginBottom: 4 }}>
-                  <div style={{ fontSize: 11, fontWeight: 600, color: "#F5A623", flexShrink: 0, background: "#0F1923", padding: "1px 6px", borderRadius: 4 }}>{c.ref}</div>
-                  <div style={{ fontSize: 11, color: "#666" }}>{c.summary}</div>
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 8, marginBottom: 5 }}>
+                  <span style={{ fontSize: 11, fontWeight: 600, color: "#F5A623", background: "#0F1923", padding: "2px 7px", borderRadius: 4, flexShrink: 0, whiteSpace: "nowrap", marginTop: 1 }}>{c.ref}</span>
+                  <span style={{ fontSize: 12, color: "#555", lineHeight: 1.5 }}>{c.summary}</span>
                 </div>
               ))}
             </div>
@@ -303,13 +303,33 @@ function ExampleTab({ example, workType }) {
 
 function FollowUp({ questions, onSubmit }) {
   const [answers, setAnswers] = useState("");
+  const [extraPhotos, setExtraPhotos] = useState([]);
   return (
     <div style={{ marginTop: 16, padding: 14, background: "#FAEEDA", border: "1.5px solid #FAC775", borderRadius: 10 }}>
       <div style={{ fontWeight: 700, fontSize: 13, color: WARN_AMBER, marginBottom: 9 }}>? Additional information needed</div>
       {questions.map((q, i) => <div key={i} style={{ marginBottom: 6, padding: "9px 11px", background: "rgba(255,255,255,0.6)", borderRadius: 7, fontSize: 13, color: "#412402", lineHeight: 1.5 }}>{q}</div>)}
       <textarea value={answers} onChange={e => setAnswers(e.target.value)} placeholder="Type your answers here..." rows={2}
         style={{ width: "100%", marginTop: 8, padding: "9px 11px", borderRadius: 7, border: "0.5px solid #EF9F27", background: "#fff", fontSize: 13, fontFamily: "inherit", resize: "none", color: "#1a1a1a", boxSizing: "border-box" }} />
-      <button onClick={() => onSubmit(answers)} disabled={!answers.trim()}
+      <div style={{ marginTop: 8 }}>
+        <label style={{ fontSize: 12, color: "#854F0B", fontWeight: 500, display: "block", marginBottom: 5 }}>Attach additional photos (optional)</label>
+        <input type="file" accept="image/*" multiple onChange={async (e) => {
+          const files = Array.from(e.target.files).slice(0, 3);
+          const converted = await Promise.all(files.map(f => convertToJpeg(f)));
+          setExtraPhotos(converted.map(d => ({ dataUrl: d, base64: d.split(",")[1] })));
+          e.target.value = "";
+        }} style={{ fontSize: 12, color: "#633806" }} />
+        {extraPhotos.length > 0 && (
+          <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap" }}>
+            {extraPhotos.map((p, i) => (
+              <div key={i} style={{ position: "relative" }}>
+                <img src={p.dataUrl} style={{ width: 52, height: 52, borderRadius: 6, objectFit: "cover", border: "0.5px solid #EF9F27" }} alt="" />
+                <button onClick={() => setExtraPhotos(prev => prev.filter((_, idx) => idx !== i))} style={{ position: "absolute", top: -4, right: -4, width: 16, height: 16, borderRadius: "50%", background: "#A32D2D", border: "1.5px solid #fff", color: "#fff", fontSize: 10, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", padding: 0 }}>✕</button>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      <button onClick={() => onSubmit(answers, extraPhotos)} disabled={!answers.trim()}
         style={{ marginTop: 8, padding: "9px 18px", background: AMBER, border: "none", borderRadius: 7, color: NAVY, fontSize: 13, fontWeight: 700, cursor: answers.trim() ? "pointer" : "not-allowed", opacity: answers.trim() ? 1 : 0.5, fontFamily: "inherit" }}>
         Re-analyse with this information
       </button>
@@ -319,6 +339,7 @@ function FollowUp({ questions, onSubmit }) {
 
 function PhotoResultCard({ photo, index, total, onReanalyse }) {
   const [tab, setTab] = useState("findings");
+  const [openLeg, setOpenLeg] = useState(null);
   const r = photo.result;
   const tabs = [{ id: "findings", label: "Findings" }, { id: "checklist", label: `Checklist (${r.checklist?.length || 0})` }, { id: "example", label: "Example" }];
   const statusColor = { pass: PASS_GREEN, fail: FAIL_RED, uncertain: WARN_AMBER }[r.status] || WARN_AMBER;
@@ -341,7 +362,7 @@ function PhotoResultCard({ photo, index, total, onReanalyse }) {
         {r.legislation?.length > 0 && (
           <div style={{ marginBottom: 14 }}>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.07em", color: "#888", textTransform: "uppercase", marginBottom: 7 }}>Applicable Queensland legislation</div>
-            <div>{r.legislation.map((l, i) => <LegTag key={i} code={l.code} description={l.description} clauses={l.clauses} />)}</div>
+            <div>{r.legislation.map((l, i) => <LegTag key={i} code={l.code} description={l.description} clauses={l.clauses} isOpen={openLeg === i} onToggle={() => setOpenLeg(openLeg === i ? null : i)} />)}</div>
             <div style={{ fontSize: 10, color: "#ccc", marginTop: 3 }}>Tap each to expand</div>
           </div>
         )}
@@ -358,7 +379,7 @@ function PhotoResultCard({ photo, index, total, onReanalyse }) {
           <div>
             {r.findings?.map((f, i) => <FindingItem key={i} type={f.type} text={f.text} />)}
             {r.summary && <div style={{ marginTop: 10, padding: "12px 14px", background: "#F1EFE8", borderRadius: 9 }}><div style={{ fontSize: 10, fontWeight: 700, color: "#888", textTransform: "uppercase", letterSpacing: "0.07em", marginBottom: 5 }}>Summary</div><div style={{ fontSize: 13, color: "#333", lineHeight: 1.6 }}>{r.summary}</div></div>}
-            {r.follow_up_questions?.length > 0 && <FollowUp questions={r.follow_up_questions} onSubmit={(a) => onReanalyse(index, a)} />}
+            {r.follow_up_questions?.length > 0 && <FollowUp questions={r.follow_up_questions} onSubmit={(a, extraPhotos) => onReanalyse(index, a, extraPhotos)} />}
           </div>
         )}
         {tab === "checklist" && (r.checklist?.length > 0 ? <ChecklistTab checklist={r.checklist} /> : <div style={{ padding: 16, textAlign: "center", color: "#aaa", fontSize: 13 }}>No checklist generated.</div>)}
@@ -430,10 +451,10 @@ export default function SafetyScan() {
     }
   };
 
-  const reanalyse = async (photoIndex, extraInfo) => {
+  const reanalyse = async (photoIndex, extraInfo, extraPhotos = []) => {
     setResults(prev => { const n = [...prev]; n[photoIndex] = { status: "loading" }; return n; });
     try {
-      const parsed = await analysePhoto(photos[photoIndex].base64, photos[photoIndex].mediaType || "image/jpeg", context, extraInfo);
+      const parsed = await analysePhoto(photos[photoIndex].base64, photos[photoIndex].mediaType || "image/jpeg", context, extraInfo, extraPhotos);
       const safeResult = {
         work_type: parsed.work_type || "Unknown work type",
         status: parsed.status || "uncertain",
