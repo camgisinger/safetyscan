@@ -38,6 +38,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [checklistState, setChecklistState] = useState<Record<string, any>>({})
   const [notes, setNotes] = useState('')
   const [notesSaving, setNotesSaving] = useState(false)
+  const [notesSaved, setNotesSaved] = useState(false)
   const [assignSiteId, setAssignSiteId] = useState('')
   const [assignSaving, setAssignSaving] = useState(false)
   const [generatingChecklist, setGeneratingChecklist] = useState(false)
@@ -47,6 +48,9 @@ export default function ScanDetail({ id }: { id: string }) {
   const [continuePhotos, setContinuePhotos] = useState<{ dataUrl: string; base64: string }[]>([])
   const [continueLoading, setContinueLoading] = useState(false)
   const [continueError, setContinueError] = useState<string | null>(null)
+  const [photoEnlarged, setPhotoEnlarged] = useState(false)
+  const [editingName, setEditingName] = useState(false)
+  const [scanName, setScanName] = useState('')
   const router = useRouter()
 
   useEffect(() => {
@@ -72,6 +76,7 @@ export default function ScanDetail({ id }: { id: string }) {
 
       const s = scanRes.data as Scan
       setScan(s)
+      setScanName(s.work_type || '')
       setNotes(s.notes || '')
       setChecklistState(s.checklist_state || {})
       setAssignSiteId(s.site_id || '')
@@ -127,8 +132,19 @@ export default function ScanDetail({ id }: { id: string }) {
   const saveNotes = async () => {
     if (!scan) return
     setNotesSaving(true)
-    await supabase.from('scans').update({ notes }).eq('id', id)
+    const { error } = await supabase.from('scans').update({ notes }).eq('id', id)
     setNotesSaving(false)
+    if (!error) {
+      setNotesSaved(true)
+      setTimeout(() => setNotesSaved(false), 2000)
+    }
+  }
+
+  const saveName = async () => {
+    if (!scan) return
+    await supabase.from('scans').update({ work_type: scanName }).eq('id', id)
+    setScan(prev => prev ? { ...prev, work_type: scanName } : prev)
+    setEditingName(false)
   }
 
   const saveSiteAssignment = async (siteId: string) => {
@@ -231,6 +247,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   const checklist: { item: string; category: string }[] = scan.checklist || []
   const currentSite = scan.site_id ? sites.find(s => s.id === scan.site_id) : null
   const visibleCount = checklist.filter((_, i) => !checklistState[`d_${i}`]).length
+  const hasFollowUp = (scan.follow_up_questions || []).length > 0
 
   const checklistContent = (
     <div>
@@ -318,7 +335,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
 
   return (
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif" }}>
-      <style>{`* { box-sizing: border-box; } textarea { outline: none; } @keyframes spin { to { transform: rotate(360deg); } }`}</style>
+      <style>{`* { box-sizing: border-box; } textarea, input { outline: none; } @keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <Header />
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
@@ -329,9 +346,56 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           ‹ {currentSite ? currentSite.name : 'Dashboard'}
         </button>
 
+        {/* Inline rename */}
+        {editingName ? (
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 16 }}>
+            <input
+              value={scanName}
+              onChange={e => setScanName(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && saveName()}
+              autoFocus
+              style={{ flex: 1, padding: '8px 12px', borderRadius: 8, border: '1.5px solid #F5A623', fontSize: 16, fontWeight: 600, fontFamily: 'inherit', color: NAVY }}
+            />
+            <button onClick={saveName}
+              style={{ padding: '8px 14px', background: NAVY, border: 'none', borderRadius: 8, color: AMBER, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
+              Save
+            </button>
+            <button onClick={() => { setScanName(scan.work_type || ''); setEditingName(false) }}
+              style={{ padding: '8px 14px', background: 'transparent', border: '0.5px solid #C8C5BE', borderRadius: 8, color: '#888', fontSize: 13, cursor: 'pointer', fontFamily: 'inherit' }}>
+              Cancel
+            </button>
+          </div>
+        ) : (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
+            <h1 style={{ fontSize: 20, fontWeight: 700, color: NAVY, margin: 0 }}>{scanName}</h1>
+            <button onClick={() => setEditingName(true)}
+              style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: '#bbb', fontSize: 16, padding: '2px 4px', lineHeight: 1 }}>
+              ✎
+            </button>
+          </div>
+        )}
+
+        {/* Photo with enlarge modal */}
+        {scan.photo_url && (
+          <>
+            <img
+              src={scan.photo_url}
+              alt="Site photo"
+              onClick={() => setPhotoEnlarged(true)}
+              style={{ width: '100%', maxHeight: 200, objectFit: 'cover', borderRadius: 10, cursor: 'pointer', marginBottom: 16, display: 'block' }}
+            />
+            {photoEnlarged && (
+              <div onClick={() => setPhotoEnlarged(false)}
+                style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, cursor: 'pointer' }}>
+                <img src={scan.photo_url} alt="Site photo enlarged" style={{ maxWidth: '95vw', maxHeight: '95vh', objectFit: 'contain', borderRadius: 8 }} />
+              </div>
+            )}
+          </>
+        )}
+
         <PhotoResultCard
           photo={{
-            dataUrl: (scan as any).photo_url || null,
+            dataUrl: scan.photo_url || null,
             result: {
               work_type: scan.work_type,
               status: scan.status,
@@ -348,73 +412,76 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           checklistContent={checklistContent}
         />
 
-        {/* Continue conversation */}
-        <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginBottom: 14 }}>
-          <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 12 }}>
-            Continue conversation
-          </div>
-          <textarea
-            value={continueContext}
-            onChange={e => setContinueContext(e.target.value)}
-            placeholder="Describe what's changed, additional context, or what you'd like re-assessed…"
-            rows={3}
-            style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', resize: 'vertical', color: '#1a1a1a', lineHeight: 1.5 }}
-          />
-          <div style={{ marginTop: 10 }}>
-            <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 14px', background: '#F8F7F3', border: '0.5px solid #D3D1C7', borderRadius: 8, cursor: 'pointer', fontSize: 13, color: '#444', fontWeight: 500 }}>
-              📷 Attach photos
-              <input type="file" accept="image/*" multiple style={{ display: 'none' }} onChange={async (e) => {
-                const files = Array.from(e.target.files as FileList).slice(0, 3)
-                const converted = await Promise.all(files.map((f: File) => convertToJpeg(f)))
-                setContinuePhotos((converted as string[]).map((d: string) => ({ dataUrl: d, base64: d.split(',')[1] })))
-                e.target.value = ''
-              }} />
-            </label>
-            {continuePhotos.length > 0 && (
-              <div style={{ display: 'flex', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
-                {continuePhotos.map((p, i) => (
-                  <div key={i} style={{ position: 'relative' }}>
-                    <img src={p.dataUrl} style={{ width: 56, height: 56, borderRadius: 7, objectFit: 'cover', border: '0.5px solid #D3D1C7' }} alt="" />
-                    <button onClick={() => setContinuePhotos(prev => prev.filter((_, idx) => idx !== i))}
-                      style={{ position: 'absolute', top: -4, right: -4, width: 16, height: 16, borderRadius: '50%', background: '#A32D2D', border: '1.5px solid #fff', color: '#fff', fontSize: 10, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}>
-                      ✕
-                    </button>
-                  </div>
-                ))}
+        {/* Continue conversation — only shown when there are no follow-up questions */}
+        {!hasFollowUp && (
+          <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginBottom: 14 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 12 }}>
+              Continue conversation
+            </div>
+            <textarea
+              value={continueContext}
+              onChange={e => setContinueContext(e.target.value)}
+              placeholder="Describe what's changed, additional context, or what you'd like re-assessed…"
+              rows={3}
+              style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', resize: 'vertical', color: '#1a1a1a', lineHeight: 1.5 }}
+            />
+            <div style={{ marginTop: 10 }}>
+              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 14px', background: '#F8F7F3', border: '0.5px solid #D3D1C7', borderRadius: 8, cursor: 'pointer', fontSize: 13, color: '#444', fontWeight: 500 }}>
+                📷 Attach photos
+                <input type="file" accept="image/*" multiple style={{ display: 'none' }} onChange={async (e) => {
+                  const files = Array.from(e.target.files as FileList).slice(0, 3)
+                  const converted = await Promise.all(files.map((f: File) => convertToJpeg(f)))
+                  setContinuePhotos((converted as string[]).map((d: string) => ({ dataUrl: d, base64: d.split(',')[1] })))
+                  e.target.value = ''
+                }} />
+              </label>
+              {continuePhotos.length > 0 && (
+                <div style={{ display: 'flex', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
+                  {continuePhotos.map((p, i) => (
+                    <div key={i} style={{ position: 'relative' }}>
+                      <img src={p.dataUrl} style={{ width: 56, height: 56, borderRadius: 7, objectFit: 'cover', border: '0.5px solid #D3D1C7' }} alt="" />
+                      <button onClick={() => setContinuePhotos(prev => prev.filter((_, idx) => idx !== i))}
+                        style={{ position: 'absolute', top: -4, right: -4, width: 16, height: 16, borderRadius: '50%', background: '#A32D2D', border: '1.5px solid #fff', color: '#fff', fontSize: 10, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}>
+                        ✕
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            {continueError && (
+              <div style={{ marginTop: 10, padding: '8px 10px', background: '#FCEBEB', border: '0.5px solid #F09595', borderRadius: 7, fontSize: 12, color: FAIL_RED }}>
+                {continueError}
               </div>
             )}
+            <button
+              onClick={() => reanalyseWithContext(continueContext, continuePhotos)}
+              disabled={continueLoading || continuePhotos.length === 0}
+              style={{ marginTop: 12, padding: '10px 20px', background: (continueLoading || continuePhotos.length === 0) ? '#E0DDD6' : NAVY, border: 'none', borderRadius: 9, color: '#fff', fontSize: 13, fontWeight: 700, cursor: (continueLoading || continuePhotos.length === 0) ? 'not-allowed' : 'pointer', fontFamily: 'inherit' }}>
+              {continueLoading ? 'Analysing…' : 'Re-analyse →'}
+            </button>
+            {continuePhotos.length === 0 && !continueLoading && (
+              <div style={{ fontSize: 11, color: '#bbb', marginTop: 6 }}>Attach at least one photo to re-analyse</div>
+            )}
           </div>
-          {continueError && (
-            <div style={{ marginTop: 10, padding: '8px 10px', background: '#FCEBEB', border: '0.5px solid #F09595', borderRadius: 7, fontSize: 12, color: FAIL_RED }}>
-              {continueError}
-            </div>
-          )}
-          <button
-            onClick={() => reanalyseWithContext(continueContext, continuePhotos)}
-            disabled={continueLoading || continuePhotos.length === 0}
-            style={{ marginTop: 12, padding: '10px 20px', background: (continueLoading || continuePhotos.length === 0) ? '#E0DDD6' : NAVY, border: 'none', borderRadius: 9, color: '#fff', fontSize: 13, fontWeight: 700, cursor: (continueLoading || continuePhotos.length === 0) ? 'not-allowed' : 'pointer', fontFamily: 'inherit' }}>
-            {continueLoading ? 'Analysing…' : 'Re-analyse →'}
-          </button>
-          {continuePhotos.length === 0 && !continueLoading && (
-            <div style={{ fontSize: 11, color: '#bbb', marginTop: 6 }}>Attach at least one photo to re-analyse</div>
-          )}
-        </div>
+        )}
 
         {/* Notes */}
         <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginBottom: 14 }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase' }}>Notes</div>
-            {notesSaving && <div style={{ fontSize: 11, color: '#bbb' }}>Saving…</div>}
-          </div>
+          <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 8 }}>Notes</div>
           <textarea
             value={notes}
-            onChange={e => setNotes(e.target.value)}
-            onBlur={saveNotes}
+            onChange={e => { setNotes(e.target.value); setNotesSaved(false) }}
             placeholder="Add notes about this scan…"
             rows={4}
-            style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', resize: 'vertical', color: '#1a1a1a', lineHeight: 1.5 }}
+            style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', resize: 'vertical', color: '#1a1a1a', lineHeight: 1.5, boxSizing: 'border-box' as const }}
           />
-          <div style={{ fontSize: 11, color: '#bbb', marginTop: 4 }}>Auto-saves when you click away</div>
+          <button
+            onClick={saveNotes}
+            disabled={notesSaving}
+            style={{ marginTop: 8, padding: '8px 16px', background: notesSaved ? '#EAF3DE' : NAVY, border: 'none', borderRadius: 8, color: notesSaved ? PASS_GREEN : '#fff', fontSize: 13, fontWeight: 600, cursor: notesSaving ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: notesSaving ? 0.6 : 1 }}>
+            {notesSaving ? 'Saving…' : notesSaved ? 'Saved ✓' : 'Save notes'}
+          </button>
         </div>
 
         {/* Assign to site */}

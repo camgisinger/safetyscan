@@ -11,43 +11,6 @@ const PASS_GREEN = '#3B6D11'
 const FAIL_RED = '#A32D2D'
 const WARN_AMBER = '#854F0B'
 
-const FINDING_CFG: Record<string, { bg: string; border: string; color: string; icon: string }> = {
-  ok:       { bg: '#EAF3DE', border: '#C0DD97', color: '#3B6D11', icon: '✓' },
-  warning:  { bg: '#FAEEDA', border: '#FAC775', color: '#854F0B', icon: '⚠' },
-  critical: { bg: '#FCEBEB', border: '#F7C1C1', color: '#A32D2D', icon: '✕' },
-}
-
-function ScanDetail({ scan }: { scan: Scan }) {
-  const findings: any[] = scan.findings || []
-  return (
-    <div style={{ borderTop: '0.5px solid #F0EDE6', marginTop: 10, paddingTop: 12 }}>
-      {scan.summary && (
-        <div style={{ fontSize: 13, color: '#444', lineHeight: 1.6, marginBottom: 10, padding: '10px 12px', background: '#F8F7F3', borderRadius: 8 }}>
-          {scan.summary}
-        </div>
-      )}
-      {findings.length > 0 && (
-        <div>
-          {findings.map((f: any, i: number) => {
-            const c = FINDING_CFG[f.type] || FINDING_CFG.warning
-            return (
-              <div key={i} style={{ display: 'flex', gap: 8, padding: '8px 10px', borderRadius: 7, background: c.bg, border: `0.5px solid ${c.border}`, marginBottom: 5 }}>
-                <div style={{ color: c.color, fontWeight: 700, fontSize: 12, flexShrink: 0 }}>{c.icon}</div>
-                <div style={{ fontSize: 12, color: '#1a1a1a', lineHeight: 1.5 }}>{f.text}</div>
-              </div>
-            )
-          })}
-        </div>
-      )}
-      {findings.length === 0 && !scan.summary && (
-        <div style={{ fontSize: 12, color: '#aaa' }}>No details saved for this scan.</div>
-      )}
-      <Link href={`/scan/${scan.id}`} style={{ display: 'inline-block', marginTop: 10, fontSize: 12, color: NAVY, fontWeight: 600, textDecoration: 'none' }}>
-        View full scan →
-      </Link>
-    </div>
-  )
-}
 
 function StatusBadge({ status }: { status: string }) {
   const cfg: Record<string, { bg: string; color: string; label: string }> = {
@@ -77,7 +40,6 @@ export default function DashboardPage() {
   const [scanMeta, setScanMeta] = useState<{ id: string; site_id: string | null; created_at: string }[]>([])
   const [sites, setSites] = useState<Site[]>([])
   const [loading, setLoading] = useState(true)
-  const [openScan, setOpenScan] = useState<string | null>(null)
   const [showArchived, setShowArchived] = useState(false)
   const [openUnassigned, setOpenUnassigned] = useState(false)
   const router = useRouter()
@@ -171,31 +133,23 @@ export default function DashboardPage() {
             </div>
           ) : (
             recentScans.map(scan => {
-              const isOpen = openScan === scan.id
               const siteName = scan.site_id ? sites.find(s => s.id === scan.site_id)?.name : null
               return (
-                <div key={scan.id} style={{ background: '#fff', borderRadius: 12, border: `0.5px solid ${isOpen ? NAVY : '#E0DDD6'}`, marginBottom: 8, overflow: 'hidden', transition: 'border-color 0.15s' }}>
-                  <div onClick={() => setOpenScan(isOpen ? null : scan.id)}
-                    style={{ padding: '13px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, cursor: 'pointer' }}>
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                        {scan.work_type || 'Unknown work type'}
-                      </div>
-                      <div style={{ fontSize: 11, color: '#aaa' }}>
-                        {formatDate(scan.created_at)}
-                        {siteName && <span style={{ marginLeft: 6, color: '#bbb' }}>· {siteName}</span>}
-                      </div>
+                <div key={scan.id} onClick={() => router.push(`/scan/${scan.id}`)}
+                  style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', marginBottom: 8, padding: '13px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, cursor: 'pointer' }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      {scan.work_type || 'Unknown work type'}
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <StatusBadge status={scan.status} />
-                      <span style={{ fontSize: 12, color: '#ccc' }}>{isOpen ? '▲' : '▼'}</span>
+                    <div style={{ fontSize: 11, color: '#aaa' }}>
+                      {formatDate(scan.created_at)}
+                      {siteName && <span style={{ marginLeft: 6, color: '#bbb' }}>· {siteName}</span>}
                     </div>
                   </div>
-                  {isOpen && (
-                    <div style={{ padding: '0 16px 14px' }}>
-                      <ScanDetail scan={scan} />
-                    </div>
-                  )}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <StatusBadge status={scan.status} />
+                    <span style={{ fontSize: 14, color: '#ccc' }}>›</span>
+                  </div>
                 </div>
               )
             })

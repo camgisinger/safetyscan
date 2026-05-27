@@ -158,9 +158,30 @@ export default function SafetyScan() {
     if (urlSiteId) setSiteDropdownValue(urlSiteId);
   }, [searchParams]);
 
-  const saveScan = async (result, siteId = null) => {
+  const saveScan = async (result, photoDataUrl, siteId = null) => {
     if (!currentUser) return null;
     try {
+      let photo_url = null;
+      if (photoDataUrl) {
+        const base64 = photoDataUrl.split(',')[1];
+        const byteCharacters = atob(base64);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+          byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        const blob = new Blob([byteArray], { type: 'image/jpeg' });
+        const fileName = `${currentUser.id}/${Date.now()}.jpg`;
+        const { error: uploadError } = await supabase.storage
+          .from('scan-photos')
+          .upload(fileName, blob, { contentType: 'image/jpeg', upsert: false });
+        if (!uploadError) {
+          const { data: urlData } = supabase.storage
+            .from('scan-photos')
+            .getPublicUrl(fileName);
+          photo_url = urlData.publicUrl;
+        }
+      }
       const { data } = await supabase.from('scans').insert({
         user_id: currentUser.id,
         site_id: siteId || null,
@@ -172,6 +193,7 @@ export default function SafetyScan() {
         summary: result.summary,
         checklist: result.checklist,
         follow_up_questions: result.follow_up_questions,
+        photo_url,
       }).select('id').single();
       return data?.id || null;
     } catch (err) {
@@ -236,7 +258,7 @@ export default function SafetyScan() {
             photo_quality: parsed.photo_quality || "good",
           };
           setResults(prev => { const n = [...prev]; n[i] = { status: "done", result: safeResult }; return n; });
-          const scanId = await saveScan(safeResult, resolvedSiteId);
+          const scanId = await saveScan(safeResult, photo.dataUrl, resolvedSiteId);
           if (scanId) setScanIds(prev => { const n = [...prev]; n[i] = scanId; return n; });
         } catch (e) {
           setResults(prev => { const n = [...prev]; n[i] = { status: "error", error: e.message || "Analysis failed" }; return n; });
@@ -264,7 +286,7 @@ export default function SafetyScan() {
         photo_quality: parsed.photo_quality || "good",
       };
       setResults(prev => { const n = [...prev]; n[photoIndex] = { status: "done", result: safeResult }; return n; });
-      saveScan(safeResult);
+      saveScan(safeResult, null);
     } catch (e) {
       setResults(prev => { const n = [...prev]; n[photoIndex] = { status: "error", error: e.message }; return n; });
     }
