@@ -1,3 +1,5 @@
+'use client'
+import { useRouter } from 'next/navigation'
 import AppHeader from '@/components/AppHeader'
 
 const sections = [
@@ -44,6 +46,12 @@ const sections = [
 ]
 
 export default function GuidePage() {
+  const router = useRouter()
+
+  const navigateBack = () => {
+    router.push('/dashboard')
+  }
+
   return (
     <div style={{ minHeight: "100vh", background: "var(--ss-bg)", fontFamily: "Inter, system-ui, sans-serif" }}>
       <AppHeader />
@@ -61,6 +69,12 @@ export default function GuidePage() {
             <p style={{ fontSize: 13, color: "var(--ss-text-mute)", lineHeight: 1.7, margin: 0 }}>{s.content}</p>
           </div>
         ))}
+        <div style={{ marginTop: 24, paddingTop: 16, borderTop: "0.5px solid var(--ss-border)" }}>
+          <button onClick={navigateBack}
+            style={{ width: "100%", padding: "12px", background: "transparent", border: "0.5px solid var(--ss-border-strong)", borderRadius: 10, fontSize: 14, color: "var(--ss-text-mute)", cursor: "pointer", fontFamily: "inherit" }}>
+            Back to dashboard
+          </button>
+        </div>
       </div>
     </div>
   )
