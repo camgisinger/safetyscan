@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <title>Safety Scan — Full Mark (Light surfaces)</title>
+  <desc>Transparent background. Ink brackets + ink shield with single amber outline. Use on light surfaces (#EFEAE0 or similar).</desc>
+  <defs>
+    <mask id="tick">
+      <rect width="240" height="240" fill="white"></rect>
+      <polyline points="88,120 110,142 154,96" fill="none" stroke="black" stroke-width="16" stroke-linecap="square" stroke-linejoin="miter"></polyline>
+    </mask>
+  </defs>
+  
+  <g fill="#16181C">
+    <path d="M14 14 H58 V25 H25 V58 H14 Z"></path>
+    <path d="M226 14 H182 V25 H215 V58 H226 Z"></path>
+    <path d="M14 226 H58 V215 H25 V182 H14 Z"></path>
+    <path d="M226 226 H182 V215 H215 V182 H226 Z"></path>
+  </g>
+  
+  <path d="M120 32 L190 56 V128 C190 170 162 196 120 214 C78 196 50 170 50 128 V56 Z" fill="#16181C" mask="url(#tick)"></path>
+  
+  <path d="M120 32 L190 56 V128 C190 170 162 196 120 214 C78 196 50 170 50 128 V56 Z" fill="none" stroke="#F39410" stroke-width="18" stroke-linejoin="miter"></path>
+</svg>

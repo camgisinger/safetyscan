@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <title>Safety Scan — Mono Mark (Light)</title>
+  <desc>Single-color version. Ink brackets + ink shield outline + ink tick. Transparent background. Use when amber is unavailable.</desc>
+  
+  <g fill="#16181C">
+    <path d="M14 14 H58 V25 H25 V58 H14 Z"></path>
+    <path d="M226 14 H182 V25 H215 V58 H226 Z"></path>
+    <path d="M14 226 H58 V215 H25 V182 H14 Z"></path>
+    <path d="M226 226 H182 V215 H215 V182 H226 Z"></path>
+  </g>
+  
+  <path d="M120 32 L190 56 V128 C190 170 162 196 120 214 C78 196 50 170 50 128 V56 Z" fill="none" stroke="#16181C" stroke-width="10" stroke-linejoin="miter"></path>
+  
+  <polyline points="88,120 110,142 154,96" fill="none" stroke="#16181C" stroke-width="16" stroke-linecap="square" stroke-linejoin="miter"></polyline>
+</svg>

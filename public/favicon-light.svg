@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <title>Safety Scan — Favicon (Light)</title>
+  <desc>Shield only (no brackets). Ink shield + single thick amber outline. Transparent background. Use on light surfaces.</desc>
+  <defs>
+    <mask id="tick">
+      <rect width="240" height="240" fill="white"></rect>
+      <polyline points="88,120 110,142 154,96" fill="none" stroke="black" stroke-width="16" stroke-linecap="square" stroke-linejoin="miter"></polyline>
+    </mask>
+  </defs>
+  <path d="M120 32 L190 56 V128 C190 170 162 196 120 214 C78 196 50 170 50 128 V56 Z" fill="#16181C" mask="url(#tick)"></path>
+  <path d="M120 32 L190 56 V128 C190 170 162 196 120 214 C78 196 50 170 50 128 V56 Z" fill="none" stroke="#F39410" stroke-width="18" stroke-linejoin="miter"></path>
+</svg>
