@@ -261,7 +261,7 @@ export default function SafetyScan() {
 
       <header style={{ background: NAVY, padding: "0 20px", height: 56, display: "flex", alignItems: "center", justifyContent: "space-between", position: "sticky", top: 0, zIndex: 10 }}>
         <button onClick={() => router.push('/dashboard')} style={{ background: "transparent", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 10, padding: 0, fontFamily: "Inter, system-ui, sans-serif" }}>
-          <img src="/brand/logo-mark-dark.svg" alt="SafetyScan" style={{ width: 36, height: 36 }} />
+          <img src="/logo-mark-dark.svg" alt="SafetyScan" style={{ width: 36, height: 36 }} />
           <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.01em" }}>
             <span style={{ color: "#EFEAE0" }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
           </div>

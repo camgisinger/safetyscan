@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "SafetyScan",
   description: "AI-powered Queensland construction compliance",
   icons: {
-    icon: "/brand/favicon-dark.svg",
+    icon: "/favicon-dark.svg",
   },
 };
 
