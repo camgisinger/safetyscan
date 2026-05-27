@@ -201,6 +201,7 @@ export default function SafetyScan() {
   const runAll = async () => {
     if (!photos.length) return;
     setAnalysing(true);
+    setScanLoaderState("scanning");
     setGlobalError(null);
 
     // Resolve site
@@ -272,6 +273,7 @@ export default function SafetyScan() {
 
         {analysing && (
           <div style={{ background: "#16181C", borderRadius: 16, padding: "36px 20px", border: "0.5px solid rgba(255,255,255,0.08)", textAlign: "center", marginBottom: 16 }}>
+            {console.log('[SafetyScan] scanLoaderState:', scanLoaderState, 'analysing:', analysing)}
             <ScanLoader state={scanLoaderState} size={120} />
             <div style={{ marginTop: 20, fontWeight: 600, color: "#EFEAE0", fontSize: 15, minHeight: 24 }}>{LOADING_MESSAGES[msgIdx]}</div>
             <div style={{ height: 4, background: "#252A30", borderRadius: 2, overflow: "hidden", maxWidth: 280, margin: "12px auto 0" }}>

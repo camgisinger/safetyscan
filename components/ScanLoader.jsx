@@ -39,6 +39,7 @@ export function ScanLoader({
   };
 
   const cls = `scan-loader ${state}${onAmber ? " on-amber" : ""} ${className}`.trim();
+  console.log('[ScanLoader] state:', state, 'cls:', cls);
   return (
     <div className={cls} style={style}>
       <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
