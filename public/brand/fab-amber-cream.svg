@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <title>Safety Scan — New Scan FAB (A2 · cream plus)</title>
+  <desc>Solid amber circle with cream plus. Use as a floating &#34;new scan&#34; button.</desc>
+  <circle cx="120" cy="120" r="120" fill="#F39410"></circle>
+  <rect x="110" y="74" width="20" height="92" fill="#EFEAE0"></rect>
+  <rect x="74" y="110" width="92" height="20" fill="#EFEAE0"></rect>
+</svg>
