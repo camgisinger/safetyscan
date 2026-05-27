@@ -86,7 +86,7 @@ export default function SitesPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div className="page-slide-right-in" style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif", willChange: 'transform, opacity' }}>
       <style>{`* { box-sizing: border-box; }`}</style>
 
       <AppHeader />

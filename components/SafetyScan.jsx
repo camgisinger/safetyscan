@@ -262,7 +262,7 @@ export default function SafetyScan() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div className="page-slide-up" style={{ minHeight: "100vh", background: BG, fontFamily: "Inter, system-ui, sans-serif", willChange: "transform, opacity" }}>
       <style>{`
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes dotPulse { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1); } }
@@ -275,10 +275,6 @@ export default function SafetyScan() {
       } />
 
       <main style={{ maxWidth: 560, margin: "0 auto", padding: "20px 16px 48px" }}>
-
-        <button onClick={() => router.push('/dashboard')} style={{ background: "transparent", border: "none", color: "#888", fontSize: 13, cursor: "pointer", display: "flex", alignItems: "center", gap: 4, padding: "0 0 14px 0", fontFamily: "inherit" }}>
-          ‹ Dashboard
-        </button>
 
         {analysing && (
           <div style={{ background: "#16181C", borderRadius: 16, padding: "36px 20px", border: "0.5px solid rgba(255,255,255,0.08)", textAlign: "center", marginBottom: 16 }}>
@@ -392,6 +388,12 @@ export default function SafetyScan() {
               </>
             )}
 
+            <button
+              onClick={() => router.push('/dashboard')}
+              style={{ width: "100%", padding: "11px", background: "transparent", border: `0.5px solid ${BORDER_STRONG}`, borderRadius: 10, fontSize: 13, color: TEXT_MUTE, cursor: "pointer", fontFamily: "inherit", marginTop: 8 }}
+            >
+              ← Back to dashboard
+            </button>
             <div style={{ marginTop: 10, fontSize: 11, color: "#bbb", textAlign: "center" }}>AI-assisted · Queensland legislation · Not a substitute for professional advice</div>
           </div>
         )}

@@ -632,15 +632,16 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   )
 
   return (
-    <div style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div className="page-slide-right-in" style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif", willChange: 'transform, opacity' }}>
       <style>{`* { box-sizing: border-box; } textarea, input { outline: none; } @keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <AppHeader />
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
 
-        <button onClick={() => scan.site_id ? router.push(`/sites/${scan.site_id}`) : router.push('/dashboard')}
-          style={{ background: 'transparent', border: 'none', color: '#888', fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4, padding: '0 0 16px 0', fontFamily: 'inherit' }}>
-          ‹ {currentSite ? currentSite.name : 'Dashboard'}
+        <button onClick={() => router.push('/dashboard')}
+          style={{ display: 'flex', alignItems: 'center', gap: 6, background: SURFACE, border: `0.5px solid ${BORDER_STRONG}`, borderRadius: 8, padding: '8px 14px', fontSize: 13, fontWeight: 500, color: TEXT, cursor: 'pointer', fontFamily: 'inherit', marginBottom: 14 }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Dashboard
         </button>
 
         {/* Inline rename */}

@@ -74,8 +74,8 @@ export default function AppHeader({ rightContent }: AppHeaderProps) {
 
       {menuOpen && (
         <>
-          <div onClick={() => setMenuOpen(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 40 }} />
-          <div style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 280, background: '#16181C', zIndex: 50, display: 'flex', flexDirection: 'column', padding: 24, boxShadow: '-4px 0 24px rgba(0,0,0,0.4)' }}>
+          <div onClick={() => setMenuOpen(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 40, animation: 'fadeIn 0.2s ease forwards' }} />
+          <div style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 280, background: '#16181C', zIndex: 50, display: 'flex', flexDirection: 'column', padding: 24, boxShadow: '-4px 0 24px rgba(0,0,0,0.4)', animation: 'slideInFromRight 0.28s cubic-bezier(0.2, 0.7, 0.3, 1) forwards', willChange: 'transform' }}>
 
             <button onClick={() => setMenuOpen(false)} style={{ alignSelf: 'flex-end', background: 'transparent', border: 'none', color: '#EFEAE0', fontSize: 22, cursor: 'pointer', marginBottom: 24, lineHeight: 1 }}>✕</button>
 

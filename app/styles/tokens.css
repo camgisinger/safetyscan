@@ -168,3 +168,35 @@
   .scan-loader.scanning .ss-beam-group { animation: none; opacity: 1; }
   .scan-loader.complete .ss-tick { animation: none; stroke-dashoffset: 0; }
 }
+
+/* Page transitions */
+@keyframes slideUpIn {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideDownOut {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(100%); opacity: 0; }
+}
+@keyframes slideInFromRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideOutToRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-slide-up { animation: slideUpIn 0.32s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+.page-slide-down { animation: slideDownOut 0.28s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+.page-slide-right-in { animation: slideInFromRight 0.32s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+.page-slide-right-out { animation: slideOutToRight 0.28s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+.page-fade-in { animation: fadeIn 0.2s ease forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-slide-up, .page-slide-down, .page-slide-right-in, .page-slide-right-out { animation: fadeIn 0.15s ease forwards; }
+}

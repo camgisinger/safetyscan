@@ -100,7 +100,7 @@ export default function DashboardPage() {
   const complianceRate = scans.length > 0 ? Math.round((compliantCount / scans.length) * 100) : 0
 
   return (
-    <div style={{ minHeight: '100vh', background: BG, fontFamily: 'Inter, system-ui, sans-serif' }}>
+    <div className="page-fade-in" style={{ minHeight: '100vh', background: BG, fontFamily: 'Inter, system-ui, sans-serif', willChange: 'opacity' }}>
       <style>{`* { box-sizing: border-box; }`}</style>
 
       <AppHeader />
