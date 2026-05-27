@@ -86,6 +86,7 @@ export default function SafetyScan() {
   const [msgIdx, setMsgIdx] = useState(0);
   const [progress, setProgress] = useState(0);
   const [globalError, setGlobalError] = useState(null);
+  const [showTips, setShowTips] = useState(false);
   const [dragOver, setDragOver] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [sites, setSites] = useState([]);
@@ -353,6 +354,29 @@ export default function SafetyScan() {
                   )}
                 </div>
 
+                <div style={{ marginBottom: 12 }}>
+                  <button
+                    onClick={() => setShowTips(!showTips)}
+                    style={{ background: "transparent", border: "none", cursor: "pointer", fontSize: 13, color: "#7A7468", fontFamily: "Inter, system-ui, sans-serif", padding: 0, display: "flex", alignItems: "center", gap: 6 }}
+                  >
+                    <span style={{ fontSize: 14 }}>{showTips ? "▲" : "▼"}</span>
+                    Tips for better results
+                  </button>
+                  {showTips && (
+                    <div style={{ marginTop: 10, padding: "12px 14px", background: "#F4F1EA", borderRadius: 8, border: "0.5px solid rgba(0,0,0,0.08)", display: "flex", flexDirection: "column", gap: 8 }}>
+                      {[
+                        "Good lighting and a clear angle improves accuracy significantly",
+                        "Add context in the text field — location and work type helps the AI identify the right legislation",
+                        "Upload multiple photos for a more thorough assessment"
+                      ].map((tip, i) => (
+                        <div key={i} style={{ display: "flex", gap: 10, fontSize: 13, color: "#4A4D52", lineHeight: 1.5 }}>
+                          <span style={{ color: "#F39410", fontWeight: 700, flexShrink: 0 }}>→</span>
+                          <span>{tip}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
                 <button onClick={runAll}
                   style={{ width: "100%", padding: 13, background: AMBER, border: "none", borderRadius: 10, color: NAVY, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "Inter, system-ui, sans-serif" }}>
                   Analyse {photos.length} photo{photos.length > 1 ? "s" : ""} for compliance →
