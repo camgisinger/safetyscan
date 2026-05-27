@@ -4,19 +4,20 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { supabase, Site, Scan } from '../../lib/supabase'
 
-const NAVY = '#0F1923'
-const AMBER = '#F5A623'
-const OFFWHITE = '#F1EFE8'
-const PASS_GREEN = '#3B6D11'
-const FAIL_RED = '#A32D2D'
-const WARN_AMBER = '#854F0B'
+const NAVY = '#16181C'
+const AMBER = '#F39410'
+const OFFWHITE = '#EFEAE0'
+const PASS_GREEN = '#1a7a45'
+const FAIL_RED = '#E14B3D'
+const WARN_AMBER = '#a36200'
 
 
 function StatusBadge({ status }: { status: string }) {
   const cfg: Record<string, { bg: string; color: string; label: string }> = {
-    pass: { bg: '#EAF3DE', color: PASS_GREEN, label: 'Compliant' },
-    fail: { bg: '#FCEBEB', color: FAIL_RED, label: 'Issues found' },
-    uncertain: { bg: '#FAEEDA', color: WARN_AMBER, label: 'Uncertain' },
+    pass: { bg: 'rgba(61,211,122,0.12)', color: PASS_GREEN, label: 'Compliant' },
+    fail: { bg: 'rgba(225,75,61,0.12)', color: FAIL_RED, label: 'Issues found' },
+    uncertain: { bg: 'rgba(243,148,16,0.12)', color: WARN_AMBER, label: 'Uncertain' },
+    not_applicable: { bg: 'rgba(0,0,0,0.05)', color: '#4A4D52', label: 'N/A' },
   }
   const c = cfg[status] || cfg.uncertain
   return (
@@ -96,8 +97,8 @@ export default function DashboardPage() {
       <style>{`* { box-sizing: border-box; }`}</style>
 
       <header style={{ background: NAVY, padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 10 }}>
-        <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em' }}>
-          <span style={{ color: '#fff' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
+        <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
+          <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>{user?.email}</div>
@@ -140,7 +141,7 @@ export default function DashboardPage() {
                   {(scan.photo_urls?.[0] || scan.photo_url) ? (
                     <img src={scan.photo_urls?.[0] || scan.photo_url!} alt="" style={{ width: 44, height: 44, borderRadius: 7, objectFit: 'cover', flexShrink: 0, border: '0.5px solid #E0DDD6' }} />
                   ) : (
-                    <div style={{ width: 44, height: 44, borderRadius: 7, background: '#F1EFE8', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18 }}>📷</div>
+                    <div style={{ width: 44, height: 44, borderRadius: 7, background: '#EFEAE0', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18 }}>📷</div>
                   )}
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
@@ -183,7 +184,7 @@ export default function DashboardPage() {
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: site.location ? 2 : 0, display: 'flex', alignItems: 'center', gap: 6 }}>
                           {site.name}
-                          {site.archived && <span style={{ fontSize: 10, padding: '1px 6px', background: '#F1EFE8', color: '#888', borderRadius: 4, fontWeight: 500 }}>Archived</span>}
+                          {site.archived && <span style={{ fontSize: 10, padding: '1px 6px', background: '#EFEAE0', color: '#888', borderRadius: 4, fontWeight: 500 }}>Archived</span>}
                         </div>
                         {site.location && <div style={{ fontSize: 11, color: '#aaa' }}>{site.location}</div>}
                         <div style={{ fontSize: 11, color: '#bbb', marginTop: 2 }}>

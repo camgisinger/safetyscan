@@ -1,0 +1,37 @@
+:root {
+  /* Core palette */
+  --ss-ink: #16181C;
+  --ss-paper: #EFEAE0;
+  --ss-amber: #F39410;
+  --ss-success: #3DD37A;
+  --ss-danger: #E14B3D;
+  --ss-warning: #F39410;
+
+  /* Grays */
+  --ss-gray-50: #F4F1EA;
+  --ss-gray-100: #EBE8E1;
+  --ss-gray-400: #7A7468;
+  --ss-gray-500: #4A4D52;
+
+  /* Borders */
+  --ss-border: rgba(0, 0, 0, 0.08);
+  --ss-border-strong: rgba(0, 0, 0, 0.18);
+
+  /* Status: success */
+  --ss-success-bg: rgba(61, 211, 122, 0.1);
+  --ss-success-bg-strong: rgba(61, 211, 122, 0.12);
+  --ss-success-text: #1a7a45;
+  --ss-success-border: rgba(61, 211, 122, 0.3);
+
+  /* Status: danger */
+  --ss-danger-bg: rgba(225, 75, 61, 0.1);
+  --ss-danger-bg-strong: rgba(225, 75, 61, 0.12);
+  --ss-danger-text: #b33428;
+  --ss-danger-border: rgba(225, 75, 61, 0.3);
+
+  /* Status: warning */
+  --ss-warning-bg: rgba(243, 148, 16, 0.1);
+  --ss-warning-bg-strong: rgba(243, 148, 16, 0.12);
+  --ss-warning-text: #a36200;
+  --ss-warning-border: rgba(243, 148, 16, 0.3);
+}

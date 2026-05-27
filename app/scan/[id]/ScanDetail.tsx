@@ -4,16 +4,16 @@ import { useRouter } from 'next/navigation'
 import { supabase, Site, Scan } from '../../../lib/supabase'
 import PhotoResultCard, { convertToJpeg, SYSTEM_PROMPT } from '../../../components/PhotoResultCard'
 
-const NAVY = '#0F1923'
-const AMBER = '#F5A623'
-const OFFWHITE = '#F1EFE8'
-const PASS_GREEN = '#3B6D11'
-const FAIL_RED = '#A32D2D'
-const WARN_AMBER = '#854F0B'
+const NAVY = '#16181C'
+const AMBER = '#F39410'
+const OFFWHITE = '#EFEAE0'
+const PASS_GREEN = '#1a7a45'
+const FAIL_RED = '#E14B3D'
+const WARN_AMBER = '#a36200'
 
 function Spinner() {
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Inter', system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: OFFWHITE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <div style={{ width: 32, height: 32, border: '3px solid #E0DDD6', borderTopColor: AMBER, borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
     </div>
@@ -23,8 +23,8 @@ function Spinner() {
 function Header() {
   return (
     <header style={{ background: NAVY, padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', position: 'sticky', top: 0, zIndex: 10 }}>
-      <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em' }}>
-        <span style={{ color: '#fff' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
+      <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
+        <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
       </div>
     </header>
   )
@@ -273,7 +273,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   if (loading) return <Spinner />
 
   if (error) return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
       <Header />
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
@@ -281,7 +281,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           style={{ background: 'transparent', border: 'none', color: '#888', fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4, padding: '0 0 16px 0', fontFamily: 'inherit' }}>
           ‹ Dashboard
         </button>
-        <div style={{ background: '#FCEBEB', border: '0.5px solid #F09595', borderRadius: 12, padding: '16px 18px' }}>
+        <div style={{ background: 'rgba(225,75,61,0.1)', border: '0.5px solid #F09595', borderRadius: 12, padding: '16px 18px' }}>
           <div style={{ fontSize: 14, fontWeight: 700, color: FAIL_RED, marginBottom: 6 }}>Could not load scan</div>
           <div style={{ fontSize: 13, color: '#888', lineHeight: 1.5 }}>{error}</div>
         </div>
@@ -313,7 +313,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
       </div>
 
       {confirmRegenerate && (
-        <div style={{ marginBottom: 12, padding: '10px 12px', background: '#FAEEDA', border: '0.5px solid #FAC775', borderRadius: 8 }}>
+        <div style={{ marginBottom: 12, padding: '10px 12px', background: 'rgba(243,148,16,0.1)', border: '0.5px solid #FAC775', borderRadius: 8 }}>
           <div style={{ fontSize: 12, color: '#854F0B', marginBottom: 8, lineHeight: 1.5 }}>
             This will reset your checklist progress. Are you sure?
           </div>
@@ -341,7 +341,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
             Generate a custom checklist based on this scan's findings and applicable legislation.
           </div>
           {checklistError && (
-            <div style={{ marginBottom: 10, padding: '8px 10px', background: '#FCEBEB', border: '0.5px solid #F09595', borderRadius: 7, fontSize: 12, color: FAIL_RED }}>
+            <div style={{ marginBottom: 10, padding: '8px 10px', background: 'rgba(225,75,61,0.1)', border: '0.5px solid #F09595', borderRadius: 7, fontSize: 12, color: FAIL_RED }}>
               {checklistError}
             </div>
           )}
@@ -383,7 +383,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   )
 
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; } textarea, input { outline: none; } @keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <Header />
 
@@ -519,7 +519,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
               )}
             </div>
             {continueError && (
-              <div style={{ marginTop: 10, padding: '8px 10px', background: '#FCEBEB', border: '0.5px solid #F09595', borderRadius: 7, fontSize: 12, color: FAIL_RED }}>
+              <div style={{ marginTop: 10, padding: '8px 10px', background: 'rgba(225,75,61,0.1)', border: '0.5px solid #F09595', borderRadius: 7, fontSize: 12, color: FAIL_RED }}>
                 {continueError}
               </div>
             )}

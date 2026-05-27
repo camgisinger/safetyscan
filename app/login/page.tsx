@@ -3,9 +3,9 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
 
-const NAVY = '#0F1923'
-const AMBER = '#F5A623'
-const OFFWHITE = '#F1EFE8'
+const NAVY = '#16181C'
+const AMBER = '#F39410'
+const OFFWHITE = '#EFEAE0'
 
 export default function LoginPage() {
   const [tab, setTab] = useState<'signin' | 'signup'>('signin')
@@ -38,10 +38,10 @@ export default function LoginPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif", display: 'flex', flexDirection: 'column' }}>
+    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif", display: 'flex', flexDirection: 'column' }}>
       <header style={{ background: NAVY, padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', gap: 10 }}>
-        <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em' }}>
-          <span style={{ color: '#fff' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
+        <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
+          <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
         </div>
         <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', letterSpacing: '0.05em' }}>CONSTRUCTION COMPLIANCE</div>
       </header>
@@ -92,7 +92,7 @@ export default function LoginPage() {
                 </div>
 
                 {error && (
-                  <div style={{ marginBottom: 14, padding: '9px 12px', background: '#FCEBEB', border: '0.5px solid #F09595', borderRadius: 8, fontSize: 12, color: '#A32D2D' }}>
+                  <div style={{ marginBottom: 14, padding: '9px 12px', background: 'rgba(225,75,61,0.1)', border: '0.5px solid #F09595', borderRadius: 8, fontSize: 12, color: '#E14B3D' }}>
                     {error}
                   </div>
                 )}

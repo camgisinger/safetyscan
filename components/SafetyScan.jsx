@@ -13,10 +13,10 @@ if (typeof window !== 'undefined') {
   }
 }
 
-const NAVY = "#0F1923";
-const AMBER = "#F5A623";
-const OFFWHITE = "#F1EFE8";
-const FAIL_RED = "#A32D2D";
+const NAVY = "#16181C";
+const AMBER = "#F39410";
+const OFFWHITE = "#EFEAE0";
+const FAIL_RED = "#E14B3D";
 const MAX_PHOTOS = 5;
 
 async function analysePhotos(photoList, context) {
@@ -66,16 +66,6 @@ async function analysePhotos(photoList, context) {
   throw new Error(`Parse failed: ${stripped.substring(0, 200)}`);
 }
 
-function ScanIcon() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 46 46" fill="none">
-      <rect x="5" y="5" width="36" height="36" rx="7" stroke={AMBER} strokeWidth="2.5" fill="none"/>
-      <line x1="5" y1="23" x2="41" y2="23" stroke={AMBER} strokeWidth="3" strokeLinecap="round"/>
-      <line x1="13" y1="15" x2="33" y2="15" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round"/>
-      <line x1="13" y1="31" x2="25" y2="31" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round"/>
-    </svg>
-  );
-}
 
 const LOADING_MESSAGES = [
   "Identifying work types...",
@@ -102,9 +92,9 @@ function LoadingSpinner() {
 
   return (
     <>
-      <div style={{ width: 36, height: 36, border: "3px solid #E0DDD6", borderTopColor: AMBER, borderRadius: "50%", animation: "spin 0.7s linear infinite", margin: "0 auto 16px" }} />
-      <div style={{ fontWeight: 700, color: NAVY, fontSize: 15, marginBottom: 12, minHeight: 24 }}>{LOADING_MESSAGES[msgIdx]}</div>
-      <div style={{ height: 4, background: "#F1EFE8", borderRadius: 2, overflow: "hidden", maxWidth: 280, margin: "0 auto" }}>
+      <div style={{ width: 36, height: 36, border: "3px solid rgba(0,0,0,0.08)", borderTopColor: AMBER, borderRadius: "50%", animation: "spin 0.7s linear infinite", margin: "0 auto 16px" }} />
+      <div style={{ fontWeight: 600, color: NAVY, fontSize: 15, marginBottom: 12, minHeight: 24 }}>{LOADING_MESSAGES[msgIdx]}</div>
+      <div style={{ height: 4, background: "#E5E2DB", borderRadius: 2, overflow: "hidden", maxWidth: 280, margin: "0 auto" }}>
         <div style={{ height: "100%", width: `${progress}%`, background: AMBER, borderRadius: 2, transition: "width 0.8s ease" }} />
       </div>
     </>
@@ -268,7 +258,7 @@ export default function SafetyScan() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes dotPulse { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1); } }
@@ -277,16 +267,13 @@ export default function SafetyScan() {
       `}</style>
 
       <header style={{ background: NAVY, padding: "0 20px", height: 56, display: "flex", alignItems: "center", justifyContent: "space-between", position: "sticky", top: 0, zIndex: 10 }}>
-        <button onClick={() => router.push('/dashboard')} style={{ background: "transparent", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 10, padding: 0, fontFamily: "inherit" }}>
-          <ScanIcon />
-          <div>
-            <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: "-0.02em" }}>
-              <span style={{ color: "#fff" }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
-            </div>
-            <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", letterSpacing: "0.05em" }}>CONSTRUCTION COMPLIANCE</div>
+        <button onClick={() => router.push('/dashboard')} style={{ background: "transparent", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 10, padding: 0, fontFamily: "Inter, system-ui, sans-serif" }}>
+          <img src="/brand/logo-mark-dark.svg" alt="SafetyScan" style={{ width: 36, height: 36 }} />
+          <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.01em" }}>
+            <span style={{ color: "#EFEAE0" }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
           </div>
         </button>
-        <div style={{ fontSize: 11, padding: "4px 10px", background: "rgba(245,166,35,0.15)", color: AMBER, borderRadius: 10, border: "0.5px solid rgba(245,166,35,0.3)", fontWeight: 600 }}>Queensland</div>
+        <div style={{ fontSize: 11, padding: "4px 10px", background: "rgba(243,148,16,0.15)", color: AMBER, borderRadius: 10, border: "0.5px solid rgba(243,148,16,0.3)", fontWeight: 600 }}>Queensland</div>
       </header>
 
       <main style={{ maxWidth: 560, margin: "0 auto", padding: "20px 16px 48px" }}>
@@ -340,7 +327,7 @@ export default function SafetyScan() {
               onChange={e => { addFiles(e.target.files); e.target.value = ""; }} />
 
             {globalError && (
-              <div style={{ marginBottom: 10, padding: "9px 12px", background: "#FCEBEB", border: "0.5px solid #F09595", borderRadius: 8, fontSize: 12, color: FAIL_RED }}>{globalError}</div>
+              <div style={{ marginBottom: 10, padding: "9px 12px", background: "rgba(225,75,61,0.1)", border: "0.5px solid #F09595", borderRadius: 8, fontSize: 12, color: FAIL_RED }}>{globalError}</div>
             )}
 
             {photos.length > 0 && (
@@ -372,7 +359,7 @@ export default function SafetyScan() {
                 </div>
 
                 <button onClick={runAll}
-                  style={{ width: "100%", padding: 13, background: NAVY, border: "none", borderRadius: 10, color: "#fff", fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
+                  style={{ width: "100%", padding: 13, background: AMBER, border: "none", borderRadius: 10, color: NAVY, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "Inter, system-ui, sans-serif" }}>
                   Analyse {photos.length} photo{photos.length > 1 ? "s" : ""} for compliance →
                 </button>
               </>

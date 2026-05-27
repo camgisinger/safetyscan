@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Site } from '../../lib/supabase'
 
-const NAVY = '#0F1923'
-const AMBER = '#F5A623'
-const OFFWHITE = '#F1EFE8'
+const NAVY = '#16181C'
+const AMBER = '#F39410'
+const OFFWHITE = '#EFEAE0'
 
 export default function SitesPage() {
   const [sites, setSites] = useState<Site[]>([])
@@ -70,19 +70,19 @@ export default function SitesPage() {
 
   if (loading) {
     return (
-      <div style={{ minHeight: '100vh', background: OFFWHITE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Inter', system-ui, sans-serif" }}>
+      <div style={{ minHeight: '100vh', background: OFFWHITE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "Inter, system-ui, sans-serif" }}>
         <div style={{ color: '#aaa', fontSize: 14 }}>Loading...</div>
       </div>
     )
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
 
       <header style={{ background: NAVY, padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 10 }}>
-        <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em' }}>
-          <span style={{ color: '#fff' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
+        <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
+          <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
         </div>
         <button onClick={() => router.push('/dashboard')}
           style={{ fontSize: 12, padding: '5px 12px', background: 'rgba(255,255,255,0.1)', border: '0.5px solid rgba(255,255,255,0.2)', borderRadius: 8, color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>
@@ -169,7 +169,7 @@ export default function SitesPage() {
                       View
                     </button>
                     <button onClick={() => toggleArchive(site)}
-                      style={{ fontSize: 12, padding: '5px 10px', background: site.archived ? '#EAF3DE' : 'transparent', border: '0.5px solid #D3D1C7', borderRadius: 7, color: site.archived ? '#3B6D11' : '#888', cursor: 'pointer', fontFamily: 'inherit' }}>
+                      style={{ fontSize: 12, padding: '5px 10px', background: site.archived ? 'rgba(61,211,122,0.12)' : 'transparent', border: '0.5px solid #D3D1C7', borderRadius: 7, color: site.archived ? '#1a7a45' : '#888', cursor: 'pointer', fontFamily: 'inherit' }}>
                       {site.archived ? 'Unarchive' : 'Archive'}
                     </button>
                   </div>

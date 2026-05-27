@@ -1,11 +1,11 @@
 "use client"
 import { useState } from "react";
 
-const NAVY = "#0F1923";
-const AMBER = "#F5A623";
-const PASS_GREEN = "#3B6D11";
-const FAIL_RED = "#A32D2D";
-const WARN_AMBER = "#854F0B";
+const NAVY = "#16181C";
+const AMBER = "#F39410";
+const PASS_GREEN = "#1a7a45";
+const FAIL_RED = "#E14B3D";
+const WARN_AMBER = "#a36200";
 const MAX_IMAGE_PX = 512;
 
 export const SYSTEM_PROMPT = `You are SafetyScan — a specialist Queensland construction compliance tool built for site supervisors and foremen with real on-site experience. You understand how construction sites actually operate, not just what the textbook says.
@@ -197,9 +197,10 @@ function CompliantPhotoSlot({ workType }) {
 
 function StatusBadge({ status, confidence }) {
   const cfg = {
-    pass: { bg: "#EAF3DE", border: "#97C459", color: PASS_GREEN, label: "Likely compliant", icon: "✓" },
-    fail: { bg: "#FCEBEB", border: "#F09595", color: FAIL_RED, label: "Issues found", icon: "✕" },
-    uncertain: { bg: "#FAEEDA", border: "#EF9F27", color: WARN_AMBER, label: "More information needed", icon: "?" },
+    pass: { bg: "rgba(61,211,122,0.12)", border: "rgba(61,211,122,0.3)", color: PASS_GREEN, label: "Likely compliant", icon: "✓" },
+    fail: { bg: "rgba(225,75,61,0.12)", border: "rgba(225,75,61,0.3)", color: FAIL_RED, label: "Issues found", icon: "✕" },
+    uncertain: { bg: "rgba(243,148,16,0.12)", border: "rgba(243,148,16,0.3)", color: WARN_AMBER, label: "More information needed", icon: "?" },
+    not_applicable: { bg: "rgba(0,0,0,0.05)", border: "rgba(0,0,0,0.1)", color: "#4A4D52", label: "Not applicable", icon: "–" },
   };
   const c = cfg[status] || cfg.uncertain;
   const conf = { high: "High confidence", medium: "Medium confidence", low: "Low confidence" }[confidence] || "";
@@ -216,9 +217,9 @@ function StatusBadge({ status, confidence }) {
 
 function FindingItem({ type, text, photoRef }) {
   const cfg = {
-    ok: { bg: "#EAF3DE", border: "#C0DD97", color: PASS_GREEN, icon: "✓" },
-    warning: { bg: "#FAEEDA", border: "#FAC775", color: WARN_AMBER, icon: "⚠" },
-    critical: { bg: "#FCEBEB", border: "#F7C1C1", color: FAIL_RED, icon: "✕" },
+    ok: { bg: "rgba(61,211,122,0.1)", border: "rgba(61,211,122,0.25)", color: PASS_GREEN, icon: "✓" },
+    warning: { bg: "rgba(243,148,16,0.1)", border: "rgba(243,148,16,0.25)", color: WARN_AMBER, icon: "⚠" },
+    critical: { bg: "rgba(225,75,61,0.1)", border: "rgba(225,75,61,0.25)", color: FAIL_RED, icon: "✕" },
   };
   const c = cfg[type] || cfg.warning;
   return (
@@ -260,9 +261,9 @@ function FollowUp({ questions, onSubmit }) {
   const [answers, setAnswers] = useState("");
   const [extraPhotos, setExtraPhotos] = useState([]);
   return (
-    <div style={{ marginTop: 16, padding: 14, background: "#FAEEDA", border: "1.5px solid #FAC775", borderRadius: 10 }}>
+    <div style={{ marginTop: 16, padding: 14, background: "rgba(243,148,16,0.1)", border: "1.5px solid rgba(243,148,16,0.3)", borderRadius: 10 }}>
       <div style={{ fontWeight: 700, fontSize: 13, color: WARN_AMBER, marginBottom: 9 }}>? Additional information needed</div>
-      {questions.map((q, i) => <div key={i} style={{ marginBottom: 6, padding: "9px 11px", background: "rgba(255,255,255,0.6)", borderRadius: 7, fontSize: 13, color: "#412402", lineHeight: 1.5 }}>{q}</div>)}
+      {questions.map((q, i) => <div key={i} style={{ marginBottom: 6, padding: "9px 11px", background: "rgba(255,255,255,0.6)", borderRadius: 7, fontSize: 13, color: "#16181C", lineHeight: 1.5 }}>{q}</div>)}
       <textarea value={answers} onChange={e => setAnswers(e.target.value)} placeholder="Type your answers here..." rows={2}
         style={{ width: "100%", marginTop: 8, padding: "9px 11px", borderRadius: 7, border: "0.5px solid #EF9F27", background: "#fff", fontSize: 13, fontFamily: "inherit", resize: "none", color: "#1a1a1a", boxSizing: "border-box" }} />
       <div style={{ marginTop: 8 }}>
@@ -303,8 +304,8 @@ export default function PhotoResultCard({ photo, index, total, onReanalyse, chec
     ...(checklistContent != null ? [{ id: "checklist", label: "Checklist" }] : []),
     { id: "example", label: "Example" },
   ];
-  const statusColor = { pass: PASS_GREEN, fail: FAIL_RED, uncertain: WARN_AMBER }[r.status] || WARN_AMBER;
-  const statusLabel = { pass: "Compliant", fail: "Issues found", uncertain: "Unclear" }[r.status] || "Unclear";
+  const statusColor = { pass: PASS_GREEN, fail: FAIL_RED, uncertain: WARN_AMBER, not_applicable: "#4A4D52" }[r.status] || WARN_AMBER;
+  const statusLabel = { pass: "Compliant", fail: "Issues found", uncertain: "Unclear", not_applicable: "N/A" }[r.status] || "Unclear";
 
   return (
     <div style={{ background: "#fff", borderRadius: 14, border: "0.5px solid #E0DDD6", overflow: "hidden", marginBottom: 14 }}>

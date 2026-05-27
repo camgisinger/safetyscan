@@ -21,8 +21,8 @@ function AuthGate() {
   }, [])
 
   if (loading) return (
-    <div style={{ minHeight: "100vh", background: "#F1EFE8", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <div style={{ width: 32, height: 32, border: "3px solid #E0DDD6", borderTopColor: "#F5A623", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
+    <div style={{ minHeight: "100vh", background: "#EFEAE0", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ width: 32, height: 32, border: "3px solid #E0DDD6", borderTopColor: "#F39410", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
     </div>
   )
@@ -34,8 +34,8 @@ function AuthGate() {
 export default function Page() {
   return (
     <Suspense fallback={
-      <div style={{ minHeight: "100vh", background: "#F1EFE8", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ width: 32, height: 32, border: "3px solid #E0DDD6", borderTopColor: "#F5A623", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
+      <div style={{ minHeight: "100vh", background: "#EFEAE0", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ width: 32, height: 32, border: "3px solid #E0DDD6", borderTopColor: "#F39410", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
         <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       </div>
     }>
