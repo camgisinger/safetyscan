@@ -35,6 +35,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [sites, setSites] = useState<Site[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [checklist, setChecklist] = useState<any[]>([])
   const [checklistState, setChecklistState] = useState<Record<string, any>>({})
   const [notes, setNotes] = useState('')
   const [notesSaving, setNotesSaving] = useState(false)
@@ -83,31 +84,40 @@ export default function ScanDetail({ id }: { id: string }) {
       setNotes(s.notes || '')
       setChecklistState(s.checklist_state || {})
       setAssignSiteId(s.site_id || '')
+      if (s.checklist && Array.isArray(s.checklist) && s.checklist.length > 0) {
+        setChecklist(s.checklist)
+        console.log('[checklist] loaded from db:', s.checklist.length, 'items')
+      } else {
+        console.log('[checklist] none saved for this scan')
+      }
       setSites(sitesRes.data || [])
       setLoading(false)
     }
     init()
   }, [id, router])
 
-  const toggleCheck = useCallback(async (idx: number) => {
+  const handleChecklistChange = useCallback(async (newState: Record<string, any>) => {
+    setChecklistState(newState)
+    const { error } = await supabase.from('scans').update({ checklist_state: newState }).eq('id', id)
+    if (error) console.error('[checklist_state] save error:', error)
+  }, [id])
+
+  const toggleCheck = useCallback((idx: number) => {
     const key = `c_${idx}`
-    const newState = { ...checklistState, [key]: !checklistState[key] }
-    setChecklistState(newState)
-    await supabase.from('scans').update({ checklist_state: newState }).eq('id', id)
-  }, [checklistState, id])
+    handleChecklistChange({ ...checklistState, [key]: !checklistState[key] })
+  }, [checklistState, handleChecklistChange])
 
-  const deleteItem = useCallback(async (idx: number) => {
-    const newState = { ...checklistState, [`d_${idx}`]: true, [`c_${idx}`]: false }
-    setChecklistState(newState)
-    await supabase.from('scans').update({ checklist_state: newState }).eq('id', id)
-  }, [checklistState, id])
+  const deleteItem = useCallback((idx: number) => {
+    handleChecklistChange({ ...checklistState, [`d_${idx}`]: true, [`c_${idx}`]: false })
+  }, [checklistState, handleChecklistChange])
 
-  const generateChecklist = async () => {
+  const handleGenerateChecklist = async () => {
     if (!scan) return
     setGeneratingChecklist(true)
     setChecklistError(null)
     setConfirmRegenerate(false)
     try {
+      console.log('[checklist] generating for scan:', id)
       const res = await fetch('/api/checklist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -120,13 +130,19 @@ export default function ScanDetail({ id }: { id: string }) {
       })
       const data = await res.json()
       if (data.error) throw new Error(data.error)
-      const newChecklist = data.checklist
-      if (!newChecklist) throw new Error('No checklist returned from API')
+      const generated = data.checklist
+      if (!generated || !Array.isArray(generated)) throw new Error('No checklist returned from API')
+      console.log('[checklist] generated:', generated.length, 'items — saving to Supabase')
       const newState = {}
+      const { error: saveErr } = await supabase.from('scans').update({ checklist: generated, checklist_state: newState }).eq('id', id)
+      if (saveErr) {
+        console.error('[checklist] save error:', saveErr)
+        throw new Error('Failed to save checklist')
+      }
+      console.log('[checklist] saved successfully')
+      setChecklist(generated)
       setChecklistState(newState)
-      const { error: saveErr } = await supabase.from('scans').update({ checklist: newChecklist, checklist_state: newState }).eq('id', id)
-      if (saveErr) console.error('[checklist] save error:', saveErr)
-      setScan(prev => prev ? { ...prev, checklist: newChecklist, checklist_state: newState } : prev)
+      setScan(prev => prev ? { ...prev, checklist: generated, checklist_state: newState } : prev)
     } catch (e: any) {
       setChecklistError(e.message || 'Failed to generate checklist')
     } finally {
@@ -272,7 +288,6 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   const photoUrls: string[] = scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])
   const photoCount = photoUrls.length
   const photoLabel = photoCount > 1 ? `${photoCount} photos analysed` : '1 photo analysed'
-  const checklist: { item: string; category: string }[] = scan.checklist || []
   const currentSite = scan.site_id ? sites.find(s => s.id === scan.site_id) : null
   const visibleCount = checklist.filter((_, i) => !checklistState[`d_${i}`]).length
   const hasFollowUp = (scan.follow_up_questions || []).length > 0
@@ -297,7 +312,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
             This will reset your checklist progress. Are you sure?
           </div>
           <div style={{ display: 'flex', gap: 8 }}>
-            <button onClick={generateChecklist}
+            <button onClick={handleGenerateChecklist}
               style={{ padding: '6px 12px', background: '#854F0B', border: 'none', borderRadius: 6, color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
               Yes, regenerate
             </button>
@@ -324,7 +339,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
               {checklistError}
             </div>
           )}
-          <button onClick={generateChecklist}
+          <button onClick={handleGenerateChecklist}
             style={{ padding: '10px 18px', background: AMBER, border: 'none', borderRadius: 9, color: NAVY, fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
             Generate checklist →
           </button>
