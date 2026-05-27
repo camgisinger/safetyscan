@@ -57,7 +57,7 @@ export default function SiteDetail({ id }: { id: string }) {
 
       const [siteRes, scansRes] = await Promise.all([
         supabase.from('sites').select('*').eq('id', id).single(),
-        supabase.from('scans').select('id, work_type, status, confidence, created_at').eq('site_id', id).order('created_at', { ascending: false }),
+        supabase.from('scans').select('id, work_type, status, confidence, created_at, checklist, checklist_state').eq('site_id', id).order('created_at', { ascending: false }),
       ])
 
       if (siteRes.error) {
@@ -182,6 +182,36 @@ export default function SiteDetail({ id }: { id: string }) {
             </div>
           ))
         )}
+
+        {/* Checklist progress across all scans */}
+        {(() => {
+          let total = 0
+          let done = 0
+          for (const scan of scans) {
+            const items: any[] = (scan as any).checklist || []
+            const state: Record<string, any> = (scan as any).checklist_state || {}
+            for (let i = 0; i < items.length; i++) {
+              if (!state[`d_${i}`]) {
+                total++
+                if (state[`c_${i}`]) done++
+              }
+            }
+          }
+          if (total === 0) return null
+          const pct = Math.round((done / total) * 100)
+          return (
+            <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginTop: 4 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 10 }}>Checklist progress</div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                <div style={{ fontSize: 13, color: '#555' }}>{done} of {total} items complete across all scans</div>
+                <div style={{ fontSize: 13, fontWeight: 700, color: pct === 100 ? PASS_GREEN : AMBER }}>{pct}%</div>
+              </div>
+              <div style={{ height: 6, background: '#F1EFE8', borderRadius: 3, overflow: 'hidden' }}>
+                <div style={{ height: '100%', width: `${pct}%`, background: pct === 100 ? PASS_GREEN : AMBER, borderRadius: 3, transition: 'width 0.3s' }} />
+              </div>
+            </div>
+          )
+        })()}
 
       </main>
     </div>

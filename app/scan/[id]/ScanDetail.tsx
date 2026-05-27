@@ -68,12 +68,15 @@ export default function ScanDetail({ id }: { id: string }) {
   const [sites, setSites] = useState<Site[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [checklistState, setChecklistState] = useState<Record<string, boolean>>({})
+  const [checklistState, setChecklistState] = useState<Record<string, any>>({})
   const [notes, setNotes] = useState('')
   const [notesSaving, setNotesSaving] = useState(false)
   const [openLeg, setOpenLeg] = useState<number | null>(null)
   const [assignSiteId, setAssignSiteId] = useState('')
   const [assignSaving, setAssignSaving] = useState(false)
+  const [generatingChecklist, setGeneratingChecklist] = useState(false)
+  const [confirmRegenerate, setConfirmRegenerate] = useState(false)
+  const [checklistError, setChecklistError] = useState<string | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -108,11 +111,48 @@ export default function ScanDetail({ id }: { id: string }) {
     init()
   }, [id, router])
 
-  const toggleChecklist = useCallback(async (idx: number) => {
-    const newState = { ...checklistState, [idx]: !checklistState[idx] }
+  const toggleCheck = useCallback(async (idx: number) => {
+    const key = `c_${idx}`
+    const newState = { ...checklistState, [key]: !checklistState[key] }
     setChecklistState(newState)
     await supabase.from('scans').update({ checklist_state: newState }).eq('id', id)
   }, [checklistState, id])
+
+  const deleteItem = useCallback(async (idx: number) => {
+    const newState = { ...checklistState, [`d_${idx}`]: true, [`c_${idx}`]: false }
+    setChecklistState(newState)
+    await supabase.from('scans').update({ checklist_state: newState }).eq('id', id)
+  }, [checklistState, id])
+
+  const generateChecklist = async () => {
+    if (!scan) return
+    setGeneratingChecklist(true)
+    setChecklistError(null)
+    setConfirmRegenerate(false)
+    try {
+      const res = await fetch('/api/checklist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          work_type: scan.work_type,
+          findings: scan.findings,
+          legislation: scan.legislation,
+          summary: scan.summary,
+        }),
+      })
+      const data = await res.json()
+      if (data.error) throw new Error(data.error)
+      const newChecklist = data.checklist
+      const newState = {}
+      setChecklistState(newState)
+      await supabase.from('scans').update({ checklist: newChecklist, checklist_state: newState }).eq('id', id)
+      setScan(prev => prev ? { ...prev, checklist: newChecklist, checklist_state: newState } : prev)
+    } catch (e: any) {
+      setChecklistError(e.message || 'Failed to generate checklist')
+    } finally {
+      setGeneratingChecklist(false)
+    }
+  }
 
   const saveNotes = async () => {
     if (!scan) return
@@ -154,10 +194,11 @@ export default function ScanDetail({ id }: { id: string }) {
   const findings: { type: string; text: string }[] = scan.findings || []
   const legislation: { code: string; description: string; clauses: { ref: string; summary: string }[] }[] = scan.legislation || []
   const currentSite = scan.site_id ? sites.find(s => s.id === scan.site_id) : null
+  const visibleCount = checklist.filter((_, i) => !checklistState[`d_${i}`]).length
 
   return (
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif" }}>
-      <style>{`* { box-sizing: border-box; } textarea { outline: none; }`}</style>
+      <style>{`* { box-sizing: border-box; } textarea { outline: none; } @keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <Header />
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
@@ -242,30 +283,88 @@ export default function ScanDetail({ id }: { id: string }) {
         )}
 
         {/* Checklist */}
-        {checklist.length > 0 && (
-          <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginBottom: 14 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 10 }}>Site checklist</div>
-            {checklist.map((item, i) => {
-              const checked = !!checklistState[i]
-              return (
-                <div key={i} onClick={() => toggleChecklist(i)}
-                  style={{ display: 'flex', alignItems: 'flex-start', gap: 10, padding: '8px 0', borderBottom: i < checklist.length - 1 ? '0.5px solid #F5F4F0' : 'none', cursor: 'pointer' }}>
-                  <div style={{ width: 18, height: 18, borderRadius: 4, border: `1.5px solid ${checked ? PASS_GREEN : '#C8C5BE'}`, background: checked ? PASS_GREEN : '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
-                    {checked && <span style={{ color: '#fff', fontSize: 11, fontWeight: 700, lineHeight: 1 }}>✓</span>}
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: 13, color: checked ? '#aaa' : '#1a1a1a', lineHeight: 1.4, textDecoration: checked ? 'line-through' : 'none' }}>
-                      {item.item}
-                    </div>
-                    {item.category && (
-                      <div style={{ fontSize: 10, color: '#bbb', marginTop: 2, textTransform: 'uppercase', letterSpacing: '0.04em' }}>{item.category}</div>
-                    )}
-                  </div>
-                </div>
-              )
-            })}
+        <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginBottom: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: checklist.length > 0 || generatingChecklist ? 12 : 0 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase' }}>
+              Site checklist{checklist.length > 0 ? ` (${visibleCount})` : ''}
+            </div>
+            {checklist.length > 0 && !generatingChecklist && (
+              <button onClick={() => setConfirmRegenerate(true)}
+                style={{ fontSize: 11, padding: '3px 9px', background: 'transparent', border: '0.5px solid #D3D1C7', borderRadius: 6, color: '#888', cursor: 'pointer', fontFamily: 'inherit' }}>
+                Regenerate
+              </button>
+            )}
           </div>
-        )}
+
+          {/* Regenerate confirmation */}
+          {confirmRegenerate && (
+            <div style={{ marginBottom: 12, padding: '10px 12px', background: '#FAEEDA', border: '0.5px solid #FAC775', borderRadius: 8 }}>
+              <div style={{ fontSize: 12, color: '#854F0B', marginBottom: 8, lineHeight: 1.5 }}>
+                This will reset your checklist progress. Are you sure?
+              </div>
+              <div style={{ display: 'flex', gap: 8 }}>
+                <button onClick={generateChecklist}
+                  style={{ padding: '6px 12px', background: '#854F0B', border: 'none', borderRadius: 6, color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
+                  Yes, regenerate
+                </button>
+                <button onClick={() => setConfirmRegenerate(false)}
+                  style={{ padding: '6px 12px', background: 'transparent', border: '0.5px solid #D3D1C7', borderRadius: 6, color: '#555', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit' }}>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
+
+          {generatingChecklist ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 0' }}>
+              <div style={{ width: 16, height: 16, border: '2px solid #E0DDD6', borderTopColor: AMBER, borderRadius: '50%', animation: 'spin 0.7s linear infinite', flexShrink: 0 }} />
+              <div style={{ fontSize: 13, color: '#888' }}>Generating checklist…</div>
+            </div>
+          ) : checklist.length === 0 ? (
+            <div style={{ paddingTop: 10 }}>
+              <div style={{ fontSize: 13, color: '#999', lineHeight: 1.5, marginBottom: 12 }}>
+                Generate a custom checklist based on this scan's findings and applicable legislation.
+              </div>
+              {checklistError && (
+                <div style={{ marginBottom: 10, padding: '8px 10px', background: '#FCEBEB', border: '0.5px solid #F09595', borderRadius: 7, fontSize: 12, color: FAIL_RED }}>
+                  {checklistError}
+                </div>
+              )}
+              <button onClick={generateChecklist}
+                style={{ padding: '10px 18px', background: AMBER, border: 'none', borderRadius: 9, color: NAVY, fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
+                Generate checklist →
+              </button>
+            </div>
+          ) : (
+            <div>
+              {checklist.map((item, i) => {
+                if (checklistState[`d_${i}`]) return null
+                const checked = !!checklistState[`c_${i}`]
+                const isLast = checklist.slice(i + 1).every((_, j) => checklistState[`d_${i + 1 + j}`])
+                return (
+                  <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, padding: '8px 0', borderBottom: isLast ? 'none' : '0.5px solid #F5F4F0' }}>
+                    <div onClick={() => toggleCheck(i)}
+                      style={{ width: 18, height: 18, borderRadius: 4, border: `1.5px solid ${checked ? PASS_GREEN : '#C8C5BE'}`, background: checked ? PASS_GREEN : '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2, cursor: 'pointer' }}>
+                      {checked && <span style={{ color: '#fff', fontSize: 11, fontWeight: 700, lineHeight: 1 }}>✓</span>}
+                    </div>
+                    <div style={{ flex: 1, cursor: 'pointer' }} onClick={() => toggleCheck(i)}>
+                      <div style={{ fontSize: 13, color: checked ? '#aaa' : '#1a1a1a', lineHeight: 1.4, textDecoration: checked ? 'line-through' : 'none' }}>
+                        {item.item}
+                      </div>
+                      {item.category && (
+                        <div style={{ fontSize: 10, color: '#bbb', marginTop: 2, textTransform: 'uppercase', letterSpacing: '0.04em' }}>{item.category}</div>
+                      )}
+                    </div>
+                    <button onClick={() => deleteItem(i)}
+                      style={{ background: 'transparent', border: 'none', color: '#D0CDC6', fontSize: 16, cursor: 'pointer', padding: '0 2px', lineHeight: 1, flexShrink: 0, marginTop: 1 }}>
+                      ×
+                    </button>
+                  </div>
+                )
+              })}
+            </div>
+          )}
+        </div>
 
         {/* Notes */}
         <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginBottom: 14 }}>

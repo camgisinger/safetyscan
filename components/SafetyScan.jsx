@@ -56,9 +56,9 @@ Only cite clauses you are confident apply to what is visible in the photo. If un
 
 Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start with { end with }.
 
-{"work_type":"string","status":"pass|fail|uncertain","confidence":"high|medium|low","legislation":[{"code":"string","description":"string","clauses":[{"ref":"string","summary":"string"}]}],"findings":[{"type":"ok|warning|critical","text":"string"}],"summary":"string","checklist":[{"item":"string","category":"string"}],"follow_up_questions":[],"photo_quality":"good|poor"}
+{"work_type":"string","status":"pass|fail|uncertain","confidence":"high|medium|low","legislation":[{"code":"string","description":"string","clauses":[{"ref":"string","summary":"string"}]}],"findings":[{"type":"ok|warning|critical","text":"string"}],"summary":"string","follow_up_questions":[],"photo_quality":"good|poor"}
 
-Max 5 findings, 8 checklist items, 4 measurements, 4 visual_indicators.`;
+Max 5 findings.`;
 
 const MAX_IMAGE_PX = 512;
 
@@ -230,44 +230,6 @@ function LegTag({ code, description, clauses, isOpen, onToggle }) {
   );
 }
 
-function ChecklistTab({ checklist }) {
-  const [checked, setChecked] = useState({});
-  const toggle = i => setChecked(p => ({ ...p, [i]: !p[i] }));
-  const categories = [...new Set(checklist.map(c => c.category))];
-  const done = Object.values(checked).filter(Boolean).length;
-  const pct = checklist.length ? Math.round((done / checklist.length) * 100) : 0;
-  return (
-    <div>
-      <div style={{ marginBottom: 14, padding: "11px 13px", background: "#F1EFE8", borderRadius: 9, display: "flex", alignItems: "center", gap: 12 }}>
-        <div style={{ flex: 1 }}>
-          <div style={{ fontSize: 12, fontWeight: 600, color: NAVY, marginBottom: 5 }}>{done} of {checklist.length} items checked</div>
-          <div style={{ height: 5, background: "#D3D1C7", borderRadius: 3, overflow: "hidden" }}>
-            <div style={{ height: "100%", width: `${pct}%`, background: pct === 100 ? PASS_GREEN : AMBER, borderRadius: 3, transition: "width 0.3s" }} />
-          </div>
-        </div>
-        <div style={{ fontSize: 20, fontWeight: 700, color: pct === 100 ? PASS_GREEN : AMBER }}>{pct}%</div>
-      </div>
-      {categories.map(cat => (
-        <div key={cat} style={{ marginBottom: 12 }}>
-          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.07em", color: "#888", textTransform: "uppercase", marginBottom: 7 }}>{cat}</div>
-          {checklist.filter(c => c.category === cat).map(item => {
-            const idx = checklist.indexOf(item);
-            const on = checked[idx];
-            return (
-              <div key={idx} onClick={() => toggle(idx)} style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 11px", borderRadius: 7, background: on ? "#EAF3DE" : "#fff", border: `0.5px solid ${on ? "#97C459" : "#D3D1C7"}`, marginBottom: 5, cursor: "pointer", transition: "all 0.15s" }}>
-                <div style={{ width: 18, height: 18, borderRadius: 4, border: `2px solid ${on ? PASS_GREEN : "#C8C5BE"}`, background: on ? PASS_GREEN : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  {on && <span style={{ color: "#fff", fontSize: 11, fontWeight: 700 }}>✓</span>}
-                </div>
-                <div style={{ fontSize: 13, color: on ? PASS_GREEN : "#1a1a1a", textDecoration: on ? "line-through" : "none", lineHeight: 1.4 }}>{item.item}</div>
-              </div>
-            );
-          })}
-        </div>
-      ))}
-      <div style={{ padding: "9px 12px", background: "#F1EFE8", borderRadius: 7, fontSize: 11, color: "#888", lineHeight: 1.5 }}>AI-generated checklist based on Queensland standards. Resets with each new scan.</div>
-    </div>
-  );
-}
 
 function ExampleTab({ example, workType }) {
   return (
@@ -346,7 +308,7 @@ function PhotoResultCard({ photo, index, total, onReanalyse }) {
   const [tab, setTab] = useState("findings");
   const [openLeg, setOpenLeg] = useState(null);
   const r = photo.result;
-  const tabs = [{ id: "findings", label: "Findings" }, { id: "checklist", label: `Checklist (${r.checklist?.length || 0})` }, { id: "example", label: "Example" }];
+  const tabs = [{ id: "findings", label: "Findings" }, { id: "example", label: "Example" }];
   const statusColor = { pass: PASS_GREEN, fail: FAIL_RED, uncertain: WARN_AMBER }[r.status] || WARN_AMBER;
   const statusLabel = { pass: "Compliant", fail: "Issues found", uncertain: "Unclear" }[r.status] || "Unclear";
 
@@ -387,7 +349,6 @@ function PhotoResultCard({ photo, index, total, onReanalyse }) {
             {r.follow_up_questions?.length > 0 && <FollowUp questions={r.follow_up_questions} onSubmit={(a, extraPhotos) => onReanalyse(index, a, extraPhotos)} />}
           </div>
         )}
-        {tab === "checklist" && (r.checklist?.length > 0 ? <ChecklistTab checklist={r.checklist} /> : <div style={{ padding: 16, textAlign: "center", color: "#aaa", fontSize: 13 }}>No checklist generated.</div>)}
         {tab === "example" && (
           <div>
             <CompliantPhotoSlot workType={r.work_type} />
@@ -406,7 +367,6 @@ const LOADING_MESSAGES = [
   "Checking Queensland legislation...",
   "Reviewing WHS compliance...",
   "Checking safety requirements...",
-  "Generating site checklist...",
   "Reviewing findings...",
   "Almost done...",
 ];
@@ -542,7 +502,6 @@ export default function SafetyScan() {
             legislation: (parsed.legislation || []).map(l => ({ ...l, clauses: l.clauses || [] })),
             findings: parsed.findings || [],
             summary: parsed.summary || "",
-            checklist: parsed.checklist || [],
             follow_up_questions: parsed.follow_up_questions || [],
             photo_quality: parsed.photo_quality || "good",
           };
@@ -571,8 +530,6 @@ export default function SafetyScan() {
         legislation: parsed.legislation || [],
         findings: parsed.findings || [],
         summary: parsed.summary || "",
-        checklist: parsed.checklist || [],
-        compliant_example: parsed.compliant_example || { description: "", measurements: [], visual_indicators: [] },
         follow_up_questions: parsed.follow_up_questions || [],
         photo_quality: parsed.photo_quality || "good",
       };
