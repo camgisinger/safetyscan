@@ -27,9 +27,10 @@ export default function AppHeader({ rightContent }: AppHeaderProps) {
   const [userEmail, setUserEmail] = useState<string | null>(null)
 
   useEffect(() => {
-    const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('theme') : null
+    const saved = localStorage.getItem('theme')
     const dark = saved !== 'light'
     setIsDark(dark)
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
     supabase.auth.getUser().then(({ data: { user } }) => {
       setUserEmail(user?.email || null)
     })
