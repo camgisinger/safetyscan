@@ -18,10 +18,52 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SafetyScan",
-  description: "AI-powered Queensland construction compliance",
+  title: {
+    default: 'SafetyScan — Queensland Construction Compliance',
+    template: '%s | SafetyScan',
+  },
+  description: 'AI-powered Queensland construction compliance checks. Upload a site photo and instantly identify WHS compliance issues, applicable legislation, and generate site checklists.',
+  keywords: ['Queensland construction compliance', 'WHS compliance', 'construction safety', 'scaffolding compliance Queensland', 'SafetyScan', 'site compliance check', 'AS 1742', 'WHS Act 2011 Queensland'],
+  authors: [{ name: 'Mono Compliance' }],
+  creator: 'Mono Compliance',
+  publisher: 'Mono Compliance',
+  metadataBase: new URL('https://safetyscan.com.au'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_AU',
+    url: 'https://safetyscan.com.au',
+    siteName: 'SafetyScan',
+    title: 'SafetyScan — Queensland Construction Compliance',
+    description: 'AI-powered Queensland construction compliance checks. Upload a site photo and instantly identify WHS compliance issues and applicable legislation.',
+    images: [
+      {
+        url: '/brand/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'SafetyScan — Queensland Construction Compliance',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SafetyScan — Queensland Construction Compliance',
+    description: 'AI-powered Queensland construction compliance checks.',
+    images: ['/brand/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
-    icon: "/favicon-dark.svg",
+    icon: '/favicon-dark.svg',
+    apple: '/favicon-dark.svg',
   },
 };
 
