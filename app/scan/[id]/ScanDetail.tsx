@@ -262,6 +262,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [continuePhotos, setContinuePhotos] = useState<{ dataUrl: string; base64: string }[]>([])
   const [continueLoading, setContinueLoading] = useState(false)
   const [continueError, setContinueError] = useState<string | null>(null)
+  const [photoUrls, setPhotoUrls] = useState<string[]>([])
   const [photoEnlarged, setPhotoEnlarged] = useState<number | false>(false)
   const [editingName, setEditingName] = useState(false)
   const [scanName, setScanName] = useState('')
@@ -292,6 +293,7 @@ export default function ScanDetail({ id }: { id: string }) {
       const s = scanRes.data as Scan
       console.log('[ScanDetail] loaded scan id:', s.id, 'photo_url:', s.photo_url)
       setScan(s)
+      setPhotoUrls(s.photo_urls?.length ? s.photo_urls : s.photo_url ? [s.photo_url] : [])
       setScanName(s.work_type || '')
       setNotes(s.notes || '')
       setChecklistState(s.checklist_state || {})
@@ -498,8 +500,28 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
         follow_up_questions: parsed.follow_up_questions || [],
       }
 
-      await supabase.from('scans').update(updated).eq('id', id)
-      setScan(prev => prev ? { ...prev, ...updated } : prev)
+      const { data: { user } } = await supabase.auth.getUser()
+      const newlyUploadedUrls: string[] = []
+      if (user && extraPhotos.length > 0) {
+        for (let i = 0; i < extraPhotos.length; i++) {
+          const blob = await fetch(extraPhotos[i].dataUrl).then(r => r.blob())
+          const fileName = `${user.id}/${Date.now()}-extra-${i}.jpg`
+          const { error: uploadError } = await supabase.storage.from('scan-photos').upload(fileName, blob, { contentType: 'image/jpeg', upsert: false })
+          if (!uploadError) {
+            const { data: urlData } = supabase.storage.from('scan-photos').getPublicUrl(fileName)
+            newlyUploadedUrls.push(urlData.publicUrl)
+          }
+        }
+      }
+
+      const updatedUrls = newlyUploadedUrls.length > 0 ? [...photoUrls, ...newlyUploadedUrls] : photoUrls
+      if (newlyUploadedUrls.length > 0) {
+        await supabase.from('scans').update({ ...updated, photo_urls: updatedUrls }).eq('id', id)
+        setPhotoUrls(updatedUrls)
+      } else {
+        await supabase.from('scans').update(updated).eq('id', id)
+      }
+      setScan(prev => prev ? { ...prev, ...updated, photo_urls: updatedUrls } : prev)
       setContinueContext('')
       setContinuePhotos([])
     } catch (e: any) {
@@ -527,7 +549,6 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
 
   if (!scan) return null
 
-  const photoUrls: string[] = scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])
   const photoCount = photoUrls.length
   const photoLabel = photoCount > 1 ? `${photoCount} photos analysed` : '1 photo analysed'
   const currentSite = scan.site_id ? sites.find(s => s.id === scan.site_id) : null
@@ -623,14 +644,12 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
         {/* Photo strip */}
         {photoUrls.length > 0 && (
           <>
-            <div style={{ display: 'flex', gap: 8, overflowX: 'auto', marginBottom: 16, paddingBottom: 2 }}>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 16 }}>
               {photoUrls.map((url, i) => (
-                <div key={i} style={{ position: 'relative', flexShrink: 0, width: photoUrls.length === 1 ? '100%' : 'auto' }}>
-                  <img src={url} alt={`Site photo ${i + 1}`} onClick={() => setPhotoEnlarged(i)}
-                    style={{ width: photoUrls.length === 1 ? '100%' : 120, height: photoUrls.length === 1 ? 'auto' : 90, maxHeight: photoUrls.length === 1 ? 220 : undefined, objectFit: 'cover', borderRadius: 10, cursor: 'pointer', display: 'block' }} />
-                  {photoUrls.length > 1 && (
-                    <div style={{ position: 'absolute', bottom: 4, right: 4, fontSize: 9, fontWeight: 700, background: 'rgba(0,0,0,0.5)', color: '#fff', padding: '2px 5px', borderRadius: 4 }}>{i + 1}</div>
-                  )}
+                <div key={i} style={{ position: 'relative', cursor: 'pointer' }} onClick={() => setPhotoEnlarged(i)}>
+                  <img src={url} alt={`Site photo ${i + 1}`}
+                    style={{ width: 90, height: 90, objectFit: 'cover', borderRadius: 8, border: '0.5px solid rgba(0,0,0,0.08)', display: 'block' }} />
+                  <div style={{ position: 'absolute', bottom: 4, left: 4, background: 'rgba(0,0,0,0.55)', color: '#fff', fontSize: 10, fontWeight: 600, padding: '1px 5px', borderRadius: 4 }}>{i + 1}</div>
                 </div>
               ))}
             </div>
