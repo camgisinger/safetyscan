@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Site } from '../../lib/supabase'
+import AppHeader from '../../components/AppHeader'
 
 const NAVY = '#16181C'
 const AMBER = '#F39410'
@@ -80,15 +81,7 @@ export default function SitesPage() {
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
 
-      <header style={{ background: NAVY, padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 10 }}>
-        <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
-          <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
-        </div>
-        <button onClick={() => router.push('/dashboard')}
-          style={{ fontSize: 12, padding: '5px 12px', background: 'rgba(255,255,255,0.1)', border: '0.5px solid rgba(255,255,255,0.2)', borderRadius: 8, color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>
-          Dashboard
-        </button>
-      </header>
+      <AppHeader showBack backHref="/dashboard" backLabel="Dashboard" />
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
 

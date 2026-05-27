@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
+import AppHeader from '../../components/AppHeader'
 
 const NAVY = '#16181C'
 const AMBER = '#F39410'
@@ -39,12 +40,7 @@ export default function LoginPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif", display: 'flex', flexDirection: 'column' }}>
-      <header style={{ background: NAVY, padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', gap: 10 }}>
-        <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
-          <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
-        </div>
-        <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', letterSpacing: '0.05em' }}>CONSTRUCTION COMPLIANCE</div>
-      </header>
+      <AppHeader />
 
       <main style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px 16px' }}>
         <div style={{ width: '100%', maxWidth: 400, background: '#fff', borderRadius: 16, padding: 28, border: '0.5px solid #E0DDD6' }}>

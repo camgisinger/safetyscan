@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "../lib/supabase";
 import { convertToJpeg, SYSTEM_PROMPT } from "./PhotoResultCard";
 import { ScanLoader } from "./ScanLoader";
+import AppHeader from "./AppHeader";
 
 if (typeof window !== 'undefined') {
   window.onerror = function(msg, src, line, col, error) {
@@ -259,15 +260,9 @@ export default function SafetyScan() {
         button:active { transform: scale(0.98); }
       `}</style>
 
-      <header style={{ background: NAVY, padding: "0 20px", height: 56, display: "flex", alignItems: "center", justifyContent: "space-between", position: "sticky", top: 0, zIndex: 10 }}>
-        <button onClick={() => router.push('/dashboard')} style={{ background: "transparent", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 10, padding: 0, fontFamily: "Inter, system-ui, sans-serif" }}>
-          <img src="/logo-mark-dark.svg" alt="SafetyScan" style={{ width: 36, height: 36 }} />
-          <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.01em" }}>
-            <span style={{ color: "#EFEAE0" }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
-          </div>
-        </button>
+      <AppHeader rightContent={
         <div style={{ fontSize: 11, padding: "4px 10px", background: "rgba(243,148,16,0.15)", color: AMBER, borderRadius: 10, border: "0.5px solid rgba(243,148,16,0.3)", fontWeight: 600 }}>Queensland</div>
-      </header>
+      } />
 
       <main style={{ maxWidth: 560, margin: "0 auto", padding: "20px 16px 48px" }}>
 

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { supabase, Site, Scan } from '../../lib/supabase'
+import AppHeader from '../../components/AppHeader'
 
 const NAVY = '#16181C'
 const AMBER = '#F39410'
@@ -96,10 +97,7 @@ export default function DashboardPage() {
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
 
-      <header style={{ background: NAVY, padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 10 }}>
-        <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
-          <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
-        </div>
+      <AppHeader rightContent={
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>{user?.email}</div>
           <button onClick={signOut}
@@ -107,7 +105,7 @@ export default function DashboardPage() {
             Sign out
           </button>
         </div>
-      </header>
+      } />
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
 

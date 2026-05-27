@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Site, Scan } from '../../../lib/supabase'
 import PhotoResultCard, { convertToJpeg, SYSTEM_PROMPT } from '../../../components/PhotoResultCard'
+import AppHeader from '../../../components/AppHeader'
 
 const NAVY = '#16181C'
 const AMBER = '#F39410'
@@ -20,15 +21,6 @@ function Spinner() {
   )
 }
 
-function Header() {
-  return (
-    <header style={{ background: NAVY, padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', position: 'sticky', top: 0, zIndex: 10 }}>
-      <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
-        <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: AMBER }}>Scan</span>
-      </div>
-    </header>
-  )
-}
 
 export default function ScanDetail({ id }: { id: string }) {
   const [scan, setScan] = useState<Scan | null>(null)
@@ -275,7 +267,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   if (error) return (
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
-      <Header />
+      <AppHeader showBack backHref="/dashboard" backLabel="Dashboard" />
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
         <button onClick={() => router.push('/dashboard')}
           style={{ background: 'transparent', border: 'none', color: '#888', fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4, padding: '0 0 16px 0', fontFamily: 'inherit' }}>
@@ -385,7 +377,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   return (
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; } textarea, input { outline: none; } @keyframes spin { to { transform: rotate(360deg); } }`}</style>
-      <Header />
+      <AppHeader showBack backHref="/dashboard" backLabel="Dashboard" />
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
 
