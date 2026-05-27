@@ -48,7 +48,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [continuePhotos, setContinuePhotos] = useState<{ dataUrl: string; base64: string }[]>([])
   const [continueLoading, setContinueLoading] = useState(false)
   const [continueError, setContinueError] = useState<string | null>(null)
-  const [photoEnlarged, setPhotoEnlarged] = useState(false)
+  const [photoEnlarged, setPhotoEnlarged] = useState<number | false>(false)
   const [editingName, setEditingName] = useState(false)
   const [scanName, setScanName] = useState('')
   const router = useRouter()
@@ -245,6 +245,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
 
   if (!scan) return null
 
+  const photoUrls: string[] = scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])
   const checklist: { item: string; category: string }[] = scan.checklist || []
   const currentSite = scan.site_id ? sites.find(s => s.id === scan.site_id) : null
   const visibleCount = checklist.filter((_, i) => !checklistState[`d_${i}`]).length
@@ -376,20 +377,38 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           </div>
         )}
 
-        {/* Photo with enlarge modal */}
-        {scan.photo_url && console.log('[ScanDetail] rendering photo:', scan.photo_url) as any}
-        {scan.photo_url && (
+        {/* Photo strip */}
+        {photoUrls.length > 0 && (
           <>
-            <img
-              src={scan.photo_url}
-              alt="Site photo"
-              onClick={() => setPhotoEnlarged(true)}
-              style={{ width: '100%', maxHeight: 200, objectFit: 'cover', borderRadius: 10, cursor: 'pointer', marginBottom: 16, display: 'block' }}
-            />
-            {photoEnlarged && (
+            <div style={{ display: 'flex', gap: 8, overflowX: 'auto', marginBottom: 16, paddingBottom: 2 }}>
+              {photoUrls.map((url, i) => (
+                <div key={i} style={{ position: 'relative', flexShrink: 0, width: photoUrls.length === 1 ? '100%' : 'auto' }}>
+                  <img
+                    src={url}
+                    alt={`Site photo ${i + 1}`}
+                    onClick={() => setPhotoEnlarged(i)}
+                    style={{
+                      width: photoUrls.length === 1 ? '100%' : 120,
+                      height: photoUrls.length === 1 ? 'auto' : 90,
+                      maxHeight: photoUrls.length === 1 ? 220 : undefined,
+                      objectFit: 'cover',
+                      borderRadius: 10,
+                      cursor: 'pointer',
+                      display: 'block',
+                    }}
+                  />
+                  {photoUrls.length > 1 && (
+                    <div style={{ position: 'absolute', bottom: 4, right: 4, fontSize: 9, fontWeight: 700, background: 'rgba(0,0,0,0.5)', color: '#fff', padding: '2px 5px', borderRadius: 4 }}>
+                      {i + 1}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            {photoEnlarged !== false && (
               <div onClick={() => setPhotoEnlarged(false)}
                 style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, cursor: 'pointer' }}>
-                <img src={scan.photo_url} alt="Site photo enlarged" style={{ maxWidth: '95vw', maxHeight: '95vh', objectFit: 'contain', borderRadius: 8 }} />
+                <img src={photoUrls[photoEnlarged]} alt="Site photo enlarged" style={{ maxWidth: '95vw', maxHeight: '95vh', objectFit: 'contain', borderRadius: 8 }} />
               </div>
             )}
           </>
@@ -397,7 +416,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
 
         <PhotoResultCard
           photo={{
-            dataUrl: scan.photo_url || null,
+            dataUrl: photoUrls[0] || null,
             result: {
               work_type: scan.work_type,
               status: scan.status,

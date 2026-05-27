@@ -21,6 +21,7 @@ export type Scan = {
   user_id: string
   site_id: string | null
   work_type: string
+  work_types: string[] | null
   status: string
   confidence: string
   legislation: any
@@ -29,6 +30,7 @@ export type Scan = {
   checklist: any
   follow_up_questions: any
   photo_url: string | null
+  photo_urls: string[] | null
   notes: string | null
   checklist_state: Record<string, boolean> | null
   created_at: string

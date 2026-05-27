@@ -62,10 +62,14 @@ HOW TO ASSESS:
 
 10. Speak plainly. No legal jargon. Write like you are briefing a foreman at a toolbox talk.
 
+MULTI-PHOTO ANALYSIS:
+When multiple photos are provided, treat them as a single site inspection. Analyse all photos together. Identify each distinct work type found across the photos. Your response covers everything visible across all photos as one unified report. Set "status" to the worst case across all photos. Use "photo_ref" (1-based index) in findings to indicate which photo a finding relates to — only when it helps distinguish between multiple work areas.
+
 Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start with { and end with }.
 
 {
-  "work_type": "specific description e.g. Scaffold erection — multi-level residential",
+  "work_types": ["e.g. Scaffolding", "Traffic Management"],
+  "work_type": "combined display label e.g. Scaffolding + Traffic Management",
   "status": "pass|fail|uncertain|not_applicable",
   "confidence": "high|medium|low",
   "legislation": [
@@ -78,14 +82,14 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
     }
   ],
   "findings": [
-    { "type": "ok|warning|critical", "text": "specific plain English finding — one sentence" }
+    { "type": "ok|warning|critical", "text": "specific plain English finding — one sentence", "photo_ref": 1 }
   ],
   "summary": "2-3 sentences. Plain English. What a foreman would say at a toolbox talk.",
   "follow_up_questions": [],
   "photo_quality": "good|poor"
 }
 
-Max 5 findings. Max 4 legislation items. Max 3 clauses per legislation item.`;
+Max 8 findings across all photos. Max 4 legislation items. Max 3 clauses per legislation item. Omit "photo_ref" when there is only one photo.`;
 
 export async function convertToJpeg(file) {
   const dataUrl = await new Promise((resolve, reject) => {
@@ -145,7 +149,7 @@ function StatusBadge({ status, confidence }) {
   );
 }
 
-function FindingItem({ type, text }) {
+function FindingItem({ type, text, photoRef }) {
   const cfg = {
     ok: { bg: "#EAF3DE", border: "#C0DD97", color: PASS_GREEN, icon: "✓" },
     warning: { bg: "#FAEEDA", border: "#FAC775", color: WARN_AMBER, icon: "⚠" },
@@ -155,7 +159,8 @@ function FindingItem({ type, text }) {
   return (
     <div style={{ display: "flex", gap: 8, padding: "9px 11px", borderRadius: 8, background: c.bg, border: `0.5px solid ${c.border}`, marginBottom: 5 }}>
       <div style={{ color: c.color, fontWeight: 700, fontSize: 13, flexShrink: 0, marginTop: 1 }}>{c.icon}</div>
-      <div style={{ fontSize: 13, color: "#1a1a1a", lineHeight: 1.5 }}>{text}</div>
+      <div style={{ fontSize: 13, color: "#1a1a1a", lineHeight: 1.5, flex: 1 }}>{text}</div>
+      {photoRef && <div style={{ fontSize: 10, color: "#888", background: "rgba(0,0,0,0.06)", padding: "2px 6px", borderRadius: 4, fontWeight: 600, flexShrink: 0, alignSelf: "flex-start", marginTop: 2 }}>Photo {photoRef}</div>}
     </div>
   );
 }
@@ -272,7 +277,7 @@ export default function PhotoResultCard({ photo, index, total, onReanalyse, chec
 
         {tab === "findings" && (
           <div>
-            {r.findings?.map((f, i) => <FindingItem key={i} type={f.type} text={f.text} />)}
+            {r.findings?.map((f, i) => <FindingItem key={i} type={f.type} text={f.text} photoRef={f.photo_ref} />)}
             {r.summary && <div style={{ marginTop: 10, padding: "12px 14px", background: "#F1EFE8", borderRadius: 9 }}><div style={{ fontSize: 10, fontWeight: 700, color: "#888", textTransform: "uppercase", letterSpacing: "0.07em", marginBottom: 5 }}>Summary</div><div style={{ fontSize: 13, color: "#333", lineHeight: 1.6 }}>{r.summary}</div></div>}
             {r.follow_up_questions?.length > 0 && onReanalyse && <FollowUp questions={r.follow_up_questions} onSubmit={(a, extraPhotos) => onReanalyse(index, a, extraPhotos)} />}
           </div>

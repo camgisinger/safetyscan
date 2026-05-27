@@ -137,8 +137,8 @@ export default function DashboardPage() {
               return (
                 <div key={scan.id} onClick={() => router.push(`/scan/${scan.id}`)}
                   style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', marginBottom: 8, padding: '13px 16px', display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer' }}>
-                  {scan.photo_url ? (
-                    <img src={scan.photo_url} alt="" style={{ width: 44, height: 44, borderRadius: 7, objectFit: 'cover', flexShrink: 0, border: '0.5px solid #E0DDD6' }} />
+                  {(scan.photo_urls?.[0] || scan.photo_url) ? (
+                    <img src={scan.photo_urls?.[0] || scan.photo_url!} alt="" style={{ width: 44, height: 44, borderRadius: 7, objectFit: 'cover', flexShrink: 0, border: '0.5px solid #E0DDD6' }} />
                   ) : (
                     <div style={{ width: 44, height: 44, borderRadius: 7, background: '#F1EFE8', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18 }}>📷</div>
                   )}
