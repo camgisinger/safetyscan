@@ -3,6 +3,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "../lib/supabase";
 import { convertToJpeg, SYSTEM_PROMPT } from "./PhotoResultCard";
+import { ScanLoader } from "./ScanLoader";
 
 if (typeof window !== 'undefined') {
   window.onerror = function(msg, src, line, col, error) {
@@ -76,35 +77,13 @@ const LOADING_MESSAGES = [
   "Saving scan...",
 ];
 
-function LoadingSpinner() {
-  const [msgIdx, setMsgIdx] = useState(0);
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const msgTimer = setInterval(() => {
-      setMsgIdx(prev => prev >= LOADING_MESSAGES.length - 1 ? prev : prev + 1);
-    }, 2200);
-    const progTimer = setInterval(() => {
-      setProgress(prev => prev >= 92 ? 92 : prev + Math.random() * 8);
-    }, 800);
-    return () => { clearInterval(msgTimer); clearInterval(progTimer); };
-  }, []);
-
-  return (
-    <>
-      <div style={{ width: 36, height: 36, border: "3px solid rgba(0,0,0,0.08)", borderTopColor: AMBER, borderRadius: "50%", animation: "spin 0.7s linear infinite", margin: "0 auto 16px" }} />
-      <div style={{ fontWeight: 600, color: NAVY, fontSize: 15, marginBottom: 12, minHeight: 24 }}>{LOADING_MESSAGES[msgIdx]}</div>
-      <div style={{ height: 4, background: "#E5E2DB", borderRadius: 2, overflow: "hidden", maxWidth: 280, margin: "0 auto" }}>
-        <div style={{ height: "100%", width: `${progress}%`, background: AMBER, borderRadius: 2, transition: "width 0.8s ease" }} />
-      </div>
-    </>
-  );
-}
-
 export default function SafetyScan() {
   const [photos, setPhotos] = useState([]);
   const [context, setContext] = useState("");
   const [analysing, setAnalysing] = useState(false);
+  const [scanLoaderState, setScanLoaderState] = useState("idle");
+  const [msgIdx, setMsgIdx] = useState(0);
+  const [progress, setProgress] = useState(0);
   const [globalError, setGlobalError] = useState(null);
   const [dragOver, setDragOver] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
@@ -114,6 +93,19 @@ export default function SafetyScan() {
   const fileRef = useRef();
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (!analysing) return;
+    setMsgIdx(0);
+    setProgress(0);
+    const msgTimer = setInterval(() => {
+      setMsgIdx(prev => prev >= LOADING_MESSAGES.length - 1 ? prev : prev + 1);
+    }, 2200);
+    const progTimer = setInterval(() => {
+      setProgress(prev => prev >= 92 ? 92 : prev + Math.random() * 8);
+    }, 800);
+    return () => { clearInterval(msgTimer); clearInterval(progTimer); };
+  }, [analysing]);
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data: { user } }) => {
@@ -245,8 +237,9 @@ export default function SafetyScan() {
 
       const scanId = await saveScan(safeResult, photos, resolvedSiteId);
       if (scanId) {
+        setScanLoaderState("complete");
+        await new Promise(resolve => setTimeout(resolve, 1200));
         router.push(`/scan/${scanId}`);
-        // Keep analysing=true — spinner stays until navigation completes
       } else {
         setGlobalError("Analysis complete but failed to save. Please try again.");
         setAnalysing(false);
@@ -283,8 +276,12 @@ export default function SafetyScan() {
         </button>
 
         {analysing ? (
-          <div style={{ background: "#fff", borderRadius: 16, padding: "36px 20px", border: "0.5px solid #E0DDD6", textAlign: "center" }}>
-            <LoadingSpinner />
+          <div style={{ background: "#fff", borderRadius: 16, padding: "36px 20px", border: "0.5px solid rgba(0,0,0,0.08)", textAlign: "center", marginBottom: 16 }}>
+            <ScanLoader state={scanLoaderState === "complete" ? "complete" : "scanning"} size={120} />
+            <div style={{ marginTop: 20, fontWeight: 600, color: "#16181C", fontSize: 15, minHeight: 24 }}>{LOADING_MESSAGES[msgIdx]}</div>
+            <div style={{ height: 4, background: "#E5E2DB", borderRadius: 2, overflow: "hidden", maxWidth: 280, margin: "12px auto 0" }}>
+              <div style={{ height: "100%", width: `${progress}%`, background: "#F39410", borderRadius: 2, transition: "width 0.8s ease" }} />
+            </div>
           </div>
         ) : (
           <div style={{ background: "#fff", borderRadius: 16, padding: 20, border: "0.5px solid #E0DDD6" }}>
