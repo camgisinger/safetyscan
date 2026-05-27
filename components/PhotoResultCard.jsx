@@ -40,6 +40,71 @@ General WHS
 - PPE, site housekeeping, hazard identification, safety signage
 - Legislation: WHS Act 2011 (Qld), WHS Regulation 2011 (Qld), relevant Codes of Practice
 
+Concreting & Formwork
+- Formwork structure, propping, stripping, concrete placement, pump operations, agitator trucks
+- Check: formwork adequately propped and braced, no overloading of formwork, exclusion zones around concrete pump operations, workers not standing under suspended loads, PPE visible during concrete placement (gloves, boots), agitator trucks positioned safely
+- Do NOT flag concrete mix ratios, slump tests, or pour records — not visible from a photo
+- Legislation: WHS Regulation 2011 (Qld) Part 6.3, Code of Practice: Formwork, AS 3610
+
+Working at Heights (General)
+- Ladders, harnesses, fall arrest systems, roof work, leading edge work, fragile roofs
+- Check: ladders secured at top and bottom, correct angle (1:4 ratio), harness and lanyard visible for work over 2m where no other fall protection exists, anchor points visible, not standing on top two rungs of ladder, safety mesh or edge protection on roof work
+- Do NOT flag harness fit, anchor certification, or rescue plans — not visible from a photo
+- Legislation: WHS Regulation 2011 (Qld) Part 4.4, Code of Practice: Managing the Risk of Falls, AS/NZS 1891
+
+Demolition
+- Structural demolition, strip-out, hazardous materials removal
+- Check: exclusion zones established, hoarding or fencing visible, no unauthorised persons in demolition zone, dust suppression visible, overhead protection where required, structural supports visible before removal of load-bearing elements
+- Do NOT flag asbestos identification from a photo — requires testing. Do NOT flag demolition permit — not visible from a photo
+- Legislation: WHS Regulation 2011 (Qld) Part 7, Code of Practice: Demolition Work
+
+Confined Spaces
+- Tanks, pits, tunnels, manholes, vaults, trenches over 1.5m deep used as confined spaces
+- Check: entry permit visible or posted at entry point, atmospheric monitoring equipment present at entry, rescue equipment visible at entry point, standby person visible outside space, ventilation equipment present
+- Do NOT flag atmosphere readings, rescue procedures, or training records — not visible from a photo
+- Legislation: WHS Regulation 2011 (Qld) Part 4.3, Code of Practice: Confined Spaces
+
+Hot Works
+- Welding, cutting, grinding, brazing, soldering
+- Check: fire extinguisher within 2m of hot works area, combustible materials cleared minimum 3m radius, appropriate PPE visible (welding shield, gloves, apron), screens to protect others from sparks, no hot works near flammable storage
+- Do NOT flag hot works permits — not reliably visible from a photo
+- Legislation: WHS Regulation 2011 (Qld), Code of Practice: Welding Processes, AS 1674
+
+Crane & Rigging Operations
+- Mobile cranes, tower cranes, rigging, dogman operations, lifting
+- Check: exclusion zone established under and around lift, rigger and dogman positioned appropriately, outriggers fully deployed on stable pads, tag lines in use on large lifts, no persons under suspended load, minimum 3m clearance from overhead powerlines
+- Do NOT flag licence cards, load charts, or lift plans — not visible from a photo
+- Legislation: WHS Regulation 2011 (Qld) Part 5, AS 2550 series, High Risk Work Licence requirements
+
+Asbestos Management
+- Asbestos removal, encapsulation, disturbance during demolition or renovation
+- Check: asbestos warning signs posted at site boundary, full enclosure visible for Class A removal, workers in full PPE (P2 respirator, disposable coveralls) for any asbestos work, waste bags correctly labelled and sealed, decontamination unit visible for Class A removal
+- Do NOT attempt to identify asbestos-containing materials from a photo — requires testing and lab analysis
+- Legislation: WHS Regulation 2011 (Qld) Part 8, Code of Practice: How to Manage and Control Asbestos in the Workplace
+
+Housekeeping & Site Amenities
+- General site tidiness, waste management, walkways, amenities
+- Check: walkways clear of materials and debris, materials stored safely and not creating trip hazards, waste bins present and not overflowing, no materials stored within exclusion zones, adequate site amenities visible
+- Legislation: WHS Regulation 2011 (Qld), Code of Practice: Construction Work
+
+Fire Safety
+- Fire extinguishers, emergency exits, flammable storage on site
+- Check: fire extinguishers visible and accessible, flammable materials stored away from ignition sources, emergency exits clearly marked and unobstructed, no combustible materials stored against structures
+- Legislation: Building Fire Safety Regulation 2008 (Qld), AS 1851, AS 2444
+
+Manual Handling & Material Storage
+- Lifting, carrying, stacking, material storage areas
+- Check: materials stored on stable level ground, stacking height appropriate for material type, no materials stored in a way that could fall or collapse, mechanical aids visible for heavy lifts where appropriate
+- Do NOT flag manual handling technique — not reliably assessable from a photo
+- Legislation: WHS Regulation 2011 (Qld) Part 4.2, Code of Practice: Hazardous Manual Tasks
+
+PPE Compliance
+- Hard hats, hi-vis, steel cap boots, safety glasses, gloves, hearing protection
+- Check: all visible workers wearing hard hat and hi-vis as minimum on site, appropriate PPE for the specific task visible (safety glasses for grinding, hearing protection near noise sources, gloves for chemical handling)
+- Do NOT flag PPE brand, certification standard, or fit — not assessable from a photo
+- Note: flag missing PPE but also note if higher-order controls are not visible — PPE is last line of defence
+- Legislation: WHS Regulation 2011 (Qld) Part 3.2, Code of Practice: Construction Work
+
 HOW TO ASSESS:
 
 1. Identify the work type first — be specific e.g. "Mobile crane operating near overhead powerlines" not just "crane"
