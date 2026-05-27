@@ -12,6 +12,12 @@ const PASS_GREEN = '#1a7a45'
 const FAIL_RED = '#E14B3D'
 const WARN_AMBER = '#a36200'
 
+const BG = 'var(--ss-bg)'
+const SURFACE = 'var(--ss-surface)'
+const TEXT = 'var(--ss-text)'
+const TEXT_MUTE = 'var(--ss-text-mute)'
+const BORDER = 'var(--ss-border)'
+
 function StatusBadge({ status }: { status: string }) {
   const cfg: Record<string, { bg: string; color: string; label: string }> = {
     pass: { bg: 'rgba(61,211,122,0.12)', color: PASS_GREEN, label: 'Compliant' },
@@ -105,7 +111,7 @@ export default function DashboardPage() {
 
   if (loading) {
     return (
-      <div style={{ minHeight: '100vh', background: OFFWHITE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Inter', system-ui, sans-serif" }}>
+      <div style={{ minHeight: '100vh', background: BG, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Inter', system-ui, sans-serif" }}>
         <div style={{ color: '#aaa', fontSize: 14 }}>Loading...</div>
       </div>
     )
@@ -125,7 +131,7 @@ export default function DashboardPage() {
   const unassignedRecent = recentScans.filter(s => !s.site_id)
 
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "'Inter', system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "'Inter', system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
 
       <AppHeader />
@@ -156,9 +162,9 @@ export default function DashboardPage() {
           </div>
 
           {recentScans.length === 0 ? (
-            <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '36px 20px', textAlign: 'center' }}>
+            <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '36px 20px', textAlign: 'center' }}>
               <div style={{ fontSize: 30, marginBottom: 10 }}>📷</div>
-              <div style={{ fontSize: 14, fontWeight: 600, color: NAVY, marginBottom: 4 }}>No scans yet</div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: TEXT, marginBottom: 4 }}>No scans yet</div>
               <div style={{ fontSize: 13, color: '#999' }}>Run your first compliance check to see results here.</div>
             </div>
           ) : (
@@ -169,7 +175,7 @@ export default function DashboardPage() {
                 <div
                   key={scan.id}
                   onClick={() => editMode ? toggleSelect(scan.id) : router.push(`/scan/${scan.id}`)}
-                  style={{ background: '#fff', borderRadius: 12, border: `0.5px solid ${isSelected ? AMBER : '#E0DDD6'}`, marginBottom: 8, padding: '13px 16px', display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer', boxShadow: isSelected ? `0 0 0 1.5px ${AMBER}` : 'none' }}
+                  style={{ background: SURFACE, borderRadius: 12, border: `0.5px solid ${isSelected ? AMBER : BORDER}`, marginBottom: 8, padding: '13px 16px', display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer', boxShadow: isSelected ? `0 0 0 1.5px ${AMBER}` : 'none' }}
                 >
                   {editMode && (
                     <div style={{ width: 20, height: 20, borderRadius: '50%', border: `2px solid ${isSelected ? AMBER : '#C8C5BE'}`, background: isSelected ? AMBER : '#fff', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -182,7 +188,7 @@ export default function DashboardPage() {
                     <div style={{ width: 44, height: 44, borderRadius: 7, background: '#EFEAE0', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18 }}>📷</div>
                   ) : null}
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                    <div style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                       {scan.work_type || 'Unknown work type'}
                     </div>
                     <div style={{ fontSize: 11, color: '#aaa' }}>
@@ -209,7 +215,7 @@ export default function DashboardPage() {
             </div>
 
             {displaySites.length === 0 && unassignedMeta.length === 0 ? (
-              <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '24px 20px', textAlign: 'center' }}>
+              <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '24px 20px', textAlign: 'center' }}>
                 <div style={{ fontSize: 13, color: '#999', lineHeight: 1.6 }}>No sites yet. <Link href="/sites" style={{ color: NAVY, fontWeight: 600 }}>Create a site</Link> to organise scans by location or client.</div>
               </div>
             ) : (
@@ -219,9 +225,9 @@ export default function DashboardPage() {
                   const lastScan = siteScans[0]
                   return (
                     <Link key={site.id} href={`/sites/${site.id}`} style={{ textDecoration: 'none', display: 'block' }}>
-                      <div style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', padding: '13px 16px', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                      <div style={{ background: SURFACE, borderRadius: 12, border: `0.5px solid ${BORDER}`, padding: '13px 16px', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
                         <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: site.location ? 2 : 0, display: 'flex', alignItems: 'center', gap: 6 }}>
+                          <div style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: site.location ? 2 : 0, display: 'flex', alignItems: 'center', gap: 6 }}>
                             {site.name}
                             {site.archived && <span style={{ fontSize: 10, padding: '1px 6px', background: '#EFEAE0', color: '#888', borderRadius: 4, fontWeight: 500 }}>Archived</span>}
                           </div>
@@ -238,7 +244,7 @@ export default function DashboardPage() {
                 })}
 
                 {unassignedMeta.length > 0 && (
-                  <div style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', marginBottom: 8, overflow: 'hidden' }}>
+                  <div style={{ background: SURFACE, borderRadius: 12, border: `0.5px solid ${BORDER}`, marginBottom: 8, overflow: 'hidden' }}>
                     <div onClick={() => setOpenUnassigned(v => !v)}
                       style={{ padding: '13px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, cursor: 'pointer' }}>
                       <div>
@@ -255,7 +261,7 @@ export default function DashboardPage() {
                           unassignedRecent.map(scan => (
                             <Link key={scan.id} href={`/scan/${scan.id}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 0', borderBottom: '0.5px solid #F5F4F0' }}>
                               <div>
-                                <div style={{ fontSize: 12, fontWeight: 600, color: NAVY }}>{scan.work_type || 'Unknown'}</div>
+                                <div style={{ fontSize: 12, fontWeight: 600, color: TEXT }}>{scan.work_type || 'Unknown'}</div>
                                 <div style={{ fontSize: 11, color: '#aaa' }}>{formatDate(scan.created_at)}</div>
                               </div>
                               <StatusBadge status={scan.status} />
@@ -279,7 +285,7 @@ export default function DashboardPage() {
 
       {/* Bulk delete bar */}
       {editMode && (
-        <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, background: '#fff', borderTop: '0.5px solid #E0DDD6', padding: '12px 20px', display: 'flex', gap: 10, zIndex: 20 }}>
+        <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, background: SURFACE, borderTop: `0.5px solid ${BORDER}`, padding: '12px 20px', display: 'flex', gap: 10, zIndex: 20 }}>
           <button
             onClick={() => selectedScans.size > 0 && setShowDeleteConfirm(true)}
             disabled={selectedScans.size === 0}
@@ -296,8 +302,8 @@ export default function DashboardPage() {
       {/* Bulk delete confirm modal */}
       {showDeleteConfirm && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20 }}>
-          <div style={{ background: '#fff', borderRadius: 16, padding: 24, maxWidth: 320, width: '100%' }}>
-            <div style={{ fontSize: 17, fontWeight: 700, color: NAVY, marginBottom: 8 }}>Delete {selectedScans.size} scan{selectedScans.size !== 1 ? 's' : ''}?</div>
+          <div style={{ background: SURFACE, borderRadius: 16, padding: 24, maxWidth: 320, width: '100%' }}>
+            <div style={{ fontSize: 17, fontWeight: 700, color: TEXT, marginBottom: 8 }}>Delete {selectedScans.size} scan{selectedScans.size !== 1 ? 's' : ''}?</div>
             <div style={{ fontSize: 14, color: '#888', lineHeight: 1.5, marginBottom: 20 }}>This cannot be undone. Photos will also be permanently deleted.</div>
             <div style={{ display: 'flex', gap: 10 }}>
               <button onClick={() => setShowDeleteConfirm(false)} disabled={deleting} style={{ flex: 1, padding: 11, background: 'transparent', border: '1px solid #D3D1C7', borderRadius: 8, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit', color: '#555' }}>Cancel</button>

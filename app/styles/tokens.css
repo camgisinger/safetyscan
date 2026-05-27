@@ -36,13 +36,13 @@
   --ss-info:      #4A90E2;
 
   /* ───── Surfaces (dark theme defaults) ───── */
-  --ss-bg:        var(--ss-ink);
-  --ss-surface:   var(--ss-gray-800);
-  --ss-surface-2: var(--ss-gray-700);
-  --ss-text:      var(--ss-paper);
-  --ss-text-mute: var(--ss-gray-400);
-  --ss-border:    rgba(255,255,255,.06);
-  --ss-border-strong: rgba(255,255,255,.18);
+  --ss-bg:        #16181C;
+  --ss-surface:   #1E2126;
+  --ss-surface-2: #252A30;
+  --ss-text:      #EFEAE0;
+  --ss-text-mute: #7A7468;
+  --ss-border:    rgba(255,255,255,0.06);
+  --ss-border-strong: rgba(255,255,255,0.18);
 
   /* ───── Type ───── */
   --ss-font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -110,22 +110,21 @@
   --ss-dur-slow: 550ms;
 
   /* ───── Loader-specific ───── */
-  --ss-cycle: 2.8s;          /* scan-beam sweep duration */
-  --ss-bg:    var(--ss-ink); /* used by .scan-loader */
-  --ss-base:  var(--ss-paper);
+  --ss-cycle: 2.8s;
+  --ss-base:  #EFEAE0;
   --ss-accent: var(--ss-amber);
 }
 
-/* Light theme — apply by adding [data-theme="light"] to <html> or any subtree */
+/* Light theme */
 [data-theme="light"] {
-  --ss-bg:        var(--ss-paper);
+  --ss-bg:        #EFEAE0;
   --ss-surface:   #FFFFFF;
-  --ss-surface-2: var(--ss-gray-50);
-  --ss-text:      var(--ss-ink);
-  --ss-text-mute: var(--ss-gray-500);
-  --ss-border:    rgba(0,0,0,.08);
-  --ss-border-strong: rgba(0,0,0,.18);
-  --ss-base:      var(--ss-ink);
+  --ss-surface-2: #F4F1EA;
+  --ss-text:      #16181C;
+  --ss-text-mute: #4A4D52;
+  --ss-border:    rgba(0,0,0,0.08);
+  --ss-border-strong: rgba(0,0,0,0.18);
+  --ss-base:      #16181C;
 }
 
 /* ============================================================

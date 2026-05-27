@@ -8,6 +8,13 @@ const NAVY = '#16181C'
 const AMBER = '#F39410'
 const OFFWHITE = '#EFEAE0'
 
+const BG = 'var(--ss-bg)'
+const SURFACE = 'var(--ss-surface)'
+const SURFACE2 = 'var(--ss-surface-2)'
+const TEXT = 'var(--ss-text)'
+const TEXT_MUTE = 'var(--ss-text-mute)'
+const BORDER_STRONG = 'var(--ss-border-strong)'
+
 export default function LoginPage() {
   const [tab, setTab] = useState<'signin' | 'signup'>('signin')
   const [email, setEmail] = useState('')
@@ -39,17 +46,17 @@ export default function LoginPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif", display: 'flex', flexDirection: 'column' }}>
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif", display: 'flex', flexDirection: 'column' }}>
       <AppHeader />
 
       <main style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px 16px' }}>
-        <div style={{ width: '100%', maxWidth: 400, background: '#fff', borderRadius: 16, padding: 28, border: '0.5px solid #E0DDD6' }}>
+        <div style={{ width: '100%', maxWidth: 400, background: SURFACE, borderRadius: 16, padding: 28, border: `0.5px solid ${BORDER_STRONG}` }}>
 
           {signedUp ? (
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: 32, marginBottom: 12 }}>📬</div>
-              <div style={{ fontSize: 16, fontWeight: 700, color: NAVY, marginBottom: 8 }}>Check your email</div>
-              <div style={{ fontSize: 13, color: '#666', lineHeight: 1.6 }}>
+              <div style={{ fontSize: 16, fontWeight: 700, color: TEXT, marginBottom: 8 }}>Check your email</div>
+              <div style={{ fontSize: 13, color: TEXT_MUTE, lineHeight: 1.6 }}>
                 We sent a confirmation link to <strong>{email}</strong>. Click it to activate your account, then come back and sign in.
               </div>
               <button onClick={() => { setTab('signin'); setSignedUp(false) }}
@@ -59,17 +66,17 @@ export default function LoginPage() {
             </div>
           ) : (
             <>
-              <h1 style={{ fontSize: 20, fontWeight: 700, color: NAVY, marginBottom: 4 }}>
+              <h1 style={{ fontSize: 20, fontWeight: 700, color: TEXT, marginBottom: 4 }}>
                 {tab === 'signin' ? 'Welcome back' : 'Create your account'}
               </h1>
               <p style={{ fontSize: 13, color: '#888', marginBottom: 22, lineHeight: 1.5 }}>
                 {tab === 'signin' ? 'Sign in to access your scans and projects.' : 'Start checking Queensland compliance today.'}
               </p>
 
-              <div style={{ display: 'flex', background: OFFWHITE, borderRadius: 10, padding: 3, marginBottom: 24 }}>
+              <div style={{ display: 'flex', background: SURFACE2, borderRadius: 10, padding: 3, marginBottom: 24 }}>
                 {(['signin', 'signup'] as const).map(t => (
                   <button key={t} onClick={() => { setTab(t); setError('') }}
-                    style={{ flex: 1, padding: '8px 0', fontSize: 13, fontWeight: tab === t ? 700 : 400, color: tab === t ? NAVY : '#888', background: tab === t ? '#fff' : 'transparent', border: 'none', borderRadius: 8, cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.15s', boxShadow: tab === t ? '0 1px 3px rgba(0,0,0,0.08)' : 'none' }}>
+                    style={{ flex: 1, padding: '8px 0', fontSize: 13, fontWeight: tab === t ? 700 : 400, color: tab === t ? TEXT : '#888', background: tab === t ? SURFACE : 'transparent', border: 'none', borderRadius: 8, cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.15s', boxShadow: tab === t ? '0 1px 3px rgba(0,0,0,0.08)' : 'none' }}>
                     {t === 'signin' ? 'Sign in' : 'Create account'}
                   </button>
                 ))}
@@ -77,14 +84,14 @@ export default function LoginPage() {
 
               <form onSubmit={handleSubmit}>
                 <div style={{ marginBottom: 14 }}>
-                  <label style={{ fontSize: 12, fontWeight: 600, color: '#444', display: 'block', marginBottom: 5 }}>Email</label>
+                  <label style={{ fontSize: 12, fontWeight: 600, color: TEXT_MUTE, display: 'block', marginBottom: 5 }}>Email</label>
                   <input type="email" value={email} onChange={e => setEmail(e.target.value)} required placeholder="you@example.com"
-                    style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', color: '#1a1a1a', boxSizing: 'border-box' }} />
+                    style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: 'inherit', color: TEXT, boxSizing: 'border-box' }} />
                 </div>
                 <div style={{ marginBottom: 20 }}>
-                  <label style={{ fontSize: 12, fontWeight: 600, color: '#444', display: 'block', marginBottom: 5 }}>Password</label>
+                  <label style={{ fontSize: 12, fontWeight: 600, color: TEXT_MUTE, display: 'block', marginBottom: 5 }}>Password</label>
                   <input type="password" value={password} onChange={e => setPassword(e.target.value)} required placeholder="••••••••" minLength={6}
-                    style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', color: '#1a1a1a', boxSizing: 'border-box' }} />
+                    style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: 'inherit', color: TEXT, boxSizing: 'border-box' }} />
                 </div>
 
                 {error && (

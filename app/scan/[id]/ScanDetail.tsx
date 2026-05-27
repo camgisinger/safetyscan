@@ -12,9 +12,17 @@ const PASS_GREEN = '#1a7a45'
 const FAIL_RED = '#E14B3D'
 const WARN_AMBER = '#a36200'
 
+const BG = 'var(--ss-bg)'
+const SURFACE = 'var(--ss-surface)'
+const SURFACE2 = 'var(--ss-surface-2)'
+const TEXT = 'var(--ss-text)'
+const TEXT_MUTE = 'var(--ss-text-mute)'
+const BORDER = 'var(--ss-border)'
+const BORDER_STRONG = 'var(--ss-border-strong)'
+
 function Spinner() {
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: BG, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <div style={{ width: 32, height: 32, border: '3px solid #E0DDD6', borderTopColor: AMBER, borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
     </div>
@@ -534,7 +542,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   if (loading) return <Spinner />
 
   if (error) return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
       <AppHeader />
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
@@ -572,7 +580,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           <div style={{ fontSize: 12, color: '#854F0B', marginBottom: 8, lineHeight: 1.5 }}>This will reset your checklist progress. Are you sure?</div>
           <div style={{ display: 'flex', gap: 8 }}>
             <button onClick={handleGenerateChecklist} style={{ padding: '6px 12px', background: '#854F0B', border: 'none', borderRadius: 6, color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>Yes, regenerate</button>
-            <button onClick={() => setConfirmRegenerate(false)} style={{ padding: '6px 12px', background: 'transparent', border: '0.5px solid #D3D1C7', borderRadius: 6, color: '#555', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit' }}>Cancel</button>
+            <button onClick={() => setConfirmRegenerate(false)} style={{ padding: '6px 12px', background: 'transparent', border: `0.5px solid ${BORDER_STRONG}`, borderRadius: 6, color: TEXT_MUTE, fontSize: 12, cursor: 'pointer', fontFamily: 'inherit' }}>Cancel</button>
           </div>
         </div>
       )}
@@ -598,11 +606,11 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
             const isLast = checklist.slice(i + 1).every((_, j) => checklistState[`d_${i + 1 + j}`])
             return (
               <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, padding: '8px 0', borderBottom: isLast ? 'none' : '0.5px solid #F5F4F0' }}>
-                <div onClick={() => toggleCheck(i)} style={{ width: 18, height: 18, borderRadius: 4, border: `1.5px solid ${checked ? PASS_GREEN : '#C8C5BE'}`, background: checked ? PASS_GREEN : '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2, cursor: 'pointer' }}>
+                <div onClick={() => toggleCheck(i)} style={{ width: 18, height: 18, borderRadius: 4, border: `1.5px solid ${checked ? PASS_GREEN : BORDER_STRONG}`, background: checked ? PASS_GREEN : SURFACE2, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2, cursor: 'pointer' }}>
                   {checked && <span style={{ color: '#fff', fontSize: 11, fontWeight: 700, lineHeight: 1 }}>✓</span>}
                 </div>
                 <div style={{ flex: 1, cursor: 'pointer' }} onClick={() => toggleCheck(i)}>
-                  <div style={{ fontSize: 13, color: checked ? '#aaa' : '#1a1a1a', lineHeight: 1.4, textDecoration: checked ? 'line-through' : 'none' }}>{item.item}</div>
+                  <div style={{ fontSize: 13, color: checked ? '#aaa' : TEXT, lineHeight: 1.4, textDecoration: checked ? 'line-through' : 'none' }}>{item.item}</div>
                   {item.category && <div style={{ fontSize: 10, color: '#bbb', marginTop: 2, textTransform: 'uppercase', letterSpacing: '0.04em' }}>{item.category}</div>}
                 </div>
                 <button onClick={() => deleteItem(i)} style={{ background: 'transparent', border: 'none', color: '#D0CDC6', fontSize: 16, cursor: 'pointer', padding: '0 2px', lineHeight: 1, flexShrink: 0, marginTop: 1 }}>×</button>
@@ -615,7 +623,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   )
 
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; } textarea, input { outline: none; } @keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <AppHeader />
 
@@ -630,13 +638,13 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
         {editingName ? (
           <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 16 }}>
             <input value={scanName} onChange={e => setScanName(e.target.value)} onKeyDown={e => e.key === 'Enter' && saveName()} autoFocus
-              style={{ flex: 1, padding: '8px 12px', borderRadius: 8, border: '1.5px solid #F5A623', fontSize: 16, fontWeight: 600, fontFamily: 'inherit', color: NAVY }} />
+              style={{ flex: 1, padding: '8px 12px', borderRadius: 8, border: '1.5px solid #F5A623', background: SURFACE, fontSize: 16, fontWeight: 600, fontFamily: 'inherit', color: TEXT }} />
             <button onClick={saveName} style={{ padding: '8px 14px', background: NAVY, border: 'none', borderRadius: 8, color: AMBER, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>Save</button>
             <button onClick={() => { setScanName(scan.work_type || ''); setEditingName(false) }} style={{ padding: '8px 14px', background: 'transparent', border: '0.5px solid #C8C5BE', borderRadius: 8, color: '#888', fontSize: 13, cursor: 'pointer', fontFamily: 'inherit' }}>Cancel</button>
           </div>
         ) : (
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-            <h1 style={{ fontSize: 20, fontWeight: 700, color: NAVY, margin: 0 }}>{scanName}</h1>
+            <h1 style={{ fontSize: 20, fontWeight: 700, color: TEXT, margin: 0 }}>{scanName}</h1>
             <button onClick={() => setEditingName(true)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: '#bbb', fontSize: 16, padding: '2px 4px', lineHeight: 1 }}>✎</button>
           </div>
         )}
@@ -672,12 +680,12 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
 
         {/* Continue conversation */}
         {!hasFollowUp && (
-          <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginBottom: 14 }}>
+          <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '14px 18px', marginBottom: 14 }}>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 12 }}>Continue conversation</div>
             <textarea value={continueContext} onChange={e => setContinueContext(e.target.value)} placeholder="Describe what's changed, additional context, or what you'd like re-assessed…" rows={3}
-              style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', resize: 'vertical', color: '#1a1a1a', lineHeight: 1.5 }} />
+              style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: 'inherit', resize: 'vertical', color: TEXT, lineHeight: 1.5 }} />
             <div style={{ marginTop: 10 }}>
-              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 14px', background: '#F8F7F3', border: '0.5px solid #D3D1C7', borderRadius: 8, cursor: 'pointer', fontSize: 13, color: '#444', fontWeight: 500 }}>
+              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 14px', background: SURFACE2, border: `0.5px solid ${BORDER_STRONG}`, borderRadius: 8, cursor: 'pointer', fontSize: 13, color: TEXT_MUTE, fontWeight: 500 }}>
                 📷 Attach photos
                 <input type="file" accept="image/*" multiple style={{ display: 'none' }} onChange={async (e) => {
                   const files = Array.from(e.target.files as FileList).slice(0, 3)
@@ -712,10 +720,10 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
         )}
 
         {/* Notes */}
-        <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginBottom: 14 }}>
+        <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '14px 18px', marginBottom: 14 }}>
           <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 8 }}>Notes</div>
           <textarea value={notes} onChange={e => handleNotesChange(e.target.value)} placeholder="Add notes about this scan…" rows={4}
-            style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 14, fontFamily: 'inherit', resize: 'none', color: '#1a1a1a', lineHeight: 1.5, boxSizing: 'border-box' as const }} />
+            style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 14, fontFamily: 'inherit', resize: 'none', color: TEXT, lineHeight: 1.5, boxSizing: 'border-box' as const }} />
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 8 }}>
             <button onClick={() => saveNotes(notes)} disabled={notesSaving}
               style={{ padding: '8px 16px', background: NAVY, border: 'none', borderRadius: 8, color: '#fff', fontSize: 13, fontWeight: 600, cursor: notesSaving ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: notesSaving ? 0.6 : 1 }}>
@@ -726,13 +734,13 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
         </div>
 
         {/* Assign to site */}
-        <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginBottom: 14 }}>
+        <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '14px 18px', marginBottom: 14 }}>
           <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 8 }}>
             {scan.site_id ? 'Move to different site' : 'Assign to site'}
           </div>
           <div style={{ display: 'flex', gap: 8 }}>
             <select value={assignSiteId} onChange={e => setAssignSiteId(e.target.value)}
-              style={{ flex: 1, padding: '9px 11px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', color: '#1a1a1a', cursor: 'pointer' }}>
+              style={{ flex: 1, padding: '9px 11px', borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: 'inherit', color: TEXT, cursor: 'pointer' }}>
               <option value="">No site</option>
               {sites.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
             </select>
@@ -746,23 +754,23 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
         {/* Share + PDF */}
         <div style={{ display: 'flex', gap: 8, marginTop: 8, marginBottom: 8 }}>
           <button onClick={() => setShareMenuOpen(v => !v)}
-            style={{ flex: 1, padding: '10px', background: 'transparent', border: '1px solid #D3D1C7', borderRadius: 8, color: NAVY, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
+            style={{ flex: 1, padding: '10px', background: 'transparent', border: `1px solid ${BORDER_STRONG}`, borderRadius: 8, color: TEXT, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
             {shareEnabled ? '🔗 Sharing on' : '🔗 Share scan'}
           </button>
           <button onClick={handleExportPDF} disabled={exportingPDF}
-            style={{ flex: 1, padding: '10px', background: 'transparent', border: '1px solid #D3D1C7', borderRadius: 8, color: NAVY, fontSize: 13, fontWeight: 600, cursor: exportingPDF ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: exportingPDF ? 0.6 : 1 }}>
+            style={{ flex: 1, padding: '10px', background: 'transparent', border: `1px solid ${BORDER_STRONG}`, borderRadius: 8, color: TEXT, fontSize: 13, fontWeight: 600, cursor: exportingPDF ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: exportingPDF ? 0.6 : 1 }}>
             {exportingPDF ? 'Exporting…' : '↓ Export PDF'}
           </button>
         </div>
 
         {/* Share panel */}
         {shareMenuOpen && (
-          <div style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', padding: '14px 16px', marginBottom: 8 }}>
+          <div style={{ background: SURFACE, borderRadius: 12, border: `0.5px solid ${BORDER}`, padding: '14px 16px', marginBottom: 8 }}>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 10 }}>Share scan</div>
             {shareEnabled && shareLink ? (
               <>
                 <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
-                  <div style={{ flex: 1, padding: '8px 10px', background: '#F8F7F3', borderRadius: 7, border: '0.5px solid #E0DDD6', fontSize: 11, color: '#555', wordBreak: 'break-all', fontFamily: 'monospace' }}>{shareLink}</div>
+                  <div style={{ flex: 1, padding: '8px 10px', background: SURFACE2, borderRadius: 7, border: `0.5px solid ${BORDER}`, fontSize: 11, color: TEXT_MUTE, wordBreak: 'break-all', fontFamily: 'monospace' }}>{shareLink}</div>
                   <button onClick={handleShare} style={{ padding: '8px 12px', background: NAVY, border: 'none', borderRadius: 7, color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', flexShrink: 0, whiteSpace: 'nowrap' }}>
                     {linkCopied ? '✓ Copied' : 'Copy link'}
                   </button>
@@ -798,11 +806,11 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
 
       {showDeleteConfirm && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20 }}>
-          <div style={{ background: '#fff', borderRadius: 16, padding: 24, maxWidth: 320, width: '100%' }}>
-            <div style={{ fontSize: 17, fontWeight: 700, color: NAVY, marginBottom: 8 }}>Delete this scan?</div>
+          <div style={{ background: SURFACE, borderRadius: 16, padding: 24, maxWidth: 320, width: '100%' }}>
+            <div style={{ fontSize: 17, fontWeight: 700, color: TEXT, marginBottom: 8 }}>Delete this scan?</div>
             <div style={{ fontSize: 14, color: '#888', lineHeight: 1.5, marginBottom: 20 }}>This will permanently delete the scan and all associated photos. This cannot be undone.</div>
             <div style={{ display: 'flex', gap: 10 }}>
-              <button onClick={() => setShowDeleteConfirm(false)} style={{ flex: 1, padding: 11, background: 'transparent', border: '1px solid #D3D1C7', borderRadius: 8, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit', color: '#555' }}>Cancel</button>
+              <button onClick={() => setShowDeleteConfirm(false)} style={{ flex: 1, padding: 11, background: 'transparent', border: `1px solid ${BORDER_STRONG}`, borderRadius: 8, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit', color: TEXT_MUTE }}>Cancel</button>
               <button onClick={handleDelete} style={{ flex: 1, padding: 11, background: '#E14B3D', border: 'none', borderRadius: 8, fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', color: '#fff' }}>Delete</button>
             </div>
           </div>

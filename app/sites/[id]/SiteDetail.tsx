@@ -11,9 +11,15 @@ const PASS_GREEN = '#1a7a45'
 const FAIL_RED = '#E14B3D'
 const WARN_AMBER = '#a36200'
 
+const BG = 'var(--ss-bg)'
+const SURFACE = 'var(--ss-surface)'
+const SURFACE2 = 'var(--ss-surface-2)'
+const TEXT = 'var(--ss-text)'
+const BORDER = 'var(--ss-border)'
+
 function Spinner() {
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: BG, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <div style={{ width: 32, height: 32, border: '3px solid #E0DDD6', borderTopColor: AMBER, borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
     </div>
@@ -94,7 +100,7 @@ export default function SiteDetail({ id }: { id: string }) {
   if (loading) return <Spinner />
 
   if (error) return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
       <AppHeader />
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
@@ -122,7 +128,7 @@ export default function SiteDetail({ id }: { id: string }) {
   const pct = totalItems > 0 ? Math.round((doneItems / totalItems) * 100) : 0
 
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
       <AppHeader />
 
@@ -133,10 +139,10 @@ export default function SiteDetail({ id }: { id: string }) {
         </button>
 
         {site && (
-          <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '16px 18px', marginBottom: 20 }}>
+          <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '16px 18px', marginBottom: 20 }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: 18, fontWeight: 700, color: NAVY, marginBottom: 2, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <div style={{ fontSize: 18, fontWeight: 700, color: TEXT, marginBottom: 2, display: 'flex', alignItems: 'center', gap: 8 }}>
                   {site.name}
                   {site.archived && <span style={{ fontSize: 11, padding: '2px 8px', background: '#F1EFE8', color: '#888', borderRadius: 6, fontWeight: 500 }}>Archived</span>}
                 </div>
@@ -164,9 +170,9 @@ export default function SiteDetail({ id }: { id: string }) {
         </div>
 
         {scans.length === 0 ? (
-          <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '36px 20px', textAlign: 'center' }}>
+          <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '36px 20px', textAlign: 'center' }}>
             <div style={{ fontSize: 30, marginBottom: 10 }}>📷</div>
-            <div style={{ fontSize: 14, fontWeight: 600, color: NAVY, marginBottom: 4 }}>No scans yet</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: TEXT, marginBottom: 4 }}>No scans yet</div>
             <div style={{ fontSize: 13, color: '#999', marginBottom: 16 }}>Run a compliance scan to add it to this site.</div>
             {site && (
               <button onClick={() => router.push(`/?site_id=${site.id}`)}
@@ -178,9 +184,9 @@ export default function SiteDetail({ id }: { id: string }) {
         ) : (
           scans.map(scan => (
             <div key={scan.id} onClick={() => router.push(`/scan/${scan.id}`)}
-              style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', padding: '13px 16px', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, cursor: 'pointer' }}>
+              style={{ background: SURFACE, borderRadius: 12, border: `0.5px solid ${BORDER}`, padding: '13px 16px', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, cursor: 'pointer' }}>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                   {scan.work_type || 'Unknown work type'}
                 </div>
                 <div style={{ fontSize: 11, color: '#aaa' }}>
@@ -197,13 +203,13 @@ export default function SiteDetail({ id }: { id: string }) {
 
         {/* Checklist progress */}
         {totalItems > 0 ? (
-          <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '14px 18px', marginTop: 4, marginBottom: 20 }}>
+          <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '14px 18px', marginTop: 4, marginBottom: 20 }}>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 10 }}>Checklist progress</div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-              <div style={{ fontSize: 13, color: '#555' }}>{doneItems} of {totalItems} items complete across all scans</div>
+              <div style={{ fontSize: 13, color: TEXT }}>{doneItems} of {totalItems} items complete across all scans</div>
               <div style={{ fontSize: 13, fontWeight: 700, color: pct === 100 ? PASS_GREEN : AMBER }}>{pct}%</div>
             </div>
-            <div style={{ height: 6, background: '#F1EFE8', borderRadius: 3, overflow: 'hidden' }}>
+            <div style={{ height: 6, background: SURFACE2, borderRadius: 3, overflow: 'hidden' }}>
               <div style={{ height: '100%', width: `${pct}%`, background: pct === 100 ? PASS_GREEN : AMBER, borderRadius: 3, transition: 'width 0.3s' }} />
             </div>
           </div>
@@ -224,8 +230,8 @@ export default function SiteDetail({ id }: { id: string }) {
       {/* Delete site modal */}
       {showDeleteSite && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20 }}>
-          <div style={{ background: '#fff', borderRadius: 16, padding: 24, maxWidth: 340, width: '100%' }}>
-            <div style={{ fontSize: 17, fontWeight: 700, color: NAVY, marginBottom: 8 }}>Delete "{site?.name}"?</div>
+          <div style={{ background: SURFACE, borderRadius: 16, padding: 24, maxWidth: 340, width: '100%' }}>
+            <div style={{ fontSize: 17, fontWeight: 700, color: TEXT, marginBottom: 8 }}>Delete "{site?.name}"?</div>
             <div style={{ fontSize: 14, color: '#888', lineHeight: 1.5, marginBottom: 16 }}>
               This will permanently delete the site. Choose what to do with its scans:
             </div>
@@ -236,12 +242,12 @@ export default function SiteDetail({ id }: { id: string }) {
                 onChange={e => setDeleteWithScans(e.target.checked)}
                 style={{ marginTop: 2, width: 16, height: 16, accentColor: FAIL_RED, flexShrink: 0 }}
               />
-              <span style={{ fontSize: 13, color: '#444', lineHeight: 1.5 }}>
+              <span style={{ fontSize: 13, color: TEXT, lineHeight: 1.5 }}>
                 Also delete all {scans.length} scan{scans.length !== 1 ? 's' : ''} associated with this site (and their photos)
               </span>
             </label>
             {!deleteWithScans && scans.length > 0 && (
-              <div style={{ fontSize: 12, color: '#888', background: '#F8F7F3', borderRadius: 8, padding: '8px 12px', marginBottom: 16 }}>
+              <div style={{ fontSize: 12, color: '#888', background: SURFACE2, borderRadius: 8, padding: '8px 12px', marginBottom: 16 }}>
                 Scans will be kept but unassigned from this site.
               </div>
             )}

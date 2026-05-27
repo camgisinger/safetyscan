@@ -21,6 +21,14 @@ const OFFWHITE = "#EFEAE0";
 const FAIL_RED = "#E14B3D";
 const MAX_PHOTOS = 5;
 
+const BG = "var(--ss-bg)";
+const SURFACE = "var(--ss-surface)";
+const SURFACE2 = "var(--ss-surface-2)";
+const TEXT = "var(--ss-text)";
+const TEXT_MUTE = "var(--ss-text-mute)";
+const BORDER = "var(--ss-border)";
+const BORDER_STRONG = "var(--ss-border-strong)";
+
 async function analysePhotos(photoList, context) {
   const userContent = [
     ...photoList.map(p => ({ type: "image", source: { type: "base64", media_type: "image/jpeg", data: p.base64 } })),
@@ -254,7 +262,7 @@ export default function SafetyScan() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes dotPulse { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1); } }
@@ -283,15 +291,15 @@ export default function SafetyScan() {
           </div>
         )}
         {!analysing && (
-          <div style={{ background: "#fff", borderRadius: 16, padding: 20, border: "0.5px solid #E0DDD6" }}>
-            <h1 style={{ fontSize: 19, fontWeight: 700, color: NAVY, marginBottom: 3 }}>Compliance check</h1>
-            <p style={{ fontSize: 13, color: "#666", lineHeight: 1.5, marginBottom: 16 }}>Upload up to {MAX_PHOTOS} site photos. All photos are analysed together as a single inspection report.</p>
+          <div style={{ background: SURFACE, borderRadius: 16, padding: 20, border: `0.5px solid ${BORDER}` }}>
+            <h1 style={{ fontSize: 19, fontWeight: 700, color: TEXT, marginBottom: 3 }}>Compliance check</h1>
+            <p style={{ fontSize: 13, color: TEXT_MUTE, lineHeight: 1.5, marginBottom: 16 }}>Upload up to {MAX_PHOTOS} site photos. All photos are analysed together as a single inspection report.</p>
 
             {/* Photo strip */}
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: photos.length ? 12 : 0 }}>
               {photos.map((p, i) => (
                 <div key={i} style={{ position: "relative", width: 72, height: 72 }}>
-                  <img src={p.dataUrl} alt={`Photo ${i + 1}`} style={{ width: 72, height: 72, borderRadius: 8, objectFit: "cover", border: "1.5px solid #E0DDD6" }} />
+                  <img src={p.dataUrl} alt={`Photo ${i + 1}`} style={{ width: 72, height: 72, borderRadius: 8, objectFit: "cover", border: `1.5px solid ${BORDER}` }} />
                   <button onClick={() => removePhoto(i)} style={{ position: "absolute", top: -6, right: -6, width: 20, height: 20, borderRadius: "50%", background: FAIL_RED, border: "2px solid #fff", color: "#fff", fontSize: 11, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, padding: 0 }}>✕</button>
                   <div style={{ position: "absolute", bottom: 3, left: 3, fontSize: 9, fontWeight: 700, color: "#fff", background: "rgba(0,0,0,0.55)", borderRadius: 3, padding: "1px 4px" }}>{i + 1}</div>
                 </div>
@@ -302,11 +310,11 @@ export default function SafetyScan() {
                   onDragOver={e => { e.preventDefault(); setDragOver(true); }}
                   onDragLeave={() => setDragOver(false)}
                   onDrop={e => { e.preventDefault(); setDragOver(false); addFiles(e.dataTransfer.files); }}
-                  style={{ width: photos.length === 0 ? "100%" : 72, height: photos.length === 0 ? 120 : 72, borderRadius: photos.length === 0 ? 12 : 8, border: dragOver ? `2px dashed ${AMBER}` : "1.5px dashed #C8C5BE", background: dragOver ? "#FAEEDA" : "#FAFAF8", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", cursor: "pointer", transition: "all 0.15s", gap: 4 }}>
+                  style={{ width: photos.length === 0 ? "100%" : 72, height: photos.length === 0 ? 120 : 72, borderRadius: photos.length === 0 ? 12 : 8, border: dragOver ? `2px dashed ${AMBER}` : `1.5px dashed ${BORDER_STRONG}`, background: dragOver ? "rgba(243,148,16,0.08)" : SURFACE2, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", cursor: "pointer", transition: "all 0.15s", gap: 4 }}>
                   {photos.length === 0 ? (
                     <>
                       <div style={{ fontSize: 32 }}>📷</div>
-                      <div style={{ fontWeight: 700, color: NAVY, fontSize: 13 }}>Tap to add photos</div>
+                      <div style={{ fontWeight: 700, color: TEXT, fontSize: 13 }}>Tap to add photos</div>
                       <div style={{ fontSize: 11, color: "#999" }}>Up to {MAX_PHOTOS} photos · JPG, PNG, HEIC</div>
                     </>
                   ) : (
@@ -329,20 +337,20 @@ export default function SafetyScan() {
             {photos.length > 0 && (
               <>
                 <div style={{ marginBottom: 12 }}>
-                  <label style={{ fontSize: 12, fontWeight: 600, color: "#444", display: "block", marginBottom: 5 }}>
+                  <label style={{ fontSize: 12, fontWeight: 600, color: TEXT_MUTE, display: "block", marginBottom: 5 }}>
                     Context <span style={{ fontWeight: 400, color: "#999" }}>(optional)</span>
                   </label>
                   <textarea rows={2} placeholder='e.g. "Scaffold and traffic management on Ipswich Motorway upgrade, Brisbane"'
                     value={context} onChange={e => setContext(e.target.value)}
-                    style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "0.5px solid #C8C5BE", background: "#FAFAF8", fontSize: 13, fontFamily: "inherit", resize: "none", color: "#1a1a1a", lineHeight: 1.5, outline: "none" }} />
+                    style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: "inherit", resize: "none", color: TEXT, lineHeight: 1.5, outline: "none" }} />
                 </div>
 
                 <div style={{ marginBottom: 12 }}>
-                  <label style={{ fontSize: 12, fontWeight: 600, color: "#444", display: "block", marginBottom: 5 }}>
+                  <label style={{ fontSize: 12, fontWeight: 600, color: TEXT_MUTE, display: "block", marginBottom: 5 }}>
                     Site <span style={{ fontWeight: 400, color: "#999" }}>(optional)</span>
                   </label>
                   <select value={siteDropdownValue} onChange={e => setSiteDropdownValue(e.target.value)}
-                    style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "0.5px solid #C8C5BE", background: "#FAFAF8", fontSize: 13, fontFamily: "inherit", color: "#1a1a1a", cursor: "pointer" }}>
+                    style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: "inherit", color: TEXT, cursor: "pointer" }}>
                     <option value="none">No site</option>
                     {sites.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
                     <option value="new">+ Create new site</option>
@@ -350,7 +358,7 @@ export default function SafetyScan() {
                   {siteDropdownValue === "new" && (
                     <input value={newSiteName} onChange={e => setNewSiteName(e.target.value)}
                       placeholder="Site name"
-                      style={{ marginTop: 8, width: "100%", padding: "9px 12px", borderRadius: 8, border: "0.5px solid #C8C5BE", background: "#FAFAF8", fontSize: 13, fontFamily: "inherit", color: "#1a1a1a", outline: "none" }} />
+                      style={{ marginTop: 8, width: "100%", padding: "9px 12px", borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: "inherit", color: TEXT, outline: "none" }} />
                   )}
                 </div>
 
@@ -363,13 +371,13 @@ export default function SafetyScan() {
                     Tips for better results
                   </button>
                   {showTips && (
-                    <div style={{ marginTop: 10, padding: "12px 14px", background: "#F4F1EA", borderRadius: 8, border: "0.5px solid rgba(0,0,0,0.08)", display: "flex", flexDirection: "column", gap: 8 }}>
+                    <div style={{ marginTop: 10, padding: "12px 14px", background: SURFACE2, borderRadius: 8, border: `0.5px solid ${BORDER}`, display: "flex", flexDirection: "column", gap: 8 }}>
                       {[
                         "Good lighting and a clear angle improves accuracy significantly",
                         "Add context in the text field — location and work type helps the AI identify the right legislation",
                         "Upload multiple photos for a more thorough assessment"
                       ].map((tip, i) => (
-                        <div key={i} style={{ display: "flex", gap: 10, fontSize: 13, color: "#4A4D52", lineHeight: 1.5 }}>
+                        <div key={i} style={{ display: "flex", gap: 10, fontSize: 13, color: TEXT_MUTE, lineHeight: 1.5 }}>
                           <span style={{ color: "#F39410", fontWeight: 700, flexShrink: 0 }}>→</span>
                           <span>{tip}</span>
                         </div>

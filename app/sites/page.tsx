@@ -8,6 +8,14 @@ const NAVY = '#16181C'
 const AMBER = '#F39410'
 const OFFWHITE = '#EFEAE0'
 
+const BG = 'var(--ss-bg)'
+const SURFACE = 'var(--ss-surface)'
+const SURFACE2 = 'var(--ss-surface-2)'
+const TEXT = 'var(--ss-text)'
+const TEXT_MUTE = 'var(--ss-text-mute)'
+const BORDER = 'var(--ss-border)'
+const BORDER_STRONG = 'var(--ss-border-strong)'
+
 export default function SitesPage() {
   const [sites, setSites] = useState<Site[]>([])
   const [scanMeta, setScanMeta] = useState<{ id: string; site_id: string | null; created_at: string }[]>([])
@@ -71,14 +79,14 @@ export default function SitesPage() {
 
   if (loading) {
     return (
-      <div style={{ minHeight: '100vh', background: OFFWHITE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "Inter, system-ui, sans-serif" }}>
+      <div style={{ minHeight: '100vh', background: BG, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "Inter, system-ui, sans-serif" }}>
         <div style={{ color: '#aaa', fontSize: 14 }}>Loading...</div>
       </div>
     )
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
 
       <AppHeader />
@@ -91,7 +99,7 @@ export default function SitesPage() {
         </button>
 
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
-          <div style={{ fontSize: 20, fontWeight: 700, color: NAVY }}>Sites</div>
+          <div style={{ fontSize: 20, fontWeight: 700, color: TEXT }}>Sites</div>
           <button onClick={() => setShowNewForm(true)}
             style={{ fontSize: 13, padding: '7px 14px', background: NAVY, border: 'none', borderRadius: 9, color: '#fff', cursor: 'pointer', fontFamily: 'inherit', fontWeight: 600 }}>
             + New site
@@ -100,21 +108,21 @@ export default function SitesPage() {
 
         {/* New site form */}
         {showNewForm && (
-          <form onSubmit={createSite} style={{ background: '#fff', borderRadius: 12, border: `1px solid ${NAVY}`, padding: 16, marginBottom: 14 }}>
-            <div style={{ fontSize: 13, fontWeight: 700, color: NAVY, marginBottom: 12 }}>New site</div>
+          <form onSubmit={createSite} style={{ background: SURFACE, borderRadius: 12, border: `1px solid ${BORDER_STRONG}`, padding: 16, marginBottom: 14 }}>
+            <div style={{ fontSize: 13, fontWeight: 700, color: TEXT, marginBottom: 12 }}>New site</div>
             <div style={{ marginBottom: 10 }}>
-              <label style={{ fontSize: 12, fontWeight: 600, color: '#444', display: 'block', marginBottom: 4 }}>Site name</label>
+              <label style={{ fontSize: 12, fontWeight: 600, color: TEXT_MUTE, display: 'block', marginBottom: 4 }}>Site name</label>
               <input value={newName} onChange={e => setNewName(e.target.value)} required
                 placeholder="e.g. Ipswich Motorway Upgrade"
-                style={{ width: '100%', padding: '9px 11px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', color: '#1a1a1a' }} />
+                style={{ width: '100%', padding: '9px 11px', borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: 'inherit', color: TEXT }} />
             </div>
             <div style={{ marginBottom: 14 }}>
-              <label style={{ fontSize: 12, fontWeight: 600, color: '#444', display: 'block', marginBottom: 4 }}>
+              <label style={{ fontSize: 12, fontWeight: 600, color: TEXT_MUTE, display: 'block', marginBottom: 4 }}>
                 Location <span style={{ fontWeight: 400, color: '#999' }}>(optional)</span>
               </label>
               <input value={newLocation} onChange={e => setNewLocation(e.target.value)}
                 placeholder="e.g. Brisbane, QLD"
-                style={{ width: '100%', padding: '9px 11px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', color: '#1a1a1a' }} />
+                style={{ width: '100%', padding: '9px 11px', borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: 'inherit', color: TEXT }} />
             </div>
             <div style={{ display: 'flex', gap: 8 }}>
               <button type="submit" disabled={saving}
@@ -131,9 +139,9 @@ export default function SitesPage() {
 
         {/* Site list */}
         {displaySites.length === 0 && !showNewForm ? (
-          <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid #E0DDD6', padding: '36px 20px', textAlign: 'center' }}>
+          <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '36px 20px', textAlign: 'center' }}>
             <div style={{ fontSize: 30, marginBottom: 10 }}>🏗️</div>
-            <div style={{ fontSize: 14, fontWeight: 600, color: NAVY, marginBottom: 4 }}>No sites yet</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: TEXT, marginBottom: 4 }}>No sites yet</div>
             <div style={{ fontSize: 13, color: '#999' }}>Create a site to organise your scans by location or client.</div>
           </div>
         ) : (
@@ -141,10 +149,10 @@ export default function SitesPage() {
             const siteScans = scansBySite[site.id] || []
             const lastScan = siteScans[0]
             return (
-              <div key={site.id} style={{ background: '#fff', borderRadius: 12, border: '0.5px solid #E0DDD6', marginBottom: 8, overflow: 'hidden' }}>
+              <div key={site.id} style={{ background: SURFACE, borderRadius: 12, border: `0.5px solid ${BORDER}`, marginBottom: 8, overflow: 'hidden' }}>
                 <div style={{ padding: '13px 16px', display: 'flex', alignItems: 'center', gap: 12 }}>
                   <div style={{ flex: 1, minWidth: 0, cursor: 'pointer' }} onClick={() => router.push(`/sites/${site.id}`)}>
-                    <div style={{ fontSize: 13, fontWeight: 600, color: NAVY, marginBottom: 2, display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <div style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 2, display: 'flex', alignItems: 'center', gap: 6 }}>
                       {site.name}
                       {site.archived && (
                         <span style={{ fontSize: 10, padding: '1px 6px', background: '#F1EFE8', color: '#888', borderRadius: 4, fontWeight: 500 }}>Archived</span>
