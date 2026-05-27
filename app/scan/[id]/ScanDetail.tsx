@@ -261,8 +261,10 @@ export default function ScanDetail({ id }: { id: string }) {
   const [notes, setNotes] = useState('')
   const [notesSaving, setNotesSaving] = useState(false)
   const [notesSaved, setNotesSaved] = useState(false)
-  const [assignSiteId, setAssignSiteId] = useState('')
-  const [assignSaving, setAssignSaving] = useState(false)
+  const [selectedSiteId, setSelectedSiteId] = useState<string | null>(null)
+  const [creatingNewSite, setCreatingNewSite] = useState(false)
+  const [newSiteName, setNewSiteName] = useState('')
+  const [savingSite, setSavingSite] = useState(false)
   const [generatingChecklist, setGeneratingChecklist] = useState(false)
   const [confirmRegenerate, setConfirmRegenerate] = useState(false)
   const [checklistError, setChecklistError] = useState<string | null>(null)
@@ -307,7 +309,7 @@ export default function ScanDetail({ id }: { id: string }) {
       setScanName(s.work_type || '')
       setNotes(s.notes || '')
       setChecklistState(s.checklist_state || {})
-      setAssignSiteId(s.site_id || '')
+      setSelectedSiteId(s.site_id || null)
       setShareToken(s.share_token || null)
       setShareEnabled(s.share_enabled || false)
       if (s.checklist && Array.isArray(s.checklist) && s.checklist.length > 0) {
@@ -397,12 +399,35 @@ export default function ScanDetail({ id }: { id: string }) {
     setEditingName(false)
   }
 
-  const saveSiteAssignment = async (siteId: string) => {
-    setAssignSaving(true)
-    await supabase.from('scans').update({ site_id: siteId || null }).eq('id', id)
-    setAssignSiteId(siteId)
-    setScan(prev => prev ? { ...prev, site_id: siteId || null } : prev)
-    setAssignSaving(false)
+  const handleSiteChange = async (value: string) => {
+    if (value === '__new__') {
+      setCreatingNewSite(true)
+      return
+    }
+    const siteId = value || null
+    setSelectedSiteId(siteId)
+    await supabase.from('scans').update({ site_id: siteId }).eq('id', id)
+    setScan(prev => prev ? { ...prev, site_id: siteId } : prev)
+  }
+
+  const handleCreateAndAssign = async () => {
+    if (!newSiteName.trim()) return
+    setSavingSite(true)
+    const { data: { user } } = await supabase.auth.getUser()
+    const { data: newSite, error } = await supabase
+      .from('sites')
+      .insert({ name: newSiteName.trim(), user_id: user?.id, archived: false })
+      .select()
+      .single()
+    if (!error && newSite) {
+      await supabase.from('scans').update({ site_id: newSite.id }).eq('id', id)
+      setSites(prev => [...prev, newSite].sort((a, b) => a.name.localeCompare(b.name)))
+      setSelectedSiteId(newSite.id)
+      setScan(prev => prev ? { ...prev, site_id: newSite.id } : prev)
+      setCreatingNewSite(false)
+      setNewSiteName('')
+    }
+    setSavingSite(false)
   }
 
   const handleDelete = async () => {
@@ -778,20 +803,38 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
 
         {/* Assign to site */}
         <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '14px 18px', marginBottom: 14 }}>
-          <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 8 }}>
-            {scan.site_id ? 'Move to different site' : 'Assign to site'}
-          </div>
+          <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 10 }}>Assign to site</div>
           <div style={{ display: 'flex', gap: 8 }}>
-            <select value={assignSiteId} onChange={e => setAssignSiteId(e.target.value)}
-              style={{ flex: 1, padding: '9px 11px', borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: 'inherit', color: TEXT, cursor: 'pointer' }}>
+            <select
+              value={selectedSiteId || ''}
+              onChange={e => handleSiteChange(e.target.value)}
+              style={{ flex: 1, padding: '9px 12px', borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE, color: TEXT, fontSize: 14, fontFamily: 'inherit', cursor: 'pointer' }}
+            >
               <option value="">No site</option>
               {sites.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
+              <option value="__new__">＋ Create new site</option>
             </select>
-            <button onClick={() => saveSiteAssignment(assignSiteId)} disabled={assignSaving || assignSiteId === (scan.site_id || '')}
-              style={{ padding: '9px 16px', background: (assignSaving || assignSiteId === (scan.site_id || '')) ? '#E0DDD6' : NAVY, border: 'none', borderRadius: 8, color: '#fff', fontSize: 13, fontWeight: 600, cursor: (assignSaving || assignSiteId === (scan.site_id || '')) ? 'not-allowed' : 'pointer', fontFamily: 'inherit', flexShrink: 0 }}>
-              {assignSaving ? 'Saving…' : 'Save'}
-            </button>
           </div>
+          {creatingNewSite && (
+            <div style={{ marginTop: 10, display: 'flex', gap: 8 }}>
+              <input
+                autoFocus
+                value={newSiteName}
+                onChange={e => setNewSiteName(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleCreateAndAssign()}
+                placeholder="Site name e.g. Ipswich Motorway Upgrade"
+                style={{ flex: 1, padding: '9px 12px', borderRadius: 8, border: '1.5px solid #F39410', background: SURFACE, color: TEXT, fontSize: 14, fontFamily: 'inherit', outline: 'none' }}
+              />
+              <button onClick={handleCreateAndAssign} disabled={!newSiteName.trim() || savingSite}
+                style={{ padding: '9px 14px', background: AMBER, border: 'none', borderRadius: 8, color: NAVY, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', opacity: newSiteName.trim() ? 1 : 0.5 }}>
+                {savingSite ? '…' : 'Create'}
+              </button>
+              <button onClick={() => { setCreatingNewSite(false); setNewSiteName('') }}
+                style={{ padding: '9px 14px', background: 'transparent', border: `0.5px solid ${BORDER_STRONG}`, borderRadius: 8, color: TEXT_MUTE, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit' }}>
+                Cancel
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Share + PDF */}
