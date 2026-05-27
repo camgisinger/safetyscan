@@ -392,7 +392,7 @@ export default function SafetyScan() {
               onClick={() => router.push('/dashboard')}
               style={{ width: "100%", padding: "11px", background: "transparent", border: `0.5px solid ${BORDER_STRONG}`, borderRadius: 10, fontSize: 13, color: TEXT_MUTE, cursor: "pointer", fontFamily: "inherit", marginTop: 8 }}
             >
-              ← Back to dashboard
+              Back to dashboard
             </button>
             <div style={{ marginTop: 10, fontSize: 11, color: "#bbb", textAlign: "center" }}>AI-assisted · Queensland legislation · Not a substitute for professional advice</div>
           </div>
