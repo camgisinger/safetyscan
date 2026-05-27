@@ -17,11 +17,20 @@ const ShieldLogo = ({ size = 32 }: { size?: number }) => (
 )
 
 interface AppHeaderProps {
+  onLogoClick?: () => void
   rightContent?: React.ReactNode
 }
 
-export default function AppHeader({ rightContent }: AppHeaderProps) {
+export default function AppHeader({ onLogoClick, rightContent }: AppHeaderProps) {
   const router = useRouter()
+
+  const handleLogoClick = () => {
+    if (onLogoClick) {
+      onLogoClick()
+    } else {
+      router.push('/dashboard')
+    }
+  }
   const [menuOpen, setMenuOpen] = useState(false)
   const [isDark, setIsDark] = useState(true)
   const [userEmail, setUserEmail] = useState<string | null>(null)
@@ -52,7 +61,7 @@ export default function AppHeader({ rightContent }: AppHeaderProps) {
 
   return (
     <header style={{ background: '#16181C', padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 10 }}>
-      <button onClick={() => router.push('/dashboard')} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, padding: 0 }}>
+      <button onClick={handleLogoClick} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, padding: 0 }}>
         <ShieldLogo />
         <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
           <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: '#F39410' }}>Scan</span>

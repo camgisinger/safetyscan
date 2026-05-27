@@ -276,7 +276,7 @@ export default function SafetyScan() {
         button:active { transform: scale(0.98); }
       `}</style>
 
-      <AppHeader rightContent={
+      <AppHeader onLogoClick={navigateToDashboard} rightContent={
         <div style={{ fontSize: 11, padding: "4px 10px", background: "rgba(243,148,16,0.15)", color: AMBER, borderRadius: 10, border: "0.5px solid rgba(243,148,16,0.3)", fontWeight: 600 }}>Queensland</div>
       } />
 
