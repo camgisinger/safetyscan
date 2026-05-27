@@ -95,6 +95,7 @@ export default function SafetyScan() {
   const [progress, setProgress] = useState(0);
   const [globalError, setGlobalError] = useState(null);
   const [showTips, setShowTips] = useState(false);
+  const [exiting, setExiting] = useState(false);
   const [dragOver, setDragOver] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [sites, setSites] = useState([]);
@@ -207,6 +208,11 @@ export default function SafetyScan() {
 
   const removePhoto = (i) => setPhotos(prev => prev.filter((_, idx) => idx !== i));
 
+  const navigateToDashboard = () => {
+    setExiting(true);
+    setTimeout(() => router.push('/dashboard'), 280);
+  };
+
   const runAll = async () => {
     if (!photos.length) return;
     setAnalysing(true);
@@ -262,7 +268,7 @@ export default function SafetyScan() {
   };
 
   return (
-    <div className="page-slide-up" style={{ minHeight: "100vh", background: BG, fontFamily: "Inter, system-ui, sans-serif", willChange: "transform, opacity" }}>
+    <div className={exiting ? "page-slide-down" : "page-slide-up"} style={{ minHeight: "100vh", background: BG, fontFamily: "Inter, system-ui, sans-serif", willChange: "transform, opacity" }}>
       <style>{`
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes dotPulse { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1); } }
@@ -389,7 +395,7 @@ export default function SafetyScan() {
             )}
 
             <button
-              onClick={() => router.push('/dashboard')}
+              onClick={navigateToDashboard}
               style={{ width: "100%", padding: "11px", background: "transparent", border: `0.5px solid ${BORDER_STRONG}`, borderRadius: 10, fontSize: 13, color: TEXT_MUTE, cursor: "pointer", fontFamily: "inherit", marginTop: 8 }}
             >
               Back to dashboard
