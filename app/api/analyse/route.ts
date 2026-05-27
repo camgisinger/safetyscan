@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
         'x-api-key': process.env.ANTHROPIC_API_KEY || '',
         'anthropic-version': '2023-06-01',
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify({ ...body, max_tokens: 4096, temperature: 0.1 }),
     })
 
     const text = await response.text()
