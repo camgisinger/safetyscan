@@ -163,26 +163,37 @@ export default function SafetyScan() {
     try {
       let photo_url = null;
       if (photoDataUrl) {
-        const base64 = photoDataUrl.split(',')[1];
-        const byteCharacters = atob(base64);
-        const byteNumbers = new Array(byteCharacters.length);
-        for (let i = 0; i < byteCharacters.length; i++) {
-          byteNumbers[i] = byteCharacters.charCodeAt(i);
-        }
-        const byteArray = new Uint8Array(byteNumbers);
-        const blob = new Blob([byteArray], { type: 'image/jpeg' });
-        const fileName = `${currentUser.id}/${Date.now()}.jpg`;
-        const { error: uploadError } = await supabase.storage
-          .from('scan-photos')
-          .upload(fileName, blob, { contentType: 'image/jpeg', upsert: false });
-        if (!uploadError) {
-          const { data: urlData } = supabase.storage
+        try {
+          const base64 = photoDataUrl.split(',')[1];
+          if (!base64) throw new Error('photoDataUrl has no base64 segment');
+          const byteCharacters = atob(base64);
+          const byteNumbers = new Array(byteCharacters.length);
+          for (let i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+          }
+          const byteArray = new Uint8Array(byteNumbers);
+          const blob = new Blob([byteArray], { type: 'image/jpeg' });
+          const fileName = `${currentUser.id}/${Date.now()}.jpg`;
+          console.log('[saveScan] uploading photo to scan-photos/', fileName, 'blob size:', blob.size);
+          const { data: uploadData, error: uploadError } = await supabase.storage
             .from('scan-photos')
-            .getPublicUrl(fileName);
-          photo_url = urlData.publicUrl;
+            .upload(fileName, blob, { contentType: 'image/jpeg', upsert: false });
+          if (uploadError) {
+            console.error('[saveScan] storage upload failed:', uploadError.message, uploadError);
+          } else {
+            console.log('[saveScan] upload ok:', uploadData);
+            const { data: urlData } = supabase.storage
+              .from('scan-photos')
+              .getPublicUrl(fileName);
+            photo_url = urlData.publicUrl;
+            console.log('[saveScan] public URL:', photo_url);
+          }
+        } catch (photoErr) {
+          console.error('[saveScan] photo processing error:', photoErr);
         }
       }
-      const { data } = await supabase.from('scans').insert({
+      console.log('[saveScan] inserting scan with photo_url:', photo_url);
+      const { data, error: insertError } = await supabase.from('scans').insert({
         user_id: currentUser.id,
         site_id: siteId || null,
         work_type: result.work_type,
@@ -195,9 +206,10 @@ export default function SafetyScan() {
         follow_up_questions: result.follow_up_questions,
         photo_url,
       }).select('id').single();
+      if (insertError) console.error('[saveScan] insert error:', insertError);
       return data?.id || null;
     } catch (err) {
-      console.error('Failed to save scan:', err);
+      console.error('[saveScan] unexpected error:', err);
       return null;
     }
   };

@@ -75,6 +75,7 @@ export default function ScanDetail({ id }: { id: string }) {
       }
 
       const s = scanRes.data as Scan
+      console.log('[ScanDetail] loaded scan id:', s.id, 'photo_url:', s.photo_url)
       setScan(s)
       setScanName(s.work_type || '')
       setNotes(s.notes || '')
@@ -376,6 +377,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
         )}
 
         {/* Photo with enlarge modal */}
+        {scan.photo_url && console.log('[ScanDetail] rendering photo:', scan.photo_url) as any}
         {scan.photo_url && (
           <>
             <img
