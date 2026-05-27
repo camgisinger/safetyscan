@@ -12,49 +12,9 @@
 
 import React from "react";
 
-const SCAN_LOADER_CSS = `
-.scan-loader{display:inline-block;line-height:0;color:var(--ss-accent,#F39410)}
-.scan-loader svg{width:100%;height:100%;display:block;overflow:visible}
-.scan-loader.on-amber{--ss-base:#16181C;--ss-accent:#16181C}
-.scan-loader .ss-shield{fill:none;stroke:var(--ss-base,#EFEAE0);stroke-width:8;stroke-linejoin:miter}
-.scan-loader.complete .ss-shield{stroke:var(--ss-accent,#F39410)}
-.scan-loader .ss-brackets{fill:var(--ss-base,#EFEAE0);opacity:1}
-.scan-loader.scanning .ss-brackets{opacity:.7}
-.scan-loader .ss-beam-bar{fill:var(--ss-accent,#F39410)}
-.scan-loader .ss-beam-bar.faint{opacity:.4}
-.scan-loader.scanning .ss-beam-group{
-  animation:ss-beam-sweep var(--ss-cycle,2.8s) cubic-bezier(.45,0,.55,1) infinite;
-}
-.scan-loader.complete .ss-beam-group,
-.scan-loader.idle .ss-beam-group{display:none}
-@keyframes ss-beam-sweep{
-  0%   { transform:translateY(-70px); opacity:0; }
-  12%  { opacity:1; }
-  50%  { transform:translateY(90px);  opacity:1; }
-  88%  { opacity:1; }
-  100% { transform:translateY(-70px); opacity:0; }
-}
-.scan-loader .ss-tick{
-  fill:none;stroke:var(--ss-accent,#F39410);stroke-width:16;
-  stroke-linecap:square;stroke-linejoin:miter;
-  stroke-dasharray:95;stroke-dashoffset:95;
-}
-.scan-loader.complete .ss-tick{
-  animation:ss-tick-draw .55s cubic-bezier(.2,.7,.3,1.1) forwards;
-}
-@keyframes ss-tick-draw{ to { stroke-dashoffset:0; } }
-`;
 
-let cssInjected = false;
 function useScanLoaderCSS() {
-  React.useEffect(() => {
-    if (cssInjected) return;
-    const style = document.createElement("style");
-    style.setAttribute("data-scan-loader", "");
-    style.textContent = SCAN_LOADER_CSS;
-    document.head.appendChild(style);
-    cssInjected = true;
-  }, []);
+  // Styles are loaded globally via tokens.css — no dynamic injection needed
 }
 
 export function ScanLoader({

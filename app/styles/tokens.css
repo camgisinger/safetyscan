@@ -127,3 +127,45 @@
   --ss-border-strong: rgba(0,0,0,.18);
   --ss-base:      var(--ss-ink);
 }
+
+/* ============================================================
+   ScanLoader component styles
+   ============================================================ */
+.scan-loader { display: inline-block; line-height: 0; color: var(--ss-accent, #F39410); }
+.scan-loader svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.scan-loader.on-amber { --ss-base: #16181C; --ss-accent: #16181C; }
+.scan-loader .ss-shield { fill: none; stroke: var(--ss-base, #EFEAE0); stroke-width: 8; stroke-linejoin: miter; }
+.scan-loader.complete .ss-shield { stroke: var(--ss-accent, #F39410); }
+.scan-loader .ss-brackets { fill: var(--ss-base, #EFEAE0); opacity: 1; }
+.scan-loader.scanning .ss-brackets { opacity: .7; }
+.scan-loader .ss-beam-bar { fill: var(--ss-accent, #F39410); }
+.scan-loader .ss-beam-bar.faint { opacity: .4; }
+.scan-loader.scanning .ss-beam-group {
+  animation: ss-beam-sweep var(--ss-cycle, 2.8s) cubic-bezier(.45,0,.55,1) infinite;
+}
+.scan-loader.complete .ss-beam-group,
+.scan-loader.idle .ss-beam-group { display: none; }
+@keyframes ss-beam-sweep {
+  0%   { transform: translateY(-70px); opacity: 0; }
+  12%  { opacity: 1; }
+  50%  { transform: translateY(90px); opacity: 1; }
+  88%  { opacity: 1; }
+  100% { transform: translateY(-70px); opacity: 0; }
+}
+.scan-loader .ss-tick {
+  fill: none;
+  stroke: var(--ss-accent, #F39410);
+  stroke-width: 16;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+}
+.scan-loader.complete .ss-tick {
+  animation: ss-tick-draw .55s cubic-bezier(.2,.7,.3,1.1) forwards;
+}
+@keyframes ss-tick-draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .scan-loader.scanning .ss-beam-group { animation: none; opacity: 1; }
+  .scan-loader.complete .ss-tick { animation: none; stroke-dashoffset: 0; }
+}
