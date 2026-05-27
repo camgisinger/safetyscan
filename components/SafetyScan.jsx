@@ -275,15 +275,16 @@ export default function SafetyScan() {
           ‹ Dashboard
         </button>
 
-        {analysing ? (
-          <div style={{ background: "#fff", borderRadius: 16, padding: "36px 20px", border: "0.5px solid rgba(0,0,0,0.08)", textAlign: "center", marginBottom: 16 }}>
-            <ScanLoader state={scanLoaderState === "complete" ? "complete" : "scanning"} size={120} />
-            <div style={{ marginTop: 20, fontWeight: 600, color: "#16181C", fontSize: 15, minHeight: 24 }}>{LOADING_MESSAGES[msgIdx]}</div>
-            <div style={{ height: 4, background: "#E5E2DB", borderRadius: 2, overflow: "hidden", maxWidth: 280, margin: "12px auto 0" }}>
+        {analysing && (
+          <div style={{ background: "#16181C", borderRadius: 16, padding: "36px 20px", border: "0.5px solid rgba(255,255,255,0.08)", textAlign: "center", marginBottom: 16 }}>
+            <ScanLoader state={scanLoaderState} size={120} />
+            <div style={{ marginTop: 20, fontWeight: 600, color: "#EFEAE0", fontSize: 15, minHeight: 24 }}>{LOADING_MESSAGES[msgIdx]}</div>
+            <div style={{ height: 4, background: "#252A30", borderRadius: 2, overflow: "hidden", maxWidth: 280, margin: "12px auto 0" }}>
               <div style={{ height: "100%", width: `${progress}%`, background: "#F39410", borderRadius: 2, transition: "width 0.8s ease" }} />
             </div>
           </div>
-        ) : (
+        )}
+        {!analysing && (
           <div style={{ background: "#fff", borderRadius: 16, padding: 20, border: "0.5px solid #E0DDD6" }}>
             <h1 style={{ fontSize: 19, fontWeight: 700, color: NAVY, marginBottom: 3 }}>Compliance check</h1>
             <p style={{ fontSize: 13, color: "#666", lineHeight: 1.5, marginBottom: 16 }}>Upload up to {MAX_PHOTOS} site photos. All photos are analysed together as a single inspection report.</p>
