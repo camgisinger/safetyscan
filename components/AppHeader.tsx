@@ -101,6 +101,7 @@ export default function AppHeader({ rightContent }: AppHeaderProps) {
                 { label: 'Dashboard', href: '/dashboard' },
                 { label: 'Sites', href: '/sites' },
                 { label: 'New scan', href: '/' },
+                { label: 'Guide', href: '/guide' },
               ].map(item => (
                 <button
                   key={item.href}

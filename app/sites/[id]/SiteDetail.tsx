@@ -113,19 +113,19 @@ export default function SiteDetail({ id }: { id: string }) {
     </div>
   )
 
-  // Checklist progress
-  let totalItems = 0, doneItems = 0
-  for (const scan of scans) {
-    const items: any[] = (scan as any).checklist || []
-    const state: Record<string, any> = (scan as any).checklist_state || {}
-    for (let i = 0; i < items.length; i++) {
-      if (!state[`d_${i}`]) {
-        totalItems++
-        if (state[`c_${i}`]) doneItems++
-      }
-    }
-  }
-  const pct = totalItems > 0 ? Math.round((doneItems / totalItems) * 100) : 0
+  const totalScans = scans.length
+  const compliantCount = scans.filter(s => s.status === 'pass').length
+  const issuesCount = scans.filter(s => s.status === 'fail').length
+  const uncertainCount = scans.filter(s => s.status === 'uncertain').length
+  const complianceRate = totalScans > 0 ? Math.round((compliantCount / totalScans) * 100) : 0
+
+  const scansWithChecklists = scans.filter((s: any) => s.checklist?.length > 0)
+  const totalChecklistItems = scansWithChecklists.reduce((acc: number, s: any) => acc + s.checklist.length, 0)
+  const totalTicked = scansWithChecklists.reduce((acc: number, s: any) => {
+    const state = s.checklist_state || {}
+    return acc + Object.values(state).filter(Boolean).length
+  }, 0)
+  const checklistProgress = totalChecklistItems > 0 ? Math.round((totalTicked / totalChecklistItems) * 100) : 0
 
   return (
     <div style={{ minHeight: '100vh', background: BG, fontFamily: "Inter, system-ui, sans-serif" }}>
@@ -165,6 +165,50 @@ export default function SiteDetail({ id }: { id: string }) {
           </div>
         )}
 
+        {totalScans > 0 && (
+          <div style={{ marginBottom: 20 }}>
+            <div style={{ background: '#16181C', borderRadius: 12, padding: '20px', marginBottom: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: 'rgba(239,234,224,0.5)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 4 }}>Compliance rate</div>
+                <div style={{ fontSize: 40, fontWeight: 800, color: complianceRate >= 80 ? '#3DD37A' : complianceRate >= 50 ? '#F39410' : '#E14B3D', letterSpacing: '-0.02em' }}>{complianceRate}%</div>
+                <div style={{ fontSize: 12, color: 'rgba(239,234,224,0.4)', marginTop: 2 }}>{compliantCount} of {totalScans} scans compliant</div>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'flex-end' }}>
+                <div style={{ fontSize: 12, padding: '4px 10px', borderRadius: 8, background: 'rgba(61,211,122,0.15)', color: '#3DD37A', fontWeight: 600 }}>✓ {compliantCount} compliant</div>
+                <div style={{ fontSize: 12, padding: '4px 10px', borderRadius: 8, background: 'rgba(225,75,61,0.15)', color: '#E14B3D', fontWeight: 600 }}>✕ {issuesCount} issues</div>
+                <div style={{ fontSize: 12, padding: '4px 10px', borderRadius: 8, background: 'rgba(243,148,16,0.15)', color: '#F39410', fontWeight: 600 }}>? {uncertainCount} uncertain</div>
+              </div>
+            </div>
+
+            {totalChecklistItems > 0 && (
+              <div style={{ background: 'var(--ss-surface)', borderRadius: 12, padding: '16px', border: '0.5px solid var(--ss-border)', marginBottom: 12 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+                  <div>
+                    <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--ss-text)', marginBottom: 2 }}>Checklist progress</div>
+                    <div style={{ fontSize: 12, color: 'var(--ss-text-mute)' }}>{totalTicked} of {totalChecklistItems} items complete</div>
+                  </div>
+                  <div style={{ fontSize: 24, fontWeight: 800, color: checklistProgress === 100 ? '#3DD37A' : '#F39410' }}>{checklistProgress}%</div>
+                </div>
+                <div style={{ height: 6, background: 'var(--ss-surface-2)', borderRadius: 3, overflow: 'hidden' }}>
+                  <div style={{ height: '100%', width: `${checklistProgress}%`, background: checklistProgress === 100 ? '#3DD37A' : '#F39410', borderRadius: 3, transition: 'width 0.5s ease' }} />
+                </div>
+              </div>
+            )}
+
+            {issuesCount > 0 && (
+              <div style={{ background: 'rgba(225,75,61,0.08)', border: '0.5px solid rgba(225,75,61,0.2)', borderRadius: 12, padding: '14px 16px' }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: '#E14B3D', marginBottom: 8 }}>⚠ Non-compliances found</div>
+                {scans.filter(s => s.status === 'fail').map((s, i) => (
+                  <div key={i} onClick={() => router.push(`/scan/${s.id}`)} style={{ fontSize: 13, color: 'var(--ss-text)', padding: '6px 0', borderBottom: '0.5px solid rgba(225,75,61,0.1)', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span>{s.work_type}</span>
+                    <span style={{ fontSize: 11, color: '#E14B3D' }}>View →</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
         <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 12 }}>
           Scans ({scans.length})
         </div>
@@ -201,21 +245,6 @@ export default function SiteDetail({ id }: { id: string }) {
           ))
         )}
 
-        {/* Checklist progress */}
-        {totalItems > 0 ? (
-          <div style={{ background: SURFACE, borderRadius: 14, border: `0.5px solid ${BORDER}`, padding: '14px 18px', marginTop: 4, marginBottom: 20 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 10 }}>Checklist progress</div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-              <div style={{ fontSize: 13, color: TEXT }}>{doneItems} of {totalItems} items complete across all scans</div>
-              <div style={{ fontSize: 13, fontWeight: 700, color: pct === 100 ? PASS_GREEN : AMBER }}>{pct}%</div>
-            </div>
-            <div style={{ height: 6, background: SURFACE2, borderRadius: 3, overflow: 'hidden' }}>
-              <div style={{ height: '100%', width: `${pct}%`, background: pct === 100 ? PASS_GREEN : AMBER, borderRadius: 3, transition: 'width 0.3s' }} />
-            </div>
-          </div>
-        ) : scans.length > 0 ? (
-          <div style={{ fontSize: 13, color: '#bbb', textAlign: 'center', padding: '12px 0 20px' }}>No checklists generated for this site yet</div>
-        ) : null}
 
         {/* Delete site */}
         <button

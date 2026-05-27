@@ -272,6 +272,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [continueError, setContinueError] = useState<string | null>(null)
   const [photoUrls, setPhotoUrls] = useState<string[]>([])
   const [photoEnlarged, setPhotoEnlarged] = useState<number | false>(false)
+  const [activePhoto, setActivePhoto] = useState(0)
   const [editingName, setEditingName] = useState(false)
   const [scanName, setScanName] = useState('')
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
@@ -649,17 +650,38 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           </div>
         )}
 
-        {/* Photo strip */}
+        {/* Photo carousel */}
         {photoUrls.length > 0 && (
           <>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 16 }}>
-              {photoUrls.map((url, i) => (
-                <div key={i} style={{ position: 'relative', cursor: 'pointer' }} onClick={() => setPhotoEnlarged(i)}>
-                  <img src={url} alt={`Site photo ${i + 1}`}
-                    style={{ width: 90, height: 90, objectFit: 'cover', borderRadius: 8, border: '0.5px solid rgba(0,0,0,0.08)', display: 'block' }} />
-                  <div style={{ position: 'absolute', bottom: 4, left: 4, background: 'rgba(0,0,0,0.55)', color: '#fff', fontSize: 10, fontWeight: 600, padding: '1px 5px', borderRadius: 4 }}>{i + 1}</div>
+            <div style={{ marginBottom: 16 }}>
+              <div style={{ position: 'relative', borderRadius: 10, overflow: 'hidden', background: SURFACE2, cursor: 'pointer' }} onClick={() => setPhotoEnlarged(activePhoto)}>
+                <img src={photoUrls[activePhoto]} alt={`Photo ${activePhoto + 1}`}
+                  style={{ width: '100%', maxHeight: 240, objectFit: 'cover', display: 'block' }} />
+                {photoUrls.length > 1 && activePhoto > 0 && (
+                  <button onClick={e => { e.stopPropagation(); setActivePhoto(activePhoto - 1) }}
+                    style={{ position: 'absolute', left: 8, top: '50%', transform: 'translateY(-50%)', width: 32, height: 32, borderRadius: '50%', background: 'rgba(0,0,0,0.5)', border: 'none', color: '#fff', fontSize: 18, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    ‹
+                  </button>
+                )}
+                {photoUrls.length > 1 && activePhoto < photoUrls.length - 1 && (
+                  <button onClick={e => { e.stopPropagation(); setActivePhoto(activePhoto + 1) }}
+                    style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', width: 32, height: 32, borderRadius: '50%', background: 'rgba(0,0,0,0.5)', border: 'none', color: '#fff', fontSize: 18, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    ›
+                  </button>
+                )}
+                <div style={{ position: 'absolute', bottom: 8, right: 8, fontSize: 10, color: 'rgba(255,255,255,0.7)', background: 'rgba(0,0,0,0.4)', padding: '2px 6px', borderRadius: 4 }}>Tap to enlarge</div>
+              </div>
+              {photoUrls.length > 1 && (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, marginTop: 8 }}>
+                  {photoUrls.map((_: string, i: number) => (
+                    <button key={i} onClick={() => setActivePhoto(i)}
+                      style={{ width: i === activePhoto ? 20 : 8, height: 8, borderRadius: 4, background: i === activePhoto ? AMBER : '#C9C6BF', border: 'none', cursor: 'pointer', padding: 0, transition: 'all 0.2s' }} />
+                  ))}
                 </div>
-              ))}
+              )}
+              <div style={{ textAlign: 'center', fontSize: 12, color: TEXT_MUTE, marginTop: 4 }}>
+                Photo {activePhoto + 1}{photoUrls.length > 1 ? ` of ${photoUrls.length}` : ''}
+              </div>
             </div>
             {photoEnlarged !== false && (
               <div onClick={() => setPhotoEnlarged(false)} style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, cursor: 'pointer' }}>

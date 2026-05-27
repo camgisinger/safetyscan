@@ -281,6 +281,13 @@ export default function DashboardPage() {
             </button>
           </section>
         )}
+
+        <div style={{ marginTop: 24, paddingTop: 16, borderTop: `0.5px solid ${BORDER}` }}>
+          <button onClick={() => router.push('/guide')}
+            style={{ width: '100%', padding: '12px', background: 'transparent', border: `0.5px solid ${BORDER}`, borderRadius: 10, fontSize: 14, color: TEXT_MUTE, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
+            <span style={{ fontSize: 16 }}>?</span> SafetyScan guide
+          </button>
+        </div>
       </main>
 
       {/* Bulk delete bar */}
