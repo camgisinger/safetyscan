@@ -5,7 +5,7 @@ export default function FloatingActionButton() {
   const router = useRouter()
   const pathname = usePathname()
 
-  if (pathname === '/') return null
+  if (pathname === '/' || pathname === '/login') return null
 
   return (
     <button
