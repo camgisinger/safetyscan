@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import AppHeader from '@/components/AppHeader'
 
@@ -47,33 +48,42 @@ const sections = [
 
 export default function GuidePage() {
   const router = useRouter()
+  const [exiting, setExiting] = useState(false)
 
   const navigateBack = () => {
-    router.push('/dashboard')
+    setExiting(true)
+    setTimeout(() => router.push('/dashboard'), 280)
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--ss-bg)", fontFamily: "Inter, system-ui, sans-serif" }}>
-      <AppHeader />
-      <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px 80px" }}>
-        <div style={{ marginBottom: 24 }}>
-          <h1 style={{ fontSize: 24, fontWeight: 800, color: "var(--ss-text)", letterSpacing: "-0.02em", marginBottom: 4 }}>SafetyScan guide</h1>
-          <p style={{ fontSize: 14, color: "var(--ss-text-mute)", lineHeight: 1.6 }}>Everything you need to know about using SafetyScan on site.</p>
-        </div>
-        {sections.map((s, i) => (
-          <div key={i} style={{ background: "var(--ss-surface)", borderRadius: 12, padding: "16px 18px", marginBottom: 10, border: "0.5px solid var(--ss-border)" }}>
-            <div style={{ fontSize: 14, fontWeight: 700, color: "var(--ss-text)", marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ width: 22, height: 22, borderRadius: "50%", background: "#F39410", color: "#16181C", fontSize: 11, fontWeight: 700, display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{i + 1}</span>
-              {s.title}
-            </div>
-            <p style={{ fontSize: 13, color: "var(--ss-text-mute)", lineHeight: 1.7, margin: 0 }}>{s.content}</p>
-          </div>
-        ))}
-        <div style={{ marginTop: 24, paddingTop: 16, borderTop: "0.5px solid var(--ss-border)" }}>
+    <div className={exiting ? "page-slide-right-out" : "page-slide-right-in"} style={{ willChange: "transform, opacity" }}>
+      <div style={{ minHeight: "100vh", background: "var(--ss-bg)", fontFamily: "Inter, system-ui, sans-serif" }}>
+        <AppHeader onLogoClick={navigateBack} />
+        <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px 80px" }}>
           <button onClick={navigateBack}
-            style={{ width: "100%", padding: "12px", background: "transparent", border: "0.5px solid var(--ss-border-strong)", borderRadius: 10, fontSize: 14, color: "var(--ss-text-mute)", cursor: "pointer", fontFamily: "inherit" }}>
-            Back to dashboard
+            style={{ display: "flex", alignItems: "center", gap: 6, background: "var(--ss-surface)", border: "0.5px solid var(--ss-border-strong)", borderRadius: 8, padding: "8px 14px", fontSize: 13, fontWeight: 500, color: "var(--ss-text)", cursor: "pointer", fontFamily: "inherit", marginBottom: 16 }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Dashboard
           </button>
+          <div style={{ marginBottom: 24 }}>
+            <h1 style={{ fontSize: 24, fontWeight: 800, color: "var(--ss-text)", letterSpacing: "-0.02em", marginBottom: 4 }}>SafetyScan guide</h1>
+            <p style={{ fontSize: 14, color: "var(--ss-text-mute)", lineHeight: 1.6 }}>Everything you need to know about using SafetyScan on site.</p>
+          </div>
+          {sections.map((s, i) => (
+            <div key={i} style={{ background: "var(--ss-surface)", borderRadius: 12, padding: "16px 18px", marginBottom: 10, border: "0.5px solid var(--ss-border)" }}>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "var(--ss-text)", marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ width: 22, height: 22, borderRadius: "50%", background: "#F39410", color: "#16181C", fontSize: 11, fontWeight: 700, display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{i + 1}</span>
+                {s.title}
+              </div>
+              <p style={{ fontSize: 13, color: "var(--ss-text-mute)", lineHeight: 1.7, margin: 0 }}>{s.content}</p>
+            </div>
+          ))}
+          <div style={{ marginTop: 24, paddingTop: 16, borderTop: "0.5px solid var(--ss-border)" }}>
+            <button onClick={navigateBack}
+              style={{ width: "100%", padding: "12px", background: "transparent", border: "0.5px solid var(--ss-border-strong)", borderRadius: 10, fontSize: 14, color: "var(--ss-text-mute)", cursor: "pointer", fontFamily: "inherit" }}>
+              Back to dashboard
+            </button>
+          </div>
         </div>
       </div>
     </div>
