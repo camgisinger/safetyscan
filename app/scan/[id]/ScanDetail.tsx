@@ -55,6 +55,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
+  console.log('[scan detail] id:', id, 'type:', typeof id)
 
   useEffect(() => {
     const init = async () => {
@@ -132,14 +133,19 @@ export default function ScanDetail({ id }: { id: string }) {
       if (data.error) throw new Error(data.error)
       const generated = data.checklist
       if (!generated || !Array.isArray(generated)) throw new Error('No checklist returned from API')
-      console.log('[checklist] generated:', generated.length, 'items — saving to Supabase')
+      console.log('[checklist] generated:', generated.length, 'items — saving to scanId:', id)
       const newState = {}
-      const { error: saveErr } = await supabase.from('scans').update({ checklist: generated, checklist_state: newState }).eq('id', id)
+      const { data: updatedRows, error: saveErr } = await supabase
+        .from('scans')
+        .update({ checklist: generated, checklist_state: newState })
+        .eq('id', id)
+        .select()
+      console.log('[checklist] rows updated:', updatedRows, 'error:', saveErr)
       if (saveErr) {
         console.error('[checklist] save error:', saveErr)
         throw new Error('Failed to save checklist')
       }
-      console.log('[checklist] saved successfully')
+      console.log('[checklist] saved successfully, rows affected:', updatedRows?.length)
       setChecklist(generated)
       setChecklistState(newState)
       setScan(prev => prev ? { ...prev, checklist: generated, checklist_state: newState } : prev)
