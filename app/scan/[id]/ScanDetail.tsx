@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Site, Scan } from '../../../lib/supabase'
 import PhotoResultCard, { convertToJpeg, SYSTEM_PROMPT } from '../../../components/PhotoResultCard'
@@ -51,6 +51,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [photoEnlarged, setPhotoEnlarged] = useState<number | false>(false)
   const [editingName, setEditingName] = useState(false)
   const [scanName, setScanName] = useState('')
+  const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -119,9 +120,11 @@ export default function ScanDetail({ id }: { id: string }) {
       const data = await res.json()
       if (data.error) throw new Error(data.error)
       const newChecklist = data.checklist
+      if (!newChecklist) throw new Error('No checklist returned from API')
       const newState = {}
       setChecklistState(newState)
-      await supabase.from('scans').update({ checklist: newChecklist, checklist_state: newState }).eq('id', id)
+      const { error: saveErr } = await supabase.from('scans').update({ checklist: newChecklist, checklist_state: newState }).eq('id', id)
+      if (saveErr) console.error('[checklist] save error:', saveErr)
       setScan(prev => prev ? { ...prev, checklist: newChecklist, checklist_state: newState } : prev)
     } catch (e: any) {
       setChecklistError(e.message || 'Failed to generate checklist')
@@ -130,15 +133,24 @@ export default function ScanDetail({ id }: { id: string }) {
     }
   }
 
-  const saveNotes = async () => {
-    if (!scan) return
+  const saveNotes = async (value: string) => {
+    if (!value && !scan?.notes) return
     setNotesSaving(true)
-    const { error } = await supabase.from('scans').update({ notes }).eq('id', id)
+    const { error } = await supabase.from('scans').update({ notes: value }).eq('id', id)
     setNotesSaving(false)
     if (!error) {
       setNotesSaved(true)
       setTimeout(() => setNotesSaved(false), 2000)
+    } else {
+      console.error('[notes] save error:', error)
     }
+  }
+
+  const handleNotesChange = (value: string) => {
+    setNotes(value)
+    setNotesSaved(false)
+    if (notesTimerRef.current) clearTimeout(notesTimerRef.current)
+    notesTimerRef.current = setTimeout(() => saveNotes(value), 2000)
   }
 
   const saveName = async () => {
@@ -246,6 +258,8 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   if (!scan) return null
 
   const photoUrls: string[] = scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])
+  const photoCount = photoUrls.length
+  const photoLabel = photoCount > 1 ? `${photoCount} photos analysed` : '1 photo analysed'
   const checklist: { item: string; category: string }[] = scan.checklist || []
   const currentSite = scan.site_id ? sites.find(s => s.id === scan.site_id) : null
   const visibleCount = checklist.filter((_, i) => !checklistState[`d_${i}`]).length
@@ -429,6 +443,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           }}
           index={0}
           total={1}
+          photoLabel={photoLabel}
           onReanalyse={(_: number, info: string, photos: { dataUrl: string; base64: string }[]) => reanalyseWithContext(info, photos)}
           checklistContent={checklistContent}
         />
@@ -492,17 +507,20 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           <div style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 8 }}>Notes</div>
           <textarea
             value={notes}
-            onChange={e => { setNotes(e.target.value); setNotesSaved(false) }}
+            onChange={e => handleNotesChange(e.target.value)}
             placeholder="Add notes about this scan…"
             rows={4}
-            style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 13, fontFamily: 'inherit', resize: 'vertical', color: '#1a1a1a', lineHeight: 1.5, boxSizing: 'border-box' as const }}
+            style={{ width: '100%', padding: '10px 12px', borderRadius: 8, border: '0.5px solid #C8C5BE', background: '#FAFAF8', fontSize: 14, fontFamily: 'inherit', resize: 'none', color: '#1a1a1a', lineHeight: 1.5, boxSizing: 'border-box' as const }}
           />
-          <button
-            onClick={saveNotes}
-            disabled={notesSaving}
-            style={{ marginTop: 8, padding: '8px 16px', background: notesSaved ? '#EAF3DE' : NAVY, border: 'none', borderRadius: 8, color: notesSaved ? PASS_GREEN : '#fff', fontSize: 13, fontWeight: 600, cursor: notesSaving ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: notesSaving ? 0.6 : 1 }}>
-            {notesSaving ? 'Saving…' : notesSaved ? 'Saved ✓' : 'Save notes'}
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 8 }}>
+            <button
+              onClick={() => saveNotes(notes)}
+              disabled={notesSaving}
+              style={{ padding: '8px 16px', background: NAVY, border: 'none', borderRadius: 8, color: '#fff', fontSize: 13, fontWeight: 600, cursor: notesSaving ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: notesSaving ? 0.6 : 1 }}>
+              {notesSaving ? 'Saving…' : 'Save notes'}
+            </button>
+            {notesSaved && <span style={{ fontSize: 12, color: PASS_GREEN }}>✓ Saved</span>}
+          </div>
         </div>
 
         {/* Assign to site */}

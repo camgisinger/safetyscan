@@ -229,7 +229,7 @@ function FollowUp({ questions, onSubmit }) {
   );
 }
 
-export default function PhotoResultCard({ photo, index, total, onReanalyse, checklistContent }) {
+export default function PhotoResultCard({ photo, index, total, onReanalyse, checklistContent, photoLabel }) {
   const [tab, setTab] = useState("findings");
   const [openLeg, setOpenLeg] = useState(null);
   const r = photo.result;
@@ -250,7 +250,7 @@ export default function PhotoResultCard({ photo, index, total, onReanalyse, chec
           <div style={{ width: 40, height: 40, borderRadius: 6, background: "rgba(255,255,255,0.08)", flexShrink: 0, border: "1.5px solid rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>📷</div>
         )}
         <div style={{ flex: 1 }}>
-          <div style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>Photo {index + 1}{total > 1 ? ` of ${total}` : ""}</div>
+          <div style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{photoLabel || (total > 1 ? `Photo ${index + 1} of ${total}` : `Photo ${index + 1}`)}</div>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 1 }}>{r.work_type}</div>
         </div>
         <div style={{ fontSize: 11, padding: "3px 10px", borderRadius: 10, background: `${statusColor}25`, color: statusColor, fontWeight: 700, border: `0.5px solid ${statusColor}50` }}>{statusLabel}</div>
