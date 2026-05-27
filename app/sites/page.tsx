@@ -81,7 +81,7 @@ export default function SitesPage() {
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
 
-      <AppHeader showBack backHref="/dashboard" backLabel="Dashboard" />
+      <AppHeader />
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
 

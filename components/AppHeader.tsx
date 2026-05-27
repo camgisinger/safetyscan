@@ -15,29 +15,19 @@ const ShieldLogo = () => (
 )
 
 interface AppHeaderProps {
-  showBack?: boolean
-  backHref?: string
-  backLabel?: string
   rightContent?: React.ReactNode
 }
 
-export default function AppHeader({ showBack, backHref, backLabel, rightContent }: AppHeaderProps) {
+export default function AppHeader({ rightContent }: AppHeaderProps) {
   const router = useRouter()
   return (
     <header style={{ background: '#16181C', padding: '0 20px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 10 }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        {showBack && (
-          <button onClick={() => router.push(backHref || '/dashboard')} style={{ background: 'transparent', border: 'none', color: 'rgba(239,234,224,0.5)', fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4, padding: '4px 8px 4px 0', fontFamily: 'Inter, system-ui, sans-serif' }}>
-            ← {backLabel || 'Back'}
-          </button>
-        )}
-        <button onClick={() => router.push('/dashboard')} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, padding: 0 }}>
-          <ShieldLogo />
-          <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
-            <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: '#F39410' }}>Scan</span>
-          </div>
-        </button>
-      </div>
+      <button onClick={() => router.push('/dashboard')} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, padding: 0 }}>
+        <ShieldLogo />
+        <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.01em' }}>
+          <span style={{ color: '#EFEAE0' }}>Safety</span><span style={{ color: '#F39410' }}>Scan</span>
+        </div>
+      </button>
       {rightContent && <div>{rightContent}</div>}
     </header>
   )

@@ -267,7 +267,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   if (error) return (
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; }`}</style>
-      <AppHeader showBack backHref="/dashboard" backLabel="Dashboard" />
+      <AppHeader />
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
         <button onClick={() => router.push('/dashboard')}
           style={{ background: 'transparent', border: 'none', color: '#888', fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4, padding: '0 0 16px 0', fontFamily: 'inherit' }}>
@@ -377,7 +377,7 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
   return (
     <div style={{ minHeight: '100vh', background: OFFWHITE, fontFamily: "Inter, system-ui, sans-serif" }}>
       <style>{`* { box-sizing: border-box; } textarea, input { outline: none; } @keyframes spin { to { transform: rotate(360deg); } }`}</style>
-      <AppHeader showBack backHref="/dashboard" backLabel="Dashboard" />
+      <AppHeader />
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
 
