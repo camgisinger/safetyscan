@@ -51,6 +51,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [photoEnlarged, setPhotoEnlarged] = useState<number | false>(false)
   const [editingName, setEditingName] = useState(false)
   const [scanName, setScanName] = useState('')
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
 
@@ -166,6 +167,17 @@ export default function ScanDetail({ id }: { id: string }) {
     setAssignSiteId(siteId)
     setScan(prev => prev ? { ...prev, site_id: siteId || null } : prev)
     setAssignSaving(false)
+  }
+
+  const handleDelete = async () => {
+    if (!scan) return
+    const urls = scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])
+    for (const url of urls) {
+      const path = url.split('/scan-photos/')[1]
+      if (path) await supabase.storage.from('scan-photos').remove([path])
+    }
+    await supabase.from('scans').delete().eq('id', id)
+    router.push('/dashboard')
   }
 
   const reanalyseWithContext = async (additionalInfo: string, extraPhotos: { dataUrl: string; base64: string }[]) => {
@@ -547,7 +559,28 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           </div>
         </div>
 
+        {/* Delete */}
+        <button
+          onClick={() => setShowDeleteConfirm(true)}
+          style={{ width: '100%', padding: 11, background: 'transparent', border: '1px solid #E14B3D', borderRadius: 8, color: '#E14B3D', fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', marginTop: 8 }}>
+          Delete scan
+        </button>
+
       </main>
+
+      {showDeleteConfirm && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20 }}>
+          <div style={{ background: '#fff', borderRadius: 16, padding: 24, maxWidth: 320, width: '100%' }}>
+            <div style={{ fontSize: 17, fontWeight: 700, color: NAVY, marginBottom: 8 }}>Delete this scan?</div>
+            <div style={{ fontSize: 14, color: '#888', lineHeight: 1.5, marginBottom: 20 }}>This will permanently delete the scan and all associated photos. This cannot be undone.</div>
+            <div style={{ display: 'flex', gap: 10 }}>
+              <button onClick={() => setShowDeleteConfirm(false)} style={{ flex: 1, padding: 11, background: 'transparent', border: '1px solid #D3D1C7', borderRadius: 8, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit', color: '#555' }}>Cancel</button>
+              <button onClick={handleDelete} style={{ flex: 1, padding: 11, background: '#E14B3D', border: 'none', borderRadius: 8, fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', color: '#fff' }}>Delete</button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }
