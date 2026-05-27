@@ -272,8 +272,18 @@ export default function DashboardPage() {
         {/* Guide button */}
         <div style={{ padding: '0 14px', marginTop: 8, paddingTop: 16, borderTop: `0.5px solid ${BORDER}` }}>
           <button onClick={() => router.push('/guide')}
-            style={{ width: '100%', padding: '12px', background: 'transparent', border: `0.5px solid ${BORDER}`, borderRadius: 10, fontSize: 14, color: TEXT_MUTE, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-            <span style={{ fontSize: 16 }}>?</span> SafetyScan guide
+            style={{ width: '100%', padding: '12px 16px', background: 'transparent', border: '0.5px solid var(--ss-border-strong)', borderRadius: 10, fontSize: 14, color: TEXT_MUTE, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
+            <svg width="20" height="20" viewBox="0 0 240 240" fill="none">
+              <g opacity="0.5">
+                <path d="M14 14 H58 V25 H25 V58 H14 Z" fill="currentColor"/>
+                <path d="M226 14 H182 V25 H215 V58 H226 Z" fill="currentColor"/>
+                <path d="M14 226 H58 V215 H25 V182 H14 Z" fill="currentColor"/>
+                <path d="M226 226 H182 V215 H215 V182 H226 Z" fill="currentColor"/>
+              </g>
+              <path d="M120 32 L190 56 V128 C190 170 162 196 120 214 C78 196 50 170 50 128 V56 Z" fill="none" stroke="#F39410" strokeWidth="8" strokeLinejoin="miter"/>
+              <polyline points="88,120 110,142 154,96" fill="none" stroke="#F39410" strokeWidth="16" strokeLinecap="square" strokeLinejoin="miter"/>
+            </svg>
+            SafetyScan Guide
           </button>
         </div>
 

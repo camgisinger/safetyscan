@@ -282,6 +282,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [linkCopied, setLinkCopied] = useState(false)
   const [generatingShare, setGeneratingShare] = useState(false)
   const [exportingPDF, setExportingPDF] = useState(false)
+  const [reanalysing, setReanalysing] = useState(false)
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
   console.log('[scan detail] id:', id, 'type:', typeof id)
@@ -540,6 +541,13 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
     }
   }
 
+  const handleReanalyse = async () => {
+    if (reanalysing) return
+    setReanalysing(true)
+    await reanalyseWithContext(continueContext, continuePhotos)
+    setReanalysing(false)
+  }
+
   if (loading) return <Spinner />
 
   if (error) return (
@@ -691,14 +699,24 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
           </>
         )}
 
-        <PhotoResultCard
-          photo={{ dataUrl: photoUrls[0] || null, result: { work_type: scan.work_type, status: scan.status, confidence: scan.confidence, legislation: scan.legislation || [], findings: scan.findings || [], summary: scan.summary || '', follow_up_questions: scan.follow_up_questions || [] } }}
-          index={0}
-          total={1}
-          photoLabel={photoLabel}
-          onReanalyse={(_: number, info: string, photos: { dataUrl: string; base64: string }[]) => reanalyseWithContext(info, photos)}
-          checklistContent={checklistContent}
-        />
+        <div style={{ position: 'relative' }}>
+          <PhotoResultCard
+            photo={{ dataUrl: photoUrls[0] || null, result: { work_type: scan.work_type, status: scan.status, confidence: scan.confidence, legislation: scan.legislation || [], findings: scan.findings || [], summary: scan.summary || '', follow_up_questions: scan.follow_up_questions || [] } }}
+            index={0}
+            total={1}
+            photoLabel={photoLabel}
+            onReanalyse={(_: number, info: string, photos: { dataUrl: string; base64: string }[]) => reanalyseWithContext(info, photos)}
+            checklistContent={checklistContent}
+          />
+          {reanalysing && (
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(239,234,224,0.08)', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 5 }}>
+              <div style={{ background: '#16181C', borderRadius: 10, padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 10, boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
+                <div style={{ width: 16, height: 16, border: '2px solid rgba(239,234,224,0.3)', borderTopColor: '#F39410', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
+                <span style={{ fontSize: 13, fontWeight: 600, color: '#EFEAE0' }}>Re-analysing scan...</span>
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Continue conversation */}
         {!hasFollowUp && (
@@ -729,13 +747,15 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
             </div>
             {continueError && <div style={{ marginTop: 10, padding: '8px 10px', background: 'rgba(225,75,61,0.1)', border: '0.5px solid #F09595', borderRadius: 7, fontSize: 12, color: FAIL_RED }}>{continueError}</div>}
             <button
-              onClick={() => {
-                console.log('[reanalyse] button clicked, notes:', continueContext, 'photos:', continuePhotos.length)
-                reanalyseWithContext(continueContext, continuePhotos)
-              }}
-              disabled={continueLoading || (continuePhotos.length === 0 && !continueContext.trim())}
-              style={{ marginTop: 12, padding: '10px 20px', background: (continueLoading || (continuePhotos.length === 0 && !continueContext.trim())) ? '#E0DDD6' : NAVY, border: 'none', borderRadius: 9, color: '#fff', fontSize: 13, fontWeight: 700, cursor: (continueLoading || (continuePhotos.length === 0 && !continueContext.trim())) ? 'not-allowed' : 'pointer', fontFamily: 'inherit' }}>
-              {continueLoading ? 'Analysing…' : 'Re-analyse →'}
+              onClick={handleReanalyse}
+              disabled={reanalysing || (continuePhotos.length === 0 && !continueContext.trim())}
+              style={{ marginTop: 12, padding: '11px 20px', background: reanalysing ? 'rgba(243,148,16,0.5)' : AMBER, border: 'none', borderRadius: 8, color: NAVY, fontSize: 14, fontWeight: 600, cursor: reanalysing ? 'not-allowed' : 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 8, transition: 'background 0.15s', opacity: (continuePhotos.length === 0 && !continueContext.trim()) ? 0.4 : 1 }}>
+              {reanalysing ? (
+                <>
+                  <div style={{ width: 14, height: 14, border: '2px solid rgba(22,24,28,0.3)', borderTopColor: NAVY, borderRadius: '50%', animation: 'spin 0.7s linear infinite', flexShrink: 0 }} />
+                  Re-analysing...
+                </>
+              ) : 'Re-analyse →'}
             </button>
             {continuePhotos.length === 0 && !continueContext.trim() && !continueLoading && <div style={{ fontSize: 11, color: '#bbb', marginTop: 6 }}>Add context or attach photos to re-analyse</div>}
           </div>
