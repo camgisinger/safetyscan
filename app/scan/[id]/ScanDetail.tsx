@@ -455,10 +455,15 @@ Previous assessment:
 Work type: ${scan.work_type}
 Status: ${scan.status} (${scan.confidence} confidence)
 Summary: ${scan.summary}
-Findings: ${JSON.stringify(scan.findings)}
+Findings: ${(scan.findings || []).map((f: any) => f.text || f.title || '').filter(Boolean).join(', ')}
 Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${additionalInfo ? `\n\nAdditional context from site: ${additionalInfo}` : ''}`
 
+      const originalPhotoContent: any[] = (scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])).map((url: string) => ({
+        type: 'image', source: { type: 'url', url },
+      }))
+
       const userContent: any[] = [
+        ...originalPhotoContent,
         ...extraPhotos.map(p => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: p.base64 } })),
         { type: 'text', text: contextText },
       ]
@@ -674,11 +679,16 @@ Legislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${add
               )}
             </div>
             {continueError && <div style={{ marginTop: 10, padding: '8px 10px', background: 'rgba(225,75,61,0.1)', border: '0.5px solid #F09595', borderRadius: 7, fontSize: 12, color: FAIL_RED }}>{continueError}</div>}
-            <button onClick={() => reanalyseWithContext(continueContext, continuePhotos)} disabled={continueLoading || continuePhotos.length === 0}
-              style={{ marginTop: 12, padding: '10px 20px', background: (continueLoading || continuePhotos.length === 0) ? '#E0DDD6' : NAVY, border: 'none', borderRadius: 9, color: '#fff', fontSize: 13, fontWeight: 700, cursor: (continueLoading || continuePhotos.length === 0) ? 'not-allowed' : 'pointer', fontFamily: 'inherit' }}>
+            <button
+              onClick={() => {
+                console.log('[reanalyse] button clicked, notes:', continueContext, 'photos:', continuePhotos.length)
+                reanalyseWithContext(continueContext, continuePhotos)
+              }}
+              disabled={continueLoading || (continuePhotos.length === 0 && !continueContext.trim())}
+              style={{ marginTop: 12, padding: '10px 20px', background: (continueLoading || (continuePhotos.length === 0 && !continueContext.trim())) ? '#E0DDD6' : NAVY, border: 'none', borderRadius: 9, color: '#fff', fontSize: 13, fontWeight: 700, cursor: (continueLoading || (continuePhotos.length === 0 && !continueContext.trim())) ? 'not-allowed' : 'pointer', fontFamily: 'inherit' }}>
               {continueLoading ? 'Analysing…' : 'Re-analyse →'}
             </button>
-            {continuePhotos.length === 0 && !continueLoading && <div style={{ fontSize: 11, color: '#bbb', marginTop: 6 }}>Attach at least one photo to re-analyse</div>}
+            {continuePhotos.length === 0 && !continueContext.trim() && !continueLoading && <div style={{ fontSize: 11, color: '#bbb', marginTop: 6 }}>Add context or attach photos to re-analyse</div>}
           </div>
         )}
 
