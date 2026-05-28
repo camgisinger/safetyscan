@@ -565,7 +565,7 @@ export default function ScanDetail({ id }: { id: string }) {
         </div>
 
         {/* Re-analyse expanded panel */}
-        {reanalyseExpanded && !hasFollowUp && (
+        {reanalyseExpanded && (
           <div style={{ background: 'var(--card)', borderRadius: 16, padding: '14px 16px', boxShadow: 'var(--shadow-card)', marginTop: 10 }}>
             <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 12 }}>Additional context</div>
             <textarea
