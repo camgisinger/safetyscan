@@ -95,6 +95,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [generatingShare, setGeneratingShare] = useState(false)
   const [exportingPDF, setExportingPDF] = useState(false)
   const [reanalysing, setReanalysing] = useState(false)
+  const [openLeg, setOpenLeg] = useState<number | null>(null)
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
 
@@ -399,10 +400,42 @@ export default function ScanDetail({ id }: { id: string }) {
               {scan.summary}
             </div>
             {legislation.length > 0 && (
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, padding: '10px 4px' }}>
-                {legislation.map((l: any, i: number) => (
-                  <span key={i} style={{ fontFamily: 'var(--ff-mono)', fontSize: 9.5, letterSpacing: '0.18em', textTransform: 'uppercase', padding: '3px 8px', borderRadius: 999, background: 'var(--card-2)', color: 'var(--text-mut)' }}>{l.code}</span>
-                ))}
+              <div style={{ paddingTop: 10 }}>
+                {legislation.map((l: any, i: number) => {
+                  const isOpen = openLeg === i
+                  return (
+                    <div key={i} style={{ marginBottom: 8 }}>
+                      <button
+                        onClick={() => setOpenLeg(isOpen ? null : i)}
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '6px 12px', borderRadius: 999, border: 'none', cursor: 'pointer', fontWeight: 600, transition: 'all 0.15s', background: isOpen ? 'var(--text)' : 'var(--card-2)', color: isOpen ? 'var(--bg)' : 'var(--text-mut)' }}>
+                        {l.code}
+                        <span style={{ fontSize: 9, opacity: 0.6 }}>{isOpen ? '▲' : '▼'}</span>
+                      </button>
+                      {isOpen && (
+                        <div style={{ marginTop: 6, padding: '12px 14px', background: 'var(--card)', borderRadius: 12, boxShadow: 'var(--shadow-card)' }}>
+                          {l.description && (
+                            <div style={{ fontSize: 13, color: 'var(--text-mut)', lineHeight: 1.55, marginBottom: l.clauses?.length ? 10 : 0 }}>{l.description}</div>
+                          )}
+                          {l.clauses?.length > 0 && (
+                            <>
+                              <div style={{ height: 1, background: 'var(--divider)', marginBottom: 10 }}/>
+                              <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 10 }}>Applicable clauses</div>
+                              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                                {l.clauses.map((c: any, j: number) => (
+                                  <div key={j} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                                    <span style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.06em', padding: '3px 8px', borderRadius: 6, background: 'var(--card-2)', color: 'var(--amber)', flexShrink: 0 }}>{c.ref}</span>
+                                    <span style={{ fontSize: 12.5, color: 'var(--text)', lineHeight: 1.5, paddingTop: 2 }}>{c.summary}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+                <div style={{ fontSize: 10, color: 'var(--text-dim)', paddingLeft: 2, marginTop: -2, fontFamily: 'var(--ff-mono)' }}>Tap each to expand</div>
               </div>
             )}
           </>
