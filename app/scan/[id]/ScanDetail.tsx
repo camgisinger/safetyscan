@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Site, Scan } from '../../../lib/supabase'
-import { convertToJpeg, SYSTEM_PROMPT } from '../../../components/PhotoResultCard'
+import { convertToJpeg } from '../../../components/PhotoResultCard'
 import AppHeader from '../../../components/AppHeader'
 
 async function imageUrlToDataUrl(url: string): Promise<string | null> {
@@ -244,7 +244,8 @@ export default function ScanDetail({ id }: { id: string }) {
       const contextText = `Analyse these construction site photos for Queensland compliance, building on a previous assessment.\n\nPrevious assessment:\nWork type: ${scan.work_type}\nStatus: ${scan.status} (${scan.confidence} confidence)\nSummary: ${scan.summary}\nFindings: ${(scan.findings || []).map((f: any) => f.text || f.title || '').filter(Boolean).join(', ')}\nLegislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${additionalInfo ? `\n\nAdditional context: ${additionalInfo}` : ''}`
       const originalPhotoContent: any[] = (scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])).map((url: string) => ({ type: 'image', source: { type: 'url', url } }))
       const userContent: any[] = [...originalPhotoContent, ...extraPhotos.map(p => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: p.base64 } })), { type: 'text', text: contextText }]
-      const res = await fetch('/api/analyse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'claude-sonnet-4-5', max_tokens: 2000, system: SYSTEM_PROMPT, messages: [{ role: 'user', content: userContent }] }) })
+      const searchQuery = [scan.work_type, additionalInfo].filter(Boolean).join(' ') || 'construction site safety compliance Queensland WHS'
+      const res = await fetch('/api/analyse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'claude-sonnet-4-5', max_tokens: 2000, messages: [{ role: 'user', content: userContent }], searchQuery }) })
       const data = JSON.parse(await res.text())
       if (!res.ok || data.error) throw new Error(data.error?.message || 'Analysis failed')
       const raw = (data.content || []).filter((b: any) => b.type === 'text').map((b: any) => b.text || '').join('').trim()

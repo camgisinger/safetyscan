@@ -33,8 +33,11 @@ async function analysePhotos(photoList, context) {
       body: JSON.stringify({
         model: "claude-sonnet-4-5",
         max_tokens: 2000,
-        system: SYSTEM_PROMPT,
-        messages: [{ role: "user", content: userContent }]
+        // system prompt is now injected server-side with RAG context
+        messages: [{ role: "user", content: userContent }],
+        searchQuery: context
+          ? `Queensland construction site compliance: ${context}`
+          : "construction site safety compliance Queensland WHS",
       }),
     });
   } catch (fetchErr) {
