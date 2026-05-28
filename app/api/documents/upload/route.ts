@@ -27,6 +27,7 @@ export async function POST(request: NextRequest) {
         work_types: work_types || [],
         metadata: metadata || {},
         embedding,
+        chunk_index: 0,
       })
       .select('id')
       .single()
