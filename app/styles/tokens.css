@@ -1,141 +1,193 @@
-/* ============================================================
-   Safety Scan — Design Tokens
-   Drop this into your app's global styles and reference the
-   custom properties below. Light + dark themes included.
-   ============================================================ */
+/* =========================================================
+   SafetyScan — Design Tokens
+   Handoff: paper (light) + ink (dark) themes
+   ========================================================= */
 
 :root {
-  /* ───── Brand colors ───── */
-  --ss-ink:       #16181C;   /* Almost-black — primary dark surface */
-  --ss-paper:     #EFEAE0;   /* Warm cream — primary light surface */
-  --ss-amber:     #F39410;   /* Accent — used for the tick, beam, ring */
+  /* ---- Brand (theme-independent) ---- */
+  --amber:        #F39410;
+  --amber-soft:   #FFB552;
+  --amber-deep:   #C7770B;
+  --amber-glow:   rgba(243, 148, 16, 0.35);
 
-  /* ───── Neutral scale (warm-cool greys) ───── */
-  --ss-gray-50:   #F4F1EA;
-  --ss-gray-100:  #E5E2DB;
-  --ss-gray-200:  #C9C6BF;
-  --ss-gray-300:  #9A958B;
-  --ss-gray-400:  #7A7468;
-  --ss-gray-500:  #4A4D52;
-  --ss-gray-600:  #3A3D43;
-  --ss-gray-700:  #252A30;
-  --ss-gray-800:  #1E2126;
-  --ss-gray-900:  #16181C;
+  /* ---- Status (theme-independent) ---- */
+  --status-red:       #E15A4E;
+  --status-red-bg:    rgba(225, 90, 78, 0.12);
+  --status-green:     #4FB07A;
+  --status-green-bg:  rgba(79, 176, 122, 0.14);
+  --status-amber-bg:  rgba(243, 148, 16, 0.14);
 
-  /* ───── Amber scale ───── */
-  --ss-amber-100: #FBE7C3;
-  --ss-amber-300: #F7B856;
-  --ss-amber-500: #F39410;   /* = --ss-amber */
-  --ss-amber-700: #C57506;
-  --ss-amber-900: #7A4A07;
+  /* ---- Typography ---- */
+  --ff-sans: var(--font-geist, 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  --ff-mono: var(--font-geist-mono, 'Geist Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace);
 
-  /* ───── Semantic ───── */
-  --ss-success:   #3DD37A;
-  --ss-warning:   #F39410;   /* uses brand amber */
-  --ss-danger:    #E14B3D;
-  --ss-info:      #4A90E2;
+  /* ---- Radius ---- */
+  --r-card:    16px;
+  --r-card-lg: 20px;
+  --r-input:   12px;
+  --r-pill:    999px;
+  --r-thumb:   10px;
 
-  /* ───── Surfaces (dark theme defaults) ───── */
-  --ss-bg:        #16181C;
-  --ss-surface:   #1E2126;
-  --ss-surface-2: #252A30;
-  --ss-text:      #EFEAE0;
-  --ss-text-mute: #7A7468;
-  --ss-border:    rgba(255,255,255,0.06);
-  --ss-border-strong: rgba(255,255,255,0.18);
+  /* ---- Spacing (4px scale) ---- */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 20px; --s-6: 24px; --s-7: 32px; --s-8: 40px;
 
-  /* ───── Type ───── */
-  --ss-font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --ss-font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  /* ---- Shadows ---- */
+  --shadow-card-paper: 0 1px 0 rgba(28,25,20,.08), 0 6px 14px -10px rgba(28,25,20,.18);
+  --shadow-card-ink:   inset 0 0 0 1px rgba(255,250,240,.07);
+  --shadow-fab:        0 12px 28px -8px rgba(243,148,16,.35), 0 6px 16px -4px rgba(0,0,0,.25);
+  --shadow-btn-amber:  0 6px 16px -8px rgba(243,148,16,.35);
 
-  --ss-text-xs:   11px;
-  --ss-text-sm:   12px;
-  --ss-text-base: 14px;
-  --ss-text-md:   16px;
-  --ss-text-lg:   18px;
-  --ss-text-xl:   24px;
-  --ss-text-2xl:  32px;
-  --ss-text-3xl:  48px;
-  --ss-text-4xl:  64px;
+  /* ---- Raw ink (dark) palette ---- */
+  --ink-bg:       #16181C;
+  --ink-card:     #1E2025;
+  --ink-card-2:   #25272C;
+  --ink-text:     #ECE7DD;
+  --ink-text-mut: #847B6D;
+  --ink-text-dim: #5A554C;
+  --ink-border:   rgba(255, 250, 240, 0.07);
+  --ink-divider:  rgba(255, 250, 240, 0.05);
+  --ink-thumb:    #2A2C32;
+  --ink-thumb-2:  #32343A;
 
-  --ss-leading-tight:  1;
-  --ss-leading-snug:   1.2;
-  --ss-leading-normal: 1.5;
-  --ss-leading-loose:  1.65;
+  /* ---- Raw paper (light) palette ---- */
+  --paper-bg:       #F1E7D3;
+  --paper-card:     #FBF4E4;
+  --paper-card-2:   #F7EFDC;
+  --paper-text:     #1B1D22;
+  --paper-text-mut: #7A7263;
+  --paper-text-dim: #ADA293;
+  --paper-border:   rgba(28, 25, 20, 0.08);
+  --paper-divider:  rgba(28, 25, 20, 0.06);
+  --paper-thumb:    #E7DBC4;
+  --paper-thumb-2:  #DFD2B8;
 
-  --ss-track-tight:  -0.02em;
-  --ss-track-normal: 0;
-  --ss-track-wide:   .06em;
-  --ss-track-wider:  .14em;
-  --ss-track-widest: .22em;
+  /* ---- Semantic aliases — defaults to ink (dark) ---- */
+  --bg:       var(--ink-bg);
+  --card:     var(--ink-card);
+  --card-2:   var(--ink-card-2);
+  --text:     var(--ink-text);
+  --text-mut: var(--ink-text-mut);
+  --text-dim: var(--ink-text-dim);
+  --border:   var(--ink-border);
+  --divider:  var(--ink-divider);
+  --thumb:    var(--ink-thumb);
+  --thumb-2:  var(--ink-thumb-2);
+  --shadow-card: var(--shadow-card-ink);
 
-  --ss-fw-regular:  400;
-  --ss-fw-medium:   500;
-  --ss-fw-semibold: 600;
-  --ss-fw-bold:     700;
-  --ss-fw-extra:    800;
+  /* ---- Legacy --ss-* aliases (used by pages not yet rebuilt) ---- */
+  --ss-bg:           var(--ink-bg);
+  --ss-surface:      var(--ink-card);
+  --ss-surface-2:    var(--ink-card-2);
+  --ss-text:         var(--ink-text);
+  --ss-text-mute:    var(--ink-text-mut);
+  --ss-border:       var(--ink-border);
+  --ss-border-strong: rgba(255, 250, 240, 0.18);
+  --ss-amber:        var(--amber);
 
-  /* ───── Spacing (4px scale) ───── */
-  --ss-space-0:  0;
-  --ss-space-1:  4px;
-  --ss-space-2:  8px;
-  --ss-space-3:  12px;
-  --ss-space-4:  16px;
-  --ss-space-5:  20px;
-  --ss-space-6:  24px;
-  --ss-space-8:  32px;
-  --ss-space-10: 40px;
-  --ss-space-12: 48px;
-  --ss-space-16: 64px;
-
-  /* ───── Radii ───── */
-  --ss-radius-sm:   4px;
-  --ss-radius-md:   8px;
-  --ss-radius-lg:   12px;
-  --ss-radius-xl:   16px;
-  --ss-radius-full: 9999px;
-
-  /* ───── Shadows ───── */
-  --ss-shadow-sm: 0 1px 2px rgba(0,0,0,.2);
-  --ss-shadow-md: 0 4px 12px rgba(0,0,0,.25);
-  --ss-shadow-lg: 0 12px 32px -8px rgba(0,0,0,.4);
-
-  /* ───── Motion ───── */
-  --ss-ease-out:    cubic-bezier(.2, .7, .3, 1);
-  --ss-ease-spring: cubic-bezier(.2, .7, .3, 1.1);  /* gentle overshoot */
-  --ss-ease-inout:  cubic-bezier(.45, 0, .55, 1);
-
-  --ss-dur-fast: 150ms;
-  --ss-dur-base: 300ms;
-  --ss-dur-slow: 550ms;
-
-  /* ───── Loader-specific ───── */
-  --ss-cycle: 2.8s;
-  --ss-base:  #EFEAE0;
-  --ss-accent: var(--ss-amber);
+  /* ---- Loader-specific ---- */
+  --ss-cycle:  2.8s;
+  --ss-base:   #ECE7DD;
+  --ss-accent: var(--amber);
 }
 
-/* Light theme */
-[data-theme="light"] {
-  --ss-bg:        #EFEAE0;
-  --ss-surface:   #FFFFFF;
-  --ss-surface-2: #F4F1EA;
-  --ss-text:      #16181C;
-  --ss-text-mute: #4A4D52;
-  --ss-border:    rgba(0,0,0,0.08);
-  --ss-border-strong: rgba(0,0,0,0.18);
-  --ss-base:      #16181C;
+/* =========================================================
+   LIGHT THEME  (data-theme="light" or .theme-paper)
+   ========================================================= */
+[data-theme="light"],
+.theme-paper {
+  --bg:       var(--paper-bg);
+  --card:     var(--paper-card);
+  --card-2:   var(--paper-card-2);
+  --text:     var(--paper-text);
+  --text-mut: var(--paper-text-mut);
+  --text-dim: var(--paper-text-dim);
+  --border:   var(--paper-border);
+  --divider:  var(--paper-divider);
+  --thumb:    var(--paper-thumb);
+  --thumb-2:  var(--paper-thumb-2);
+  --shadow-card: var(--shadow-card-paper);
+
+  --ss-bg:           var(--paper-bg);
+  --ss-surface:      var(--paper-card);
+  --ss-surface-2:    var(--paper-card-2);
+  --ss-text:         var(--paper-text);
+  --ss-text-mute:    var(--paper-text-mut);
+  --ss-border:       var(--paper-border);
+  --ss-border-strong: rgba(28, 25, 20, 0.20);
+  --ss-base:         #1B1D22;
 }
 
-/* ============================================================
-   ScanLoader component styles
-   ============================================================ */
+/* =========================================================
+   DARK THEME  (data-theme="dark" or .theme-ink)
+   ========================================================= */
+[data-theme="dark"],
+.theme-ink {
+  --bg:       var(--ink-bg);
+  --card:     var(--ink-card);
+  --card-2:   var(--ink-card-2);
+  --text:     var(--ink-text);
+  --text-mut: var(--ink-text-mut);
+  --text-dim: var(--ink-text-dim);
+  --border:   var(--ink-border);
+  --divider:  var(--ink-divider);
+  --thumb:    var(--ink-thumb);
+  --thumb-2:  var(--ink-thumb-2);
+  --shadow-card: var(--shadow-card-ink);
+
+  --ss-bg:           var(--ink-bg);
+  --ss-surface:      var(--ink-card);
+  --ss-surface-2:    var(--ink-card-2);
+  --ss-text:         var(--ink-text);
+  --ss-text-mute:    var(--ink-text-mut);
+  --ss-border:       var(--ink-border);
+  --ss-border-strong: rgba(255, 250, 240, 0.18);
+  --ss-base:         #ECE7DD;
+}
+
+/* =========================================================
+   SHARED ANIMATIONS
+   ========================================================= */
+@keyframes spin  { to { transform: rotate(360deg); } }
+@keyframes ping  { 0%   { transform: scale(0.5); opacity: 0.8; }
+                   100% { transform: scale(1.4); opacity: 0; } }
+@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; }
+                   50%       { transform: scale(1.05); opacity: 0.7; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* =========================================================
+   PAGE TRANSITIONS
+   ========================================================= */
+@keyframes slideUpIn        { from { transform: translateY(100%); opacity: 0; }
+                              to   { transform: translateY(0);     opacity: 1; } }
+@keyframes slideDownOut     { from { transform: translateY(0);     opacity: 1; }
+                              to   { transform: translateY(100%);  opacity: 0; } }
+@keyframes slideInFromRight { from { transform: translateX(100%);  opacity: 0; }
+                              to   { transform: translateX(0);     opacity: 1; } }
+@keyframes slideOutToRight  { from { transform: translateX(0);     opacity: 1; }
+                              to   { transform: translateX(100%);  opacity: 0; } }
+
+.page-slide-up        { animation: slideUpIn        0.32s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+.page-slide-down      { animation: slideDownOut     0.28s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+.page-slide-right-in  { animation: slideInFromRight 0.32s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+.page-slide-right-out { animation: slideOutToRight  0.28s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+.page-fade-in         { animation: fadeIn           0.2s  ease                            forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-slide-up, .page-slide-down, .page-slide-right-in, .page-slide-right-out {
+    animation: fadeIn 0.15s ease forwards;
+  }
+}
+
+/* =========================================================
+   SCAN LOADER  (unchanged — relies on --ss-* aliases above)
+   ========================================================= */
 .scan-loader { display: inline-block; line-height: 0; color: var(--ss-accent, #F39410); }
 .scan-loader svg { width: 100%; height: 100%; display: block; overflow: visible; }
 .scan-loader.on-amber { --ss-base: #16181C; --ss-accent: #16181C; }
-.scan-loader .ss-shield { fill: none; stroke: var(--ss-base, #EFEAE0); stroke-width: 8; stroke-linejoin: miter; }
+.scan-loader .ss-shield { fill: none; stroke: var(--ss-base, #ECE7DD); stroke-width: 8; stroke-linejoin: miter; }
 .scan-loader.complete .ss-shield { stroke: var(--ss-accent, #F39410); }
-.scan-loader .ss-brackets { fill: var(--ss-base, #EFEAE0); opacity: 1; }
+.scan-loader .ss-brackets { fill: var(--ss-base, #ECE7DD); opacity: 1; }
 .scan-loader.scanning .ss-brackets { opacity: .7; }
 .scan-loader .ss-beam-bar { fill: var(--ss-accent, #F39410); }
 .scan-loader .ss-beam-bar.faint { opacity: .4; }
@@ -152,13 +204,9 @@
   100% { transform: translateY(-70px); opacity: 0; }
 }
 .scan-loader .ss-tick {
-  fill: none;
-  stroke: var(--ss-accent, #F39410);
-  stroke-width: 16;
-  stroke-linecap: square;
-  stroke-linejoin: miter;
-  stroke-dasharray: 95;
-  stroke-dashoffset: 95;
+  fill: none; stroke: var(--ss-accent, #F39410);
+  stroke-width: 16; stroke-linecap: square; stroke-linejoin: miter;
+  stroke-dasharray: 95; stroke-dashoffset: 95;
 }
 .scan-loader.complete .ss-tick {
   animation: ss-tick-draw .55s cubic-bezier(.2,.7,.3,1.1) forwards;
@@ -167,36 +215,4 @@
 @media (prefers-reduced-motion: reduce) {
   .scan-loader.scanning .ss-beam-group { animation: none; opacity: 1; }
   .scan-loader.complete .ss-tick { animation: none; stroke-dashoffset: 0; }
-}
-
-/* Page transitions */
-@keyframes slideUpIn {
-  from { transform: translateY(100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-@keyframes slideDownOut {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(100%); opacity: 0; }
-}
-@keyframes slideInFromRight {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-@keyframes slideOutToRight {
-  from { transform: translateX(0); opacity: 1; }
-  to { transform: translateX(100%); opacity: 0; }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.page-slide-up { animation: slideUpIn 0.32s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
-.page-slide-down { animation: slideDownOut 0.28s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
-.page-slide-right-in { animation: slideInFromRight 0.32s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
-.page-slide-right-out { animation: slideOutToRight 0.28s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
-.page-fade-in { animation: fadeIn 0.2s ease forwards; }
-
-@media (prefers-reduced-motion: reduce) {
-  .page-slide-up, .page-slide-down, .page-slide-right-in, .page-slide-right-out { animation: fadeIn 0.15s ease forwards; }
 }

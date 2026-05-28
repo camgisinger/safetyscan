@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./styles/tokens.css";
 import FloatingActionButton from "../components/FloatingActionButton";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({
-  variable: "--font-inter",
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -28,9 +28,7 @@ export const metadata: Metadata = {
   creator: 'Mono Compliance',
   publisher: 'Mono Compliance',
   metadataBase: new URL('https://safetyscan.com.au'),
-  alternates: {
-    canonical: '/',
-  },
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     locale: 'en_AU',
@@ -38,14 +36,7 @@ export const metadata: Metadata = {
     siteName: 'SafetyScan',
     title: 'SafetyScan — Queensland Construction Compliance',
     description: 'AI-powered Queensland construction compliance checks. Upload a site photo and instantly identify WHS compliance issues and applicable legislation.',
-    images: [
-      {
-        url: '/brand/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'SafetyScan — Queensland Construction Compliance',
-      },
-    ],
+    images: [{ url: '/brand/og-image.png', width: 1200, height: 630, alt: 'SafetyScan — Queensland Construction Compliance' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -53,30 +44,18 @@ export const metadata: Metadata = {
     description: 'AI-powered Queensland construction compliance checks.',
     images: ['/brand/og-image.png'],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-  icons: {
-    icon: '/favicon-dark.svg',
-    apple: '/favicon-dark.svg',
-  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  icons: { icon: '/favicon-dark.svg', apple: '/favicon-dark.svg' },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
       data-theme="dark"
-      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${geist.variable} ${geistMono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
         {children}
