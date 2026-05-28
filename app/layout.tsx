@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./styles/tokens.css";
 import FloatingActionButton from "../components/FloatingActionButton";
+import BottomNav from "../components/BottomNav";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geist = Geist({
@@ -59,6 +60,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <BottomNav />
         <FloatingActionButton />
         <SpeedInsights />
       </body>
