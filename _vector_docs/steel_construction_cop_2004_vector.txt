@@ -1,0 +1,1206 @@
+DOCUMENT: Steel Construction Code of Practice 2004
+TYPE: Approved Code of Practice (Preserved)
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: steel_construction, construction, working_at_heights, cranes, rigging, falling_objects, structural_integrity, plant_equipment
+SOURCE: Workplace Health and Safety Queensland, Office of Industrial Relations
+PUBLICATION_NO: PN11187
+CURRENT AS AT: 2018 (varied 1 July 2018)
+COMMENCED: 1 January 2012 (preserved under WHS Act 2011)
+CLAUSE_PREFIX: s (WHS Act / WHS Regulation references); section numbers within CoP
+APPROVED UNDER: Work Health and Safety Act 2011 (Qld) s274
+
+---
+
+CHUNK 1: Definition and Scope — What is Steel Construction Work?
+Section: CoP s1.2; WHS Regulation Chapter 6
+Topic: Legal definition of steel construction work, what components are included, and who performs it
+
+STEEL CONSTRUCTION WORK means any work to erect assembled portions and single components of structural steel, including:
+- Columns
+- Beams
+- Bracing
+- Rafters
+- Purlins
+- Girts
+- Bridging and fly bracing
+- Trusses
+- Other related steelwork (e.g. free-standing structures)
+
+ERECTOR DEFINITION:
+An erector is a PCBU who erects structural steel components for buildings, and employs a person experienced in the erection of structural steel, licensed as a 'rigger'.
+
+FABRICATOR DEFINITION:
+A fabricator is a PCBU who fabricates structural steel components for buildings and other structures.
+
+LEGAL STATUS OF THIS CODE:
+From 1 July 2018, duty holders must comply with this approved code of practice OR follow another method (technical or industry standard) that provides an equivalent or higher standard of WHS.
+
+ADMISSIBILITY: Courts may regard this code as evidence of what is known about a hazard, risk or control, and may rely on it in determining what is reasonably practicable.
+
+VISUAL INDICATORS:
+- Any work erecting or assembling structural steel columns, beams, rafters, purlins, girts, bracing or trusses = steel construction work; all requirements of this CoP apply
+- A licensed rigger must be involved in supervising erection
+
+---
+
+CHUNK 2: Duty Holders — Who Has Health and Safety Responsibilities?
+Section: CoP s1 (Introduction); WHS Act s19, s22–s29; WHS Regulation Chapter 6
+Topic: Legal duties of PCBUs, principal contractors, designers, fabricators, erectors, officers and workers in steel construction
+
+PRIMARY DUTY — PCBU (WHS Act s19):
+- Must ensure, so far as reasonably practicable, that workers and other persons are NOT EXPOSED to health and safety risks
+- Must ELIMINATE risks; if not reasonably practicable — MINIMISE risks
+
+OFFICERS (e.g. company directors):
+- Must exercise DUE DILIGENCE to ensure business complies with WHS Act and Regulation
+- Must take reasonable steps to ensure business has and uses appropriate resources and processes to maintain a safe environment
+
+WORKERS:
+- Must take reasonable care for their own health and safety
+- Must not adversely affect health and safety of others
+- Must comply with reasonable instructions and cooperate with reasonable policies/procedures
+
+CONSULTATION WITH WORKERS:
+- PCBU must consult workers who are (or are likely to be) directly affected by WHS matters, so far as reasonably practicable
+- If workers are represented by a Health and Safety Representative: consultation MUST involve that representative
+- Must consult when proposing any changes that may affect health and safety
+
+CONSULTING, COOPERATING AND COORDINATING WITH OTHER DUTY HOLDERS:
+- PCBU must consult, cooperate and coordinate with ALL other persons who have a WHS duty for the same matter
+- All PCBUs sharing a site must exchange information and work cooperatively to eliminate or minimise risks
+
+VISUAL INDICATORS:
+- No evidence of worker consultation before WHS changes = non-compliance
+- Multiple duty holders on site with no coordination arrangements = non-compliance
+- Officers unable to demonstrate due diligence steps taken = flag
+
+---
+
+CHUNK 3: Risk Management and Planning — General Requirements
+Section: CoP s2.1; WHS Regulation Chapter 6
+Topic: How risk management and planning integrates with steel construction work; role of all duty holders in planning
+
+PLANNING IS A KEY CONTROL MEASURE:
+Designers, principal contractors, erectors and fabricators all have an important role in planning steel construction work.
+
+WHS MANAGEMENT PLAN (Chapter 6, WHS Regulation):
+- A WHS MANAGEMENT PLAN must be PREPARED BEFORE any construction work starts
+- Contents are prescribed by Chapter 6 of the WHS Regulation
+
+SAFE WORK METHOD STATEMENT (SWMS):
+- A SWMS must be prepared BEFORE any HIGH RISK CONSTRUCTION WORK starts
+- Chapter 6 of the WHS Regulation defines 'high risk construction work' and 'construction work'
+- This CoP can help identify control measures to be written into the WHS Management Plan or SWMS where steel construction risk has been identified
+
+WHO MUST PREPARE:
+- PRINCIPAL CONTRACTOR must ensure a WHS Management Plan is prepared before project work commences
+- PCBU must, before high risk construction work commences, prepare or direct preparation of a SWMS
+
+MANDATORY CONSULTATION BETWEEN DUTY HOLDERS:
+The designer, principal contractor, fabricator and erector MUST consult, cooperate and coordinate about the structure to be erected. Consultation should address:
+(a) Access to work areas
+(b) Location of other trades relative to erection work
+(c) Restricted areas and need for barricades
+(d) Criteria for safety (e.g. sequential erection)
+(e) Hazards, associated risks and control measures during ALL phases of the project
+
+HIERARCHY OF CONTROL:
+1. ELIMINATION — determine if the risk can be eliminated
+2. SUBSTITUTION — substitute with a less hazardous method
+3. ISOLATION / ENGINEERING CONTROLS
+4. ADMINISTRATIVE CONTROLS
+5. PPE — last resort only; not to be used as sole control
+
+VISUAL INDICATORS:
+- Construction work commenced without a WHS Management Plan = non-compliance
+- High risk construction work commenced without a SWMS = serious non-compliance
+- No evidence of consultation between designer, principal contractor, fabricator and erector = non-compliance
+
+---
+
+CHUNK 4: Designer Obligations — Safe Design for Steel Erection
+Section: CoP s2.5; WHS Act s22
+Topic: What a designer must consider and provide to enable safe erection of steel structures
+
+CRITICAL DESIGN OBLIGATION:
+It is critical that the designer considers the safe erection of the steel structure and provides guidance to the erector. This is particularly important with 'limit state' design — the completed structure withstands much higher loads than the structure during construction.
+
+DESIGNER MUST CONSIDER AND ADDRESS:
+(a) STABILITY at all stages of erection of assembled portions and single components
+(b) MAXIMUM PERMISSIBLE WIND SPEED for erecting the steel structure
+(c) The EFFECT OF ERECTION SEQUENCE on stability
+(d) An ASSESSMENT OF LOADINGS at all stages of construction
+(e) SAFE ACCESS and working environment
+(f) EASE OF CONNECTING COMPONENTS — e.g. provision of landing cleats
+(g) Clear INSTRUCTIONS FOR TEMPORARY BRACING — must be detailed on drawings; do not require riggers to access unstable structures
+(h) HANDLING, LIFTING, STORING, STACKING AND TRANSPORTATION of components — identifiable lifting points and weights must be specified
+(i) SPECIFIC LIFTING ARRANGEMENTS detailed on structural member drawings for safe lifting
+(j) SPECIAL CONDITIONS highlighted on all documentation at pre-contract stage (e.g. need for temporary bracing/guying, or use of mobile access platforms)
+(k) If RIGGER'S POST SYSTEM is used — verification that structure can withstand loadings applied by these systems
+(l) GRADES OF STEEL including bolts and welding are in accordance with relevant Australian Standards
+(m) Consider GROUND-LEVEL ASSEMBLY to reduce fixings/connections made at heights
+
+VISUAL INDICATORS:
+- No design documentation specifying maximum permissible wind speed for erection = non-compliance
+- Lifting points not identified on drawings for heavy sub-assemblies = flag
+- No temporary bracing instructions provided to erector by designer = non-compliance
+- Rigger's post system in use without structural verification by designer = serious non-compliance
+
+---
+
+CHUNK 5: Principal Contractor Obligations — Planning and Site Management
+Section: CoP s2.6; WHS Regulation s308–s315
+Topic: What the principal contractor must plan and manage for safe steel construction
+
+PRINCIPAL CONTRACTOR MUST CONSIDER:
+(a) NUMBER OF CONTRACTORS — where multiple contractors are on site and there is a likelihood of injury from the actions of any one contractor, planning must provide for sufficient physical or time separation
+(b) SCHEDULED TIME FRAMES — must provide enough time for steel to be constructed safely
+(c) FREQUENCY OF SITE MEETINGS — timing must ensure safe working practices are developed, implemented and maintained as phases progress
+(d) HOW MODIFICATIONS to structural building layout or any other additions, substitutions or remedial work will affect the WHS Management Plan
+(e) ACCURACY REVIEW of each PCBU's work to determine compliance with required safety level in WHS Management Plan — where accuracy not specifically detailed, TOLERANCES TO THE RELEVANT CODE should be used
+
+TOLERANCES NOTE: Failure to ensure the integrity of each PCBU's work could lead to unsafe working conditions and may compromise stability of the building or its component parts especially during erection.
+
+VISUAL INDICATORS:
+- Site meetings not conducted as phases change = flag
+- No time allowance in programme for safe steel construction = flag
+- No system for reviewing accuracy of each PCBU's work against code tolerances = non-compliance
+
+---
+
+CHUNK 6: Fabricator Obligations — Safe Delivery and Marking of Steel
+Section: CoP s2.7
+Topic: What fabricators must plan and document for safe steel handling and erection
+
+FABRICATOR MUST PLAN:
+(a) SEQUENCE FOR DELIVERY of each stage of structural steel
+(b) LOCATING NUMBERS — clearly marked on steel components to allow easy identification for erection sequence; consideration of lifting points on components
+(c) HOW MEMBERS WILL BE SUPPORTED — tied and held to prevent uncontrolled movement while being loaded, transported, unloaded, moved and located
+(d) MARKING OF STEEL MEMBERS WITH MASS — determined after consultation between steel erector and fabricator
+
+VISUAL INDICATORS:
+- Steel delivered to site without location numbers for erection sequence = flag
+- Steel members without mass marking where mass is difficult to estimate = non-compliance
+- No evidence of consultation between fabricator and erector on mass marking = flag
+
+---
+
+CHUNK 7: Erector Obligations — Planning Safe Erection
+Section: CoP s2.8
+Topic: What the erector must plan before and during steel erection
+
+ERECTOR MUST PLAN:
+(a) METHOD OF ERECTING THE STRUCTURE — developed in accordance with drawings, specifications, following discussions with designer and principal contractor
+(b) HOW STRUCTURE WILL BE ERECTED — paying particular attention to bracing bays and temporary bracing
+(c) PLANT TO BE USED — size, type, position and coverage of proposed crane(s) on a site plan; include unloading points and storage areas; consider crane access, working radii and boom clearances
+(d) STABILITY REQUIREMENTS for all components of the structure
+(e) PROPOSED METHODS FOR HANDLING COMPONENTS
+(f) POSSIBILITY FOR PRE-ASSEMBLY on the ground before installation; movement of heavy members
+(g) GROUND CONDITIONS — must be suitable to allow plant to be moved and used safely (e.g. in muddy conditions an operator may lose control of a mobile crane)
+
+ERECTOR MUST EMPLOY:
+A person experienced in the erection of structural steel who is LICENSED AS A RIGGER.
+
+VISUAL INDICATORS:
+- No site plan showing crane positions, working radii and boom clearances = non-compliance
+- Erection proceeding without liaison with designer and principal contractor on method = non-compliance
+- Plant operating in unsuitable ground conditions without assessment = serious non-compliance
+- No licensed rigger supervising erection = serious non-compliance
+
+---
+
+CHUNK 8: Working at Heights — Primary Risks and Hierarchy of Controls
+Section: CoP s3.1, s3.2, s3.3, s3.4; WHS Regulation Part 4.4, Chapter 6
+Topic: Hierarchy of fall controls for steel construction; when working at heights provisions are triggered
+
+PRIMARY RISKS IN STEEL CONSTRUCTION:
+- Falls from heights
+- Falling objects
+- Collapse of structure
+- Incidents involving plant engaged in steel construction work
+
+TRIGGER FOR WORKING AT HEIGHTS PROVISIONS:
+A person may be exposed to the risk of injury and death from a fall of ANY HEIGHT. Principal contractors, PCBUs and workers all have duties where a person can fall from one level to another.
+
+CONTROL MEASURES — in priority order (hierarchy):
+(a) WORK PLATFORMS (primary — prevents fall)
+(b) FALL-PREVENTION DEVICE (travel restraint)
+(c) FALL-ARREST SYSTEM
+(d) EDGE PROTECTION SYSTEMS
+(e) FALL PROTECTION COVERS
+
+GROUND LEVEL PREFABRICATION — preferred fall prevention strategy:
+(a) Construct as much steelwork as possible at ground level or from erected floor slabs
+(b) Release lifting sling or device from floor level using long slings, remote release shackles or other suitable devices
+
+IMPORTANT: Fall-arrest harnesses are NOT the preferred control measure — they do not prevent a fall from occurring. Wherever possible and practicable, select a method that REDUCES THE RISK OF FALLING (e.g. perimeter guardrail, EWPs).
+
+VISUAL INDICATORS:
+- Fall-arrest harness used as first or sole control without demonstrating higher-order controls are not reasonably practicable = non-compliance
+- No fall controls in place before work at heights commences = serious non-compliance
+- No SWMS for high risk construction work at heights = serious non-compliance
+
+---
+
+CHUNK 9: Work Platforms — Fabricated Platforms, EWPs and Work Boxes
+Section: CoP s3.5; AS 1418.17; AS 2550.1
+Topic: Requirements for fabricated working platforms, elevating work platforms (EWPs) and work boxes in steel construction
+
+FABRICATED WORKING PLATFORMS (s3.5.1):
+- Must be SECURED AGAINST UPLIFT OR DISPLACEMENT to structure
+- Must be installed WITH EDGE PROTECTION SYSTEMS
+- Must have area of sufficient SIZE AND STRENGTH to carry tools, materials and persons
+- Must be DESIGNED BY AN ENGINEER
+- Must be NOT LESS THAN 450 MM IN WIDTH OR LENGTH
+
+ELEVATING WORK PLATFORMS — EWPs (s3.5.2):
+EWPs include scissor lifts, boom lifts and truck-mounted EWPs (travel towers).
+- PREFERRED over fall-arrest systems because they reduce the risk of a fall occurring
+- Used for access to position steelwork and when installing/tightening bolts
+- Boom-type EWPs with boom length of 11 METRES OR MORE require a LICENSED OPERATOR (or direct supervision by licence holder)
+- All operators must be COMPETENT AND ADEQUATELY TRAINED
+- A COMPETENT PERSON must be available at GROUND LEVEL to lower the platform in case of malfunction
+
+EWP LIMITATIONS — may NOT be suitable for access/egress onto a roof/structure if:
+- Number of workers needing emergency evacuation exceeds EWP capacity
+- Platform moves when person gets in/out with potential to fall through gap
+- EWP may be removed while persons are at height
+- Ground is not firm and level
+- More workers need simultaneous access than EWP can serve in a reasonable time
+
+EWP SAFETY REQUIREMENTS (when used for roof/structure access):
+- EWP must NOT be used for any other purpose or driven away from the building while persons are using it as access
+- Area around EWP must be FREE OF VEHICULAR TRAFFIC
+- Ground conditions must be SUITABLE
+- Must NOT be used near LIVE ELECTRICAL POWER LINES
+- Gap between EWP platform and landing must NOT EXCEED 100 MM
+- Platform must be SECURED AGAINST SIDEWAYS MOVEMENT when adjacent to roof/structure edge
+- Safe access/egress by either: (a) guardrail at roof/structure level extending AT LEAST 1.5 METRES EITHER SIDE of gate, OR (b) safety harness system
+
+ALL PERSONS IN BOOM-TYPE EWPs must wear:
+- FULL BODY HARNESS with ENERGY ABSORBER TYPE LANYARD attached to an anchorage point IN THE BASKET
+
+EWP LIFTING OF STEELWORK — only where manufacturer permits:
+- Total load (workers + materials) must NOT EXCEED RATED CAPACITY
+- Steelwork must NOT be loaded onto EWP guardrails — use PURPOSE-BUILT CRADLE
+- EWP must NEVER be used to FORCE STEELWORK INTO PLACE
+- Working surface must be LEVEL, FIRM, with CLEAR ACCESS and no step up/down on floor slab
+- EWPs for steel erection must be RATED FOR OUTDOOR USE
+
+WORK BOXES (s3.5.4–s3.5.7):
+A work box is a personnel-carrying device designed to be suspended from a crane.
+
+DESIGN REQUIREMENTS:
+(a) Slings permanently attached by LOCKED SHACKLES or HAMMER LOCK device
+(b) Factor of safety: AT LEAST 8 FOR CHAINS; AT LEAST 10 FOR WIRE ROPE
+(c) Marked with SWL, TARE MASS and DESIGN REGISTRATION NUMBER (e.g. on data plate)
+(d) Sides at least 1 METRE IN HEIGHT
+(e) Door (if provided) must be INWARD OPENING, SELF-CLOSING with latch preventing accidental opening
+(f) Used ONLY to lift persons and their equipment
+
+CRANE REQUIREMENTS FOR WORK BOXES:
+(a) Hook with SPRING LOADED OPERABLE LATCH to prevent inadvertent release
+(b) Functioning OVER-HOISTING DEVICE (anti-two-block)
+(c) DEAD-MAN CONTROL on power lowering for self-centring and automatic brake engagement
+(d) LOCKOUT CONTROL on crane free fall function to prevent free fall
+(e) Minimum RATED CAPACITY of 1000 kg at maximum radius
+(f) Minimum rated capacity of AT LEAST TWICE THE TOTAL LOAD of workbox and contents at maximum radius
+
+CRANE OPERATOR — WORK BOXES:
+- Must REMAIN AT CONTROLS AT ALL TIMES while work box is occupied
+- Work box and contents must be moved UNDER POWERED CONDITIONS AT ALL TIMES
+
+PERSONS IN WORK BOXES:
+- Must be attached AT ALL TIMES by FULL BODY SAFETY HARNESS, LANYARD AND ENERGY ABSORBER to a suitable anchorage point within workbox or to the main sling ring above workers' heads
+- Fall arrest attachments MUST NOT be placed in the THROAT OF THE LIFT HOOK
+- At least ONE PERSON in work box must be COMPETENT IN CRANE SIGNALS (e.g. a dogger)
+
+VISUAL INDICATORS:
+- Fabricated working platform less than 450mm width or length = non-compliance
+- EWP operator without licence for boom-type unit with 11m+ boom = serious non-compliance
+- No person at ground level able to lower EWP in case of malfunction = non-compliance
+- Gap between EWP platform and landing exceeding 100mm = non-compliance
+- Work box sides less than 1 metre high = non-compliance
+- Crane operator not at controls while work box is occupied = serious non-compliance
+- Persons in boom-type EWP without full body harness attached to basket anchor = non-compliance
+- Steelwork being loaded onto EWP guardrails = non-compliance
+
+---
+
+CHUNK 10: Fall-Prevention Devices — Travel Restraint
+Section: CoP s3.6
+Topic: Requirements for personal fall-prevention (travel restraint) devices in steel construction
+
+PREFERRED OVER FALL-ARREST:
+Personal fall-prevention devices that do NOT allow a person to get into a falling situation are PREFERRED over those that arrest a person once fallen.
+
+TRAVEL RESTRAINT DEVICES:
+- Person is TETHERED TO AN ANCHORAGE POINT to restrain them from reaching an unprotected edge
+- Anchorage points must be CAPABLE OF SUPPORTING THE LOAD
+
+VISUAL INDICATORS:
+- No travel restraint device used where a person could reach an unprotected edge = flag
+- Anchorage points not verified as capable of supporting restraint loads = non-compliance
+
+---
+
+CHUNK 11: Fall-Arrest Systems — Requirements, Limitations and Rigger's Post Systems
+Section: CoP s3.7, s3.7.1; AS/NZS 1891 Series; AS/NZS 1891.2
+Topic: Fall-arrest harness systems in steel construction — requirements, limitations, anchorage standards, and rigger's post systems
+
+FALL-ARREST SYSTEM COMPONENTS:
+Full fall-arrest harness + lanyard assembly + fall-arrest static line or anchorage point where there is a risk of free fall.
+
+IMPORTANT — FALL-ARREST IS NOT PREFERRED:
+Where possible and practicable, select a method that REDUCES THE RISK OF A PERSON FALLING (e.g. perimeter guardrail, EWPs). Fall-arrest harnesses do NOT prevent a fall — they prevent hitting the ground or obstructions.
+
+LIMITATIONS OF FALL-ARREST SYSTEMS:
+- Individual fall-arrest anchorages require capacity of AT LEAST 15 kN (equivalent to suspending 1.5 tonne)
+- Static lines require anchorages with HIGHER STRENGTHS than individual anchorages
+- Most manufacturers specify inertia reels to be located DIRECTLY ABOVE HEAD HEIGHT — this is rarely achievable on steelwork
+- System requires SUBSTANTIAL CLEARANCE DISTANCES below working surface
+- Requires HIGH LEVELS OF TRAINING AND SUPERVISION
+- Ropes and lanyards can become ENTANGLED OR SNAGGED
+- Requires effective rescue procedure — persons suspended in harnesses can lose consciousness or suffer modified cardiac rhythm if NOT RESCUED PROMPTLY (research: 2 TO 12 MINUTES)
+- A person may still be injured even in a correctly set-up system due to swinging into obstructions or harness not operating as designed
+
+REQUIREMENTS IF FALL-ARREST MUST BE USED:
+(a) All persons exposed to fall risk must be PROPERLY TRAINED AND SUPERVISED in equipment use
+(b) All persons using fall-arrest must NOT WORK IN ISOLATION
+(c) Lanyard assembly must be AS SHORT AS POSSIBLE — working slack NOT MORE THAN 2 METRES to minimise pendulum effect
+(d) Anchorage point must allow lanyard to be attached BEFORE user moves into risk position; individual anchorage capacity: 15 kN for single person
+(e) Travelling anchorages must be positioned to allow attachment before user moves into position
+(f) Components of fall-arrest system must be COMPATIBLE — incompatible components create risk of injury
+
+EMERGENCY RECOVERY (s3.8):
+- A system MUST be in place to quickly retrieve fallen workers whenever a fall-arrest harness is used
+- Adequate training and supervision must be in place for effective recovery
+- Persons can lose consciousness or suffer modified cardiac rhythm in 2 TO 12 MINUTES
+
+RIGGER'S POST SYSTEMS (s3.7.1):
+'Rigger's post' = posts used as anchorages for a horizontal fall-arrest line (static line), often set up along the top of portal frame steel structures.
+
+RIGGER'S POST — MANDATORY REQUIREMENTS:
+- Must be VERIFIED AS 'FIT FOR PURPOSE' — systems fabricated by erection companies have risk of failure
+- Fall-arrest loadings on end anchorages can be EXTREMELY HIGH due to shock loading and triangulation effects
+- Systems using synthetic rope or webbing reduce end anchorage loadings but require GREATER VERTICAL CLEARANCES — in some situations MORE THAN 8 METRES may be required
+- BUILDING DESIGNER must be consulted to confirm structure is strong enough to support the system during erection — erector must inform designer of proposed post locations and installation stages
+
+VERIFICATION MUST INCLUDE:
+- Design of the rigger's post and method of attaching static line to post
+- Method of attaching posts to supporting structure
+- Minimum strength of supporting structure (may include minimum steel section size)
+- Specification of the static line — material type, size, pre-tension
+- Maximum SPAN OF LINE between posts
+- Minimum VERTICAL CLEARANCE required underneath the line
+- Maximum NUMBER OF PERSONS using the line at any one time
+Verified against AS/NZS 1891.2 Industrial fall-arrest systems — Horizontal lifeline and rail systems.
+
+TESTING: If selected, must reflect site set-up; must be severe enough to demonstrate system will not cause injury; best undertaken by an INDEPENDENT TESTING ORGANISATION with experience in fall-arrest equipment.
+
+PENDULUM EFFECT: If a worker falls and is suspended with an extended line, injuries may result from the pendulum effect. Planned anchorage points should be in place to reduce line length.
+
+DOCUMENTATION: Verification documentation must be AVAILABLE ON SITE; WHS inspectors may require it.
+
+If designer states structure cannot safely support the rigger's post system: alternative methods such as EWPs must be considered.
+
+VISUAL INDICATORS:
+- Rigger's post system installed without written structural verification by building designer = serious non-compliance
+- No verification documentation for rigger's post system on site = non-compliance
+- Lanyard working slack greater than 2 metres = non-compliance
+- Workers suspended in harnesses with no emergency rescue system in place = serious non-compliance
+- Workers using fall-arrest system in isolation = non-compliance
+- Individual anchorage points with capacity less than 15 kN = serious non-compliance
+
+---
+
+CHUNK 12: Edge Protection Systems — Specifications
+Section: CoP s3.9
+Topic: Specifications for edge protection (guard rails) to prevent falls from platforms or other surfaces
+
+EDGE PROTECTION REQUIREMENTS:
+Edge protection consists of a system of rails, mesh, sheeting or other material to prevent persons falling off a platform or other surface.
+
+STRUCTURAL REQUIREMENT:
+- Must be designed to WITHSTAND THE FORCES if a person fell against it
+
+TOP RAIL:
+- Must be at AT LEAST 900 MM ABOVE the platform or other surface
+
+MID-RAILS:
+- Placed between top rail and platform so NO MORE THAN 450 MM exists between adjacent rails
+
+BOTTOM RAIL / TOEBOARD:
+- BOTTOM RAIL: fitted NO MORE THAN 250 MM AND NO LESS THAN 150 MM above the platform
+OR
+- TOEBOARD: at least 150 MM HIGH
+
+VISUAL INDICATORS:
+- Top rail lower than 900mm above platform level = non-compliance
+- Gap between adjacent rails greater than 450mm = non-compliance
+- Bottom rail more than 250mm above platform = non-compliance
+- Bottom rail less than 150mm above platform = non-compliance
+- Toeboard less than 150mm high = non-compliance
+
+---
+
+CHUNK 13: Fall Protection Covers — Holes and Openings
+Section: CoP s3.10
+Topic: Requirements for covers over holes and openings to prevent falls through floors and structures
+
+FALL PROTECTION COVERS — REQUIRED FOR:
+All holes and openings, OTHER THAN lift shafts and stairwells, must be protected to prevent persons falling.
+
+COVER REQUIREMENTS:
+- Must be capable of SUPPORTING THE IMPACT OF A PERSON FALLING ONTO IT
+- Must be SECURED AGAINST MOVEMENT
+- Must NOT be used as a WORKING PLATFORM
+
+EXAMPLE: Metal mesh spread on top of purlins or battens to prevent persons falling between them — must NOT be used as a working platform.
+
+VISUAL INDICATORS:
+- Holes or openings in floor surfaces uncovered and unguarded (other than lift shafts and stairwells) = serious non-compliance
+- Cover not secured against movement = non-compliance
+- Cover being used as a working platform = non-compliance
+- Cover not of sufficient strength to support a falling person = non-compliance
+
+---
+
+CHUNK 14: Falling Objects — Controls and Prevention
+Section: CoP s4; WHS Regulation Part 3.2
+Topic: Control measures to prevent injury from falling objects during steel construction
+
+OBLIGATION:
+Work must NOT COMMENCE until controls are in place to prevent the risk of injury from falling objects.
+
+CONTROL MEASURES FOR FALLING OBJECTS (in priority order):
+(a) TOOL LANYARDS
+(b) LIFT BOXES
+(c) SECURING THE LOAD
+(d) CONTAINMENT SHEETING
+(e) TOEBOARDS
+(f) EXCLUSION ZONES
+
+TOOL LANYARDS (s4.1):
+- Short rope or webbing to secure tools/equipment to an anchorage point
+- Material: synthetic fibre, natural fibre, steel rope or webbing — must maintain strength and abrasion resistance
+- Lanyard attached at the WRIST must be NO LONGER THAN 300 MM — ensures dropped tool cannot hit person below
+- Length must be KEPT TO A MINIMUM to reduce risk of snagging
+
+LIFT BOXES (s4.2):
+- Container suspended from crane or hoist to transport plant and/or materials
+- Must be FULLY SHEETED and ENCLOSE THE LOAD
+
+TOEBOARDS (s4.5):
+- Vertical barrier to prevent fall of tools or materials
+- Must be SECURELY FIXED adjacent to work surface
+- Must extend MINIMUM 150 MM ABOVE THE WORK SURFACE
+- Height must increase as size and height of materials/equipment stored near edge increases
+- GAP BETWEEN TOEBOARD AND WORK SURFACE must NOT BE GREATER THAN 10 MM
+
+EXCLUSION ZONES (s4.6):
+- Bunting or barricades with suitable signage erected around perimeter of exclusion zone
+- Prevents personnel from being in the area under which riggers are erecting steelwork
+
+CONTAINMENT SHEETING (s4.4):
+- Fixed to perimeter of structure/working surface to prevent person or objects falling into areas accessed by persons
+- Materials: timber/plywood, metal/synthetic sheets, metal/synthetic mesh
+- Must extend to height that will PREVENT FALLING OBJECTS
+- Must consider: whether capable of supporting likely loads; containment of materials and equipment; fixing pattern; protection from rain; forces from wind effects
+
+VISUAL INDICATORS:
+- Work at heights commencing without falling object controls in place = serious non-compliance
+- Tool lanyards at wrist exceeding 300mm in length = non-compliance
+- Lift boxes not fully sheeted and enclosing load = non-compliance
+- Toeboard less than 150mm above work surface = non-compliance
+- Gap between toeboard and work surface greater than 10mm = non-compliance
+- No exclusion zones below areas where riggers are erecting = non-compliance
+
+---
+
+CHUNK 15: Wire Ropes, Chains and Lifting Slings — Safe Use and Inspection
+Section: CoP s4.3.1; Australian Standards
+Topic: Inspection, maintenance and safe use standards for lifting equipment used in steel construction
+
+INSPECTION REQUIREMENTS:
+Chains and auxiliary fittings must be:
+- THOROUGHLY CLEANED and PERIODICALLY INSPECTED to determine whether defects exist
+- Inspection criteria and intervals: per Australian Standards
+
+DO NOT USE chain, ring, shackle, swivel, wire rope or similar lifting gear if:
+- WEAR on any part EXCEEDS manufacturer's specified amount
+- Any part is DEFORMED, NICKED, CRACKED, SPLIT or OTHERWISE DAMAGED
+
+WIRE ROPES:
+- Must NOT be exposed to HIGH TEMPERATURES — heat can adversely affect the core
+- All lifting equipment must be STORED ACCORDING TO MANUFACTURER'S INSTRUCTIONS
+
+ALL LIFTING SLINGS must have:
+- SWL (Safe Working Load) displayed
+- CURRENT INSPECTION TAGS
+
+VISUAL INDICATORS:
+- Lifting chains or slings with visible deformation, nicks, cracks or damage = serious non-compliance
+- Lifting gear without current inspection tags = non-compliance
+- Wire ropes with evidence of heat exposure = flag
+- Lifting gear stored contrary to manufacturer's instructions = flag
+
+---
+
+CHUNK 16: Safe Storage and Handling of Steelwork
+Section: CoP s4.3.2
+Topic: Requirements for storing and handling steel members on site to prevent falls and injuries
+
+STORAGE REQUIREMENTS:
+- Steelwork must be stored so it CANNOT FALL ON WORKERS or cause damage to buildings or plant
+- Where steelwork is STACKED: stacks must be STABLE and SAFE ACCESS must be available when workers sling a load
+- Consider: effect of WIND and potential for MOBILE PLANT TO CONTACT stored steelwork
+
+STRAPPED BUNDLES:
+- When releasing strapping: CAUTION must be exercised — strapping may WHIP BACK and cause injury OR the bundle can fall apart and injure workers
+
+VISUAL INDICATORS:
+- Steelwork stacked unstably or with no safe access for slinging = non-compliance
+- No consideration of wind effects on stored steelwork = flag
+- Workers releasing strapping on bundles without appropriate precautions = flag
+
+---
+
+CHUNK 17: Lifting Steelwork — Safe Practices for Steel Members, Columns, Rafters, Purlins and Girts
+Section: CoP s4.3.3–s4.3.9; AS 1418 Set; AS 2550.1
+Topic: Safe lifting practices for individual steel components, bundles and assembled elements
+
+GENERAL LIFTING — MARKING:
+- MASS of steel members must be marked (especially where difficult to estimate) including protective coatings, by the fabricator
+- Enables erector to select correctly designed lifting gear and crane of appropriate capacity
+- Pipe with covered ends: weight must be marked by fabricator
+
+BEFORE LIFTING:
+- Rigger/dogger must SLING THE LOAD correctly
+- FIX TAG LINES (where appropriate) to ends of load (see CoP Figure 4)
+- When transferring from HORIZONTAL TO VERTICAL: care must be taken to avoid unrestrained movement of the lower end
+- LIFTING BEAMS may be necessary for some members to ensure stability
+
+LIFTING BUNDLES (s4.3.4):
+Lifting more than one steel member or bundles simultaneously should only occur where:
+- Lifting slings are DESIGNED TO AVOID STEEL MEMBERS BECOMING ENTANGLED OR DISLODGED
+OR
+- CRADLES for bundles of steel or decking are used
+
+COLUMNS (s4.3.5):
+- Free-standing single columns or column assemblies must be secured by BOLTING THE BASE PLATE ONTO THE FOOTING
+- Once anchored and in near-perpendicular position and STABILISED AGAINST OVERTURNING: lifting gear can be released
+- Where possible: lifting sling released FROM FLOOR LEVEL using LONG SLINGS, REMOTE RELEASE SHACKLES or other suitable devices; or by using EWP
+
+RAFTERS (s4.3.6):
+- Should ideally be erected as ONE LENGTH with ONE CRANE and SINGLE LIFT to minimise collapse risk
+- SINGLE LIFT: bolt rafter together on ground at ridge or intermediate joint first; then bolt to portal columns and end wall columns using riggers from EWP
+- MULTIPLE LIFT: rafter-to-column connections made by rigger from EWP at apex or intermediate position
+- Consider use of LIFTING BRACKETS (designed and certified by an engineer) in preference to chains or slings around steel
+
+PURLINS (s4.3.7):
+- PREFERRED METHOD: riggers working from EWPs
+- Where not practicable and riggers must work from rafter steelwork: must use a RECOGNISED, CORRECTLY INSTALLED AND TESTED FALL-ARREST SYSTEM (e.g. rigger's post system)
+- Where carrying purlins along rafter: ALWAYS CARRY UP THE SLOPE — safer and easier than carrying down
+- Carrying purlins normally involves TWO RIGGERS, each attached to a fall-arrest system, working from ADJACENT RAFTERS
+- Alternative: use CRANE to raise and place purlins at each cleat location — no need to carry individual purlins along rafter tops; riggers work from EWP or purlin cradle
+
+GIRTS (s4.3.8):
+- Must be erected by rigger working from EWP or COMBINED ACCESS AND LIFTING CRADLE
+- Individual girts must NOT BE CARRIED BY HAND — must be LIFTED INTO POSITION BY MECHANICAL EQUIPMENT
+- To prevent girts falling: use MOBILE SCAFFOLD TOWERS or COMBINED ACCESS AND LIFTING CRADLE
+- Crane or hoist used for combined access and lifting must be:
+  (a) Fitted with hook with SPRING LOADED OPERABLE LATCH
+  (b) Fitted with FUNCTIONING OVER-HOISTING DEVICE (motion cut-out anti-two-block)
+  (c) Equipped with DEAD-MAN CONTROL on power lowering
+  (d) Equipped with LOCKOUT CONTROL on crane free-fall function
+- WORKING LOAD LIMITS must be CLEARLY MARKED at each end of the cradle (number of workers + total mass of girts + total WLL in kg)
+
+BRIDGING (s4.3.9):
+- Girt and purlin bridging and sag rods may be erected from an EWP
+- Must be LIFTED FROM GROUND by rigger using mechanical equipment
+- Care taken to prevent entanglement during lifting
+
+ROOF AND WALL BRACING (s4.3.10):
+- A CRANE must be used to lift bracing members
+- Bracing should be ASSEMBLED ON GROUND when possible
+- Rigger working from EWP (preferred) using a hand line; or from steelwork with controls to prevent falls
+
+VISUAL INDICATORS:
+- Steel members lifted without mass markings where mass is difficult to estimate = non-compliance
+- Tag lines not used on loads where load control is needed = non-compliance
+- Columns released from lifting gear before anchored and stabilised = serious non-compliance
+- Purlins being carried DOWN the rafter slope = non-compliance
+- Individual girts carried by hand instead of using mechanical equipment = non-compliance
+- Girts being installed without a rigger working from EWP or cradle = non-compliance
+- Lifting brackets not engineer-designed/certified on rafter lifts = flag
+
+---
+
+CHUNK 18: Structure Integrity — Building Stability, Bracing and Temporary Supports
+Section: CoP s5; WHS Management Plan reference
+Topic: Requirements to maintain stability of the steel structure at all stages of erection
+
+FUNDAMENTAL REQUIREMENT:
+The need for stability at ALL STAGES of steel construction work must be understood by all those undertaking the work.
+
+ERECTION MUST NOT START until:
+- All necessary equipment to ensure stability is AVAILABLE
+- Stability of the structure can be MAINTAINED AT ALL TIMES
+This includes temporary guys or bracing to ensure stability of all parts AND the structure as a whole.
+
+TEMPORARY GUYS AND BRACING:
+- Must be SECURELY ANCHORED
+- Anchor points must resist any force likely to be imposed on them
+- Movement of an anchor must be REPORTED TO THE ERECTOR IMMEDIATELY and action taken
+- Guys must be CLEARLY IDENTIFIED by COLOURED BUNTING or similar to avoid accidents
+- In areas of plant and vehicle movement: ADEQUATE VISUAL BARRIERS must be located between guys and movement areas
+
+STABILITY VERIFICATION — must occur:
+(a) AT THE END OF THE WORKDAY or during temporary cessations — effectiveness of temporary guys, bracing and supports must be inspected at BEGINNING OF EACH SHIFT
+(b) When FASTENINGS MAY BE INCOMPLETE (e.g. during lining up and adjustment)
+(c) During HIGH WINDS or when high winds are forecast
+(d) When structure may be subject to CONSTRUCTION LOADS (e.g. stacking of parts, lifting)
+Verified by the person identified in the WHS Management Plan as the VERIFIER.
+
+VISUAL INDICATORS:
+- Erection commenced without temporary guys or bracing in place where required = serious non-compliance
+- Temporary guys not identified with coloured bunting or similar = non-compliance
+- No stability verification at end of each workday = non-compliance
+- No inspection of temporary supports at beginning of each shift = non-compliance
+- Guys running through plant and vehicle movement areas without visual barriers = non-compliance
+
+---
+
+CHUNK 19: Bracing — Required Erection Sequence for Braced Bays
+Section: CoP s5.2; Appendix 2
+Topic: Requirements for bracing during steel erection including braced bay sequence
+
+BRACED BAY REQUIREMENT:
+Where required by design, erection must START IN A NOMINATED BRACED BAY so the structure can be plumbed and made self-supporting before further steelwork is added.
+
+IF COMMENCING IN A BRACED BAY IS NOT POSSIBLE:
+- Extent of TEMPORARY SUPPORT must be decided PRIOR to any work being carried out
+- Must be considered when preparing the WHS Management Plan
+
+PORTAL FRAME BUILDINGS (Appendix 2):
+- Bracing usually located near ends of building at end bay or adjacent bay
+- Braced bays must be NO MORE THAN SEVEN BAYS APART
+- Portal frames must be LIFTED IN ONE PIECE (where this procedure applies)
+
+IF PORTAL IS UNSTABLE WHEN FREE-STANDING:
+- Frame must be GUYED FROM THE APEX IN OPPOSITE DIRECTIONS before detaching crane hook(s)
+- Expected for FRAME SPANS OF 30 METRES AND OVER
+
+STABILISING PURLINS (Table 1 — Appendix 2):
+Number of purlins required at bracing strut locations:
+
+Bracing strut spacing up to 6000mm: One at eaves, One at strut locations
+Bracing strut spacing 6000–9000mm: One at eaves, Two at strut locations
+Bracing strut spacing 9000–12000mm: Two at eaves, Three at strut locations
+
+SHEETING PACKS:
+- Roof sheeting packs may ONLY be loaded onto structure when purlins and bridging are completed to end of building OR to second braced bay
+- Must NOT be greater than ONE BAY COVERAGE in size
+- Must be placed at each PORTAL RAFTER or END FRAME
+
+WALL SHEETING:
+- Can ONLY be attached after the WHOLE STRUCTURE or a section containing TWO BRACED BAYS has been completed including roof purlins, purlin fly bracing and bridging
+
+VISUAL INDICATORS:
+- Erection not starting in braced bay without alternative temporary support plan = non-compliance
+- Braced bays more than seven bays apart = non-compliance
+- Roof sheeting packs loaded before purlins and bridging completed to full extent = non-compliance
+- Wall sheeting installed before two braced bays and roof purlins/fly bracing/bridging completed = non-compliance
+- Portal frames of 30m+ span not guyed at apex before crane detaches = serious non-compliance
+
+---
+
+CHUNK 20: Column Stability — Requirements During Erection
+Section: CoP s5.3
+Topic: Column stability requirements during steel erection including footings, splices and base plate preparation
+
+COLUMN FOOTING CHECKS:
+- Footings for column support during erection must be CHECKED for adequate structural capacity for erection conditions (e.g. wind loadings on columns to prevent rotation in footing)
+
+COLUMN SPLICES:
+- Must be CAPABLE OF SUPPORTING THE STANDING COLUMN until tied together
+- OR column must have TEMPORARY GUYS ATTACHED to ensure stability at height
+
+BASE PLATE SETTING:
+- Use TIGHTLY FITTED STEEL PACKERS or STEEL WEDGES DRIVEN UNDER EDGES of column base plate for added stability
+- JACKING NUTS: columns may be levelled on cast-in fixings using jacking nuts on threads; top nuts, washers etc. installed to secure column
+
+VISUAL INDICATORS:
+- Columns released from lifting gear before splices are capable of supporting standing column = serious non-compliance
+- No temporary guys for column without splice capable of self-support = non-compliance
+- Column base plates set without steel packers/wedges for stability = flag
+
+---
+
+CHUNK 21: Beam Stability — Requirements During Erection
+Section: CoP s5.4
+Topic: Beam stability requirements during steel construction
+
+BEAM STABILITY REQUIREMENT:
+- Erector must ensure that ALL BEAMS ARE SECURED BEFORE RELEASING THE SLINGS
+
+VISUAL INDICATORS:
+- Crane slings released from beams before beams are secured to the structure = serious non-compliance
+
+---
+
+CHUNK 22: Bolt Alignment — Maintaining Structural Integrity
+Section: CoP s5.5
+Topic: Requirements for bolt and connection alignment in steel structures; managing misalignment
+
+STABILITY DEPENDS ON EFFECTIVE BOLTED CONNECTIONS:
+Both from concrete slab to columns and between columns and all individual steel components.
+
+PROHIBITED ACTIONS:
+- BENDING BOLTS to line up with holes — bent bolts more likely to FAIL and cause uneven load distribution
+- ENLARGING HOLES in steelwork to align with bolts — reduces ability to transfer loads and can cause TEARING
+
+IF HOLES DO NOT LINE UP WITH BOLTS:
+- The BUILDING DESIGN ENGINEER MUST BE CONSULTED
+- Written VERIFICATION FROM THE ENGINEER must be provided before changes or alterations are made
+- Engineer must ensure certification complies with safe structural design and bolting principles
+
+VISUAL INDICATORS:
+- Bolts bent to align with holes = serious structural non-compliance
+- Holes in steelwork enlarged beyond design tolerances = serious structural non-compliance
+- Misaligned holes corrected without written engineer verification = serious non-compliance
+
+---
+
+CHUNK 23: Post-Installed Anchors — Use and Limitations
+Section: CoP s5.6
+Topic: Requirements and risks for post-installed anchors (chemical, expansion, screw-bolt type) in steel construction
+
+PREFERRED METHOD:
+IN-SITU CONNECTIONS (cast-in bolts/threaded studs or cast-in steel plates) are the PREFERRED method for anchorage.
+
+POST-INSTALLED ANCHORS — USE:
+Post-installed anchors (chemical, expansion or 'screw bolt' type) may be used to secure structural steel to concrete slab, but are DISCOURAGED because of:
+- Difficulty drilling holes to correct DIAMETER, DEPTH AND LOCATION due to reinforcing steel in slab
+- Potential problems in ensuring correct SETTING TORQUE
+- Reliance on FRICTION OR BONDING STRENGTH to maintain integrity
+- Difficulty in VERIFYING that chemical reaction is complete and correct bonding strength reached
+
+WHERE POST-INSTALLED ANCHORS ARE USED:
+- Must be installed IN ACCORDANCE WITH MANUFACTURER'S RECOMMENDATIONS
+- Erector must ensure CONCRETE HAS REACHED SPECIFIED STRENGTH before anchor installation
+
+VISUAL INDICATORS:
+- Post-installed anchors used without following manufacturer's recommendations = non-compliance
+- Anchors installed in concrete that has not reached specified strength = serious non-compliance
+- No verification of correct setting torque for expansion anchors = non-compliance
+
+---
+
+CHUNK 24: Paint Touch-Up — Personal Safety When Handling Paint Materials
+Section: CoP s5.7
+Topic: Safety requirements when touching up protective coatings on structural steel during erection
+
+COMMON PAINT TYPES USED FOR TOUCH-UP:
+- 'Alkyd primers'
+- 'Ethyl silicate zinc packs'
+
+SAFETY REQUIREMENTS:
+- Personal CONTACT WITH PAINT MATERIALS must be AVOIDED
+- HIGH DEGREE OF PERSONAL HYGIENE must be encouraged
+- Full details of health and safety precautions are found ON THE PAINT CONTAINER or in the MATERIAL SAFETY DATA SHEET (MSDS)
+
+VISUAL INDICATORS:
+- Workers handling paint materials without personal protection or hygiene measures = flag
+- No MSDS available for paint products used on site = non-compliance
+
+---
+
+CHUNK 25: Cranes — Setup, Outriggers and Operating Controls
+Section: CoP s6; s6.1–s6.4; AS 2550.1
+Topic: Safe use and setup requirements for cranes used in steel construction
+
+ADMINISTRATIVE CONTROL MEASURES REQUIRED BEFORE COMMENCING:
+(a) Outriggers properly set up
+(b) Correct positioning of boom to ensure loads are lifted vertically
+(c) Precautions when manoeuvring (avoidance of overhead power lines)
+(d) Accurate load distribution for multiple crane lifts
+(e) Preventing lateral loadings on the boom
+(f) Preventing overloading by accurate determination of mass to be lifted
+(g) Appropriate LOAD RATING CHARTS and correctly calibrated MOMENT LIMITERS
+(h) Correct counterweight fitted for the load chart being used
+(i) Bolting of boom sections correctly tensioned
+
+OUTRIGGERS — CRANE SETUP (s6.1):
+(a) Principal contractor must supply erector all information on location of TRENCHES AND BACKFILLED TRENCHES/SERVICES
+(b) Before setup: FULL EVALUATION of overhead, underground and jobsite hazards; visually inspect GROUND CONDITIONS to determine type and amount of packing required
+(c) Outrigger extensions must be LOCKED OR PINNED IN POSITION as recommended by manufacturer
+(d) Footpads/hydraulic pads must be placed on ADEQUATE FOOTING; crane must be LEVELLED. Footing must be CHECKED FREQUENTLY during operation
+
+PACKING REQUIREMENTS:
+- Must always be laid in 'PIGSTY' CONFIGURATION (not parallel)
+- Hardwood timber: AT LEAST 200 MM × 75 MM; length calculated by required area
+- Beware of underground services (cable tunnels, drains, cellars)
+- Before setting up on structures or suspended floors: confirm structure can support the loading
+
+OPERATING SIGNALS (s6.2):
+- ONLY ONE PERSON should give visual and/or audible signals at any one time
+- If loss of contact using 2-way radio: STOP WORK IMMEDIATELY
+- If multiple 2-way radios in close proximity on different sites: consult 'Spectrum Management Agency' to allocate correct radio frequencies
+
+LIFTING LOADS (s6.3):
+Before hoisting:
+- Crane operator or dogger must confirm HOIST ROPE HANGS VERTICALLY over the load
+- Avoid swinging the load when lift is taken
+- When load is suspended: ensure load is UNDER CONTROL at all times
+- When handling maximum or near maximum loads — after lifting a few centimetres:
+  (a) Test hoist brakes
+  (b) Check weight recorded on load weight indicator
+  (c) Recheck load chart
+- Except in emergency: do NOT LEAVE CABIN OR CONTROL ROOM while a load is suspended
+
+LIFTING LOADS NEAR PERSONS (s6.4):
+- AVOID CARRYING LOADS OVER PERSONS
+- NEVER do this when using devices functioning by friction, fluid pressure, partial vacuum, magnets or local indentation of surfaces
+- Crane operators must give AUDIBLE WARNING before lifting loads near persons
+
+VISUAL INDICATORS:
+- Outrigger packing not in pigsty configuration = non-compliance
+- Hardwood packing less than 200mm × 75mm = non-compliance
+- No pre-lift check of hoist rope vertical alignment = non-compliance
+- Load being swung or hoisted with rope not vertical = non-compliance
+- Crane cabin vacated while load is suspended = serious non-compliance
+- Loads carried over persons = serious non-compliance
+- No audible warning before lifting near persons = non-compliance
+- Outrigger extensions not locked or pinned per manufacturer = non-compliance
+
+---
+
+CHUNK 26: Cranes — Types, Travel with Load, Multiple Crane Lifts and Load Charts
+Section: CoP s6.5–s6.11; AS 2550.1
+Topic: Crane types, multi-crane lift requirements, lattice and hydraulic boom precautions, load charts and indicators
+
+CRANE TYPES (s6.5):
+- TRACTOR TYPE CRANE: can transport steel around workplace
+- ARTICULATING TRUCK TYPE CRANE: for smaller/lighter pieces
+- TRUCK-MOUNTED LATTICE BOOM or HYDRAULIC BOOM CRANES: heavier components, further reach
+- TOWER CRANES: high rise steel construction
+
+TRAVELLING WITH A LOAD (s6.6):
+- Post a SAFETY OBSERVER to warn of potential collision with adjacent structures and overhead electrical power cables in congested areas
+- Always use a DOGGER when travelling with load
+- Keep loads CLOSE TO THE GROUND
+- In some cases: rope off swinging loads to control swing
+- Travel with load FACING UP THE SLOPE
+- Dogger must remain IN SIGHT OF CRANE OPERATOR and must NOT WALK IN PATH OF CRANE
+
+MOBILE CRANE OPERATOR MUST ENSURE:
+(a) SLEW BRAKE applied at all times other than when slew motion is being used
+(b) Awareness of UNEVEN ROAD SURFACES — undulations may move crane into zone of instability
+(c) SLEWING BRAKE OR LOCK applied when travelling with a load
+(d) ROPE LUFFED MOBILE CRANE must NOT be moved up hill with unloaded boom in near vertical position
+
+MULTIPLE CRANE LIFTS (s6.7):
+- AVOID multiple crane lifts if possible
+- If necessary:
+  (a) ONE PERSON designated as OVERALL CONTROLLER of the lift
+  (b) Accurate assessment of: share of load per crane; how load sharing is proportioned; how proportioning is maintained
+  (c) Instructions clear; rehearsal wherever possible
+  (d) Cranes of EQUAL CAPACITY AND SIMILAR CHARACTERISTICS must be used
+  (e) Tractor type cranes in 'pick and carry': both cranes aligned in SAME DIRECTION
+  (f) LUFFING UP preferred over luffing down
+
+MINIMUM CAPACITY REQUIREMENTS — where multiple lifts NOT designed by engineer:
+- TWO CRANES: each must have capacity 20% GREATER than calculated share of load
+- THREE CRANES: each must have capacity 33% GREATER than calculated share
+- FOUR CRANES: each must have capacity 50% GREATER than calculated share
+
+LATTICE BOOM CRANES (s6.8):
+- Top of extended boom must NOT be lowered below HORIZONTAL PLANE through base pivot pin — could cause boom to buckle before lifting
+- When changing boom sections: INTERMEDIATE OR ADVANCED RIGGER must prevent boom collapse; adequate support under each section before removing joint pins/bolts
+- Joint pins or bolts replaced must have PROPERLY FITTED SPLIT PINS or LOCKING DEVICE
+- Joint pins must be removable while operator stands on GROUND ON OUTSIDE OF BOOM OR JIB
+- Must NOT operate with boom at angle GREATER THAN SHOWN ON LOAD CHART or hard against boom backstop
+
+HYDRAULIC BOOM CRANES (s6.9):
+- Boom sections must be extended or retracted IN ACCORDANCE WITH MANUFACTURER'S RECOMMENDATIONS
+- Must NOT operate with boom at angle GREATER THAN SHOWN IN LOAD CHART
+
+LOAD CHART AND INDICATORS (s6.11):
+- Each crane must have PERMANENT NOTICE indicating working load limit
+- Additional notice listing condition, incidence and manner of application of load; must be EASILY READ BY CRANE OPERATOR and dogger
+- All cranes must have LOAD CHART and RADIUS INDICATOR
+- LOAD INDICATORS required for:
+  - All mobile cranes with RATED CAPACITY OF 15 TONNES AND GREATER
+  - Mobile cranes MANUFACTURED SINCE 1996 with RATED CAPACITY OF 5 TONNES OR GREATER
+
+RATED CAPACITY: maximum load that may be attached — may NOT include hook block, falls of rope, slings and rigging hardware. Load includes weight of ALL LIFTING APPLIANCES not permanently attached to crane.
+
+LOAD CHART SECTIONS: separated by heavy horizontal line — ABOVE LINE = structural strength of boom; BELOW LINE = crane stability.
+
+VISUAL INDICATORS:
+- Multiple crane lifts without one designated overall controller = serious non-compliance
+- Two-crane lift without each crane having 20% excess capacity over calculated share = non-compliance
+- Lattice boom lowered below horizontal plane of base pivot pin = non-compliance
+- Mobile crane of 15-tonne+ rated capacity without load indicator = non-compliance
+- Crane operating beyond boom angle shown in load chart = serious non-compliance
+- Load chart not clearly displayed and readable by crane operator = non-compliance
+- Dogger walking in path of crane during pick-and-carry operations = serious non-compliance
+
+---
+
+CHUNK 27: Safety Checklist — Steel Erection Compliance Requirements
+Section: CoP Appendix 6
+Topic: Day-by-day compliance items for steel portal frame erection, covering drawings, documentation, licensing and pre-erection checks
+
+WHO USES CHECKLIST:
+- Completed each day when portal steel members are being installed
+- Subcontractor responsible for checking off items as completed
+- Completed form given to principal contractor when all items done
+- Responsible party (PC, SC, or Engineer) initials each item
+
+DRAWINGS REQUIRED (pre-erection):
+- Certified engineer's drawings for: steelwork design (position of members, braces and bracing points, steel content); permanent and temporary bracing design; workmanship/materials per AS 4100, AS 3828, AS 1554 Set, AS 3678
+- Steel layout and erection sequence on drawings
+- Design engineer specification on bolt torque
+- Sign-off by engineer on erection method PRIOR TO ERECTION
+- Lifting points identified on large items
+- Drawings noting any special conditions
+
+SUBCONTRACTOR SAFETY DOCUMENTATION (before commencing):
+- Rigging/erection contractor SWMS
+- Crane/rigging contractor SWMS / lift plan showing: crane setup and locations, obstacles/hazards/existing structures near crane (especially temporary braces), rigging procedures and equipment, spotters' duties, communication method between operator and dogger, references to erection sequence, procedure for releasing steel after securing and bolting off
+
+OTHER SAFETY DOCUMENTATION:
+- SWMS approved, discussed with and SIGNED OFF BY WORKERS
+- Risk assessments/SWMS completed for ALL tasks
+- Unloading procedures and safe storage areas documented
+- Layout and erection sequence documented
+- Rescue procedure for falls from heights (including falls into safety harness equipment)
+- Access to height arrangements documented
+- Inspection requirements for steel structure (engineer consultation)
+- Proof of training in safe use of safety harness and lanyard
+- Record of EWP and other plant training
+- Wind loads permissible on structure during erection documented
+
+LICENSING:
+- Steel erection supervised by person with MINIMUM BASIC RIGGER'S QUALIFICATION
+- Crane operator and riggers/doggers have APPROPRIATE LICENCES
+- Dual lifts supervised by person with INTERMEDIATE RIGGER QUALIFICATION
+- Licences for work platforms (EWP) or training evidence
+- VISUAL VERIFICATION of all occupational licences required; photocopy kept on file
+- QUALIFIED WELDER to perform welding
+- QUALIFIED ENGINEER to sign off documentation
+- Crane use complies with AS 2550.1
+- EWP use complies with AS 2550.10
+- Fall-arrest harnesses comply with AS 1891 Series
+
+PRE-ERECTION CHECKS:
+- Weight of steel members KNOWN/MARKED ON STEEL
+- Crane CAPABLE OF LIFTING WEIGHTS; all checks and servicing done
+- Field bolted beams bolted together during storage to prevent rolling
+- Rigging configuration meets load requirements for dual lifts
+- All slings have SWL and CURRENT INSPECTION TAGS
+- Ground conditions suitable (level, compacted, outriggers used for slewing cranes, no penetrations or pits in proximity)
+- Site access adequate
+- PROXIMITY TO OVERHEAD POWERLINES considered; appropriate action taken (safety observer where required)
+- EXCLUSION ZONE installed and barricaded with signs
+- WIND CONDITIONS not detrimental to lifting
+- Chains and slings checked
+- Crane radius checked
+- Tag lines supplied
+- Crane fitted with SAFETY HOOK, OVER-HOISTING DEVICE, DEAD-MAN CONTROL ON POWER LOWERING, LOCKOUT CONTROL to prevent free fall
+
+ERECTION CHECKLIST:
+- Double wrap chains where applicable
+- No SUICIDE LIFTING (lifting such that if rigging fails, steel will strike crane and/or operator)
+- Bolts and washers of correct size, type and number
+- Welds per engineering drawings and AS 1554 Set
+- Hand flame cutting PROHIBITED per AS 4100 unless specifically required with engineering detail
+- Bolts pitched at least ONE THREAD CLEAR OF NUT connection
+- Connections using high-strength bolts identified as BEARING TYPE or FRICTION TYPE (preferred)
+- Appropriate washers used
+- STEEL PACKERS ONLY for column
+- Tensioning SEQUENCE AND PATTERN checked; may require re-tensioning after installation
+- Tolerances correct for column base
+- Work area isolated for safety
+- Grout to baseplate prior to installing cladding
+- Guys clearly identified with bunting
+
+ONGOING:
+- All bracing/supporting structure fixing points installed per shop drawings and engineer's requirements
+- Supporting structure adequately braced and structurally sound (engineer to inspect and confirm)
+- Daily inspections and DOCUMENTED WEEKLY CHECKLIST on steel and temporary support systems
+- COMPETENT PERSON to sign off at end of each day's erection sequence
+- TOOLBOX TALK with all relevant parties PRIOR TO WORK COMMENCING EACH DAY
+
+VISUAL INDICATORS:
+- No toolbox talk conducted before each day's erection work begins = non-compliance
+- Suicide lifting rigging configurations in use = serious non-compliance
+- Slings without current inspection tags = non-compliance
+- No exclusion zone installed around erection area = non-compliance
+- Steel erection not supervised by person with minimum basic rigger's qualification = serious non-compliance
+- Dual lift not supervised by person with intermediate rigger qualification = serious non-compliance
+- No documented weekly checklist for steel and temporary supports = non-compliance
+- Workers not signed off SWMS before commencing = non-compliance
+
+---
+
+CHUNK 28: Risk Management — Falls from Heights in Steel Construction
+Section: CoP Appendix 1 (A1.1–A1.5)
+Topic: The four-step risk management process applied specifically to falls from heights in steel construction
+
+RISK MANAGEMENT PROCESS — FOUR STEPS:
+1. IDENTIFY HAZARDS
+2. ASSESS RISKS
+3. CONTROL RISKS
+4. MONITOR AND REVIEW CONTROL MEASURES
+
+HAZARD IDENTIFICATION — FACTORS THAT CAN CAUSE A PERSON TO FALL:
+- Moving from one surface to another
+- Capability of a surface to support a load
+- Openings or holes not identified or protected
+- Open edges that are not protected
+- Slippery surfaces
+- Equipment, tools or rubbish obstructing work areas
+- Incorrect or inappropriate use of ladders
+- Struck by a moving or falling object
+- Fall-arrest systems and devices not provided or not used correctly
+
+RISK ASSESSMENT — FACTORS TO CONSIDER:
+- Likelihood that harm will occur
+- Severity of the harm should it occur
+Including: potential sources of injury; number of people exposed; location of work area and access routes; type of steel construction work; work practices; scheduling; plant and equipment type; training and experience of persons
+
+RISK CONTROL — HIERARCHY:
+- First: assess whether risk can be ELIMINATED
+- If not: SUBSTITUTION
+- If not: other controls in order — isolation, engineering controls, safe work practices, PPE
+
+MONITOR AND REVIEW — must include:
+- Re-doing hazard identification and risk assessment steps
+- Methods: consulting workers; referring to specialist practitioners and industry associations
+- Written record of when control measures were reviewed must be KEPT
+
+VISUAL INDICATORS:
+- No written record of when control measures were reviewed = non-compliance
+- No hazard identification documented before steel erection commences = flag
+- Fall prevention controls not reviewed after incident or near miss = non-compliance
+
+---
+
+CHUNK 29: Engineer's Certification — Rigger's Post Systems
+Section: CoP Appendix 7
+Topic: Requirements and format for engineer certification of rigger's post fall-arrest systems
+
+ENGINEER CERTIFICATION REQUIREMENT:
+An engineer's certification letter must:
+- Certify that the steel structure will support the rigger's post system as detailed
+- Be based on LOADINGS AND INFORMATION supplied by the steel erector regarding the rigger's post system (steel erector must provide engineer-verified rigger's post loadings)
+- Specify conditions (examples): maximum permissible wind speed during erection; maximum number of workers attached to static line at any one time; minimum number and type of anchors per column
+
+CERTIFICATION MUST BE PREPARED BY:
+- Registered Professional Engineer of Queensland (RPEQ) or equivalent qualified engineer
+- Certifier must confirm structure at proposed stage of construction can support the system
+
+DOCUMENTATION AVAILABILITY:
+- Engineer's certification must be AVAILABLE ON SITE
+- WHS inspectors may require it
+
+VISUAL INDICATORS:
+- Rigger's post system in use without RPEQ (or equivalent) certification available on site = serious non-compliance
+- Certification does not specify wind speed, worker number, or anchor requirements = incomplete certification
+- Certification not obtained before rigger's post system is erected = non-compliance
+
+---
+
+CHUNK 30: Referenced Technical Standards — Steel Construction
+Section: CoP Appendix 3
+Topic: Key Australian Standards and technical references cited in the Steel Construction Code of Practice
+
+KEY STANDARDS REFERENCED:
+- AS 1418 Set: Cranes, hoists and winches
+- AS/NZS 1554 Set: Structural steel welding
+- AS/NZS 1576.1: Scaffolding — General requirements
+- AS 1657: Fixed platforms, walkways, stairways and ladders — Design, construction and installation
+- AS/NZS 1891 Series: Industrial fall-arrest systems and devices
+- AS/NZS 1892 Series: Portable ladders
+- AS 2550 Set: Cranes, hoists and winches — Safe use
+- AS 2550.1: Cranes, hoists and winches — Safe use — General requirements
+- AS 2550.10: Cranes, hoists and winches — Safe use — EWPs
+- AS 2759: Steel wire rope — Use, operation and maintenance
+- AS 3828: Guidelines for the erection of building steelwork
+- AS 3990: Mechanical equipment — Steelwork
+- AS 4100: Steel structures
+- AS/NZS 1891.2: Industrial fall-arrest systems and devices — Horizontal lifeline and rail systems
+
+OTHER CODES OF PRACTICE RELEVANT TO STEEL CONSTRUCTION:
+- Managing the risk of falls at workplaces CoP
+- Work health and safety consultation, cooperation and co-ordination CoP
+
+---
+
+CHUNK 31: Duties Summary — PCBUs, Officers, Workers and Specialty Parties
+Section: CoP Appendix 4; WHS Act s19, s21, s22, s23, s25, s26, s27, s28, s29; WHS Regulation s314, s315
+Topic: Summary of all legal duties applicable to steel construction work
+
+PCBU PRIMARY DUTY (WHS Act s19):
+- Must ensure health and safety of: (a) workers engaged or caused to be engaged, and (b) workers directed or influenced by the PCBU; so far as reasonably practicable
+- Must ensure health and safety of OTHER PERSONS is not put at risk from work carried out
+
+PERSON WITH MANAGEMENT OR CONTROL OF FIXTURES, FITTINGS OR PLANT (WHS Act s21):
+- Must ensure, so far as reasonably practicable, that fixtures, fittings and plant are WITHOUT RISKS to health and safety of any person
+
+DESIGNERS (WHS Act s22):
+- Must ensure plant, substance or structure is DESIGNED TO BE WITHOUT RISKS to health and safety
+- Applies to structures and plant used as or at a workplace
+
+MANUFACTURERS (WHS Act s23):
+- Must ensure plant, substance or structure is MANUFACTURED TO BE WITHOUT RISKS to health and safety
+
+SUPPLIERS (WHS Act s25):
+- Must ensure plant, substance or structure is WITHOUT RISKS to health and safety
+
+ERECTORS AND INSTALLERS (WHS Act s26):
+- Must ensure, so far as reasonably practicable, that the way in which plant or structure is INSTALLED, CONSTRUCTED OR COMMISSIONED ensures it is without risks to: those who install it; those who use it; those carrying out any reasonably foreseeable activity; anyone in the vicinity
+
+OFFICERS (WHS Act s27):
+- Must exercise DUE DILIGENCE to ensure business or undertaking complies with WHS Act and Regulation
+- Includes taking reasonable steps to ensure appropriate resources and processes are in place
+
+WORKERS (WHS Act s28):
+- Must take reasonable care for own health and safety
+- Must not adversely affect health and safety of others
+- Must comply with reasonable instructions
+- Must cooperate with reasonable WHS policies and procedures
+
+OTHER PERSONS AT WORKPLACE (WHS Act s29):
+- Must take reasonable care for own health and safety
+- Must not adversely affect health and safety of others
+- Must comply with reasonable instructions from PCBU
+
+PRINCIPAL CONTRACTOR — CONSTRUCTION PROJECT (WHS Regulation s314):
+Must put in place arrangements for compliance with requirements covering:
+- General working environment
+- First aid
+- Emergency plans
+- Personal protective equipment
+- Managing risks from airborne contaminants
+- Hazardous atmospheres
+- Storage of flammable or combustible substances
+- Falling objects
+- Falls (Part 4.4)
+
+PRINCIPAL CONTRACTOR — RISK MANAGEMENT (WHS Regulation s315):
+Must manage risks associated with:
+- Storage, movement and disposal of construction materials and waste
+- Storage of plant not in use
+- Traffic in the vicinity of the workplace
+- Essential services at the workplace
+
+VISUAL INDICATORS:
+- No arrangements for first aid, emergency plans or fall management by principal contractor = non-compliance
+- Erector or installer not ensuring structure is installed without risks to health and safety = non-compliance
+- No evidence of officer due diligence steps = flag

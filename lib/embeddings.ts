@@ -36,8 +36,8 @@ export async function searchDocuments(
   const { data, error } = await supabase.rpc('match_documents', {
     query_embedding: embedding,
     match_count: matchCount,
-    filter_region: region,
-    filter_work_types: workTypes.length > 0 ? workTypes : null,
+    match_region: region,
+    match_work_types: workTypes.length > 0 ? workTypes : null,
   })
 
   if (error) throw new Error(`match_documents RPC failed: ${error.message}`)

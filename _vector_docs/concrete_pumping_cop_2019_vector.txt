@@ -1,0 +1,837 @@
+DOCUMENT: Concrete Pumping Code of Practice 2019
+TYPE: Approved Code of Practice
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: concrete_pumping, construction, plant_equipment, working_at_heights, traffic_management, electrical
+SOURCE: Workplace Health and Safety Queensland, Office of Industrial Relations
+PUBLICATION_NO: PN12522
+CURRENT AS AT: 1 September 2023 (varied)
+COMMENCED: 2 December 2019
+CLAUSE_PREFIX: s (WHS Act / WHS Regulation references); section numbers within CoP
+
+---
+
+CHUNK 1: Definition and Scope — What is Concrete Pumping?
+Section: CoP s1.1, WHS Regulation s289
+Topic: Types of concrete pumping operations and when they constitute construction work
+
+CONCRETE PUMPING includes:
+(a) A TRUCK-MOUNTED LINE PUMP — pumping concrete through flexible hoses that run along the ground
+(b) A TRUCK-MOUNTED MOBILE CONCRETE PLACING BOOM — pumping concrete through pipework supported by a multi-staged boom
+(c) A SATELLITE CONCRETE PLACING BOOM — a fixed or trailer-mounted pump pumping concrete through pipework to a boom fixed to the structure being built (pump at ground level, boom climbs with building)
+
+Concrete pumping is GENERALLY DEFINED AS CONSTRUCTION WORK under WHS Regulation s289.
+
+Construction work means any work carried out in connection with construction, alteration, conversion, fitting-out, commissioning, renovation, repair, maintenance, refurbishment, demolition, decommissioning or dismantling of a structure.
+
+Concrete pumping may include HIGH RISK CONSTRUCTION WORK requiring a SWMS, including:
+- Work at height >2m
+- Work near tilt-up or precast concrete
+- Work in or adjacent to a road, railway, or traffic corridor
+- Work in an area with movement of powered mobile plant
+
+VISUAL INDICATORS:
+- Truck-mounted pump with extending multi-section boom present on site = mobile concrete placing boom operation
+- Fixed tall tower-like structure with boom attached to building structure = satellite concrete placing boom
+- Pump unit with hoses running along ground only, no boom = line pump operation
+- Any concrete pumping operation = construction work; SWMS required if high risk construction work involved
+
+---
+
+CHUNK 2: Licensing — Concrete Placing Boom Operators
+Section: CoP s3.1.3, s4.3.2; WHS Regulation s316, s317
+Topic: High risk work licence requirements for concrete pump and boom operators
+
+MANDATORY REQUIREMENT:
+Operators of concrete placing booms MUST hold the HIGH RISK WORK LICENCE — "Licence to operate a concrete placing boom" (also referred to as "Licence to operate a concrete pumping boom").
+
+A PCBU MUST NOT direct or allow a person to operate a concrete placing boom without this licence.
+
+GENERAL CONSTRUCTION INDUCTION (White Card):
+All workers carrying out construction work must have successfully completed general construction induction training (White Card). Workers who completed training more than 2 years ago must have carried out construction work in the preceding 2 years.
+
+OPERATOR KNOWLEDGE REQUIREMENTS — the concrete pump operator must know:
+- The model of plant, its characteristics, functions and limitations
+- Contents of the operating manual
+- Proper inspection and maintenance procedures
+- Site conditions affecting operations, including overhead powerlines and nearby structures
+
+OPERATOR MUST NOT perform the task of the line hand located at the end of the concrete delivery line.
+
+In satellite boom installations:
+- The BOOM OPERATOR is responsible for safe operation of the boom but cannot monitor the hopper
+- The PUMP OPERATOR (at the pump) cannot monitor the boom — both positions must be separately staffed
+
+VISUAL INDICATORS:
+- Boom operator unable to produce high risk work licence = serious non-compliance
+- Single operator attempting to manage both boom and hopper on satellite installation = non-compliant
+- Worker directing concrete delivery without evident training or authority = flag
+
+---
+
+CHUNK 3: Design Registration — Concrete Placing Booms
+Section: CoP s2.2; WHS Regulation s243, s244, s245
+Topic: Plant design registration requirements for concrete placing booms
+
+MANDATORY REQUIREMENT:
+The DESIGN of a concrete placing boom MUST be registered with the regulator before use (Schedule 5, Part 1 of the WHS Regulation).
+
+An ALTERED DESIGN must also be registered if the alteration may affect health or safety.
+
+Design registration is not required if already registered under a corresponding WHS law in another jurisdiction.
+
+A concrete placing boom MUST be designed by an ENGINEER in accordance with acceptable engineering principles and relevant technical standards.
+
+APPLICATION for design registration must include:
+(a) A DESIGN VERIFICATION STATEMENT — written and signed by an eligible design verifier
+(b) REPRESENTATIONAL DRAWINGS of the concrete placing boom
+(c) The appropriate FEE
+
+INELIGIBLE design verifiers — the following CANNOT verify a design:
+- A person who was involved in the production of the design
+- A person who was engaged by the PCBU that produced the design at the time of production
+
+A certificate of registrable plant design STOPS HAVING EFFECT if the design is changed in a way that requires new risk control measures.
+
+Suppliers MUST provide the purchaser with the DESIGN REGISTRATION NUMBER when supplying a concrete placing boom.
+
+VISUAL INDICATORS:
+- Compliance plate on boom showing design registration number = positive indicator
+- No compliance/registration plate visible on concrete placing boom = flag — may be unregistered plant
+- Plant modified/welded without evidence of re-registration = potential non-compliance
+
+---
+
+CHUNK 4: Satellite Concrete Placing Boom — Design Requirements
+Section: CoP s2.1
+Topic: Engineering design requirements for satellite boom installations
+
+Satellite concrete placing boom installations MUST be DESIGNED BY AN ENGINEER in accordance with engineering principles or relevant technical standards (including AS/NZS 1170.2 — Structural Design Actions: Wind Actions).
+
+FOOTINGS AND FOUNDATIONS must consider:
+- Placing boom type
+- Freestanding height
+- Wind speed (per AS/NZS 1170.2)
+- Ground bearing capacity
+- Anchors
+
+STAGING (the installation as the boom climbs up through the building structure) must consider:
+- Placing boom type and configuration
+- Freestanding height
+- Wind speed (per AS/NZS 1170.2)
+- Distance between floor frames
+- Levels of back propping
+- Imposed loads on supporting structure
+
+JUMP FORM installations must consider:
+- Placing boom type and configuration
+- Structural adequacy of connections
+- Wind speed (per AS/NZS 1170.2)
+- Imposed loads on jump form and supporting structure
+
+JUMPING THE BOOM (raising the tower height as building height increases):
+- Workers must be TRAINED in the manufacturer's instructions
+- Workers must have received DOCUMENTED FAMILIARISATION TRAINING specific to the make and model of satellite boom
+
+VISUAL INDICATORS:
+- Satellite boom present on multi-storey building = engineer-certified design required; confirm engineering documentation on site
+- Workers jumping the boom without documented familiarisation training = non-compliance
+- No evidence of back propping levels or engineering specifications visible = flag
+
+---
+
+CHUNK 5: Safe Work Method Statements (SWMS) for Concrete Pumping
+Section: CoP s1.4; WHS Regulation s299
+Topic: When a SWMS is required for concrete pumping operations
+
+A SWMS MUST be prepared BEFORE high risk construction work commences.
+
+Concrete pumping operations commonly trigger the following HIGH RISK CONSTRUCTION WORK categories:
+- Work at height >2m (e.g. elevated slabs, elevated boom positions)
+- Work involving tilt-up or precast concrete
+- Work on, in or adjacent to a road, railway or traffic corridor in use by traffic
+- Work in an area with movement of powered mobile plant
+- Work in or near a trench/shaft >1.5m deep
+
+The SWMS MUST:
+(a) Identify the type of high risk construction work being done
+(b) Specify health and safety hazards and risks arising from the work
+(c) Describe how risks will be controlled
+(d) Describe how control measures will be implemented, monitored and reviewed
+
+A SWMS MUST be developed in consultation with workers and their representatives who are carrying out the high risk work.
+
+The SWMS for concrete pumping should also ensure that:
+- People not involved in concrete pumping are excluded from the work area
+- People in the concrete delivery area wear HIGH VISIBILITY VESTS
+- Concrete trucks have AUDIBLE REVERSING ALARMS and FLASHING AMBER LIGHTS
+- Permits are obtained from the relevant authority where concrete pumps are set up on or adjacent to public roads
+- Lane closures, signs, speed restrictions and barriers comply with the MUTCD
+
+VISUAL INDICATORS:
+- SWMS not available on site for concrete pumping operations involving high risk work = non-compliance
+- Workers carrying out concrete pumping without evident SWMS for roadside setup = non-compliant
+- Delivery trucks without audible reversing alarms = non-compliant
+
+---
+
+CHUNK 6: Principal Contractor and PCBU Planning Duties
+Section: CoP s3.2, s3.3; WHS Act s19
+Topic: Pre-operational planning obligations for the PC and concrete pumping PCBU
+
+PRINCIPAL CONTRACTOR or person in control of the workplace MUST consult with the concrete pumping PCBU regarding risks, and ensure:
+- The concrete pump is located to allow adequate visual contact for the operator with both the pump and the pour area
+- A clear, level area of ground with a firm base capable of supporting the pump unit and concrete delivery trucks is available
+- Appropriate traffic control measures are in place for concrete delivery
+- Clear access to the pump unit for concrete trucks
+- Safe and unobstructed access for the general public to any public areas near the pump setup
+- A time schedule is set based on realistic assessment of completion time
+- A clearly defined PUMP WASHOUT AREA complying with environmental protection legislation is identified
+- A method to collect concrete residue and prevent washdown residue from entering stormwater drains is in place
+
+CONCRETE PUMPING PCBU must also consider:
+- Adequate number of workers to safely pump concrete and operate emergency shutdown
+- Concrete mix pumpability (confirmed with mix supplier)
+- Location of in-ground and above-ground services (including powerlines)
+- Environmental factors including wind conditions
+- Manual task risks (musculoskeletal)
+- Provision of PPE and safety equipment
+- Maintenance log books kept on the pump and available on request at the workplace
+
+CONCRETE PLACING BOOMS MUST NOT be set up or operated:
+- Over designated worker access ways without a GANTRY rated to AT LEAST 10kPa
+- Over site sheds (amenities, lunchrooms, any shed with workers) without a GANTRY rated to AT LEAST 10kPa
+
+VISUAL INDICATORS:
+- Pump set up directly over site shed or lunch room without gantry = serious non-compliance
+- Pump set up over worker access path without rated gantry = non-compliant
+- No washout area apparent = flag for environmental and site management issues
+- Maintenance logbook not available on site = non-compliant
+
+---
+
+CHUNK 7: Outrigger Stability — Ground Conditions and Proximity to Excavations
+Section: CoP s4.2.2, s4.2.2.1, s4.2.2.2
+Topic: Ground stability requirements for mobile concrete placing booms — proximity to excavations (KEY MEASUREMENTS)
+
+GENERAL RULE — pump must NOT be positioned over or adjacent to:
+- Previously disturbed backfilled ground
+- Excavations, trenches or holes in the ground
+- Cellars, basements or pits
+- Inadequately compacted or soft ground
+
+PROXIMITY TO EXCAVATIONS AND TRENCHES — EXACT RULES:
+
+COMPACT, NON-FRIABLE GROUND (1:1 RULE):
+The closest edge of outrigger timbers or pads must be a horizontal distance of AT LEAST EQUAL TO THE DEPTH OF THE EXCAVATION from the closest edge of the excavation wall.
+Example: 3m deep trench → outrigger timbers must be at least 3m horizontally from the trench edge.
+
+LOOSE OR BACKFILLED GROUND (2:1 RULE):
+The closest edge of outrigger timbers or pads must be a horizontal distance of AT LEAST TWICE THE DEPTH OF THE EXCAVATION from the closest edge of the excavation wall.
+Example: 3m deep trench in backfill → outrigger timbers must be at least 6m from the trench edge.
+
+Additional ground hazard factors:
+- Water present in or under ground (tidal range, underground springs, mud) = reduced bearing capacity
+- Ground with surface "crust" over softer sub-surface = risk of sudden outrigger penetration and pump overturn
+- Back-filled ground (previously excavated) = treated as loose/crumbling
+- Continued pump operation in one location = progressive ground compaction risk; check stability frequently
+- Presence of "slippery back" (natural slip plane/fracture) = increases excavation collapse risk
+
+VISUAL INDICATORS:
+- Mobile boom pump set up adjacent to an open excavation without visible distance checking = flag
+- Outrigger pads close to trench edge in clearly disturbed/backfilled ground = serious non-compliance risk
+- Ground visibly soft, wet or muddy under or near outrigger pads = flag for stability
+- Outrigger pads sinking or tilting = immediate non-compliance; pump at risk of overturn
+
+---
+
+CHUNK 8: Outrigger Timbers, Pads and Ground Pressure Calculations
+Section: CoP s4.2.2.3, s4.2.2.4; Table 1
+Topic: Timber/pad specifications and maximum permissible ground pressures (KEY MEASUREMENTS AND TABLE)
+
+TIMBER AND PAD MINIMUM SPECIFICATIONS:
+- Timbers: MINIMUM WIDTH 200mm and MINIMUM THICKNESS 75mm
+- Timbers must be laid together so the width of the timber pad is WIDER THAN THE OUTRIGGER FOOT with NO GAPS between timbers
+- Pads: MINIMUM THICKNESS 75mm
+- Steel plate or bog mats may be used for particularly poor ground
+- Where manufacturer does not specify dimensions, a COMPETENT PERSON (engineer) must specify minimum sizes
+
+MAXIMUM PERMISSIBLE GROUND PRESSURES (Table 1):
+
+Ground Type                              | Max Permissible Pressure (t/m²)
+-----------------------------------------|--------------------------------
+Hard rock                                | 200
+Shale rock and sandstone                 | 80
+Compacted gravel (with up to 20% sand)   | 40
+Asphalt                                  | 20
+Compacted sand                           | 20
+Stiff clay (dry)                         | 20
+Soft clay (dry)                          | 10
+Loose sand                               | 10
+Wet clay                                 | Less than 10
+
+CALCULATION FORMULAE:
+- Pressure applied by outrigger: Pout = Force / Area
+- Force applied by outrigger: F = Pout × Area
+- Minimum area of timbers: Area = F / Pout (or F / PMAX)
+
+EXAMPLE: A 25t maximum outrigger load on compacted gravel (PMAX = 40t/m²):
+- Minimum area = 25 / 40 = 0.625m²
+- Minimum timber length and width = √0.625 = 0.79m (790mm each side)
+
+VISUAL INDICATORS:
+- Outrigger pads/timbers clearly undersized relative to ground type visible = flag
+- Single small timber pad on visibly soft or wet ground = non-compliant
+- Timbers laid with visible gaps between them = non-compliant
+- No timbers or pads used at all on soft ground = serious non-compliance
+
+---
+
+CHUNK 9: Short Legging — Partially Extended Outriggers
+Section: CoP s4.2.2.5
+Topic: Requirements and restrictions for operating a concrete placing boom with outriggers not fully extended
+
+SHORT LEGGING is the use of mobile plant when one or more outrigger legs is only PARTIALLY extended or deployed. Short legging significantly increases the risk of plant overturn and should be AVOIDED wherever practicable.
+
+If short legging is unavoidable, the following MUST be in place:
+(a) The MANUFACTURER'S OPERATING MANUAL must explicitly state that short legging is PERMITTED for that unit — if not stated, short legging must not occur
+(b) Manufacturer's operating instructions for short legging must be followed, including any restricted operating areas for the boom
+(c) Outriggers must be MARKED with indicators showing the extent of short legging (marks on outriggers OR diagrams in the operator's manual showing required extension distance)
+(d) A DOCUMENTED SAFE WORK PROCEDURE must be prepared, including a DIAGRAM showing the permissible operating zone of the concrete placing boom
+(e) The safe work procedure must be provided to and assessed by the PRINCIPAL CONTRACTOR or person with management or control of the worksite
+(f) If fitted, the unit must have a SLEW LIMITING DEVICE that prevents the boom or counterweight swinging into the overturning risk zone — operator must be trained in its use
+
+Stability MUST be maintained during:
+- Set up
+- Operation
+- Pack up
+- Pipeline cleaning
+
+VISUAL INDICATORS:
+- Outriggers visibly not fully extended on one or more sides = short legging; check for documented SWP and manufacturer's authorisation
+- No slew limiting device visible on unit with short-legged outriggers = elevated risk flag
+- Boom operating in zone toward the short-legged side = serious non-compliance risk
+
+---
+
+CHUNK 10: Working Near Overhead Powerlines — Exclusion Zones
+Section: CoP s4.2.3; ES Regulation s68, s69; ES Act s30
+Topic: Exclusion zone requirements for concrete placing boom operations near overhead powerlines (KEY MEASUREMENTS)
+
+GOVERNING LEGISLATION:
+- Electrical Safety Act 2002 (ES Act) — general electrical safety duties
+- Electrical Safety Regulation 2013 (ES Regulation) — exclusion zone requirements
+- Electrical safety code of practice — working near overhead and underground electric lines
+
+OVERRIDING PRINCIPLE — ELIMINATE FIRST:
+The most effective control is to TURN OFF THE POWER (de-energise) or RE-ROUTE the powerline. This must be considered and arranged with the electricity entity BEFORE implementing any other control. Written confirmation from the person in control of the powerline must be obtained before working where powerlines have been de-energised.
+
+EXCLUSION ZONES — MINIMUM SAFE DISTANCES:
+- AT LEAST 3 METRES from any overhead powerline for voltages UP TO 132kV
+- GREATER distances apply for voltages ABOVE 132kV
+- These distances apply to ANY PART of the concrete placing boom and/or the drop hose (not just the truck body)
+
+Additional distance factors to account for:
+- SAG of powerlines (varies with temperature)
+- SWAY of powerlines (caused by wind)
+- BOUNCE and movement of the boom during pump pulsing
+
+CONCRETE PLACING BOOMS MUST NOT be operated OVER THE TOP of energised powerlines because:
+- The boom shape and height does not allow adequate separation distance
+- Boom movement due to pumping motion, wind and bounce
+- Spotters cannot accurately judge clearance from ground level
+
+SPOTTER (safety observer) REQUIREMENTS:
+When there is risk of the boom entering the exclusion zone, a trained SAFETY OBSERVER (SPOTTER) must be appointed who:
+- Has specific training and competency in observing and warning the pump operator
+- Understands exclusion zones and the limits of the concrete pump's movements
+- Understands relevant traffic management guidelines and the MUTCD
+- Remains in clear communication with the pump/vehicle operator at all times
+- Understands escape routes and maintaining visibility around moving plant
+
+PIPE SETTING UP NEAR POWERLINES:
+Pipes must be kept PARALLEL TO THE GROUND when setting up or unloading near overhead powerlines.
+
+VISUAL INDICATORS:
+- Any part of boom or drop hose within 3m of overhead powerline = serious non-compliance
+- Boom operating over or across energised powerlines = serious non-compliance
+- No spotter present when boom operating near powerlines = non-compliant
+- Tiger tails/line markers on wires DO NOT insulate them — exclusion zone still applies regardless of tiger tails
+- No visible exclusion zone markers or signage near powerlines = flag
+
+---
+
+CHUNK 11: Hose Whip — Risk Controls and Safe Work Practices
+Section: CoP s4.1.4
+Topic: Hose whip hazard controls including line hand working surface requirements (KEY MEASUREMENTS)
+
+HOSE WHIP is the uncontrolled and rapid motion of the flexible rubber hose on the end of a concrete placing boom or other concrete delivery line. Persons can be injured by:
+- Being struck directly by the whipping hose
+- Being knocked over and hitting the ground or an object
+- Being hit by ejected material
+
+Hose whip is most violent when AIR enters the line and becomes pressurised due to an obstruction, then the obstruction is suddenly dislodged.
+
+MANDATORY CONTROLS:
+- NEVER use a rubber delivery hose with METAL FITTINGS attached to the free end
+- NEVER STRETCH the delivery hose if it doesn't reach the pour location — use a longer boom or move the pump closer
+- Do NOT let MORE HOSE hang from the boom than the manufacturer allows — normally a MAXIMUM OF 3 TO 4 METRES of 125mm diameter hose can be suspended from the boom
+- Pump concrete only when the hopper grate is in the CLOSED POSITION
+- Monitor concrete level in the hopper at all times to prevent air being sucked in
+- Clean out the concrete line with WATER in preference to AIR
+
+AIR LINE CLEANING — if no other option:
+- Secure the end of the steel line
+- Establish an EXCLUSION ZONE
+- Remove ALL REDUCERS AND RUBBER HOSE from the end of the delivery line
+- Fit a BALL CATCHER to the end of the steel pipe to contain the blow-out plug (sponge)
+
+LINE HAND WORKING SURFACE:
+- The width of the working surface for the line hand must be AT LEAST 450mm
+- The line hand MUST NOT stand on block walls or next to unprotected edges
+
+DELIVERY HOSE — safe practices:
+- Only use pumpable concrete mix as specified by concrete supplier — unpumpable mix causes blockages and hose whip
+- Do not let concrete solidify in the line (must remain in plastic state)
+- Start the pump UP SLOWLY to reduce likelihood of hose whip
+- People not involved in the pour should be EXCLUDED from the delivery hose area
+- The delivery hose on a boom pump should hang CLOSE TO VERTICAL and only be guided by the line hand
+
+VISUAL INDICATORS:
+- Line hand standing on block wall or at unprotected edge = serious non-compliance
+- Working surface for line hand visibly less than 450mm wide = non-compliant
+- Workers stretching the delivery hose to reach further = unsafe work practice — non-compliant
+- Rubber hose with metal fittings on free end = non-compliant
+- More than 3–4m of 125mm hose suspended from boom = flag — check manufacturer's specification
+- No hopper monitoring in place and pump running = hose whip risk
+
+---
+
+CHUNK 12: Concrete Pipeline Restraint — Anchor Brackets and Pipe Clamps
+Section: CoP s4.1.3
+Topic: Pipeline and restraint equipment requirements including anchor bracket spacing and pipe clamp standards
+
+ANCHOR BRACKETS — MANDATORY REQUIREMENTS:
+- Anchor brackets and tie-downs must be used at intervals of NO MORE THAN 3 METRES APART, unless otherwise specified by a competent person
+- The number of bolts must be in accordance with pump manufacturer's specifications or an engineer's advice
+
+ANCHOR TYPES — specific requirements:
+- FRICTION TYPE post-installed anchors: must be high-load slip, torque-controlled type with a FACTOR OF SAFETY OF 3:1 based on failure load
+- CHEMICAL ANCHORS: must be pull-out load tested to 125% OF THEIR WORKING LOAD and have a FACTOR OF SAFETY OF 3:1
+- OVERHEAD ANCHORS (bracket anchors loaded in pure tension): through-bolts extending through the concrete slab are PREFERRED over post-installed anchors. If post-installed anchors are used overhead, they MUST ALL be pull-out load tested to 125% OF THEIR WORKING LOAD
+
+CONCRETE PIPELINES — laying requirements:
+- Avoid unnecessary bends
+- Horizontal pipelines must be adequately supported
+- Flexible hoses must not be at risk of being run over by plant
+- Vertical lines must be positively secured to the building
+- The 90° bend at the base of a vertical line must have a leg sitting firmly on the ground to prevent movement
+- CRANES, HOIST TOWERS, SCAFFOLDING OR FORMWORK must NOT be used to secure the line — they are not capable of taking the pumping impact load
+
+PIPE CLAMPS — requirements:
+- Pipe clamps must sustain the MAXIMUM CONCRETE PRESSURE applied by the pump
+- LOCKING PINS must be used and engaged
+- All clamps must be regularly inspected by a competent person for signs of wear and fatigue
+- Deformed or damaged clamps must be IMMEDIATELY REPLACED
+- Quick release clamps with NO PROVISION FOR LOCKING PINS must NOT be used
+- Clamps must NOT be locked by hammering the quick release lever (causes metal fatigue)
+- Pipe clamps must be clearly marked with manufacturer, pressure rating and size
+
+HOPPER GRATE — protection of dangerous moving parts:
+- A GRATE must be provided to prevent access to the agitator mechanism and valve gear ("S-tube" or "rock valve")
+- Grate bars must be spaced so a person's hand CANNOT become trapped — spacing MUST NOT EXCEED 75mm
+- Distance from TOP OF GRATE to any moving parts must be AT LEAST 100mm
+- Hopper grates designed to open must be fitted with an INTERLOCK SYSTEM that de-activates paddles and valve gear when the grate is lifted
+
+VISUAL INDICATORS:
+- Anchor brackets visible at intervals greater than 3m with no engineer's specification justifying this = non-compliant
+- Pipeline secured to scaffolding or crane tower = non-compliant
+- Pipe clamps without visible locking pins = non-compliant
+- Damaged, deformed or visibly worn pipe clamps = non-compliant
+- Hopper grate open or missing during operation = serious non-compliance
+- Grate bars with spacing exceeding 75mm = non-compliant
+
+---
+
+CHUNK 13: Pump Setup — Concrete Delivery, Hopper and Truck Reversing
+Section: CoP s4.3.1; WHS Regulation s214, s215
+Topic: Safe concrete delivery procedures including truck reversing, hopper access and spotter requirements
+
+CONCRETE DELIVERY TRUCKS MUST:
+- Have CLEAR AND SAFE access to approach and leave the receiving hopper
+- Be fitted with FLASHING HAZARD LIGHTS activated when in reverse
+- Be fitted with AUDIBLE REVERSING DEVICES
+- NOT reverse into the exclusion zone if the driver cannot see the spotter — the vehicle must STOP IMMEDIATELY when the driver loses sight of the directing person
+
+NO PERSON must stand BETWEEN a reversing concrete delivery truck and the hopper.
+
+When MORE THAN ONE TRUCK is approaching the hopper:
+- A SPOTTER OR TRAFFIC CONTROLLER must be on hand to safely direct truck movements
+- The spotter must STAY IN VIEW of the concrete truck driver while the truck is moving — if the spotter is out of view, the truck driver must STOP
+- Adequate room must be available for the truck driver to operate safely
+
+CONCRETE CHUTE on delivery trucks:
+- Must only be moved when the truck is STATIONARY
+- Preferably moved by the truck driver — if another worker moves it, the driver's permission must be obtained first
+
+HOPPER RAMP requirements (where used for low slump concrete):
+- Must be designed to ensure the truck CANNOT BACK OFF the ramps
+- Must ensure the truck remains stable
+- Must have a NON-SLIP SURFACE
+
+RECEIVING HOPPER:
+- Must be positioned to receive gravity flow from the concrete delivery truck's discharge chute
+- EMERGENCY STOP BUTTON must be accessible to the concrete pump operator
+- Grate must prevent access to moving parts — bar spacing MUST NOT EXCEED 75mm
+- Distance from top of grate to any moving part must be AT LEAST 100mm
+
+SATELLITE BOOM DELIVERY AREAS must have demarcation barriers on all sides except the entry side for the concrete truck. Signs must read 'CONCRETE DELIVERY AREA — STAY OUT' or words to that effect.
+
+VISUAL INDICATORS:
+- Concrete truck reversing without audible alarm = non-compliant
+- Person standing between reversing truck and hopper = serious non-compliance
+- No spotter present with multiple trucks manoeuvring = non-compliant
+- No barriers or exclusion zone signage around satellite boom delivery area = non-compliant
+- Hopper grate open or absent during pump operation = serious non-compliance
+
+---
+
+CHUNK 14: Concrete Line Blockages — Detection, Clearing and Safety
+Section: CoP s4.3.5
+Topic: Safe procedures for identifying and clearing concrete line blockages
+
+CAUSES OF BLOCKAGES include:
+- Mix too stiff or too wet, poor mixing, aggregate too large
+- Misaligned connections, excessive bends, too many reducers, leaking joint rubbers
+- Excessive component wear causing loss of water/lubrication
+- Kinked discharge hose
+- Worn hose with dislodged metal reinforcement chords
+- Foreign matter in concrete (old concrete, clumps of unmixed cement, oversized aggregate)
+- Delays between concrete delivery trucks causing material separation
+
+DETECTING A BLOCKAGE:
+- PRESSURE GAUGE reading rising = line resistance increasing = probable blockage
+- RAPID pressure build-up = blockage near the pump (likely in the reducer)
+- SLOW pressure build-up = blockage in the pipeline, possibly near the delivery end
+- Leaking pipe joints = grout loss = possible blockage location
+- Compressing the rubber hose by standing on it = if the hose compresses, blockage is in the delivery line
+
+CLEARING BLOCKAGES — safe procedure:
+(a) Reverse the pump briefly — can break minor aggregate jams; do NOT reverse more than a few times as it can tighten the blockage
+(b) EXCLUDE all workers from the pipeline area except those clearing the line
+(c) Ensure the line is NO LONGER UNDER PRESSURE before opening any coupling — reverse the pump to reduce pressure first
+(d) Never STRADDLE a horizontal line when opening a coupling — stand to one side
+(e) If pressurisation is used to clear the blockage:
+   - EXCLUDE all workers from the vicinity of the line and hose
+   - RESTRAIN the hose from movement
+   - Attach a CATCHMENT DEVICE or properly designed receptacle to the discharge end
+   - Workers MUST NEVER try and restrain the hose with their body
+
+LINE DIAMETER RULE: The pipeline diameter should be THREE TO FOUR TIMES GREATER than the maximum aggregate size.
+
+VISUAL INDICATORS:
+- Worker straddling a pressurised horizontal pipeline = serious non-compliance
+- Workers attempting to disconnect pipeline connections without confirming pressure relief = serious non-compliance
+- No catchment device or exclusion zone when using pressure to clear a blockage = non-compliant
+
+---
+
+CHUNK 15: Line and Pump Cleaning — Safe Procedures
+Section: CoP s4.3.6, s4.3.7
+Topic: Safe line cleaning and pump hopper cleaning procedures
+
+LINE CLEANING — RISK:
+Line cleaning using high pressure water or air can cause dislodged concrete to act as a high-velocity projectile, potentially striking workers and members of the public.
+
+LINE CLEANING — MANDATORY CONTROLS:
+- Only EXPERIENCED AND TRAINED pumping personnel may carry out line cleaning
+- Use WATER in preference to AIR to minimise projectile risk
+- There MUST ALWAYS be a connection to atmosphere (AIR RELIEF VALVE) and an air entry point — allows system to be depressurised before pipeline is removed
+- NEVER attempt to dismantle or remove pipeline connections until pressure has been confirmed relieved
+- The pump operator MUST remain at pump controls while the pipeline is pressurised
+- ALWAYS REMOVE THE RUBBER DELIVERY HOSE from the end of the pipeline before cleaning
+- SECURE all parts of the pipeline to prevent movement during purging
+- Attach a POSITIVE CATCHMENT DEVICE to the discharge end to safely catch the cleaning device while still allowing concrete to flow
+- Keep all workers away from the discharge end while under pressure
+- Restraint of concrete lines by attachment to the concrete truck's LADDER is NOT AN ADEQUATE CONTROL
+
+PUMP (HOPPER) CLEANING — RISK:
+Entanglement, crushing and amputation hazards exist in the concrete hopper and pumping device.
+
+PUMP CLEANING — MANDATORY CONTROLS:
+- A PHYSICAL BARRIER must be fitted and maintained at all times during operation to prevent contact with moving parts
+- If a worker must enter the hopper for cleaning:
+  - Equipment MUST BE SHUT DOWN
+  - All accumulated hydraulic or air pressure MUST BE EXHAUSTED so elements cannot move, even with the engine stopped
+  - Cleaning must only be done when ANOTHER PERSON is in the immediate vicinity to provide assistance
+
+VISUAL INDICATORS:
+- Pipeline connections being removed without evident pressure relief procedure = serious non-compliance
+- Rubber hose still attached to end of line during air purging = non-compliant
+- No catchment device fitted to discharge end during cleaning = non-compliant
+- Worker entering hopper without shutdown of equipment = serious non-compliance
+- Pump operator absent from pump controls during pressurised cleaning = non-compliant
+
+---
+
+CHUNK 16: Traffic Control for Concrete Pumping Operations
+Section: CoP s4.2.4; WHS Regulation s214, s315M
+Topic: Traffic control requirements for concrete pumping in or adjacent to public roads
+
+MANDATORY REQUIREMENTS:
+- Where concrete pumps are set up on or adjacent to public roads, PERMITS MUST BE OBTAINED from the relevant authority
+- Written approval must be obtained from the relevant authority or person controlling the adjoining area before construction work starts (WHS Regulation s315M)
+- All powered mobile plant must have a WARNING DEVICE to warn persons at risk from the plant's movement (WHS Regulation s214, s215)
+
+Traffic control measures may include:
+- Road closures
+- Footpath closures
+- Detours
+- Signing
+- Traffic controllers
+
+Where concrete pumping involves MULTIPLE TRUCK DELIVERY, a person SEPARATE FROM any traffic controllers must be responsible for controlling the delivery of concrete trucks.
+
+WORKERS IN THE EXCLUSION ZONE must wear HIGH VISIBILITY VESTS.
+
+Exclusion zone signage must require persons to wear HIGH VISIBILITY VESTS.
+
+Lane closures, speed restriction signing and protective barriers for road-adjacent work MUST comply with the MUTCD (Manual of Uniform Traffic Control Devices).
+
+VISUAL INDICATORS:
+- Pump set up on public road without visible traffic control measures = non-compliant
+- Concrete truck reversing without audible alarm in roadside pumping operation = non-compliant
+- Workers in concrete pumping exclusion zone without high visibility vests = non-compliant
+- Multiple trucks manoeuvring without a dedicated spotter/traffic controller = non-compliant
+- No exclusion zone signs visible at pump setup = non-compliant
+
+---
+
+CHUNK 17: Manual Tasks — Hose Handling and Line Hand Requirements
+Section: CoP s4.2.1; WHS Regulation s60
+Topic: Manual task risk controls for handling concrete delivery hoses (KEY MEASUREMENTS)
+
+HAZARDOUS MANUAL TASK risks associated with concrete hose handling include:
+- Repetitive or sustained force
+- High or sudden force
+- Repetitive movement
+- Sustained or awkward posture
+- Exposure to vibration
+
+LINE HAND STAFFING REQUIREMENTS (by hose diameter):
+
+For pipe diameter 76.2mm (3 inches) or MORE:
+- ONE LINE HAND for every 10 METRES of workable hose
+
+For pipe diameter LESS THAN 76.2mm (3 inches):
+- ONE LINE HAND for every 20 METRES of workable hose
+
+DECK HAZARD CONTROLS when dragging hose over deck:
+- Path must be clear of obvious trip hazards
+- Post-stressing bands and drops or rises on the deck EXCEEDING 400mm HEIGHT should be covered with reinforcement mesh or another suitable product for line hands to walk on
+- Mesh must be of a size where a WORKER'S FOOT CANNOT BECOME CAUGHT
+
+LIGHTING:
+- Where operation of plant is required at night or in LOW LIGHT, ARTIFICIAL LIGHTING must be provided
+
+AUTHORISED PERSONS SIGN:
+- A sign must be posted clearly stating 'DANGER — Concrete Pumping Area — Authorised Persons Only' (or equivalent)
+
+VISUAL INDICATORS:
+- Only one line hand visible on a long hose run of 76.2mm+ pipe = check if adequately staffed
+- Hose dragged over uncovered post-stressing bands or significant deck level changes = flag
+- No site lighting during evening or low-light concrete pump operations = non-compliant
+- No authorised persons signage visible at pump exclusion zone = non-compliant
+
+---
+
+CHUNK 18: Wind Loading — Boom Operation Limits
+Section: CoP s4.3.3
+Topic: Wind speed restrictions for concrete placing boom operation
+
+Mobile and satellite concrete placing booms MUST NOT be operated in winds exceeding the wind speed specified by the MANUFACTURER.
+
+The MAXIMUM PERMISSIBLE WIND SPEED must be:
+- Available ON SITE where the concrete placing boom is being operated
+- Either on the MANUFACTURER'S IDENTIFICATION PLATE on the unit, OR
+- In the OPERATING MANUAL for the unit
+
+Satellite boom design must incorporate wind speed calculations in accordance with AS/NZS 1170.2 (Structural Design Actions — Part 2: Wind Actions).
+
+VISUAL INDICATORS:
+- Boom operating in visibly high wind conditions = flag — confirm operator is aware of manufacturer's wind speed limit
+- No manufacturer's plate or operating manual visible on site = flag — cannot verify wind speed compliance
+- Satellite boom on structure without engineering documentation for wind loading = flag
+
+---
+
+CHUNK 19: Inspection and Maintenance Schedule — Concrete Placing Booms
+Section: CoP s5.1, s5.3, s5.4, s5.5, s5.9, s5.11, s5.12, s5.13
+Topic: Inspection intervals, logbook requirements, pipe testing and defect reporting
+
+INSPECTION INTERVALS:
+- DAILY — pre-operational visual inspection and function test before each work period
+- WEEKLY — preventative maintenance inspection
+- MONTHLY — preventative maintenance inspection
+- ANNUALLY (AT INTERVALS NOT EXCEEDING 1 YEAR) — comprehensive annual safety inspection by a competent person
+- SIX-YEARLY — major inspection (see Chunk 20)
+
+DAILY PRE-OPERATIONAL INSPECTION must include:
+- All functions, controls, speed, smoothness of operation and limits of motion
+- All emergency and safety devices
+- Lubrication of all moving parts, inspection of filter elements, hydraulic oil and coolant
+- Visual inspection of structural components, fasteners, pins, shafts, welds and locking devices
+- Completion of daily inspection checklist including filling out the logbook
+- Checking unauthorised people are not present in the exclusion zone
+
+ANNUAL INSPECTION must include:
+- Function check: boom unfold/fold, slewing, outrigger deployment
+- Checking all joints for adequate lubrication
+- Check of slew ring and bolts
+- Visual inspection of welds, boom sections, linkages, pins, outriggers and turret for cracks, corrosion and damage
+- Visual inspection of all pin retainers and locking devices
+- Inspection of all hydraulic lines (flexible and fixed) for damage and leaks
+- Inspection of hydraulic cylinders for welds, leakage and hard chrome condition
+- Examination of concrete delivery pipeline including pipe clamps, weight, pressure ratings, identification, and correct specification
+- NDT thickness testing where corrosion is evident
+- Checking boom sections and outrigger legs for water ingress
+
+DEFECT REPORTING:
+- Defects must be reported IMMEDIATELY
+- If a defect is a hazard to safety, pumping operations MUST STOP until the defect is repaired
+- All defect details and subsequent actions must be entered into the log book
+
+LOGBOOK REQUIREMENTS:
+- Maintenance log books must be kept ON THE PUMP
+- Log books must be maintained and up-to-date
+- Log books must be available on request at the workplace
+- Must show complete details of all inspections, tests, repairs, replacements and modifications
+
+PIPE TESTING AND MARKING:
+- All pipeline segments must have a PERMANENTLY FIXED UNIQUE IDENTIFICATION MARK before being placed in service
+- SINGLE WALL PIPE: actual wall thickness readings must be taken and recorded in a log book at intervals NOT EXCEEDING ONE MONTH (using a calibrated ultrasonic thickness tester)
+- TWIN WALL PIPE: internal inspections must be carried out to verify wear at the predicted rate; records must be kept in a log book
+- Pipeline with wall thickness less than that specified by the pump manufacturer MUST NOT be used
+
+WARNING AND SAFETY SIGNS:
+- All warning and safety signs/stickers must be in good condition, legible and positioned on all equipment
+
+VISUAL INDICATORS:
+- Logbook not available on site = non-compliant
+- No compliance plate or inspection certification visible on boom = flag — check service status
+- Visibly damaged, cracked or corroded boom sections or welds = flag for immediate inspection
+- Pipeline sections without unique identification marks = non-compliant
+- Safety signs/stickers faded, damaged or missing from pump or boom = non-compliant
+- Defect noted by operator but pumping continued without repair = non-compliant
+
+---
+
+CHUNK 20: Major Inspection — Six-Yearly Requirement for Concrete Placing Booms
+Section: CoP s5.6, s5.7, s5.2
+Topic: Six-yearly major inspection requirements, certification and engineer obligations
+
+FIRST MAJOR INSPECTION: Must be completed NO LATER THAN 6 YEARS after the concrete placing boom was first commissioned (or 6 years from date of manufacture if commissioning date is unknown).
+
+SUBSEQUENT MAJOR INSPECTIONS: Must be completed at intervals NOT EXCEEDING 6 YEARS.
+
+The major inspection MUST be carried out by a COMPETENT PERSON who:
+- Has the knowledge and skills to carry out a major inspection of the concrete placing boom (through training, qualification or experience)
+- Is REGISTERED UNDER A LAW PROVIDING FOR THE REGISTRATION OF PROFESSIONAL ENGINEERS (RPEQ in Queensland)
+
+NON-DESTRUCTIVE TESTING (NDT) during major inspection:
+- Must be carried out by a person ACCREDITED BY NATA (National Association of Testing Authorities, Australia)
+- Must be in accordance with a testing procedure specified in an Australian Standard wherever practicable
+- Must be verifiable by a signed report complying with NATA reporting requirements
+
+MAJOR INSPECTION INCLUDES (at minimum):
+- Dismantling of all high stress areas and components subject to wear
+- Checking boom sections and outrigger legs for water ingress and internal corrosion
+- Measuring boom sections for straightness in vertical and horizontal planes
+- NDT examination of high stress areas on boom sections, linkages, outriggers and turret for cracking
+- Removal and inspection of all boom linkages
+- Removal of all boom pivot pins — tolerance checking of pin diameters and examination for cracks
+- Examination of all hydraulic cylinders including NDT of rod and cylinder ends
+- Creep testing of hydraulic cylinders after re-assembly
+- Removal and replacement of slew ring bolts (with bolts specified by boom manufacturer)
+- Examination of hopper area including hopper guard and interlock systems
+- Examination of concrete delivery pipeline (pipe clamps, identification, pressure ratings, wall thickness)
+
+CERTIFICATION REQUIREMENT:
+Following major inspection, a CERTIFICATION must be issued stating the concrete placing boom has undergone a major inspection and is safe to operate.
+
+The certification and comprehensive inspection report must accompany the unit and be available to the principal contractor or person in control of the workplace BEFORE the unit is allowed to operate on site.
+
+COMPLIANCE PLATES — after each six-year major inspection:
+- An INSPECTION CERTIFICATE must be completed and signed by the overseeing engineer along with a comprehensive inspection report
+- The manufacturer must have provided a fixed plate showing: date of manufacture, serial number, maximum recommended working pressure, maximum recommended length of drop hose, recommended maximum size of delivery pipe/hose
+
+VISUAL INDICATORS:
+- Concrete placing boom on site without current major inspection certificate = non-compliant (if more than 6 years since manufacture or last major inspection)
+- No compliance plate visible on boom = flag — remove from service until certification confirmed
+- Logbook showing no annual inspections = non-compliant
+- Major inspection certificate signed by non-RPEQ person = potentially invalid certification
+
+---
+
+CHUNK 21: Personal Protective Equipment (PPE) and Additional Safety Equipment
+Section: CoP s6.1, s6.2
+Topic: Mandatory and recommended PPE for concrete pumping operations, and equipment required on each pump unit
+
+PPE REQUIRED for all concrete pumping operations:
+- SAFETY HELMETS (hard hats)
+- EYE PROTECTION — line hand must wear eye protection complying with AS/NZS 1336 Eye and Face Protection Guidelines
+- SAFETY VEST (high visibility)
+- RUBBER SAFETY BOOTS
+
+PPE WHICH MAY ALSO BE REQUIRED:
+- HEARING PROTECTION (where noise levels at or near exposure standard)
+- GLOVES
+
+PPE is the LEAST EFFECTIVE control measure — it must be used in conjunction with, not as a substitute for, higher-order controls.
+
+MANDATORY EQUIPMENT on each pump unit:
+- FIRST AID KIT (must include eye wash)
+- PROTECTIVE CREAMS
+- FIRE EXTINGUISHERS
+- SUFFICIENT REFLECTIVE TRAFFIC CONES — minimum 450mm high
+- SIGNS (e.g. exclusion zone signage and high visibility vest requirement notices)
+
+VISUAL INDICATORS:
+- Pump operator or line hand without hard hat = non-compliant
+- Line hand without eye protection when guiding delivery hose = non-compliant
+- Workers in concrete pumping exclusion zone without high visibility vests = non-compliant
+- No first aid kit visible on pump unit = non-compliant
+- No traffic cones or exclusion zone signs at pump setup = non-compliant
+- Traffic cones present but less than 450mm high = non-compliant (check height specification)
+
+---
+
+CHUNK 22: Noise and Fumes — Concrete Pumping By-Products
+Section: CoP s4.4.1, s4.4.2; WHS Regulation s57, s51
+Topic: Managing noise and exhaust fume risks associated with concrete pumping plant
+
+NOISE:
+EXPOSURE STANDARD: LAeq,8h of 85 dB(A) OR LC,peak of 140 dB(C) — must NOT be exceeded.
+
+A PCBU MUST manage risks of hearing loss associated with noise and ensure workers are not exposed above the exposure standard.
+
+Concrete pumps can generate noise levels that may exceed the exposure standard. Appropriate hearing protection and training in its maintenance and use must be provided to pump operators and workers near associated equipment if noise exceeds exposure limits.
+
+FUMES:
+A PCBU MUST manage risks associated with a hazardous atmosphere. An atmosphere is hazardous if:
+- It does not have a safe oxygen level, OR
+- The concentration of flammable gas, vapour, mist or fumes exceeds 5% of the Lower Explosive Limit
+
+CARBON MONOXIDE from concrete delivery trucks and internal combustion engines is a primary fume hazard — in large concentrations it can cause permanent illness and death.
+
+FUME RISK CONTROLS:
+- Position delivery truck so exhaust gas does not accumulate (outdoors/open areas preferred)
+- If the truck must be placed in an enclosed area:
+  (a) Maintain adequate VENTILATION to prevent hazardous gas build-up, OR
+  (b) Vent exhaust gases to open air
+- Disperse fumes if concentration levels are likely to exceed safe levels, particularly in enclosed spaces
+
+VISUAL INDICATORS:
+- Pump and truck operating in enclosed or poorly ventilated area without ventilation controls = flag for carbon monoxide risk
+- Workers near loud pump plant without hearing protection = non-compliant
+- No hearing protection available in high-noise zones around pump equipment = non-compliant

@@ -1,0 +1,173 @@
+DOCUMENT: Labelling of Workplace Hazardous Chemicals Code of Practice 2021 (Queensland)
+TYPE: Approved Code of Practice
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: manufacturing, import, supply, chemical_handling, storage, laboratory_work, construction
+SOURCE: Workplace Health and Safety Queensland (WHSQ)
+CURRENT AS AT: 2021 (approved under section 274 of the Work Health and Safety Act 2011)
+CLAUSE_PREFIX: s
+REFERENCE_STANDARD: GHS (Globally Harmonized System of Classification and Labelling of Chemicals, 7th revised edition); ADG Code (Transport of Dangerous Goods); SUSMP (Poisons Standard); AS 1345 Identification of the contents of pipes, conduits and ducts.
+
+---
+
+CHUNK 1: Primary Duties and Exemptions
+Section: s1.1, s1.2; WHS Regulation s335, s338, s341
+Topic: Responsibility for correct labelling and exemption conditions
+
+PRIMARY DUTIES:
+- Manufacturers/Importers: Must ensure the chemical is correctly labelled as soon as practicable after manufacturing or importing
+- Suppliers: Must NOT supply a hazardous chemical if they know, or ought reasonably to know, it is not correctly labelled
+- PCBUs: Must ensure any hazardous chemical used, handled, or stored at the workplace is correctly labelled
+
+LABELLING EXEMPTIONS — a label is NOT required for:
+- Chemicals in transit: Kept at the workplace for NOT MORE THAN FIVE CONSECUTIVE DAYS and not opened or used
+- Consumer products: Labelled in accordance with the Poisons Standard and used in a way and quantity CONSISTENT WITH CONSUMER HOUSEHOLD USE
+- Food and beverages: Packaged for consumption (e.g. a 750mL bottle of spirits) — NOTE: LARGE QUANTITIES (e.g. 100L) must be labelled to meet workplace requirements
+- Therapeutic goods: Labelled in accordance with TGA requirements and intended for human consumption or administration
+
+VISUAL INDICATORS:
+- A 100L drum of flammable liquid without a GHS workplace label = non-compliant (exceeds consumer use quantity)
+- Hazardous chemicals sitting in a loading dock for 6 days without workplace labels = in-transit period exceeded; non-compliant
+- An unlabelled container of powdered chemical in a manufacturing area = regulatory breach
+- Hazardous chemical with no label at all = serious non-compliance
+
+---
+
+CHUNK 2: Mandatory Label Elements
+Section: s2.1, s2.5; Schedule 9
+Topic: Required information on every hazardous chemical label
+
+A hazardous chemical is correctly labelled if the container includes ALL of the following:
+- PRODUCT IDENTIFIER (unique name or number)
+- AUSTRALIAN CONTACT DETAILS (name, address, business phone number) of the manufacturer or importer
+- DISCLOSURE OF INGREDIENTS (identity and proportion)
+- SIGNAL WORD: "Danger" (severe hazard) OR "Warning" (less severe) — only ONE should appear; if "Danger" applies, "Warning" must NOT also appear
+- HAZARD PICTOGRAMS (diamond-shaped GHS symbols)
+- HAZARD STATEMENTS (nature and degree of hazard)
+- PRECAUTIONARY STATEMENTS (measures to minimise or prevent adverse effects) — as a guide, a MAXIMUM OF BETWEEN SIX AND TEN should appear
+- EXPIRY DATE if applicable (e.g. chemicals that can form explosive peroxides such as ethers)
+
+VISUAL INDICATORS:
+- A label displaying both "Danger" and "Warning" signal words = precedence rule failure; non-compliant
+- A label for a chemical that can form explosive peroxides (e.g. ethers) missing an expiry date = serious safety omission
+- Safety Data Sheet (SDS) and label product identifiers do not match = compliance breach
+- Label missing Australian contact details = non-compliant
+- No hazard pictograms on a known hazardous chemical container = non-compliant
+- More than 10 precautionary statements on a label = poor practice
+
+---
+
+CHUNK 3: Disclosure of Ingredients and Generic Names
+Section: s2.3; Schedule 8
+Topic: Rules for identifying chemical constituents on labels
+
+APPROVED PROPORTION RANGES — where exact concentrations are commercially confidential, these ranges can be disclosed:
+- Less than 10%
+- 10 to less than 30%
+- 30 to 60%
+- Greater than 60%
+- NOTE: A narrower range should normally be used (e.g. 30–40% instead of 30–60%)
+
+GENERIC NAMES: May be used ONLY if:
+- The identity is genuinely commercially confidential
+- The ingredient belongs to specific health hazard categories (e.g. Acute Toxicity Category 4, Skin Irritation Category 2)
+- The ingredient does NOT have an established Workplace Exposure Standard
+
+VISUAL INDICATORS:
+- A label listing a hazardous ingredient at "35%" while claiming confidentiality = non-compliant (must use approved brackets)
+- Ingredient proportions on a label that do not indicate a total of approximately 100% = potential accuracy failure
+- Use of a generic name for a substance that has a published Workplace Exposure Standard = illegal
+
+---
+
+CHUNK 4: Special Labelling Situations — Small, Research, and Decanted Containers
+Section: s3.1, s3.2, s3.3; Schedule 9
+Topic: Reduced labelling requirements for specific workplace tasks
+
+SMALL CONTAINERS — if the container is too small for a full label, it MUST at a minimum include:
+- Product identifier
+- Australian contact details
+- A hazard pictogram OR hazard statement
+
+RESEARCH CHEMICALS AND SAMPLES — must at a minimum include:
+- Product identifier
+- A hazard pictogram or hazard statement
+- If properties are unknown: label SHOULD include "Caution — Unknown Properties"
+
+DECANTED CHEMICALS — a label is NOT required ONLY if the chemical is USED IMMEDIATELY, meaning ALL of the following:
+- It is NOT LEFT UNATTENDED by the person who decanted it
+- It is USED ONLY BY A PERSON PRESENT at the decanting process
+- The container is RENDERED FREE FROM ANY HAZARDOUS CHEMICAL immediately after use
+
+OTHERWISE, the decanted container MUST at a minimum include the product identifier and a hazard pictogram or hazard statement.
+
+VISUAL INDICATORS:
+- A beaker of solvent left on a lab bench without a label while the worker is absent = non-compliant (left unattended)
+- A small vial (e.g. 10mL) missing manufacturer contact details = regulatory breach if not meeting small container minimum
+- A permanent decanting station where the container is reused for different chemicals without re-labelling = procedural failure
+- Unlabelled containers at workstations = non-compliant unless actively in use by the person present
+
+---
+
+CHUNK 5: Hazardous Waste and Pipe Work
+Section: s3.5, s2.7; Schedule 9
+Topic: Identifying waste substances and fixed installations
+
+HAZARDOUS WASTE — labels on waste containers MUST at a minimum include:
+- Product identifier (e.g. "chlorinated solvent waste")
+- Manufacturer or importer contact details
+- A hazard pictogram AND hazard statement
+
+PIPE WORK: A PCBU must ensure, so far as is reasonably practicable, that a hazardous chemical in pipe work is identified by a label, sign or another method ON OR NEAR THE PIPE WORK.
+- Acceptable methods: signs adjacent to pipes, colour coding, prominently displayed schematic layouts
+
+VISUAL INDICATORS:
+- A waste drum labelled simply "Chemicals" without indicating the nature of hazard (e.g. "Flammable") = non-compliant
+- Hazardous chemical pipes running through a factory without any identification markings or nearby schematics = regulatory breach
+- An unlabelled container found with no "Caution — Do Not Use" tag = safety risk
+- Waste container without hazard pictogram = non-compliant
+
+---
+
+CHUNK 6: Design, Layout, and Minimum Label Sizes
+Section: s4.2, s4.3, Table 1
+Topic: Physical requirements for label visibility and durability
+
+PLACEMENT:
+- Labels should be placed on the BODY of the container
+- Labels should NOT be placed only on the lid — unless unavoidable
+
+MINIMUM LABEL SIZES (Table 1) — pictogram size and minimum text height by container capacity:
+- Capacity ≤ 500mL: Pictogram 15 x 15mm; Text 2.5mm minimum
+- Capacity >500mL to ≤ 5L: Pictogram 20 x 20mm; Text 3mm minimum
+- Capacity >5L to ≤ 25L: Pictogram 50 x 50mm; Text 5mm minimum
+- Capacity ≥ 25L: Pictogram 100 x 100mm; Text 7mm minimum
+
+VISUAL INDICATORS:
+- A 20L drum with hazard pictograms smaller than 50 x 50mm = visibility non-compliance
+- Label text printed in a colour that does not provide distinct contrast to the background = design failure
+- Workplace label attached only to a removable screw-cap lid = high-risk placement; non-compliant
+- Pictograms faded, damaged or illegible = PCBU maintenance duty breach
+- Label peeling off or partially detached = non-compliant — must be replaced
+
+---
+
+CHUNK 7: Maintenance, Review, and Unlabelled Containers
+Section: s5.1, s5.2
+Topic: Keeping labels current and handling unknown substances
+
+SDS UPDATES: SDSs MUST be updated at least ONCE EVERY FIVE YEARS. Labels should be reviewed at the same time.
+
+UNLABELLED CONTAINERS: If an unlabelled chemical is found and the identifier is not known:
+- It MUST be clearly marked: "CAUTION — DO NOT USE — UNKNOWN SUBSTANCE"
+- It MUST NOT be used
+- It must be STORED IN ISOLATION until identified or disposed of
+
+NANOMATERIALS: For engineered or manufactured nanomaterials where hazards are unknown, the label should include: "Caution: Hazards unknown" or "Caution: Hazards not fully characterised"
+
+VISUAL INDICATORS:
+- Chemical container with a partially torn or illegible label = PCBU duty breach — must be replaced
+- SDS folder on site showing documents dated more than 5 years ago = compliance failure
+- An unlabelled container in a workspace without a "Caution — Do Not Use" tag and not in isolation = serious safety risk
+- Nanomaterial container without hazard characterisation statement = flag
+- Multiple unlabelled containers in a storage area = systematic labelling failure

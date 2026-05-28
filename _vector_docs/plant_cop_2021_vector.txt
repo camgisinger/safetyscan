@@ -1,0 +1,1542 @@
+DOCUMENT: Managing the Risks of Plant in the Workplace Code of Practice 2021
+TYPE: Approved Code of Practice
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: plant, machinery, construction, manufacturing, mining, warehousing, powered_mobile_plant, cranes, hoists, forklifts, pressure_equipment, scaffolding, industrial_robots, lasers, conveyors, vehicles, amusement_devices, plant_registration, plant_maintenance, plant_guarding, isolation_lockout, high_risk_work, lifting_operations, electrical_safety
+SOURCE: Workplace Health and Safety Queensland, Office of Industrial Relations
+PUBLICATION_NO: PN12678
+CURRENT AS AT: 2021
+COMMENCED: 2021
+CLAUSE_PREFIX: s (WHS Act / WHS Regulation references); section numbers within CoP
+APPROVED UNDER: Work Health and Safety Act 2011 (Qld) s274
+
+---
+
+CHUNK 1: Definitions — What is 'Plant'?
+Section: CoP s2.1; WHS Act general duty; WHS Regulation Part 5
+Topic: Legal definition of plant and scope of the Code
+
+PLANT DEFINITION:
+- Plant includes MACHINERY, EQUIPMENT, APPLIANCES, CONTAINERS, IMPLEMENTS and TOOLS — and any COMPONENTS or anything FITTED OR CONNECTED to those things
+- Includes items as diverse as: lifts, cranes, computers, machinery, conveyors, forklifts, vehicles, power tools, quad bikes, mobile plant, amusement devices
+
+EXCLUSION:
+- Plant that RELIES EXCLUSIVELY ON MANUAL POWER for its operation AND is designed to be primarily SUPPORTED BY HAND (e.g. a screwdriver) is NOT covered by the WHS Regulation
+- The general duty of care under the WHS Act still applies to excluded plant
+
+SEVERITY OF PLANT RISKS:
+- Plant is a MAJOR CAUSE of work-related death and injury in Australian workplaces
+- Severe injuries can result from unsafe use of plant including:
+  - Limbs AMPUTATED by unguarded moving parts
+  - Being CRUSHED by mobile plant
+  - FRACTURES from falls while accessing, operating or maintaining plant
+  - Being CRUSHED by quad bike rollover
+  - ELECTRIC SHOCK from inadequately protected or isolated plant
+  - BURNS or SCALDS from hot surfaces, flames or hot fluids
+  - HEARING LOSS due to noisy plant
+  - MUSCULOSKELETAL DISORDERS from poorly designed plant
+
+VISUAL INDICATORS:
+- Machinery with no guarding on moving parts = non-compliance
+- Plant operated manually by hand without any powered components = may be excluded from WHS Regulation plant requirements; apply general duty
+- Any powered plant operating at a workplace = WHS Regulation plant provisions apply
+
+---
+
+CHUNK 2: Duty Holders — Who Has Health and Safety Duties for Plant?
+Section: CoP s2.2; WHS Act s19, s22–s29; WHS Regulation s203–s213
+Topic: Legal duties of all parties with roles in managing plant risks
+
+PRIMARY DUTY — PCBU (WHS Act s19):
+- Must ELIMINATE risks arising from plant in the workplace, or if not reasonably practicable: MINIMISE risks so far as is reasonably practicable
+- Duty includes ensuring, so far as reasonably practicable:
+  - PROVISION AND MAINTENANCE OF SAFE PLANT
+  - SAFE USE, HANDLING, STORAGE AND TRANSPORT OF PLANT
+- Must CONSULT workers about work health and safety
+
+PCBU WITH MANAGEMENT OR CONTROL OF PLANT (WHS Regulation s203–s213):
+- WHS Regulation s203 — Management of risks to health and safety
+- WHS Regulation s204 — Control of risks arising from installation or commissioning
+- WHS Regulation s205 — Preventing unauthorised alterations to or interference with plant
+- WHS Regulation s206 — Proper use of plant and controls
+- WHS Regulation s207 — Plant not in use
+- WHS Regulation s208 — Guarding
+- WHS Regulation s209 — Guarding and insulation from heat and cold
+- WHS Regulation s210 — Operational controls
+- WHS Regulation s211 — Emergency stops
+- WHS Regulation s212 — Warning devices
+- WHS Regulation s213 — Maintenance and inspection of plant
+
+SPECIFIC DUTIES (WHS Regulation s203–s206):
+- MANAGE the health and safety risks associated with plant
+- PREVENT unauthorised alterations to or interference with plant
+- Use plant only for the PURPOSE FOR WHICH IT WAS DESIGNED unless assessed that proposed use does not increase risk
+
+DESIGNERS, MANUFACTURERS, IMPORTERS AND SUPPLIERS (WHS Act s22–s26):
+- Must ensure, so far as reasonably practicable, plant is WITHOUT RISKS to health and safety
+- Duty includes carrying out TESTING AND ANALYSIS and providing SPECIFIC INFORMATION about the plant
+- Manufacturers must CONSULT WITH DESIGNERS
+- Importers must CONSULT WITH DESIGNERS AND MANUFACTURERS
+- Person commissioning construction work must CONSULT WITH THE DESIGNER
+
+OFFICERS (WHS Act s27):
+- Must exercise DUE DILIGENCE to ensure PCBU complies with WHS Act and Regulation
+- Must take reasonable steps to ensure business has APPROPRIATE RESOURCES AND PROCESSES to eliminate or minimise risks
+
+WORKERS (WHS Act s28):
+- Must take REASONABLE CARE for own health and safety
+- Must NOT ADVERSELY AFFECT the health and safety of other persons
+- Must COMPLY WITH REASONABLE INSTRUCTIONS and cooperate with WHS policies and procedures
+- Must USE OR WEAR PPE in accordance with information, instruction and training provided
+
+OTHER PERSONS AT THE WORKPLACE (WHS Act s29):
+- Must take REASONABLE CARE for own health and safety
+- Must COMPLY with reasonable instructions given by PCBU
+
+VISUAL INDICATORS:
+- Plant being used for a purpose clearly different from its design intent without documented risk assessment = non-compliance (WHS Regulation s206)
+- Workers operating plant without instruction, training or supervision = non-compliance (WHS Act s19)
+- No consultation arrangements between multiple PCBUs sharing plant responsibilities = flag
+
+---
+
+CHUNK 3: Risk Management Process — Plant
+Section: CoP s2.3, Chapter 3; WHS Regulation s34–s38, s203, s297, s299
+Topic: Systematic process for managing plant risks; hazard identification, risk assessment, controls, review
+
+RISK MANAGEMENT STEPS (WHS Regulation s34–s38):
+1. IDENTIFY HAZARDS — find out what could cause harm
+2. ASSESS RISKS — understand the nature of harm, severity, and likelihood; NOTE: this step may be skipped if risk and controls are already well known
+3. ELIMINATE RISKS — eliminate so far as is reasonably practicable
+4. CONTROL RISKS — if elimination not reasonably practicable, implement most effective controls in accordance with hierarchy of controls; ensure they remain effective over time
+5. REVIEW — ensure control measures are working as planned
+
+INFORMATION REQUIRED FROM DESIGNERS, MANUFACTURERS AND SUPPLIERS:
+- The PURPOSE for which plant was designed or manufactured
+- Results of CALCULATIONS, ANALYSIS, TESTING OR EXAMINATION
+- CONDITIONS NECESSARY FOR SAFE USE of the plant
+- This information must be passed from designer through to manufacturer, supplier and end user
+
+WHEN TO REVIEW CONTROL MEASURES (WHS Regulation s38):
+- When control measure does NOT control the risk so far as reasonably practicable
+- Before a CHANGE at the workplace likely to give rise to a NEW OR DIFFERENT risk
+- When a NEW OR RELEVANT HAZARD OR RISK is identified
+- When results of CONSULTATION indicate a review is necessary
+- When a health and safety representative REQUESTS a review if they reasonably believe review is warranted
+
+COMMON REVIEW METHODS:
+- Workplace inspection
+- Consultation
+- Testing
+- Analysing records and data
+
+VISUAL INDICATORS:
+- No documented risk assessment for high-risk plant activities (first-time commissioning, changed use, modification) = non-compliance
+- Control measures in place but not reviewed or maintained = flag
+- Change in work process or plant modification with no updated risk assessment = non-compliance
+
+---
+
+CHUNK 4: Hazard Identification — Plant Hazards
+Section: CoP s3.1; WHS Regulation s34; CoP Appendix C
+Topic: Types of plant hazards, methods of identification, and the hazard checklist
+
+TYPICAL PLANT HAZARDS:
+- THE PLANT ITSELF — worn or damaged mechanical components; communication issues from background noise; lighting; multiple items on same path (e.g. cranes on same runway)
+- TRAFFIC MOVEMENTS — vehicles including powered mobile plant moving, reversing, loading/unloading; frequently linked with death and injuries to workers and members of the public
+- THE ENVIRONMENT — structural failure, collapse, contact or collision with other plant and structures (e.g. tower crane operating near other structures)
+
+METHODS OF HAZARD IDENTIFICATION:
+- Observe the workplace and how work is carried out
+- Talk to workers, manufacturers, suppliers and health and safety specialists
+- Review relevant information, records and incident reports
+- Review manufacturer's and supplier's instructions for safe set-up and use
+- Review incident records: workplace injuries, illness, dangerous incidents, plant inspection reports, maintenance logs, workers compensation records, investigation results
+
+LIFTING AND SUSPENDING LOADS:
+- Person with management or control of plant must ensure plant used for lifting/suspending is SPECIFICALLY DESIGNED to lift or suspend the load — so far as reasonably practicable
+- If not reasonably practicable: plant must not cause GREATER RISK than purpose-designed plant would
+- If lifting or suspending PERSONS: must comply with WHS Regulation s220
+- Lifting attachments must be SUITABLE FOR THE LOAD
+- Must not exceed SAFE WORKING LIMITS
+- LOADS MUST NOT be suspended or travel over a person unless plant is SPECIFICALLY DESIGNED for that purpose
+- Loads must remain UNDER CONTROL during the activity
+- A LOAD MUST NOT BE LIFTED SIMULTANEOUSLY BY MORE THAN ONE ITEM OF PLANT unless method ensures load on each item does not exceed its DESIGN CAPACITY
+
+HAZARD FACTORS TO CONSIDER FOR EACH PLANT LIFECYCLE STAGE (installation, commissioning, operation, maintenance, repair, transport, storage, dismantling):
+- Could plant cause INJURY due to entanglement, falling, crushing, trapping, cutting, puncturing, shearing, abrasion or tearing?
+- Could plant create HAZARDOUS CONDITIONS from harmful emissions, fluids or gas under pressure, electricity, noise, radiation, friction, vibration, fire, explosion, moisture, dust, ice, hot or cold parts, cleaning, undisclosed asbestos-containing materials?
+- Could plant cause INJURY when operator responds to common failure modes (e.g. machine jams due to poor ergonomic design)?
+
+OTHER FACTORS TO CONSIDER:
+- CONDITION of plant: age, maintenance history, frequency of use
+- SUITABILITY: is it actually being used for its intended purpose? Has it been modified from intended use?
+- LOCATION: impact on design and layout of workplace; worker access without slip/trip/fall risks
+- ABNORMAL SITUATIONS: misuse or fluctuation in operating conditions
+
+VISUAL INDICATORS:
+- Any load being lifted simultaneously by two items of plant without documented safe lifting method = non-compliance
+- Loads suspended or travelling over workers = non-compliance unless plant is specifically designed for this purpose
+- Plant operating in environment clearly different from its intended use context (e.g. outdoor-rated plant in wet, submerged conditions) = flag
+- No maintenance logs or inspection records available for plant on site = non-compliance
+
+---
+
+CHUNK 5: Hazard Checklist — Appendix C
+Section: CoP Appendix C
+Topic: Comprehensive plant hazard identification checklist — for site audits; 'Yes' to any item triggers need for control measures
+
+ENTANGLEMENT:
+- Can a person's hair, clothing, gloves, necktie, jewellery, cleaning brush or rag become ENTANGLED with moving parts of the plant?
+
+CRUSHING:
+- Can anyone be crushed due to:
+  - Material FALLING OFF the plant?
+  - UNCONTROLLED or UNEXPECTED MOVEMENT of the plant?
+  - Lack of capacity for the plant to be SLOWED, STOPPED OR IMMOBILISED?
+  - The plant TIPPING OR ROLLING OVER?
+  - PARTS OF THE PLANT COLLAPSING?
+  - Contact with MOVING PARTS during testing, inspection, operation, maintenance, cleaning or repair?
+  - Being THROWN OFF OR UNDER plant?
+  - Being TRAPPED BETWEEN plant and materials or fixed structures?
+
+CUTTING, STABBING OR PUNCTURING:
+- Can anyone be stabbed or punctured due to:
+  - Contact with SHARP OR FLYING OBJECTS?
+  - Contact with MOVING PARTS during testing, inspection, operation, maintenance, cleaning or repair?
+  - Plant, parts of plant or work pieces DISINTEGRATING?
+  - Work pieces being EJECTED?
+  - MOBILITY OF THE PLANT?
+  - UNCONTROLLED OR UNEXPECTED MOVEMENT?
+
+SHEARING:
+- Can anyone's body parts be sheared between two parts of the plant, or between a part of the plant and a work piece or structure?
+
+STRIKING:
+- Can anyone be struck by moving objects due to:
+  - UNCONTROLLED or UNEXPECTED MOVEMENT of plant or material?
+  - Plant, parts of plant or work pieces DISINTEGRATING?
+  - Work pieces being EJECTED?
+  - MOBILITY OF THE PLANT?
+
+HIGH PRESSURE FLUID:
+- Can anyone come into contact with fluids under HIGH PRESSURE due to plant failure or misuse?
+
+ELECTRICAL:
+- Can anyone be injured by electrical shock or burnt due to:
+  - Plant contacting LIVE ELECTRICAL CONDUCTORS?
+  - Plant working in CLOSE PROXIMITY to electrical conductors?
+  - OVERLOAD OF ELECTRICAL CIRCUITS?
+  - DAMAGED OR POORLY MAINTAINED electrical leads and cables?
+  - DAMAGED ELECTRICAL SWITCHES?
+  - WATER NEAR electrical equipment?
+  - LACK OF ISOLATION PROCEDURES?
+
+EXPLOSION:
+- Can anyone be injured by explosion of gases, vapours, liquids, dusts or other substances triggered by operation of plant or material handled?
+
+SLIPPING, TRIPPING AND FALLING:
+- Uneven or slippery work surfaces?
+- Poor housekeeping (offcuts, cables, hoses in walkways, spills not cleaned)?
+- Obstacles placed in vicinity of plant?
+
+FALLS FROM HEIGHT:
+- Lack of proper work platform?
+- Lack of proper stairs or ladders?
+- Lack of guardrails or other suitable EDGE PROTECTION?
+- Unprotected holes, penetrations or gaps?
+- Poor floor or walking surfaces (lack of slip-resistant surface)?
+- Steep walking surfaces?
+- Collapse of supporting structure?
+
+ERGONOMIC:
+- Poorly designed seating?
+- Poorly designed operator controls?
+- HIGH FORCES required?
+- Repetitive movements?
+- Awkward body posture or excessive effort?
+- Vibration?
+
+HAZARD COMBINATION (unexpected start-up, over-run, over-speed or malfunction):
+- Failure/disorder of control system (e.g. hydraulic system)?
+- Restoring energy supply after interruption?
+- External influences on electrical equipment?
+- Other environmental factors (gravity, wind)?
+- Errors in software?
+- Errors made by the operator?
+
+OTHER HAZARDS:
+- NOISE?
+- Inadequate or poorly placed LIGHTING?
+- Entry into CONFINED SPACES of the plant?
+- Failure to select plant SUITABLE FOR INTENDED USE?
+- Contact with HOT OR COLD parts of plant?
+- Exposure to HAZARDOUS CHEMICALS, RADIATION or other emissions?
+- Lack of OPERATOR COMPETENCY?
+
+VISUAL INDICATORS:
+- Any 'Yes' answer to the above checklist items without documented control measures in place = non-compliance
+- Plant where moving parts are accessible to workers without guards = non-compliance (entanglement, cutting, shearing)
+- Exposed electrical leads near wet areas = non-compliance (electrical)
+- No slip-resistant surfaces on work platforms near plant = flag
+
+---
+
+CHUNK 6: Controlling Risks — Hierarchy of Control Measures for Plant
+Section: CoP s3.3; WHS Regulation s36
+Topic: Hierarchy of control measures, specific controls for certain plant types
+
+HIERARCHY OF CONTROL MEASURES (WHS Regulation s36) — from highest to lowest:
+1. ELIMINATION — eliminate the risk entirely (e.g. design items so they can be delivered, handled or assembled without a crane)
+2. SUBSTITUTION — replace hazard with something giving lesser risk (e.g. conveyor system replacing forklifts — note: new risks from conveyors must also be addressed)
+3. ISOLATION — separate the hazard from persons exposed (e.g. concrete barriers to separate mobile plant from workers)
+4. ENGINEERING CONTROLS — physical measures (e.g. emergency brakes applied automatically when lift exceeds maximum speed; anti-collision systems preventing tower cranes colliding in shared airspace; interlocked guards on machinery)
+5. ADMINISTRATIVE CONTROLS — (e.g. tag-out system to ensure plant isolated from power source during maintenance or cleaning)
+6. PPE — (e.g. breathing protection, hard hats, gloves, aprons, protective eyewear)
+
+IMPORTANT: Administrative controls and PPE:
+- Do NOT control the hazard at SOURCE
+- RELY ON HUMAN BEHAVIOUR and supervision
+- Used alone = LEAST EFFECTIVE in minimising risks
+- Must be supplemented with higher-order controls wherever reasonably practicable
+
+COMBINING CONTROLS:
+- In most cases, a COMBINATION of control measures provides the best solution
+- Example: protecting workers from flying debris (concrete cutting saw) = guard the blade + isolate the work area + PPE (face shield)
+- Check that chosen control measures do not INTRODUCE NEW HAZARDS (e.g. hiring a forklift to remove manual tasks introduces powered mobile plant risks)
+
+SPECIFIC CONTROLS REQUIRED UNDER WHS REGULATION for certain types of plant:
+- Powered mobile plant
+- Plant that lifts or suspends loads
+- Plant used in connection with tree lopping
+- Industrial robots
+- Lasers
+- Pressure equipment
+- Scaffolds
+- Plant with presence-sensing safeguarding systems
+
+VISUAL INDICATORS:
+- Only administrative controls and/or PPE in place with no higher-order controls = non-compliant hierarchy; flag for review
+- No barriers between mobile plant and pedestrian areas = non-compliance (isolation)
+- Plant modification with no updated guards or engineering controls = flag
+
+---
+
+CHUNK 7: Working Near Overhead and Underground Electric Lines
+Section: CoP s3.3; Electrical Safety Regulation Part 5
+Topic: Electrical line safe working distances, risk assessment, and control measures
+
+PCBU OBLIGATIONS — ELECTRICAL LINES (Electrical Safety Regulation Part 5):
+- Must ensure, so far as reasonably practicable, that NO PERSON, PLANT OR THING at the workplace comes within an UNSAFE DISTANCE of an overhead or underground electric line
+- If not reasonably practicable to ensure safe distance:
+  - Must ensure a RISK ASSESSMENT is conducted for the proposed work
+  - Control measures must be CONSISTENT WITH THE RISK ASSESSMENT and requirements of the relevant electricity supply entity
+
+RISKS FROM ELECTRIC LINES:
+- Electrocution
+- Arcing
+- Explosion
+- Fire causing burns
+- Unpredictable cable whiplash
+- Electrifying other objects (signs, poles, trees or branches)
+- NOTE: Whether 400,000V or 230V — contact CAN BE FATAL
+- NOT NECESSARY TO TOUCH an overhead electric line to be electrocuted — a 'FLASHOVER' or 'ARC' can electrocute a person close to a line conductor
+
+FACTORS TO CONSIDER:
+- Are workers or plant LIKELY TO GO NEAR electric lines?
+- How HIGH are the electric lines and the plant?
+- Are overhead electric lines HARD TO SEE (sky background, hidden by trees)?
+- Have underground electric lines been ACCURATELY LOCATED?
+- Is a SAFETY OBSERVER in place to watch plant operating close to electric lines?
+- Has the relevant STATE OR TERRITORY ELECTRICITY SUPPLY AUTHORITY been contacted for specific requirements, including qualifications for those working near electric lines?
+- Have EMERGENCY RESCUE PROCEDURES been established, including calling electricity supply authority to ISOLATE SUPPLY before rescuing a person receiving electric shock?
+
+SAFE WORKING DISTANCES:
+- Safe working distances depend on the TYPE OF WORK and the VOLTAGE OF THE ELECTRIC LINES
+- Contact relevant electricity supply authority to determine unsafe distances and required control measures
+- This may include ISOLATING THE LINE
+
+VISUAL INDICATORS:
+- Plant operating within striking distance of overhead power lines without documented risk assessment or clearance from electricity authority = serious non-compliance
+- No safety observer present when plant operates close to electric lines = non-compliance
+- No visible barricading or signage near underground electric line routes in excavation or plant movement zones = flag
+
+---
+
+CHUNK 8: Information, Training, Instruction and Supervision
+Section: CoP s2.4; WHS Act s19; WHS Regulation s39
+Topic: PCBU training obligations, content of training, supervision requirements
+
+PCBU OBLIGATIONS (WHS Act s19; WHS Regulation s39):
+- Must ensure provision of information, training, instruction or supervision NECESSARY TO PROTECT ALL PERSONS from risks arising from work
+- Information, training and instruction must be SUITABLE AND ADEQUATE having regard to:
+  - NATURE OF THE WORK carried out
+  - NATURE OF THE RISKS associated with the work at time of training
+  - CONTROL MEASURES implemented
+- Must ensure information, training and instruction are provided in a way that is READILY UNDERSTANDABLE to the recipient
+- Workers must be TRAINED and have APPROPRIATE SKILLS to carry out a task safely
+- Training must be provided by a COMPETENT PERSON
+
+REQUIRED TRAINING CONTENT:
+- Before workers or others use plant: PCBU must provide information, training, instruction and organise ONGOING SUPERVISION as necessary
+- Safety information required for persons involved in: installation, commissioning, testing, maintaining, repairing, decommissioning, dismantling or disposing of plant
+
+SAFE WORK PROCEDURES SHOULD INCLUDE:
+- Correct use of GUARDING and other control measures
+- How to safely ACCESS and OPERATE the plant
+- WHO MAY USE an item of plant (e.g. only authorised or licensed operators)
+- How to carry out INSPECTIONS, SHUT-DOWN, CLEANING, REPAIR AND MAINTENANCE
+- TRAFFIC RULES, rights of way, clearances and no-go areas for mobile plant
+- Procedures when plant MALFUNCTIONS
+- EMERGENCY PROCEDURES
+- Proper USE, WEARING, STORAGE AND MAINTENANCE OF PPE
+
+DISPLAY REQUIREMENTS:
+- Emergency instructions relating to an item of plant should be CLEARLY DISPLAYED on or near it
+
+TRAINING PROGRAM REQUIREMENTS:
+- Must be PRACTICAL AND 'HANDS ON'
+- Must take into account:
+  - LITERACY LEVELS of workers
+  - WORK EXPERIENCE of workers
+  - SPECIFIC SKILLS required for safe use of plant
+
+SUPERVISION:
+- Supervisors must take action to CORRECT UNSAFE WORK PRACTICES associated with plant AS SOON AS POSSIBLE
+- Failure to correct = workers may consider unsafe practices acceptable
+
+VISUAL INDICATORS:
+- Workers operating plant without evidence of training or demonstrated competency = non-compliance
+- No emergency instructions displayed at or near plant = non-compliance
+- Workers using plant in a way clearly inconsistent with manufacturer's instructions or safe work procedures = flag
+- Supervised trainees operating plant without a competent person present = non-compliance
+
+---
+
+CHUNK 9: Plant Registration — Overview
+Section: CoP s2.5, Chapter 6; WHS Regulation Schedule 5
+Topic: Registrable plant designs and items; obligations for registration before commissioning or use
+
+REGISTRATION REQUIREMENT (WHS Regulation Schedule 5):
+- Certain items of plant AND types of plant designs MUST BE REGISTERED
+- Person with management or control of plant MUST NOT direct or allow a worker to use REGISTRABLE PLANT if it has NOT been registered
+
+DESIGN REGISTRATION:
+- Registrable plant designs must be DESIGN REGISTERED PRIOR TO BEING SUPPLIED
+- Design registration covers a COMPLETED DESIGN from which any number of items can be manufactured
+- Applicant: original designer OR person with management or control of the item
+- Regulator issues a PLANT DESIGN REGISTRATION NUMBER
+- Registration number must be given to: MANUFACTURER, IMPORTER or SUPPLIER of plant manufactured to that design
+- Person with management or control of plant must ensure design registration number is KEPT READILY ACCESSIBLE IN THE VICINITY OF THE PLANT AT ALL TIMES
+- Recommended: PERMANENTLY MARK the design registration number on the plant
+
+ITEM REGISTRATION:
+- Registrable items of plant must be ITEM REGISTERED PRIOR TO BEING COMMISSIONED FOR USE
+- Each individual item requires its own registration
+- Purpose: to ensure plant is INSPECTED BY A COMPETENT PERSON and is SAFE TO OPERATE
+- Person with management or control should obtain a copy of DESIGN REGISTRATION from the supplier
+- Item must be inspected and a STATEMENT PROVIDED BY A COMPETENT PERSON confirming plant is safe to operate
+
+COMPETENCY TO INSPECT FOR ITEM REGISTRATION:
+- Person must have:
+  - EDUCATIONAL OR VOCATIONAL QUALIFICATIONS in an engineering discipline relevant to the plant
+  - KNOWLEDGE OF TECHNICAL STANDARDS relevant to the plant to be inspected
+
+REGISTRATION RENEWAL:
+- WHS Regulation requires ANNUAL RENEWAL of registration for items of plant
+- Registration holder must apply to regulator BEFORE REGISTRATION EXPIRES
+
+CHANGES REQUIRING NOTIFICATION (within 14 days, in writing):
+- Item of plant is ALTERED to the extent it requires new risk control measures
+- Item is usually fixed and is RELOCATED
+- Registration holder NO LONGER HAS MANAGEMENT OR CONTROL of the item
+
+VISUAL INDICATORS:
+- Registrable plant in use with no registration document available = serious non-compliance
+- No design registration number displayed on or near registrable plant = non-compliance
+- Plant modified without notification to regulator or registration update = non-compliance
+- Registration expired (past annual renewal date) = serious non-compliance
+
+---
+
+CHUNK 10: Plant Requiring Design and Item Registration — Appendix B
+Section: CoP Appendix B; WHS Regulation Schedule 5 Parts 1 and 2
+Topic: Complete list of registrable plant designs and registrable items of plant under Queensland WHS Regulation
+
+PLANT DESIGNS REQUIRING REGISTRATION (Schedule 5 Part 1):
+- Pressure equipment, other than pressure piping, categorised as HAZARD LEVEL A, B, C OR D (per AS 4343–2005 s2.1)
+- Gas cylinders covered by AS 2030.1–2009 s1
+- TOWER CRANES including self-erecting tower cranes
+- LIFTS, ESCALATORS AND MOVING WALKWAYS
+- Building maintenance units
+- HOISTS with platform movement exceeding 2.4 METRES, designed to lift people
+- Work boxes designed to be suspended from cranes
+- Amusement devices classified by AS 3533.1–2009 s2.1 (except excluded class 1 devices and others below)
+- Concrete placing booms
+- PREFABRICATED SCAFFOLDING
+- BOOM-TYPE ELEVATING WORK PLATFORMS
+- GANTRY CRANES with safe working load GREATER THAN 5 TONNES or BRIDGE CRANES with safe working load GREATER THAN 10 TONNES, and any gantry or bridge crane handling MOLTEN METAL or Schedule 11 hazardous chemicals
+- Vehicle hoists
+- Mast climbing work platforms
+- MOBILE CRANES with rated capacity GREATER THAN 10 TONNES
+
+PLANT DESIGNS NOT REQUIRING REGISTRATION (Schedule 5 Part 1):
+- Heritage boiler
+- Pressure equipment (other than gas cylinder) excluded from AS/NZS 1200 scope (see Appendix A to AS/NZS 1200)
+- Manually powered crane or hoist
+- Reach stacker
+- Elevating work platform that is a SCISSOR LIFT or a VERTICALLY MOVING PLATFORM
+- Tow truck
+- Amusement devices: class 1 devices; playground structures; water slides (gravity); wave generators; inflatable devices (except inflatable continuously blown with platform height ≥3m)
+
+ITEMS OF PLANT REQUIRING REGISTRATION (Schedule 5 Part 2):
+- BOILERS categorised as hazard level A, B OR C (per AS 4343 s2.1)
+- PRESSURE VESSELS categorised as hazard level A, B OR C (per AS 4343 s2.1) — except gas cylinders, LP Gas fuel vessels for automotive use, and serially produced vessels
+- TOWER CRANES including self-erecting tower cranes
+- LIFTS, ESCALATORS AND MOVING WALKWAYS
+- Building maintenance units
+- Amusement devices (per AS 3533.1 s2.1, except class 1, playground, water slides, wave generators, certain inflatables)
+- Concrete placing booms
+- MOBILE CRANES with rated capacity GREATER THAN 10 TONNES
+
+ITEMS OF PLANT NOT REQUIRING REGISTRATION (Schedule 5 Part 2):
+- Pressure equipment (other than gas cylinder) excluded from AS/NZS 1200 scope
+- Manually powered crane or hoist
+- Reach stacker
+- Lifts installed in a PRIVATE RESIDENCE (per AS 1735.1)
+- Amusement devices: class 1, playground, water slides, wave generators, certain inflatables
+
+KEY THRESHOLDS SUMMARY:
+- Hoist with platform movement EXCEEDING 2.4m (designed to lift people) = design registration required
+- Gantry crane SWL > 5 TONNES = design registration required
+- Bridge crane SWL > 10 TONNES = design registration required
+- Mobile crane rated capacity > 10 TONNES = design and item registration required
+
+VISUAL INDICATORS:
+- Tower crane, lift, escalator, mobile crane (>10t), boom-type EWP, mast climber, concrete placing boom, prefabricated scaffold, or vehicle hoist on site without visible registration = non-compliance
+- Registrable plant in operation without registration documentation available for inspection = serious non-compliance
+
+---
+
+CHUNK 11: Purchasing and Hiring Plant
+Section: CoP s4.1; WHS Act s25; WHS Regulation s198–s200
+Topic: Pre-purchase assessment obligations, supplier duties, second-hand plant, hiring and leasing
+
+PRE-PURCHASE ASSESSMENT — PCBU OBLIGATIONS:
+- Before purchasing plant: check it is SUITABLE FOR INTENDED USE including the ENVIRONMENT and the WORKERS USING IT
+- Supplier must provide:
+  - PURPOSE for which plant was designed or manufactured
+  - Results of CALCULATIONS, ANALYSIS, TESTING OR EXAMINATION to determine plant is without risk
+  - CONDITIONS NECESSARY FOR SAFE USE
+  - ALTERATIONS OR MODIFICATIONS made to plant
+
+BEFORE PURCHASING, HIRING OR LEASING — DETERMINE:
+- HAZARDS AND RISKS associated with: installation, commissioning, operation, inspection, maintenance, repair, transport, storage and dismantling
+- CONTROL MEASURES needed
+- MANUFACTURER'S RECOMMENDATIONS for frequency and type of inspection and maintenance
+- SPECIAL SKILLS required to operate plant or carry out inspection and maintenance
+- SPECIAL CONDITIONS or equipment required for installation, operation, maintenance
+- Any planned ALTERATIONS OR MODIFICATIONS
+
+FEATURES TO CHECK WHEN PURCHASING:
+- Contact with or access to dangerous parts is PREVENTED (guards, protective structures)
+- STURDY CONSTRUCTION and TAMPER-PROOF DESIGN
+- No OBSTRUCTIONS to plant operator
+- FAIL-SAFE OPERATION
+- EASY TO INSPECT AND MAINTAIN
+- Does not introduce OTHER HAZARDS (e.g. manual handling problems, excessive noise)
+- Incorporates measures to MINIMISE RISKS DURING USE (e.g. low noise)
+
+SECOND-HAND PLANT — SUPPLIER DUTIES (WHS Regulation s199):
+- Supplier must take all reasonable steps to obtain information required from the manufacturer under WHS Act s23(4)(a), (b) and (c)
+- Must ensure the person to whom plant is supplied is GIVEN THE INFORMATION OBTAINED
+- Must ensure, so far as reasonably practicable, any FAULTS IN THE PLANT ARE IDENTIFIED
+- Must provide WRITTEN NOTICE before supply stating:
+  - CONDITION OF THE PLANT
+  - ANY FAULTS IDENTIFIED
+  - If appropriate: that plant SHOULD NOT BE USED until faults are rectified
+- Must take all reasonable steps to obtain information about HOW TO USE THE PLANT CORRECTLY AND SAFELY from manufacturer or original supplier
+- Must provide the buyer:
+  - All obtained information
+  - ALL AVAILABLE RECORDS kept by the previous owner (may include data sheets, test certificates, operations and service manuals, reports, safety manual)
+
+SECOND-HAND PLANT — OUTDATED OR MISSING SAFETY FEATURES:
+- Supplier must consider whether it is reasonably practicable to RETROFIT OR MODIFY the plant to improve its safety
+- Must consider what INFORMATION NEEDS TO BE GIVEN TO BUYER about purpose and conditions for safe use
+- Must ensure plant is SAFE AND HAS ALL REQUIRED SAFETY FEATURES before bringing into service
+
+AGENTS AND AUCTIONEERS:
+- Suppliers' duties apply to sellers' agents UNLESS the agent does not take control of the supply and has no authority to make decisions about the supply
+- Auctioneers at clearing sales who do NOT take possession of the plant = NOT considered suppliers; duties apply to SELLER ONLY
+
+SCRAP AND SPARE PARTS (WHS Regulation s200):
+- Plant sold for scrap or spare parts does not need to be made safe or supplied with instructions for use
+- Supplier MUST INFORM prospective buyers IN WRITING or by MARKING THE ITEM that it is supplied for scrap or spare parts only and CANNOT BE USED SAFELY in its current form for other purposes
+
+HIRING PLANT:
+- Both hirer and owner must ensure, so far as reasonably practicable, plant is SAFE TO USE
+- Hirer should: assess suitability; check plant has been INSPECTED AND MAINTAINED per manufacturer's specifications; ensure supplier provides manufacturer's information
+- Person who hires plant to others has duties as BOTH SUPPLIER AND PERSON WITH MANAGEMENT OR CONTROL
+- Owner responsible for inspecting and maintaining in most cases
+- For EXTENDED HIRE: arrangements must be made to ensure plant is properly inspected and maintained throughout lease
+
+VISUAL INDICATORS:
+- Second-hand plant arriving on site without written notice of condition and identified faults from supplier = non-compliance
+- Plant purchased or hired without evidence of manufacturer's specifications, service manuals or maintenance records = flag
+- Plant in use for purpose visibly different from its designed purpose without risk assessment = non-compliance
+
+---
+
+CHUNK 12: Installation and Commissioning of Plant
+Section: CoP s4.2; WHS Regulation s204
+Topic: Obligations for safe installation, positioning and commissioning of plant
+
+COMMISSIONING OBLIGATIONS (WHS Regulation s204):
+Person with management or control of plant must:
+- NOT COMMISSION plant unless it has been established that the plant is, so far as reasonably practicable, WITHOUT RISKS to health and safety
+- NOT DECOMMISSION OR DISMANTLE plant unless decommissioning/dismantling can be carried out without risks
+- Ensure persons installing, assembling, constructing, commissioning, decommissioning or dismantling are COMPETENT PERSONS, provided with all information necessary to minimise risks
+- Ensure processes INCLUDE INSPECTIONS to monitor risks during these activities
+
+INSTALLING PLANT:
+Installer should ensure:
+- Plant erected/installed having regard to MANUFACTURER'S INSTRUCTIONS, including specialised tools, jigs and appliances to minimise injury risk during installation
+- ENTRY TO AND EXIT FROM plant complies with relevant standards
+- Plant is STABLE during installation
+- INTERACTION of plant with people, work processes and other plant is considered
+- ENVIRONMENTAL FACTORS affecting installation and use (e.g. wet conditions) are considered
+- ELECTRICAL INSTALLATIONS comply with AS/NZS 3000 (Australian/New Zealand Wiring Rules) as far as relevant
+- Installer must NOTIFY the designer, manufacturer, supplier and person with management or control of plant of NEW RISKS identified during installation
+
+POSITIONING PLANT IN THE WORKPLACE:
+Plant should be positioned so:
+- Risks from HOT PLANT (friction, molten material, hot gases) are controlled through restricted access, guarding or insulation
+- SUFFICIENT SPACE exists for safe access: SUGGESTED 600mm — the minimum width of a walkway — for operation, cleaning, maintenance, inspection and emergency evacuation
+- Plant does NOT OBSTRUCT DOORWAYS AND EMERGENCY EXITS
+- PROXIMITY TO OTHER PLANT does not negatively affect operation or work processes
+- Plant rests on a SUITABLE FOUNDATION ensuring it is STABLE AND SECURE
+- VENTILATION deals with the nature and volume of emissions
+- Workers and others are NOT EXPOSED TO NOISE LEVELS greater than the EXPOSURE STANDARD FOR NOISE under WHS Regulation; consider sound insulation or anti-vibration mounting to reduce noise
+
+COMMISSIONING:
+- Commissioning includes RECOMMISSIONING
+- Commission plant by performing necessary ADJUSTMENTS, TESTS AND INSPECTIONS to ensure plant is in full working order to specified requirements before use
+- Commissioning sequence must be in accordance with DESIGN SPECIFICATIONS
+- Tests must check plant will perform within DESIGN SPECIFICATIONS
+
+VISUAL INDICATORS:
+- Minimum 600mm walkway clearance around plant not maintained = non-compliance for access, maintenance and evacuation
+- Plant installed without commissioning documentation or test records = flag
+- Electrical installations not compliant with AS/NZS 3000 = non-compliance
+- Plant commissioned without records of inspection by competent person = non-compliance
+- Plant positioned obstructing emergency exits or doorways = serious non-compliance
+
+---
+
+CHUNK 13: Using Plant in the Workplace
+Section: CoP s4.3; WHS Regulation s205, s206, s85, s219, s220
+Topic: Safe use of plant, operator competency, high risk work licences, work platforms and boxes
+
+PCBU OBLIGATIONS — PLANT USE (WHS Regulation s205, s206):
+Person with management or control of plant must:
+- Prevent UNAUTHORISED ALTERATIONS TO OR INTERFERENCE WITH the plant (so far as reasonably practicable)
+- Take all reasonable steps to ensure plant is ONLY USED FOR THE PURPOSE FOR WHICH IT IS DESIGNED — unless assessed that proposed use does not increase risk
+- If proposed alternative use: risk must be assessed by a COMPETENT PERSON
+- Take all reasonable steps to ensure all SAFETY FEATURES, WARNING DEVICES, GUARDING, OPERATIONAL CONTROLS, EMERGENCY STOPS are used in accordance with instructions
+
+OPERATOR REQUIREMENTS:
+- Workers who operate plant must be COMPETENT or be SUITABLY SUPERVISED DURING TRAINING
+- Must retain all OPERATING MANUALS and INSTRUCTIONAL MATERIAL provided by manufacturer
+- Must consider and address risks from:
+  - OPERATOR FITNESS FOR WORK (e.g. fatigue)
+  - CARRYING OUT ROUTINE OR REPETITIVE TASKS
+  - LOCAL CONDITIONS and working procedures
+
+HIGH RISK WORK LICENCES (WHS Regulation s85):
+- PCBU must NOT DIRECT OR ALLOW a worker to carry out HIGH RISK WORK requiring a licence unless PCBU has seen WRITTEN EVIDENCE that worker holds the relevant HIGH RISK WORK LICENCE
+- High risk work requiring licences includes: OPERATING INDUSTRIAL TRUCKS and SOME CRANES; SCAFFOLD AND RIGGING WORK
+- Refer to WHS Regulation Schedule 3 for classes of high-risk work licences and types of plant involved
+- WHS Regulation Schedule 4 sets out competency requirements
+
+WORK PLATFORMS AND BOXES (WHS Regulation s219, s220):
+If plant is used to lift or suspend persons and it is NOT REASONABLY PRACTICABLE to use plant specifically designed for that purpose, person with management or control must ensure:
+- Plant does not cause a GREATER RISK than purpose-designed plant
+- Persons are lifted in a WORK BOX SECURELY ATTACHED to the plant
+- Persons in the work box REMAIN SUBSTANTIALLY WITHIN the workbox while being lifted
+- A SAFETY HARNESS is worn if there is a risk of falling from height
+- MEANS ARE PROVIDED for persons to SAFELY EXIT from the plant in the event of failure in normal operation
+
+VISUAL INDICATORS:
+- Worker operating crane, forklift or other licensed plant without sight of valid high risk work licence = serious non-compliance
+- Worker being lifted or suspended in improvised attachment rather than a purpose-designed work box or designed lifting plant = serious non-compliance
+- Plant controls, guards, warning devices or emergency stops visibly disabled, bypassed or removed = serious non-compliance
+- Operators showing signs of fatigue or operating beyond safe shift limits = flag
+
+---
+
+CHUNK 14: Making Changes to Plant — Modifications and Altered Use
+Section: CoP s4.4; WHS Regulation s244, s282, s205, s206
+Topic: Risk management for plant modifications, changed use, design changes, altered design registration
+
+WHEN CHANGES ARE PLANNED:
+If person with management or control intends to:
+- ALTER THE DESIGN of plant
+- CHANGE THE WAY PLANT IS USED, or
+- CHANGE A SYSTEM OF WORK associated with plant
+Then the person MUST CARRY OUT THE RISK MANAGEMENT PROCESS AGAIN
+
+ALTERNATIVE USE OF PLANT (WHS Regulation s206):
+- If plant is to be used in a DIFFERENT WAY or for a PURPOSE IT WAS NOT DESIGNED FOR, the person must ensure risks of new use are ASSESSED BY A COMPETENT PERSON
+- Example: plant designed to cut wood being used to cut metal — all hazards of that use must be identified and controls implemented
+
+COMPETENT PERSON'S ASSESSMENT MUST:
+- Include ALL ASPECTS OF THE PROPOSED TASK
+- Outline REASONS a purpose-designed item of plant cannot be used for the task (e.g. impracticability)
+- Take into account RECOMMENDATIONS OF THE DESIGNER, MANUFACTURER OR SUPPLIER and ensure proposed use is not outside the plant's capabilities
+- Identify DIFFERENCES between the item and purpose-designed plant, and describe measures to control risks that purpose-designed plant was designed to control
+- Amend RELEVANT DOCUMENTATION (operator and maintenance manuals, signage)
+- If competent person decides plant is NOT SUITABLE for the proposed task = MUST NOT BE USED FOR THAT TASK
+
+MAKING ALTERATIONS TO PLANT:
+- Before altering, consult with DESIGNER AND MANUFACTURER to ensure all safety issues have been considered
+- If person with management or control makes alterations = person becomes a DESIGNER OR MANUFACTURER and those obligations apply
+- If original designer/manufacturer cannot be contacted (older or imported plant): alterations must be carried out by a COMPETENT PERSON in accordance with relevant TECHNICAL STANDARDS (see Appendix D)
+- If plant subject to design registration and alteration MAY AFFECT HEALTH AND SAFETY: ALTERED DESIGN MUST BE REGISTERED (application in jurisdiction that registered original design — WHS Regulation s244)
+- Plant MUST BE ISOLATED from power sources and UNABLE TO BE SWITCHED ON ACCIDENTALLY before and during alterations
+
+BEFORE RETURNING ALTERED PLANT TO SERVICE:
+- CONTROL MEASURES in place to eliminate or minimise risks created by the alteration, including providing INFORMATION AND TRAINING for users and supervisors
+- INSPECT AND TEST the plant having regard to altered design specifications and relevant technical standards
+
+ALTERED DESIGN REGISTRATION (WHS Regulation s244):
+- If a registered plant design is altered AND the altered design MAY AFFECT HEALTH AND SAFETY = ALTERED DESIGN MUST BE REGISTERED
+- Application for registration of altered design must be made in the JURISDICTION THAT REGISTERED THE ORIGINAL DESIGN
+- If original design was NOT registered before specified date = altered design must be registered as a NEW DESIGN (WHS Regulation s282)
+
+VISUAL INDICATORS:
+- Plant visibly modified from its original configuration without documentation, without risk assessment, or without notification to regulator = serious non-compliance
+- Plant clearly being used for a task outside its design intent without competent person assessment = non-compliance
+- Plant in use post-modification without visible test records or training records = flag
+- Altered registrable plant without updated registration = serious non-compliance
+
+---
+
+CHUNK 15: Inspecting Plant
+Section: CoP s4.5; WHS Regulation s213
+Topic: Inspection obligations, frequency, competency, plant register
+
+INSPECTION OBLIGATIONS (WHS Regulation s213):
+Person with management or control of plant must ensure that MAINTENANCE, INSPECTION AND, IF NECESSARY, TESTING of plant is carried out by a COMPETENT PERSON.
+
+INSPECTION FREQUENCY — must be carried out:
+- In accordance with MANUFACTURER'S RECOMMENDATIONS (if any)
+- If no manufacturer's recommendations: in accordance with RECOMMENDATIONS OF A COMPETENT PERSON
+- If not reasonably practicable to comply with above: ANNUALLY AT MINIMUM
+
+PURPOSE OF PLANT INSPECTION:
+- Identify POTENTIAL PROBLEMS not anticipated during plant design or task analysis
+- Identify DEFICIENCIES (wear and tear, corrosion, damaged plant parts)
+- Identify ADVERSE EFFECTS of changes in processes or materials
+- Identify INADEQUACIES IN CONTROL MEASURES previously implemented
+
+INSPECTING ASSOCIATED WORK PROCESSES (regularly):
+- Identify UNSAFE WORK PRACTICES associated with use of plant
+- Identify NEGATIVE EFFECTS of changes in processes or materials
+- Identify INADEQUACIES IN CONTROL MEASURES previously implemented
+
+HAND-HELD POWERED PLANT:
+- Must be REGULARLY INSPECTED
+- Must be REPAIRED OR REPLACED when necessary
+- DAMAGED OR WORN PARTS (e.g. grinding wheels) must be replaced
+
+INSPECTION OF CONTROL MEASURES:
+- Guards and warning devices must be REGULARLY INSPECTED AND TESTED to ensure they remain effective
+
+PLANT REGISTER — should include:
+- ALLOCATED RESPONSIBILITIES for people dealing with inspections
+- STANDARDS against which plant should be inspected
+- FREQUENCY OF INSPECTIONS
+- CRITICAL SAFETY INSTRUCTIONS to be followed during inspection (e.g. isolation procedure)
+- Procedures for:
+  - PERIODIC INSPECTIONS
+  - SPECIFIC TESTS
+  - REPAIRED OR MODIFIED PLANT
+- VARIATIONS from normal operation or dangerous occurrences and trends
+
+SAFETY DURING INSPECTION:
+- Reasonably practicable control measures must be in place to ensure health and safety of person conducting inspection
+- Example: plant must be SWITCHED OFF AND ISOLATED from energy source to avoid accidental re-energising of dangerous parts
+- Guards removed during inspection must be REPLACED CORRECTLY before plant is returned to use
+
+VISUAL INDICATORS:
+- No inspection records for plant on site = non-compliance
+- Plant in use beyond manufacturer's or competent person's recommended inspection interval = non-compliance
+- Guards removed and not replaced after inspection or maintenance = serious non-compliance
+- No plant register maintained on site for relevant plant = flag
+- Hand-held powered plant with visibly worn or damaged parts in use = non-compliance
+
+---
+
+CHUNK 16: Maintenance, Repair and Cleaning of Plant
+Section: CoP s4.6; WHS Regulation s210
+Topic: Maintenance obligations, isolation requirements, operational controls during maintenance
+
+MAINTENANCE OBLIGATIONS:
+- Plant MUST BE MAINTAINED AND REPAIRED according to MANUFACTURER'S SPECIFICATIONS
+- If deficiencies in specifications identified: contact the MANUFACTURER
+- In absence of manufacturer's specifications: plant energy sources should be maintained per COMPETENT PERSON'S RECOMMENDATIONS (e.g. ensure fluid levels and pressures correct, brakes functioning properly)
+
+ISOLATION BEFORE MAINTENANCE OR CLEANING:
+- Plant should USUALLY BE ISOLATED before maintenance or cleaning starts
+- Isolated or disengaged plant should:
+  - NOT HINDER OR INTERFERE WITH OTHER PLANT OPERATION
+  - Have GUARDS IN PLACE where risk of injury is identified
+  - NOT OBSTRUCT ACCESS
+
+COMMUNICATION REQUIREMENT:
+- A process must be in place to enable EFFECTIVE COMMUNICATION AND CONSULTATION with affected workers and other PCBUs to prevent risk arising from RESTARTING PLANT after shutdown due to inspection, maintenance or cleaning
+
+WHERE PLANT CANNOT BE ISOLATED:
+- Methods to PREVENT ACCIDENTAL OPERATION must be implemented
+- Work carried out under CONTROLLED PROCEDURES allowing maintenance/cleaning without risk
+
+OPERATIONAL CONTROLS DURING MAINTENANCE/CLEANING (WHS Regulation s210):
+If plant needs to be operated while being maintained or cleaned, person with management or control must ensure operator's controls:
+- PERMIT OPERATION of plant while a person is undertaking maintenance or cleaning
+- While plant is being maintained or cleaned, controls EITHER:
+  - CANNOT BE OPERATED by a person other than the person carrying out maintenance or cleaning, OR
+  - If plant must be operated by someone other than the person carrying out maintenance/cleaning: can ONLY BE OPERATED by a person AUTHORISED by the person with management or control
+- Allow plant to be operated in a way that ELIMINATES RISKS or, if not reasonably practicable, MINIMISES RISKS
+
+POST-MAINTENANCE:
+- All GUARDING must be replaced before plant is used after maintenance or cleaning
+- Plant with damage posing a risk must be WITHDRAWN FROM SERVICE until risks are controlled
+
+VISUAL INDICATORS:
+- Plant undergoing maintenance without isolation = serious non-compliance
+- Plant operated during maintenance without controlled operational procedure = serious non-compliance
+- Guards not replaced before plant returned to use after maintenance = serious non-compliance
+- Plant with visible damage to structural or mechanical components remaining in service = non-compliance
+
+---
+
+CHUNK 17: Storing Plant
+Section: CoP s4.7; WHS Regulation s207
+Topic: Requirements for safe storage of plant not in use; powered mobile plant unattended
+
+STORAGE OBLIGATIONS (WHS Regulation s207):
+Person with management or control of plant must ensure, so far as reasonably practicable, that plant that is NOT IN USE is left in a state that does NOT CREATE A RISK to the health or safety of any person.
+
+STORAGE REQUIREMENTS:
+- Ensure relevant HEALTH AND SAFETY INFORMATION supplied by designer or manufacturer is provided to the person who is to dismantle or store the plant
+- Implement control measures to ELIMINATE OR MINIMISE risks to people during storage (e.g. RELEASE STORED ENERGY, LOWER MOVING PARTS that lower under gravity, PROVIDE SUPPORT to prevent toppling)
+- Implement control measures to ELIMINATE OR MINIMISE RISKS OF DAMAGE to plant during storage (e.g. risks from corrosion due to hazardous substance residues or deteriorating consumables)
+
+RECOMMISSIONING AFTER EXTENDED STORAGE:
+- Plant that has been stored for an extended period should be RECOMMISSIONED by carrying out the SAME LEVEL OF TESTING AND INSPECTION as when first commissioned
+
+PLANT TAKEN OFF-LINE (example — welding robot):
+- Must NOT be left in a state presenting risk
+- Manage by: ISOLATING WORKSTATION from power supply; employing LOCK-OUT AND TAG-OUT SYSTEMS; providing PHYSICAL STOPS to prevent movement if accidentally powered
+
+POWERED MOBILE PLANT — SPECIFIC OBLIGATIONS (WHS Regulation s214, s215):
+Person with management or control of powered mobile plant must manage risks associated with:
+- Plant OVERTURNING
+- Things FALLING ON THE OPERATOR
+- Operator being EJECTED from the plant
+- Plant COLLIDING with any person or thing
+- MECHANICAL FAILURE of pressurised elements releasing fluids that pose a risk
+
+SUITABLE COMBINATION OF OPERATOR PROTECTIVE DEVICES must be provided, maintained and used (WHS Regulation s215(2)).
+
+POWERED MOBILE PLANT WHEN UNATTENDED (example — industrial lift truck):
+- Must be parked on a FIRM, LEVEL SURFACE
+- HANDBRAKE APPLIED
+- MOTOR SWITCHED OFF and rendered INOPERABLE (e.g. key removed)
+- Workers must understand required safety procedures when leaving plant unattended
+
+VISUAL INDICATORS:
+- Plant not in use left in an unstable position, unsupported, or with energy sources not released = serious non-compliance
+- Forklift or industrial truck left unattended without handbrake applied and key removed = non-compliance
+- Plant removed from service after extended storage being returned to use without recommissioning = flag
+- Powered mobile plant without appropriate rollover or operator protection = non-compliance
+
+---
+
+CHUNK 18: Decommissioning, Dismantling and Disposing of Plant
+Section: CoP s4.8; WHS Regulation s204
+Topic: Safe decommissioning, dismantling and disposal obligations
+
+DECOMMISSIONING AND DISMANTLING OBLIGATIONS:
+- Same procedures apply as for installation and commissioning (WHS Regulation s204)
+- Person must IDENTIFY ANY HAZARDS inherent in decommissioning and dismantling (e.g. exposure to hazardous substances)
+- Plant must be dismantled in accordance with DESIGNER'S AND MANUFACTURER'S INSTRUCTIONS
+
+DISPOSAL OPTIONS:
+- Reselling (in full or part)
+- Scrapping
+- Waste disposal
+- Recycling
+
+RESELLING:
+- Seller takes on duties of a PERSON SUPPLYING THE PLANT
+- Must ensure plant is safe to LOAD, TRANSPORT, UNLOAD AND STORE
+- Information relating to plant DESIGN, REGISTRATION, INSTALLATION, OPERATION AND MAINTENANCE must be provided with the plant to reseller or buyer
+
+SCRAPPING:
+- Consult with LOCAL RECYCLING OR LOCAL WASTE DISPOSAL AUTHORITIES to make plant safe to load, transport, unload and dispose
+
+SCRAP OR SPARE PARTS:
+- Must INFORM the person supplied IN WRITING or by MARKING THE ITEM that plant is being supplied as scrap or spare parts only and CANNOT BE USED AS PLANT in its current form
+
+VISUAL INDICATORS:
+- Decommissioned plant on site without hazard identification or controlled dismantling procedure = flag
+- Scrapped plant without written notice of spare/scrap status = non-compliance if re-used
+- Plant sold second-hand without transfer of registration, design information or maintenance records = non-compliance
+
+---
+
+CHUNK 19: Guarding Plant — Types and Requirements
+Section: CoP s5.1; WHS Regulation s208
+Topic: Legal requirements for guarding; types of guards; design and maintenance of guards
+
+WHAT IS A GUARD?
+A guard is a physical or other barrier that can:
+- PREVENT CONTACT WITH MOVING PARTS or control access to dangerous areas
+- SCREEN HARMFUL EMISSIONS (e.g. radiation)
+- MINIMISE NOISE (sound-absorbing materials)
+- PREVENT EJECTED PARTS OR OFF-CUTS from striking people
+
+GUARDING OBLIGATIONS (WHS Regulation s208):
+Person with management or control of plant must ensure one of the following is complied with (in priority order):
+
+1. PERMANENTLY FIXED BARRIER — if access to the guarded area is NOT NECESSARY during operation, maintenance or cleaning
+2. INTERLOCKED PHYSICAL BARRIER — if access to guarded areas IS NECESSARY during operation, maintenance or cleaning; the barrier must:
+   - ALLOW ACCESS when that area does not present a risk, AND
+   - PREVENT ACCESS at any other time
+3. PHYSICAL BARRIER FIXED IN POSITION (tool-required removal) — if permanently fixed or interlocked barrier is not reasonably practicable; can only be altered or removed using A TOOL
+4. PRESENCE-SENSING SAFEGUARDING SYSTEM — if a physical barrier fixed in position is also not reasonably practicable; must ELIMINATE RISK when a person or any part of a person is in the guarded area
+
+GUARD CONSTRUCTION REQUIREMENTS:
+Guards must:
+- Be of SOLID CONSTRUCTION and SECURELY MOUNTED to resist impact or shock
+- Make BYPASSING OR DISABLING as difficult as reasonably practicable (whether deliberate or accidental)
+- NOT CREATE A RISK in itself (must not obstruct operator visibility, weaken the plant, cause operator discomfort, or introduce new hazards such as pinch points, rough or sharp edges)
+- Be PROPERLY MAINTAINED
+- Control, so far as reasonably practicable, risk from BROKEN OR EJECTED PARTS and work pieces
+- Be able to be REMOVED when plant is not in normal operation for maintenance and cleaning — and, when removed, plant CANNOT BE RESTARTED unless guard is replaced (so far as reasonably practicable)
+
+REMOVAL OF GUARDING:
+- Guard removed for maintenance or cleaning = MUST BE REPLACED before plant is put back into NORMAL OPERATION
+- When removing guarding: ELIMINATE THE ENERGY SOURCE by disconnecting power supply or by LOCKING OUT MOTIVE POWER SOURCES
+
+PERMANENTLY FIXED PHYSICAL BARRIERS:
+- Designed to be WELDED OR INCORPORATED INTO THE BODY of the machine
+- Example: gear arrangements enclosed in gearbox housing (eliminates entanglement risk)
+
+INTERLOCKED PHYSICAL BARRIERS:
+- Connected to plant's operational controls so plant is PREVENTED FROM OPERATING until guard is closed
+- Guard options: REMAIN LOCKED while plant is in operation (with delay before opening if dangerous parts take time to stop); or NOT BE LOCKED but STOP THE MACHINE when opened
+- Example: hinged top guard on food mixer with positively operating insertion key — automatically cuts off power when lid is opened; blades come to rest; if moving parts do not stop immediately = guard should be DESIGNED TO DELAY RELEASE until moving parts have stopped (Figure 2)
+
+PHYSICAL BARRIERS FIXED IN POSITION:
+- Easy to remove and replace but ONLY WITH A SPECIAL TOOL (e.g. spanner, Allen key)
+- Should only be opened when machine is NOT IN OPERATION
+- Special tool MUST NOT be the same as any tool issued to and used by the operator during normal work
+- DEVICES THAT CAN BE OPERATED USING FINGERS (e.g. wing nuts, wedge inserts) MUST NOT BE USED
+
+ADJUSTABLE GUARDING:
+- Incorporates MOVABLE SECTIONS OR PANELS to allow materials to be fed into guarded area while preventing physical contact (e.g. self-adjusting guard on a drop saw — Figure 5)
+
+PRESENCE-SENSING SYSTEMS (WHS Regulation s226):
+- Used when PHYSICAL GUARDS ARE NOT REASONABLY PRACTICABLE
+- Types: PHOTOELECTRIC LIGHT BEAMS, LASER SCANNERS, FOOT PRESSURE MATS
+- Detect when person or part of body enters a defined area and STOP THE MACHINE before person or part reaches the danger zone
+- Rely on SENSITIVE TRIP MECHANISMS and machine being able to STOP QUICKLY (may require brake)
+- Require: selecting APPROPRIATE TRIP DEVICE for the work, and CORRECT LOCATION OF BEAMS accounting for speed of entry and machine stopping time
+- Records required: person with management or control must KEEP A RECORD of safety integrity tests, inspections, maintenance, commissioning, decommissioning, dismantling and alterations
+
+ENVIRONMENTAL FACTORS FOR GUARD SELECTION:
+- High frequency welders = guards can become ELECTRICALLY CHARGED — poor guard selection
+- Hot processes = consider HEATING OF GUARDS
+- Machines emitting splashes = WIRE MESH GUARDS = poor selection
+- Corrosion-exposed guards = consider CORROSION-RESISTANT MATERIALS or surface coatings
+
+COLOUR CODING (best practice):
+- All guards should be painted the SAME HIGH VISIBILITY COLOUR (e.g. YELLOW OR RED — different from plant's own colour)
+- Paint surfaces BEHIND THE GUARD a CONTRASTING OR BRIGHT COLOUR so removal of guard makes the exposed surface clearly visible, alerting workers to danger
+
+VISUAL INDICATORS:
+- Moving parts accessible to workers without any guarding = serious non-compliance (WHS Regulation s208)
+- Guards painted same colour as surrounding machinery (not distinguishable) = flag (colour coding best practice)
+- Guards with wing nuts or finger-operated fasteners = non-compliance (physical barriers fixed in position requirement)
+- Interlocked guard that has been defeated or bypassed = serious non-compliance
+- Presence-sensing system with no maintenance or safety integrity test records = non-compliance (WHS Regulation s226)
+- Guard removed for maintenance not replaced before plant restart = serious non-compliance
+- Surfaces behind guards not painted contrasting colour = best practice deviation; flag
+
+---
+
+CHUNK 20: Operational Controls
+Section: CoP s5.2; WHS Regulation s210
+Topic: Requirements for plant operator controls — design, location, marking, fail-safe operation
+
+OPERATIONAL CONTROL OBLIGATIONS (WHS Regulation s210):
+Person with management or control of plant must ensure any operator controls are:
+- IDENTIFIED ON THE PLANT to indicate their nature, function and direction of operation
+- LOCATED SO THEY CAN BE READILY AND CONVENIENTLY OPERATED by each person using the plant
+- LOCATED OR GUARDED TO PREVENT UNINTENTIONAL ACTIVATION
+- ABLE TO BE LOCKED INTO THE 'OFF' POSITION to enable disconnection from energy sources
+
+DESIGN REQUIREMENTS FOR OPERATIONAL CONTROLS:
+- Enable FAIL-SAFE operation: example — when hand pressure is released on a lever controlling up/down movement, lever returns to neutral position and movement stops
+- Within EASY ACCESS of the operator
+- Intended function EASILY READ AND UNDERSTOOD (especially dials and gauges)
+- MOVEMENT OF CONTROL CONSISTENT with established convention (e.g. anticlockwise to open, clockwise to close)
+- Desired effect can ONLY OCCUR BY INTENTIONAL CONTROL OPERATION (e.g. starting control)
+- Able to WITHSTAND the rigours of normal use, undue forces and environmental conditions
+- LOCATED OUTSIDE DANGER ZONES
+- READILY ACCESSIBLE FOR MAINTENANCE
+- POSITIONED TO MAXIMISE VISIBILITY of the whole plant
+
+EXAMPLE OF NON-COMPLIANCE:
+- Control for setting speed on a saw designed as a SIMPLE SLIDER OR ROTARY CONTROL that may be accidentally adjusted during operation = NOT COMPLIANT; should be graduated in FIXED LOCKABLE STEPS
+
+VISUAL INDICATORS:
+- Controls not labelled with function or direction = non-compliance (WHS Regulation s210)
+- Controls that can be accidentally activated without guarding = non-compliance
+- Controls unable to be locked in 'off' position = non-compliance
+- Operators having to reach into danger zones to access controls = non-compliance
+- Speed or power controls that can be accidentally adjusted mid-operation = non-compliance
+
+---
+
+CHUNK 21: Emergency Stops
+Section: CoP s5.3; WHS Regulation s211
+Topic: Emergency stop requirements, markings, multi-operator plant, lock-off requirements
+
+EMERGENCY STOP OBLIGATIONS (WHS Regulation s211):
+If the design of plant includes an emergency stop control, person with management or control must ensure:
+- Stop control is PROMINENT, CLEARLY AND DURABLY MARKED and IMMEDIATELY ACCESSIBLE to each operator
+- Any HANDLE, BAR OR PUSH BUTTON associated with the stop control is coloured RED
+- Stop control CANNOT BE ADVERSELY AFFECTED by electrical or electronic circuit malfunction
+
+MULTI-OPERATOR PLANT:
+- Where plant is designed to be operated or attended by MORE THAN ONE PERSON and MORE THAN ONE EMERGENCY STOP CONTROL is fitted, the controls must be of the 'STOP AND LOCK-OFF' TYPE
+- Plant CANNOT BE RESTARTED after an emergency stop has been used UNLESS EACH ACTIVATED STOP CONTROL IS RESET
+
+OPERATION OF EMERGENCY STOP:
+- Emergency stop devices should NOT be the ONLY METHOD OF CONTROLLING RISKS — must be a BACK-UP to other control measures
+- Once engaged, emergency stop controls should REMAIN ENGAGED until deliberately disengaged
+- Can ONLY BE DISENGAGED by a DELIBERATE ACTION
+- DISENGAGING the emergency stop should NOT RESTART THE PLANT — should only ALLOW THE NORMAL STARTING SEQUENCE to be activated
+
+RELATED PLANT:
+- Stop controls, including emergency stop, should ALSO STOP ALL RELATED EQUIPMENT where continuing to operate that equipment may be dangerous
+
+VISUAL INDICATORS:
+- Emergency stop button present but NOT coloured red = non-compliance (WHS Regulation s211)
+- Emergency stop not immediately accessible from each operator position = non-compliance
+- Emergency stop that restarts plant when disengaged = non-compliance (must return to normal starting sequence only)
+- Multi-operator plant emergency stops that allow restart without each activated control being reset = non-compliance
+- Emergency stop used as primary risk control measure (not a back-up) = flag
+
+---
+
+CHUNK 22: Warning Devices
+Section: CoP s5.4; WHS Regulation s212, s215
+Topic: Types of warning devices for plant; requirements for collision warning; warning device selection
+
+WARNING DEVICE OBLIGATIONS (WHS Regulation s212, s215):
+- If plant design includes emergency warning device OR it is necessary to include one to minimise risk: person with management or control must ensure device is POSITIONED TO WORK TO BEST EFFECT
+- If there is a possibility of plant COLLIDING WITH PEDESTRIANS OR OTHER POWERED MOBILE PLANT: plant must have a WARNING DEVICE that will warn persons at risk from the movement of the plant
+
+FIXED PLANT WARNING DEVICES:
+- Should be fitted to warn workers of IMPENDING RISK (e.g. start-up movement, release of steam, overpressure)
+
+TYPES OF WARNING DEVICES:
+
+AUTOMATIC AUDIBLE ALARMS:
+- Usually fitted to warn of FORWARD OR REVERSING MOVEMENT
+- Emit an INTERMITTENT SOUND activated when gear or drive lever is engaged
+- Sound should be DISTINCT AND CLEARLY AUDIBLE ONLY IN THE HAZARD AREA
+- If several items of plant use same warning device: risk that workers cannot tell WHICH ITEM IS MOVING; also risk of DESENSITISATION
+- More effective to COMBINE AUDIBLE ALARMS WITH OTHER WARNING DEVICES (e.g. flashing lights)
+
+MOTION SENSORS:
+- Activate an integrated or separately located alarm
+- Sensitive to movement; activated by motion in required direction
+- Suitable for plant that MOVES SUDDENLY IN ANY DIRECTION (e.g. rollers, bulldozers, excavators, boom lifts, scissor lifts)
+- Alarms usually DEACTIVATE AFTER A SHORT TIME — MUST NOT be deactivated if operator has RESTRICTED VISION when reversing
+
+LIGHTS:
+- Usually warn of FORWARD AND REVERSING MOVEMENT
+- Wired to operate continuously or in HAZARD MODE BY FLASHING (usually when reversing)
+- Important to choose INTENSITY AND COLOUR appropriate to workplace (example: orange light suitable inside warehouse but MAY NOT BE SEEN IN SUNLIGHT)
+
+FLASHING/ROTARY LIGHTS:
+- Coloured revolving lights mounted prominently (e.g. top of vehicle cabin)
+- Can be wired to operate continuously or activated by switch
+- Suitable for any plant moving in the workplace (forklifts, skid steer loaders)
+- MAY NOT BE SUITABLE for: plant stationary for long periods; plant operating in restricted areas (trucks on defined site roads)
+
+PERCUSSION ALARMS:
+- Mechanical devices fitted to axle or gearshift
+- When plant moves, cam raises hammer that drops onto bell or sounding plate
+- Relatively cheap to install
+- Require REGULAR MAINTENANCE to ensure continued effectiveness
+
+RADIO SENSING DEVICES:
+- Activate when operator selects reverse
+- Light and alarm sound inside cabin to alert operator if pedestrian is within PREDETERMINED DISTANCE from rear of plant
+
+AIR HORNS:
+- Suitable for powered mobile plant with LONG BRAKING DISTANCES (e.g. trucks)
+- Some large workplaces require trucks to 'STOP AND SOUND HORN BEFORE CONTINUING'
+
+VISUAL INDICATORS:
+- Powered mobile plant operating in areas with pedestrian traffic without any audible or visual warning device = serious non-compliance
+- Warning device present but not audible in the hazard area (tested against ambient noise levels) = non-compliance
+- Reversing alarm automatically deactivating when operator has restricted rearward vision = non-compliance
+- Orange warning lights used on outdoor plant in daylight without assessment of visibility = flag
+- Warning device absent on fixed plant with hazardous start-up or overpressure risk = non-compliance
+
+---
+
+CHUNK 23: Isolating Energy Sources — Lockout/Tagout
+Section: CoP s5.5; WHS Regulation (general)
+Topic: Lockout/tagout procedures, energy source types, correct isolation devices, tagging rules
+
+ISOLATION PROCEDURE DEFINITION:
+An isolation procedure is a set of predetermined steps followed when workers are required to perform tasks such as MAINTENANCE, REPAIR, INSTALLATION AND CLEANING OF PLANT.
+
+PURPOSE:
+- Isolating potentially hazardous energy so the plant does NOT MOVE OR START UP ACCIDENTALLY
+- Ensuring ENTRY TO A RESTRICTED AREA is controlled while the specific task is being carried out
+
+LOCKOUT PROCESS — MOST EFFECTIVE ISOLATION PROCEDURE:
+Steps must be followed in order:
+1. SHUT DOWN the machinery and equipment
+2. IDENTIFY ALL ENERGY SOURCES and other hazards
+3. IDENTIFY ALL ISOLATION POINTS
+4. ISOLATE ALL ENERGY SOURCES
+5. CONTROL OR DE-ENERGISE ALL STORED ENERGY
+6. LOCK OUT ALL ISOLATION POINTS
+7. TAG machinery controls, energy sources and other hazards
+8. TEST by 'trying' to REACTIVATE THE PLANT without exposing the tester or others to risk
+
+NOTE: Failure to reactivate may mean main power has been isolated — but does NOT guarantee all stored energies have dissipated. Further measures to safely release stored energies (e.g. HYDRAULIC OR PNEUMATIC PRESSURE, SUSPENDED WEIGHT, COMPRESSED SPRINGS) may be required.
+
+ENERGY SOURCES REQUIRING ISOLATION:
+- Electricity (mains)
+- Battery or capacitor banks
+- Solar panels
+- Fuels
+- Heat
+- Steam
+- Fluids or gases under pressure (water, air, steam, hydraulic oil)
+- Stored energy (compressed springs)
+- Gravity
+- Radiation
+
+ISOLATION DEVICES:
+- Switches with BUILT-IN LOCKS
+- Lock-out CIRCUIT BREAKERS
+- Fuses and valves
+- CHAINS
+- SAFETY LOCK-OUT JAWS (hasps)
+- SAFETY PADLOCKS
+
+MULTIPLE WORKERS:
+- Use a lock that allows ONE OR MORE PADLOCKS to be fitted
+- If more than one person is working on plant simultaneously: EACH WORKER must be able to attach a PADLOCK to the device
+- Alternative: ONE PADLOCK on isolation point, KEYS LOCKED IN A BOX separately locked by each worker
+
+KEY MANAGEMENT:
+- Each worker should have a LOCK, TAG AND KEY for EACH ISOLATION POINT
+- NO DUPLICATE KEY for any lock, except a MASTER KEY kept in SECURE LOCATION and used ONLY IN AN EMERGENCY
+- If MORE THAN ONE ENERGY SOURCE must be isolated: SINGLE KEY to each lock-out device held by the SAME PERSON
+
+TAGS:
+- Tags should ONLY be used as a means of PROVIDING INFORMATION to others
+- A TAG MUST NOT BE USED ON ITS OWN as an isolation device — ONLY A LOCK is effective in isolating energy source
+- Tags and locks should ONLY BE REMOVED by the PERSON WHO APPLIED THEM or by the SUPERVISOR after consultation with the tag signatory
+- If person who applied the tag is UNAVAILABLE: tag or lock may only be removed in accordance with a MANAGEMENT APPROVED PROCEDURE
+
+VISUAL INDICATORS:
+- Maintenance being performed without isolation (lockout/tagout) = serious non-compliance
+- Tags used alone without locks as isolation devices = non-compliance
+- Locks without tags and/or tags without locks in isolation systems = flag
+- Multiple workers sharing a single padlock on an isolation point = non-compliance
+- Energy sources that are only visually identified but not physically isolated = flag
+- Workers performing stored energy tasks (hydraulic lines, springs, suspended loads) without additional release steps beyond lockout = non-compliance
+
+---
+
+CHUNK 24: Design Registration Process
+Section: CoP s6.1; WHS Regulation s244
+Topic: How to register a plant design; design verifier requirements; design registration number obligations
+
+DESIGN REGISTRATION REQUIREMENTS:
+A plant design must be registered if:
+- It has NOT already been design registered
+- A PCBU alters the plant design and ALTERATIONS MAY AFFECT HEALTH AND SAFETY
+
+DESIGN VERIFIER:
+- Design must be VERIFIED BY A DESIGN VERIFIER
+- Verifier must provide a STATEMENT confirming the design has been produced in accordance with PUBLISHED TECHNICAL STANDARDS or ENGINEERING PRINCIPLES specified by the designer
+- Design verifier must be a person ELIGIBLE UNDER THE WHS REGULATION
+
+COMPETENCY OF DESIGN VERIFIER:
+Person who would be competent to verify design of plant may include someone who:
+- Has EDUCATIONAL OR VOCATIONAL QUALIFICATIONS in an engineering discipline relevant to the design
+- Has KNOWLEDGE OF TECHNICAL STANDARDS relevant to the design
+- Has SKILLS NECESSARY TO INDEPENDENTLY VERIFY the design was produced in accordance with published technical standards and engineering principles
+- Is CERTIFIED BY A BODY ACCREDITED OR APPROVED BY JOINT ACCREDITATION SYSTEM — Australia and New Zealand or equivalent overseas body, to undertake CONFORMITY ASSESSMENTS against relevant technical standards
+- Example: person REGISTERED ON THE NATIONAL PROFESSIONAL ENGINEERS REGISTER administered by Institution of Engineers Australia, determined by the Institution to be competent to design or inspect the relevant type of plant, or is a member with the status of CHARTERED PROFESSIONAL ENGINEER
+
+DESIGN REGISTRATION NUMBER:
+- Regulator issues a PLANT DESIGN REGISTRATION NUMBER when design is registered
+- Person issued the number must give it to the MANUFACTURER, IMPORTER OR SUPPLIER of plant manufactured to that design
+- Those duty holders must provide the number to the PERSON WITH MANAGEMENT OR CONTROL at the workplace
+- Person with management or control must ensure number is KEPT READILY ACCESSIBLE IN THE VICINITY OF THE PLANT AT ALL TIMES
+- RECOMMENDED: permanently mark the design registration number on the plant
+
+VISUAL INDICATORS:
+- Registrable plant in operation without any design registration number displayed or accessible = non-compliance
+- Design registration number not marked on or near plant = non-compliance
+
+---
+
+CHUNK 25: Record Keeping for Plant
+Section: CoP Chapter 7; WHS Regulation s237, s226
+Topic: Mandatory record keeping requirements for registered plant and presence-sensing systems
+
+MANDATORY RECORDS — REGISTERED PLANT (WHS Regulation s237):
+Person with management or control of plant REQUIRED TO BE REGISTERED must keep a record of:
+- ALL TESTS
+- INSPECTIONS
+- MAINTENANCE
+- COMMISSIONING
+- DECOMMISSIONING
+- DISMANTLING
+- ALTERATIONS
+
+RETENTION PERIOD:
+- For the PERIOD THAT THE PLANT IS USED or until the person RELINQUISHES CONTROL of the plant
+
+MANDATORY RECORDS — PRESENCE-SENSING SAFEGUARDING SYSTEM (WHS Regulation s226):
+Person with management or control of plant with a presence-sensing safeguarding system must keep a record of:
+- SAFETY INTEGRITY TESTS
+- INSPECTIONS
+- MAINTENANCE
+- COMMISSIONING
+- DECOMMISSIONING
+- DISMANTLING
+- ALTERATIONS
+
+RETENTION PERIOD — presence-sensing systems:
+- FIVE YEARS, OR
+- LIFE OF THE PLANT or until person relinquishes control of plant — if the plant is REGISTERED PLANT or HAS BEEN ALTERED
+
+BEST PRACTICE RECORDS FOR ALL PLANT:
+- UNIQUE PLANT IDENTIFICATION NUMBER
+- Plant DESIGN REGISTRATION information
+- Relevant data from COMMISSIONING
+- COMPLIANCE STATEMENTS and/or test certificates
+- MANUFACTURER'S SPECIFICATIONS AND USER MANUALS
+- Results of INSPECTIONS
+- Results of TESTS on plant including safety devices (e.g. protective earth continuity tests, mechanical guarding tests, stop time measurement)
+- Information on MAINTENANCE AND MAJOR REPAIRS carried out
+- Information on ALTERATIONS
+- Information on USE DEVIATING from intended operating or design conditions
+- Results of RISK ASSESSMENTS carried out on plant
+- INFORMATION, INSTRUCTION AND TRAINING provided to workers
+- COMPETENCIES OF OPERATORS
+
+VISUAL INDICATORS:
+- Registered plant in operation with no test, inspection or maintenance records available = serious non-compliance (WHS Regulation s237)
+- Presence-sensing safeguarding system with no safety integrity test records dating back at least 5 years = non-compliance (WHS Regulation s226)
+- No operator training or competency records for plant on site = non-compliance
+
+---
+
+CHUNK 26: Technical Standards for Plant — Appendix D
+Section: CoP Appendix D; WHS Regulation (various)
+Topic: Published technical standards referenced by the Code of Practice for plant design, manufacture and use
+
+NOTE: Compliance with these technical standards does not guarantee compliance with the WHS Act and WHS Regulation in all instances.
+
+AMUSEMENT STRUCTURES: AS 3533 (series) — Amusement rides and devices [design, make, use]
+
+CRANES, HOISTS AND WINCHES:
+- AS 1418 (series) — Cranes, hoists and winches [design, make]
+- AS 4991 — Lifting devices [design, make, use]
+- AS 2550 (series) — Cranes, hoists and winches—Safe use [use]
+
+CONVEYORS: AS/NZS 4024 (series) — Safety of machinery conveyors [design, make, use]
+
+EARTHMOVING MACHINERY:
+- AS 2294.1 — Protective structures—General [design, make]
+- AS 2958.1 — Wheeled machines—Brakes [design, make, use]
+- ISO 6165 — Basic types—Identification and terms [design]
+- ISO 6746–1 — Dimensions and codes—Base machine [design]
+
+ELECTRICAL INSTALLATION:
+- AS/NZS 3000 — Electrical installations (Aust/NZ Wiring Rules) [use]
+- AS 60204.1 (IEC 60204.1) — Safety of machinery: Electrical equipment of machines [design, make]
+
+HAND-HELD ELECTRIC TOOLS: AS/NZS 60745 (series) — Safety [design, make, use]
+
+FALL ARREST:
+- AS/NZS 1891 (series) — Industrial fall-arrest systems and devices [design, make, use]
+- BS EN 1263–1 — Safety nets [use]
+
+GAS CYLINDERS:
+- AS 2030.1 — General requirements [design, make]
+- AS 2030.5 — Filling, inspection and testing
+- AS/NZS 3509 — LP Gas fuel vessels for automotive use [design, make]
+
+INDUSTRIAL (FORKLIFT) TRUCKS: AS 2359 (series) — Powered industrial trucks [design, make, use]
+
+INDUSTRIAL ROPE ACCESS SYSTEMS: AS 4488.2 — Selection, use and maintenance [design, make, use]
+
+LADDERS: AS/NZS 1892 (series) — Portable ladders [design, make]
+
+LASERS:
+- AS/NZS IEC 60825.1 — Equipment classification and requirements [design, make, use]
+- AS/NZS IEC 60825.14 — A user's guide
+- AS 2397 — Safe use of lasers in building and construction [use]
+
+LIFTS: AS 1735 (series) — Lifts, escalators and moving walks (SAA Lift Code) [design, make, use]
+
+MACHINERY:
+- AS 4024 (series) — Safety of machinery [design, make, use]
+- AS 1657 — Fixed platforms, walkways, stairways and ladders [design, make]
+- AS 1788.2 — Abrasive wheels—Selection, care and use [design, make, use]
+- AS 61508 (series) — Functional safety of electrical/electronic/programmable electronic safety-related systems [design, make, use]
+- AS/IEC 61511 (series) — Safety instrumented systems for process industry [design, make, use]
+- AS 62061 — Safety of machinery: Functional safety of safety-related control systems [design, make, use]
+- ISO 13849.1 — Safety-related parts of control systems—General principles for design [design, make, use]
+- BS EN 61496–1:2013 — Electro-sensitive protective equipment [design, make]
+- AS 1636 (series) — Tractors—Roll-over protective structures [design, make]
+
+MACHINERY GUARDING:
+- AS 4024 (series) — Safety of machinery [design, make, use]
+- ISO 12100:2010 — General principles for design—Risk assessment and risk reduction [design, make, use]
+
+PRESSURE EQUIPMENT:
+- AS/NZS 1200 — Pressure equipment [design, make, use]
+- AS 2593 — Boilers—Safety management and supervision systems [design, make]
+- AS/NZS 3788 — Pressure equipment—In-service inspection [use]
+- AS 3873 — Pressure equipment—Operation and maintenance [use]
+- AS 4343 — Pressure equipment—Hazard levels
+- ASME PV Code 8 Div 1 — Pressure vessels—General [design, make]
+- ASME PV Code 8 Div 2 — Pressure vessels—Alternative rules [design, make]
+
+PRESSURE PIPING: AS 4041 — Pressure piping [design, make]
+
+SCAFFOLDING:
+- AS/NZS 1576.1 — Scaffolding—General requirements [design, make]
+- AS 1577 — Scaffold decking components [design, make]
+- AS/NZS 4576 — Guidelines for scaffolding [use]
+
+SPRAY PAINTING: AS/NZS 4114.1 — Spray painting booths—Design, construction and testing [design, make, use]
+
+VENTILATION: AS 1668.2 — Mechanical ventilation in buildings [design, make, use]
+
+WORK BOXES—CRANE LIFTED:
+- AS 1418.17 — Design and construction of workboxes [design, make]
+- AS 2550.1 — Cranes—Safe use—General requirements [use]
+
+VISUAL INDICATORS:
+- Any plant found on site that should comply with the above standards but for which the manufacturer cannot provide evidence of design compliance = flag for competent person review
+- Pressure equipment or boilers operating without current in-service inspection records per AS/NZS 3788 = non-compliance
+
+---
+
+CHUNK 27: Consulting Workers and Duty Holders — Plant Obligations
+Section: CoP s2.3; WHS Act s46, s47, s48
+Topic: PCBU consultation obligations with workers and other duty holders for plant matters
+
+CONSULTATION WITH WORKERS (WHS Act s47, s48):
+- PCBU MUST CONSULT, so far as reasonably practicable, with workers who carry out work and who are (or are likely to be) DIRECTLY AFFECTED by a health and safety matter
+- Consultation must include workers' HEALTH AND SAFETY REPRESENTATIVE if they have one
+- Broad definition of 'worker' includes: CONTRACTORS AND SUBCONTRACTORS (and their employees), ON-HIRE WORKERS, OUTWORKERS, APPRENTICES, TRAINEES, WORK EXPERIENCE STUDENTS, VOLUNTEERS and others working for the PCBU
+- Workers must be ENCOURAGED TO REPORT HAZARDS AND PROBLEMS IMMEDIATELY
+- IT IS IMPORTANT TO CONSULT WORKERS AS EARLY AS POSSIBLE when planning to INTRODUCE NEW PLANT or CHANGE THE WAY PLANT IS USED
+
+WHAT CONSULTATION REQUIRES:
+- Relevant WHS INFORMATION IS SHARED with workers
+- Workers given REASONABLE OPPORTUNITY TO EXPRESS VIEWS and raise safety issues
+- Workers given REASONABLE OPPORTUNITY TO CONTRIBUTE TO DECISION-MAKING relating to the health and safety matter
+- VIEWS OF WORKERS ARE TAKEN INTO ACCOUNT
+- Workers ADVISED OF THE OUTCOME of any consultation in a timely manner
+- If workers are represented by a health and safety representative: consultation MUST INCLUDE THAT REPRESENTATIVE
+
+CONSULTATION DOES NOT MEAN:
+- Telling workers about a decision AFTER it has been taken
+
+CONSULTING OTHER DUTY HOLDERS (WHS Act s46):
+- PCBU must CONSULT, COOPERATE AND COORDINATE activities with ALL OTHER PERSONS who have a WHS duty in relation to the SAME MATTER, so far as reasonably practicable
+- Each duty holder should EXCHANGE INFORMATION and WORK TOGETHER cooperatively to eliminate or minimise risks
+
+EXAMPLES WHERE CONSULTATION BETWEEN DUTY HOLDERS IS REQUIRED:
+- On-hire business with workers at other workplaces: must exchange information with HOST BUSINESS about:
+  - Whether workers could be exposed to hazardous plant
+  - What each party will do to CONTROL ASSOCIATED RISKS
+- Using a crane (or other shared plant) at a workplace shared with other businesses: plant owner/manager must talk to those businesses about RISKS THE PLANT COULD CAUSE THEM
+
+VISUAL INDICATORS:
+- No documented consultation records for introduction of new plant = flag
+- Workers unaware of hazards associated with plant they operate daily = flag for training and consultation gap
+- No coordination arrangements visible between PCBUs sharing plant at the same site = flag
+
+---
+
+CHUNK 28: Specific Plant Types — Powered Mobile Plant
+Section: CoP s4.7; WHS Regulation s214, s215
+Topic: Risk management requirements specific to powered mobile plant; operator protective devices
+
+POWERED MOBILE PLANT — RISK MANAGEMENT OBLIGATIONS (WHS Regulation s214):
+Person with management or control of powered mobile plant must manage risks associated with:
+- Plant OVERTURNING
+- Things FALLING ON THE OPERATOR
+- Operator being EJECTED from the plant
+- Plant COLLIDING WITH ANY PERSON OR THING
+- MECHANICAL FAILURE of pressurised elements of plant that may release fluids posing a risk
+
+OPERATOR PROTECTIVE DEVICES (WHS Regulation s215(2)):
+- A SUITABLE COMBINATION of operator protective devices must be PROVIDED, MAINTAINED AND USED
+- Specific protective devices: refer to WHS Regulation s215 for applicable combinations
+
+UNATTENDED POWERED MOBILE PLANT:
+- Powered mobile plant must not be left in a way that allows it to MOVE OF ITS OWN ACCORD (e.g. rolling down a slope) or to be OPERATED WITHOUT AUTHORISATION
+- Example — industrial lift truck when left unattended:
+  - Parked on a FIRM, LEVEL SURFACE
+  - HANDBRAKE APPLIED
+  - MOTOR SWITCHED OFF and RENDERED INOPERABLE (e.g. key removed)
+
+HIGH RISK WORK LICENCES — POWERED MOBILE PLANT:
+- Operators of certain plant (e.g. industrial trucks, some cranes) must hold appropriate HIGH RISK WORK LICENCE
+- PCBU must sight WRITTEN EVIDENCE of licence before directing or allowing work (WHS Regulation s85)
+
+VISUAL INDICATORS:
+- Forklift, crane, EWP, or other powered mobile plant without visible rollover protection or operator protective structure = non-compliance
+- Powered mobile plant operating in same area as pedestrians without barriers, exclusion zones, or warning devices = non-compliance
+- Powered mobile plant left unattended on a slope without being secured = serious non-compliance
+- Operator of industrial truck, crane or other licensed plant unable to produce high risk work licence = serious non-compliance
+
+---
+
+CHUNK 29: Specific Plant Types — Plant that Lifts or Suspends Loads
+Section: CoP s3.1, s4.3; WHS Regulation s219, s220
+Topic: Requirements for lifting operations, load limits, suspending persons, work boxes
+
+LIFTING AND SUSPENDING OBLIGATIONS (WHS Regulation s219):
+Person with management or control of plant must ensure:
+- Plant used for lifting/suspending is SPECIFICALLY DESIGNED TO LIFT OR SUSPEND THE LOAD (so far as reasonably practicable)
+- Lifting carried out WITH LIFTING ATTACHMENTS SUITABLE FOR THE LOAD
+- Lifting carried out WITHIN SAFE WORKING LIMITS OF THE PLANT
+
+GENERAL LIFTING RULES:
+- NO LOADS SUSPENDED OR TRAVEL OVER A PERSON unless plant is SPECIFICALLY DESIGNED for that purpose
+- Loads REMAIN UNDER CONTROL during the activity
+- NO LOAD LIFTED SIMULTANEOUSLY BY MORE THAN ONE ITEM OF PLANT unless method of lifting ensures load on each item does not exceed that item's DESIGN CAPACITY
+
+EXCEPTIONS — PLANT NOT SPECIFICALLY DESIGNED TO LIFT OR SUSPEND A PERSON (WHS Regulation s220):
+If not reasonably practicable to use purpose-designed plant for lifting persons, person with management or control must ensure:
+- Plant does not cause GREATER RISK than purpose-designed plant
+- Persons lifted in a WORK BOX SECURELY ATTACHED to the plant
+- Persons REMAIN SUBSTANTIALLY WITHIN the work box while lifted or suspended
+- SAFETY HARNESS worn if risk of falling from height
+- MEANS PROVIDED for persons to SAFELY EXIT from the plant in the event of failure in normal operation
+
+VISUAL INDICATORS:
+- Loads suspended or travelling over workers without purpose-designed plant = serious non-compliance
+- Personnel being lifted in an improvised platform rather than a certified work box = serious non-compliance
+- Lifting operation where two items of plant simultaneously lifting same load without documented safe lifting method = non-compliance
+- Plant lifting loads in excess of marked safe working load = serious non-compliance
+- No safety harness on persons being elevated in a work box where fall risk exists = non-compliance
+
+---
+
+CHUNK 30: Specific Plant Types — Industrial Robots, Lasers, Pressure Equipment
+Section: CoP s3.3; WHS Regulation (various)
+Topic: Specific control measure requirements for industrial robots, lasers, and pressure equipment
+
+INDUSTRIAL ROBOTS:
+- Classified as a type of plant for which SPECIFIC CONTROLS are required under the WHS Regulation
+- Typical risks: robot moving unexpectedly; entrapment in the robot's range of movement
+- Controls typically include: PERIMETER GUARDING with interlocked access; PRESENCE-SENSING SYSTEMS (see Chunk 19); clear EXCLUSION ZONES; ISOLATION during maintenance
+- Robot taken off-line but still functional = must be isolated from power supply, with LOCK-OUT AND TAG-OUT and PHYSICAL STOPS to prevent movement if accidentally powered (WHS Regulation s207)
+
+LASERS:
+- Specific controls required under WHS Regulation
+- Relevant standards: AS/NZS IEC 60825.1 (Equipment classification and requirements); AS/NZS IEC 60825.14 (User's guide); AS 2397 (Safe use of lasers in building and construction)
+- Classification determines the level of risk control required
+
+PRESSURE EQUIPMENT:
+- Specific controls required under WHS Regulation
+- Relevant standards: AS/NZS 1200; AS 4343 (Hazard levels); AS/NZS 3788 (In-service inspection); AS 3873 (Operation and maintenance)
+- Design registration required for pressure equipment categorised as HAZARD LEVEL A, B, C OR D (per AS 4343–2005 s2.1)
+- Item registration required for BOILERS (hazard level A, B or C) and PRESSURE VESSELS (hazard level A, B or C — except gas cylinders, LP Gas automotive, serially produced vessels)
+- ANNUAL RENEWAL of item registration required
+
+VISUAL INDICATORS:
+- Industrial robot operating without perimeter guarding or presence-sensing system = serious non-compliance
+- Robot taken off-line but left unsecured and energised = non-compliance (WHS Regulation s207)
+- Boiler or pressure vessel on site without current item registration and inspection records = serious non-compliance
+- Laser equipment in use without classification assessment or appropriate controls for the class = non-compliance
+
+---
+
+CHUNK 31: Referenced Legislation and Other Codes of Practice
+Section: CoP throughout
+Topic: Key legislation, regulations and codes of practice referenced by or relevant to this Code
+
+PRIMARY LEGISLATION:
+- Work Health and Safety Act 2011 (Qld)
+- Work Health and Safety Regulation 2011 (Qld)
+
+ELECTRICAL SAFETY:
+- Electrical Safety Regulation Part 5 — Overhead and underground electric lines
+
+KEY WHS REGULATION SECTIONS FOR PLANT:
+- WHS Regulation s34–s38 — Risk management
+- WHS Regulation s39 — Provision of information, training and instruction
+- WHS Regulation s85 — High risk work licences
+- WHS Regulation s198–s200 — Supplier duties, second-hand plant
+- WHS Regulation s203–s213 — Management and control of plant at workplaces
+- WHS Regulation s214–s215 — Powered mobile plant
+- WHS Regulation s219–s220 — Plant that lifts or suspends loads
+- WHS Regulation s226 — Plant with presence-sensing safeguarding system—records
+- WHS Regulation s237 — Records of plant
+- WHS Regulation s244 — Altered plant designs to be registered
+- WHS Regulation s282 — Changes to information
+- WHS Regulation s297 — Management of risks in construction work
+- WHS Regulation s299 — Safe work method statement for high risk construction work
+- WHS Regulation Schedule 3 — Classes of high-risk work licences
+- WHS Regulation Schedule 4 — Competency requirements for high-risk work licences
+- WHS Regulation Schedule 5 — Registrable plant designs and items of plant
+
+OTHER CODES OF PRACTICE REFERENCED:
+- How to Manage Work Health and Safety Risks Code of Practice
+- Work Health and Safety Consultation, Cooperation and Coordination Code of Practice
+- Safe Design, Manufacture, Import and Supply of Plant Guidance Material (Safe Work Australia)
+- Workplace Traffic Management Guidance Material (Safe Work Australia)
+
+KEY WEBSITE:
+- worksafe.qld.gov.au
+
+RELEVANT TECHNICAL STANDARDS — KEY REFERENCES:
+- AS/NZS 3000 — Electrical installations (Wiring Rules): plant electrical installation compliance
+- AS 4024 (series) — Safety of machinery: guarding and general machinery safety
+- AS 2550 (series) — Cranes, hoists and winches—Safe use
+- AS 1735 (series) — Lifts, escalators and moving walks
+- AS/NZS 1200 — Pressure equipment
+- AS 4343 — Pressure equipment—Hazard levels
+- AS/NZS 3788 — Pressure equipment—In-service inspection
+- AS 2359 (series) — Powered industrial trucks (forklifts)
+- AS 1418 (series) — Cranes, hoists and winches
+- ISO 12100:2010 — Safety of machinery—General principles for design

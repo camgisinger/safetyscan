@@ -1,0 +1,212 @@
+DOCUMENT: Managing Noise and Preventing Hearing Loss at Work Code of Practice 2021 (Queensland)
+TYPE: Approved Code of Practice
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: all_workplaces, manufacturing, construction, transport, mining, agriculture
+SOURCE: Workplace Health and Safety Queensland (WHSQ)
+CURRENT AS AT: 2021 (approved under section 274 of the Work Health and Safety Act 2011)
+CLAUSE_PREFIX: s
+REFERENCE_STANDARD: AS/NZS 1269.1 Occupational noise management—Measurement and assessment; AS/NZS 1269.3 Occupational noise management—Hearing protector program; AS/NZS 1269.4 Occupational noise management—Auditory assessment; AS/NZS 1270 Acoustics—Hearing protectors; ISO 9533 Earth-moving machinery alarms; ISO 7731 Auditory danger signals.
+
+---
+
+CHUNK 1: Primary Duties and Exposure Standards
+Section: WHS Regulation s56, s57; WHS Act s19, s27, s28; COP s1.1
+Topic: Legal noise limits and core safety obligations
+
+NOISE EXPOSURE STANDARD — a PCBU must ensure worker noise exposure does not exceed:
+- LAeq,8h of 85 dB(A) — eight-hour equivalent continuous A-weighted sound pressure level
+- LC,peak of 140 dB(C) — C-weighted peak sound pressure level
+
+PRIMARY DUTY: A PCBU must manage risks to health and safety relating to hearing loss associated with noise. Must ELIMINATE risks, or if not reasonably practicable, MINIMISE the risks so far as is reasonably practicable.
+
+DUTY HOLDERS:
+- Officers: Must exercise due diligence to ensure the PCBU uses appropriate resources to eliminate or minimise noise risks
+- Workers: Must take reasonable care for their own hearing health and must comply with any reasonable instructions regarding PPE and noise controls
+
+VISUAL INDICATORS:
+- Workers needing to raise their voices to communicate with someone ABOUT ONE METRE AWAY = hazardous noise likely present (indicative of >85 dB(A))
+- Presence of "Hearing Protector Area" signs = identified hazardous noise zone — PPE mandatory
+- Workers not wearing provided hearing protection in signed areas = non-compliant worker duty
+- No hearing protector signs in areas with obviously loud machinery = hazard not identified
+
+---
+
+CHUNK 2: Understanding Noise — Key Physics and Measurement
+Section: COP s2.2, s3.2, s4.3; Appendix D
+Topic: Exact measurements for noise assessments and exposure time limits
+
+LOGARITHMIC SCALE — critical to understand:
+- An increase of 3 dB represents a DOUBLING OF SOUND ENERGY
+- Every 3 dB increase in noise level can cause the same hearing damage in HALF THE TIME
+
+UNPROTECTED EXPOSURE TIME LIMITS:
+- 85 dB(A): 8 hours maximum
+- 88 dB(A): 4 hours maximum
+- 91 dB(A): 2 hours maximum
+- 94 dB(A): 1 hour maximum
+- 100 dB(A): 15 minutes maximum
+- 101 dB(A): 12 minutes maximum
+- 121 dB(A): 7.2 seconds maximum
+
+MEASUREMENT POSITION: Noise measurements should be taken at 10 TO 20 CENTIMETRES from the worker's ear canal entrance.
+
+VISUAL INDICATORS:
+- Integrating sound level meter being used for assessment = positive compliance indicator
+- Worker wearing a noise dosimeter in a highly mobile work environment = positive measurement practice
+- Assessment conducted without measuring background noise (e.g. ventilation, pumps) = potential assessment gap
+- No noise measurement records available for loud work areas = non-compliant
+
+---
+
+CHUNK 3: Extended Work Shifts and Noise Averaging
+Section: COP s4.3, Table 3
+Topic: Adjustments required for shifts longer than 8 hours
+
+MANDATORY SHIFT ADJUSTMENTS — for shifts of 10 hours or longer, the following must be ADDED to the measured LAeq,8h before comparing to the 85 dB(A) standard:
+- 10 hours to less than 14 hours: ADD + 1 dB(A)
+- 14 hours to less than 20 hours: ADD + 2 dB(A)
+- 20 hours or more: ADD + 3 dB(A)
+
+WEEKLY AVERAGING: If workers work MORE THAN FIVE DAYS PER WEEK, the weekly averaging procedure in AS/NZS 1269.1 should be used.
+
+VISUAL INDICATORS:
+- Roster showing 12-hour shifts but noise records using a flat 85 dB(A) limit without the +1 dB adjustment = non-compliant risk assessment
+- Night shift workers excluded from noise assessments = incomplete hazard identification
+- Noise assessment records that do not record shift duration = potentially incomplete assessment
+
+---
+
+CHUNK 4: Hierarchy of Control Measures for Noise
+Section: COP s5.1; Appendix F
+Topic: Mandatory order for noise reduction — most to least effective
+
+LEVEL 1 — ELIMINATION:
+- Cease using the noisy machine entirely
+- Do not introduce the hazard into the workplace in the first place
+
+LEVEL 2 — SUBSTITUTION AND ENGINEERING CONTROLS:
+- Substitution examples:
+  - Bending metal in a press is quieter than hammering
+  - WELDING IS GENERALLY QUIETER THAN RIVETING
+  - Replacing chain drives with timing belts (chevron pattern): 6 TO 20 dB noise reduction
+  - Replacing metal parts with quieter plastic parts
+
+- Engineering controls and reductions achievable:
+  - Exhaust mufflers on internal combustion engines: significant reduction
+  - SILENCERS on compressed air exhausts: typically 10 TO 30 dB reduction
+  - DAMPING: covering 80 PER CENT of a flat surface with damping material = 5 TO 25 dB noise reduction
+  - Machine guard gaps: reducing gap area by HALF reduces noise by 3 dB; reducing by 90% reduces noise by 10 dB
+  - Vibration mountings under heavy, noisy equipment: reduces structure-borne noise
+  - Acoustic absorbent lining inside machine guards
+
+- Pipe flow speed: Keep to MAXIMUM 5 m/sec for low noise in pipelines
+
+LEVEL 3 — ADMINISTRATIVE CONTROLS:
+- Job rotation to move workers away from noisy areas before daily limits are reached
+- Providing quiet areas for rest breaks
+- Scheduling noisy work when fewer workers are present
+
+LEVEL 4 — PPE (LAST RESORT):
+- Hearing protectors should only be used when risks cannot be minimised by other more effective controls
+- Must not be the only or primary control where engineering controls are practicable
+
+VISUAL INDICATORS:
+- Noisy compressed air exhausts without silencers = engineering control gap (10-30 dB reduction available)
+- Heavy machinery without vibration mountings = engineering control gap
+- Absence of machine guards or guards with large gaps = noise control failure (closing gaps gives 3-10 dB reduction)
+- Noisy areas relying solely on hearing protectors with no engineering controls in place = hierarchy violation
+- Chain drives visible where timing belts could be substituted = substitution opportunity not taken
+
+---
+
+CHUNK 5: Personal Hearing Protectors — Selection and Effectiveness
+Section: COP s5.3, Table 4
+Topic: Protector class selection by noise level and effectiveness limits
+
+HEARING PROTECTOR CLASS SELECTION (Table 4) — minimum class required:
+- Less than 90 dB(A): Class 1
+- 90 to less than 95 dB(A): Class 2
+- 95 to less than 100 dB(A): Class 3
+- 100 to less than 105 dB(A): Class 4
+- 105 to less than 110 dB(A): Class 5
+
+EFFECTIVENESS GAP — critical limitation of PPE:
+- One hour WITHOUT wearing a hearing protector during an 8-hour shift causes the MAXIMUM PROTECTION LEVEL TO FALL FROM 30 dB TO ONLY 9 dB
+- Hearing protectors only work when worn — continuous correct use is essential
+
+IMPULSE NOISE ABOVE 140 dB(C):
+- CLASS 5 protectors SHALL BE USED for impulse noise from impacts or tools
+- For blasting: WELL-FITTED EARPLUGS (at least Class 3) IN COMBINATION WITH EAR-MUFFS OF ANY CLASSIFICATION shall be worn
+
+VISUAL INDICATORS:
+- Ear-muff seals that are damaged, cracked, or leaking = maintenance failure; replace immediately
+- Workers wearing spectacles with ear-muffs that do not provide a close fit = PPE effectiveness failure
+- Worker using Class 1 earplugs for work at 110 dB(A) = dangerous under-protection
+- Worker removing hearing protectors during noisy work even briefly = significant protection loss
+- Blasting activity with workers wearing only earplugs and no ear-muffs = non-compliant for impulse noise
+
+---
+
+CHUNK 6: Audiometric Testing
+Section: COP s5.4, s4.3; AS/NZS 1269.4
+Topic: Mandatory medical monitoring timeframes
+
+TESTING REQUIREMENTS:
+- Baseline (initial) test: Should be provided WITHIN THREE MONTHS of the worker commencing work
+- Regular follow-up tests: AT LEAST EVERY TWO YEARS
+- High exposure (≥100 dB(A)): More frequent testing may be needed
+- Tests should be undertaken WELL INTO THE WORK SHIFT to detect temporary hearing loss (not before shift starts)
+
+PURPOSE: To detect early signs of noise-induced hearing loss before permanent damage occurs.
+
+VISUAL INDICATORS:
+- PCBU unable to produce baseline audiograms for workers hired more than 3 months ago = non-compliant monitoring
+- Workers reporting tinnitus (ringing in ears) without a subsequent control measure review = regulatory breach
+- Audiometric testing performed before the work shift starts = may fail to detect temporary threshold shifts
+- No audiometric records for workers in high-noise areas = non-compliant
+
+---
+
+CHUNK 7: Ototoxic Chemicals and Combined Hazards
+Section: COP s2.1; Appendix B, Table 6
+Topic: Chemicals and physical factors that worsen noise-induced hearing loss
+
+OTOTOXIC SUBSTANCES: Industrial chemicals that damage the cochlea or auditory pathways, making workers MORE SUSCEPTIBLE to noise-induced hearing loss. Examples:
+- Solvents: Toluene, Xylene, Styrene
+- Heavy metals: Lead, Mercury
+- Asphyxiants: Carbon Monoxide
+
+REDUCED NOISE LIMIT FOR OTOTOXIN EXPOSURE: The noise exposure of workers exposed to ototoxins SHOULD BE REDUCED TO 80 dB(A) OR BELOW (lower than the standard 85 dB(A)).
+
+AUDIOMETRIC TRIGGER FOR OTOTOXINS: Audiometric testing is recommended if airborne exposure to ototoxins is GREATER THAN 50 PER CENT of the workplace exposure standard, REGARDLESS OF THE NOISE LEVEL.
+
+COMBINED PHYSICAL HAZARDS:
+- Workers using jackhammers (hand-arm vibration) or operating earthmoving plant (whole-body vibration) while exposed to noise = increased susceptibility to hearing loss
+
+VISUAL INDICATORS:
+- Workers painting or degreasing with solvents in a noisy area without noise levels reduced to 80 dB(A) = high-risk interaction gap
+- Solvent use in a loud workshop without audiometric monitoring even if noise is below 85 dB(A) = flag if solvent exposure >50% of WES
+- Jackhammer or grinder use by workers also exposed to chemical solvents = combined hazard requiring enhanced controls
+
+---
+
+CHUNK 8: Designer and Manufacturer Duties
+Section: WHS Regulation s59; COP s6.1, s6.3
+Topic: Noise information requirements and design obligations
+
+INFORMATION THAT MUST BE PROVIDED by designers and manufacturers:
+- NOISE EMISSION VALUES (sound power level or sound pressure level)
+- OPERATING CONDITIONS of the plant when noise was measured
+- METHODS USED to measure the noise emission
+
+SAFE DESIGN PRINCIPLES:
+- Replace metal parts with quieter plastic parts where practicable
+- Keep pipeline flow speeds to MAXIMUM 5 m/sec
+- Use acoustic absorbent lining inside machine guards
+- Replace chain drives with timing belts (6 to 20 dB reduction)
+
+VISUAL INDICATORS:
+- Machine guards with acoustic absorbent lining on the inside = positive engineering design indicator
+- Machine without noise emission data available on site = manufacturer information duty gap
+- Noisy chain drives in use where timing belts could be substituted = design improvement opportunity

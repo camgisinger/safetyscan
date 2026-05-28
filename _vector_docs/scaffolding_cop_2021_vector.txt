@@ -1,0 +1,2186 @@
+DOCUMENT: Scaffolding Code of Practice 2021
+TYPE: Approved Code of Practice
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: scaffolding, construction, scaffolding_erection, scaffolding_dismantling, scaffolding_alteration, working_at_heights, falls_from_height, falling_objects, suspended_scaffold, mobile_scaffold, modular_scaffold, tube_and_coupler_scaffold, birdcage_scaffold, cantilever_scaffold, hung_scaffold, tower_scaffold, single_pole_scaffold, demolition, high_risk_construction_work
+SOURCE: Workplace Health and Safety Queensland, Office of Industrial Relations
+PUBLICATION_NO: PN12684
+CURRENT AS AT: 2021
+COMMENCED: 1 July 2021 (s2.7.1.1 delayed — applies to stand-alone scaffolding where erection commences 12 months after 1 July 2021)
+CLAUSE_PREFIX: s (WHS Act / WHS Regulation references); section numbers within CoP
+APPROVED UNDER: Work Health and Safety Act 2011 (Qld) s274
+
+---
+
+CHUNK 1: Definitions — What is Scaffolding and Scaffolding Work?
+Section: CoP s1.1; WHS Regulation s289
+Topic: Legal definitions of scaffolding, scaffolding work, construction work and their relationship
+
+SCAFFOLDING means:
+- The INDIVIDUAL COMPONENTS of plant (e.g. tubes, couplers, frames and materials that when assembled form a scaffold), AND
+- A TEMPORARY STRUCTURE specifically erected to support access or working platforms.
+
+SCAFFOLDING WORK means:
+- Erecting, altering or dismantling a TEMPORARY STRUCTURE that is or has been erected to support a platform AND from which a person or object COULD FALL MORE THAN FOUR METRES from the platform or the structure.
+- Note: The 4-metre threshold triggers the HIGH RISK WORK LICENCE requirement.
+
+CONSTRUCTION WORK (WHS Regulation s289) includes:
+- Construction, alteration, conversion, fitting-out, commissioning, renovation, repair, maintenance, refurbishment, demolition, decommissioning or dismantling of a structure
+- Installation or testing connected with the above
+- Removal of product or waste from demolition
+- Prefabrication or testing of elements at a site established for construction work
+- Assembly or disassembly of prefabricated elements forming a structure
+- Installation, testing or maintenance of essential services for a structure
+- Work connected with an excavation
+- Preparatory work or site preparation including landscaping
+- Work on, under or near water including buoys and obstructions to navigation
+
+SCAFFOLDING WORK AS HIGH RISK CONSTRUCTION WORK:
+- Scaffolding work that involves the risk of a person FALLING MORE THAN 2 METRES = high risk construction work = SWMS MANDATORY before work starts
+
+SCAFFOLDING WORK AS HIGH RISK WORK (licence required):
+- Scaffolding work where a person or thing may fall MORE THAN 4 METRES from the scaffold = high risk work licence (basic, intermediate or advanced) MANDATORY
+
+VISUAL INDICATORS:
+- Scaffolding where workers or loads could fall more than 4m = high risk work licence mandatory for all scaffolders
+- Any scaffolding work where fall risk exceeds 2m = high risk construction work; SWMS required
+- Scaffolding erected with no scaffold plan visible on site (for scaffolds >4m TWP) = non-compliance
+- Scaffolding in use with no handover certificate available = non-compliance
+
+---
+
+CHUNK 2: Duty Holders — Who Has Health and Safety Duties for Scaffolding?
+Section: CoP s1.3; WHS Act s19, s22–s29, s46, s47, s48; WHS Regulation s293, s297, s299, s308–s315
+Topic: Legal duties of PCBUs, principal contractors, designers, manufacturers, installers, officers and workers
+
+PRIMARY DUTY — PCBU (WHS Act s19):
+- Must ELIMINATE risks from scaffolding work, or if not reasonably practicable: MINIMISE risks so far as is reasonably practicable
+- Must ensure: safe design, provision and maintenance of scaffolding plant and structures
+- Must ensure: safe erection, alteration, dismantling and use of scaffolding
+- Must ensure: safe use, handling, storage and transport of scaffolding plant
+- Must manage risks associated with carrying out construction work (WHS Regulation s297)
+
+PRINCIPAL CONTRACTOR DUTIES:
+- Must prepare a written WHS MANAGEMENT PLAN before work commences for construction projects costing $250,000 OR MORE
+- WHS Management Plan must be readily available for the entire project duration
+- Must not allow work to start unless plan has been discussed with, or a copy given to, all relevant people
+- WHS Management Plan must include: names, positions and H&S responsibilities of all persons; arrangements for consultation, cooperation and coordination; arrangements for managing WHS incidents; site-specific H&S rules; arrangements for collection and review of SWMS
+
+DESIGNER DUTIES (WHS Act s22; WHS Regulation s294):
+- Must ensure plant or structure is designed to be without risks to health and safety
+- Must carry out calculations, analysis, testing or examination necessary to ensure safe design
+- Must give adequate information to each person provided with the design
+- Must give a written safety report to the person commissioning the design
+- Person commissioning construction work MUST consult with designer about how to eliminate or minimise risks arising from design during construction
+
+MANUFACTURER / SUPPLIER / IMPORTER DUTIES:
+- Must ensure plant or structure (including temporary structures) is without risks to health and safety
+- Must provide information to manufacturers so plant can be manufactured and erected to design specifications
+
+INSTALLER DUTIES:
+- People installing, constructing or commissioning plant or structures must ensure all workplace activity — including installation, use, decommissioning or dismantling — is without risks to health or safety
+
+OFFICER DUTIES (WHS Act s27):
+- Must exercise DUE DILIGENCE — take reasonable steps to ensure business complies with WHS Act and Regulation
+- Must ensure business has and uses appropriate resources and processes to provide and maintain a safe work environment
+
+WORKER DUTIES (WHS Act s28):
+- Must take reasonable care for own health and safety
+- Must cooperate with reasonable policies, procedures and instructions
+- Must not adversely affect other people's health and safety
+
+VISUAL INDICATORS:
+- Construction project $250,000+ with no WHS Management Plan on site = serious non-compliance
+- No SWMS available for scaffolding work with fall risk >2m = serious non-compliance
+- Scaffold erected without any designer consultation for complex or high scaffolds = flag
+- Scaffold supplier/erector unable to produce manufacturer's documentation = flag
+
+---
+
+CHUNK 3: Risk Management — Planning and Managing Scaffolding Risks
+Section: CoP s1.4; WHS Regulation s34–s38, s297
+Topic: Four-step risk management process for scaffolding work; hierarchy of controls
+
+RISK MANAGEMENT PROCESS — four mandatory steps:
+1. IDENTIFY HAZARDS — find out what causes the harm
+2. ASSESS RISKS — understand the nature of harm, how serious it could be, and the likelihood of it happening
+3. DECIDE ON CONTROL MEASURES — implement to prevent or minimise the level of risk
+4. MONITOR AND REVIEW — ensure effectiveness of measures; review and revise as necessary to maintain a risk-free work environment
+
+HIERARCHY OF CONTROL MEASURES FOR FALLS (WHS Regulations s78, s79) — must be implemented in PRIORITY ORDER before work commences:
+1. DESIGN AND PLANNING — eliminate the risk during the design and planning stage (HIGHEST)
+2. PREVENT A FALL — e.g. through use of edge protection or a cover placed over an opening
+3. ARREST A FALL AND PREVENT OR MINIMISE INJURY — e.g. through use of a fall arresting platform
+4. ADMINISTRATIVE CONTROLS — as a last resort and/or to complement higher order control measures (LOWEST)
+
+CONSULTATION WITH WORKERS (WHS Act s47, s48):
+- PCBU MUST consult with workers who carry out work who are directly affected by WHS matters
+- Where workers are represented by a health and safety representative, consultation MUST involve that representative
+- Consultation means: sharing information + giving workers reasonable opportunity to express views + taking those views into account BEFORE making decisions
+- Workers must be encouraged to report hazards immediately so risks can be managed before an incident occurs
+
+CONSULTING WITH OTHER DUTY HOLDERS (WHS Act s46):
+- Where more than one person has a duty in relation to the same matter, EACH person MUST consult, cooperate and coordinate with all others
+- PCBUs must exchange information and work together to eliminate or minimise all risks as far as reasonably practicable
+
+VISUAL INDICATORS:
+- Fall controls implemented only via administrative means (signs, training) with no physical controls = non-compliant hierarchy
+- No worker consultation records for scaffolding work = flag
+- No coordination arrangements between PCBUs sharing a scaffold on site = flag
+
+---
+
+CHUNK 4: Information, Training, Instruction and Supervision
+Section: CoP s1.5; WHS Act s19(3)(f); WHS Regulation s39(2), s39(3), s81, s82, s317(1)
+Topic: Training obligations, high risk work licences, competency requirements, trainee supervision
+
+PCBU TRAINING OBLIGATIONS (WHS Act s19(3)(f); WHS Regulation s39):
+- Must ensure information, training and instruction is provided that is SUITABLE AND ADEQUATE having regard to:
+  - The NATURE OF THE WORK carried out
+  - The NATURE OF THE RISKS at the time of training
+  - The CONTROL MEASURES implemented
+- Information, training and instruction must be provided in a way that is READILY UNDERSTANDABLE by the person receiving it
+
+CONSTRUCTION INDUCTION — MANDATORY:
+- PCBU must NOT direct or allow a worker to carry out construction work UNLESS the worker has successfully completed GENERAL CONSTRUCTION INDUCTION TRAINING (WHS Regulation s317(1))
+- If worker completed training MORE THAN TWO YEARS previously: must have carried out construction work in the PRECEDING TWO YEARS
+
+SCAFFOLD-SPECIFIC TRAINING must include:
+- The scaffold, tasks, activities and components
+- Any scaffold plan
+- The way the manufacturer or designer intended the system to be erected, installed, used, moved, altered or dismantled
+- Specific training required to undertake or participate in specific tasks or activities
+- Control measures to minimise risk exposure; correct use of controls; how to keep them in full working order
+- Safe working procedures, including use of mechanical aids and devices
+- How to use and maintain equipment, including specific conditions and prohibitions; reference to operating manuals
+- Special safety information for working under certain conditions
+- PPE required, including fitting, use, cleaning, maintaining and storing
+- How accidents have occurred in the past involving the same work process
+
+GENERAL WHS TRAINING for scaffolding workers should also include:
+- Effects of noise on health and hearing
+- QLD WHS legislation including relevant parts of this code
+- Workplace H&S policies, relevant procedures and SWMS
+- Risk management process
+- Inspection and maintenance programs
+- How to access manufacturer's instructions about hazards
+- Emergency procedures, including persons with specific emergency roles
+
+HIGH RISK WORK LICENCES (WHS Regulation s81, Schedule 3):
+- A person MUST NOT carry out high risk work UNLESS they hold a high risk work licence for that class
+- Exception: WHS Regulation s82 trainee provisions
+- FOR SCAFFOLDING WORK WHERE A PERSON OR THING MAY FALL MORE THAN FOUR METRES: scaffolder must hold BASIC, INTERMEDIATE or ADVANCED high risk work licence as specified in Schedule 3 of the WHS Regulation
+- PCBU MUST NOT direct or allow a worker to carry out high risk work unless they have seen WRITTEN EVIDENCE of the worker's relevant licence
+- PCBU must KEEP A RECORD of this written evidence
+- High risk work licence EXPIRES FIVE YEARS after the date it is granted
+
+COMPETENCY FOR SCAFFOLDS UP TO 4 METRES (CoP s1.5.2):
+- A person is NOT required to hold a high risk work licence for scaffolding work if a person or thing may fall FOUR METRES OR LESS from the scaffold
+- However, PCBUs still have a GENERAL DUTY to ensure any person performing scaffolding work is COMPETENT
+- Person should receive information, instruction, training and supervision in the safe erection, dismantling, maintenance and alteration of the scaffold
+- 'Competent person' defined in Appendix 1: person with SOUND KNOWLEDGE of relevant Australian Standards, codes of practice and other relevant legislation; ability to read and interpret drawings; sound knowledge of and competence in the risk management process for erecting, altering and dismantling scaffold systems
+
+TRAINEES (WHS Regulation s82(1)):
+- Person carrying out high risk work is NOT required to be licensed if:
+  - Work is in the COURSE OF TRAINING towards a certification in order to be licensed, AND
+  - Under the SUPERVISION of a person who IS licensed to carry out the high risk work
+- Direct supervision means: oversight of trainee's work for purposes of DIRECTING, DEMONSTRATING, MONITORING and CHECKING the work; appropriate to the trainee's level of competency; ensuring a capacity to RESPOND IN AN EMERGENCY SITUATION
+
+VISUAL INDICATORS:
+- Scaffolder performing high risk scaffolding work (>4m fall potential) unable to produce high risk work licence = serious non-compliance
+- PCBU has no records of workers' high risk work licences = non-compliance
+- Workers on construction site without general construction induction = non-compliance
+- Trainee scaffolding without licensed direct supervisor present = serious non-compliance
+- Scaffold site with no site-specific induction records = flag
+
+---
+
+CHUNK 5: Planning — WHS Management Plans, SWMS and Scaffold Plans
+Section: CoP s2.1, s2.1.1, s2.1.2, s2.1.3; WHS Regulation s291, s292, s299, s309
+Topic: Mandatory planning documents for scaffolding work — WHS management plans, SWMS and scaffold plans
+
+WHS MANAGEMENT PLAN (WHS Regulation s309):
+- Required for ALL CONSTRUCTION PROJECTS costing $250,000 OR MORE
+- A PRINCIPAL CONTRACTOR must prepare the plan BEFORE WORK COMMENCES
+- Plan must be EASY TO UNDERSTAND and READILY AVAILABLE for the entire project duration
+- Principal contractor CANNOT allow work to start unless plan has been discussed with or given to all relevant people
+- Must include: names, positions and H&S responsibilities; consultation, cooperation and coordination arrangements between PCBUs; arrangements for managing WHS incidents; site-specific H&S rules and how all persons will be informed; arrangements for collection, assessment, monitoring and review of SWMS
+- Must be REVIEWED AND REVISED if there are changes in how risks will be managed
+- All relevant people must be informed of revisions
+
+SAFE WORK METHOD STATEMENT (SWMS) (WHS Regulation s299):
+- SWMS MUST be prepared for HIGH RISK CONSTRUCTION WORK BEFORE work starts
+- Scaffolding work is HIGH RISK CONSTRUCTION WORK where it involves risk of a person falling MORE THAN TWO METRES
+- SWMS must: identify the TYPE of high risk construction work; specify the HEALTH AND SAFETY HAZARDS AND RISKS; describe CONTROL MEASURES to be implemented; describe HOW control measures will be implemented, monitored and reviewed
+- SWMS MUST, so far as is reasonably practicable, be developed in CONSULTATION WITH WORKERS and their representatives
+- SWMS must be REVIEWED and REVISED where work is not being carried out in accordance with the SWMS or if there are changes
+
+SCAFFOLD PLAN (CoP s2.1.3):
+- MANDATORY for scaffolding work ABOVE FOUR METRES (measured from the top working platform (TWP) to the ground)
+- Must be provided by the PCBU doing the scaffolding work
+- All scaffolds should be built in accordance with AS/NZS 1576 Scaffolding
+- What is constructed on site MUST REFLECT what is in the scaffold plan
+- Must be made AVAILABLE FOR INSPECTION AT THE WORKSITE
+
+SCAFFOLD PLAN MUST ADDRESS:
+- Basis of design
+- Foundations (including ground conditions, slope and loadings)
+- Supporting structure
+- Access and egress
+- Tying
+- Bracing
+- Type of scaffold
+- Edge protection
+- Number of plank levels
+- Number of working levels (Note: the number of working levels often varies to the number of plank levels erected on the scaffold — this must be clearly communicated at handover and to the end user; using more than the designed working levels at once will exceed the nominated leg loads and may overload the scaffold)
+
+CONSULTATION FOR SCAFFOLD PLAN should include:
+- The SCAFFOLD DESIGNER (e.g. to discuss design loads and capability to support additional loadings)
+- The BUILDER OR PRINCIPAL CONTRACTOR (e.g. to assess location of underground drains or pits; avoid excavating service trenches under, through or adjacent to scaffolds)
+- WORKERS, WHS committees, and WHS representatives regarding erecting, dismantling, maintaining and altering the scaffold
+
+SCAFFOLD PLAN MUST INCLUDE:
+- A site layout plan
+- Sufficient detail to adequately describe the scaffold to be erected
+- May include section and elevation details
+
+VISUAL INDICATORS:
+- Scaffolding work above 4m TWP with no scaffold plan available on site = serious non-compliance
+- Erected scaffold clearly not matching available scaffold plan = non-compliance
+- High risk scaffolding work (>2m fall risk) with no SWMS on site = serious non-compliance
+- SWMS not reviewed after changes to work method or after incident = non-compliance
+- Project $250,000+ with no WHS Management Plan = serious non-compliance
+
+---
+
+CHUNK 6: Design of Scaffolding — Registration, Verification and Engineer Requirements
+Section: CoP s2.2; WHS Act s22; WHS Regulation s243, s294; Table 1
+Topic: Design registration requirements for prefabricated scaffolding, design verification, when an engineer is required
+
+DESIGN REGISTRATION (WHS Regulation s243):
+- The design of plant stated in Schedule 5, Part 1 of the WHS Regulation MUST be registered
+- PREFABRICATED SCAFFOLDING MUST BE DESIGN REGISTERED
+- Prefabricated scaffolding = an integrated system of prefabricated components manufactured so that the geometry of assembled scaffolds is pre-determined; includes modular, tower, cantilever, hung and suspended scaffolds
+- The person with management or control of the prefabricated scaffolding MUST ensure the DESIGN REGISTRATION NUMBER is kept where it is READILY ACCESSIBLE
+
+DESIGN REQUIREMENTS — the design of the scaffold should take into account:
+- Strength, stability and rigidity of the supporting structure
+- Intended use and application of the scaffold
+- Safety of persons engaged in erection, alteration and dismantling
+- Safety of persons using the scaffold
+- Safety of persons in the vicinity of the scaffold
+- Structural members and components should comply with AS/NZS 1576 series
+
+DESIGN VERIFICATION — WHEN AN ENGINEER IS REQUIRED (Table 1):
+
+SUPPLIER OR COMPETENT PERSON design verification:
+- Minor scaffold (less than 2m TWP) or modular scaffold (less than 4m TWP)
+- Modular scaffold 4m to maximum height (standard parameters)
+- Modular scaffold (with cladding) above 4m — supplier OR engineer
+
+ENGINEER design verification (MANDATORY) for:
+- Modular scaffold outside standard documented manufacturer's parameters
+- Tube and coupler scaffold GREATER THAN 33m TWP or outside scope of AS/NZS 1576.6
+- Cantilevered steel beams, trusses or ladder beams
+- Cantilevered or spurred scaffold GREATER THAN 6m HIGH
+- Bridging beams, truss or ladder beams (GREATER THAN 4.8m SPAN or 6m of scaffold above)
+- Hung or drop scaffolds
+- Independent free-standing or guyed scaffold towers GREATER THAN 4m TWP (including aluminium static or mobile tower MORE THAN 9m TWP)
+- Crane lifted scaffold
+- Access birdcages (with cladding OR MORE THAN 20m TWP)
+- Mobile scaffold GREATER THAN 4m TWP (excluding standard aluminium mobile scaffolds)
+- Stair tower independent or attached (MORE THAN 20m HIGH)
+- Gantry or overhead protection structures
+- Loading bays (GREATER THAN 9m TWP or 2 TONNES)
+- Suspended scaffold (swing-stage and supports)
+- Perimeter demolition scaffold (MORE THAN 9m HIGH)
+- Public access structures requiring Building Code of Australia compliance
+
+ENGINEER DESIGN VERIFICATION AND ENGINEER INITIAL INSPECTION (both required):
+- Loading bays (greater than 9m TWP or 2T)
+- Suspended scaffold (swing-stage and supports)
+- Perimeter demolition scaffold (more than 9m high)
+- Public access structures requiring BCA compliance
+
+NOTES ON DESIGN VERIFICATION:
+- Design documents CAN be produced by a competent person if based on tables, charts, brochures or information previously verified for compliance with AS/NZS 1576 by a suitably qualified person (e.g. RPEQ engineer)
+- Minor non-structural changes (smaller bay size substitution, hop-up moves, stair location etc.) do NOT require additional engineering verification
+- Scaffolds requiring an undocumented STRUCTURAL CHANGE should be referred to designer or engineer for approval and/or inspection
+- Scaffolds over 30m with staggered tie patterns on adjacent legs may require specific engineering design due to large leg loads and buckling effects
+- Complex scaffolds where standards are not continuous from top to bottom should be certified by an engineer
+- Engineer experienced in structural design of scaffolds is usually responsible for verifying information required to document safe design and certification of the complete scaffold structure
+
+VISUAL INDICATORS:
+- Prefabricated scaffold in use with no design registration number available = non-compliance
+- Engineer-class scaffold (suspended, demolition >9m, loading bay >9m or 2T) with no engineer sign-off = serious non-compliance
+- Tube and coupler scaffold exceeding 33m with no engineer verification = serious non-compliance
+- Design modification made to scaffold without referral back to engineer or designer = flag
+- Scaffold constructed outside manufacturer's documented parameters without engineer certification = serious non-compliance
+
+---
+
+CHUNK 7: Foundations — Ground Conditions, Loadings, Soleboards and Baseplates
+Section: CoP s2.3, s2.3.1, s2.3.2, s2.3.3; AS/NZS 1576.1; AS/NZS 1170.2
+Topic: Scaffold foundation design requirements; ground conditions; environmental, dead and live loads; soleboards and baseplates
+
+SCAFFOLD FOUNDATIONS must:
+- Carry and distribute ALL the weight of the scaffold, including any extra loads (e.g. perimeter containment screens)
+- Obtain advice from an ENGINEER before erecting scaffolds on: verandas, suspended flooring systems, compacted soil, parapets, awnings and similar structures
+
+GROUND CONDITIONS (CoP s2.3.1):
+- Water and nearby excavations may lead to soil subsidence and scaffold collapse
+- Any likely watercourse including a recently filled trench that could cause wash-out under scaffold base should be DIVERTED AWAY from the scaffold
+- Soft ground can be disguised by a thin hard crust on the surface — the hard crust may give false perception of adequate bearing capacity
+- When scaffold load increases, scaffold can suddenly PUNCH THROUGH the crust causing collapse
+- The PRINCIPAL CONTRACTOR OR PCBU COMMISSIONING THE SCAFFOLD is responsible for preparing the ground and providing information IN WRITING to the scaffolder on its bearing capacity
+- Before erection, principal contractor or PCBU must: know what loadings will be imposed; ensure ground conditions are stable; inform scaffold erectors of factors affecting ground stability
+- If ground may be suspect (soft ground, fill, underground services), may need to engage a GEOTECHNICAL ENGINEER to assess and specify controls
+
+ENVIRONMENTAL LOADS (CoP s2.3.2.1):
+- Consider effects of WIND AND RAIN; heightened if perimeter containment screening, cladding or signs are attached to the scaffold
+- Consider effects of ELECTRICAL STORMS
+- Geographical location affects wind severity; wind generally has LESS EFFECT in built-up or hilly areas
+- AS/NZS 1170.2 Structural Design Actions — Wind Actions specifies four terrain categories; basic wind speeds for different zones
+
+QUEENSLAND WIND REGIONS (AS/NZS 1170.2):
+- REGION A4 (Normal): most of Queensland EXCLUDING coastal areas (includes Toowoomba and Mt Isa)
+- REGION B (Intermediate): Queensland coastal areas SOUTH OF BUNDABERG and a narrow band behind Region C (includes Brisbane, Gold Coast, Sunshine Coast)
+- REGION C (Tropical Cyclones): ALL coastal areas NORTH OF AND INCLUDING BUNDABERG — GREATEST WIND SPEEDS
+- Procedures for dealing with seasonal high wind events should be prepared for CYCLONE-PRONE AREAS
+- Staggering the joints in standards may help control risk of scaffold collapse from environmental loads
+
+DEAD LOADS (CoP s2.3.2.2):
+- Dead loads = self-weight of scaffold structure and all components including: working, catch or access platforms; stairways; ladders; screens; sheeting; platform brackets; suspension ropes; secondary ropes; traversing ropes; tie assemblies; scaffolding hoists; electrical cables
+- Dead loads should be calculated in accordance with AS/NZS 1576.1
+
+LIVE LOADS — WORKING PLATFORM DUTY CLASSIFICATIONS (Table 2):
+
+LIGHT DUTY (housing construction work, bay <3m; or other construction work, bay <2m):
+- Design total load: 125kg (1.2kN) per platform per bay
+- Design concentrated load: 100kg (1kN)
+- Minimum platform width: 225mm
+- NO MATERIALS permitted on platforms 225mm to 450mm wide
+
+LIGHT DUTY (housing construction ≥3m bay; or other construction ≥2m bay — e.g. painting, cleaning, fascia and gutter):
+- Design total load: 225kg (2.2kN) per platform per bay
+- Design concentrated load: 120kg (1.2kN)
+- Minimum platform width: 450mm
+
+MEDIUM DUTY (finishing trades with light materials stacked on platform):
+- Design total load: 450kg (4.4kN) per platform per bay
+- Design concentrated load: 150kg (1.5kN)
+- Minimum platform width: 675mm (for EMERGENCY ACCESS PLATFORMS minimum 900mm)
+
+HEAVY DUTY (bricklaying and demolition work):
+- Design total load: 675kg (6.6kN) per platform per bay
+- Design concentrated load: 200kg (2kN)
+- Minimum platform width: 900mm (or 675mm where additional access is provided by a bay extension platform of not less than 450mm width)
+
+LOADING PLATFORMS:
+- Not less than 5kPa with an impact factor of 1.25 allowed for by designer
+- Width specified by designer
+
+SPECIAL DUTY:
+- Seek guidance from designer, manufacturer, supplier or engineer but not less than 1kPa in accordance with AS/NZS 1576.1
+- Width specified by designer
+
+LADDER ACCESS HATCHES:
+- Rated to match point load of the duty rating of platform
+
+IMPORTANT NOTE: NO MATERIALS are permitted on platforms 450mm wide or less. ALL OTHER SCAFFOLDS should have a clear platform width of at least 450mm.
+
+SOLEBOARDS AND BASEPLATES (CoP s2.3.3):
+- Can be used to EVENLY DISTRIBUTE the load from scaffold to supporting surface
+- BOTH soleboards and baseplates may be required on less stable surfaces (soil, gravel, fill, or other supporting structures)
+- SOLEBOARDS ARE GENERALLY NOT REQUIRED on firm surfaces such as concrete
+- If soleboards required for softer ground, they SHOULD BE:
+  - MINIMUM 500mm LONG
+  - MINIMUM 225mm WIDE
+  - MINIMUM 30mm THICK hardwood timber
+  - Or a substitute material and size CERTIFIED by the scaffold designer or a competent person
+  - Should be LEVEL — some digging may be required to obtain a level surface
+- No part of the baseplate or adjustable base should PROTRUDE OVER THE SIDE of the soleboard (to ensure loads imposed evenly on soleboard)
+- Adjustable bases can be used on uneven surfaces for modular scaffold systems
+- Needles and spurs should be considered where ground conditions are very unstable
+
+VISUAL INDICATORS:
+- Scaffold erected on soft or suspect ground without soleboards = non-compliance
+- Soleboards smaller than 500mm long x 225mm wide x 30mm thick timber (or uncertified substitute) = non-compliance
+- Baseplate protrusion over edge of soleboard = non-compliance
+- Scaffold within cyclone-prone area (north of Bundaberg) with no cyclone procedure = flag
+- No written ground bearing capacity advice from principal contractor to scaffolder = flag
+- Scaffold erected on awnings, suspended floors, parapets without engineer certification = serious non-compliance
+
+---
+
+CHUNK 8: Stability — Tying, Guying and Bracing Requirements
+Section: CoP s2.4, s2.4.1; AS/NZS 1576.1
+Topic: Scaffold stability methods, tie requirements, spacing, types of ties and post-installed anchors
+
+STABILITY MAY BE ACHIEVED BY:
+- TYING the scaffold to a supporting structure
+- GUYING to a supporting structure
+- Increasing dead load by securely attaching COUNTERWEIGHTS near the base
+- Adding bays to INCREASE THE BASE DIMENSION
+
+TYING — REQUIREMENTS (CoP s2.4.1):
+- Tie methods and spacing must be in accordance with the INSTRUCTIONS OF THE MANUFACTURER, DESIGNER OR SUPPLIER
+- All tying information must be AVAILABLE ON SITE and comply with details on the scaffold plan
+- A TIE SHOULD BE INSTALLED when an unclad scaffold reaches THREE TIMES THE MINIMUM BASE WIDTH (unless otherwise noted in design documentation)
+- Cladded scaffolds may require ties installed at a LOWER HEIGHT
+
+SAFE WORK PRACTICES FOR TYING:
+- Consult with scaffold designer, manufacturer, supplier or engineer if NOT PRACTICAL to position ties in accordance with instructions
+- MORE TIES may be required if scaffold is:
+  - CLADDED (due to increased wind loadings)
+  - Used as a loading platform for materials or equipment
+  - Has lifting appliances or rubbish chutes attached
+- The principal contractor or PCBU should have a COMPETENT PERSON regularly inspect existence and effectiveness of scaffold ties — ensure they are NOT MODIFIED OR ALTERED by unauthorised persons (e.g. finishing trades who may loosen, relocate or remove ties to gain access to walls and openings)
+- Ties must NOT OBSTRUCT ACCESS along working and access platforms
+- Ties should INTERCONNECT WITH BOTH THE INNER AND OUTER SCAFFOLD STANDARDS (unless otherwise specified by engineer or manufacturer/supplier documentation)
+- Single leg ties should have a SAFETY COUPLER on the tie behind the standard
+- Where tie tubes are connected to structure via a bracket, a SAFETY COUPLER should be used at the bracket connection point
+- Consult with scaffold designer or supplier before attaching ADDITIONAL LOADS (e.g. signs, perimeter containment screens)
+- CAST-IN ANCHORS or 'THROUGH BOLTS' (pass through a wall) are PREFERRED over post-installed anchors (due to possible failure from faulty tensioning or epoxies)
+
+POST-INSTALLED ANCHOR REQUIREMENTS:
+- ACCEPTABLE TYPES ONLY: chemical anchors, screw bolts, coil expansion anchors, or torque-controlled expansion anchors
+- DO NOT USE: drop-in (impact setting) or deformation-controlled expansion anchors
+- Use caution with screw bolts due to very tight hole tolerances required
+
+ASSESSMENT OF SUBSTRATE for post-installed anchors must confirm suitability and consider at minimum:
+- Required working load limit
+- Concrete strength at time of installation
+- Whether concrete will remain UNCRACKED throughout service life of anchors
+
+WORKING LOAD LIMIT for anchors:
+- For HORIZONTAL TIE ANCHORS: working load limit ≥ 6kN
+- For ALL OTHER ANCHORS: ≥ three times the maximum calculated applied load
+
+VERIFICATION OF POST-INSTALLED ANCHORS:
+- A method for verifying load capacity and correct installation MUST be specified in anchorage design
+- ALL post-installed anchors must be installed using a TORQUE WRENCH set to appropriate torque (unless anchor has inbuilt torque indicator or is installed using manufacturer's approved installation procedure)
+- DOCUMENTED VERIFICATION must be kept on site — stating: anchor setting torque or installation procedure; date of installation; location of installation; name of competent person installing
+- INDIVIDUAL PROOF TESTING (100% of design load) of ALL chemical anchors installed must be undertaken and documented
+- Refer to Appendix E of AS/NZS 1576.1 for further information
+
+TIES TO MASONRY AND NON-CONCRETE SUBSTRATES:
+- Must be specified through ENGINEERING ASSESSMENT based on achieving performance and reliability for specific application
+- Each anchor must be capable of sustaining all IMPOSED CYCLIC LOADS without damage to substrate or reduction in anchor capacity
+
+ANCHORS FOR RAKERS to concrete slab:
+- Must be capable of resisting COMBINED SHEAR AND TENSILE FORCES
+
+PREFABRICATED CONCRETE ELEMENT ANCHORS (AS 3850.1):
+- Anchors requiring component reinforcement must NOT be used unless correct installation of reinforcement is confirmed prior to pouring concrete
+
+VISUAL INDICATORS:
+- Scaffold reaching or exceeding 3x base width with no ties installed = serious non-compliance
+- Drop-in or deformation-controlled expansion anchors used for ties = serious non-compliance
+- No documentation of torque wrench settings or proof testing for chemical anchors = non-compliance
+- Ties removed or loosened by other trades without authorisation = non-compliance; flag immediately
+- Cladded scaffold with ties at same spacing as uncladded version = flag (likely insufficient)
+- Tie spacing not matching scaffold plan = non-compliance
+
+---
+
+CHUNK 9: Perimeter Containment Screening Requirements
+Section: CoP s2.5; AS/NZS 1576; WHS Regulation s315E, s315F, s315G
+Topic: Perimeter containment screening materials, mesh specifications, gap requirements and installation rules
+
+PERIMETER CONTAINMENT SCREENING is used to PROTECT PERSONS FROM FALLING OBJECTS.
+- Should be located INSIDE THE STANDARDS on working platforms
+
+MATERIALS — screens must be made of: mesh, timber, plywood, metal sheeting, or other material suitable for the purpose.
+
+MESH REQUIREMENTS (Table 3):
+
+SQUARE OR OTHER RECTANGLE MESH:
+- WITH prescribed lining: maximum 50mm x 50mm openings; minimum 2.5mm gauge
+- WITHOUT prescribed lining: maximum 25mm x 25mm openings; minimum 2.5mm gauge
+- WITHOUT prescribed lining (rectangular): maximum 25mm x 50mm openings; minimum 2.5mm gauge
+
+NOT SQUARE OR OTHER RECTANGLE MESH:
+- WITH prescribed lining: maximum 50mm in any direction; minimum 2.5mm gauge
+- WITHOUT prescribed lining: maximum 25mm in any direction; minimum 2.5mm gauge
+
+PRESCRIBED LINING means: intact shade cloth or another intact lining that when tested, wet or dry, in accordance with method A in AS 2001.2.4 has a mean bursting pressure of AT LEAST 1000kPa.
+- Prescribed lining MUST be attached to the INSIDE of the mesh
+- Can be attached using non-structural locating product that keeps lining in place while minimising damage
+
+GAP REQUIREMENTS — each of the following gaps MUST NOT be over 25mm:
+(a) Gap measured HORIZONTALLY between screens immediately beside each other
+(b) Gap measured VERTICALLY between a screen and another screen immediately above it
+(c) Gap measured VERTICALLY OR HORIZONTALLY between a screen and the FRAMEWORK SUPPORTING IT
+
+FRAMEWORK must be able to BEAR THE LOAD OF THE SCREEN.
+
+INSTALLATION RULE:
+- Containment sheeting should be installed NO HIGHER THAN THE UPPER MOST TIE, unless certified otherwise by an engineer
+- Where work is close to pedestrian or vehicular access: scaffolds sheeted down to hoarding level minimise risk to public and area lost to public access
+
+VISUAL INDICATORS:
+- Mesh openings larger than specified maximum for the lining type present = non-compliance
+- Gaps between screens or between screen and framework exceeding 25mm = non-compliance
+- Containment sheeting installed above uppermost tie without engineer certification = non-compliance
+- Screen framework unable to bear load of the screen (inadequate fixing) = non-compliance
+- Missing or torn prescribed lining on mesh that requires it for gap compliance = non-compliance
+
+---
+
+CHUNK 10: Working Platforms — Planks, Gaps, Hop-Up Brackets and Plywood Requirements
+Section: CoP s2.6; AS 1577; AS/NZS 1576.1
+Topic: Working platform construction requirements, scaffold planks, plank gaps, lapping, hop-up brackets and securing methods
+
+WORKING PLATFORM DUTY CLASSIFICATIONS — must comply with Section 2.3.2 Loadings (see Chunk 7).
+Each scaffold should be DESIGNED to carry the required number of working platforms and support live loads.
+
+SCAFFOLD PLANKS MUST:
+- Comply with AS 1577 Scaffold planks
+- Have a SLIP-RESISTANT SURFACE
+- NOT be cracked or split
+- Be of UNIFORM THICKNESS
+- Be CAPTIVE (cannot be kicked off) and FIXED to prevent uplift or displacement during normal use
+- Be positioned so that NO SINGLE GAP between planks exceeds 25mm AND the TOTAL GAP BETWEEN ALL PLANKS does not exceed 50mm
+
+LAPPING OF PLANKS:
+- Planks should NOT be lapped on STRAIGHT RUNS of modular and tube and coupler scaffolding
+- Planks MAY be lapped on HANGING BRACKET scaffolds
+
+LAPPED PLANKS (used to cover gaps around CORNERS of scaffold bays) generally may NOT need to be secured, provided ALL of the following are met:
+(a) TIMBER is lapped over METAL planks
+(b) Planks are 1.2 METRES LONG OR GREATER
+(c) Plank overlap past the edge of the plank underneath is 300mm OR GREATER
+(d) STANDARDS prevent planks from moving SIDEWAYS on the scaffold
+
+PLYWOOD SHEETS (to cover gaps between scaffold bays):
+- Minimum 17mm THICK
+- Only used to cover gaps LESS THAN 500mm WIDE (unless approved by engineer)
+- Must be SECURED
+
+METAL PLANKS LAPPED ON METAL PLANKS:
+- Should be AVOIDED
+- Where used: must be secured using PROPRIETARY FIXING or STEEL STRAPPING
+- Other systems not structurally rated must NOT be used to secure planks on hop-up brackets
+
+PLASTIC ZIP TIES:
+- Should ONLY be used in NON-LOAD BEARING situations to stop plank movement where the force applied to a kickboard or plank is applied directly to a structural member in front or under the member
+- Unlike proprietary components, plastic zip ties have NOT been performance tested for structural scaffolding applications
+- Load rating of zip ties is ONLY for TENSILE (pulling) loads — NOT for SHEAR (cutting) loads
+- Zip ties CAN BE CUT THROUGH by edges of scaffolding planks (e.g. when a worker's foot inadvertently makes contact)
+- Load-rated zip ties must NOT be assumed adequate for structural scaffolding applications
+
+HOP-UP BRACKETS:
+- Apart from SINGLE BOARD hop-up brackets: all hop-up brackets should be provided with TIE BARS to stop brackets from spreading apart and causing planks to dislodge (unless otherwise specified by manufacturer)
+- No single inadvertent force should be able to dislodge a tie bar pin or any part of a tie bar
+- Where hop-up planks are supported by a hop-up bracket on ONE END ONLY: method of support on the opposite side must be APPROVED BY THE SCAFFOLD DESIGNER
+- Where scaffold components are altered to fix a hop-up bracket: an ENGINEER should approve any alterations
+- All alternative support methods must ensure the plank remains CAPTIVE in the hop-up bracket
+
+PLANKS SUPPORTED BY PUTLOGS:
+- Overhang must be GREATER THAN 150mm but LESS THAN 250mm (otherwise uplift might occur)
+
+CYCLONE-PRONE AREAS:
+- All planks should be SECURED AGAINST UPLIFT during cyclone season
+- Cyclone-prone areas in Queensland include areas NORTH OF BUNDABERG
+- Refer to AS 1170 Structural Design Actions (Part 2)
+
+OTHER PRACTICES:
+- AVOID nailing or screwing laminated planks into position unless specified by manufacturer (moisture can penetrate and cause damage not easily detected)
+
+VISUAL INDICATORS:
+- Single gap between planks exceeding 25mm = non-compliance
+- Total gap between all planks exceeding 50mm = non-compliance
+- Planks lapped on straight runs of modular or tube and coupler scaffold = non-compliance
+- Metal planks lapped on metal planks without proprietary fixing or steel strapping = non-compliance
+- Zip ties used in load-bearing structural positions on scaffold planks or hop-up brackets = non-compliance
+- Plank overhang on putlogs outside 150mm–250mm range = non-compliance
+- Hop-up brackets without tie bars (unless single board type or manufacturer specified) = non-compliance
+- Planks in cyclone-prone area (north of Bundaberg) not secured against uplift = flag
+
+---
+
+CHUNK 11: Access and Egress — Stairways, Ladders and Step Heights
+Section: CoP s2.7, s2.7.1, s2.7.1.1, s2.7.1.2; WHS Regulation s40; AS/NZS 1576.1
+Topic: Access and egress requirements for scaffolds including stairways, ladders, step heights and stretcher access
+
+WORKERS MUST BE PROVIDED WITH SAFE ACCESS TO AND EGRESS FROM THE SCAFFOLD AT ALL TIMES during erection, use and dismantling.
+
+SECOND MEANS OF ACCESS AND EGRESS — required when ALL of the following apply:
+- External perimeter scaffold with a TWP MORE THAN 8m HIGH (generally four lifts from the lowest ledger position), AND
+- Length of MORE THAN 60 LINEAL METRES
+- At least ONE of the means of access and egress must be SUITABLE FOR EMERGENCY STRETCHER ACCESS
+- Exception: DOES NOT INCLUDE detached dwellings
+
+COMMON MEANS OF ACCESS AND EGRESS:
+- Temporary stairs or portable ladder access systems — installed at START of erection, progressed with scaffold, used by scaffolders wherever possible
+- Permanently installed platforms, ramps or ladders
+- Personnel hoists (non-mechanical forms of egress such as a ladder or stair tower should be provided for emergency)
+- Using existing floor level of a building (if safe)
+- Using existing permanent stairs of a structure (if safe)
+
+ALTERNATIVE TEMPORARY OR FIXED ACCESS (where common means is obstructed or unavailable):
+- Existing internal floor access/stairwells
+- Use of a hoist if already available
+- Additional stair systems
+
+TEMPORARY STAIRWAY CONFIGURATION (must comply — Figure 5):
+- Rise range: 150mm ≤ R ≤ 225mm
+- Going range: 175mm ≤ G ≤ 355mm
+- Combination: 540 ≤ 2R + G ≤ 700
+- Minimum tread depth (TD): 175mm
+- Maximum tread gap: 30mm
+
+TEMPORARY STAIRWAY FOR STRETCHER ACCESS — additional requirements:
+- Slope of stairway to horizontal: 45° or less
+- Treads: at least 1000mm WIDE
+- Landing length in direction of travel: at least 1200mm; width not less than width of stairway
+- Upper surface of external handrail or guardrail: at least 1400mm above the landing or top of each stair tread
+- Scaffold designer must ensure access system is designed for loads applicable in an emergency evacuation situation
+
+STEP HEIGHTS (CoP s2.7.1.1):
+- Scaffold stairs are typically 1.5m vertically in height
+- When constructed for scaffold with 2m lift heights: can create final step height of approximately 500mm (non-compliant)
+- SOLUTIONS: use scaffold stairs with a height of 2m OR reconfigure the scaffold
+- Step heights and goings should be CONSISTENT within a straight run of steps between landings
+- Where there is a CHANGE IN DIRECTION between landings: any DIFFERENCE IN STEP HEIGHT from the scaffold stair to an access or egress point should be minimised so that it is NO MORE THAN 300mm
+- Note: This requirement applies to STAND-ALONE SCAFFOLDING where erection commences 12 months after 1 July 2021
+
+ACCESS WAYS must be kept free of materials and rubbish to control risk of falling objects.
+Scaffolders must NOT climb standards except when harnessed and working on hung, cantilevered or spurred scaffolds AND other means of access/egress are not practical.
+
+LADDER REQUIREMENTS (CoP s2.7.1.2):
+- Ladders may be used where only a few people need access to the working platform AND tools and equipment can be delivered separately (e.g. by materials hoist, crane or rope and gin wheel)
+- Ladders should be within a SEPARATE LADDER ACCESS BAY, wherever space permits
+- If access bay is part of the working platform: a TRAP DOOR must be provided (except when erecting and dismantling, or other controls prevent inadvertent falls through the ladder access penetration)
+- Strict controls to ensure trap door remains CLOSED while working from platform
+- Workers must NOT be climbing over or under components to gain access (except when working on mobile scaffolds or where TWP is 2.5m or less)
+- A SWING ARM OR GATE SYSTEM should be installed to provide safe, clear access to working platforms and stop a person falling back through the access bay
+- Ladders must be set up on a FIRM, LEVEL SURFACE and NOT used on scaffold bays to gain extra height
+
+VISUAL INDICATORS:
+- External perimeter scaffold >8m TWP and >60 lineal metres with only one means of access/egress = non-compliance
+- No stretcher-suitable access for scaffold meeting the >8m and >60m criteria = non-compliance
+- Stair rise outside 150mm–225mm range = non-compliance
+- Stair going outside 175mm–355mm range = non-compliance
+- Step height change at access/egress point exceeding 300mm (stand-alone scaffold post July 2022) = non-compliance
+- Ladder trap door not present on working platform access = non-compliance
+- Access ways blocked with materials or tools = non-compliance
+- Scaffolders climbing standards without harness on non-hung/cantilevered scaffolds = non-compliance
+
+---
+
+CHUNK 12: Lighting Requirements for Scaffolding
+Section: CoP s2.7.2; WHS Regulation s40; AS/NZS 3012; AS 2293.1
+Topic: Lighting obligations for scaffolding work areas
+
+LIGHTING — GENERAL REQUIREMENTS:
+- Sufficient ACCESS LIGHTING and TASK LIGHTING MUST be provided — whether from natural or artificial source
+- Must allow SAFE MOVEMENT around the workplace
+- Must allow workers to perform their job WITHOUT HAVING TO ADOPT AWKWARD POSTURES OR STRAIN THEIR EYES
+- EMERGENCY LIGHTING must be provided for the SAFE EVACUATION of people in an emergency
+
+REFERENCES:
+- Managing the Work Environment and Facilities Code of Practice — guidance on recommended illumination levels for various task types, activities and interiors
+- AS/NZS 3012 s2.7
+- AS 2293.1
+
+VISUAL INDICATORS:
+- Scaffolding work area with no task lighting during low-light operations = non-compliance
+- No emergency lighting for evacuation in scaffolding areas = non-compliance
+
+---
+
+CHUNK 13: Housekeeping and Safe Work Environment on Scaffolds
+Section: CoP s2.7.3; WHS Act s19(3)
+Topic: Housekeeping obligations, bird droppings risks, management of responsibilities
+
+HOUSEKEEPING — ESSENTIAL to prevent workplace injuries:
+- Objects and debris left on a scaffold can FALL and seriously injure workers and others (particularly during dismantling)
+- PCBU using a scaffold must, so far as is reasonably practicable, leave the area clean from: falling objects; spills; waste; other leftover materials (food scraps, nails, hazardous substances)
+
+BIRD DROPPINGS RISK:
+- Workers who disturb accumulations of DRIED BIRD DROPPINGS may be at risk of infectious diseases: psittacosis, cryptococcosis and histoplasmosis
+- These can cause SERIOUS DISEASE — particularly in persons with weakened immune systems
+- Risk from SMALL AMOUNTS of fresh droppings is very low; risk INCREASES significantly if large accumulations of concentrated, dried droppings are disturbed
+- Bird droppings unlikely to accumulate significantly on scaffolding in place for a short period
+- Where scaffold in place for a LONG PERIOD at a location where birds are roosting or nesting: risk from disturbing dried droppings must be considered (e.g. hanging scaffold on bridge under repair with birds nesting on it)
+- For controls advice: worksafe.qld.gov.au/work-with-bird-and-bat-droppings
+
+RESPONSIBILITY FOR MAINTAINING SAFE WORK ENVIRONMENT:
+- The PRINCIPAL CONTRACTOR for a construction project, or the PCBU WITH MANAGEMENT OR CONTROL of a construction site, has ULTIMATE RESPONSIBILITY for ensuring systems are in place to maintain a safe work environment on the scaffold
+- Each PCBU using the scaffold must leave the scaffold WITHOUT RISKS TO HEALTH AND SAFETY
+
+VISUAL INDICATORS:
+- Materials, tools, debris or food scraps left on scaffold platforms = non-compliance
+- Large accumulations of dried bird droppings on scaffold with workers not wearing respiratory protection = flag
+- No documented housekeeping procedures for scaffold site = flag
+
+---
+
+CHUNK 14: Hazards — Working Near Energised Overhead Electric Lines
+Section: CoP s3.1; Electrical Safety Act 2002 s30; Electrical Safety Regulation 2013 ss11, s68, s69
+Topic: Electrical hazards near scaffolding, exclusion zones, control measures and de-energising obligations
+
+REFERENCES:
+- Electrical Safety Act 2002 (ES Act) — outlines general electrical safety duties
+- Electrical Safety Regulation 2013 (ES Regulation) — states exclusion zones for working near overhead electric lines
+- Electrical Safety Code of Practice — Working near overhead and underground electric lines
+
+PRE-START OBLIGATION:
+- Before carrying out scaffolding work: conduct a WORKSITE INSPECTION to identify potential electrical hazards including energised overhead electric lines or associated electrical equipment (e.g. cables concealed behind a surface where an anchor is to be fitted)
+- Consult with ALL RELEVANT PARTIES about risks associated with overhead electric lines
+
+PRIORITY CONTROL — DE-ENERGISING:
+- The most effective way to eliminate risk = TURNING OFF THE POWER
+- PCBU and principal contractor should discuss options for DE-ENERGISING or RE-ROUTING the electricity supply with the relevant electricity entity — THESE ARE MOST EFFECTIVE AND MUST BE CONSIDERED BEFORE ANYTHING ELSE
+- PCBUs must consult with each other to ensure electricity entity has been contacted
+- De-energising or re-routing should be ARRANGED AS QUICKLY AS POSSIBLE as it can take time
+- Where overhead electric lines have been de-energised: obtain WRITTEN CONFIRMATION from person in control of the electric line BEFORE undertaking any work
+
+HIERARCHY IF ELIMINATION IS NOT REASONABLY PRACTICABLE:
+1. SUBSTITUTION, ISOLATION or ENGINEERING CONTROLS (or combination)
+2. EXCLUSION ZONES — if not reasonably practicable to turn off power or re-route
+
+EXCLUSION ZONE requirements:
+- Exclusion zone = safety envelope around an overhead electric line; distance from the line for the person as stated in Schedule 2 of the ES Regulation
+- PCBU MUST ENSURE, so far as reasonably practicable, that people, scaffold parts, and scaffolding equipment and materials DO NOT ENTER into the exclusion zone
+- The electricity entity may specify a GREATER DISTANCE than the exclusion zones in Schedule 2
+
+FACTORS TO CONSIDER when implementing exclusion zone system:
+- Identify minimum clearance distance from electric line to closest person or part of scaffold
+- Allow for SWAY OR SAG of electric lines (sway caused by wind; sag varies with temperature)
+- Ensure people and scaffolding stay OUTSIDE the exclusion zone AT ALL TIMES
+- Use a SAFETY OBSERVER ('spotter') who observes scaffolding work if there is a possibility a person or part of the scaffold could enter the exclusion zone
+- Consider potential for encroachment during erection, dismantling, or once erected (e.g. while handling materials)
+- Identified minimum clearance distance may need to be GREATER than prescribed exclusion zone to ensure no breach
+
+DEVICES TO HELP PREVENT CONTACT:
+- Warning signs indicating location of overhead electric lines
+- Tiger tails or line markers on overhead electric lines — NOTE: tiger tails DO NOT INSULATE WIRES; exclusion zone must still be maintained
+
+ES Act s30: PCBU must ensure its business is conducted in a way that is ELECTRICALLY SAFE. If work involves working near overhead electric lines: PCBU must ensure persons are ELECTRICALLY SAFE.
+
+VISUAL INDICATORS:
+- Scaffolding being erected within the exclusion zone of an energised overhead electric line = IMMEDIATELY STOP WORK; serious non-compliance
+- No spotter present where scaffold parts could potentially enter exclusion zone = serious non-compliance
+- No worksite inspection conducted to identify overhead electrical hazards before work started = non-compliance
+- Overhead electric lines not de-energised and no exclusion zone controls in place = serious non-compliance
+- Tiger tails present but being treated as insulation (exclusion zone not maintained) = flag
+
+---
+
+CHUNK 15: Hazards — Mobile Plant, Traffic, Fixed Plant and Mixing Components
+Section: CoP s3.2, s3.3, s3.4; AS/NZS 1576.1; AS/NZS 4576
+Topic: Control measures for mobile plant and traffic hazards; fixed plant risks; risks of mixing incompatible scaffold components
+
+MOBILE PLANT AND TRAFFIC (CoP s3.2):
+- Mobile plant and vehicular traffic can affect WORKER SAFETY and STRUCTURAL INTEGRITY of a scaffold
+- Control measures include:
+  - RE-ROUTE motor vehicles and mobile plant away from scaffold location (e.g. using traffic controllers to redirect traffic)
+  - Use BARRICADES, SIGNS, POSTS, BUFFER RAILS, GUARDS, or concrete or timber kerbs to prevent contact with scaffold
+  - Ensure scaffolding has NO UNNECESSARY PROTRUSIONS — e.g. over-length transoms, putlogs, tie tubes or over-height standards
+
+FIXED PLANT (CoP s3.3):
+- Where fixed plant (e.g. tower cranes) operates in close proximity to scaffold: risk of loads snagging on the scaffold or endangering people on working platforms
+- SITE-SPECIFIC PROCEDURES should be developed to minimise risks
+
+MIXING SCAFFOLD COMPONENTS (CoP s3.4) — SERIOUS RISK:
+- Components from different manufacturers or suppliers may look compatible but are often DIFFERENT DIMENSIONS AND TOLERANCES
+- Mixing incompatible components can lead to: difficulties in disassembly (increased musculoskeletal injury risk); increased component wear; REDUCED LOAD CAPACITY of the scaffold
+- Refer to AS/NZS 1576.1 s2.4 for further information
+
+CONTROLS FOR MIXING COMPONENTS:
+- DO NOT MIX scaffolding from different manufacturers UNLESS an engineer approves that:
+  (a) Components are of compatible SIZE AND STRENGTH
+  (b) Components have compatible DEFLECTION CHARACTERISTICS
+  (c) Fixing devices are COMPATIBLE
+  (d) Mixing does not LESSEN the strength, stability, rigidity or suitability of the scaffold
+- See AS/NZS 4576 — Guidelines for Scaffolding for assurances needed before components of different prefabricated systems can be mixed
+- DO NOT MIX scaffolding COUPLERS AND TUBING of DIFFERENT OUTER DIAMETERS AND STRENGTHS unless designed specifically for the task by an engineer OR coupler manufacturer has designed couplers for this purpose
+  - Example: DO NOT MIX aluminium and steel components — steel clamps may CRUSH aluminium tubing reducing tube strength
+- 'Beam clamps' or 'flange clamps' should be provided with safe use information including tightening torque required and when to use different coupler types
+- STAIRS should be secured to the scaffold bay; if not secured: supplier should provide documentation on maximum clearance allowed between transom and top and bottom of stair module
+- Gap between end of stair module and transom must be AS SMALL AS PRACTICABLE; large gaps can lead to stairs dislodging when loaded
+- Where no instruction on maximum gap is provided: gap between stair module and vertical edge of transom must NOT BE GREATER THAN 15mm anywhere along the length of the transom
+
+VISUAL INDICATORS:
+- Scaffold components from different manufacturers mixed without engineer approval = serious non-compliance
+- Aluminium tubing used with steel clamps = non-compliance; flag immediately
+- Stair module gap to transom exceeding 15mm (where no manufacturer specification exists) = non-compliance
+- No barricades or buffer rails between vehicular traffic and scaffold = flag
+- Over-length transoms or putlogs creating protrusion hazard in traffic areas = flag
+
+---
+
+CHUNK 16: Falls From Height — Risk Management and Control Measures
+Section: CoP s3.5, s3.5.1, s3.5.2, s3.5.3; WHS Regulation s78, s79, s306P, s306Q
+Topic: Managing fall risk during erection, use and dismantling of scaffold; fall thresholds triggering specific obligations
+
+GENERAL OBLIGATION (WHS Regulation s78):
+- PCBU MUST manage risks associated with a person falling from one level to another that is REASONABLY LIKELY TO CAUSE INJURY — including falls:
+  - In or on an elevated workplace
+  - In vicinity of an opening through which a person could fall
+  - In vicinity of an edge over which a person could fall
+  - On a surface through which a person could fall
+  - In any other place from which a person could fall
+
+BEFORE STARTING WORK to erect or dismantle a scaffold, person MUST:
+- IDENTIFY any hazards that may result in a fall or cause death or injury from a fall
+- ASSESS the risk of death or injury
+- IMPLEMENT CONTROL MEASURES to prevent or minimise exposure to the risk
+
+HAZARDS INCREASING FALL RISK during erection, alteration or dismantling:
+- Poor environmental conditions: strong winds (may cause workers to lose balance); rain (slippery surfaces); glare or poor lighting
+- Materials, equipment or protruding objects below or in adjoining work areas: pallets of construction materials; vertical reinforcing steel; rubbish skips; exposed starter bars; picket fences
+- Void areas not identified or protected (e.g. ladder access voids)
+- Incomplete scaffolds or loose scaffold components where work is being done or is likely to be done
+- Inadequate training, instruction and supervision of scaffold workers
+
+FALL RISK DURING ERECTION (WHS Regulation s306P):
+- PCBU MUST NOT erect or allow another person to erect scaffolding if there is a risk a person could fall:
+  - 3 METRES for HOUSING CONSTRUCTION WORK, OR
+  - 2 METRES for ALL OTHER CONSTRUCTION WORK
+UNLESS:
+  - A control measure PREVENTS a person from falling, OR
+  - A FALL ARREST SYSTEM is used, OR
+  - The PCBU otherwise complies with the process described in WHS Regulation s306P(4)
+
+FALL RISK DURING DISMANTLING (WHS Regulation s306Q):
+- PCBU MUST NOT dismantle or allow dismantling of scaffolding if there is a risk a person could fall:
+  - 3 METRES for HOUSING CONSTRUCTION WORK, OR
+  - 2 METRES for ALL OTHER CONSTRUCTION WORK
+UNLESS:
+  - A control measure PREVENTS a person from falling, OR
+  - A FALL ARREST SYSTEM is used, OR
+  - The PCBU otherwise complies with the process described in WHS Regulation s306Q(3)(b)
+
+VISUAL INDICATORS:
+- Scaffolding erection or dismantling at >2m height (non-housing) or >3m (housing) with no fall prevention or fall arrest = serious non-compliance
+- Workers erecting scaffold on incomplete platforms without edge protection = non-compliance
+- Internal gap between scaffold platform and building face exceeding 225mm without additional controls = non-compliance
+
+---
+
+CHUNK 17: Fall Arresting Platforms — Specifications and Requirements
+Section: CoP s3.5.4; WHS Regulation s78, s79
+Topic: Fall arresting platform requirements including dimensions, edge protection and slope-based installation rules
+
+FALL ARRESTING PLATFORM can be used as a control measure to ARREST A PERSON'S FALL during work at height.
+
+INSTALLATION POSITION based on slope of surface:
+- Slope NOT OVER 26°: install platform NO MORE THAN 1 METRE LOWER than the surface
+- Slope OVER 26°: install platform NO MORE THAN 300mm LOWER than the surface
+
+FALL ARRESTING PLATFORM MUST:
+- Be UNOBSTRUCTED and at least 675mm WIDE for the FULL LENGTH of the platform
+- Be able to WITHSTAND THE IMPACT OF A FALL onto it
+- Have EDGE PROTECTION erected:
+  - Along the OUTER EDGE of the length of the platform
+  - Along the EDGES OF EACH END of the fall arresting platform
+
+INTERNAL GAP RULE:
+- If the gap between the INNER EDGE of the length of the platform and the face of the building or structure immediately beside the platform EXCEEDS 225mm: implement a control measure to control the risk of a fall
+
+VISUAL INDICATORS:
+- Fall arresting platform installed more than 1m below work surface on slopes ≤26° = non-compliance
+- Fall arresting platform installed more than 300mm below work surface on slopes >26° = non-compliance
+- Fall arresting platform narrower than 675mm = non-compliance
+- Fall arresting platform without edge protection on outer or end edges = non-compliance
+- Internal gap between platform and building face exceeding 225mm without additional control = non-compliance
+
+---
+
+CHUNK 18: Edge Protection — Requirements and Fall-Arrest Systems
+Section: CoP s3.5.5, s3.5.6; WHS Regulation; AS/NZS 1891
+Topic: Edge protection requirements, when fall-arrest systems are and are not appropriate, anchorage requirements and rescue procedures
+
+EDGE PROTECTION (CoP s3.5.5):
+- May be used as a control measure to prevent the risk of death or injury from a fall during work at height
+- Obtain WRITTEN APPROVAL FROM AN ENGINEER before installing edge protection on a scaffold system that was NOT originally designed, supplied or manufactured with edge protection
+- Approval must include SPECIFICATIONS on how to install and maintain edge protection
+
+FALL-ARREST SYSTEMS — when NOT appropriate (CoP s3.5.6):
+Fall-arrest systems are generally NOT APPROPRIATE for erecting a scaffold because:
+- Workers are likely to HIT A COMPONENT of the scaffold before the fall is arrested
+- Obtaining suitable anchorage points that can support a LOAD OF 15kN may be difficult
+- Continuously hooking on and off the scaffold may be INCONVENIENT
+- Fall arrest lines may become TRIP HAZARDS
+
+FALL-ARREST SYSTEMS — when SHOULD be used:
+- Erecting or dismantling 'DROP' or 'HUNG' scaffolds (constructed from top to bottom, allowing a clear fall zone)
+- Fixing and removal of TROLLEY TRACKS on suspension rigs
+- Erecting or dismantling CANTILEVERED NEEDLES and decking between them; also during erection of first lift where workers stand on deck between needles
+- Erection and dismantling of CANTILEVERED SCAFFOLDS prior to or when removing the initial platform
+- Attachment and removal of SPURS projecting from the supporting structure
+
+ANCHORAGE REQUIREMENTS:
+- Anchorage points must be capable of supporting a load of 15kN
+
+RESCUE PROCEDURES (CoP s3.5.6.1):
+- WRITTEN PROCEDURES must exist for safely retrieving a person who has fallen and ensuring the safety of the retrieval person
+- Suspended person must be retrieved IMMEDIATELY — risk of PERMANENT INJURY (suspension trauma) if left hanging
+- Rescue procedures must also ensure the safety of PERSONS INVOLVED IN THE RETRIEVAL
+- Emergency plans may need to identify the LOCATION and MEANS OF ACCESS for the rescuer
+- Fall-arrest system must NOT be used unless AT LEAST ONE OTHER PERSON (or TWO persons where the person who could fall is heavy or may be unconscious) is on site and ABLE TO RESCUE the user
+- If EWP is used for rescue: must be READILY AVAILABLE and able to reach the position of the fall-arrest system user AT ALL TIMES
+- Workers must be provided with TRAINING in the safe and correct use of the fall-arrest system
+
+VISUAL INDICATORS:
+- Edge protection installed on scaffold not originally designed with it, without engineer written approval = non-compliance
+- Fall-arrest system used as sole fall control for general scaffold erection (not hung/drop type) = flag; likely inappropriate
+- No rescue procedure documented where fall-arrest system is in use = serious non-compliance
+- No second person on site when fall-arrest system is in use = non-compliance
+- Fall-arrest anchorage not rated for 15kN = serious non-compliance
+
+---
+
+CHUNK 19: Falling Objects — Prevention, Gap Controls and Exclusion Zones
+Section: CoP s3.6, s3.6.1, s3.6.2; WHS Regulation s54, s315E, s315F, s315G; AS/NZS 1576.1
+Topic: Risks and controls for falling objects from scaffolds, gap dimensions, barricade line requirements
+
+RISK: Erection, alteration, use and dismantling of scaffold exposes workers and others to risk of being STRUCK BY FALLING OBJECTS — including scaffold components, tools, and in the event of collapse, the entire scaffold. Small objects (bolts, concrete aggregate) falling from height can cause SERIOUS INJURY.
+
+GENERAL OBLIGATION (WHS Regulation s54):
+- PCBU MUST manage risks to health and safety associated with an OBJECT FALLING on a person if the falling object is reasonably likely to injure the person
+
+SPECIAL RULES FOR FALLING OBJECT CONTROLS:
+- WHS Regulation s315E: For CIVIL OR HOUSING CONSTRUCTION work — if a PCBU uses a falling objects control measure, it must comply with requirements under this section
+- WHS Regulation s315F: For construction work that is NOT civil or housing construction — PRINCIPAL CONTRACTOR must ensure a relevant person identifies and decides the PROPOSED LINE along which any barricade or hoarding required is to be erected
+- WHS Regulation s315G: Principal contractor must ensure ADDITIONAL CONTROL MEASURES are implemented before construction work starts WHERE THE MEASURED ANGLE IS 75° OR MORE
+
+CONTROL MEASURES FOR FALLING OBJECTS:
+- Establish EXCLUSION ZONES around scaffolding and adjoining areas to prevent unauthorised persons from accessing the area
+- Use PERIMETER CONTAINMENT SCREENING, scaffold fans, hoardings or gantries to contain falling objects
+- In BUILT-UP AREAS: erect and dismantle scaffolding during QUIET TIMES
+- Use MECHANICAL HOISTS to move materials
+- Attach DANGER TAGS and WARNING SIGNS in obvious locations ('Keep Out – Falling Objects'; 'Danger – Incomplete Scaffolding')
+- CONSULT with all relevant parties before work starts
+- Implement GOOD HOUSEKEEPING PRACTICES
+
+MATERIALS MUST NOT BE DROPPED from a scaffold. When passing scaffolding between levels: done INTERNALLY within the scaffold, unless suitable exclusion zones are maintained.
+
+PREVENTING OBJECTS FROM FALLING — SOURCE CONTROL is most effective:
+- Good housekeeping: keep items cleaned up and away from edges and stairways
+- Particular attention in areas above common access and egress routes
+
+ALLOWABLE INTERNAL GAPS (AS/NZS 1576.1 — Figure 8):
+- Horizontal gap from scaffold working deck to building structure: 100mm – 225mm for working face (100mm if not a working face)
+- Vertical gap from top of floor level: 300mm maximum
+- Vertical gap from underside of soffit level: 300mm maximum
+
+RESPONSIBILITY FOR SCAFFOLD GAPS:
+- Initially: SCAFFOLDER is responsible for ensuring scaffold is compliant during construction and before handover
+- Person who commissioned scaffold has duty to ensure scaffolding work does not adversely impact other workers during this time
+- After handover: scaffold must be monitored and maintained for entire duration of use
+- ALL PCBUS must ensure safety of their workers and others when using the scaffold
+
+VISUAL INDICATORS:
+- Exclusion zone not established around active scaffolding in public areas = non-compliance
+- Materials being dropped from scaffold height rather than passed internally or via hoist = non-compliance
+- No falling objects warning signs on incomplete scaffold = non-compliance
+- Internal gap between scaffold working deck and building face exceeding 225mm without control measure = non-compliance
+- Vertical gap from floor level or soffit exceeding 300mm without control measure = non-compliance
+
+---
+
+CHUNK 20: Scaffold Collapse, Unauthorised Access and Scaffold Quality
+Section: CoP s3.7, s3.8, s3.9; WHS Regulation s203, s205, s225
+Topic: Collapse prevention, controlling unauthorised access and alteration, scaffold component quality and corrosion
+
+SCAFFOLD COLLAPSE — refer to Section 5 (Types of Scaffold) for type-specific controls, and Section 2.3 (Foundations) for ground condition and loading prevention.
+
+UNAUTHORISED ACCESS, USE OR ALTERATION (CoP s3.8):
+- Unauthorised access, use or alteration CAN AFFECT THE INTEGRITY of a scaffold and introduce significant hazards (e.g. risk of a worker falling if part of the structure is removed)
+- Scaffold can be in place for a significant length of time with many different workers from various trades having access
+- A scaffold may be altered to provide ease of access for specific work activities — consequences of alterations may not be understood
+
+WHS Regulation s203: A person with management or control of scaffolding at a workplace MUST manage risks to health and safety.
+WHS Regulation s205: The person with management or control of scaffolding MUST, so far as is reasonably practicable, PREVENT ALTERATIONS TO OR INTERFERENCE WITH the scaffold that is NOT AUTHORISED by that person.
+WHS Regulation s225: Suspended, cantilevered, spur, hung and other scaffold from which a person or thing can fall MORE THAN FOUR METRES must be:
+- Inspected by a competent person BEFORE USE
+- Inspected BEFORE RESUMPTION OF USE after an incident or repairs
+- Inspected AT LEAST EVERY 30 DAYS
+- UNAUTHORISED ACCESS must be PREVENTED while the scaffold is incomplete or unattended
+
+SCAFFOLD QUALITY (CoP s3.9):
+- Scaffolding should PREFERABLY be constructed from materials RESISTANT TO CORROSION AND WEATHERING
+- PAINTED STEEL scaffolding components are MORE SUSCEPTIBLE TO CORROSION than galvanised and aluminium scaffolding
+- Scaffold designer should also consider DURABILITY and potential loading during dismantling and erection (e.g. aluminium is more corrosion resistant but may be more susceptible to damage)
+- A COMPETENT PERSON should thoroughly inspect ALL scaffolding components to determine their condition PRIOR TO ERECTION
+- Inspection must include: OVERALL CONDITION; SURFACE COATINGS to prevent corrosion; WELDING AND FABRICATION issues
+- Scaffolding components are generally NOT designed to be in HUMID AND/OR COASTAL LOCATIONS for long periods — corrosion can occur to critical parts (support nodes for platforms) and platforms CAN COLLAPSE WITHOUT WARNING
+- VISUAL INSPECTION may be unable to identify all corroded areas (e.g. bottom of scaffolding standards filled with water causing INTERNAL CORROSION)
+- PCBUs must refer to MANUFACTURER'S SPECIFICATIONS for product maintenance, repair and fitness for use — develop appropriate INSPECTION AND MAINTENANCE REGIME
+- If scaffolding is PAINTED: it may be more difficult for scaffolders to identify cracking or wearing — may be necessary to PERIODICALLY REMOVE PAINT from a sample to verify structural integrity
+
+VISUAL INDICATORS:
+- Scaffold altered by workers (e.g. ties removed, planks moved) without authorisation = serious non-compliance
+- Scaffold in coastal or humid location with visible external corrosion = flag; competent person inspection required
+- Painted scaffolding in long-term use without paint removed from any section for inspection = flag
+- Scaffold from which persons can fall >4m not inspected in last 30 days = serious non-compliance
+- Incomplete or unattended scaffold (>4m fall potential) not secured against unauthorised access = non-compliance
+
+---
+
+CHUNK 21: Hazardous Manual Tasks and Fire and Explosion Risks
+Section: CoP s3.11, s3.11.1, s3.11.2, s3.12; Hazardous Manual Tasks Code of Practice
+Topic: Manual task design and administrative controls for scaffolding; fire and explosion risks from containment screening
+
+HAZARDOUS MANUAL TASKS — refer to Hazardous Manual Tasks Code of Practice for general guidance.
+
+DESIGN CONTROLS for manual tasks:
+- Use scaffold systems made of LIGHTER WEIGHT MATERIALS and modern technologies (e.g. modular systems with shorter standard lengths or aluminium rather than steel or timber)
+- Store scaffolding components AS CLOSE AS PRACTICAL to the work area to minimise manual handling distance; ensure clear access ways
+- Use APPROPRIATE TOOLS and AVOID OVER-TIGHTENING scaffold couplers (over-tightening requires greater force during dismantling)
+
+MECHANICAL AIDS (preferred):
+- Use cranes, hoists, pallet jacks or trolleys to MOVE EQUIPMENT AND MATERIALS wherever possible (lifting bundles; moving around site; unloading vehicles)
+- TEAM LIFTING is NOT the preferred method — use only as LAST RESORT when mechanical aids cannot be used or work cannot be redesigned
+- Workers must be TRAINED in team lifting techniques; adequate numbers of workers must be provided
+- Use ELECTRIC WINCHES (preferred) or gin wheels to lift components up the scaffold
+
+ADMINISTRATIVE CONTROLS:
+- Incorporate REST BREAKS or task variety into the job where risk cannot be prevented or minimised
+- Ensure ADEQUATE NUMBERS OF WORKERS to meet deadlines
+- Provide EDUCATION AND TRAINING in performance of manual tasks, including correct use of mechanical devices and tools, and safe performance of specific manual tasks and handling methods (e.g. team lifting)
+- CLEAN AND MAINTAIN tools, equipment and scaffolding components regularly; poorly maintained components or damaged components not fitting easily together may require INCREASED FORCE
+
+PPE for manual tasks:
+- PPE and clothing can INCREASE injury potential if lacking or unsuitable (e.g. incorrectly sized gloves interfere with gripping ability and manual dexterity, leading to increased muscular effort and fatigue)
+- Where gloves are worn: choose the appropriate type; provide DIFFERENT SIZES so workers can select the right size
+
+FIRE AND EXPLOSION (CoP s3.12):
+- Fire and explosion can cause catastrophic consequences — serious injuries, death, significant property damage
+- Many materials and substances found in workplaces are FLAMMABLE OR COMBUSTIBLE — including some types of PERIMETER CONTAINMENT SCREENING
+- SUPPLIERS must ensure materials/substances supplied are without risk to health and safety — must carry out testing; provide information about flammability and conditions required for safe use (e.g. restricting material to a certain height)
+- DESIGNERS, MANUFACTURERS AND IMPORTERS have similar duties
+- PRINCIPAL CONTRACTORS must ensure risks of fire and explosion are managed; ensure work near combustible materials (e.g. perimeter containment screening) does not use ignition sources without appropriate protection (e.g. shields for hot works)
+
+VISUAL INDICATORS:
+- Scaffolders carrying heavy or awkward components without mechanical aid available = flag
+- No evidence of manual task training for scaffold workers = flag
+- Hot works performed near perimeter containment screening without shields or fire suppression = non-compliance
+- No flammability information available for perimeter containment screening materials = flag
+
+---
+
+CHUNK 22: Safe Erection of Scaffold — Procedures and Requirements
+Section: CoP s4.1; WHS Regulation s306P
+Topic: Safe work practices for erecting scaffold including platform requirements, edge protection installation sequence and internal gaps
+
+SAFE ERECTION PRACTICES:
+
+CONNECTIONS:
+- Scaffold 'fittings' and other connections should be SECURELY TIGHTENED (but not OVER-TIGHTENED)
+- Where 'safety fittings' are used: must be fitted IN ACCORDANCE WITH THE SCAFFOLD PLAN
+
+ALL SCAFFOLD COMPONENTS AND ACCESS PROVISIONS should be installed AS THE SCAFFOLD IS ERECTED:
+- All bracing and ties
+- Guy ropes or buttresses
+
+LOADING PLATFORMS:
+- Consider using specifically designed loading platforms and/or back propping to prevent OVERLOADING the building floor or scaffold
+- Obtain CERTIFICATION FROM AN ENGINEER before erecting scaffold on AWNINGS or other structures (roofs, suspended floors)
+
+WORKFORCE MANAGEMENT:
+- LIMIT the number of workers on a scaffold at any one time
+- Develop a METHODICAL WORK SEQUENCE if more than one worker on scaffold at one time (e.g. allocate specific tasks to each scaffolder)
+- Work from a FULL DECK OF PLANKS whenever possible
+- DO NOT climb on GUARDRAILS to gain extra height
+
+INTERNAL GAPS during erection (includes hanging bracket scaffolding):
+- If internal gap is GREATER THAN 225mm: put in place measures to control the risk of a fall
+  - Install edge protection on the inside edge of the platform, OR
+  - Install additional scaffold planks to minimise the size of the internal gap
+
+ERECTION SEQUENCE PROTOCOL (Figure 10):
+After enough components have been erected to support the scaffold, IMMEDIATELY INSTALL:
+1. A PLATFORM AT LEAST 450mm WIDE along the FULL LENGTH of the section of scaffold
+2. EDGE PROTECTION across the space between the standards forming the outer frame, at the level the scaffold has reached
+3. A WAY TO ACCESS the scaffold (e.g. temporary stairs or a ladder to the level reached)
+
+BEFORE THE NEXT LEVEL IS ERECTED:
+- Install a platform NOT MORE THAN TWO METRES BELOW the position of the next level
+- A SECTION OF THE PLATFORM may be left open to allow passing of planks or other scaffolding between levels
+- A platform MAY BE REMOVED after work has started TWO LEVELS ABOVE the level from which the platform is to be removed
+
+VISUAL INDICATORS:
+- Scaffold being erected without access ladders or stairs installed to the current level = non-compliance
+- Edge protection not installed at current scaffold level during erection = non-compliance
+- No platform installed within 2 metres below the level currently being erected = non-compliance
+- Workers climbing on guardrails to gain height = non-compliance
+- Internal gap >225mm without additional controls during erection = non-compliance
+- Connections over-tightened = flag; risk of component damage
+
+---
+
+CHUNK 23: Scaffold Alteration and Safe Dismantling Procedures
+Section: CoP s4.2, s4.3; WHS Regulation s306Q
+Topic: Control measures for scaffold alteration; safe dismantling practices; housekeeping during dismantling
+
+SCAFFOLD ALTERATION (CoP s4.2):
+Control measures must ensure:
+- SCAFFOLD DESIGNER is CONSULTED before making any alterations
+- Only a COMPETENT PERSON makes scaffold alterations
+- Scaffold alterations are IN ACCORDANCE WITH THE SCAFFOLD PLAN
+- Alterations do NOT COMPROMISE THE STRUCTURAL INTEGRITY of the scaffold
+- Systems are in place (e.g. regular inspections) to IDENTIFY UNAUTHORISED INTERFERENCE
+
+RECORDING ALTERATIONS:
+- For any alterations to a scaffold OVER FOUR METRES: details of the alteration (WHAT was altered, BY WHO and WHEN) should be recorded on the SCAFFOLD HANDOVER CERTIFICATE
+
+SAFE DISMANTLING PRACTICES (CoP s4.3):
+- Edge protection and means of access CAN be removed as scaffold is dismantled, PROVIDED it is removed at the LAST POSSIBLE STAGE
+- A platform of at least 450mm WIDE, at the level the dismantling has reached, should be in place WHERE PRACTICABLE
+- Ensure when dismantling: a FULL SET OF PLANKS is directly under the worker at a VERTICAL DISTANCE OF NO MORE THAN TWO METRES
+- DO NOT DROP scaffolding components from heights when dismantling (risk of death/injury to persons; damage to components)
+
+RESPONSIBILITIES DURING DISMANTLING:
+- The PERSON WITH MANAGEMENT OR CONTROL (PWMC) of the scaffold immediately prior to dismantling AND the PCBU undertaking the dismantling MUST manage risks to health and safety of:
+  - Workers dismantling the scaffold
+  - Others that could be impacted
+- GOOD HOUSEKEEPING must be implemented by ALL PCBUs (each PCBU ensuring objects and debris left by them are removed before they leave site)
+- PWMC of the scaffold on site must ENFORCE housekeeping practices to eliminate risk of objects and debris falling during dismantle
+
+VISUAL INDICATORS:
+- Scaffold alteration made without scaffold designer consultation = non-compliance
+- Scaffold alteration not recorded on handover certificate (for scaffold >4m) = non-compliance
+- Components being dropped from height during dismantling = serious non-compliance
+- No platform within 2m below workers during dismantling = non-compliance
+- Unauthorised persons making scaffold alterations = serious non-compliance; stop work
+
+---
+
+CHUNK 24: Independent Scaffold — Birdcage, Tower and Mobile Scaffold Types
+Section: CoP s5.1, s5.1.1, s5.1.2, s5.1.3; AS/NZS 1576.1
+Topic: Control measures for independent scaffolds including birdcage, tower and mobile scaffold types
+
+INDEPENDENT SCAFFOLD consists of two or more rows of standards connected longitudinally and transversely.
+
+BIRDCAGE SCAFFOLD (CoP s5.1.1):
+- Independent scaffold consisting of MORE THAN TWO ROWS of standards in BOTH DIRECTIONS connected by ledgers and transoms
+- Mainly used for work on a SINGLE LEVEL (e.g. ceilings)
+- For modular scaffolding: refer to DESIGNER'S SPECIFICATIONS
+- Fall arrest system is generally NOT APPROPRIATE for erection or dismantling of perimeter and birdcage scaffolds — use another control measure
+
+CONTROL MEASURES FOR BIRDCAGE SCAFFOLDS (tube and coupler):
+- Provide untied birdcage scaffolds with LENGTHWISE BRACING at each OUTER LONGITUDINAL ROW of standards
+- ONLY use birdcage scaffold to support formwork if SPECIFICALLY DESIGNED for this purpose
+- Provide LONGITUDINAL BRACING OR A TIED FACE at every THIRD LONGITUDINAL ROW of standards
+- Brace the OUTSIDE ROW of standards on each face AND each THIRD ROW INTERNALLY with longitudinal bracing
+- Provide TRANSVERSE BRACING at every FOURTH BAY on the ends of the scaffold
+- Use SCISSOR LIFTS to erect or dismantle birdcage scaffolds
+
+TOWER SCAFFOLD (CoP s5.1.2):
+- Independent scaffold consisting of FOUR VERTICAL MEMBERS connected longitudinally and transversely
+
+CONTROL MEASURES FOR TOWER SCAFFOLDS:
+- Construct with modular, frame, or tube and coupler scaffolding
+- Ensure tower rests on FIRM LEVEL GROUND with wheels or feet properly supported
+- DO NOT use bricks or building blocks to take weight of any part of the tower
+- Consider ENVIRONMENTAL FACTORS when determining height relative to base dimension
+- Working height must not exceed MANUFACTURER'S or DESIGNER'S specified maximum
+
+USE ALTERNATIVE HEIGHT TO BASE RATIOS or extra support if scaffold is:
+- Sheeted or likely exposed to STRONG WINDS
+- Loaded with HEAVY EQUIPMENT or materials
+- Used to HOIST HEAVY MATERIALS or support rubbish chutes
+- Used for operations involving HEAVY OR AWKWARD EQUIPMENT (e.g. grit blasting or water-jetting)
+- SUPPORTING A LADDER
+
+MOBILE SCAFFOLD (CoP s5.1.3):
+- Independent scaffold that is FREESTANDING AND MOUNTED ON CASTORS
+- Must be supplied with information regarding SAFE USE AND ERECTION
+- All modular mobile scaffolds must be erected in accordance with MANUFACTURER'S SPECIFICATIONS
+- If to be altered: contact manufacturer or supplier for additional guidance
+
+CONTROL MEASURES FOR MOBILE SCAFFOLDS:
+- Consider environmental factors for height-to-base ratio
+- Working height must not exceed MANUFACTURER'S or DESIGNER'S specified maximum
+- Where adjustable castors are used: slope of surface must NOT EXCEED 3 DEGREES (unless otherwise specified by manufacturer)
+- Must have SAFE ACCESS — use secure internal ladder with protected opening (e.g. hinged trap door) where working platform height permits
+- Castors must have APPROPRIATE SIZE AND CAPACITY for total dead and live loads
+- Use castors with WORKING LOAD LIMIT CLEARLY MARKED
+- Castors fitted to standards should be LOCKED before erection continues
+- Castors with adjustable legs should be used and ADJUSTED TO KEEP PLATFORM LEVEL when supporting structure is at different heights
+- Incorporate PLAN BRACING at the base for greater stability
+- BRAKES on castors must be LOCKED AT ALL TIMES unless moving the scaffold
+- NEVER move scaffold in WINDY CONDITIONS
+- Push or pull mobile scaffold FROM THE BASE — NEVER use powered vehicles to move
+
+BEFORE MOVING MOBILE SCAFFOLDS — check all of the following:
+- No power lines or other overhead obstructions
+- Ground is FIRM AND LEVEL
+- NO PERSON is on the scaffold
+- No equipment and material can be DISLODGED from the platform
+- Supporting surface is FREE OF OBSTRUCTIONS (small obstruction may cause scaffold to overturn)
+- Electrical equipment and leads CANNOT BE TANGLED
+
+CRANE LIFTING MOBILE SCAFFOLDS:
+- If lifting by crane: sling scaffold at its LOWEST POINT to prevent dislodgement of components
+- CRANE MUST NOT be used to lift ALUMINIUM MOBILE SCAFFOLDS — scaffold components may fail
+
+VISUAL INDICATORS:
+- Tower scaffold resting on bricks or building blocks = serious non-compliance; stop work
+- Mobile scaffold surface slope exceeding 3 degrees = non-compliance
+- Mobile scaffold moved with person on platform = serious non-compliance
+- Mobile scaffold castor brakes not locked during work = non-compliance
+- Mobile scaffold being moved by powered vehicle = non-compliance
+- Aluminium mobile scaffold being crane lifted = serious non-compliance
+- Mobile scaffold in windy conditions not secured = flag
+
+---
+
+CHUNK 25: Hung Scaffold and Single Pole Scaffold — Requirements
+Section: CoP s5.1.4, s5.2
+Topic: Control measures for hung scaffold and single pole scaffold; licensing requirements
+
+HUNG SCAFFOLD (CoP s5.1.4):
+- Independent scaffold that HANGS from another structure but is NOT CAPABLE OF BEING RAISED OR LOWERED when in use
+- An ADVANCED SCAFFOLDING HIGH RISK WORK LICENCE is required for hung scaffolds
+
+CONTROL MEASURES FOR HUNG SCAFFOLD:
+- Must be designed by a person nominated in Table 1
+- Verification must be obtained that the SUPPORTING STRUCTURE IS CAPABLE OF BEARING THE LOAD
+- Scaffold plan must include information about the POSITION OF SAFETY COUPLERS
+- If a cantilevered suspension rig is to be used: include information on HOW THE RIG IS TO BE CONSTRUCTED AND SECURED
+- Standards on a hung scaffold should be TENSION SPLICED (refer to Figure 1)
+- ALL VERTICAL HANGING TUBES must be provided with SAFETY COUPLERS at the SUSPENSION POINTS and UNDERNEATH THE PLATFORM
+
+SINGLE POLE SCAFFOLD (CoP s5.2):
+- Consists of a SINGLE ROW OF STANDARDS connected by ledgers
+- Putlogs are fixed to ledgers and BUILT INTO THE WALL of the building or structure
+- Dependent upon the structure against which it is placed for support
+- IMPORTANT: NO COMPONENTS of this type of scaffold may be removed UNTIL THE SCAFFOLD IS BEING DISMANTLED
+
+VISUAL INDICATORS:
+- Hung scaffold being worked on without advanced scaffolding licence holder present = serious non-compliance
+- Vertical hanging tubes on hung scaffold without safety couplers at suspension points = serious non-compliance
+- Standards on hung scaffold not tension spliced = non-compliance
+- Single pole scaffold with components removed while scaffold is still in use (not being dismantled) = non-compliance
+
+---
+
+CHUNK 26: Suspended (Swing-Stage) Scaffold — Overview and General Controls
+Section: CoP s5.3, s5.3.1, s5.3.2, s5.3.3, s5.3.4; AS/NZS 1576.4
+Topic: Suspended scaffold control measures, design requirements, counterweight calculation, fixing methods and suspension systems
+
+SUSPENDED SCAFFOLD (SWING-STAGE):
+- A suspended scaffold incorporates a suspended platform CAPABLE OF BEING RAISED OR LOWERED when in use
+- Must be designed by a SUITABLY QUALIFIED AND EXPERIENCED ENGINEER
+- Person installing (erecting, altering or dismantling) must have an ADVANCED SCAFFOLDING OR RIGGING HIGH RISK WORK LICENCE AND must be COMPETENT in installation
+- A person who has completed CPCCLSF4001A or subsequent equivalent course is generally considered competent
+- Person USING a suspended scaffold should undertake a COURSE IN THE SAFE USE OF SWING STAGE SCAFFOLDS or subsequent equivalent
+
+DESIGN ISSUES (CoP s5.3.1):
+- Suspension system AND cradle must be designed to withstand 1.25 TIMES THE STALLING LOAD applied by ALL scaffold hoists in use (prevents failure if cradle snags on obstruction)
+- A TWIN ROPE HOIST MOTOR must be used
+
+COUNTERWEIGHT CALCULATION (CoP s5.3.2):
+Formula: Number of counterweights = 3 × (rope tension in kg) × (outboard in mm) ÷ (inboard in mm) ÷ (mass of each counterweight in kg)
+Example (25kg counterweights): Max rope tension = 723kg, Outboard = 900mm, Inboard = 3600mm → 3 × 723 × 900 ÷ 3600 ÷ 25 = 21.69 (22 counterweights per needle)
+- Refer to AS/NZS 1576.4 for further information
+
+FIXING NEEDLES (CoP s5.3.3):
+- Method of fixing suspension needles must be clearly shown on a detailed drawing CERTIFIED BY AN ENGINEER
+- Where needle is fixed to the floor: must be POSITIVELY RESTRAINED — chemical and friction type anchors MUST NOT be used (e.g. u-bolt over needle and through concrete floor slab)
+- Scaffold couplers must NOT be used to secure counterweight or other anchorage to rear of needle — use a POSITIVE CONNECTION (bolted or pinned connection where bolt/pin passes through structural members and is prevented from accidental removal with nut or other locking system)
+- If needle attached to anchorage point or existing structure: anchorage system and method of attaching needle must be ENGINEER CERTIFIED; restrain back of needle to engineer certified anchorage point
+- Where PROPS are used: install to TOP of needle and UNDERSIDE OF FLOOR ABOVE; must be fixed to prevent dislodgement; floors must be certified by engineer to safely withstand point loading
+- Where COUNTERWEIGHTS are used: must be adequately secured by KEYED LOCK and placed PREFERABLY ON TOP of the needle
+
+SUSPENSION SYSTEMS (CoP s5.3.4):
+- Ensure designed and constructed in accordance with DESIGNER'S SPECIFICATIONS
+- INSPECT before use and after relocation — ensure all components secure and in working order
+- Ensure persons using suspended scaffolds are COMPETENT and receive training and instruction
+- Obtain ENGINEER CERTIFICATION that suspension needles, parapets, roof structure or other structure can support parapet clamps or outriggers (timber or single skin brick parapets are UNSUITABLE)
+- Access to suspension system should be RESTRICTED to persons involved in the work
+- Access restriction methods: signs and barricading (warning tape, barrier mesh, temporary fencing); permit-to-work systems; locking access doors and hatches to roof, balcony or suspension system area
+- Ensure counterweights are secured to prevent UNAUTHORISED REMOVAL
+- Suspension ropes should be INSPECTED for damage (kinks, wear, corroded or broken wires) and replaced if necessary — refer to AS 2759 Steel wire rope
+
+NON-DESTRUCTIVE TESTING:
+- Swing-stage components should be inspected for damage, wear and cracks before use and at pre-determined intervals
+- NON-DESTRUCTIVE TESTING (e.g. dye penetrant testing) for cracks in high stress areas should be done EVERY THREE YEARS
+
+VISUAL INDICATORS:
+- Suspended scaffold being erected without advanced scaffolding or rigging licence holder = serious non-compliance
+- Single rope hoist motor in use (not twin rope type) = serious non-compliance
+- Scaffold couplers used to secure counterweights to needle = serious non-compliance
+- No engineer drawing for needle fixing method = serious non-compliance
+- Timber or single-skin brick parapet used to support suspension rig = serious non-compliance
+- Counterweights not secured with keyed lock = serious non-compliance
+- Access to suspension system roof area unrestricted = non-compliance
+- Suspension ropes showing kinks, broken wires or corrosion = serious non-compliance; stop work
+
+---
+
+CHUNK 27: Suspended (Swing-Stage) Scaffold — Hoists, Cradles, Trolleys and Fall-Arrest
+Section: CoP s5.3.5, s5.3.6, s5.3.7, s5.3.8; AS/NZS 1576.4; AS 1418.2; AS/NZS 1891
+Topic: Scaffold hoist requirements, cradle specifications, trolley safety, fall-arrest and travel restraint for swing-stage
+
+SCAFFOLD HOISTS (CoP s5.3.5):
+- Hoists must COMPLY WITH MANUFACTURER'S SPECIFICATIONS
+- Only suspension ropes noted in the SPECIFICATIONS (compliance plate on hoist) may be used
+- Hoists must comply with AS 1418.2 Cranes (including hoists and winches) — Serial hoists and winches
+- After each use: TRAINED PERSON must inspect and check hoists in accordance with manufacturer's instructions
+- Electric scaffold hoists must have a device to LIMIT LIFTING CAPACITY to a MAXIMUM OF 1.25 TIMES THE RATING of the hoist (as specified in AS/NZS 1576.4)
+- Load limiting device must be TESTED to manufacturer's instructions PRIOR TO USE and this must be DOCUMENTED
+- MAIN AND SECONDARY HOIST ROPES must be INDEPENDENTLY CONNECTED to the needle in case of failure of one rope (each rope connected to a SEPARATE CONNECTION POINT on the needle — e.g. different stirrups)
+
+CRADLES (CoP s5.3.6):
+- Must be constructed in accordance with MANUFACTURER'S SPECIFICATIONS
+- Inspect ALL CONNECTION FIXINGS before use — check they are secure
+- EVENLY DISTRIBUTE materials in the cradle
+- Cradles must be clearly marked with the WORKING LOAD LIMIT (WLL)
+- WLL depends on length and type of construction material used
+- Verify WLL with manufacturer or supplier where there are NO CLEAR MARKINGS
+- If cradle VARIES from original manufacturer's specifications: a suitably qualified and experienced engineer must VERIFY THE MODIFICATION before use
+- To restrict LATERAL MOVEMENT: use suction caps and tie off the cradle with rope
+- Work must CEASE and cradle lowered to ground during WINDY CONDITIONS — maximum allowable operating wind speed must be DOCUMENTED
+
+TROLLEYS (CoP s5.3.7):
+- To prevent a trolley from falling off the beam: use LOWER KEEPER PLATES or a STRAP THAT WRAPS AROUND THE TOP of the beam
+- Trolleys NOT fitted with such a system MUST BE REMOVED FROM SERVICE
+- Obtain guidance from manufacturers and designers on effective systems
+
+FALL-ARREST AND TRAVEL RESTRAINT HARNESS SYSTEMS (CoP s5.3.8):
+- Persons located in swing-stage cradles MUST WEAR FALL-ARREST HARNESSES attached to a PROPERLY DESIGNED ANCHORAGE SYSTEM
+- Harnesses MAY be used in a TRAVEL RESTRAINT application (attached to a static line in the cradle) WHERE A FALL OUT OF THE CRADLE IS NOT POSSIBLE — thorough assessment must be undertaken for secondary risks
+- Where GUARDRAIL or other edge protection is NOT PROVIDED for scaffolders erecting the suspension system: FALL-ARREST SYSTEMS MUST BE USED (including when erecting or dismantling swing-stage components, or doing preparatory or quoting activities where other positive fall prevention is not used)
+- If INDEPENDENTLY ANCHORED safety lines are used: HIGH LEVEL OF TRAINING and RESCUE PROCEDURES must be in place
+- Wherever fall-arrest systems are used: a RESCUE PROCEDURE MUST BE DEVELOPED AND DOCUMENTED; procedure must not place others at risk of injury
+- Fall-arrest systems MUST comply with the WHS Regulation
+
+VISUAL INDICATORS:
+- Swing-stage hoist without compliance plate/data plate on site = non-compliance
+- Wrong type or size of wire rope used in hoist = serious non-compliance; stop work
+- Load limiting device not tested prior to use or testing not documented = non-compliance
+- Main and secondary hoist ropes connected to same point on needle = serious non-compliance
+- Cradle without WLL clearly marked = non-compliance
+- Cradle used in windy conditions without documented maximum wind speed = flag
+- Trolleys not fitted with lower keeper plates or over-beam strap = non-compliance
+- Workers in swing-stage cradle without fall-arrest harnesses = serious non-compliance
+- No rescue procedure documented for swing-stage operations = serious non-compliance
+
+---
+
+CHUNK 28: Complex Scaffolds — Cantilever, Hanging Bracket, Spur and Demolition Scaffolds
+Section: CoP s5.4, s5.4.1, s5.4.2, s5.4.3, s5.5
+Topic: Control measures for complex scaffold types including cantilever, hanging bracket, spur scaffolds and scaffolding for demolition
+
+CANTILEVER SCAFFOLD (CoP s5.4.1):
+- Supported by CANTILEVERED LOAD-BEARING MEMBERS
+- Requires INTERMEDIATE OR ADVANCED SCAFFOLDING HIGH RISK WORK LICENCE
+
+CONTROL MEASURES FOR CANTILEVER SCAFFOLD:
+- Design and position cantilever beams in accordance with ENGINEER'S REQUIREMENTS and scaffold plan
+- A COMPETENT PERSON must certify that the supporting structure can support the cantilevered scaffold
+
+PREFERRED METHODS for fixing inboard length of cantilevered beam to structure:
+- Fix beam to floor below using a POSITIVE FIXING (e.g. u-bolt fitted over beam and through concrete floor slab)
+- Use COUNTERWEIGHTS on the beam, OR
+- Install PROPS to top of beam and to underside of floor above — must be fixed to prevent dislodgement
+
+HANGING BRACKET SCAFFOLD (CoP s5.4.2):
+- Systems supported by frames on buildings or other structures
+- Brackets sometimes in shape of inverted 'L' — one arm fixed to vertical surface, other projecting horizontally to support scaffold planks
+- Other systems may include horizontal members supported by floors
+
+CONTROL MEASURES FOR HANGING BRACKET SCAFFOLD:
+- Must be DESIGNED BY AN ENGINEER; engineering verification may be by calculation AND/OR load testing
+- Supporting structure must be able to support DEAD AND LIVE LOADS applied by brackets
+- Supporting structure must be VERIFIED BY A COMPETENT PERSON as sufficiently complete PRIOR TO ERECTION
+- Spacing of brackets must NOT EXCEED maximum plank spans specified by manufacturer
+- Planks may OVERLAP on straight runs on hanging bracket scaffolds (provided overlap is at least 300mm)
+- Note: Does not refer to overlap of planks on putlogs — minimum and maximum overlapping on putlogs is provided in AS/NZS 1576
+- Safe means of ACCESS for persons installing hanging brackets must be provided; fall-arrest systems used must comply with WHS Regulation
+- Connectors must be used where DIFFERENTIAL DEFLECTION causes a tripping hazard
+
+SPUR SCAFFOLD (CoP s5.4.3):
+- Supported by INCLINED LOAD-BEARING MEMBERS
+- Requires INTERMEDIATE OR ADVANCED SCAFFOLDING HIGH RISK WORK LICENCE
+
+CONTROL MEASURES FOR SPUR SCAFFOLD:
+- Fix propping systems between floor and ceiling at intervals to suit spacing of standards
+- Suitable HEADSTOCKS should be provided at top of each propping system to distribute loads
+- All propping systems should be SECURELY TIED TOGETHER AND BRACED
+- Spurs exceeding 1.8 METRES in length should be braced in BOTH DIRECTIONS at the centre (unless designed otherwise)
+
+SCAFFOLDING FOR DEMOLITION WORK (CoP s5.5):
+- At minimum: HEAVY OR SPECIAL DUTY scaffolding should be used
+- Scaffolding serves to: contain dislodged materials; provide safe working platform and edge protection
+
+FACTORS AFFECTING STABILITY during demolition:
+- Loads imposed by demolished material dislodged onto scaffold
+- Wind forces acting on containment sheeting
+- Water retention in containment sheeting by capillary attraction
+- Progressive removal of building elements affecting lateral stability
+- Progressive removal of ties and dismantling of scaffold
+
+CONTROL MEASURES FOR DEMOLITION SCAFFOLDING:
+- VERTICAL SPACING OF SCAFFOLD TIES may need to be REDUCED to facilitate the demolition cycle
+- Containment sheeting on INTERNAL FACE of scaffold should be installed to DEFLECT MATERIAL INTO THE BUILDING (reduces potential for overloading scaffold)
+- Ensure scaffold is DISMANTLED PROGRESSIVELY and in line with the demolition work
+- Scaffold planks should be SECURED to prevent dislodgement from falling debris
+
+VISUAL INDICATORS:
+- Cantilever scaffold without engineer certification of supporting structure = serious non-compliance
+- Cantilever/spur scaffold work being carried out without intermediate or advanced licence = serious non-compliance
+- Hanging bracket scaffold spacing exceeding manufacturer's maximum plank span = non-compliance
+- Spur scaffold with spurs >1.8m not braced in both directions = non-compliance
+- Demolition scaffold with standard tie spacing (not reduced for demolition cycle) = flag
+- Demolition scaffold without secured planks = non-compliance
+
+---
+
+CHUNK 29: Inspection and Maintenance of Scaffolding
+Section: CoP s6.1, s6.2, s6.3; WHS Regulation s199, s213(1), s213(2), s225(2), s225(3); AS/NZS 4576
+Topic: Frequency of inspections, structural inspection of components, handover certificates and handover inspection requirements
+
+FREQUENCY OF INSPECTION (CoP s6.1):
+- Required frequency may VARY depending on: weather and site conditions; type and size of scaffold; risks associated with scaffold collapse
+- Scaffold subjected to HEAVIER DUTY WORKLOADS (e.g. demolition) should be inspected MORE REGULARLY
+- Discuss appropriate inspection intervals with supplier when scaffold is FIRST INSTALLED
+- Person inspecting must be capable of determining: areas incorrectly altered; experience in identifying faults
+- INSPECTION RECORDS must be kept ON SITE and include: LOCATION; COMMENTS; DATE AND TIME; relevant design or specification reference; PERSON WHO CONDUCTED THE INSPECTION
+- Refer to AS/NZS 4576 Guidelines for scaffolding for further information
+
+MANDATORY 30-DAY INSPECTION (WHS Regulation s225(3)):
+- SUSPENDED, CANTILEVERED, SPUR, HUNG AND OTHER SCAFFOLD from which a person or thing can fall MORE THAN FOUR METRES MUST be inspected by a competent person:
+  - BEFORE USE
+  - Before RESUMPTION OF USE after an incident or repairs
+  - At least EVERY 30 DAYS
+
+UNAUTHORISED ACCESS PREVENTION (WHS Regulation s225):
+- Must be PREVENTED while scaffold is incomplete or unattended — for suspended, cantilevered, spur, hung and other scaffolds where fall potential exceeds 4m
+
+STRUCTURAL INSPECTION OF COMPONENTS (CoP s6.2):
+- Procedures for REGULAR INSPECTION of NEW AND RE-USED equipment must be developed and implemented
+- A COMPETENT PERSON must thoroughly inspect ALL SCAFFOLDING COMPONENTS to determine their condition PRIOR TO ERECTION
+- Inspection includes: overall condition; surface coatings to prevent corrosion; welding and fabrication issues
+- PCBUs must refer to MANUFACTURER'S SPECIFICATIONS for maintenance, repair and fitness for use information
+
+LEGISLATIVE CONTEXT FOR SUPPLIERS (WHS Act s25; WHS Regulation s199, s213):
+- WHS Act s25: Suppliers of plant must ensure, so far as is reasonably practicable, that it is WITHOUT RISKS to health and safety when used for its designed purpose
+- WHS Regulation s199: Suppliers of USED PLANT must ensure faults are identified and written notice given of faults and condition to whom the plant is being supplied
+- WHS Regulation s213(1): Person with management or control of plant at a workplace must ensure MAINTENANCE, INSPECTION and TESTING is carried out by a COMPETENT PERSON
+- WHS Regulation s213(2): Maintenance, inspection and testing must be carried out in accordance with MANUFACTURER'S RECOMMENDATIONS; if no manufacturer's recommendations — recommendations of a COMPETENT PERSON; if not reasonably practicable to do either — inspect ANNUALLY
+
+HANDOVER INSPECTIONS (CoP s6.3; WHS Regulation s225(2)):
+- Person responsible for erection or alteration MUST provide the PCBU or principal contractor with a HANDOVER CERTIFICATE to be kept on site until the scaffold is dismantled
+- WHS Regulation s225(2): Person with management or control of a scaffold MUST ensure the scaffold is NOT USED UNLESS they receive WRITTEN CONFIRMATION FROM A COMPETENT PERSON that construction of the scaffold has been COMPLETED
+- For scaffolds UNDER FOUR METRES: handover certificate must state it has been erected in accordance with MANUFACTURER'S INSTRUCTIONS
+- For scaffolds OVER FOUR METRES: refer to Appendix 4 — Scaffold Handover Certificate (see Chunk 30)
+
+VISUAL INDICATORS:
+- Scaffold in use without handover certificate available on site = serious non-compliance
+- Suspended/cantilevered/spur/hung scaffold not inspected in the previous 30 days = serious non-compliance
+- Scaffold being used before written confirmation of completion received by PCBU = non-compliance
+- No inspection records kept on site = non-compliance
+- Scaffold components put into service without pre-erection inspection by competent person = non-compliance
+- Used scaffold plant supplied without written notice of faults or condition = non-compliance
+
+---
+
+CHUNK 30: Scaffold Handover Certificate — Required Content (Scaffolds Over 4m)
+Section: CoP s6.3; Appendix 4; WHS Regulation s225(2)
+Topic: Mandatory information required in scaffold handover certificates for scaffolds exceeding four metres in height
+
+HANDOVER CERTIFICATE — MANDATORY FOR SCAFFOLDS OVER 4 METRES (Appendix 4):
+
+SUPPLIER/ERECTOR DETAILS required:
+- Certificate number
+- Company name
+- Address
+- Contact phone
+- Fax
+
+CLIENT DETAILS required:
+- Client name
+- Address
+- Site address
+- Contact phone
+- Fax
+
+PROJECT DETAILS required:
+- Project/reference number
+- Description of area handed over
+- Drawings attached
+- Intended use of scaffold
+- DUTY CLASSIFICATION
+- NUMBER OF WORKING DECKS
+- TWP HEIGHT (top working platform height)
+- Bay sizes: 3m bays, 2.4m bays, 1.8m bays, 1.3m bays, 0.8m bays, access bays
+- PLANT DESIGN REGISTRATION NUMBER(S)
+- Additional details
+
+HANDOVER CERTIFICATION STATEMENT:
+The scaffold supplier/erector declares the scaffold detailed above has been erected in accordance with:
+- The attached drawings
+- The Scaffolding Code of Practice
+- AS/NZS 1576
+- AS/NZS 4576
+...and is suitable for its intended purpose.
+Requires: Name; Signature; Certificate number; Time; Date.
+
+CLIENT ACCEPTANCE required:
+- Name; Signature; Date
+
+IMPORTANT NOTE ON CERTIFICATE:
+"Arrange for scaffold to be inspected at intervals not exceeding 30 days or immediately following any incident which may affect the adequacy of the scaffold."
+
+RECORDING ALTERATIONS ON HANDOVER CERTIFICATE:
+- For alterations to scaffolds over 4 metres: WHAT was altered, BY WHO and WHEN must be recorded on the handover certificate
+
+VISUAL INDICATORS:
+- Scaffold over 4m in use without a completed handover certificate on site = serious non-compliance
+- Handover certificate missing duty classification, TWP height, working decks or design registration number = non-compliance
+- Scaffold alterations not recorded on existing handover certificate = non-compliance
+- Scaffold not inspected for more than 30 days after the handover date = non-compliance
+
+---
+
+CHUNK 31: Suspended (Swing-Stage) Compliance Pack — Risk Assessment, Installation and Verification
+Section: CoP Appendix 5; WHS Regulation s225
+Topic: Full compliance requirements for swing-stage scaffolds covering design, loading, installation, inspection, fall-arrest, public protection, training and verification forms
+
+RISK ASSESSMENT AND RISK MANAGEMENT FOR SUSPENDED SCAFFOLDS covers:
+
+1. DESIGN AND ENGINEERING:
+- All components of suspension rig must be DESIGNED AND DOCUMENTED by a qualified and suitably experienced engineer
+- ALL AREAS OF DESIGN must receive FORMAL SIGN-OFF from a qualified and suitably experienced engineer — includes: needle suspension system, cradle, and hoist
+- Prior to set up: obtain engineering VERIFICATION OF STRUCTURAL ADEQUACY of suspension system and cradle
+- Manufacturers of cradle and hoist must provide structural verification and information on MAXIMUM WLL
+
+2. LOADING:
+- WLL must be CLEARLY MARKED on cradle
+- Materials loaded must be EVENLY DISTRIBUTED — not concentrated in one area
+- Operators must VERIFY THE MASS of the load before placing in cradle to prevent overloading
+
+3. LOAD-LIMITING DEVICES:
+- AS/NZS 1576.4 requires electric scaffold hoists to have a device limiting lifting capacity to MAXIMUM 1.25 TIMES THE RATING of the hoist
+- Suspension system and cradle must be designed to withstand the STALLING LOAD applied by all scaffold hoists in use
+
+4. INSTALLATION:
+- At FIRST INSTALLATION: a competent person (who should be a qualified, experienced engineer) must provide VERIFICATION that the system has been installed safely
+- Subsequent MOVES AND REINSTALLATION: must be reinspected and verified
+  - If reinstallation is DIFFERENT to original verified installation (other than smaller outboard, smaller cradle, or larger inboard): ENGINEER must approve new installation
+  - If reinstallation is same as approved original: a COMPETENT PERSON (other than engineer) can check and verify set-up
+- Competent person for this activity: must meet criteria in 'Competent person benchmarks for swing-stage set-up verification'
+
+5. INSPECTION:
+- Inspections as outlined in previous sections
+- In addition: swing-stage components inspected for damage, wear and cracks before use and at PRE-DETERMINED INTERVALS
+- NON-DESTRUCTIVE TESTING for cracks in high stress areas required
+
+6. FALL-ARREST SYSTEMS:
+- Persons in swing-stage cradles must wear FALL-ARREST HARNESSES attached to properly designed anchorage system
+- Travel restraint system may be used where a fall is not possible (attached to static line in cradle)
+- Fall-arrest systems must comply with WHS Regulation; designed by a competent person
+- Reference: AS/NZS 1891 — Industrial fall-arrest systems and devices
+
+7. PUBLIC PROTECTION:
+- Where work is above or near pedestrian or vehicular access: adequate protection (hoarding, falling object restriction devices) must be used
+
+8. TRAINING AND COMPETENCE:
+- Principal contractor must ensure: person is COMPETENT, TRAINED and has had SITE-SPECIFIC SWING-STAGE INDUCTION before using the swing-stage
+- Induction must address SAFE OPERATION of the swing-stage
+- Principal contractor must RECORD inductees and dates; records kept for DURATION OF CONSTRUCTION WORK
+- Person INSTALLING suspended scaffold: must have ADVANCED SCAFFOLDING OR RIGGING HIGH RISK WORK LICENCE and be competent
+- Person USING suspended scaffold: should have completed CPCCLSF4001A or equivalent; or Course in Safe Use of Swing Stage Scaffolds
+
+COMPETENT PERSON BENCHMARKS for swing-stage set-up verification:
+Person must:
+1. Hold an ADVANCED SCAFFOLDING or RIGGING HIGH RISK WORK LICENCE recognised by WHSQ
+2. Have demonstrated ability to READ AND INTERPRET TECHNICAL DRAWINGS relating to swing-stage installation (dimensions; drawing notes; drawing ID and revision process; structural member specifications; connection details; any special conditions)
+3. Have a sound understanding of the current QLD Scaffolding Code of Practice and AS/NZS 1576.4
+4. Have a MINIMUM OF TWO YEARS' EXPERIENCE associated with use and inspection of swing-stage scaffolds
+5. Have sound understanding of benchmarks for INSPECTION AND DISCARD of: scaffolding components, lifting gear, steel wire ropes, scaffold hoists, personal fall arrest equipment
+
+STEEL WIRE ROPE INSPECTION (AS 2759):
+- Check: broken wires; broken strands; kinks; wear or abnormalities — discard criteria as specified in AS 2759
+
+DISCARD CRITERIA for scaffold components:
+- Bent, cracked welds, or rust (other than surface rust) = REMOVE FROM SERVICE AND DISCARD
+- Scaffolding couplers with bent pins, damaged threads, cracked fittings = MUST NOT BE USED
+- Components from different manufacturers CANNOT be mixed unless specifically approved by engineer or manufacturer
+- Components from different materials (aluminium and steel) CANNOT be used together unless engineer certified
+- Scaffold hoists with obvious faults (cracked/damaged parts, missing/loose fasteners, lack of manufacturer's plates and inspection tags, damaged controls) = MUST NOT BE USED
+- Personal fall arrest equipment failing AS/NZS 1891 inspection criteria (torn/cut webbing, missing tags, oil-soaked harnesses, missing connectors) = MUST NOT BE USED
+
+VISUAL INDICATORS:
+- No site-specific swing-stage induction records for any worker operating the swing-stage = non-compliance
+- Competent person conducting set-up verification without meeting all 5 benchmarks = non-compliance
+- Scaffold components with visible rust (beyond surface rust), cracked welds, or bends not removed from service = serious non-compliance
+- Personal fall arrest equipment with torn webbing, missing tags or damaged connectors in use = serious non-compliance
+- No non-destructive testing records for swing-stage components in service for 3 years = non-compliance
+
+---
+
+CHUNK 32: Swing-Stage Checklists — Supplier, Principal Contractor and Erection Requirements
+Section: CoP Appendix 5, A5.1–A5.4; AS 1418.2; AS/NZS 4576; AS/NZS 1576.4
+Topic: Pre-delivery supplier checklist, principal contractor design checklist, erection installation checklist and electrical installation checklist for swing-stage scaffolds
+
+SUPPLIER PRE-DELIVERY REQUIREMENTS (A5.1):
+- Suspended scaffold system must be designed in accordance with AS/NZS 1576.1 and AS/NZS 1576.4
+- Couplers must be designed, tested and marked in accordance with AS/NZS 1576.2
+- Scaffolding hoists must be designed, manufactured and tested in accordance with AS 1418.2
+
+POWERED SCAFFOLDING HOISTS MUST BE TWIN ROPE TYPE (A5.1.1)
+
+HOIST AND SECONDARY PROTECTIVE DEVICE DATA PLATES must include (A5.1.2):
+- Type model identification
+- Serial number
+- Wire rope details (nominal size, grade, construction, maximum length)
+- Rated hoisting capacity
+- Manufacturer name or identification mark
+- Reeving requirements
+- Power supply requirements
+
+RCD FOR THE CRADLE DATA LABEL must include (A5.1.3):
+- Rating load in Amps
+- Residual tripping current — NOT EXCEEDING 30mA
+- Power supply in Volts
+
+ALL HOISTING CONTROLS MUST (A5.1.4):
+- Be labelled with operational functions displayed
+- Be SPRING LOADED/DEADMAN TYPE that returns to safe operation
+- Include: operation instructions; emergency stop switch; up and down control
+
+CONTROL BOX requirements (A5.1.5, A5.1.6):
+- Must be compatible with the specific type and model of hoist
+- If multiple hoists: each must have SAME OPERATING SPECIFICATIONS
+- Must be REMOVABLE (or alternative method exists to isolate power) for safety when scaffold not in service
+
+PRE-DELIVERY TESTING (A5.1.7):
+- Before each site delivery: each hoist, secondary protective device and load-limiting device must have been INSPECTED AND OPERATIONALLY TESTED in accordance with AS/NZS 4576
+- Electric hoists must be fitted with a LOAD-LIMITING DEVICE preventing lifting more than 125% of rated load
+- Secondary protective device must be capable of preventing cradle from falling due to hoist failure
+
+BETWEEN EACH HIRING: all components must be INSPECTED AND MAINTAINED (A5.1.8)
+OPERATING AND SAFE USE INSTRUCTIONS and daily safety checklists must be provided in writing to users (A5.1.9)
+
+SCAFFOLD ENVIRONMENT HAZARDS TO ADDRESS (A5.2):
+- Adjacent or over PUBLIC SPACE: specific controls (hoardings, catch platforms, barricades) required (A5.2.1)
+- Other workers below: specific controls required (A5.2.2)
+- POWERLINES: no part of suspended scaffold (including suspension and secondary ropes) can enter exclusion zone (A5.2.3)
+- All powerlines considered LIVE unless written confirmation from distribution company (A5.2.4)
+- Uncontrolled VEHICLE MOVEMENT near scaffold: protective measures required (A5.2.5)
+- CRANES in proximity: specific site procedures required (A5.2.6)
+- CORROSIVE SUBSTANCES near scaffold: procedures to minimise damage to critical components (A5.2.7)
+- Hazardous areas: selection of appropriate equipment (e.g. ELECTRIC HOISTS MUST NOT be used where dust can form an explosive atmosphere) (A5.2.8)
+
+ERECTION REQUIREMENTS (A5.4):
+- Erection/dismantling/modification must be carried out or directly supervised by appropriate CERTIFICATE HOLDER (A5.4.1)
+- Erector must have copy of DESIGN PLAN prior to erection, including number, size and positioning of counterweights (A5.4.2)
+- FALL PROTECTION must be in position at building edge or scaffolders must use safety harnesses with adequate anchorage (A5.4.3)
+- Area around support rig must be RESTRICTED to workers engaged in assembling scaffold (A5.4.4)
+- Area below scaffold must be BARRICADED to prevent access from dropped components (A5.4.5)
+- SAFETY OBSERVER positioned if needed to prevent access to barricaded area (A5.4.6)
+- Counterweights: manufactured for purpose; LABELLED WITH MASS IN KG; placed directly on needle or innermost support in designed location; SECURED BY KEYED LOCK (A5.4.7)
+- Traversing tracks: must be fitted with THROUGH-BOLTED STOPS at ends; trolleys rated at least 1000kg WLL (A5.4.8)
+- OUTBOARD END OF NEEDLE must NEVER be lower than inboard end (A5.4.9)
+- Suspension rig must form a RIGID AND STABLE STRUCTURE under working conditions (A5.4.10)
+- Only wire rope recommended by manufacturer for that specific hoist may be used — check HOIST DATA PLATE (A5.4.11)
+- A SECONDARY PROTECTIVE DEVICE must be provided for EACH scaffolding hoist, operating on a secondary wire rope (A5.4.12)
+- Secondary device's internal mechanism must be ADJUSTED FOR THE SIZE OF WIRE ROPE FITTED (A5.4.13)
+- Secondary wire rope must be attached to suspension rigging at a point INDEPENDENT of the main suspension rope attachment; TWO THIMBLES must be used, not one with over-rated shackle (A5.4.14)
+
+CRADLE REQUIREMENTS (A5.4.15–A5.4.18):
+- All cradle components inspected on site prior to assembly; all locating pins and clips fitted and in position (A5.4.15)
+- Sign clearly displaying SAFE WORKING LOAD LIMIT in kilograms inside each cradle (A5.4.16)
+- Cradle must have: guardrails, midrails and toeboards; FIXED NON-SLIP DECK with adequate drainage holes; no visible mechanical damage (cracked/split welds, missing/broken decking, cut/bent guardrails) (A5.4.17)
+- Finished scaffold must CONFORM TO DESIGN PLAN; alterations included on amended plan reviewed and approved before first use (A5.4.18)
+- COMPETENT PERSON must supply WRITTEN STATEMENT that scaffold is complete and safe for use before first use and after every alteration (A5.4.19)
+
+VISUAL INDICATORS:
+- RCD tripping current exceeding 30mA = serious non-compliance
+- Controls not spring loaded/deadman type = serious non-compliance
+- Outboard end of needle lower than inboard end = serious non-compliance
+- No secondary protective device on each hoist = serious non-compliance
+- Secondary wire rope attached to same point as main rope = serious non-compliance
+- Counterweights not labelled with mass in kilograms = non-compliance
+- Traversing tracks without through-bolted stops at ends = non-compliance
+- Cradle without WLL sign inside = non-compliance
+- Cradle without guardrails, midrails and toeboards = serious non-compliance
+- No written completion statement before swing-stage first used = serious non-compliance
+
+---
+
+CHUNK 33: Swing-Stage Electrical Installation Requirements
+Section: CoP Appendix 5, A5.5; AS/NZS 3012
+Topic: Electrical power supply requirements for suspended scaffold hoists including voltage drop, cable type, length and protection
+
+ADEQUATE POWER SUPPLY is essential for safe operation of suspended scaffold hoists and electrical protection devices.
+Principal, electrical and scaffolding contractors must COORDINATE on electrical installation planning.
+
+VOLTAGE DROP (A5.3.5, A5.5.2):
+- Voltage drop must NOT EXCEED 5% of the nominal supply voltage — the flexible cord is only PART of this 5%
+- To limit voltage drop, suspended flexible cord should: not be of excessive length, OR if extra length required: use LARGER SIZE CONDUCTORS to compensate
+
+POWER BOARD LOCATION (A5.5.1, A5.5.3):
+- Power board should be positioned CLOSE TO THE SCAFFOLD to limit length of flexible cord descending to platform
+- The construction power board must be designed so the removal of the suspension flexible cord from the socket-outlet REQUIRES A DELIBERATE ACT (A5.5.4)
+
+FLEXIBLE CORD REQUIREMENTS:
+- Must be SUPPORTED to protect from mechanical damage and prevent bending at radius less than manufacturer's minimum (A5.5.5)
+- Must be HEAVY-DUTY DOUBLE INSULATED TYPE and able to SUPPORT ITS OWN WEIGHT over the length of the drop (A5.5.6)
+- Must be fitted with THIMBLE AND EYE for suspension to stop damage to cable
+- Must be supported to prevent cradle from FOULING or causing mechanical damage to the cable (A5.5.7)
+- Must be installed so it is NOT PULLED ACROSS THE STRUCTURE of the cradle
+- Must be LONG ENOUGH to allow the cradle to descend to the ground or a lower structure for EMERGENCY EGRESS (A5.5.8)
+
+CONTROL BOX POSITIONING:
+- When in use: attached to the GUARDRAIL OF THE CRADLE on the SIDE AWAY FROM THE WORKING FACE (A5.5.9)
+
+ELECTRICAL CABLES INSIDE CRADLE (A5.5.10, A5.5.11):
+- Should NOT be excessive in length (to prevent mechanical damage and limit voltage drop)
+- Cables from control box to hoists must be ENCLOSED for protection from mechanical damage
+- Must be securely attached to cradle
+- Additional mechanical protection may be required depending on work undertaken (demolition, grinding, abrasive blasting)
+
+ISOLATION WHEN NOT IN USE (A5.5.12):
+- Must be a system allowing effective ISOLATION FROM POWER SUPPLY when not in use — to prevent unauthorised operation
+- May be located within a LOCKED POWER BOARD or by use of a readily removable control panel on the cradle
+
+TESTING AND MAINTENANCE REQUIREMENTS (A5.6.18):
+- All portable electrical equipment including scaffolding hoists and cabling: inspected and tested EVERY THREE MONTHS
+- RCD protection devices: time/current tested MONTHLY
+
+VISUAL INDICATORS:
+- Suspended flexible cord not supported to prevent mechanical damage = non-compliance
+- Single-insulated (not heavy-duty double insulated) cord used = serious non-compliance
+- Cord not long enough to allow cradle to reach ground in emergency = non-compliance
+- Control box on working face side of cradle (not outside/away side) = flag
+- No isolation system for power supply when scaffold unattended = non-compliance
+- Electrical testing not conducted in last 3 months = non-compliance
+- RCD not tested monthly = non-compliance
+
+---
+
+CHUNK 34: Swing-Stage Operation, Safety and Daily Requirements
+Section: CoP Appendix 5, A5.6, A5.7, A5.14, A5.15; WHS Regulation
+Topic: Swing-stage operational requirements including daily inspections, communication, load management, parking and boatswain's chair
+
+WRITTEN STATEMENT OF COMPLETION must be supplied by competent person BEFORE operating the scaffold (A5.6.1).
+WRITTEN OPERATING AND SAFE USE INSTRUCTIONS and DAILY SAFETY CHECKLISTS must be provided to users by supplier (A5.6.2).
+
+SAFE EGRESS:
+- Persons suspended on platform must have a METHOD OF SAFE EGRESS (A5.6.3)
+- Procedures must be in place for RAPID RETRIEVAL in emergency
+- It is NOT SUFFICIENT to rely on the local fire and rescue service
+- Options: onsite crane work box or other method
+
+DESIGNATED OPERATORS:
+- PCBU must nominate DESIGNATED OPERATORS and provide WRITTEN AUTHORISATION (A5.6.5)
+- Operators must receive information, training and instruction on the SPECIFIC TYPE OF EQUIPMENT to enable daily inspections and safe use (A5.6.6)
+- Records of training must be MAINTAINED AND AVAILABLE (A5.6.8)
+
+TRAINING REQUIREMENTS:
+- Workers must be trained in SAFE WORK PRACTICES for suspended scaffolds including emergency procedures
+- Workers must be able to DEMONSTRATE THESE SAFE WORK PRACTICES before working in the suspended scaffold (A5.6.7)
+
+COMMUNICATIONS:
+- Effective COMMUNICATIONS must be in place between cradle/chair and other workers at all times to alert others in emergency (A5.6.9)
+- Methods include: persons in sight of cradle/chair observing hand signals; or hearing whistles, bells; or radio/telephone communication
+
+ACCESS AND EGRESS FROM CRADLE:
+- Where access and egress is not from ground or protected landing: SAFETY HARNESSES AND LANYARDS MUST be provided and used when entering or leaving the cradle (A5.6.10)
+- During this procedure: harnesses must be attached to SUITABLE ANCHORAGE POINTS ON THE MAIN STRUCTURE
+- Cradle must be EFFECTIVELY SECURED to prevent movement during access/egress
+
+LATERAL RESTRAINTS required if scaffold subjected to movement from wind forces or work procedures (A5.6.11).
+
+PLATFORM CONDITION:
+- Cradle platform must be in TIDY CONDITION with UNOBSTRUCTED ACCESS along entire length (A5.6.12)
+- Total load of persons, materials and equipment must NOT EXCEED the SAFE WORKING LOAD LIMIT (A5.6.13)
+
+DAILY INSPECTION:
+- Each day before commencing work: operator must carry out a SAFETY INSPECTION and complete the DAILY LOG-IN SHEET in line with supplier requirements (A5.6.16)
+
+MONTHLY INSPECTION:
+- A COMPETENT PERSON must inspect the cradle and suspension system at NOT GREATER THAN MONTHLY INTERVALS (if scaffold has been on site and not altered during that time) (A5.6.17)
+
+DURING BREAKS — SCAFFOLD SECURED:
+- During meal breaks: platform may be secured to structure to prevent wind damage; POWER DISCONNECTED from scaffold hoists (A5.6.14)
+
+OVERNIGHT/LONGER PERIODS:
+- Platform must be PARKED IN STORAGE POSITION and secured to structure
+- If not on a secured site: parked in an INACCESSIBLE POSITION
+- All trailing ropes and cables securely stored
+- Protective devices locked onto ropes
+- Power cables disconnected from supply
+- Air lines (if any) disconnected and pressure released (A5.6.15)
+
+BOATSWAIN'S CHAIR additional requirements (A5.7):
+- Unless large enough exclusion zone exists below: measures in place to prevent TOOLS OR EQUIPMENT FALLING from chair (e.g. lanyards for hand tools; heavy equipment suspended from another rope) (A5.7.1)
+- Operator must be able to activate ALL CONTROLS including emergency descent system FROM THE SEATED POSITION (A5.7.2)
+- If chair subjected to movement from wind or work procedures: LATERAL RESTRAINTS required (A5.7.3)
+
+UNATTENDED SCAFFOLD SAFETY:
+- When unattended for short periods: appropriate safety measures observed (A5.14)
+- When unattended for longer periods: appropriate safety measures observed (A5.14, A5.15)
+
+VISUAL INDICATORS:
+- Operators without written PCBU authorisation = non-compliance
+- No daily inspection or daily log completed before use = non-compliance
+- Communication system between cradle and ground not established = non-compliance
+- Scaffold left unattended overnight without being secured and power disconnected = non-compliance
+- Workers entering/exiting cradle without harness attached to main structure anchorage = non-compliance
+- Platform total load visibly exceeding WLL = serious non-compliance; stop work
+- No rapid retrieval procedure in place = non-compliance
+
+---
+
+CHUNK 35: Principal Contractor Swing-Stage Statement and Verification Forms
+Section: CoP Appendix 5; Verification Forms
+Topic: Documentation required to verify swing-stage installation, including principal contractor statement, competent person verification and load testing procedure
+
+DOCUMENTS REQUIRED ON SITE for each swing-stage installation:
+1. Engineer's DRAWING for the swing-stage suspension system
+2. Engineer's DESIGN CERTIFICATION LETTER for the design of the swing-stage
+3. Competent person's WRITTEN CONFIRMATION that the swing-stage has been erected in accordance with design documentation for the INITIAL SET-UP at this location (including a LOAD TEST)
+4. Engineer's CERTIFICATION LETTER to verify the supporting structure is adequate to support a swing-stage suspension system
+5. ADVANCED SCAFFOLDING OR ADVANCED RIGGING HIGH RISK WORK LICENCE of person erecting swing-stage suspension system
+6. Signed PRINCIPAL CONTRACTOR OR BUILDING OWNER SWING-STAGE STATEMENT
+7. Signed COMPETENT PERSON BENCHMARKS FOR SWING-STAGE SET-UP VERIFICATION
+8. Competent person's SWING-STAGE SUSPENSION SYSTEM VERIFICATION STATEMENT completed and signed, including load testing
+
+PRINCIPAL CONTRACTOR OR BUILDING OWNER SWING-STAGE STATEMENT:
+- Must be completed by the principal contractor (or nominated representative) OR building owner (where no principal contractor exists)
+- Declares that the representative has SIGHTED ALL LISTED DOCUMENTATION
+- Is NOT an approval of the swing-stage — it is a documentation sighting confirmation only
+- Must record: swing-stage supplier; installer; address; identification number (if multiple on site)
+
+LOAD TEST PROCEDURE — two options:
+
+OPTION 1 — TEST BOTH NEEDLES AT ONCE:
+- Test load = 100% of WLL with 100% of load SPREAD EVENLY across FULL LENGTH of cradle
+- Test weights must be CLEARLY MARKED WITH WEIGHT IN KILOGRAMS
+- Steps: inspection and verification statement completed (except load test part); remote control fitted to each hoist motor; load cradle on ground; operate remote control (standing to the SIDE of cradles); RAISE CRADLE 1 METRE ABOVE LANDING; hold and check cradle does not move; lower and remove test weights
+
+OPTION 2 — TEST ONE NEEDLE AT A TIME:
+- Test load = 60% of WLL per needle applied within 1 METRE OF END of cradle
+- Steps: same as above, but load one end; raise and check; lower and move weights to OPPOSITE END within 1 metre; repeat; lower and remove weights
+
+OPTION 3 — USING LOAD CELLS:
+- Test procedure must be PREPARED AND APPROVED BY A PROFESSIONAL ENGINEER
+- Loading must accurately simulate 100% of WLL to the swing-stage suspension system
+- Load spreading frame may be necessary (must be engineer certified)
+- Load cell must be CALIBRATED AT INTERVALS NOT EXCEEDING ONE YEAR
+- Calibration documentation available on request
+- Persons operating hoists must stand AWAY FROM AND TO THE SIDE of the cradles
+
+SWING-STAGE VERIFICATION CHECKLIST — items for each installation (must pass):
+- Length of outboard on needles does not exceed engineer's drawings
+- Length of inboard on needles matches engineer's drawings
+- All other dimensions match engineer's drawing
+- All connections match engineer's drawing
+- Components undamaged — no bends, dents, rust (other than minor surface rust)
+- Welds undamaged — no cracks
+- No mixing of scaffold components (all from same manufacturer)
+- Suspension rig and needles made from same material (steel or aluminium, not both) unless engineer approved
+- Number and position of counterweights matches engineer's drawing
+- Counterweights secured by positive restraint (not friction devices such as couplers)
+- Counterweights secured with lock and key
+- All suspension steel wire ropes in good condition (per AS 2759)
+- Engineer's certification letter sighted — applies to location of unit
+- Successful load test undertaken
+
+VISUAL INDICATORS:
+- Any of the 7 required documents missing from site = serious non-compliance
+- Load test not performed at initial set-up or after each relocation = serious non-compliance
+- Counterweights secured by couplers (friction) rather than positive restraint = serious non-compliance
+- Person conducting load test standing directly beside or over cradle (not to the side) = serious safety risk
+- Mixed manufacturer scaffold components without engineer approval on verification checklist = non-compliance
+- Mixed aluminium/steel suspension rig without engineer approval = non-compliance
+
+---
+
+CHUNK 36: Key Measurements and Thresholds — Complete Quick Reference
+Section: CoP throughout; WHS Regulation throughout; AS/NZS 1576 series
+Topic: Consolidated list of all specific measurements, dimensions, numeric thresholds and triggers in the Scaffolding Code of Practice 2021
+
+HEIGHT THRESHOLDS:
+
+FALL POTENTIAL — LICENSING:
+- MORE THAN 4 METRES fall potential = BASIC, INTERMEDIATE or ADVANCED HIGH RISK WORK LICENCE mandatory for scaffolders
+- 4 METRES OR LESS fall potential = no HRW licence required; competency still required
+
+FALL POTENTIAL — SWMS:
+- MORE THAN 2 METRES fall risk during scaffolding work = HIGH RISK CONSTRUCTION WORK; SWMS mandatory
+- MORE THAN 3 METRES (housing construction) or MORE THAN 2 METRES (all other construction) fall risk during erection or dismantling = must prevent fall or use fall arrest system
+
+SCAFFOLD PLAN THRESHOLD:
+- ABOVE 4 METRES TWP = scaffold plan mandatory
+
+HANDOVER CERTIFICATE THRESHOLDS:
+- UNDER 4 METRES = basic handover statement that scaffold erected per manufacturer's instructions
+- OVER 4 METRES = full handover certificate (Appendix 4 format) mandatory
+
+30-DAY INSPECTION — suspended, cantilevered, spur, hung, and other scaffolds where fall potential is MORE THAN 4 METRES
+
+SECOND ACCESS/EGRESS — external perimeter scaffold:
+- MORE THAN 8 METRES TWP AND MORE THAN 60 LINEAL METRES = second means of access/egress mandatory, one suitable for stretcher
+
+ENGINEER REQUIRED — key triggers:
+- Modular scaffold OUTSIDE standard manufacturer's parameters
+- Tube and coupler scaffold MORE THAN 33 METRES TWP
+- Cantilevered or spurred scaffold MORE THAN 6 METRES HIGH
+- Bridging beams, truss or ladder beams MORE THAN 4.8 METRES SPAN or 6m of scaffold above
+- Independent free-standing or guyed scaffold towers MORE THAN 4 METRES TWP
+- Aluminium static or mobile tower MORE THAN 9 METRES TWP
+- Access birdcages MORE THAN 20 METRES TWP
+- Stair tower MORE THAN 20 METRES HIGH
+- Loading bays MORE THAN 9 METRES TWP or 2 TONNES
+- Perimeter demolition scaffold MORE THAN 9 METRES HIGH
+
+PLATFORM DIMENSIONS:
+- Minimum platform width (all scaffolds except suspended): 450mm
+- Light duty (housing <3m bay / other <2m bay) minimum width: 225mm (no materials)
+- Light duty (housing ≥3m bay / other ≥2m bay) minimum width: 450mm
+- Medium duty minimum width: 675mm (emergency access platforms: 900mm)
+- Heavy duty minimum width: 900mm (or 675mm with 450mm bay extension)
+
+LOADS:
+- Light duty (small): 125kg (1.2kN) total; 100kg (1kN) concentrated
+- Light duty (standard): 225kg (2.2kN) total; 120kg (1.2kN) concentrated
+- Medium duty: 450kg (4.4kN) total; 150kg (1.5kN) concentrated
+- Heavy duty: 675kg (6.6kN) total; 200kg (2kN) concentrated
+- Loading platforms: not less than 5kPa with impact factor 1.25
+- Horizontal tie anchor working load: ≥6kN
+
+PLANK AND PLATFORM GAPS:
+- Maximum single gap between planks: 25mm
+- Maximum total gap between all planks: 50mm
+- Maximum internal gap (platform to building face): 225mm (for working face); otherwise 100mm
+- Maximum vertical gap from floor level or soffit: 300mm
+
+SOLEBOARD MINIMUM DIMENSIONS: 500mm long × 225mm wide × 30mm thick hardwood timber
+
+SCAFFOLD STABILITY — TYING:
+- Unclad scaffold: tie required when height reaches 3× minimum base width
+
+CONTAINMENT SCREENING GAPS: maximum 25mm (horizontal, vertical, screen to framework)
+
+STAIRWAY DIMENSIONS:
+- Rise: 150mm to 225mm
+- Going: 175mm to 355mm
+- Combination: 540 ≤ 2R + G ≤ 700
+- Minimum tread depth: 175mm
+- Maximum tread gap: 30mm
+- Step height change at direction change (access/egress): maximum 300mm
+
+STRETCHER ACCESS STAIRWAY:
+- Slope: 45° or less
+- Tread width: minimum 1000mm
+- Landing length: minimum 1200mm
+- External handrail/guardrail height above landing/tread: minimum 1400mm
+
+FALL ARRESTING PLATFORM:
+- Minimum width: 675mm (full length of platform)
+- Position (slope ≤26°): no more than 1 METRE below work surface
+- Position (slope >26°): no more than 300mm below work surface
+- Internal gap triggering control: exceeds 225mm
+
+FALL-ARREST ANCHORAGE: must support load of 15kN
+
+SCAFFOLD ERECTION SEQUENCE:
+- Platform to be within 2 METRES below next level being erected
+- Platform may be removed after work starts 2 LEVELS ABOVE
+
+DISMANTLING:
+- Full set of planks within 2 METRES vertically below worker at all times
+
+LAPPED PLANKS (without securing):
+- Minimum plank length: 1.2 metres
+- Minimum overlap past lower plank edge: 300mm
+
+PLANK OVERHANG ON PUTLOGS: 150mm to 250mm
+
+PLYWOOD COVER SHEETS: minimum 17mm thick; maximum gap covered 500mm (without engineer approval)
+
+STAIR MODULE TO TRANSOM GAP: maximum 15mm (where no manufacturer specification)
+
+SPURS: spurs exceeding 1.8 METRES in length must be braced in both directions at centre
+
+SWING-STAGE SPECIFIC:
+- Hoist load limiter: maximum 1.25× rated load
+- RCD tripping current: not exceeding 30mA
+- Voltage drop: not exceeding 5% of nominal supply voltage
+- Traversing trolley rated WLL: minimum 1000kg
+- Minimum outboard-to-inboard calculation: 3× safety factor applied to counterweight formula
+- Suspension system/cradle design load: 1.25× stalling load of all hoists
+- Non-destructive testing frequency: every 3 YEARS
+- Monthly inspection: cradle and suspension system
+- Electrical testing: every 3 MONTHS
+- RCD testing: MONTHLY
+- Load test: 100% of WLL (both needles) or 60% WLL per needle
+
+HIGH RISK WORK LICENCE EXPIRY: 5 YEARS from date of issue
+
+CONSTRUCTION PROJECT THRESHOLD (principal contractor + WHS management plan): $250,000 OR MORE
+
+VISUAL INDICATORS:
+- Any measurement outside the above thresholds = flag as potential non-compliance
+- Any scaffold over 4m TWP without scaffold plan = serious non-compliance
+- Any scaffolding work >2m fall risk without SWMS = serious non-compliance
+- Any scaffolder working where fall risk >4m without HRW licence = serious non-compliance
+
+---
+
+CHUNK 37: Referenced Australian Standards and Related Codes of Practice
+Section: CoP Appendix 3; throughout
+Topic: Complete list of technical standards and codes of practice referenced in the Scaffolding Code of Practice 2021
+
+SCAFFOLDING AUSTRALIAN STANDARDS:
+
+AS/NZS 1576.1: Scaffolding — General Requirements
+- Design and operational requirements for scaffolding (except trestle scaffolding, portable ladders used as working platforms, and elevating working platforms)
+
+AS/NZS 1576.2: Scaffolding — Couplers and Accessories
+- Requirements for couplers and accessories for light, medium and heavy duty scaffolding
+
+AS/NZS 1576.3: Scaffolding — Prefabricated and Tube-and-Coupler Scaffolding
+- Performance requirements for prefabricated and tube-and-coupler scaffolding; read with AS/NZS 1576.1
+
+AS/NZS 1576.4: Scaffolding — Suspended Scaffolding
+- Requirements for materials, and design, of suspended scaffolding including supporting structure (excluding building maintenance units); read with AS/NZS 1576.1
+
+AS/NZS 1576.5: Scaffolding — Prefabricated Splitheads and Trestles
+- Requirements for splitheads and trestles used as supports for temporary platforms
+
+AS/NZS 1576.6: Scaffolding — Metal Tube-and-Coupler Scaffolding — Deemed to Comply with AS/NZS 1576.3
+- Requirements for uncladded metal tube-and-coupler scaffolding NOT EXCEEDING 33m HEIGHT; deemed to comply with light, medium and heavy duty loads
+
+AS/NZS 4576: Guidelines for Scaffolding
+- Practical guidance for training and certification of scaffolders; preparation of sites; safe selection, supply, erection, alteration, dismantling, maintenance, inspection and use
+
+AS 1577: Scaffold Planks
+- Requirements for scaffold planks
+
+AS 1418.2: Cranes (Including Hoists and Winches) — Serial Hoists and Winches
+- Requirements for serial hoists and winches (used for scaffold hoists, Section 5.3.4)
+
+AS/NZS 1170.2: Structural Design Actions — Wind Actions
+- Procedures for determining wind speeds and resulting wind actions for structural design; includes terrain categories and basic wind speeds for zones in Australia; covers buildings <200m high; structures with roof spans <100m; structures other than offshore structures, bridges and transmission towers
+
+AS 2759: Steel Wire Rope — Use, Operation and Maintenance
+- Referenced for inspection of suspension ropes on swing-stage scaffolds
+
+AS 3610: Formwork for Concrete
+- Referenced for formwork support systems incorporated in temporary working platforms
+
+AS 3850.1: Prefabricated Concrete Elements — General Requirements
+- Referenced for anchor requirements
+
+AS/NZS 1891: Industrial Fall-Arrest Systems and Devices
+- Referenced for design and inspection criteria for fall-arrest systems used on scaffolds
+
+OTHER CODES OF PRACTICE REFERENCED:
+- How to Manage Work Health and Safety Risks Code of Practice
+- Work Health and Safety Consultation, Cooperation and Coordination Code of Practice
+- Managing the Work Environment and Facilities Code of Practice
+- Hazardous Manual Tasks Code of Practice
+- Electrical Safety Code of Practice — Working Near Overhead and Underground Electric Lines
+- Formwork Code of Practice
+
+LEGISLATION:
+- Work Health and Safety Act 2011 (Qld)
+- Work Health and Safety Regulation 2011 (Qld)
+- Electrical Safety Act 2002 (Qld)
+- Electrical Safety Regulation 2013 (Qld)
+
+KEY WEBSITE:
+- worksafe.qld.gov.au — see 'work-with-bird-and-bat-droppings' for bird droppings risk controls
+
+QUALIFICATION REFERENCED:
+- CPCCLSF4001A — Licence to erect, alter and dismantle scaffolding advanced level (or subsequent equivalent course)
+- Course in the Safe Use of Swing Stage Scaffolds (or subsequent equivalent)
+
+---
+
+CHUNK 38: Inspection Checklist — Comprehensive Site Audit Reference
+Section: CoP Appendix 2
+Topic: Complete scaffolding inspection checklist as contained in the Code of Practice — for use in site compliance audits
+
+SCAFFOLD VICINITY:
+- Has public protection been provided?
+- Have sufficient safeguards against electric powerlines been provided?
+- Is there sufficient control over vehicle movement?
+- Is there sufficient control over crane operation?
+- Are there sufficient controls for storage, handling and use of hazardous chemicals?
+- Are scaffolds erected a safe distance from trenches or excavations?
+
+SUPPORTING STRUCTURE:
+- Is the supporting structure in good condition?
+- Does the supporting structure have adequate strength?
+- Are there sufficient controls to prevent deterioration of the supporting structure?
+- Are all measures to strengthen the supporting structure adequate?
+- Is the risk of the supporting structure being overloaded from other sources adequately controlled?
+- Is the scaffold built on solid ground? If built on soft ground, are soleboards used to properly distribute the load?
+
+SOLEBOARDS AND BASEPLATES:
+- Are there sufficient soleboards?
+- Are the soleboards of suitable material and in a serviceable condition?
+- Are the soleboards secure?
+- Are there sufficient baseplates?
+- Are the baseplates of the appropriate type?
+- Are the baseplates serviceable and of suitable dimensions?
+- Are the baseplates secure?
+
+SCAFFOLD STRUCTURE:
+- Are the standards bearing firmly?
+- Are the standards plumb (or as designed)?
+- Are the longitudinal standard spacings correct?
+- Are the transverse standard spacings correct?
+- Are the joints in standards correctly positioned?
+- Are the joints in standards correctly secured (special duty or hung scaffold)?
+- Are the ledgers level (or as designed)?
+- Are the ledgers continuous (or as designed)?
+- Are the lift heights correct?
+- Are the horizontal ledger spacings correct?
+- Are the ledgers correctly secured?
+- Are ledger joints correctly positioned (tube and coupler scaffold)?
+- Are the joints in ledgers correctly secured (tube and coupler scaffold)?
+- Are there sufficient transoms/putlogs?
+- Are the transoms/putlogs correctly positioned and secured?
+- Is the bracing adequate?
+- Is the scaffold sufficiently stable?
+- Are the ties correctly positioned and correctly fixed?
+
+PLATFORMS:
+- Does the scaffold have the required number of working platforms?
+- Are the working platforms at the required locations?
+- Are catch platforms correctly positioned?
+- Are the platforms and supporting scaffold constructed for the appropriate duty live loads?
+- Are the platform dimensions suitable for the intended work?
+- Is there adequate edge protection?
+- Are the platforms correctly constructed?
+- Are planks secured against wind?
+
+ACCESS AND EGRESS:
+- Is there safe access and egress to every scaffold platform?
+- Are temporary stairways correctly installed?
+- Are portable ladders of an industrial grade, serviceable and correctly installed?
+- Are access ways and access platforms correctly installed?
+
+CLADDING:
+- Has the scaffold been designed for wind loading on any cladding?
+- Are the fixing ties secure?
+- Are there any rips or tears in the cladding?
+- Are the overlap joints satisfactory?
+
+GENERAL FITNESS FOR PURPOSE:
+- Is there adequate provision for material handling?
+- Are the clearances between the scaffold and adjacent structures correct?
+- Is there adequate protection from falling debris?
+- Has the scaffold been adequately designed to support all attachments?
+- Are all approaches and platforms effectively lit?
+
+MOBILE SCAFFOLDS:
+- Is the supporting surface hard and flat?
+- Is the area of operation free of floor penetrations, powerlines and other hazards?
+- Are the castor wheel locks in working order? (Should be locked at all times except during movement)

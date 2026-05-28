@@ -1,0 +1,193 @@
+DOCUMENT: Managing the Work Environment and Facilities Code of Practice 2021 (Queensland)
+TYPE: Approved Code of Practice
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: all_workplaces, office_work, construction, manufacturing, remote_work
+SOURCE: Workplace Health and Safety Queensland (WHSQ)
+CURRENT AS AT: 2021 (approved under section 274 of the Work Health and Safety Act 2011)
+CLAUSE_PREFIX: s
+REFERENCE_STANDARD: AS/NZS 1680.1 Interior workplace lighting; AS/NZS 3666 Air-handling and water systems of buildings; AS 1668.2 Mechanical ventilation in buildings; AS 3745 Planning for emergencies in facilities.
+
+---
+
+CHUNK 1: Primary Duties and Maintenance
+Section: s1.1, s1.3; WHS Act s19, s20, s27, s28
+Topic: Core legal obligations for facilities and environment maintenance
+
+PRIMARY DUTY: A PCBU must eliminate risks arising from the work environment and facilities, or if not reasonably practicable, minimise the risks so far as is reasonably practicable. This includes providing ADEQUATE AND ACCESSIBLE FACILITIES for the welfare of workers including toilets, drinking water, and washing and dining facilities.
+
+MAINTENANCE OBLIGATIONS:
+- The work environment MUST BE MAINTAINED so that it remains in a clean and safe condition
+- Broken or damaged furniture, fixtures and fittings (chairs, plumbing, lighting) should be REPLACED OR REPAIRED PROMPTLY
+- Consumable items including SOAP AND TOILET PAPER should be replenished regularly
+
+VISUAL INDICATORS:
+- Lack of soap or toilet paper in facilities = maintenance failure
+- Broken plumbing or flickering lights left unaddressed = failure to repair promptly
+- Facilities inaccessible to workers on night shifts or overtime = access breach
+- Unclean amenities with no evidence of regular cleaning = maintenance duty breach
+
+---
+
+CHUNK 2: Safe Access, Layout, and Floors
+Section: s2.1, s2.2, s2.4; WHS Regulation s40
+Topic: Mandatory dimensions for movement and surface safety
+
+AISLES AND WALKWAYS:
+- Must be safe and include access for workers with special needs
+- Should be AT LEAST 600mm WIDE
+- Must be kept FREE OF OBSTRUCTIONS at all times
+
+ROUTE MARKING: Where necessary to define routes, boundaries should be marked by a PERMANENT LINE of white, yellow, or other contrasting colour AT LEAST 50mm WIDE.
+
+FLOORS:
+- Must be designed, installed and maintained to allow work to be carried out safely
+- Workers doing STATIC STANDING WORK should be protected from direct contact with concrete or steel floors via carpet, ANTI-FATIGUE MATTING, or duckboards
+
+VISUAL INDICATORS:
+- Aisles measured at less than 600mm wide = non-compliant movement space
+- Marked walkways using lines narrower than 50mm = visibility non-compliance
+- Trailing cables, loose carpet tiles, or debris in walkways = slip and trip hazards
+- Workers standing on bare concrete for prolonged periods without matting = ergonomic risk
+- Aisles blocked by stored materials or equipment = non-compliant obstruction
+
+---
+
+CHUNK 3: Lighting Requirements
+Section: s2.5, Table 1
+Topic: Exact lux levels for workplace tasks
+
+GENERAL DUTY: Lighting MUST BE PROVIDED (natural or artificial) to allow safe movement and performance of jobs without awkward postures or eye strain. EMERGENCY LIGHTING MUST BE PROVIDED for safe evacuation.
+
+RECOMMENDED ILLUMINATION LEVELS (Table 1) — minimum lux by task type:
+- Movement and orientation (corridors, tunnels, storerooms): 40 lux
+- Rough intermittent work (locker rooms, loading bays, plant rooms): 80 lux
+- Simple tasks (waiting rooms, canteens, rough bench work): 160 lux
+- Ordinary/moderately easy tasks (continuously occupied interiors, general offices): 240 lux
+- Difficult tasks (drawing boards, fine painting, inspection benches): 600 lux
+- Very difficult tasks (fine manufacture, colour matching, intricate inspection): 800 lux
+
+VISUAL INDICATORS:
+- Lighting levels visibly inadequate for the task being performed = insufficient illumination
+- Significant glare or reflections on work surfaces = lighting design failure
+- Emergency lighting not visible in corridors or near exits = non-compliant
+- Burnt-out lights in work areas left unreplaced = maintenance failure
+- Work requiring detail (inspection, drawing) performed in poorly lit areas = ergonomic and safety risk
+
+---
+
+CHUNK 4: Ventilation and Thermal Comfort
+Section: s2.7, s2.8
+Topic: Ventilation areas, air speed, and temperature thresholds
+
+NATURAL VENTILATION: Should consist of permanent openings that are, in total, AT LEAST 5 PER CENT OF THE FLOOR AREA of the room.
+
+AIR MOVEMENT:
+- Enclosed workplaces should be supplied with air movement rates BETWEEN 0.1 m/s AND 0.2 m/s
+- Air-conditioning systems should reduce levels of carbon dioxide and other indoor contaminants
+
+THERMAL COMFORT:
+- Optimum comfort for SEDENTARY WORK: BETWEEN 20 AND 26 DEGREES CELSIUS
+
+VISUAL INDICATORS:
+- Ventilation openings totalling less than 5% of the floor area = natural ventilation gap
+- Workplace temperature consistently above 26°C for sedentary tasks = thermal comfort breach
+- No mechanical ventilation in an enclosed workspace without adequate natural ventilation = non-compliant
+- Workers visibly overheated or wearing excessive clothing = thermal comfort indicator
+- Air-conditioning units visibly not maintained or serviced = ventilation system gap
+
+---
+
+CHUNK 5: Drinking Water and Toilet Facilities
+Section: s3.2, s3.3; WHS Regulation s41
+Topic: Mandatory supply standards and toilet ratios
+
+DRINKING WATER:
+- MUST be provided FREE OF CHARGE at all times
+- Temperature should be AT OR BELOW 24 DEGREES CELSIUS
+
+TOILET PROVISION — ratios for separate facilities:
+- Separate MALE toilets: 1 CLOSET PAN PER 20 MALES; 1 URINAL PER 25 MALES
+- Separate FEMALE toilets: 1 CLOSET PAN PER 15 FEMALES
+- UNISEX toilets: Allowed ONLY if the total workforce is 10 OR FEWER and there are TWO OR FEWER WORKERS OF ONE GENDER
+
+LOCATION: In multistorey buildings, toilets should be located on AT LEAST EVERY SECOND FLOOR.
+
+VISUAL INDICATORS:
+- Drinking water temperature above 24°C = supply standard failure
+- Multi-storey building with toilets only on the ground floor = accessibility breach
+- Workplace with mixed-gender workforce of more than 10 using a single unisex toilet = ratio failure
+- No drinking water available at remote or outdoor work sites = non-compliant
+- Insufficient toilets for workforce size based on ratios above = non-compliant
+
+---
+
+CHUNK 6: Washing and Dining Facilities
+Section: s3.4, s3.5
+Topic: Sanitation ratios and eating area requirements
+
+HAND WASHING: Basins should be provided in at least the ratio of ONE WASH BASIN FOR EVERY 30 WORKERS (male and female calculated separately).
+
+DINING AREAS:
+- Must be provided with access to hygienic facilities
+- Should have 1m² OF CLEAR SPACE for each person likely to use the area at any one time
+- The 1m² is calculated FREE OF FURNITURE AND OBSTRUCTIONS
+
+SEPARATE FACILITIES: Hand washing facilities must not be used for work processes (e.g. washing paint brushes or tools) — dedicated work cleaning facilities must be provided separately.
+
+VISUAL INDICATORS:
+- Dining room for 20 people measuring less than 20m² of clear space (excluding furniture) = space deficiency
+- Hand washing basins being used to wash tools, paint brushes, or work equipment = sanitation breach
+- No hand washing facilities near toilets = hygiene failure
+- Dining area without refrigeration for food storage = hygiene gap
+- Workers eating in chemical handling or dusty areas without a separate clean dining space = non-compliant
+
+---
+
+CHUNK 7: Change Rooms, Lockers, and Showers
+Section: s3.7, s3.8
+Topic: Mandatory dimensions for personal welfare facilities
+
+CHANGE ROOMS:
+- Should allow CLEAR SPACE OF NO LESS THAN 0.5m² for each worker changing at any one time
+
+LOCKER SPACING:
+- Row spacing: AT LEAST 1800mm BETWEEN ROWS FACING EACH OTHER
+- AT LEAST 900mm between lockers and a seat or wall
+
+SHOWERS — required for dirty, hot, or hazardous work (e.g. welding, foundry, asbestos, lead risk):
+- Ratio: ONE SHOWER CUBICLE FOR EVERY 10 WORKERS who may need to shower
+- Floor area: Each shower should have A FLOOR AREA OF NOT LESS THAN 1.8m²
+- Partitions: AT LEAST 1650mm HIGH and NO MORE THAN 300mm ABOVE THE FLOOR
+- A separate dressing area with a seat should be provided for each shower
+
+VISUAL INDICATORS:
+- Locker rows separated by only 1200mm = non-compliant layout
+- Shower floor area less than 1.8m² = dimension failure
+- Shower partitions less than 1650mm high = privacy and design breach
+- No showers on site where workers regularly do hazardous or dirty work = non-compliant
+- Shower ratio inadequate for number of workers requiring post-work decontamination = non-compliant
+
+---
+
+CHUNK 8: Emergency Plans and Evacuation Drills
+Section: s5.1; WHS Regulation s43
+Topic: Emergency procedures and drill frequencies
+
+MANDATORY REQUIREMENTS:
+- A PCBU must ensure an emergency plan is PREPARED AND MAINTAINED
+- The plan must provide for emergency procedures including:
+  - Effective response to an emergency
+  - Evacuation procedures
+  - Notification of emergency services
+  - Medical treatment and assistance
+
+EVACUATION DRILLS: Should be carried out AT LEAST EVERY 12 MONTHS.
+
+VISUAL INDICATORS:
+- Documented site plan showing fire equipment and exits not displayed in key locations = information provision failure
+- Training records showing the last evacuation drill was more than 12 months ago = drill frequency breach
+- Emergency exits or paths to assembly points blocked by stock or equipment = life-safety breach
+- Fire extinguishers with expired inspection tags = maintenance failure
+- Assembly point not clearly signed or visible from exit points = non-compliant
+- Emergency exit signs not illuminated = non-compliant

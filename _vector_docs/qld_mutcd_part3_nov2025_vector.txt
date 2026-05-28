@@ -1,0 +1,1466 @@
+DOCUMENT: Queensland Manual of Uniform Traffic Control Devices (Queensland MUTCD) — Part 3: Traffic Control for Works on Roads
+TYPE: Queensland Government Technical Standard (amends and supplements AS 1742.3-2019)
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: construction, roads, traffic_management, temporary_traffic_management, roadworks, workzone_traffic_control, signage, demolition, civil_works, infrastructure, maintenance, excavation, lane_closures, road_closures, detours, pedestrian_management, TTM_design
+SOURCE: Department of Transport and Main Roads (TMR), Queensland Government
+PUBLICATION_DATE: November 2025
+CURRENT AS AT: November 2025
+CLAUSE_PREFIX: Clauses referenced as section numbers within this document, read in conjunction with AS 1742.3-2019
+APPROVED UNDER: Transport Operations (Road Use Management) Act 1995 (Qld)
+RELATIONSHIP: This document takes PRECEDENCE over AS 1742.3-2019 when applied in Queensland. Read together; use Queensland MUTCD Part 3 first, then refer to AS 1742.3-2019 for items not addressed.
+
+---
+
+CHUNK 1: Document Purpose, Hierarchy and How to Use
+Section: About this document; How to use this document
+Topic: Scope, relationship to Australian Standard AS 1742.3-2019, and Queensland precedence
+
+THIS DOCUMENT:
+- Provides uniform practices for signing, delineation and device use for works on roads in Queensland
+- Promotes safety of workers and safe and efficient movement of road users at roadworks sites
+- Is designed to be read and applied TOGETHER with AS 1742.3-2019 Manual of Uniform Traffic Control Devices Part 3
+- HAS PRECEDENCE over AS 1742.3-2019 when applied in Queensland
+- Uses the same section and clause numbering as AS 1742.3-2019
+- Must be read in conjunction with the Queensland Guide to Temporary Traffic Management (QGTTM)
+
+APPLICABILITY CATEGORIES used in this document:
+- ACCEPTED — Australian Standard section or clause applies unchanged
+- ACCEPTED, WITH AMENDMENTS — part or all accepted, but with Queensland additions, deletions or differences
+- NEW — no equivalent in the Australian Standard (Queensland-only requirement)
+- NOT ACCEPTED — Australian Standard clause does not apply in Queensland
+
+KEY RELATED DOCUMENTS:
+- Queensland Guide to Temporary Traffic Management (QGTTM) — primary operational reference for TTM
+- AS 1742.3-2019 — base national standard; Queensland MUTCD Part 3 takes precedence
+- Transport Operations (Road Use Management) Act 1995 (Qld) — TORUM Act — governing legislation
+- Transport Operations (Road Use Management – Accreditation and Other Provisions) Regulation 2015
+- Professional Engineers Act 2002 (Qld) — governs RPEQ certification
+- Main Roads Technical Specifications (MRTS) — referenced for specific devices and products
+- TMR Traffic Control (TC) signs database — officially approved non-standard signs
+
+VISUAL INDICATORS:
+- Construction site TTM plan referencing only AS 1742.3-2019 without Queensland MUTCD Part 3 = incomplete compliance basis, flag for review
+- Non-standard signs used without TC-series or Queensland MUTCD authorisation = non-compliance
+- Traffic control devices on site not matching Queensland MUTCD Part 3 requirements = flag
+
+---
+
+CHUNK 2: Key Definitions — Competent Person
+Section: Clause 1.3.2 (Accepted, with amendments)
+Topic: Who is authorised to perform TTM activities in Queensland; training requirements
+
+COMPETENT PERSON (Queensland additions to definition):
+- Must be AUTHORISED BY TRANSPORT AND MAIN ROADS to perform that task in Queensland
+- A competent person may ONLY undertake TTM activities in accordance with QGTTM Part 8 Appendix A
+- Prescribed training for TTM activities: see Clause 1.7 (below)
+
+VISUAL INDICATORS:
+- Person performing TTM functions on site without evidence of Queensland authority card = non-compliance
+- TTM activity carried out outside the scope of QGTTM Part 8 Appendix A = non-compliance
+
+---
+
+CHUNK 3: Key Definitions — Shall / Should / May
+Section: Clauses 1.3.5, 1.3.13, 1.3.14 (Accepted, with amendments)
+Topic: Mandatory vs recommended vs optional requirements; compliance implications
+
+SHALL (Clause 1.3.13):
+- Where certain requirements are described with 'shall' = MANDATORY
+- When an installation is made, all 'shall' requirements MUST be met
+- Variations to 'shall' requirements: refer to Clause 1.9(b) — requires risk assessment and RPEQ certification
+
+SHOULD (Clause 1.3.14):
+- Where 'should' is used = RECOMMENDED but not mandatory
+- Variations to 'should' recommendations: refer to Clause 1.9(a) — requires documented risk assessment by TMD or RPEQ
+
+MAY (Clause 1.3.5):
+- Where 'may' is used = conditional or optional; no specific requirement for design or application is intended
+
+VISUAL INDICATORS:
+- Site deviating from a 'shall' requirement without documented RPEQ-certified risk assessment = serious non-compliance
+- Site deviating from a 'should' recommendation without documented risk assessment = flag for review
+
+---
+
+CHUNK 4: Key Definitions — Traffic Controller
+Section: Clause 1.3.19 (Accepted, with amendments)
+Topic: Who qualifies as a Traffic Controller in Queensland; legal authority
+
+TRAFFIC CONTROLLER (Queensland definition):
+- A person who holds an APPOINTMENT as an ACCREDITED PERSON under Section 21 of the TORUM Act 1995
+- Performs the functions of a Traffic Controller as prescribed by Subdivision 6 of the Transport Operations (Road Use Management – Accreditation and Other Provisions) Regulation 2015
+
+VISUAL INDICATORS:
+- Person performing stop/slow bat traffic control without a Queensland Traffic Controller appointment = serious non-compliance
+- STOP/SLOW bat in use at site without accredited Traffic Controller present = non-compliance
+
+---
+
+CHUNK 5: Key Definitions — RPEQ (Registered Professional Engineer of Queensland)
+Section: Clause 1.3.24 (NEW)
+Topic: Role and authority of RPEQ in TTM; when RPEQ certification is required
+
+RPEQ (Registered Professional Engineer of Queensland):
+- A person registered under the Professional Engineers Act 2002 (Qld) with the Board of Professional Engineers of Queensland
+- Must be registered to provide the specific professional engineering service required
+
+NOTE: A professional engineering service requires application of engineering principles and data to a design or construction, production, operation or maintenance activity. Services provided only in accordance with a prescriptive standard are excluded.
+
+WHEN RPEQ IS REQUIRED (see Clause 1.9):
+- Variations to 'should' recommendations: risk assessment must be undertaken and signed by TMD or RPEQ
+- Variations to 'shall' requirements: risk assessment PLUS full TMP/TGS must be certified by RPEQ
+- Use of innovative treatments outside Queensland MUTCD scope: TMP/TGS must be RPEQ certified
+
+VISUAL INDICATORS:
+- Variation to a mandatory ('shall') requirement in TMP or TGS without RPEQ certification = serious non-compliance
+- Complex TTM involving significant geometric changes or network diversions without RPEQ involvement = flag for review
+
+---
+
+CHUNK 6: Legal Authority — Official Traffic Signs
+Section: Clause 1.6 (NEW)
+Topic: Legal basis for temporary traffic signs; who can install them; compliance obligations
+
+LEGAL AUTHORITY:
+- TORUM Act provides that 'Official Traffic Signs' SHALL be installed ONLY by the authority of the Chief Executive of Transport and Main Roads OR a local government
+- Signs must be installed in accordance with the methods, standards and procedures in the Queensland MUTCD or other duly approved documents
+- Procedures for installation of signs are in the QGTTM (issued as an approved notice under Section 166(2) of TORUM)
+
+VISUAL INDICATORS:
+- Temporary roadworks signs installed without authority from TMR or local government = non-compliance
+- Signs not complying with Queensland MUTCD methods and standards = non-compliance
+
+---
+
+CHUNK 7: Prescribed Training — Authority Cards and Training Courses
+Section: Clause 1.7 (NEW)
+Topic: Mandatory training requirements for all TTM roles in Queensland; who needs what card
+
+AUTHORITY CARD REQUIREMENT:
+- A person is ONLY authorised to perform a TTM role in Queensland if they hold an AUTHORITY CARD applicable to that role
+- Authority cards are a mandatory regulatory requirement where specified
+- To obtain an authority card: must complete the relevant prescribed training course AND meet additional requirements
+- Prescribed training courses are developed by TMR and delivered by APPROVED REGISTERED TRAINING ORGANISATIONS
+
+PRESCRIBED TRAINING COURSES:
+
+(a) WORKING IN PROXIMITY TO TRAFFIC AWARENESS PART 1:
+- Required for: persons who work on or adjacent to a road
+- Applies in accordance with: QGTTM Part 8 Table A7
+
+(b) WORKING IN PROXIMITY TO TRAFFIC AWARENESS PART 2:
+- Required for: persons who have completed Part 1 AND are required to select and implement work method practices under short-term, low-impact works provisions
+- Applies in accordance with: QGTTM Part 8 Table A7
+
+(c) TRAFFIC MANAGEMENT IMPLEMENTATION (TMI):
+- Required for: persons implementing Traffic Management Plans (TMPs) and Traffic Guidance Schemes (TGSs)
+- Applies in accordance with: QGTTM Part 8 Table A5
+
+(d) TRAFFIC MANAGEMENT DESIGN (TMD):
+- Required for: persons who DESIGN, DEVELOP, REVIEW and INSPECT TMPs and TGSs
+- Applies in accordance with: QGTTM Part 8 Table A3
+
+(e) TRAFFIC CONTROLLER:
+- Required for: persons performing Traffic Controller functions (Clause 1.3.19)
+- Applies in accordance with: QGTTM Part 8 Table A4
+
+(f) EVENT TRAFFIC MARSHAL:
+- Required for: volunteers undertaking event traffic management
+- Applies in accordance with: QGTTM Part 8 Table A7
+
+ADDITIONAL ROLES (no authority card required but must comply with QGTTM):
+
+(g) LOOKOUT PERSON — must have completed Parts 1 and 2 of Working in Proximity training; QGTTM Part 8 Table A7
+(h) ROADWORKS PILOT VEHICLE DRIVER — QGTTM Part 8 Table A7
+(i) TRUCK-MOUNTED ATTENUATOR (TMA) VEHICLE DRIVER — must have completed TMI; QGTTM Part 8 Table A7
+(j) AUTHORISED PERSON — QGTTM Part 8 Table A7
+
+VISUAL INDICATORS:
+- Any TTM worker on site without a valid Queensland authority card for their role = non-compliance
+- TMI worker implementing a TGS without TMI training completion = non-compliance
+- TMD worker designing TMP without TMD qualification = non-compliance
+- Traffic Controller using stop/slow bat without Traffic Controller authority card = serious non-compliance
+- TMA vehicle driver without completed TMI training = non-compliance
+- Worker adjacent to live traffic without minimum Part 1 awareness training = non-compliance
+
+---
+
+CHUNK 8: Variations to Mandatory Requirements — RPEQ Certification Process
+Section: Clause 1.9 (NEW)
+Topic: The formal process when deviating from 'shall' or 'should' requirements in TTM
+
+VARIATIONS TO 'SHOULD' RECOMMENDATIONS (Clause 1.9(a)):
+- Reasons must be based on sound TTM judgement
+- Must be DOCUMENTED THROUGH A RISK ASSESSMENT demonstrating acceptability and safety of the varied approach
+- Risk assessment must be prepared in accordance with QGTTM
+- Risk assessment SHALL be undertaken and SIGNED BY A TMD OR AN RPEQ
+
+VARIATIONS TO 'SHALL' REQUIREMENTS (Clause 1.9(b)):
+- Reasons must be based on sound TTM or traffic engineering judgement
+- Must be DOCUMENTED THROUGH A RISK ASSESSMENT demonstrating acceptability and safety
+- Risk assessment SHALL be undertaken and signed by a TMD or RPEQ
+- BOTH the risk assessment AND the TMP/TGS SHALL be CERTIFIED BY AN RPEQ
+- RPEQ certification only required for portion of TMP/TGS impacted by or related to the departure
+- TMD preparing TMP/TGS SHALL email notification to TrafficEngineering.Support@tmr.qld.gov.au including all relevant information and RPEQ details (for information only — not for approval)
+
+VARIATIONS FOR INNOVATIVE TREATMENTS (Clause 1.9(c)):
+- Risk assessment undertaken by a Competent Person
+- TMP/TGS AND risk assessment certified by RPEQ
+- ALL innovative treatments require PRIOR APPROVAL by Transport and Main Roads
+- Request approval by emailing TrafficEngineering.Support@tmr.qld.gov.au
+
+USE OF OPTIONS ('MAY') (Clause 1.9(d)):
+- Not a variation to the optimal treatment — does NOT require RPEQ certification
+
+SCOPE NOTE: Very few roadworks sites should fall within the RPEQ requirement under (b) or (c). Examples where it IS required: complex geometric changes requiring engineering design principles; complex diversions requiring detailed analysis (e.g. micro-simulation traffic modelling).
+
+RISK ASSESSMENT PREPARATION:
+- All TTM risk assessments SHALL be prepared in accordance with QGTTM Part 10 Section 2 Risk Management for TTM
+
+VISUAL INDICATORS:
+- TMP/TGS deviating from a 'shall' requirement without documented RPEQ-certified risk assessment = serious non-compliance
+- Innovative TTM treatment in use without prior TMR approval = serious non-compliance
+- TMD-signed risk assessment used for a 'shall' variation without accompanying RPEQ certification = non-compliance
+- No notification email to TMR for 'shall' variation = procedural non-compliance
+
+---
+
+CHUNK 9: Temporary Speed Zone — Advance Warning / Buffer Zones
+Section: Clause 3.4.4 (Accepted, with amendments)
+Topic: Queensland rules for stepping down speed limits in advance of temporary speed zones
+
+QUEENSLAND REQUIREMENT (replaces AS 1742.3-2019 provision):
+- Speed limits SHALL be reduced in accordance with the requirements in QGTTM Part 3 Section 5.5.1
+- (The AS 1742.3-2019 provision that a reduction of 60 km/h or more should be effected in two steps is replaced by this Queensland-specific reference)
+
+COMPLIANCE IMPLICATION:
+- Any staged speed zone reduction in a roadworks TTM must follow QGTTM Part 3 Section 5.5.1 requirements, not only the national standard
+
+VISUAL INDICATORS:
+- Speed reduction of 60 km/h or more into a temporary speed zone effected in a single step without reference to QGTTM Part 3 Section 5.5.1 = flag for review
+- Temporary speed zone setup that does not comply with QGTTM Part 3 Section 5.5.1 = non-compliance
+
+---
+
+CHUNK 10: Multi-Message Signs (MMS) — Rules and Requirements
+Section: Clause 4.2.2 (Accepted, with amendments — entire clause replaced)
+Topic: Mandatory conditions of use for multi-message signs at roadworks; panel configuration rules
+
+MULTI-MESSAGE SIGNS (MMS) — GENERAL:
+- Designated within TM, RM, WM and GM Series
+- Allow display of up to THREE logically related messages within a single uniform modular frame (see Clause 4.5.2)
+- May display messages from the T, R, W and G series combined in one frame
+
+MANDATORY CONDITIONS OF USE (when not used to control pedestrians only):
+
+(a) MINIMUM PANEL REQUIREMENT — MMS SHALL have relevant messages consisting of a minimum of:
+- Two 600 mm × 600 mm panels; OR
+- One 600 mm × 600 mm panel and one 1200 mm × 300 mm panel; OR
+- One 1200 mm × 600 mm panel
+
+(b) REGULATORY SIGN LIMIT — no more than ONE regulatory sign panel in the same MMS frame facing the direction of traffic
+- EXCEPTION: Additional regulatory supplementary panels that condition or relate to the other regulatory panel (forming a single regulatory message) may be included
+
+(c) REGULATORY SIGN POSITION — when used, regulatory sign panels SHALL be placed in the TOP POSITION of the frame on the SIDE CLOSEST TO TRAFFIC
+- EXCEPTION: No Left (RM2-6A(L)) or No Right (RM2-6A(R)) Turn prohibition panels — installed on the side of the MMS where the turn prohibition applies (see Figure 4.2.2(a))
+
+(d) TEXT-ONLY PANELS — within one frame, no more than TWO message panels consisting of words only
+- If 1200 mm × 600 mm space is filled by two 600 mm × 600 mm word-only panels: at least one shall be symbolic or a blank retroreflective yellow panel
+- EXCEPTIONS to the two text-panel limit:
+  i. MMS under section 46 of the Transport Infrastructure Act 1994 for restricted road use notices — three word panels allowed (see Figure 4.2.2(b))
+  ii. Police performing traffic control duties where POLICE CONTROL AHEAD and PREPARE TO STOP word panels are both required (see Figure 4.2.2(c))
+  iii. ROAD CLOSED AHEAD and LOCAL TRAFFIC ONLY word panels combined (see Figure 4.2.2(d))
+
+(e) BLANK PANELS — a blank retroreflective yellow panel SHALL be placed in any UNUSED module of the frame — all panel positions must be filled
+
+(f) TM/RM/WM/GM SERIES PANELS — SHALL ONLY be used in multi-message frames (not as standalone signs)
+
+(g) BLANK RETROREFLECTIVE YELLOW PANEL — no more than ONE per MMS
+- When a 600×600 blank yellow retroreflective panel is used: SHOULD be located FURTHEST FROM TRAFFIC
+- EXCEPTION: where arrows or other direction-related symbol panels are required in that location
+
+(h) BACK-TO-BACK MMS — where a sign is required at the same location for both directions of travel:
+- Option i: Use TWO SEPARATE MMS assemblies placed BACK TO BACK
+- Option ii: ONE MMS assembly with panels installed back-to-back on one frame (if orientation and sight lines can be achieved)
+
+(i) SPEED LIMIT AHEAD AND END SPEED LIMIT panels in MMS:
+- SHALL be placed in the TOP POSITION of the frame on the SIDE CLOSEST TO TRAFFIC
+
+SPECIAL CASE — TM5-1B DETOUR and TM5-1-Q01 DETOUR U-TURN:
+- Minimum panel and blank panel requirements in (a) and (g) DO NOT APPLY when:
+  - Using the 1200×300 TM5-1B (DETOUR with small arrow) OR TM5-1-Q01 (DETOUR with U-Turn symbol), AND
+  - There are no relevant messages to add to the assembly
+  - In this case: a single TM5-1B or TM5-1-Q01 panel may be used as the TOP PANEL with two blank panels below (see Figure 4.2.2(e))
+
+VISUAL INDICATORS:
+- MMS with only one panel displayed (no second panel, no blank filler) = non-compliance
+- MMS with two or more regulatory sign panels facing same direction = non-compliance
+- Regulatory sign panel NOT in top position closest to traffic = non-compliance
+- MMS with three word-only panels (other than the approved exceptions) = non-compliance
+- Unused MMS frame position not filled with blank retroreflective yellow panel = non-compliance
+- TM/RM/WM/GM series panel used as a standalone sign (outside an MMS frame) = non-compliance
+- Two blank retroreflective yellow panels in one MMS frame = non-compliance
+- Blank yellow panel positioned closest to traffic (unless direction panel required there) = flag
+- Speed Limit AHEAD or END Speed Limit panel not in top position closest to traffic = non-compliance
+
+---
+
+CHUNK 11: ROADWORK AHEAD Sign — T1-1, TM1-1, T1-31, T1-Q06
+Section: Clause 4.6.2 (Accepted, with amendments)
+Topic: Queensland rules for ROADWORK AHEAD signs including the narrow-format T1-Q06
+
+STANDARD ROADWORK AHEAD SIGNS:
+- T1-1 — standard format
+- TM1-1 — multi-message panel format
+- T1-31 — alternate format
+- T1-16 — ROADWORK X km AHEAD (advance warning)
+
+QUEENSLAND ADDITION — NARROW FORMAT SIGN T1-Q06 (600 mm × 900 mm):
+- MAY be used in Queensland
+- SHALL ONLY be used on NARROW MEDIANS AND SHOULDERS where the standard T1-1 or T1-31 would not fit and would be an OBSTRUCTION to traffic
+- Listed in Table 4.1(A): Sign = ROAD WORK AHEAD (Narrow format), Sign number = T1-Q06, Size = 600 x 900 mm
+
+ROADWORK X km AHEAD SIGN — QUEENSLAND POSITION REQUIREMENT (replaces AS 1742.3-2019):
+- When additional advance warning is necessary, the ROADWORK X km AHEAD sign SHOULD be used X km in advance of:
+  - The PRIMARY PREPARE TO STOP sign (if traffic control is used), OR
+  - The FIRST CONE in a taper (if a taper is used), OR
+  - The START OF THE SAFETY BUFFER AREA
+- AND SHALL be at least TWO SIGN SPACINGS in advance of the ROADWORK AHEAD sign
+
+VISUAL INDICATORS:
+- T1-Q06 narrow ROAD WORK AHEAD sign used on wide median or shoulder where standard T1-1 or T1-31 would fit = non-compliance
+- T1-Q06 sign used as primary ROADWORK AHEAD sign on a standard road = non-compliance
+- ROADWORK X km AHEAD sign placed less than two sign spacings before the ROADWORK AHEAD sign = non-compliance
+- ROADWORK X km AHEAD sign measured from wrong reference point (not from primary PREPARE TO STOP, first cone, or safety buffer start) = flag
+
+---
+
+CHUNK 12: ROADWORK ON SIDE ROAD Sign — T1-25, TM1-25, T1-27, TM1-27
+Section: Clause 4.6.7 (Accepted, with amendments)
+Topic: Restrictions on use of ROADWORK ON SIDE ROAD and ROAD PLANT ON SIDE ROAD signs; correct alternatives
+
+RESTRICTION — T-INTERSECTIONS (replaces AS 1742.3-2019):
+- ROADWORK ON SIDE ROAD and ROAD PLANT ON SIDE ROAD signs SHALL NOT be used on the TERMINATING LEG of a T-intersection to warn of activities on the CONTINUING LEG of the T-intersection
+- CORRECT ALTERNATIVE at T-intersection terminating leg:
+  - Use ROAD WORK AHEAD (TM1-1A or TM1-1C) OR ROAD PLANT AHEAD (TM1-3-1A or TM1-3-2C)
+  - WITH a direction arrow (TM5-8B)
+- NOTE: The standard MMS Lane Status panel TM10-1A may be used with or without the ON SIDE ROAD message where the long arrow TM5-8B is not suitable
+
+RESTRICTION — IMPACT ON THROUGH ROAD (Queensland addition):
+- ROADWORK ON SIDE ROAD sign SHALL NOT be used where there is an IMPACT FOR TRAFFIC ON THE THROUGH ROAD
+- Impacts on the through road include (but not limited to):
+  - Need for reduced speed zones
+  - Additional delineation
+  - Changes to alignment or surface condition
+  - Use of traffic control
+  - Traffic queueing which extends onto the through road
+- Where there ARE impacts on the through road: the ROADWORK AHEAD sign (Clause 4.6.2) SHOULD be used instead
+
+ON SIDE ROAD MESSAGE USAGE RULE:
+- ON SIDE ROAD message MAY be used to warn of activity on ANOTHER ROAD which intersects with the road being travelled (includes cross intersections and roundabouts)
+- EXCLUDES: the through/straight direction even if it is technically another road
+- ON SIDE ROAD message SHALL NOT be used when travelling on the TERMINATING LEG of a T-intersection to warn of activity on the continuing leg
+
+REFER TO FIGURE 4.6.7 for permitted and prohibited approaches.
+
+VISUAL INDICATORS:
+- ROADWORK ON SIDE ROAD sign used on the terminating leg of a T-intersection to warn of works on the continuing leg = serious non-compliance
+- ROADWORK ON SIDE ROAD sign used where works impact the through road (e.g. queue extends onto through road, speed zone required) = non-compliance
+- ON SIDE ROAD message used for the straight-through direction = non-compliance
+- T-intersection with works on continuing leg not using TM1-1A/C + TM5-8B = non-compliance
+
+---
+
+CHUNK 13: SIDE ROAD CLOSED Sign — T1-32, TM1-32
+Section: Clause 4.6.9 (Accepted, with amendments)
+Topic: Correct use of SIDE ROAD CLOSED sign; prohibition at T-intersections
+
+RESTRICTION — T-INTERSECTIONS (replaces AS 1742.3-2019):
+- SIDE ROAD CLOSED sign SHALL NOT be used on the TERMINATING LEG of a T-intersection to indicate a closure on the CONTINUING LEG of the T-intersection
+- CORRECT ALTERNATIVE: use ROAD CLOSED AHEAD (TM1-43A or TM1-43C) WITH a direction arrow (TM5-8B)
+
+CORRECT USE:
+- SIDE ROAD CLOSED sign SHALL be used in advance of an intersection where the INTERSECTING ROAD is closed to all traffic
+
+VISUAL INDICATORS:
+- SIDE ROAD CLOSED sign used on terminating leg of a T-intersection to indicate closure on continuing leg = non-compliance
+- SIDE ROAD CLOSED sign absent at intersection where side road is closed to all traffic = non-compliance
+- T-intersection with closed continuing leg not using TM1-43A/C + TM5-8B = non-compliance
+
+---
+
+CHUNK 14: END ROADWORK Sign — T2-16, T2-17, TM2-17
+Section: Clause 4.6.10 (Accepted, with amendments)
+Topic: When END ROADWORK signs are mandatory; bridgework and road plant additions
+
+MANDATORY REQUIREMENT:
+- END ROADWORK sign SHALL be used whenever a ROADWORK AHEAD or ROADWORK NEXT X km sign is used on the approach to the work site
+- EXCEPTION: where the requirements of Clause 4.6.11 apply (see below)
+
+QUEENSLAND ADDITION — BRIDGEWORK:
+- END ROADWORK sign SHALL be used whenever a BRIDGEWORK AHEAD or BRIDGEWORK NEXT X km sign is used on the approach to the roadworks site
+
+QUEENSLAND ADDITION — ROAD PLANT:
+- END ROADWORK sign MAY be used whenever a ROAD PLANT AHEAD or GRADER AHEAD (with or without NEXT X km sign) is used on the approach to the roadworks site
+
+VISUAL INDICATORS:
+- ROADWORK AHEAD sign installed on approach but no END ROADWORK sign at exit (unless Clause 4.6.11 exception applies) = non-compliance
+- BRIDGEWORK AHEAD sign used without corresponding END ROADWORK sign = non-compliance
+- END ROADWORK sign absent at end of bridge construction zone = non-compliance
+
+---
+
+CHUNK 15: Advance Warning and Termination Signs — Complex Scenarios (Clause 4.6.11)
+Section: Clause 4.6.11 (NEW)
+Topic: Detailed rules for ROADWORK AHEAD, ROADWORK ON SIDE ROAD, and END ROADWORK signs in various road configurations
+
+SCENARIO A — ROADWORKS ON A SIDE ROAD WITH NO IMPACT ON THE THROUGH ROAD:
+- Use ROADWORK ON SIDE ROAD advance warning sign on the through road
+- END ROADWORK sign is NOT REQUIRED on the through road
+- EXCEPTION: if END ROADWORK sign cannot be installed prior to the end of the side road = then END ROADWORK sign SHALL be installed on the SIDE ROAD prior to exiting onto the through road
+- Refer to Figure 4.6.11(a)
+
+SCENARIO B — ROADWORKS ON A SIDE ROAD WHICH IMPACT THE THROUGH ROAD:
+- ROADWORK AHEAD and END ROADWORK signs SHALL be used on BOTH the through road AND the side road
+- Refer to Figure 4.6.11(b)
+
+SCENARIO C — ROADWORKS ON A 'NO THROUGH ROAD' OR 'CUL-DE-SAC':
+- END ROADWORK sign MAY be OMITTED on the departure side (travelling toward the terminating end) when ALL of the following apply:
+  - No intersections exist between the end of works and the terminating end of the road
+  - The end of the road or cul-de-sac is either VISIBLE FROM or within 500 m of the end of the work area
+- Refer to Figure 4.6.11(c)
+
+SCENARIO D — ROADWORKS ON A THROUGH ROAD WITH NO IMPACT ON A SIDE ROAD (within advance warning area):
+- ROADWORK AHEAD and END ROADWORK signs SHALL be installed on the THROUGH ROAD
+- ROADWORK AHEAD sign WITH A DIRECTION ARROW shall be installed on the side road
+- On the side road departing the through road before or after the work area: NO END ROADWORK sign required if works have no impact on the side road or intersection operation
+- An END ROADWORK sign MAY be installed on the side road if desired
+- Refer to Figure 4.6.11(d)
+
+SCENARIO E — ROADWORKS ON A THROUGH ROAD WHICH IMPACT A SIDE ROAD:
+- ROADWORK AHEAD and END ROADWORK signs SHALL be installed on BOTH the through road AND the side road
+- Refer to Figure 4.6.11(e)
+
+IMPACTS ON THROUGH/SIDE ROAD include (but not limited to):
+- Need for reduced speed zones
+- Additional delineation
+- Changes to alignment or surface condition
+- Use of traffic control
+- Traffic queueing which extends onto the road
+
+VISUAL INDICATORS:
+- Works on side road impacting through road (e.g. speed zone, queue) without ROADWORK AHEAD on through road = non-compliance (Scenario B, not A)
+- No END ROADWORK on side road when through road END ROADWORK is omitted and works exit onto through road = non-compliance
+- Cul-de-sac works with END ROADWORK omitted but end of road is more than 500 m from end of works AND has intersections in between = non-compliance
+- Through road works impacting side road without ROADWORK AHEAD + END ROADWORK on side road = non-compliance (Scenario E, not D)
+- Roadwork AHEAD on side road approach missing direction arrow = non-compliance (Scenario D)
+
+---
+
+CHUNK 16: Manual Traffic Control — STOP/SLOW Bat and LED Enhancement
+Section: Clause 4.7.2 (Accepted, with amendments — item e added)
+Topic: LED-enhanced STOP/SLOW bats; when they may be used; product approval requirements
+
+STANDARD STOP/SLOW BAT:
+- Used by Traffic Controllers (see Clause 1.3.19) for manual traffic control at roadworks
+- Standard format — used in normal conditions
+
+LED-ENHANCED STOP/SLOW BAT (Queensland addition — item e):
+- Sign numbers: R6-8-QO1 (STOP face) and T7-1-QO1 (SLOW face) on opposite faces of the bat
+- MAY be used where ENHANCED VISIBILITY is desirable:
+  - During NIGHT WORKS
+  - When weather conditions such as RAIN or FOG may limit effectiveness of standard bats
+- SHALL comprise R6-8-QO1 (STOP, red LEDs) on one face and T7-1-QO1 (SLOW, yellow LEDs) on the other face
+
+STATE-CONTROLLED ROADS — PRODUCT APPROVAL:
+- When used on STATE-CONTROLLED ROADS: LED-enhanced STOP/SLOW bats SHALL be as specified on Transport and Main Roads' Approved Products and Registered Suppliers list
+
+VISUAL INDICATORS:
+- LED STOP/SLOW bat used on a state-controlled road that is not on the TMR Approved Products and Registered Suppliers list = non-compliance
+- LED bat with incorrect sign numbers (not R6-8-QO1 / T7-1-QO1) = non-compliance
+- Standard (non-LED) bat in use during night works or in rain/fog where LED bat would significantly improve safety = flag for risk assessment
+
+---
+
+CHUNK 17: Sign-Controlled Single Lane Operation — GIVE WAY and ONE LANE Signs
+Section: Clause 4.7.3 (Accepted, with amendments)
+Topic: Queensland sign sizes for GIVE WAY and ONE LANE signs; traffic volume and lane length thresholds for sign control
+
+QUEENSLAND SIGN SIZES — GIVE WAY (replacing AS 1742.3-2019 table rows):
+- R1-2A: 750 ht
+- R1-2B: 900 ht
+- RM1-2-Q01A: 600 × 600 mm
+- RM1-2-Q01C: 1200 × 600 mm
+
+QUEENSLAND SIGN SIZES — ONE LANE (replacing AS 1742.3-2019 table rows):
+- R9-9A: 600 × 400 mm
+- R9-9B: 750 × 500 mm
+- RM9-9-Q01A: 600 × 600 mm
+- RM9-9-Q01B: 1200 × 600 mm (horizontal format)
+
+SIGN CONTROL — CONDITIONS FOR USE (replacing AS 1742.3-2019 — two specific changes):
+- Item (i): traffic volume is 150 VPH OR LESS (not 150 vpd) and traffic speed ≤70 km/h
+- Item (iii): single lane or shuttle flow segment is LESS THAN 120 m in length (not 100 m)
+
+(Sign control with GIVE WAY/ONE LANE signs is only appropriate when all listed conditions are met.)
+
+VISUAL INDICATORS:
+- Sign control (GIVE WAY / ONE LANE) used where traffic volume exceeds 150 vph = non-compliance; traffic control (manual or signal) required
+- Sign control used where single lane or shuttle flow segment is 120 m or longer = non-compliance
+- Sign control used where traffic speed is above 70 km/h = non-compliance
+- RM1-2 or RM9-9 panel used as a standalone sign (not in MMS frame) = non-compliance
+- Old sign number RM-2A or RM9-9A (from AS 1742.3-2019 table) used without Queensland MUTCD number verification = flag
+
+---
+
+CHUNK 18: Temporary Speed Limits — Sign Types and Requirements
+Section: Clause 4.7.6 (Accepted, with amendments)
+Topic: Queensland speed restriction sign sizes; END Speed Limit rules
+
+SPEED RESTRICTION SIGNS — QUEENSLAND SIZES (replacing AS 1742.3-2019 table row):
+- R4-1A: 450 × 600 mm
+- R4-1B: 600 × 800 mm
+- R4-1C: 900 × 1200 mm
+- R4-1D: 1200 × 1600 mm
+- RM4-1A: 600 × 600 mm
+- RM4-1-Q01: 1200 × 600 mm (Queensland addition — horizontal MMS format)
+
+END SPEED LIMIT — QUEENSLAND RULE (Clause 4.7.6(c) addition):
+- In Queensland where an END Speed Limit sign is used, the speed limit which applies following the sign is the DEFAULT SPEED LIMIT for that road environment:
+  - Built-up area: 50 km/h
+  - Road not in a built-up area: 100 km/h
+
+VISUAL INDICATORS:
+- RM4-1-Q01 speed restriction panel used as a standalone sign (not in MMS frame) = non-compliance
+- END Speed Limit sign used without the correct default speed limit applying beyond it = flag
+- Temporary speed zone that does not revert to the applicable default speed limit when END Speed Limit is used = non-compliance
+
+---
+
+CHUNK 19: Detour Signs — DETOUR, U-Turn Variants
+Section: Clause 4.8.3 (Accepted, with amendments)
+Topic: Queensland-specific detour signs including U-turn variants; conditions of use
+
+QUEENSLAND ADDITIONS — DETOUR U-TURN SIGNS (added to Table 4.3(C)):
+- TM5-1-Q01: DETOUR (U-Turn) — 1200 × 300 mm
+- TM5-1-Q02: Detour (U-Turn) Symbolic — 600 × 600 mm
+- TM5-1-Q03: U-TURN FACILITY AHEAD — 600 × 600 mm
+
+USAGE:
+- For detour routes that include a U-TURN REQUIREMENT: TM5-1-Q01, TM5-1-Q02, or TM5-1-Q03 signs MAY be used
+- TM5-1-Q02 (Detour U-Turn Symbolic) SHALL ONLY be used WITH A DETOUR PANEL (TM5-7A or TM5-7B)
+
+VISUAL INDICATORS:
+- TM5-1-Q02 U-Turn symbolic panel used without an accompanying DETOUR panel (TM5-7A or TM5-7B) = non-compliance
+- Construction detour requiring U-turn without any advance U-turn indication to road users = flag
+
+---
+
+CHUNK 20: Detour Marker — Placement in MMS Arrangements
+Section: Clause 4.8.4 (Accepted, with amendments)
+Topic: Arrow panel placement rules for detour markers in multi-message sign arrangements
+
+QUEENSLAND ADDITION — DETOUR MARKER (TM5-6A) ARROW PLACEMENT IN MMS:
+- For a STRAIGHT-AHEAD ARROW: locate the arrow panel CLOSEST TO TRAFFIC
+  - EXCEPTION: where other direction-related symbol panels (such as no right turn) are required in that location
+- For an ARROW INDICATING A TURN TO THE LEFT OR RIGHT: locate the arrow panel on the SIDE OF THE MMS ARRANGEMENT the arrow is directing towards
+
+VISUAL INDICATORS:
+- Detour marker with straight-ahead arrow not positioned closest to traffic in MMS (unless direction panel required there) = non-compliance
+- Detour marker with left/right arrow not on the side of the MMS the traffic is directed toward = non-compliance
+
+---
+
+CHUNK 21: Road Condition Signs — Repetition Interval and Speed Signs
+Section: Clause 4.9.1 (Accepted, with amendments)
+Topic: Repetition distance for road condition signs; mandatory speed sign reference
+
+SIGNS COVERED: Slippery (T3-3, TM3-3), SOFT EDGES (T3-6, TM3-6), ROUGH SURFACE (T3-7, TM3-7), Loose Stones (T3-9, TM3-9), GRAVEL ROAD (T3-13, TM3-13), LOOSE SURFACE (T3-14, TM3-14)
+
+REPETITION REQUIREMENT (replaces AS 1742.3-2019):
+- If hazardous conditions extend over a considerable length: signs MAY need to be repeated at regular intervals
+- MAXIMUM REPETITION INTERVAL: intervals SHOULD NOT EXCEED 500 m
+
+SUPPLEMENTARY SPEED SIGNS:
+- Advisory Speed signs (T3-16, TM3-16) OR Speed Restriction signs (R4-1, RM4-1) may be required in conjunction with road condition signs
+
+SPRAYED SEAL / RESEALING WORKS (Queensland addition):
+- Refer to Clause 3.4.2(b) for speed zones where loose material or stones are present or for new sprayed seal works where higher speeds may damage the new seal
+- Where work is carried out under MRTS11 Sprayed Bituminous Treatments (Excluding Emulsion) or other Technical Specifications requiring regulatory speed limits after resealing: the requirements of those Technical Specifications for speed limit signs SHALL apply
+
+VISUAL INDICATORS:
+- Road condition hazard extending more than 500 m without a repeated warning sign = non-compliance
+- Resealing works without speed limit signs as required by MRTS11 or relevant Technical Specification = non-compliance
+- Loose stones or gravel road condition without advisory speed or speed restriction sign = flag
+
+---
+
+CHUNK 22: Road Closure Signs — ROAD CLOSED and TM2-4A Addition
+Section: Clause 4.10.1 (Accepted, with amendments)
+Topic: Queensland ROAD CLOSED sign sizes; new TM2-4A variant; ROAD CLOSED AHEAD advance warning
+
+ROAD CLOSED SIGN SIZES — QUEENSLAND (replacing AS 1742.3-2019 table row):
+- T2-4: 1800 × 300 mm
+- TM2-4A: 600 × 600 mm (NEW Queensland addition — square MMS format)
+- TM2-4B: 1200 × 300 mm
+- TM2-4C: 1200 × 600 mm
+
+ADVANCE WARNING SIGNS FOR ROAD CLOSURE (Queensland addition):
+- ROAD CLOSED X km AHEAD (T2-4-Q02) OR ROAD CLOSED AHEAD (TM1-43A, TM1-43C) MAY be used in advance of a road closure
+- ROAD CLOSED X km AHEAD sign SHOULD NOT be used as a substitute for detour provisions (Clause 4.8)
+- It is an ADDITIONAL ADVANCE MEASURE to warn drivers of the upcoming closure
+- ROAD CLOSED X km AHEAD sign SHOULD be located X km ahead of the actual road closure point (where ROAD CLOSED signs are located)
+
+VISUAL INDICATORS:
+- Road closure without any ROAD CLOSED sign = serious non-compliance
+- Advance ROAD CLOSED X km AHEAD sign used without providing proper detour signs = non-compliance
+- TM2-4A or TM2-4B or TM2-4C panel used outside a multi-message frame = non-compliance
+
+---
+
+CHUNK 23: Traffic Cones and Temporary Bollards — Logo Restrictions
+Section: Clause 4.11.1 (Accepted, with amendments)
+Topic: Permitted use of logos and markings on cones and bollards
+
+QUEENSLAND ADDITION:
+- Logos and markings MAY be used on cones and bollards for IDENTITY PURPOSES
+- When used: logos/markings SHALL be LIMITED TO NON-RETROREFLECTIVE SURFACE AREAS of the device
+
+VISUAL INDICATORS:
+- Logos or markings applied to the retroreflective banding on traffic cones or bollards = non-compliance
+
+---
+
+CHUNK 24: Temporary Hazard Markers — Mounting and Types
+Section: Clause 4.11.3 (Accepted, with amendments)
+Topic: Placement and mounting height rules for temporary hazard markers; Queensland variants
+
+SIGNS COVERED: T5-4, T5-5, T5-7, TM5-5A
+
+PLACEMENT REQUIREMENT:
+- Temporary Hazard markers SHOULD be used to show lateral change of direction at roadworks and to delineate hazards and non-trafficable work areas adjacent to the travelled way
+- LATERAL CLEARANCE: should be erected with their edge about 1 METRE from the edge of the travelled path
+- CHEVRONS: should ALWAYS point to the SIDE TO WHICH TRAFFIC IS REQUIRED TO PASS
+
+MOUNTING HEIGHTS:
+- T5-4 and T5-5: SHOULD be mounted at about 1 METRE ABOVE the pavement
+- T5-7: designed to be mounted in 'weighted' temporary plastic or rubber support placed ON THE GROUND
+- TM5-5A: used in a MULTI-MESSAGE FRAME arrangement and mounted at the STANDARD HEIGHT FOR A MULTI-MESSAGE FRAME
+
+SUBSTITUTE SIGN — NARROW KEEP LEFT (R2-3-Q01):
+- The NARROW VERTICAL KEEP LEFT sign (R2-3-Q01) MAY be substituted for the T5-7 Temporary Hazard marker where a REGULATORY KEEP LEFT sign is more appropriate
+- Designed to be mounted in 'weighted' temporary plastic or rubber support (same as T5-7)
+
+VISUAL INDICATORS:
+- Temporary Hazard marker edge less than or greater than approximately 1 m from edge of travelled path = flag
+- Chevrons pointing to the wrong side (traffic passing wrong way) = serious safety non-compliance
+- T5-4 or T5-5 mounted significantly higher or lower than 1 m = flag
+- T5-7 not in weighted support (freestanding unsupported on ground) = non-compliance
+- TM5-5A used outside a multi-message frame = non-compliance
+
+---
+
+CHUNK 25: Temporary Kerbing
+Section: Clause 4.11.6 (Accepted, with amendments)
+Topic: Use of temporary kerbs at roadworks; delineator requirements
+
+TEMPORARY KERBING — QUEENSLAND REQUIREMENTS:
+- Temporary kerbs may be used at roadworks sites as a means of NARROWING TRAFFIC LANES
+- Installation of a kerb CHANGES THE ENVIRONMENT sufficiently to reduce vehicle speed
+- Kerbs SHOULD be RUN-OVER TYPE so that, in the event of an errant vehicle mounting the kerb, the driver can control the vehicle
+
+DELINEATORS WITH TEMPORARY KERBS:
+- Delineators MAY be installed with temporary kerbs to guide traffic through the roadwork zone
+- Where delineators are used: SHALL be BLACK AND YELLOW in colour
+- ALIGNMENT: bars shall be aligned to point DOWN TO THE LEFT if vehicles are to pass to the LEFT
+- ALIGNMENT: bars shall be aligned to point TO THE RIGHT if vehicles are to pass to the RIGHT of the kerb
+
+VISUAL INDICATORS:
+- Temporary kerb that is not run-over type (rigid, non-deflecting) in a location where vehicle control after mounting is required = flag
+- Delineators on temporary kerb not black and yellow = non-compliance
+- Delineator bars pointing in the wrong direction relative to the direction of traffic passing = non-compliance
+
+---
+
+CHUNK 26: Road Safety Barrier Systems — Accepted Products Only
+Section: Clause 4.12.3 (Accepted, with amendments)
+Topic: Restriction on road safety barriers at roadworks — TMR accepted products only
+
+QUEENSLAND REQUIREMENT:
+- Only road safety barriers included on the CURRENT LIST OF ACCEPTED PRODUCTS in the Transport and Main Roads Accepted Road Safety Systems and Devices document SHALL be used at roadworks sites in Queensland
+
+VISUAL INDICATORS:
+- Road safety barrier at a roadworks site that does not appear on the TMR Accepted Road Safety Systems and Devices list = serious non-compliance
+- Barrier type not matching the approved installation specifications for that product = non-compliance
+
+---
+
+CHUNK 27: Vehicle-Mounted Warning Devices — Three Arrangement Types
+Section: Clause 4.14.1 (Accepted, with amendments — entire clause replaced)
+Topic: Mandatory configurations for vehicle-mounted warning devices; sight distance requirements
+
+VEHICLE-MOUNTED WARNING DEVICE (VMWD) — THREE ARRANGEMENTS:
+
+ARRANGEMENT 1 — SINGLE FLASHING YELLOW LAMP OR LED LIGHT ASSEMBLY:
+- Use conditions:
+  - For EMERGENCY or other INFREQUENT use on a vehicle not normally used for roadworks or inspection purposes
+  - For use on PLANT ITEMS working within a STATIC WORK AREA
+
+ARRANGEMENT 2 — PAIR OF FLASHING YELLOW LAMPS OR LED LIGHT ASSEMBLIES (placed as far apart as practical):
+- Use conditions:
+  - For use on VEHICLES ON ALL ROADS WITHOUT THE PROTECTION of a static roadworks site
+  - Positioned so that AT LEAST ONE (and preferably both) lamps are visible to all road users from ANY DIRECTION
+  - ADDITIONAL flashing yellow lamps/LED assemblies MAY be added to ensure visibility in all directions
+
+ARRANGEMENT 3 — ILLUMINATED FLASHING ARROW SIGN (see Clause 4.14.2):
+- For ANY situation where options 1 or 2 are NOT appropriate
+- MAY be used for any type of work including mobile works
+- MAY be used in COMBINATION with Arrangements 1 or 2
+- Supplementary signs (static or VMS) may be mounted with or elsewhere on the vehicle
+- The illuminated flashing arrow sign MUST be capable of being REMOVED FROM VIEW (e.g. covering, folding down, or turning off) when NOT NEEDED
+
+MOUNTING REQUIREMENTS:
+- SHALL be mounted as HIGH AS PRACTICABLE on the vehicle for best visibility (e.g. on top of cab of truck)
+- If cab-mounted sign could be obscured by load: may be placed near rear of vehicle
+- Signs mounted on device or elsewhere on vehicle: SHALL be capable of being removed from view when not needed
+
+MINIMUM SIGHT DISTANCE to VMWD (if not specified elsewhere):
+- Speed of 60 km/h or less: minimum sight distance = 150 m
+- Speed more than 60 km/h: minimum sight distance = 250 m
+
+TRANSITION PERIOD — INSPECTION VEHICLES:
+- Inspection vehicles (other than emergency/infrequent use) SHALL comply with Arrangement 2 (pair of flashing lamps) by 31 JULY 2027
+
+VISUAL INDICATORS:
+- Vehicle on open road without protection of a static work area with only a single flashing lamp = non-compliance (Arrangement 2 required)
+- Vehicle-mounted flashing arrow sign that cannot be turned off, covered or folded when not in use = non-compliance
+- VMWD mounted at low point on vehicle (not as high as practicable) = flag
+- Sight distance to VMWD less than 150 m at ≤60 km/h zone = non-compliance
+- Sight distance to VMWD less than 250 m at >60 km/h zone = non-compliance
+- Inspection vehicle on state-controlled road after 31 July 2027 with single flashing lamp only = non-compliance
+
+---
+
+CHUNK 28: Signs and Devices for Managing Pedestrians
+Section: Clause 4.17 (Accepted, with amendments)
+Topic: Queensland FOOTPATH CLOSED sign sizes including new TM8-4C
+
+FOOTPATH CLOSED SIGNS — QUEENSLAND SIZES (replacing AS 1742.3-2019 table row):
+- T8-4: 900 × 600 mm
+- TM8-4A: 600 × 600 mm
+- TM8-4C: 1200 × 600 mm (NEW Queensland addition — horizontal wide format)
+
+VISUAL INDICATORS:
+- Footpath closed at a construction site without a FOOTPATH CLOSED sign = non-compliance
+- TM8-4A or TM8-4C panel used outside a multi-message frame = non-compliance
+- Pedestrian pathway closed without alternative access or direction signs = flag for review
+
+---
+
+CHUNK 29: Variable Message Signs — Alternating Screen Timing
+Section: Clause 4.22.3 (Accepted, with amendments)
+Topic: Technical requirement for alternating screen 'on' time in VMS at roadworks
+
+QUEENSLAND TECHNICAL CHANGE (replaces AS 1742.3-2019):
+- Where alternating screens are used: the 'on' time of each screen SHALL be (0.6 ± 0.1) s per word or number
+- The TOTAL TIME to read the message on BOTH screens shall be taken into account when determining message length and letter height
+- Letter height calculation: use the AS 1742.2 procedure; apply the letter series most nearly matching the on-screen font; it is recommended the calculated letter height be DOUBLED for this purpose
+
+VISUAL INDICATORS:
+- VMS at roadworks with alternating screens where per-word display time is outside the (0.6 ± 0.1) s range = non-compliance
+- VMS message length that cannot be read within the available display cycle = non-compliance
+
+---
+
+CHUNK 30: Supplementary Speed-Reduction Devices at Roadworks
+Section: Clause 4.23 (NEW)
+Topic: Additional devices permitted to reduce speed at roadworks; informational reference
+
+SUPPLEMENTARY TRAFFIC CONTROL DEVICES FOR SPEED REDUCTION — permitted at roadworks:
+(a) Speed indicator devices
+(b) Rumble strips / rumble mats
+(c) UHF radio broadcasts
+(d) Temporary portable speed humps
+
+REFERENCE: Guideline — Traffic Management at Works on Roads (TMR publication)
+
+VISUAL INDICATORS:
+- Speed-reduction device in use at roadworks not in the above approved categories = flag for TMR approval check
+- Rumble strips/mats at roadworks not in accordance with QGTTM Part 3 Clause 5.5.3 = flag
+
+---
+
+CHUNK 31: Electronic Signs at Roadworks — Display Rules
+Section: Clause 4.24 (NEW)
+Topic: Requirements for electronic signs substituting for static signs at roadworks; colour and display principles
+
+ELECTRONIC SIGNS — GENERAL:
+- Electronic signs MAY be substituted for static signs
+- Electronic variable speed limit signs: SHALL comply with AS 5156 Electronic Speed Limit Signs
+- Variable message signs: SHALL comply with MRTS229 Electronic Traffic Control Signs AND MRTS262 Temporary Variable Message Signs (as appropriate)
+
+DISPLAY PRINCIPLES — all electronic signs SHALL comply with:
+(a) Symbols/signs shown in the REVERSED COLOUR SCHEME to the appropriate static sign
+(b) Legends also shown in REVERSED COLOUR SCHEME to the appropriate static sign:
+  - RED text: ONLY for PREPARE TO STOP or REDUCE SPEED messages
+  - ORANGE text: for LINE MARKERS AHEAD message
+  - YELLOW text: for LINE MARKING AHEAD message
+(c) Annulus on a speed limit sign: SHALL be RED with speed limit in WHITE legend
+(d) YELLOW: the ONLY colour legend for electronic signs displaying GENERAL ROADWORK MESSAGES
+(e) Where TC sign drawings note compliance with MRTS documents: compliance with those MRTS documents is required
+
+EXAMPLES of approved electronic sign types: R4-1, T1-Q26_1/2/3, T2-4-Q03, R2-4, TM1-46-Q01_1/2, R2-6(L/R), W8-15(L/R), R2-5, TM10-3A/5A/7A/9A, T1-5, TM1-5A, TM1-Q01_1, T1-18, T1-34, TM1-34A, TM1-40-Q01_1, TM1-40A, R4-12, G9-79
+
+VISUAL INDICATORS:
+- Electronic roadwork sign not in reversed colour scheme = non-compliance
+- Electronic sign displaying PREPARE TO STOP or REDUCE SPEED in colour other than red = non-compliance
+- Electronic sign displaying general roadwork message in any colour other than yellow = non-compliance
+- Electronic speed limit sign with annulus not in red or speed not in white = non-compliance
+- Electronic VMS at roadworks not complying with MRTS229 or MRTS262 = non-compliance
+- LINE MARKERS AHEAD displayed in yellow instead of orange = non-compliance
+- LINE MARKING AHEAD displayed in orange instead of yellow = non-compliance
+
+---
+
+CHUNK 32: Changeable Message Signs at Roadworks
+Section: Clause 4.25 (NEW)
+Topic: Queensland requirements for transportable changeable message signs; permitted use and standard
+
+CHANGEABLE MESSAGE SIGNS:
+- MAY be used to remotely change the display of static signs as an ALTERNATIVE to full electronic displays
+- Use a remote-operated, MECHANICAL CHANGE SYSTEM
+- Can display up to a MAXIMUM OF THREE PRE-SET messages on the one sign face
+- Individual sign faces split into a series of VERTICAL PRISMS (three-sided) which mechanically rotate to show up to three different sign arrangements
+
+COMPLIANCE REQUIREMENT:
+- Changeable message signs SHALL comply with Main Roads Technical Specification MRTS249 Transportable Changeable Message Signs
+
+VISUAL INDICATORS:
+- Changeable message sign at roadworks not complying with MRTS249 = non-compliance
+- Changeable message sign displaying more than three pre-set messages = non-compliance
+
+---
+
+CHUNK 33: Additional Multi-Message Sign Panels — Queensland-Specific (Appendix A Table A.1)
+Section: Appendix A, Table A.1 (Accepted, with amendments)
+Topic: Queensland-specific MMS panels that replace or modify those in AS 1742.3-2019
+
+SURVEYORS AHEAD (TM1-37C) — 1200 × 600 mm:
+- MAY be used for surveying works in lieu of Workers (symbolic) (T1-5, TM1-5A or TM1-5C)
+
+ROAD PLANT ON SIDE ROAD (TM1-48C) — 1200 × 600 mm:
+- Same as TM1-27C; refer to Clause 4.6.7 requirements
+
+DO NOT OVERTAKE (GM9-90B) — 1200 × 300 mm:
+- MAY be used in conjunction with another panel above describing why overtaking is prohibited
+- SHALL ONLY be used where overtaking is or was possible (or may be attempted), but due to a change in conditions is no longer possible or safe
+
+SURVEYORS (TM2-35B) — 1200 × 300 mm:
+- MAY be used for surveying works in lieu of Workers (symbolic)
+
+SIDE ROAD CLOSED (TM2-43A) — 600 × 600 mm:
+- Refer to Clause 4.6.9 requirements
+
+WATER OVER ROAD (TM3-21A) — 600 × 600 mm:
+- SHALL ONLY be used to indicate that road is trafficable with care although there is water over the road
+
+HORIZONTAL ARROW (TM5-8B) — 1200 × 300 mm:
+- SHALL NOT be used with a regulatory sign
+- MAY be used with ON SIDE ROAD panel to indicate direction of side road where roadwork is occurring
+- MAY be used with other relevant panels (excluding regulatory panels) to indicate a direction
+- On through road: SHOULD be used with ON SIDE ROAD message
+- On side road to warn of activities on through road: ON SIDE ROAD message SHALL NOT be used
+
+ON SIDE ROAD (TM5-9A — 600 × 600 mm; TM5-9B — 1200 × 300 mm):
+- MAY be used in advance of an intersection where insufficient distance on the other road from intersection to start of works for turning traffic to be given adequate warning
+- SHALL NOT be used with a regulatory sign
+- SHALL NOT be used with the Detour marker (TM5-6A); preferred arrow is TM5-8B
+- SHALL NOT be used on the terminating leg of a T-intersection to warn of activities on the continuing leg
+- In Queensland: 600 × 600 arrow (TM10-1A) MAY be used if TM5-8B arrow is not suitable
+
+ON SIDE ROAD L/R (TM5-10B(L) and TM5-10B(R)) — 1200 × 300 mm:
+- MAY be used in advance of an intersection where insufficient warning distance on the other road
+- SHALL NOT be used with a regulatory sign
+- SHALL NOT be used on terminating leg of T-intersection to warn of activities on continuing leg
+
+EVENT ON SIDE ROAD (TM9-4C-Q01) — 1200 × 600 mm:
+- Used in advance of an intersection to warn of an event on another road where insufficient distance for turning traffic warning
+- SHOULD be used with TM5-8B to indicate direction of side road
+- SHALL NOT be used on terminating leg of T-intersection
+
+EVENT ON SIDE ROAD L/R (TM9-5B(L) and TM9-5B(R)) — 1200 × 300 mm:
+- Similar to above for events
+- SHALL NOT be used with regulatory sign
+- SHALL NOT be used on terminating leg of T-intersection
+
+VISUAL INDICATORS:
+- TM5-8B Horizontal Arrow used with a regulatory sign = non-compliance
+- TM5-9A/9B ON SIDE ROAD used with a regulatory sign = non-compliance
+- TM5-9A/9B ON SIDE ROAD used with a Detour marker (TM5-6A) = non-compliance
+- ON SIDE ROAD message used on side road to warn of activities on through road (not the through road warning of side road works) = non-compliance
+- GM9-90B DO NOT OVERTAKE used without an explanatory panel above it = non-compliance
+- GM9-90B used where overtaking was never possible = non-compliance
+- TM5-8B used on side road to warn of through road activities WITH ON SIDE ROAD message = non-compliance
+- Any of the above MMS panels used outside a multi-message frame as standalone signs = non-compliance
+
+---
+
+CHUNK 34: Additional Multi-Message Sign Panels — Queensland-Specific (Appendix A Table A.2) — Regulatory
+Section: Appendix A, Table A.2 (Addition)
+Topic: Queensland-approved MMS panels not in AS 1742.3-2019 — regulatory category
+
+GIVE WAY (RM1-2-Q01A — 600 × 600 mm; RM1-2-Q01C — 1200 × 600 mm):
+- Queensland variants of GIVE WAY for use in MMS frames
+
+TUNNEL CLOSED (TM2-4-Q02A — 600 × 600 mm; TM2-4-Q02B — 1200 × 300 mm; TM2-4-Q02C — 1200 × 600 mm):
+- Three sizes available
+
+SPEED LIMIT (RM4-1-Q01 — 1200 × 600 mm):
+- Horizontal MMS format speed restriction panel
+- Examples: used with REDUCE SPEED panel in MMS
+
+LOAD INFORMATION PANELS (RM6-Q01_1 and RM6-Q01_2 — 1200 × 300 mm):
+- See Clause 4.2.8
+
+FOUR WHEEL DRIVE VEHICLES EXCEPTED (RM7-Q01 — 1200 × 300 mm):
+- Refer to Q-series sign notes
+
+AT ... (STREET/ROAD NAME) (GM-91-Q01 — 1200 × 300 mm):
+- MAY ONLY be used on advance warning signs to advise of regulatory controls on intersecting streets/roads
+
+GROSS LOAD LIMIT (RM6-Q03_1 — 600 × 600 mm):
+- See Clause 4.2.8 and Q-series sign notes
+
+MAXIMUM PENALTY 200 PENALTY UNITS (RM6-Q02 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+LOCAL TRAFFIC EXCEPTED (RM9-Q01_A — 600 × 600 mm; RM9-Q01_B — 1200 × 300 mm):
+- See Clause 4.8.10 and Q-series sign notes
+
+LOCAL ACCESS PERMITS EXCEPTED (GM9-40-2-Q02 — 1200 × 300 mm):
+- Refer to Q-series sign notes
+
+END Speed Limit (RM4-12-Q01 — 600 × 600 mm):
+- See Clause 4.7.6(c) and Q-series sign notes
+
+WORK VEHICLES EXCEPTED (TM2-Q10 — 1200 × 300 mm):
+- For use in construction contexts where work vehicles are excepted from a restriction
+
+ONE LANE (RM9-9-Q01A — 600 × 600 mm; RM9-9-Q01B — 1200 × 300 mm):
+- Queensland ONE LANE MMS panels
+
+VISUAL INDICATORS:
+- Any of these MMS panels used outside a multi-message frame = non-compliance
+- GM-91-Q01 AT [STREET NAME] used on signs other than advance warning signs = non-compliance
+
+---
+
+CHUNK 35: Additional Multi-Message Sign Panels — Queensland-Specific (Appendix A Table A.2) — Advance Warning
+Section: Appendix A, Table A.2 (Addition — Advance category)
+Topic: Queensland-approved advance warning MMS panels; conditions of use
+
+BUILDING WORK AHEAD (TM1-1-Q01A — 600 × 600 mm; TM1-1-Q01C — 1200 × 600 mm):
+- MAY be used where construction activities are on PRIVATE PROPERTY next to a road AND the activities may impact on the operation of the road
+- Appropriate for construction sites adjacent to roads where building works cause road impacts
+
+LINE MARKERS AHEAD (TM1-40-Q01_1 — 600 × 600 mm):
+- MAY be used where line markers are ON FOOT, in lieu of Workers (symbolic) (T1-5 or TM1-5A or TM1-5C)
+- See T1-Q08 in Appendix C
+
+SURVEYORS AHEAD (TM1-37-Q01 — 600 × 600 mm):
+- MAY be used for surveying works in lieu of Workers (symbolic)
+
+TUNNEL CLOSED AHEAD (TM1-43-Q01A — 600 × 600 mm; TM1-43-Q01C — 1200 × 600 mm):
+- Advance warning for tunnel closure
+
+REDUCE SPEED (TM1-Q01_1 — 600 × 600 mm; TM1-Q01_2 — 1200 × 300 mm):
+- SHALL ONLY be used to supplement:
+  - A Speed Restriction sign at the START of a reduced speed limit (temporary or permanent), OR
+  - The FIRST Speed Restriction sign on APPROACH to works (which may be a repeater speed restriction sign for the permanent zone), OR
+  - A Speed Limit AHEAD sign
+
+TRUCKS (TM2-25-Q01C — 1200 × 600 mm):
+- Trucks warning panel for MMS use
+
+TRACTOR/SLASHER MOWING (TM2-30-Q01A — 600 × 600 mm; TM2-30-Q01C — 1200 × 600 mm):
+- Refer to QGTTM Part 5 Clause 5 and Q-series sign notes
+
+RUMBLE STRIPS AHEAD (TM1-Q02 — 600 × 600 mm):
+- Refer to QGTTM Part 3 Clause 5.5.3 and Q-series sign notes
+
+Speed Limit AHEAD (GM9-79-Q01 — 600 × 600 mm):
+- See Clause 4.7.6(d) and Q-series sign notes
+
+PROBABLE DELAY 15 MIN (TM1-Q03 — 600 × 600 mm):
+- Used to inform motorists of probable delay
+- For delays greater than 15 minutes: refer to QGTTM Part 3 Section 3.4 requirements
+
+RAMP SPEED (RM4-Q01 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+Merging Traffic L/R (TM2-Q01(L) and TM2-Q01(R) — 600 × 600 mm each):
+- Refer to Q-series sign notes
+
+CROSSING ROAD AHEAD (TM1-Q04 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+Deep Edge Drop symbolic (TM3-25-Q01 — 600 × 600 mm):
+- SHALL be used to give warning of a DEEP DROP OR EXCAVATION adjacent to the travelled path
+- SHOULD be used with TM3-25A
+
+Shoulder Drop Off symbolic (TM3-Q01_2 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+ELECTRIC WIRES DOWN (TM4-Q01 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+VISUAL INDICATORS:
+- REDUCE SPEED panel used without being accompanied by a speed restriction sign or speed limit ahead sign = non-compliance
+- Deep Edge Drop sign (TM3-25-Q01) not paired with TM3-25A = flag
+- BUILDING WORK AHEAD sign used where construction activities are on the road (not on private property adjacent to road) = flag; use ROADWORK AHEAD instead
+- PROBABLE DELAY 15 MIN used where delays exceed 15 minutes without also complying with QGTTM Part 3 Section 3.4 = non-compliance
+
+---
+
+CHUNK 36: Additional MMS Panels — Position / Lane Status / Queue Management
+Section: Appendix A, Table A.2 (Addition — Position and queue categories)
+Topic: Queensland lane status and queue management MMS panels
+
+TEMPORARY HAZARD MARKER (TM5-5A — 600 × 600 mm):
+- Chevron hazard marker panel for MMS frame use
+- See sign design notes for details
+
+DETOUR U-TURN (TM5-1-Q01 — 1200 × 300 mm):
+- See Clause 4.8.3
+
+Detour U-Turn Symbolic (TM5-1-Q02 — 600 × 600 mm):
+- SHALL ONLY be used with a DETOUR panel (TM5-7A or TM5-7B)
+
+U-TURN FACILITY AHEAD (TM5-1-Q03 — 600 × 600 mm):
+- See Clause 4.8.3
+
+Lateral Shift Marker (TM8-Q01 — 1200 × 300 mm):
+- See Clause 4.11.3 and Q-series sign notes
+
+LAND SLIP (TM3-Q02 — 1200 × 300 mm):
+- MAY be used to give advance warning of a land slip
+
+SIGNALS UNDER REPAIR (TM2-50-Q01 — 1200 × 300 mm):
+- Refer to Q-series sign notes
+
+Direction Arrow (Use TM10-1A — 600 × 600 mm):
+- The standard MMS Lane Status panel TM10-1A MAY be used to indicate a direction where required
+- MAY be used with ON SIDE ROAD message where TM5-8B arrow is not suitable
+- SHALL NOT be used to indicate direction for a DETOUR (use Detour marker TM5-6A instead)
+
+DRIVE SLOWLY (TM2-Q09 — 1200 × 300 mm):
+- Refer to Q-series sign notes
+
+TREE WORK (TM2-Q13 — 1200 × 300 mm):
+- For tree work operations
+
+TURN ON HAZARD LIGHTS WHEN QUEUED (TC2362_1 — 1200 × 600 mm):
+- Refer to TC sign notes
+
+TURN OFF HAZARD LIGHTS (TC2362_2 — 1200 × 600 mm):
+- Refer to TC sign notes
+
+SITE ACCESS ONLY (TM2-Q11 — 600 × 600 mm):
+- For construction site access control
+
+EXIT / EXIT No / DIRECTION ARROW (TM2-Q12 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+Lane Status Panels (TM10-Q01_4, TM10-Q01_5, TM10-Q01_7, TM10-Q01_8 — 600 × 600 mm each):
+- See Clause 4.10.1(b) and Q-series sign notes
+
+WHEN QUEUING USE BOTH LANES (TM2-Q04 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+MERGE IN TURN (TM2-Q05A — 600 × 600 mm; TM2-Q05B — 1200 × 300 mm):
+- Refer to Q-series sign notes
+
+VISUAL INDICATORS:
+- TM10-1A direction arrow used to indicate detour direction (instead of TM5-6A Detour marker) = non-compliance
+- TM5-1-Q02 Detour U-Turn Symbolic used without a DETOUR panel = non-compliance
+
+---
+
+CHUNK 37: Pedestrian and Cyclist MMS Panels
+Section: Appendix A, Table A.2 (Addition — Pedestrian and cyclists category)
+Topic: Queensland pedestrian and cyclist MMS panels for roadworks
+
+PEDESTRIANS LEFT/RIGHT Symbolic (TM8-Q02(R) and TM8-Q02(L) — 600 × 600 mm each):
+- See Clause 4.17(b)
+
+SHARE THE ROAD ≤60 km/h Symbolic (TM8-Q03_1 — 600 × 600 mm; TM8-Q03_2 — 1200 × 600 mm):
+- For speed zones of 60 km/h or less
+- Refer to Q-series sign notes
+
+SHARE THE ROAD >60 km/h Symbolic (TM8-Q04_1 — 600 × 600 mm; TM8-Q04_2 — 1200 × 600 mm):
+- For speed zones greater than 60 km/h
+- Refer to Q-series sign notes
+
+SHARE THE ROAD (text) (TM8-Q05_1 — 600 × 600 mm; TM8-Q05_2 — 1200 × 300 mm):
+- Refer to Q-series sign notes
+
+DO NOT OVERTAKE UNLESS SAFE (TM3-12-Q01 — 1200 × 600 mm):
+- Refer to Q-series sign notes
+
+VISUAL INDICATORS:
+- SHARE THE ROAD sign (≤60 km/h version) used on road with speed zone greater than 60 km/h = wrong sign, non-compliance
+- SHARE THE ROAD sign (>60 km/h version) used on road with speed zone of 60 km/h or less = wrong sign, flag
+
+---
+
+CHUNK 38: Road Condition and Termination MMS Panels
+Section: Appendix A, Table A.2 (Addition — Road condition and termination categories)
+Topic: Queensland road condition and termination MMS panels for roadworks
+
+POTHOLES AHEAD Symbolic (TM3-Q03 — 600 × 600 mm):
+- See Clause 4.9.1
+
+Slippery — OIL (TM3-3-Q01 — 600 × 600 mm):
+- See Clause 4.9.1 and Q-series sign notes
+
+WET TAR (TM3-20-Q01 — 600 × 600 mm):
+- See Clause 4.9.1
+
+WATER OVER ROAD (TM3-21-Q01 — 1200 × 300 mm):
+- SHALL ONLY be used to indicate that road is trafficable with care although there is water over the road
+
+DAMAGED ROAD (TM3-Q04 — 1200 × 300 mm):
+- See Clause 4.9.1
+
+RUMBLE STRIPS (TM2-Q02 — 600 × 600 mm):
+- Refer to QGTTM Part 3 Clause 5.5.3 and Q-series sign notes
+
+END FIRE FIGHTING (TM4-Q02_2 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+END LOAD LIMIT (RM6-Q03_2 — 600 × 600 mm):
+- SHALL be used to indicate the end of a vehicle load limit
+- See Clause 4.2.8 and Q-series sign notes
+
+DRIVE SAFELY (TM2-Q06 — 1200 × 300 mm):
+- SHALL ONLY be used with END ROADWORK, END DETOUR or END EVENT panels, in place of a yellow blank panel
+
+VISUAL INDICATORS:
+- DRIVE SAFELY panel used with any sign other than END ROADWORK, END DETOUR or END EVENT = non-compliance
+- DRIVE SAFELY used as a standalone sign or as a primary message = non-compliance
+- END LOAD LIMIT sign missing at end of a load-restricted zone = non-compliance
+- WATER OVER ROAD sign used to indicate a road that is not trafficable = non-compliance; ROAD CLOSED required instead
+
+---
+
+CHUNK 39: Incident, Fire, Emergency and Enforcement MMS Panels
+Section: Appendix A, Table A.2 (Addition — Incident, fire, emergency and enforcement categories)
+Topic: Queensland emergency and enforcement MMS panels for roadworks
+
+FIRE FIGHTERS AHEAD (TM4-Q02_1 — 1200 × 600 mm):
+- MAY be used in advance of a firefighting activity
+
+ROADWORK SPEED LIMITS ARE ENFORCED (TC2361C — 1200 × 600 mm):
+- Refer to TC sign notes and QGTTM Part 3 Section 5.5.4
+
+Camera Symbolic (TC2361B — 1200 × 300 mm):
+- SHALL ONLY be used with TC2361C (ROADWORK SPEED LIMITS ARE ENFORCED) — not standalone
+
+Orange Target Board to MMS Frame (TC2365 — 1400 × 1100 mm):
+- A 100 mm-wide fluorescent orange border MAY be added to a multi-message frame
+
+OVERSIZED Farm Machinery (TM2-45-Q01 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+POLICE CONTROL AHEAD (TM1-Q05 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+DRIVER BEHAVIOUR MONITORING (TM2-Q07_1 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+Monitoring Camera Symbolic (TM2-Q07_2 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+Wandering Animals (Cow–Sheep) Symbolic (TM1-50-Q01_1 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+Wandering Animals (Horse) Symbolic (TM1-50-Q01_2 — 600 × 600 mm):
+- Refer to Q-series sign notes
+
+KEEP INTERSECTION CLEAR (TM2-Q08 — 1200 × 600 mm):
+- For use at roadworks where intersection blockage is a risk
+
+VISUAL INDICATORS:
+- TC2361B Camera symbolic sign used without being paired with TC2361C (ROADWORK SPEED LIMITS ARE ENFORCED) = non-compliance
+- Orange target board border (TC2365) wider than 100 mm = non-compliance
+
+---
+
+CHUNK 40: Event MMS Panels (Appendix A Table A.2 — Event category)
+Section: Appendix A, Table A.2 (Addition — Event category)
+Topic: Queensland event traffic management MMS panels
+
+NOTE: These panels are for event traffic management, not typical construction roadworks. Included for completeness as construction projects may occur alongside or adjacent to events.
+
+EVENT AHEAD (ETM01_2 — 1200 × 600 mm): Clause 3.2.2
+EVENT IN PROGRESS (ETM02_2 — 1200 × 600 mm): Clause 3.2.3
+END EVENT (ETM03_2 — 1200 × 600 mm): Clause 3.2.4
+Cyclists Racing Symbolic (ETM04_1 — 600 × 600 mm; ETM04_2 — 1200 × 600 mm): Clause 3.2.5
+Cyclists Riding Symbolic (ETM05_1 — 600 × 600 mm; ETM05_2 — 1200 × 600 mm): Clause 3.2.6
+Share The Road ≤60 km/h Symbolic (ETM06_1 — 600 × 600 mm; ETM06_2 — 1200 × 600 mm): Clause 3.2.7
+Runners Symbolic (ETM07_1 — 600 × 600 mm; ETM07_2 — 1200 × 600 mm): Clause 3.2.8
+Walkers Symbolic (ETM08_1 — 600 × 600 mm; ETM08_2 — 1200 × 600 mm): Clause 3.2.9
+Share The Road >60 km/h Symbolic (ETM09_1 — 600 × 600 mm; ETM09_2 — 1200 × 600 mm): Clause 3.2.7
+NEXT ... km (ETM10_1 — 600 × 600 mm; ETM10_2 — 1200 × 600 mm): Clause 3.2.10
+CYCLING EVENT (ETM11_1 — 1200 × 600 mm; ETM11_2 — 1200 × 300 mm): Clause 3.2.11
+CYCLISTS AHEAD (ETM12_1 — 1200 × 300 mm): Clause 3.2.12
+CYCLISTS FOLLOWING (ETM12_2 — 1200 × 300 mm): Clause 3.2.12
+SHARE THE ROAD (ETM13_1 — 600 × 600 mm; ETM13_2 — 1200 × 300 mm): Clause 3.2.7
+EVENT Parking (ETM15 — 600 × 600 mm):
+- MAY be used with Direction Arrow (TM10-1A) or long arrow (TM5-8B) to indicate direction to Event Parking
+- The direction arrow SHALL NOT point toward the Parking symbol
+
+VISUAL INDICATORS:
+- EVENT Parking direction arrow pointing toward the parking symbol = non-compliance
+- Event MMS panels used at a standard construction roadworks site (not an event) without appropriate TTM context = flag for review
+
+---
+
+CHUNK 41: Supplementary List of Temporary Roadworks Signs — Appendix C
+Section: Appendix C, Table C.1 (NEW)
+Topic: Queensland-approved standalone temporary roadworks signs not in AS 1742.3-2019
+
+ROADWORK AHEAD — Narrow (T1-Q06 — 600 × 900 mm):
+- SHALL ONLY be used on narrow medians and shoulders where standard T1-1 or T1-31 would not fit and would be an obstruction to traffic
+- (Cross-reference: Clause 4.6.2)
+
+ROADWORK ON SIDE ROAD (ARROW) (T1-Q07 — 900 × 600 mm):
+- MAY be used in advance of a FOUR-WAY INTERSECTION where:
+  - Work is on a side road
+  - There is insufficient distance to provide appropriate signing of the work on the side road
+  - It is desired to indicate WHICH side road is subject to roadworks
+- Used IN LIEU of the ROADWORK ON SIDE ROAD (T1-25) sign in this case
+
+LINE MARKERS ON ROAD (T1-Q08A — 900 × 600 mm; T1-Q08B — 1500 × 600 mm; T1-Q08C — 1800 × 600 mm):
+- MAY be used in lieu of Workers symbolic (T1-5) to warn approaching traffic that LINE MARKERS ARE WORKING ON THE ROAD AHEAD
+- Used IN ADDITION to, not to replace, other temporary signs
+
+MOBILE LINE MARKING AHEAD (T1-Q09 — 900 × 600 mm):
+- MAY be used to warn approaching traffic that line marking machines are working on the road ahead
+- MAY be mounted on a job support vehicle behind or ahead of the line marking machine
+- Where so mounted: a panel of chevrons SHALL be incorporated into the sign, OR an illuminated flashing arrow sign SHALL be used to indicate the side of the vehicle traffic should pass
+
+MOWING Symbolic (T1-Q10 — 900 × 600 mm):
+- MAY be used IN LIEU OF ROAD PLANT AHEAD (T1-3) at frequently-changing work areas where GRASS MOWING is being carried out
+
+LANE STATUS (T2-Q07 — 2230 × 900 mm):
+- Used where one or more lanes are closed on a FOUR-LANE ROADWAY
+- Gives ADVANCE WARNING ONLY of the lane closure
+- Used IN CONJUNCTION WITH appropriate roadwork signing for the roadworks site
+
+WET PAINT L/R (T6-Q08A — 1200 × 600 mm; T6-Q08B — 1800 × 750 mm):
+- Used to protect freshly-painted pavement markings while paint is drying
+- MAY be used on INTERMEDIATE VEHICLES in a mobile line marking convoy
+- LINEMARKING (T6-Q06) sign is required on leading and trailing vehicles
+- When vehicle is equipped with illuminated flashing arrow sign: chevron panel is NOT required
+
+Traffic Signal NOT IN USE (T3-Q02 — 300 × 900 mm):
+- Erected over lanterns at a NEW TRAFFIC SIGNAL INSTALLATION prior to commencement of normal operation
+
+SIGNALS UNDER REPAIR (T3-Q03 — 1200 × 700 mm):
+- Erected where it is desired to advise approaching traffic that signals are NOT OPERATING and are UNDER REPAIR
+
+ROADWORKS NEXT ... km ... TO ... EXPECT DELAYS (T1-Q19 — 1800 × 1800 mm):
+- Erected PRIOR TO COMMENCEMENT of roadworks to inform road users of IMPENDING WORKS and EXPECTED DELAYS
+
+KEEP LEFT (R2-3-Q01 — 250 × 1200 mm):
+- MAY be used with four traffic cones on the centreline in advance of a traffic control station in lieu of T5-7 (Temporary Hazard marker)
+- MAY be used at other locations where the KEEP LEFT message is required
+- Designed to be mounted in 'weighted' temporary plastic or rubber support (same as T5-7)
+
+TURN ON HAZARD LIGHTS WHEN QUEUED (TC1992_1A — 900 × 600 mm; TC1992_1B — 1200 × 900 mm):
+- Refer to TC sign notes
+
+TURN OFF HAZARD LIGHTS (TC1992_2A — 900 × 600 mm; TC1992_2B — 1200 × 900 mm):
+- Refer to TC sign notes
+
+SPEED CAMERAS USED AT ROADWORKS FOR ROAD SAFETY (TC2320_1 — 2200 × 1600 mm):
+- Refer to TC sign notes and QGTTM Part 3 Section 5.5.4
+
+Orange Target Board to Speed Restriction sign R4-1 with ROAD WORK supplementary plate R4-3:
+- TC2366A: 600 × 1050 mm; TC2366B: 800 × 1400 mm; TC2366C: 1200 × 2100 mm
+- A fluorescent orange border MAY be added to the sign and supplementary plate combination
+
+Orange Target Board to Speed Limit AHEAD sign G9-79 with ROAD WORK supplementary plate R4-3:
+- TC2367A: 600 × 1200 mm; TC2367B: 800 × 1600 mm; TC2367C: 1200 × 2400 mm
+- A fluorescent orange border MAY be added to the sign and supplementary plate combination
+
+VISUAL INDICATORS:
+- T1-Q06 narrow ROADWORK AHEAD used on wide median/shoulder where standard sign fits = non-compliance
+- T1-Q09 MOBILE LINE MARKING AHEAD on vehicle without chevron panel OR without illuminated flashing arrow sign = non-compliance
+- WET PAINT sign (T6-Q08) used without LINEMARKING (T6-Q06) on leading/trailing vehicles = non-compliance
+- T2-Q07 LANE STATUS sign used as the only roadwork warning sign (not in conjunction with other roadwork signs) = non-compliance
+- T3-Q02 Traffic Signal NOT IN USE used on existing operational signals (not new installations prior to first operation) = non-compliance
+
+---
+
+CHUNK 42: Multi-Message Sign Combination Examples (Appendix B)
+Section: Appendix B (Informative — Accepted, with amendments)
+Topic: Approved multi-message sign combinations for Queensland roadworks reference
+
+NOTE: These are INFORMATIVE examples. They do not override the mandatory conditions in Clause 4.2.2.
+
+APPROVED MMS COMBINATION EXAMPLES (Figure B1 — traffic to right side of signs):
+- Workers symbolic + 60 speed limit + ROADWORK (three-panel)
+- END ROAD WORK + 100 speed limit (two-panel)
+- ROAD WORK AHEAD + 80 speed limit + blank (three-panel)
+- Workers symbolic + PREPARE TO STOP + blank (three-panel)
+- Traffic signals symbolic + PREPARE TO STOP + blank (three-panel)
+- ROAD WORK AHEAD + Workers symbolic + ON SIDE ROAD + arrow (MMS with direction)
+- Workers symbolic + 60 speed limit (two-panel)
+- NO ENTRY + ONLY + DETOUR AHEAD (three regulatory/directional)
+- NO ENTRY + ROAD WORK AHEAD + NO TURN (regulatory + work warning + prohibition)
+- SOFT EDGES + 40 advisory + TRAFFIC HAZARD (three-panel condition)
+- No Right + ROAD WORK AHEAD + SIDE ROAD CLOSED (turn + warning + closure)
+- ROUGH SURFACE + 40 advisory + TRAFFIC HAZARD (three-panel condition)
+- Lane status arrows + ROADWORK AHEAD (lane + warning)
+- Arrows up/down + DO NOT OVERTAKE (lane status + overtaking prohibition)
+- Lane arrows + MERGE RIGHT (movement control)
+- Lane arrows cluster + AHEAD (advance lane warning)
+- UTILITY REPAIRS + NO ENTRY + ROAD CLOSED (three regulatory)
+- END DETOUR (single panel + blanks)
+- NO LINES MARKED + DO NOT OVERTAKE (two-panel text combination — approved exception)
+- ROAD WORK AHEAD + Construction vehicles symbol + NEXT X km (three-panel)
+- FOOTPATH CLOSED + USE OTHER FOOTPATH + PEDESTRIANS arrow (three pedestrian panels)
+- EVENT AHEAD + Runners symbol + ON SIDE ROAD + arrow (event on side road)
+- ROAD WORK AHEAD + Speed AHEAD + blank (advance)
+- Bicycle + DETOUR + arrow (cyclist detour)
+
+ADDITIONAL APPROVED COMBINATIONS (Figure B2):
+- ROAD WORK AHEAD + Speed AHEAD + REDUCE SPEED (three-panel)
+- Workers + ON SIDE ROAD + horizontal arrow (side road warning)
+- ROAD WORK + ON SIDE ROAD + horizontal arrow (side road direction)
+- ROAD WORK AHEAD + Workers (two-panel, no speed)
+- 60 speed + REDUCE SPEED (two-panel)
+- 60 speed only (single + blank)
+- Workers + 60 speed + REDUCE SPEED (three-panel)
+- END ROAD WORK + 80 speed + DRIVE SAFELY (termination)
+- SURVEYORS AHEAD + blank (single + blank)
+- ROADWORK AHEAD (standalone in large format)
+- END ROADWORK + DRIVE SAFELY (two-panel termination)
+- ROADWORK AHEAD + horizontal arrow (with direction)
+- Tractor/MOWING + NEXT 2 km (advance mowing)
+- Temporary Hazard Markers (TM5-5A double chevron)
+- STOP HERE ON RED SIGNAL + blank (signal control)
+- GIVE WAY + ONE LANE (sign control)
+- DETOUR + left arrow; DETOUR + right arrow; No Right + DETOUR + up arrow; No Right + up arrow + DETOUR (detour combinations)
+- Up arrow + GIVE WAY + PREPARE TO STOP + DO NOT OVERTAKE (complex approach)
+- 60 speed + ROADWORK (two-panel)
+- Up arrow + T-bar + 60 speed + MERGE LEFT (merge with speed)
+
+VISUAL INDICATORS:
+- MMS combination used at site that does not match any of the approved examples AND is not clearly compliant with Clause 4.2.2 conditions = flag for detailed review
+- Text-only panel combinations other than those explicitly approved (NO LINES MARKED + DO NOT OVERTAKE; ROAD CLOSED AHEAD + LOCAL TRAFFIC ONLY; POLICE CONTROL AHEAD + PREPARE TO STOP) = flag
+
+---
+
+CHUNK 43: Key Compliance Reference — Training, Roles and Documentation
+Section: Clauses 1.3.2, 1.7, 1.9 (synthesised)
+Topic: Consolidated quick-reference for SafetyScan on TTM roles, qualifications, and documentation obligations
+
+TTM ROLE COMPLIANCE SUMMARY:
+
+Role | Required Qualification | Authority Card Required?
+Traffic Controller | Traffic Controller prescribed training | YES — accreditation under TORUM Act s.21
+Traffic Management Designer (TMD) | TMD prescribed training | YES
+Traffic Management Implementer (TMI) | TMI prescribed training | YES
+Worker adjacent to traffic | Working in Proximity Part 1 | YES
+Short-term low-impact works implementer | Working in Proximity Parts 1 and 2 | YES
+Lookout person | Working in Proximity Parts 1 and 2 | No card — must comply with QGTTM Pt 8 Table A7
+Pilot vehicle driver | — | No card — must comply with QGTTM Pt 8 Table A7
+TMA vehicle driver | TMI training completed | No card — must comply with QGTTM Pt 8 Table A7
+Event Traffic Marshal | Event Traffic Marshal training | YES
+
+DOCUMENTATION REQUIREMENTS FOR VARIATIONS:
+
+| Variation type | Risk Assessment Required? | Signed by | TMP/TGS Certification | TMR Notification |
+| 'Should' deviation | YES | TMD or RPEQ | Not required | Not required |
+| 'Shall' deviation | YES | TMD or RPEQ | RPEQ certification required | Email to TMR (information only) |
+| Innovative treatment | YES | Competent Person | RPEQ certification required | Prior approval required (email TMR) |
+
+VISUAL INDICATORS:
+- No documentation on site for variations from 'shall' or 'should' requirements = non-compliance
+- TMP/TGS with 'shall' variations but no RPEQ certification = serious non-compliance
+- Innovation in TTM treatment used without prior TMR approval = serious non-compliance
+
+---
+
+CHUNK 44: Complete Construction Site Compliance Checklist — Queensland MUTCD Part 3
+Section: All sections
+Topic: Consolidated quick-reference compliance summary for SafetyScan AI construction site assessments
+
+MANDATORY 'SHALL' REQUIREMENTS — ROADWORKS TRAFFIC MANAGEMENT:
+
+PERSONNEL:
+1. All TTM workers SHALL hold valid Queensland authority cards for their roles (Clause 1.7)
+2. Traffic Controllers SHALL hold an appointment under TORUM Act s.21 (Clause 1.3.19)
+3. All TTM activities SHALL be performed in accordance with QGTTM Part 8 Appendix A (Clause 1.3.2)
+
+SIGNS — MMS:
+4. MMS SHALL have minimum panel requirements met (Clause 4.2.2(a))
+5. No more than one regulatory sign panel per MMS frame facing traffic (Clause 4.2.2(b))
+6. Regulatory panel SHALL be top position, closest to traffic (Clause 4.2.2(c))
+7. No more than two text-only panels per MMS (with approved exceptions) (Clause 4.2.2(d))
+8. Unused MMS frame positions SHALL be filled with blank retroreflective yellow panel (Clause 4.2.2(e))
+9. TM/RM/WM/GM series panels SHALL ONLY be used in MMS frames (Clause 4.2.2(f))
+10. No more than one blank retroreflective yellow panel per MMS (Clause 4.2.2(g))
+11. Speed Limit AHEAD and END Speed Limit panels SHALL be top position, closest to traffic in MMS (Clause 4.2.2(i))
+
+SIGNS — SPECIFIC:
+12. T1-Q06 narrow ROADWORK AHEAD SHALL ONLY be used on narrow medians/shoulders (Clause 4.6.2)
+13. ROADWORK ON SIDE ROAD sign SHALL NOT be used on terminating leg of T-intersection (Clause 4.6.7)
+14. ROADWORK ON SIDE ROAD sign SHALL NOT be used where works impact the through road (Clause 4.6.7)
+15. SIDE ROAD CLOSED sign SHALL NOT be used on terminating leg of T-intersection (Clause 4.6.9)
+16. END ROADWORK sign SHALL be used when ROADWORK AHEAD or BRIDGEWORK AHEAD is used (Clause 4.6.10)
+17. LED STOP/SLOW bats on state-controlled roads SHALL be from TMR Approved Products list (Clause 4.7.2(e))
+18. Sign control (GIVE WAY/ONE LANE) only applies where volume ≤150 vph, speed ≤70 km/h, segment <120 m (Clause 4.7.3)
+19. REDUCE SPEED panel SHALL ONLY supplement a speed restriction sign or speed limit ahead sign (Table A.2)
+20. TM5-1-Q02 Detour U-Turn Symbolic SHALL ONLY be used with DETOUR panel TM5-7A or TM5-7B (Clause 4.8.3)
+21. Road condition signs SHALL be repeated at maximum 500 m intervals (Clause 4.9.1)
+22. Resealing works SHALL comply with MRTS11 speed limit requirements (Clause 4.9.1)
+23. Road safety barriers SHALL be from TMR Accepted Road Safety Systems and Devices list (Clause 4.12.3)
+24. VMWD SHALL be mounted as high as practicable (Clause 4.14.1)
+25. Sight distance to VMWD SHALL be ≥150 m at ≤60 km/h / ≥250 m at >60 km/h (Clause 4.14.1)
+26. Flashing arrow sign SHALL be capable of being removed from view when not needed (Clause 4.14.1)
+27. Electronic signs SHALL follow colour scheme principles (Clause 4.24)
+28. Delineators on temporary kerbing SHALL be black and yellow, oriented correctly (Clause 4.11.6)
+29. TM5-8B horizontal arrow SHALL NOT be used with a regulatory sign (Appendix A Table A.1)
+30. TC2361B camera panel SHALL ONLY be used with TC2361C (Appendix A Table A.2)
+31. DRIVE SAFELY panel SHALL ONLY be used with END ROADWORK/DETOUR/EVENT panels (Appendix A Table A.2)
+32. T1-Q09 mobile line marking sign on vehicle SHALL have chevrons OR illuminated flashing arrow (Appendix C)
+33. All TTM risk assessments SHALL be prepared per QGTTM Part 10 Section 2 (Clause 1.9)
+34. Innovative treatments SHALL have prior TMR approval before use (Clauses 1.5.2, 1.9(c))
+35. Inspection vehicles SHALL comply with Arrangement 2 (pair of lamps) by 31 July 2027 (Clause 4.14.1)
+
+KEY MEASUREMENTS AT A GLANCE:
+- Sign control segment maximum length: 120 m (Clause 4.7.3)
+- Sign control maximum volume: 150 vph (Clause 4.7.3)
+- Sign control maximum speed: 70 km/h (Clause 4.7.3)
+- Road condition sign maximum repetition interval: 500 m (Clause 4.9.1)
+- Temporary hazard marker edge clearance from travelled path: ~1 m (Clause 4.11.3)
+- Temporary hazard marker T5-4/T5-5 mounting height: ~1 m above pavement (Clause 4.11.3)
+- VMWD minimum sight distance at ≤60 km/h: 150 m (Clause 4.14.1)
+- VMWD minimum sight distance at >60 km/h: 250 m (Clause 4.14.1)
+- VMS alternating screen on-time: (0.6 ± 0.1) s per word/number (Clause 4.22.3)
+- Cul-de-sac END ROADWORK omission threshold: end of road visible from or within 500 m of end of works (Clause 4.6.11)
+- T1-Q06 size: 600 × 900 mm
+- TM1-37C SURVEYORS AHEAD: 1200 × 600 mm
+- Orange target board border width: 100 mm fluorescent orange (TC2365)
+
+PENALTIES / CONSEQUENCES:
+- Non-compliance with Queensland MUTCD Part 3 may constitute a breach of the TORUM Act 1995
+- WHS obligations may also apply where traffic control failures expose workers or the public to risk
+- Invalid TTM authority card holders operating on site = regulatory offence under TORUM Regulation 2015
+
+---

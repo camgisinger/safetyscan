@@ -1,0 +1,1327 @@
+DOCUMENT: Tilt-up and Pre-cast Construction Code of Practice 2003
+TYPE: Approved Code of Practice (Preserved and Varied)
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: construction, tilt-up, pre-cast, concrete_panels, crane_operations, rigging, working_at_heights, structural, lifting_operations, wind_loading
+SOURCE: Workplace Health and Safety Queensland, Office of Industrial Relations
+PUBLICATION_NO: PN11189
+CURRENT AS AT: 2018 (varied 1 July 2018)
+COMMENCED: 1 January 2012 (preserved under WHS Act 2011 s284; originally 2003)
+CLAUSE_PREFIX: Section numbers within CoP; AS 3850 = primary technical standard
+APPROVED UNDER: Work Health and Safety Act 2011 (Qld) s274
+RELATED STANDARDS: AS 3850 (Tilt-up concrete construction), AS 3600 (Concrete structures), AS/NZS 1170.2 (Wind actions), AS 1379 (Concrete supply), AS 1418.5 (Mobile cranes), AS 1418.10 (EWPs), AS 2550.10 (EWPs safe use), AS 2759 (Steel wire rope), AS 3775 (Chain slings), AS 4497.2 (Roundslings), AS 1353.2 (Flat webbing slings), AS/NZS 1891.1 (Fall arrest harnesses), AS 4024.1501 (Safety of machinery)
+
+---
+
+CHUNK 1: Scope and Introduction — What this Code Covers
+Section: CoP s1, s2; WHS Act 2011 s274; WHS Regulation 2011
+Topic: Legal status, scope, application and duty holder framework for tilt-up and pre-cast construction
+
+SCOPE — this code applies to:
+- Principal safety issues in TILT-UP construction (panels cast on site, then tilted up into position)
+- PRE-CAST construction (panels manufactured off-site and transported to site)
+- Casting of panels
+- Panel lifting and rigging systems
+- Propping and securing of panels (temporary bracing)
+- Work at height associated with panels and other pre-cast concrete elements
+
+SCOPE EXCLUSIONS:
+- Pre-tensioning and post-tensioning of concrete elements NOT covered
+
+LEGAL STATUS:
+- Following this CoP generally achieves compliance with WHS Act and WHS Regulation for the subject matter
+- From 1 July 2018: duty holders may comply with this CoP OR follow another method (technical or industry standard) providing EQUIVALENT OR HIGHER standard of WHS
+- Code is admissible in court proceedings; may be relied upon to determine what is "reasonably practicable"
+- An inspector may issue an improvement notice for failure to comply where equivalent or higher standards have not been demonstrated
+
+LANGUAGE IN CODE:
+- "SHOULD" = recommended course of action
+- "MAY" = optional course of action
+- "MUST", "REQUIRES", "MANDATORY" = legal requirement under WHS Act or WHS Regulation
+
+DUTY HOLDERS:
+- PCBU: primary duty to ensure workers and others are not exposed to health and safety risks (WHS Act s19)
+- OFFICERS (e.g. directors): duty of due diligence to ensure compliance with WHS Act and WHS Regulation (WHS Act s27)
+- WORKERS: must take reasonable care for own health and safety; must not adversely affect health and safety of others; must comply with reasonable instructions and cooperate with policies (WHS Act s28)
+
+CONSULTATION REQUIREMENTS (WHS Act):
+- Must consult workers who carry out work who are (or are likely to be) directly affected by a WHS matter
+- If workers represented by HSR, consultation must involve that representative
+- Must consult when proposing changes to work that may affect health and safety
+- Must consult, cooperate and coordinate with all other duty holders who share responsibility for the same WHS matter
+
+VISUAL INDICATORS:
+- Tilt-up or pre-cast concrete panel work underway without reference to this CoP or AS 3850 = flag
+- No consultation records for workers on WHS changes to panel erection methods = flag
+- Multiple PCBUs on site with no coordination arrangements evident = flag
+
+---
+
+CHUNK 2: Panel Design — General Requirements
+Section: CoP s3; AS 3850; AS 3600
+Topic: Engineering design requirements for tilt-up and pre-cast panels including erection and in-service loads
+
+DUAL DESIGN REQUIREMENT — panels MUST be designed for BOTH:
+1. ERECTION LOADS — loads applied during lifting off casting bed and while panels are temporarily braced
+2. IN-SERVICE LOADS — loads experienced as part of the completed building or structure
+
+DESIGN ENGINEER RESPONSIBILITIES:
+- The design engineer(s) MUST design the panel for both types of loading
+- Where a panel is particularly large or has cut-outs, the engineer MAY specify STRONGBACKS to prevent panel failure during lifting
+
+STRONGBACK REQUIREMENT:
+- Strongbacks MUST be bolted so they are HARD UP AGAINST the panel
+- If not hard against the panel, strongbacks may be unable to adequately resist the bending moment applied during lifting, causing panel damage
+
+VISUAL INDICATORS:
+- Panels being lifted without engineer-certified design for both erection and in-service loads = serious non-compliance
+- Strongbacks not tight against panel surface (visible gap) = non-compliance; risk of panel failure
+- Large panels or panels with cut-outs being lifted without strongbacks where specified = non-compliance
+- No engineering documentation available on site for panel design = non-compliance
+
+---
+
+CHUNK 3: Cast-in Lifting and Bracing Inserts — Design and Installation
+Section: CoP s3.1; AS 3850
+Topic: Design factors, factors of safety, edge distances, and installation requirements for lifting and bracing inserts
+
+FACTOR OF SAFETY REQUIREMENT:
+- MINIMUM factor of safety of NOT LESS THAN 2.5 against failure (AS 3850)
+- Applied to the TYPE of loading (tensile, shear, or combination)
+- Applied to the STRENGTH of surrounding concrete
+- Applied to the MAXIMUM load that may be experienced by the insert
+
+MAXIMUM LOAD POINT:
+- Usually occurs when panel is lifted from horizontal position and bond with casting bed is broken
+- Proper application of a QUALITY BOND BREAKER will greatly reduce bond strength and therefore the lifting force required
+
+COMPLIANCE WITH MANUFACTURER'S SPECIFICATIONS — inserts must comply with specifications for:
+- Minimum EDGE DISTANCES from panel edge
+- Minimum DEPTH of insert
+- Minimum CONCRETE STRENGTH
+- Additional REINFORCEMENT requirements (some inserts require tying to reinforcement steel)
+
+INSTALLATION REQUIREMENTS:
+- Adequate NUMBER of inserts, in the CORRECT LOCATIONS, to ensure inserts are not overloaded
+- Number and location must ensure panel is suspended as near to VERTICAL as possible
+
+DOCUMENTATION ON PANEL DRAWINGS:
+- Insert TYPE and BRAND
+- INSERT LOCATION, ORIENTATION and DEPTH
+- Edge distance requirements
+- Reinforcement proximity requirements
+- Minimum concrete strength for lifting and for in-situ use
+- Engineer must certify (or provide certification letter listing drawings)
+
+VISUAL INDICATORS:
+- Inserts installed closer to panel edge than manufacturer specifications allow = non-compliance; failure risk
+- Inserts not tied to reinforcement steel where manufacturer specifies this is required = non-compliance
+- Number of lifting inserts appears insufficient for panel size = flag; request engineering certification
+- No brand/type markings visible on inserts and no documentation = flag
+- Bond breaker not applied to casting bed = risk of excessive lifting force overloading inserts
+
+---
+
+CHUNK 4: Concrete Strength and Curing Requirements Before Lifting
+Section: CoP s3.2; AS 3850; AS 1379
+Topic: Minimum concrete strength for lifting, curing time, testing and documentation requirements
+
+MINIMUM CONCRETE STRENGTH FOR LIFTING:
+- Tilt-up panels should ONLY be lifted when the concrete has cured long enough to maintain the 2.5 factor of safety on lifting inserts
+- MINIMUM concrete strength at which this can be achieved for most proprietary lifting inserts: 25 MPa
+- Some inserts MAY require HIGHER strength than 25 MPa — refer to insert manufacturer
+
+STACKED PANELS:
+- Tilt-up panels are usually cast in stacks
+- Panels CANNOT be lifted until the LAST panel cast on top of the stack has reached adequate strength
+- To reduce waiting time: top panels may be cast with HIGHER STRENGTH CONCRETE (e.g. 40–50 MPa 28-day strength) so they can be lifted sooner
+
+28-DAY RULE:
+- As a general rule, concrete achieves its maximum practicable strength after 28 days
+- Concrete can still increase in strength to a small degree after 28 days
+
+WATER ADDITION WARNING:
+- Adding water to the mix weakens concrete and affects its ability to reach design strength grade
+- STRICTLY CONTROL the amount of water added to the mix
+
+TESTING AND SAMPLING:
+- Panel erector SHOULD provide WRITTEN DOCUMENTATION verifying concrete has reached minimum acceptable strength
+- A sampling and concrete testing procedure SHOULD be in place (refer AS 1379 for guidance)
+- NOTE: Compressive strength of laboratory-cured test specimens may DIFFER from on-site strength due to temperature, humidity, poor curing, water addition
+- Some panel erectors may choose to have BOTH lab and on-site test samples for comparison
+
+DOCUMENTATION REQUIRED ON SITE:
+- Concrete specification of concrete supplied on site for use in panels
+- Minimum final concrete strength (28-day) of concrete delivered to site
+- Minimum concrete strength to be achieved PRIOR to lifting (per insert manufacturer's requirements)
+- Results of sampling program demonstrating concrete is at appropriate strength
+- Casting dates for EACH panel and earliest date the panel can be lifted
+- Each panel should be NUMBERED with written records maintained
+
+VISUAL INDICATORS:
+- Panels being lifted without concrete test results available on site = serious non-compliance
+- Panel lifting records not identifying individual panel numbers and casting dates = flag
+- Water being added to concrete mix at site = flag; risk of sub-specification concrete
+- Panels in stack being lifted before top panel has reached minimum strength = serious non-compliance
+- No sampling program in place = non-compliance
+
+---
+
+CHUNK 5: Panel and Erection Drawings — Required Content
+Section: CoP s4, s4.1, s4.2
+Topic: Minimum required content for panel design drawings and panel erection drawings
+
+PANEL DRAWINGS — must include:
+- Date and issue number
+- Panel NUMBER and panel MASS
+- Panel DIMENSIONS and CENTRE OF MASS
+- Dimensional TOLERANCES
+- Location, orientation and depth of lifting and other inserts
+- Type and BRAND of lifting inserts
+- Type, size and location of steel or other reinforcement
+- Required CONCRETE COVER for reinforcement steel
+- STRONGBACK DETAILS (where required)
+- Strongback fixing insert details
+- Concrete strength required for LIFTING and as part of structure (per AS 3600)
+- Additional instructions for lifting inserts (edge distance, proximity to reinforcement)
+- Project location
+- Surface finish
+
+PANEL ERECTION DRAWINGS — must include:
+- Date and issue number
+- Project location
+- Position of brace connection points on the PANEL and the GROUND
+- Brace SPECIFICATIONS and/or required CAPACITIES (if only capacities specified, panel erector must demonstrate braces have adequate capacity for the brace extension being used)
+- LEVELLING PAD details
+- Relative locations of panels
+- Details for brace footings including: DIMENSIONS, LOCATION, ANCHOR TYPE, CONCRETE STRENGTH at time of erection
+- Details on KNEE BRACING and LATERAL BRACING (if applicable)
+
+BUILDER/PANEL ERECTOR ROLE:
+- Will often determine how many groups of drawings are provided for the project
+- All information above must be clearly shown on drawings and CHECKED by a suitably qualified engineer
+
+VISUAL INDICATORS:
+- Panel drawings on site without engineer's signature or certification letter = non-compliance
+- Panel mass not marked on individual panels = non-compliance (also required per s14.1)
+- Erection drawings without brace connection point locations = non-compliance
+- Erection drawings missing deadman/footing details or anchor type = flag
+- Issue/revision number not current — drawings may be superseded = flag
+
+---
+
+CHUNK 6: Braces — Design, Marking and Installation Requirements
+Section: CoP s5; AS 3850
+Topic: All requirements for panel bracing including types, factors of safety, marking, installation and inspection
+
+BRACE TYPES (Diagram 1):
+- MAIN BRACE — primary structural brace holding panel
+- END BRACE — at panel ends
+- KNEE BRACE — at base/foot of panel
+- LATERAL BRACE — horizontal stabilisation between panels
+
+MINIMUM NUMBER OF BRACES:
+- MINIMUM TWO BRACES must be secured to each panel UNLESS specified otherwise by engineer and shown on erection drawings
+- Where ONLY ONE BRACE is used (engineer must specify): minimum TWO FIXINGS at each end of the brace
+(Note: one brace with two fixings at each end may be difficult to achieve due to minimum anchor separation distances)
+
+FACTOR OF SAFETY:
+- Braces must be designed to provide a FACTOR OF SAFETY OF TWO against failure
+
+PERMANENT MARKINGS — braces SHOULD be permanently marked with:
+- Manufacturer's name or trademark
+- Model type
+- WORKING LOAD LIMIT (WLL) for MAXIMUM and MINIMUM extensions
+
+ENGINEERING REQUIREMENTS:
+- Engineering computations or certification SHOULD be available
+- Braces must have adequate STRENGTH and STIFFNESS and allowance for WIND LOADINGS
+- Drawings and specifications clearly showing TYPE, POSITION, METHOD OF FIXING and INSTALLATION ANGLE should be on site
+
+BRACE INTEGRITY — braces SHOULD NOT have:
+- Parts interchanged with other makes or models (e.g. different feet, smaller pins or bolts, different tube wall thickness)
+
+PRE-USE INSPECTION:
+- All braces SHOULD be inspected PRIOR TO USE to verify:
+  - No DAMAGE
+  - COMPLETE and FUNCTIONAL (extendable and foot length adjustable)
+
+BOLTS AND WASHERS:
+- Bolts or nuts used to secure brace to footing or panel SHOULD be provided with washers of the CORRECT GRADE and SIZE
+- Anchor bolt and washer combination on brace foot MUST have ADEQUATE BEARING CAPACITY
+- Slot width on brace foot SHOULD NOT EXCEED the diameter of the thread or sleeve on the anchor bolt by more than 2 mm (unless otherwise stated by anchor supplier)
+- Bolt head must be large enough to apply adequate load to brace foot
+- If doubt exists: contact anchor supplier for guidance on suitable structural washer (see Diagram 2)
+
+ADJUSTABLE FEET:
+- Adjustable feet on braces SHOULD have STOPS on threads to prevent over-extension
+
+LOCKING PINS:
+- Locking pins SHOULD be provided with RETAINING DEVICES to prevent unintentional dislodgement
+- WHERE PUBLIC ACCESS IS POSSIBLE: consider retaining devices requiring a TOOL to remove — to prevent unauthorised persons tampering
+- Greater importance where locking pin can be reached by a person standing on the ground
+
+KNEE AND LATERAL BRACING:
+- WHERE required by the engineer: SHOULD be installed as soon as possible after panels are placed and primary braces secured
+
+VISUAL INDICATORS:
+- Brace without permanent marking (manufacturer, model, WLL) = non-compliance
+- Fewer than two braces on a panel without documented engineer approval = non-compliance
+- Brace feet showing components from a different manufacturer/model = non-compliance
+- Anchor bolt slot clearance exceeds 2 mm without anchor supplier guidance = non-compliance
+- Locking pins without retaining devices = non-compliance
+- Brace on public-accessible site with locking pins that can be removed without tools = flag
+- Knee or lateral bracing not installed where shown on erection drawings = non-compliance
+- Braces showing visible damage (kinks, bends, corrosion) = serious non-compliance; replace before use
+- Engineering computations or certification not available on site = non-compliance
+
+---
+
+CHUNK 7: Wind Loading — Zones, Calculations and Brace Design
+Section: CoP s6; AS/NZS 1170.2
+Topic: Wind loading requirements for temporary bracing of panels, Queensland wind zones and design implications
+
+WIND ZONES — QUEENSLAND (AS/NZS 1170.2):
+- REGION A (Normal): covers most of Queensland excluding coastal areas. Includes Toowoomba, Mt Isa
+- REGION B (Intermediate): coastal areas SOUTH of Bundaberg; narrow band behind Region C. Includes Brisbane, Gold Coast, Sunshine Coast
+- REGION C (Tropical Cyclones): ALL coastal areas NORTH OF and INCLUDING Bundaberg. Includes Townsville, Cairns, Mackay
+
+TERRAIN CATEGORIES (AS 1170.2) — engineer must consider:
+- CATEGORY 2: open terrain with FEW nearby obstructions (e.g. near airport) — MORE SEVERE wind effect
+- CATEGORY 3: numerous obstructions between 3 and 5 metres high — less severe than Category 2
+
+CRITICAL FORMULA — Dynamic Wind Pressure:
+qz = 0.6 × Vz² × 10⁻³
+Where: Vz = wind speed in metres per second; qz = dynamic wind pressure in kilopascals
+
+IMPORTANT RELATIONSHIP — pressure varies with the SQUARE of wind speed:
+- A SMALL INCREASE in wind speed = MUCH LARGER INCREASE in pressure
+- A MUCH LARGER INCREASE in number of braces required or size of deadman required
+
+PRACTICAL IMPLICATION:
+- Number of braces required is NOT DIRECTLY PROPORTIONATE to basic wind speed
+- Number of braces for a tilt-up panel in a COASTAL TROPICAL AREA (Region C) will OFTEN BE GREATER than that required near Brisbane (Region B)
+
+ENGINEER MUST CALCULATE:
+- Wind pressure on each panel
+- Resultant number of braces required
+- Size of deadmen required
+
+VISUAL INDICATORS:
+- Bracing design for a Region C (cyclone zone) site using same brace count as Region A or B without engineer certification = flag; likely under-braced
+- No wind zone or terrain category specified on erection drawings = non-compliance
+- Region C or B coastal site with brace count based on region A parameters = serious risk flag
+
+---
+
+CHUNK 8: Deadman Design — Buried Anchor Blocks for Brace Footings
+Section: CoP s7; AS/NZS 1170.2; AS 1170
+Topic: Design, construction, soil considerations and documentation requirements for buried concrete deadmen used to anchor panel braces
+
+WHAT IS A DEADMAN:
+- Buried concrete block used to ANCHOR BRACES and prevent panels falling over due to wind or other loads
+- Resists pull-out loads via both its MASS and COHESION with surrounding ground
+
+CRITICAL LOADING CASE:
+- Wind blowing ONTO BACK FACE of panel = tensile force pulling deadman OUT of ground = MORE CRITICAL load case
+- Wind blowing onto front face = compressive force pushing deadman DEEPER into ground = less critical
+
+SOIL TYPE EFFECTS ON COHESION:
+- STIFF CLAY: best cohesive properties; good resistance to pull-out
+- GRAVEL: less cohesion than clay
+- SAND: very LITTLE cohesion — deadman must be LARGER in sandy soils
+
+IMPORTANT DESIGN COMPLEXITY:
+- Deadman adequacy is based on BOTH MASS and COHESION — NOT a simple ratio of panel surface area
+- Cohesion based on surface area of block in contact with soil; varies at DIFFERENT RATE to mass
+- Cannot simply scale up deadman size linearly based on a smaller panel calculation
+- Cohesion is reduced where ground is DISTURBED at the top of the hole (particularly in clay)
+
+CAST-IN REINFORCEMENT BAR:
+- Usually a BENT bar at right angles — greatly assists bond strength between steel and concrete
+- STRAIGHT bars (pushed into wet concrete): engineer MUST check design; correct steel section MUST be inserted to MINIMUM required depth
+- If not inserted correctly: may PULL OUT of deadman or cause CONE FAILURE of concrete under load
+
+CONCRETE STRENGTH:
+- Deadmen typically cast using LOW STRENGTH CONCRETE (20–25 MPa)
+- Must be LEFT for SUBSTANTIAL TIME before cast-in or drill-in anchors can be used (ensure anchors will not pull out)
+
+DOCUMENTATION REQUIRED ON SITE:
+- Drawings showing: deadman DIMENSIONS, CONCRETE STRENGTH, STEEL CONTENT and LOCATION (if applicable), TERRAIN CATEGORY (for wind), and SOIL TYPE
+- Documentation verifying each deadman has been CONSTRUCTED IN ACCORDANCE WITH DRAWINGS
+- Documentation verifying CONCRETE HAS OBTAINED minimum required strength prior to brace/anchor installation
+- Documentation verifying anchors comply with minimum EDGE DISTANCES specified by engineer or anchor manufacturer
+- VERIFICATION that deadmen can resist wind loadings in accordance with AS/NZS 1170.2 — either:
+  (a) Engineer's WRITTEN CERTIFICATION specific to that site, OR
+  (b) TEST RESULTS with correlation to actual site conditions
+
+WHERE ENGINEER'S CERTIFICATION IS USED:
+- Must state deadmen can adequately withstand wind loadings specified in AS/NZS 1170.2
+
+WHERE TEST RESULTS ARE USED AS VERIFICATION:
+- Ground compressive strength on site must be AT LEAST EQUAL to test conditions (ground type and water content have large effect)
+- Deadmen dimensions must be SAME OR GREATER than test deadman
+- Resisting force must be GREATER than maximum load applied by panel to brace, with a SUITABLE FACTOR OF SAFETY specified by engineer
+- Load applied to brace must be specified by an engineer calculated per AS 1170
+- Test MUST be performed by an INDEPENDENT COMPETENT PERSON
+
+ALTERNATIVE ANCHORAGE (solid rock):
+- Alternative methods may be used where solid rock exists in panel erection location
+- MUST be specified and certified by an engineer
+
+VISUAL INDICATORS:
+- Deadmen built in sandy soil without enlarged dimensions = flag; inadequate cohesion
+- Ground disturbed at top of deadman hole in clay = flag; reduced cohesion
+- Straight reinforcement bar in deadman with no engineer check of design = non-compliance
+- No concrete test results confirming deadman has reached minimum strength = non-compliance
+- No engineer certification or test verification for wind load resistance on site = serious non-compliance
+- Single deadman anchor supporting two braces when engineer specified one each = non-compliance (requires substantially larger deadman + separate anchor edge distances)
+- Deadman construction records absent = flag
+
+---
+
+CHUNK 9: Post-Installed Anchors — Brace Connections (Floor Slab or Deadman)
+Section: CoP s8.1, s8.2; AS 3850
+Topic: Permitted and prohibited anchor types for brace connections, capacity limits, torque requirements and chemical anchor rules
+
+PREFERRED METHOD: CAST-IN INSERTS — preferable to post-installed anchors for fixing tilt-up braces
+
+MINIMUM CONCRETE STRENGTH FOR POST-INSTALLED ANCHORS: 20–25 MPa
+
+PERMITTED ANCHOR TYPES for brace connections:
+- UNDERCUT type anchors (do NOT rely on friction)
+- EXPANSION anchors — HIGH-LOAD SLIP, TORQUE CONTROLLED type:
+  - Working load must be AT LEAST 60% of the first slip load
+  - Generally suitable for structural tensile loads
+- COIL BOLTS — correct installation CRITICAL per manufacturer's specs (drill correct size hole, apply correct torque, correct concrete strength)
+
+PROHIBITED ANCHOR TYPES for brace connections:
+- DEFORMATION CONTROLLED EXPANSION anchors
+- DROP-IN TYPE anchors
+- LOW-LOAD SLIP DEFORMATION CONTROLLED anchors (often called "wedge anchors" — thin shields; retain only 20–40% of initial pre-load)
+- SELF-DRILLING anchors
+- CHEMICAL ANCHORS — unless EACH fixing is individually proof tested to working load limit AND documentation verifying this is available on site
+
+PERMISSIBLE LOAD RULE:
+- Permissible load on anchor must NOT EXCEED 0.65 of the FIRST SLIP LOAD
+- First slip load = load causing 0.1 mm movement when installed per manufacturer's specifications
+- If capacity is quoted as first slip load: multiply by 0.65 (reduce by 35%) to get permissible load
+
+PHYSICAL SIZE CONSTRAINT:
+- Slot on most brace feet is NOT WIDE ENOUGH for anchors exceeding 20–22 mm outside sleeve diameter
+- This usually means the LARGEST EXPANSION ANCHOR USABLE incorporates an M12 bolt
+- Permissible tensile load on a high-load slip, torque controlled M12 anchor: GENERALLY NOT MORE THAN 12–14 kN
+- This capacity MAY BE LESS than the brace capacity (which may exceed 20 kN)
+- Where anchor limits the brace capacity, engineer must EITHER:
+  (a) Specify anchor with higher capacity (e.g. undercut anchor), OR
+  (b) Increase number of braces on the panel, OR
+  (c) Specify foot with two anchor holes and two expansion anchors with adequate separation
+
+ANCHOR SETTING TORQUE (s8.2):
+- Verification of setting torque for ALL post-installed anchors MUST BE DOCUMENTED and available on site
+- Torque controlled anchors depend on CORRECT TORQUE to operate correctly; manufacturer will not guarantee if torque is incorrect
+- UNDER-TORQUING: maximum pull-out strength cannot be achieved
+- OVER-TORQUING: may damage anchor (strip thread)
+- HIGH-LOAD SLIP, TORQUE CONTROLLED — M12 bolt: typical setting torque 60–80 Newton-metres (Nm)
+- COIL BOLTS — 19 mm: typical setting torque 220–360 Nm (VERY HIGH — requires bigger lever arm than a shifting spanner)
+- Torque MUST be set using: appropriate TORQUE WRENCH or calibrated 'RATTLE GUN'
+- WRITTEN RECORDS of setting torque for ALL drill-in anchors must be available on site
+
+DATA REQUIRED ON SITE:
+- First slip load and maximum working loads supplied by the anchor manufacturer
+
+VISUAL INDICATORS:
+- Drop-in anchors, wedge anchors (thin shield type), or self-drilling anchors used for brace connections = serious non-compliance; replace
+- Chemical anchors without individual proof test documentation on site = non-compliance
+- No torque records available for post-installed anchors = non-compliance
+- Setting torque applied with a shifting spanner only for coil bolts = flag; torque of 220–360 Nm requires proper equipment
+- Anchor sleeve diameter greater than 22 mm in a standard brace foot slot = flag
+- Brace capacity exceeds 20 kN but only one M12 expansion anchor per foot = flag; anchor limits the system
+
+---
+
+CHUNK 10: Post-Installed Anchors — Lifting Panels
+Section: CoP s8.3; AS 3850
+Topic: When and how post-installed anchors may be used for lifting panels, proof loading requirements
+
+WHEN POST-INSTALLED ANCHORS MAY BE USED FOR LIFTING:
+- Cast-in insert is DEFECTIVE or placed in the wrong position
+- OLDER PANELS are being lifted (no cast-in inserts available)
+
+WHY POST-INSTALLED ANCHORS FOR LIFTING ARE NOT PREFERRED:
+- Difficulty drilling holes of correct depth and location due to REINFORCEMENT STEEL IN PANEL
+- Problems ensuring CORRECT SETTING TORQUE is applied
+- Reliance on FRICTION or BONDING STRENGTH to maintain integrity
+
+MANDATORY PROOF LOAD REQUIREMENT:
+- WHERE post-installed anchors are used for lifting panels (in tension or partial tension): EVERY ANCHOR MUST BE PROOF LOADED
+- Proof load must be a DIRECT PULL-OUT LOAD
+- Proof load must be EQUIVALENT TO THE LOAD TO BE EXPERIENCED during lifting
+- A FACTOR OF SAFETY OF AT LEAST 2.5 must apply to the anchor
+- RECORDS of proof testing MUST BE DOCUMENTED
+
+VISUAL INDICATORS:
+- Post-installed anchor being used for panel lifting without proof load documentation = serious non-compliance
+- No proof test records available for anchors used in panel lifting = serious non-compliance
+- Post-installed anchors for lifting without individual records for EVERY anchor = non-compliance
+
+---
+
+CHUNK 11: Engineer Certification and On-Site Verification
+Section: CoP s9.1, s9.2; AS 3850
+Topic: Engineer certification requirements, on-site audit responsibilities and sign-off procedures
+
+ENGINEER QUALIFICATIONS:
+- Persons providing design certification MUST be PROFESSIONAL ENGINEERS with SUITABLE EXPERIENCE
+- Engineers SHOULD provide SPECIFIC SIGNED STATEMENTS about compliance of the system with AS 3850
+
+CERTIFICATION DOCUMENTATION REQUIRED ON SITE:
+1. PANEL DESIGN CERTIFICATION for:
+   - In-situ loading (wind loads and erection loads, i.e. loads when lifted off casting bed)
+2. CONCRETE FOOTING SPECIFICATIONS used to support panels in final position — supplied by principal contractor
+3. DRAWINGS for: panel design, temporary bracing layout, final building layout and footing details (drawings signed by engineer OR accompanied by certification letter listing drawing numbers and revisions)
+4. DESIGN CERTIFICATION FOR TEMPORARY SUPPORT SYSTEM including:
+   - Brace specification: capacity, type, extension, installation ANGLE
+   - Anchor bolt specification: type and capacity
+   - Deadman block or footing/slab design: steel content, concrete strength, minimum edge distances for cast-in or post-installed anchors
+5. ANY OTHER INSTRUCTIONS for safe erection and securing of panels (e.g. engineer may need to endorse brace removal and panel-to-structural-steel connection procedure where steel structure is not complete before braces are removed)
+
+SAMPLE CERTIFICATIONS (Appendix A) — two types:
+- Letter certifying panels designed for in-situ and lifting loads per AS 3850 and AS 3600
+- Letter certifying temporary bracing layout checked for wind loading per AS 3850 and AS 1170.2 (must state Region, Terrain Category, Return Period)
+
+ON-SITE VERIFICATION SYSTEM (s9.2):
+- Total design of panel erection system SHOULD be overseen by engineer(s) including: panel design, temporary bracing, securing of panels before brace removal
+- An appropriate system verifying compliance with design SHOULD be implemented
+- ON-SITE AUDITS should verify:
+  - Correct grade of concrete used; panels left to cure for appropriate time before lifting
+  - Correct type and number of concrete inserts installed per manufacturer's specifications
+  - Reinforcement steel in panels and deadmen installed per drawings
+  - Panel braces installed per engineer's and manufacturer's specifications
+- Persons on site MAY be delegated to verify and document compliance
+- Non-engineer verifiers MUST NOT authorise variations to the design; MAY ONLY verify compliance
+- Non-engineer verifiers MUST be experienced in tilt-up construction and competent in reading drawings
+
+ENGINEER SITE VISIT PHASES (RECOMMENDED):
+- Casting of wall footings or other footings supporting tilt-up/pre-cast elements
+- Pouring of deadman or footing/slab for panel brace attachment
+- Pouring of tilt-up or pre-cast panels
+- Temporary bracing of panels on site
+- Just prior to removal of temporary braces (after panels attached to building's internal structure)
+
+BRACE REMOVAL SIGN-OFF:
+- Prior to removal of temporary bracing: INSPECTION by a COMPETENT PERSON to ensure all permanent structural members and brackets have been attached to panels per engineer's instructions
+- A SIGN-OFF PROCEDURE must be implemented to verify this has occurred before braces can be removed
+
+VISUAL INDICATORS:
+- No engineer's signed certification letters available on site = serious non-compliance
+- Certification letters without engineer's name, signature and RPEQ number = flag; verify validity
+- Temporary braces being removed without a signed-off inspection confirming permanent structure is complete = serious non-compliance
+- Non-engineer person authorising design variations = non-compliance
+- No on-site audit records for panel casting, brace installation, or concrete testing = flag
+
+---
+
+CHUNK 12: Variations from Design — Engineer Approval Required
+Section: CoP s9.3; AS 3850
+Topic: What constitutes a variation, when it must be referred back to the engineer, and specific prohibited variations
+
+ALL VARIATIONS from design (panel and support system) MUST be checked by the engineer and EITHER:
+- CERTIFIED IN WRITING by the engineer as acceptable (complying with AS 3850), OR
+- ALTERED per the engineer's written directions to comply with AS 3850, within a time frame specified by the engineer
+
+SPECIFIC EXAMPLES OF VARIATIONS requiring engineer action:
+- Two braces anchored to ONE DEADMAN when engineer specified separate deadmen (cannot be done without substantially larger deadman due to minimum anchor separation/edge distances)
+- Brace angle in VERTICAL PLANE not within the range specified in erection drawings
+- Brace angle in HORIZONTAL PLANE EXCEEDS 5 DEGREES from perpendicular
+- Absence of KNEE and/or LATERAL BRACING when originally specified by engineer
+- ONLY ONE BRACE on narrow panels when AS 3850 states minimum two (AS 3850 permits one brace only if engineer specifies, and requires two anchors at each end — may not be achievable on standard brace feet)
+- Removal of braces from panels PRIOR to all permanent structural members being attached
+
+VISUAL INDICATORS:
+- Two brace feet anchored to single deadman that appears standard-sized = flag; likely engineer variation not obtained
+- Brace visibly off-perpendicular by more than 5 degrees horizontally = non-compliance; engineer review required
+- No knee or lateral bracing where erection drawings show it is required = non-compliance
+- Evidence of brace removal before structural connections are complete = serious non-compliance
+
+---
+
+CHUNK 13: Non-Standard Panels — Special Lifting and Bracing Requirements
+Section: CoP s10; AS 3850
+Topic: Special handling requirements for panels with architectural features, cut-outs or complex geometry
+
+NON-STANDARD PANELS include those with:
+- Special ARCHITECTURAL FEATURES
+- CUT-OUTS in the panel
+
+REQUIREMENT:
+- Specific instructions highlighting special erection and support procedures MUST be endorsed by engineer and available on site
+
+EXAMPLES REQUIRING SPECIAL PROCEDURES:
+1. INVERTED 'L' SHAPED PANELS:
+   - May require STRONGBACKS to prevent failure when lifted (Diagram 5)
+   - Lifting insert position and RIGGING SET-UP must be specified so panel hangs VERTICALLY (bottom edge horizontal)
+   - Panel may need to be PROPPED under its unsupported side to prevent falling over
+
+2. PANELS WITH BRACES TO BE REMOVED BEFORE STRUCTURAL STEEL CONNECTION:
+   - A WORK SYSTEM must be designed to ensure panel does not become UNSTABLE when braces are removed
+
+VISUAL INDICATORS:
+- Irregular or 'L' shaped panels being lifted without specific engineer-endorsed lifting procedure = serious non-compliance
+- Panel with cut-outs in the main brace section of the panel being lifted without additional engineering review = flag
+- Panel hanging at visible angle (not vertical, bottom edge not horizontal) = flag; rigging may be incorrect
+
+---
+
+CHUNK 14: Transport, Unloading and Storage of Pre-cast Panels
+Section: CoP s11, s11.1, s11.2, s11.3, s11.4; National Transport Commission Load Restraint Guide
+Topic: Safe transport, unloading procedures, sling access at height, and panel storage requirements
+
+TRANSPORT TO SITE (s11.1):
+- Panels must be loaded so they will NOT fall off the semi-trailer
+- Panels must NOT make vehicle difficult to drive or difficult to unload
+- Restraint system must ensure load is EVENLY DISTRIBUTED and withstands MOVEMENT during transport
+- Panels must be loaded and secured so they will NOT BECOME UNSTABLE when restraint is released on site (e.g. on A-frame: panels lean INWARDS against frame when chains undone)
+- Reference: National Transport Commission "Load Restraint Guide"
+- Truck driver must be ADEQUATELY TRAINED and EXPERIENCED in transporting concrete elements
+- PERMITS for over-sized loads must be obtained PRIOR to travel
+
+ROUTE PLANNING — consider:
+- LOW BRIDGES
+- Height of POWER and other LINES
+- TRAIN LINES
+- Roundabouts and reverse camber corners
+
+UNLOADING FROM TRUCK (s11.2):
+- Semi-trailer must be located on FIRM, LEVEL GROUND
+- SIDE SLOPE must not exceed 2 DEGREES (2 degrees is usually just discernible to the human eye)
+- CHOCK the WHEELS of the vehicle in addition to applying park brake
+- Unload in PROGRESSIVE MANNER to keep trailer tilt to a minimum (e.g. on A-frame with multiple panels each side: remove ONE from each side alternately)
+- May be necessary to lower FRONT SUPPORT LEGS of semi-trailer before removing panels — reduces trailer movement
+- SEMI-TRAILER MUST NEVER BE MOVED after restraint system is released
+- During unloading: ONLY persons involved in unloading allowed in the area around the vehicle
+- NO PERSONS should stand beside vehicle in area where they would be struck by a falling panel
+
+SLINGING THE LOAD AT HEIGHT (s11.3):
+- Pre-cast panels on A-frames typically have lifting inserts on TOP EDGE — dogger may need to work MORE THAN 2 METRES above ground
+- USE OF LADDERS TO SLING LOAD may be UNACCEPTABLE — dogger needs both hands free and ladder is difficult to secure
+
+ACCEPTABLE ALTERNATIVES for safe dogger access:
+- WALKWAY along length of A-frame with barrier AT LEAST 900 mm HIGH on both sides; ladder access at rear of trailer
+- PRE-ATTACHED SLINGS on panels reachable from ground
+- BOOM TYPE EWP — basket can be moved close to sling connection points
+- MOBILE SCAFFOLDING with edge protection and safe access
+- LOADING BAY beside semi-trailer
+
+STORAGE OF PANELS (s11.4):
+- Stored panels must be STABLE even in WINDY CONDITIONS
+- Engineer may need to provide guidance on storage as loads applied during storage may differ from in-wall loads
+- Panels laid FLAT must NOT be stored directly on the ground — use MINIMUM TWO SUPPORT POINTS (timber bearers); more for large panels to prevent cracking
+- When STACKED HORIZONTALLY: support points must be DIRECTLY ABOVE EACH OTHER (unless engineer specifies otherwise)
+- STACK HEIGHT: should not exceed TWICE THE ELEMENT WIDTH unless documented by a competent person
+- Where element stored on a SUSPENDED FLOOR SLAB: must be APPROVED IN WRITING by the design engineer of the slab
+- Store panels where UNLIKELY TO BE STRUCK BY VEHICLES (not adjacent to roads)
+
+VISUAL INDICATORS:
+- A-frame delivery without accessible walkway or EWP for dogging at height = non-compliance
+- Dogger using unsecured ladder with both hands occupied to attach slings = non-compliance
+- Side slope on unloading area visibly more than 2 degrees = non-compliance
+- Panel stack height exceeding twice element width without written documentation = non-compliance
+- Panels stored on suspended slab without written engineer approval = non-compliance
+- Panels stored immediately adjacent to vehicle access routes = flag
+- Semi-trailer moved after restraint released = serious incident risk; stop work
+
+---
+
+CHUNK 15: Crane Selection, Capacity and Lift Planning
+Section: CoP s12, s12.1, s12.2; AS 1418.5
+Topic: Lift plan requirements, crane capacity rules, radius adjustments and general mobile crane requirements for panel lifting
+
+LIFT PLAN — REQUIRED PRIOR TO LIFTING (s12.1):
+Must include a DIMENSIONED SITE PLAN showing:
+- Crane SET-UP POSITION(S) on site
+- Locations where panels are to be LIFTED FROM and TO, with operating RADIUS of crane shown
+- Areas where OBSTACLES (walls, braces) may be in the TRAVELLING or SLEW PATH of the crane
+- Areas where crane CANNOT be set up (trenches, covered penetrations)
+
+Lift plan must also specify:
+- TYPE and SET-UP OF LIFTING GEAR to be used
+- Responsibilities for RIGGING, DOGGING and SPOTTING duties
+
+CRANE CAPACITY REQUIREMENTS (s12.2):
+- Crane capacity MUST be ADEQUATE for the LARGEST panel mass, RADIUS and BOOM LENGTH used
+- Maximum rated capacity at slew centre rarely gives practical indication of actual lifting capacity
+- Mobile cranes used on tilt-up usually have maximum rated capacity of AT LEAST THREE TIMES the mass of the heaviest panel as a GENERAL GUIDE (e.g. 20-tonne panel = 60-tonne crane capacity minimum as a guide)
+
+RADIUS ADJUSTMENT FOR FACE LIFTERS:
+- When lifting with FACE LIFTERS: panel's centre of gravity is at GREATER RADIUS than the bottom edge of the panel
+- ADD AT LEAST 1.5 METRES to the working radius to account for this (more for very tall panels)
+- Crane MUST have adequate capacity at the GREATER (adjusted) radius
+- Crane operator must show the load is within the load chart capacity
+- Load includes: PANEL WEIGHT + LIFTING GEAR WEIGHT + DYNAMIC FACTORS + HOOK BLOCK WEIGHT (unless load chart specifies otherwise)
+
+VISUAL INDICATORS:
+- No lift plan available on site before panel lifting commences = non-compliance
+- Lift plan without dimensioned site plan or crane set-up positions = incomplete
+- Crane operating radius not adjusted by at least 1.5 m for face lifting = flag; may exceed capacity
+- Crane rated capacity less than three times heaviest panel mass without specific engineering justification = flag
+- Crane operating over covered pits or trenches = non-compliance; must be pre-checked
+
+---
+
+CHUNK 16: Pick and Carry Cranes — Types and Limitations
+Section: CoP s12.3; AS 1418.5
+Topic: Types of mobile cranes used in tilt-up, limitations of rubber-tyred articulated cranes, and load chart rules
+
+THREE TYPES OF PICK AND CARRY CRANES:
+1. LATTICE BOOM CRAWLER CRANES — used on majority of tilt-up jobs; large lifting capacity and good stability
+2. ARTICULATED NON-SLEWING CRANES — used on some smaller panel jobs
+3. ROUGH TERRAIN HYDRAULIC SLEWING — can be used on outriggers; not used often in tilt-up
+
+RUBBER TYRED ARTICULATED CRANES — GENERALLY NOT SUITED for tilt-up because:
+- Maximum capacity of largest model: 25 TONNES — generally only suitable for panels of 8 TONNES OR LESS
+- MORE PRONE TO OVERTURNING than crawler cranes due to:
+  - Being articulated
+  - Supported by RUBBER TYRES that COMPRESS
+  - Wheels more prone to enter GROUND DEPRESSIONS than tracks
+  - Hydraulic booms HEAVIER than lattice booms
+
+LOAD CHART RULES FOR PICK AND CARRY MODE (AS 1418.5 s9):
+- Load chart based on 66.6% OF TIPPING where travel speed is GREATER THAN 0.4 m/s (1.44 km/h)
+- Load chart based on 75% OF TIPPING where travel speed is LESS THAN 0.4 m/s
+
+VISUAL INDICATORS:
+- Rubber tyred articulated crane being used for panels exceeding 8 tonnes = serious flag; review capacity and stability
+- Crane travelling with a load on uneven ground = flag; verify speed and de-rating
+- Crane on soft or uneven ground without capacity de-rating assessment = non-compliance
+
+---
+
+CHUNK 17: Slewing Cranes on Outriggers — Setup and Hazards
+Section: CoP s12.4; AS 1418.5
+Topic: Setup requirements, positioning hazards and counterweight clearance for slewing cranes on outriggers
+
+SLEWING CRANES ON OUTRIGGERS:
+- Must REMAIN IN ONE POSITION while performing a lift (unlike pick and carry)
+- Must be located so CASTING BED and FINAL PANEL POSITION are both within SAFE OPERATING RADIUS
+
+COUNTERWEIGHT HAZARD:
+- Crane MUST be positioned so COUNTERWEIGHT CANNOT CONTACT obstructions (panels, panel braces) when slewing
+- If clearance cannot be achieved: SUITABLE CONTROL MEASURES must be implemented (see s15)
+- Larger cranes increase risk of counterweight contacting braces and panels
+- Larger cranes are more difficult to safely manoeuvre around site
+
+ADVANTAGES OF LARGER CAPACITY SLEWING CRANES:
+- Reduces need for repositioning between lifts
+
+VISUAL INDICATORS:
+- Slewing crane positioned where counterweight path intersects installed panel braces = serious non-compliance; stop work
+- No controls visible for managing counterweight swing near erected panels = flag
+
+---
+
+CHUNK 18: Crane Ground Conditions — Slope, Bearing Capacity and Stability
+Section: CoP s12.5, s12.6
+Topic: Ground slope and condition requirements for mobile cranes, de-rating requirements, and outrigger setup
+
+GROUND SLOPE — PICK AND CARRY CRANES:
+- WHERE ground slope EXCEEDS 1 DEGREE: WRITTEN EVIDENCE that crane can safely walk a load for that gradient must be provided
+- Evidence to be from CRANE MANUFACTURER or COMPETENT PERSON (e.g. experienced engineer)
+- Mobile plant operators are NOT QUALIFIED to calculate de-rating or boom lowering for sloping ground
+- A SIDE SLOPE of only 2–3 DEGREES can have a DRASTIC EFFECT on crane stability
+- EXAMPLE: Tests by one manufacturer showed capacity should be DE-RATED BY MORE THAN 70 PERCENT at a 5-degree side angle (maximum boom extension, luff angle and steering articulation)
+- Factors increasing effective side angle: SOFT GROUND, PNEUMATIC TYRES, GROUND DEPRESSIONS, SPRING MOVEMENT (where lockouts not fitted)
+- SIDE GRADIENTS are generally MORE CRITICAL than gradients in direction of travel
+
+WHEN GROUND BEARING CAPACITY VERIFICATION IS REQUIRED:
+- Ground not compacted
+- Muddy or very wet conditions
+- Crane and/or panels are particularly heavy (e.g. panels over 25 tonnes)
+- Working radius of crane is large
+- Underground services or cavities identified
+- Combination of the above
+
+GEOTECHNICAL VERIFICATION: from a COMPETENT PERSON (geotechnical or soil engineer) from the person in control of the site
+
+CRANES ON OUTRIGGERS — SETUP REQUIREMENTS (s12.6):
+- TIMBERS correctly "PIG STIED" under outrigger pads; minimum size and strength per crane manufacturer's specifications
+- Crane NOT set up next to EXCAVATIONS or over COVERED GROUND CAVITIES
+- Prior to setup: information on EXCAVATIONS and UNDERGROUND SERVICES must be obtained from site management
+- Crane set up LEVEL to within 1 DEGREE OR LESS — level indicator (bubble gauge or electronic) must be provided
+- Area of OUTRIGGER TIMBERS or STEEL PLATE must be adequate for loadings and bearing capacity of ground
+- On SOFT GROUND: minimum bearing area should be CALCULATED by the crane operator
+
+VISUAL INDICATORS:
+- Crane operating on visibly sloped ground (greater than 1 degree) without written de-rating documentation = non-compliance
+- Ground slope of 2–3 degrees with no capacity de-rating = serious non-compliance; overturn risk
+- Crane on outriggers not level (bubble gauge not centred) = non-compliance
+- Outrigger pads directly on soft ground without pig-stied timbers = non-compliance
+- Crane set up adjacent to trench or covered pit = non-compliance
+- Underground service information not obtained before crane setup = non-compliance
+- Panels exceeding 25 tonnes without geotechnical assessment = flag
+
+---
+
+CHUNK 19: Lifting Gear — Inspection and Requirements
+Section: CoP s12.7; AS 2759; AS 3775; AS 4497.2; AS 1353.2
+Topic: Lifting gear inspection requirements, tagging, compatibility and safe condition criteria
+
+LIFTING GEAR STANDARDS:
+- Steel wire rope: AS 2759
+- Chain slings Grade T: AS 3775
+- Roundslings synthetic fibre — Care and use: AS 4497.2
+- Flat synthetic-webbing slings — Care and use: AS 1353.2
+
+MINIMUM CHECKS BEFORE USE:
+- Lifting gear is TAGGED with all relevant information (e.g. for chain sling: grade of chain, safe working load, manufacturer, chain size)
+- Lifting HOOKS are provided with OPERABLE SAFETY LATCHES
+- SHACKLES are prevented from UNSCREWING
+- Lifting EYES and INSERTS are COMPATIBLE and the SAME PROPRIETARY BRAND
+- Lifting SLINGS are NOT DAMAGED:
+  - No excessive wear
+  - No damaged strands
+  - No cracks
+  - No deformation
+  - No severe corrosion
+- Sling is APPROPRIATE FOR THE LOAD being lifted:
+  - Adequate CAPACITY
+  - Adequate PROTECTION from SHARP EDGES
+
+VISUAL INDICATORS:
+- Lifting slings without visible tags or markings = non-compliance
+- Lifting hooks without safety latches or with non-functioning latches = non-compliance
+- Lifting eyes of different brand to inserts (incompatible connection) = serious non-compliance; failure risk
+- Slings showing visible wear, damaged strands, kinks or corrosion = non-compliance; remove from service
+- No edge protection where sling passes over sharp concrete corner = flag
+
+---
+
+CHUNK 20: Exclusion Zones — Panel Erection
+Section: CoP s13.1
+Topic: Setting up and maintaining exclusion zones during tilt-up and pre-cast panel lifting
+
+WHY EXCLUSION ZONES ARE MORE CRITICAL IN PANEL WORK:
+- Panels are highly SUSCEPTIBLE TO WIND LOADS because of their shape and size
+- If a panel falls or an insert fails while attached to crane: crane VERY LIKELY TO OVERTURN; other panels may be struck
+- Concrete element lifting has more variables than steel lifting: concrete strength, steel content and position, insert integrity, correct clutch operation
+- IMPRACTICAL to provide effective secondary back-up lifting system for tilt-up panels (panel is cast on ground; cannot place sling around it easily)
+
+MANDATORY EXCLUSION ZONE REQUIREMENTS:
+- ALL PERSONS NOT INVOLVED IN ERECTION must be prevented from accessing the erection zone
+- Workers must NOT be located where they could be struck by the panel in the event of lifting gear failure or strong winds
+- Exclusion zone MUST prevent unauthorised persons from gaining access
+- Methods: PARA-WEBBING, SIGNAGE, FENCING depending on ease of access and likely presence of persons
+
+EXCLUSION ZONE EXTENT — must include area where persons cannot be struck by:
+- The CRANE FALLING OVER
+- The PANEL BEING LIFTED falling over
+- Another STRUCTURAL ELEMENT FAILING and falling as a result of being struck by crane or panel
+
+DURATION:
+- Exclusion zone must be MAINTAINED DURING PANEL LIFTING until:
+  - Braces have been SECURED
+  - Lifting slings have been REMOVED
+
+ROADS AND TRAFFIC:
+- WHERE a road or vehicular access way is in the exclusion zone: TRAFFIC must be prevented from passing through while panels are being lifted and until panels are secured with braces
+
+ADJACENT BUILDINGS:
+- Adjacent buildings that may COLLAPSE in event of a panel falling: persons must be removed from risk areas
+- If this CANNOT be ensured: panel lifting on that part of the job must be done OUT OF HOURS when persons are not in the building
+
+VISUAL INDICATORS:
+- No exclusion zone established around panel lifting area = serious non-compliance; stop work
+- Exclusion zone not maintained after panel lifted — braces not yet secured and workers entering zone = non-compliance
+- Traffic passing through area during panel lifting = non-compliance
+- Workers without involvement in erection standing in panel fall zone = non-compliance
+- Para-webbing or barriers present but gaps allowing access = flag
+
+---
+
+CHUNK 21: Lifting Pre-cast Elements Over Workers — Permitted Conditions
+Section: CoP s13.2
+Topic: Limited circumstances where pre-cast element lifting over workers is permitted and mandatory conditions
+
+GENERAL PRINCIPLE:
+- Lifting pre-cast elements OVER WORKERS is NOT A PREFERABLE METHOD — other erection methods should be investigated first
+
+WHEN IT MAY BE PERMITTED:
+- High-rise projects where exclusion zones for workers are extremely difficult to establish
+- Large projects with multiple crane operation (crane operating radii overlap)
+
+MANDATORY CONDITIONS for lifting pre-cast elements over workers:
+1. EFFECTIVE BACK-UP LIFTING SYSTEM must be provided for the element in event of primary system failure
+2. Back-up system must be DESIGNED and CERTIFIED by a SUITABLY QUALIFIED ENGINEER
+3. PRIMARY and BACK-UP LIFTING SYSTEMS must NOT be removed until the concrete element is SECURED IN PLACE and no longer suspended by the crane
+4. Measures must be implemented to KEEP LIFTING OVER WORKERS TO A MINIMUM
+5. CRANE must be INSPECTED prior to lifting — all parts and safety features operating per manufacturer's specifications including:
+   - Load indicators
+   - Overload cut-off systems
+   - Braking systems
+6. LIFTING GEAR must be inspected prior to lifting and NOT DAMAGED or WORN (chains, wire ropes, hooks, lifting eyes, spreaders, equalising sheaves); all slings tagged per relevant Australian Standard; PROOF TESTING within previous 12 MONTHS RECOMMENDED
+7. WIND LIMIT: Lifting must NOT continue when wind speed EXCEEDS 45 km/hr (12.5 m/s) under ANY circumstances (in practice, lower wind speeds may also be unsafe depending on surface area)
+
+BACK-UP LIFTING SYSTEM REQUIREMENTS:
+- Must withstand ADDITIONAL IMPACT LOADING as it takes up slack between primary and secondary systems
+- Must EFFECTIVELY CONTAIN THE LOAD in event of primary system failure (prevent any part falling to ground)
+
+VISUAL INDICATORS:
+- Lifting pre-cast elements over workers without an engineer-certified back-up lifting system = serious non-compliance; stop work
+- Back-up system removed before element is secured in place = serious non-compliance
+- Lifting in wind conditions above 45 km/hr = non-compliance; stop work
+- Crane inspection records not available before lifting over workers = non-compliance
+- Sling proof test more than 12 months old = flag
+
+---
+
+CHUNK 22: Panel Lifting and Erection — General Safety Requirements
+Section: CoP s14.1; AS 3850
+Topic: Panel marking, suspension angle, brace pre-attachment, crane support duration and general erection safety
+
+MANDATORY REQUIREMENTS during panel lifting and erection:
+- PANEL MASS must be CLEARLY MARKED on the panel PRIOR TO LIFTING (found on panel drawing)
+- Panels must be SUSPENDED with the face as NEAR TO VERTICAL AS PRACTICABLE (usually 5–15 DEGREES OFF VERTICAL) to assist placement
+- BOTTOM EDGES of panels must be HORIZONTAL — bottom corner must NOT be noticeably lower than the other corner
+- NO PERSONS to be located UNDERNEATH THE PANEL while it is being lifted and moved (except in limited pre-cast situations per s13.2)
+- BRACES — whenever possible SHOULD BE ATTACHED TO THE PANEL PRIOR TO LIFTING (reduces need for work at height and minimises time panel is crane-supported)
+- LIFTING CLUTCH RELEASE LINES must be fitted so clutches can be disengaged WITHOUT WORKERS NEEDING TO CLIMB ON TOP OF PANEL (Diagram 9)
+- DOWEL PINS must be fitted into bottom edge of panels or into footings PRIOR TO LOWERING — assist correct location and wind resistance
+- CRANE SUPPORT to be MAINTAINED until ALL BRACES have been installed and effectively secured to panel and footings (hoist rope and lifting slings must NOT go slack until this is achieved)
+- LEVELLING SHIMS must NOT EXCEED 40 MM HEIGHT (assists maintaining panel stability)
+
+VISUAL INDICATORS:
+- Panel mass not marked on panel = non-compliance
+- Panel hanging at more than approximately 15 degrees from vertical = flag; check rigging
+- Bottom edge of panel visibly not horizontal during lifting = flag; rigging incorrect or insert locations wrong
+- Workers underneath suspended panel = serious non-compliance; stop work
+- Crane slack before all braces are bolted and verified = serious non-compliance
+- Workers climbing on top of panel to release lifting clutches = non-compliance
+- Levelling shims exceeding 40 mm = non-compliance
+- Braces attached after panel is placed and crane released = non-compliance; crane must remain supporting
+
+---
+
+CHUNK 23: Lifting of Tilt-Up Panels — Specific Requirements
+Section: CoP s14.2; AS 3850
+Topic: Face lifters, panel suction, clutch engagement, rigging configurations and suicide lifting prohibition
+
+FACE LIFTERS:
+- Tilt-up panels cast on casting bed; FACE LIFTING INSERTS generally used to lift panels off bed
+- Number of face lifters depends on capacity and panel size: USUALLY 4–8 LIFTERS
+- Minor variation from drawing position acceptable IF:
+  - Insert installed per manufacturer's specification (tied to or near reinforcement)
+  - Panel suspended such that BOTTOM EDGE IS HORIZONTAL
+
+PANEL SUCTION (releasing from casting bed):
+- Force required to overcome panel suction should NOT BE EXCESSIVE
+- If panel does NOT come free when crane indicator registers COMBINED WEIGHT of panel, rigging and other suspended dead loads (e.g. strongbacks): LIFTING MUST BE STOPPED
+- Any wedging or jacking to assist release MUST BE APPROVED BY THE ENGINEER
+
+BEFORE LIFTING COMMENCES:
+- Lifting CLUTCHES must be FULLY ENGAGED prior to lifting
+- Lifting GEAR and SHEAVES must be OPERABLE and IN GOOD CONDITION
+- Lifting gear and sheaves must NOT BECOME TANGLED as crane hook is hoisted
+
+SUICIDE LIFTING — PROHIBITED:
+- Each tilt-up panel MUST be lifted so that, while suspended, it LEANS AWAY FROM THE CRANE
+- "SUICIDE LIFTING" = panel tilts TOWARDS the crane — if lifting system fails, panel falls against crane and causes crane to OVERTURN
+- SUICIDE LIFTING MUST BE AVOIDED due to very high risk of serious injury
+
+COMMON RIGGING CONFIGURATIONS (Diagram 10):
+- 2×1, 2×2, 4×1, 4×2 configurations
+- 2×4, 4×2 for large/heavy panels
+- EDGE LIFT configuration available
+- Minimum sling length = 2D (where D = depth of lifting insert)
+- For 4-point: minimum sling length = C+300mm or 2D (per configuration)
+- Lifting insert supplier may specify maximum angle for insert loading
+
+VISUAL INDICATORS:
+- Panel leaning towards crane during lift = serious non-compliance; suicide lifting; stop work immediately
+- Crane indicator reading higher than panel + rigging + strongback mass before panel is free = stop; do not continue
+- Lifting clutches not fully set before crane takes up load = serious non-compliance
+- Workers on top of panel during lifting = non-compliance
+- Panel lifted without checking sling/sheave condition and tangling risk = flag
+
+---
+
+CHUNK 24: Rotation of Pre-cast Panels — Crane Capacity Rules
+Section: CoP s14.3; AS 3850
+Topic: Crane capacity rules for rotating pre-cast panels from horizontal to vertical, conditions and rooster sheave requirements
+
+ROTATION PROCESS:
+- Pre-cast panels on A-frames: EDGE LIFTING INSERTS cast in — usually TWO in top edge and TWO OR FOUR in side edge
+- Panel lifted off truck using SIDE EDGE inserts
+- Rotated through ARC OF 90 DEGREES to achieve vertical position — using ONE or TWO CRANES
+- During rotation: MORE THAN 50% of panel weight will be applied to ONE hoist rope due to cantilever effect
+
+INDUSTRY RULE FOR CRANE CAPACITY (where engineer has not specified):
+- ONE CRANE: AUXILIARY WINCH capacity MINIMUM 75% of panel mass
+- TWO CRANES: crane handling LESSER LOAD must also have MINIMUM 75% of panel mass capacity
+
+CONDITIONS THAT MUST ALL BE COMPLIED WITH TO USE THIS RULE:
+- Distance from AUXILIARY WINCH ROPE LIFTING POINT to END OF PANEL: NOT TO EXCEED 1/4 OF PANEL LENGTH
+- INCLUDED ANGLE between main hoist rope and auxiliary hoist rope: NOT TO EXCEED 45 DEGREES
+- Panels to be rotated so that FINAL SUSPENDED POSITION is by MAIN WINCH (one crane) or LARGER CAPACITY CRANE (two cranes)
+- Combined weight of AUXILIARY HOOK BLOCK and LIFTING GEAR: NOT TO EXCEED 200 KG
+- ONE CRANE: main winch and auxiliary winch drives must be INDEPENDENT (separate clutches)
+- NO CUT-OUTS in the HALF OF THE PANEL CLOSEST TO THE MAIN WINCH ROPE LIFTING POINT
+- Panel must be ADEQUATELY REINFORCED to withstand lifting stresses
+
+IF CONDITIONS CANNOT BE MET:
+- Engineer MUST verify the minimum required capacity of the hoist ropes
+
+ROOSTER SHEAVES:
+- Short boom extension and sheave set-up attached to boom head when panels are rotated
+- Rooster sheaves and associated rigging on boom head MUST BE DESIGNED AND CERTIFIED BY AN ENGINEER
+
+VISUAL INDICATORS:
+- Panel rotation with included angle between ropes exceeding 45 degrees = non-compliance
+- Auxiliary winch block and gear exceeding 200 kg = non-compliance
+- Cut-outs present in half of panel closest to main winch lifting point = flag; engineer review required
+- Rooster sheaves with no engineering certification = non-compliance
+- One crane used for rotation without independent winch clutches = non-compliance
+
+---
+
+CHUNK 25: Operation of Plant Near Braces and Panels — Hazards and Controls
+Section: CoP s15
+Topic: Hazards of mobile plant near installed panel braces and control measures to prevent panel collapse
+
+WHY BRACE IMPACT IS EXTREMELY DANGEROUS:
+- Braces are designed to resist WIND LOADS only — NOT impact loads from moving plant
+- When brace is STRUCK and BENT ("kinked"):
+  - Panel pulled towards brace side
+  - Braces exposed to DEAD-WEIGHT of panel — not designed for this load
+  - KINKED brace has MUCH LOWER compressive strength than undamaged condition
+- Consequences: RAPID and UNCONTROLLED COLLAPSE — HIGH RISK OF FATALITIES to plant operators and others nearby
+- DOMINO EFFECT: falling panel likely to strike other panels
+
+PLANT TYPES CREATING THIS HAZARD:
+- Backhoes, mobile cranes, excavators, EWPs and all other mobile plant
+- PARTICULARLY: cranes erecting structural steelwork to tie panels together (crane AND suspended load must not contact braces/panels)
+
+INADEQUACY OF SPOTTERS ALONE:
+- Using a spotter as the SOLE control measure may NOT be effective due to:
+  - Noise on site
+  - Delay in plant operator acting on spotter's signals
+  - Incorrect interpretation of signals
+
+GENERAL RULE:
+- Mobile plant SHOULD GENERALLY NOT be operated or travel CLOSE TO erected panels and braces UNLESS there is a very good reason
+- UNDER NO CIRCUMSTANCES shall mobile plant ACTUALLY CONTACT an installed brace
+
+CONTROL MEASURES to reduce risk of plant contacting braces or panels:
+- SPOTTER: to signal plant operator — must ensure effective communication accounting for noise and visibility
+- HAZARD TAPE, PARA-WEBBING and/or SIGNAGE to make brace positions obvious — particularly near access areas
+- USE OF APPROPRIATE PLANT: e.g.:
+  - Mobile cranes positioned where slewing counterweight cannot contact braces
+  - BOOM TYPE EWPs instead of scissor lifts (may reduce risk in some situations)
+- ALTERNATIVE TRAVEL ROUTES: plant travelling site should NOT travel close to braces if alternative route exists
+- NEVER DRIVE UNDERNEATH an installed brace — no legitimate reason to do so
+
+VISUAL INDICATORS:
+- Mobile plant operating within brace zone without any control measures = serious non-compliance; stop work
+- Brace showing kink or deformation from previous contact = serious non-compliance; remove panels must be re-assessed by engineer before work continues
+- Structural steel erection crane with no exclusion or control for counterweight/load near panel braces = serious non-compliance
+- Plant travelling underneath installed braces = non-compliance
+- Spotter present but no additional physical controls (no tape, barriers, or route segregation) = non-compliance as sole control
+
+---
+
+CHUNK 26: Working at Height — General Requirements in Tilt-Up Construction
+Section: CoP s16, s16.1, s16.2, s16.3; AS 1418.10; AS 2550.10; AS/NZS 1891.1; Scaffolding Code of Practice; Managing the risk of falls CoP
+Topic: EWP, scaffolding and ladder requirements for working at height in tilt-up and pre-cast construction
+
+ACTIVITIES REQUIRING WORK AT HEIGHT:
+- Attaching panels to one another or to structural steelwork prior to removing braces
+- ATTACHMENT and REMOVAL of BRACES to and from panels
+- Application of CAULKING to vertical joints between panels
+- PATCHING WORK
+
+PREFERRED METHOD — PLATFORMS WITH EDGE PROTECTION:
+- EWPs or mobile scaffolding
+- LADDERS should NOT be used unless: height is not excessive AND work is SHORT DURATION AND LIGHT DUTY
+
+LADDER USE FOR BRACE REMOVAL — MAY BE UNACCEPTABLE because:
+- Person on ladder may need to SUPPORT END OF BRACE after unbolting — must step down while holding brace in one hand
+- Excessive HEIGHT for larger panels makes ladder use inherently risky (flexing, difficult to secure)
+
+ACCEPTABLE LADDER USE FOR BRACE REMOVAL (if justified):
+- Person on ladder ONLY UNDOES THE BOLT
+- Brace slowly LOWERED BY WORKERS ON GROUND who ensure foot remains in contact with panel
+- ONLY ACCEPTABLE where brace weight is not excessive and lowering can be controlled
+
+ELEVATING WORK PLATFORMS — EWPs (s16.1):
+- BOOM LIFT type EWPs preferred over scissor lifts in tilt-up construction because:
+  - Superior reach to access awkward areas
+  - Do NOT need to be driven right next to erected panel
+  - More 'rough terrain' boom lift models available
+- EWPs must comply with AS 1418.10
+- Many EWPs have AUDIBLE WARNING DEVICE or MOTOR CUT-OUT activating at SIDE GRADIENT EXCEEDING 5 DEGREES
+- REQUIRED on EWP identification plate: unit make, model number, serial number; statement complying with AS 1418.10
+- FALL PROTECTION: persons in BOOM TYPE EWPs must wear:
+  - FULL BODY FALL ARREST HARNESS complying with AS/NZS 1891.1
+  - Lanyard with PERSONAL ENERGY ABSORBER
+  - Attached to FALL ARREST ANCHOR IN BASKET rated at 15 kN
+- EWP must have EVIDENCE of maintenance demonstrating it is safe
+- SAFE WORKING LOAD clearly marked on basket/platform and must NOT be overloaded
+- EWPs must ONLY be operated per manufacturer's specifications
+
+SCAFFOLDING (s16.2):
+- Guidance per Scaffolding Code of Practice
+- FREE STANDING HEIGHT to work platform must NOT exceed THREE TIMES THE LEAST BASE WIDTH
+- ACCESS on mobile scaffolding must be provided INTERNALLY (via trapdoor)
+- STANDARDS must be provided with BASE PLATES or SOLE BOARDS to distribute point loading
+- DAMAGED TUBE and COMPONENTS must NOT be used — particularly important with ALUMINIUM scaffolding (dents have major effect on strength of high tensile thin-wall tube)
+- WHERE person or object could fall 4 METRES OR MORE: scaffolding MUST be erected by a LICENSED SCAFFOLDER
+
+LADDERS (s16.3):
+- PERMITTED WORK only — material must NOT restrict movement or cause loss of balance
+- Trunk of body must remain CENTRED on ladder (no overreaching)
+- Equipment must be usable with ONE HAND (unless fall prevention control used)
+- SINGLE LADDERS: NOT TO EXCEED 6.1 METRES
+- EXTENSION LADDERS: NOT TO EXCEED 7.5 METRES
+- Load rating: AT LEAST 120 KG
+- Must be SECURED AGAINST MOVEMENT
+- Placed at ANGLE between 70–80 DEGREES to the horizontal
+- Person's feet: NOT HIGHER THAN 900 MM from the top of the ladder
+- STEP LADDERS: person's feet no higher than THIRD TREAD from top plate; must be in FULLY OPENED POSITION with locking spreader engaged; CHAIN OR ROPE SPREADERS NOT PERMITTED
+- Ladders must NOT be used on scaffolding or EWPs to gain extra height
+- Must NOT be used in access ways
+- Must NOT be used where ladder or user could contact electrical power lines
+- Metal or metal-reinforced ladders must NOT be used near LIVE ELECTRICAL EQUIPMENT
+
+VISUAL INDICATORS:
+- Workers in boom type EWP without full body fall arrest harness = serious non-compliance
+- EWP fall arrest anchor not rated at 15 kN = non-compliance
+- Worker using unsecured ladder with both hands occupied = non-compliance
+- Single ladder exceeding 6.1 m or extension ladder exceeding 7.5 m = non-compliance
+- Mobile scaffolding free-standing height exceeding three times its narrowest base width = non-compliance
+- Scaffolding where fall height is 4 m or more not erected by a licensed scaffolder = non-compliance
+- Worker's feet higher than 900 mm from top of ladder = non-compliance
+- Ladder placed at angle less than 70 or more than 80 degrees = non-compliance
+- Aluminium scaffolding with dented or deformed tube = non-compliance; remove from service
+- Step ladder used with chain/rope spreader = non-compliance
+- EWP overloaded beyond marked SWL = serious non-compliance
+
+---
+
+CHUNK 27: Proximity to Overhead Powerlines
+Section: CoP s17; Electrical Safety Regulation 2013; Electrical Safety Code of Practice — Working near overhead and underground electric lines; AS 4024.1501
+Topic: Exclusion zones, clearances, safety devices and responsibilities near overhead powerlines on tilt-up sites
+
+WHY THIS IS A HIGH RISK IN TILT-UP CONSTRUCTION:
+- Panels are very tall
+- Mobile cranes and other plant are tall and operate at height
+- Workers are required to work at heights where contact with power lines is more likely
+
+LEGAL REQUIREMENTS — Electrical Safety Regulation 2013:
+- Workers and plant must maintain EXCLUSION ZONE of 3 METRES around LIVE OVERHEAD POWER LINES
+- HIGH VOLTAGE LINES: 6 METRES and 8 METRES EXCLUSION ZONES depending on voltage
+- (Limited exceptions exist — refer to Electrical Safety Regulation 2013 and Electrical Safety Code of Practice)
+
+WHEN OPERATING PLANT NEAR POWER LINES — factors to consider:
+- Identify MINIMUM CLEARANCE DISTANCE from closest part of crane or suspended load to the power line
+- Make allowances for SWAY (caused by wind) and SAG (caused by temperature fluctuation) of overhead lines
+- Persons operating plant and vehicles MUST STAY OUTSIDE THE EXCLUSION ZONE at all times
+- A "SAFETY OBSERVER" is required when the crane or plant could enter the exclusion zone (per Electrical Safety Code of Practice)
+
+RESPONSIBILITY:
+- CRANE OWNER and BUILDER must check exclusion zone distances with the person in control of the overhead electric line
+- Exclusion zones for QUEENSLAND RAIL power lines and some power authorities may DIFFER from standard requirements
+
+SAFETY DEVICES available:
+- TIGER TAILS: visual aid to highlight power line location; only suitable for LOW VOLTAGE (under 1000 volts) lines — does NOT insulate; exclusion zone must still be maintained
+- LIMITING DEVICES to prevent crane jib or load entering exclusion zone, or warn operator before entry; more suitable for tower cranes; must be designed to FAIL SAFE or meet CATEGORY 4 RELIABILITY per AS 4024.1501
+- ELECTRONIC PROXIMITY DEVICES to audibly warn crane operator when approaching minimum clearance distance
+
+CRITICAL RULE:
+- REGARDLESS of whether safety devices are in use: EXCLUSION ZONE MUST NOT BE ENCROACHED
+
+FURTHER INFORMATION: Electrical Safety Regulation 2013; Electrical Safety Code of Practice 2010; Electrical Safety Office: https://www.worksafe.qld.gov.au/electricalsafety
+
+VISUAL INDICATORS:
+- No exclusion zone marking near overhead powerlines on tilt-up site = non-compliance
+- Crane boom within 3 m of low-voltage powerlines = serious non-compliance; stop work
+- Tiger tails present on high-voltage lines (incorrect application) = flag; tiger tails only for under 1000V
+- No safety observer when crane is operating close to powerline exclusion zone = non-compliance
+- Powerline sway/sag not considered in crane positioning = flag
+
+---
+
+CHUNK 28: Licensing Requirements — Panel Erection and Crane Operation
+Section: CoP s18; WHS Regulation
+Topic: Mandatory licence classes required for panel erection crew, crane operators, doggers, EWP operators and scaffolders
+
+PANEL ERECTION CREW — LICENCE REQUIREMENTS:
+- Must hold INTERMEDIATE RIGGING (RI) or ADVANCED RIGGING (RA) licence classes, OR be TRAINEES
+- TRAINEES: must be SUPERVISED; LOGBOOKS showing previous training must be kept
+
+CRANE OPERATORS:
+- Must hold APPROPRIATE LICENCES
+- Licences issued under previous legislation or by other State authorities may be used IF competencies required are WITHIN THE SCOPE of that licence
+
+MOBILE CRANE OPERATOR LICENCE CLASSES (non-vehicle loading cranes):
+- CN: Non-slewing mobile crane with capacity MORE THAN 3 TONNES
+- C2: Slewing mobile crane with capacity 20 TONNES OR LESS
+- C6: Slewing mobile crane with capacity 60 TONNES OR LESS
+- C1: Slewing mobile crane with capacity 100 TONNES OR LESS
+- C0: Slewing mobile crane with capacity MORE THAN 100 TONNES
+
+DOGGING DUTIES:
+- Any person with a DOGGER LICENCE class or a RIGGER LICENCE class is permitted to perform dogging duties
+
+EWP OPERATORS:
+- Any person operating a BOOM TYPE EWP with a BOOM LENGTH OF 11 METRES OR MORE must hold a WP TYPE LICENCE CLASS
+
+SCAFFOLDING:
+- Persons erecting scaffolding where a person or object could fall 4 METRES OR MORE must hold AT LEAST a BASIC SCAFFOLDING (SB) LICENCE CLASS or be TRAINEES
+
+QUALIFICATION REGISTER (Appendix D):
+- A qualification register for persons involved in panel erection should be maintained on site
+- Must record: Name, Licence Class, Licence Number, Activity involved in
+- Trainee register: Trainee name, Activity, Logbook supplied, Supervisor, Period of experience
+
+VISUAL INDICATORS:
+- Panel erection crew member without RI or RA licence and not recorded as trainee with supervising licensed rigger = serious non-compliance; stop work
+- Crane operator licence class insufficient for crane capacity or type (e.g. C2 operating 60-tonne crane) = serious non-compliance; stop work
+- Person operating boom type EWP with boom 11 m or more without WP licence = non-compliance
+- Scaffolding being erected at 4 m+ fall height by person without SB licence = non-compliance
+- No qualification register maintained on site = non-compliance
+- Trainee working without supervision and no logbook = non-compliance
+- Person performing dogging without dogger or rigger licence = serious non-compliance
+
+---
+
+CHUNK 29: Checklists — Panel Checklist (Appendix B)
+Section: CoP Appendix B
+Topic: Panel checklist items for verifying structural integrity of concrete panels before lifting
+
+PANEL CHECKLIST — must be completed PRIOR TO PANELS BEING LIFTED:
+For each panel, the following must be recorded:
+- Panel NUMBER
+- CASTING DATE
+- Drawing NUMBER
+- CONCRETE SPECIFICATION (MPa) — both for lifting and 28-day strength
+- Constructed as per drawing — verification of:
+  - DIMENSIONS and STEEL CONTENT
+  - LIFTING INSERTS (type, location, installation)
+- DATE SUITABLE FOR LIFTING (for lifting strength and 28-day strength)
+- VERIFIER'S NAME, INITIALS and DATE
+
+For pre-cast panels: completed checklist USUALLY SUPPLIED when panels are delivered to site
+
+VISUAL INDICATORS:
+- Panel checklist not completed prior to panel being lifted = non-compliance
+- No verifier name or date on checklist = flag; cannot establish who verified
+- Lifting date earlier than date concrete reached minimum strength = serious non-compliance
+
+---
+
+CHUNK 30: Checklists — Panel Lifting and Temporary Bracing Checklist (Appendix C)
+Section: CoP Appendix C
+Topic: Detailed pre-lift and bracing checklist items for crane, lifting gear, temporary bracing and post-installed anchors
+
+PANEL LIFTING CHECKLIST — PART 1 (CRANE): to be completed BEFORE LIFTING TAKES PLACE when crane is on site:
+- Crane has ADEQUATE CAPACITY (for tilt-up: lean distance added to radius)
+- LIFT PLAN completed — includes site plan and lifting locations
+- GROUND CONDITION and SLOPE verified (pick and carry: no more than 1 degree; outrigger cranes: adequate packing under pads; no penetrations or covered pits in area)
+- CRANE SAFETY FEATURES operational: load indicator, anti-two-block, boom angle indicator, hook safety catch
+- Crane MAINTENANCE LOGBOOK complete and up to date
+
+LIFTING GEAR CHECKS:
+- Lifting clutches COMPATIBLE WITH INSERTS
+- Lifting clutches and inserts marked with MANUFACTURER'S ID
+- Lifting gear SHEAVES OPERATIONAL
+- Lifting slings SUITABLY MARKED WITH ID
+- Lifting gear TEST/INSPECTION RESULTS available
+- REMOTE RELEASE LINES fitted
+
+OTHER ITEMS:
+- Panel checklist COMPLETED (panels okay for lifting)
+- CERTIFICATION: crane operator, panel erectors (INTERMEDIATE RIGGER must be present and supervising panel placement)
+- BOND BREAKER functioning
+- Workers NOT in potential CRUSH ZONE (from crane or falling panels)
+- Workers wearing HIGH VISIBILITY CLOTHING
+- EXCLUSION ZONE for public and other buildings set up
+- POWERLINES — adequate clearance checked; legislation complied with
+
+TEMPORARY BRACING CHECKLIST — PART 2 (completed as panels are erected, before panel erector leaves site):
+
+DEADMEN OR FLOOR SLAB:
+- Drawing showing layout of panels and temporary bracing prepared
+- Deadmen/slab CONSTRUCTED per engineer's specifications
+- Deadmen/slab CONCRETE has reached strength specified by engineer
+- Cast-in anchors as specified by engineer (size, type and depth)
+
+BRACES:
+- Braces as specified by engineer or with CAPACITY EXCEEDING MINIMUM specified
+- BRACE CONDITION checked
+- MARKED with identification plate
+- CORRECT NUMBER of braces used
+- Braces installed per ENGINEER'S SPECIFICATIONS
+- Brace LOCKING PINS fitted with retaining device
+- Where PUBLIC ACCESS likely: retaining device has KEY TO UNLOCK
+- ANCHOR HEAD and WASHER size suitable for brace slot size
+
+POST-INSTALLED ANCHORS:
+- Anchor type suitable (DROP-IN, LOW-LOAD SLIP and SELF-DRILLING anchors not permitted)
+- Anchors as specified or capacity exceeding minimum
+- Documentation stating SETTING TORQUE available
+- Verification that CORRECT TORQUE applied (torque wrench readings)
+- Chemical anchors: documentation verifying every anchor PROOF LOADED
+
+VISUAL INDICATORS:
+- Panel lifting checklist incomplete or unsigned before crane commences = non-compliance
+- Anti-two-block device not operational = serious non-compliance; crane must not operate
+- High visibility clothing not worn = non-compliance
+- Bracing checklist not completed before panel erector leaves site on day of erection = non-compliance
+
+---
+
+CHUNK 31: Key Standards and Referenced Documents
+Section: CoP throughout; Appendices
+Topic: All Australian Standards, Codes of Practice and other documents referenced in the Tilt-up and Pre-cast CoP
+
+PRIMARY STANDARD:
+- AS 3850: Tilt-up concrete construction (primary technical standard referenced throughout — compliance with this standard is the basis for engineer certification)
+
+CONCRETE AND STRUCTURAL STANDARDS:
+- AS 3600: Concrete structures (panel structural design)
+- AS 1379: Specification and supply of concrete (sampling and testing guidance)
+- AS/NZS 1170.2: Structural design actions — Wind actions (wind loading design for bracing)
+
+CRANE AND LIFTING STANDARDS:
+- AS 1418.5: Cranes, hoists and winches — Mobile cranes (pick and carry load charts)
+- AS 1418.10: Cranes, hoists and winches — Mobile elevating work platforms (EWP compliance)
+- AS 2550.10: Cranes, hoists and winches — Safe use — Mobile elevating work platforms
+
+LIFTING GEAR STANDARDS:
+- AS 2759: Steel wire rope — Use, operation and maintenance
+- AS 3775: Chain slings — Grade T
+- AS 4497.2: Roundslings — Synthetic fibre — Care and use
+- AS 1353.2: Flat synthetic-webbing slings — Care and use
+
+FALL PROTECTION:
+- AS/NZS 1891.1: Industrial fall-arrest systems and devices — Harnesses and ancillary equipment
+
+MACHINERY SAFETY:
+- AS 4024.1501: Safety of machinery — General principles (limiting device reliability for powerline proximity)
+
+CODES OF PRACTICE REFERENCED:
+- Work health and safety consultation, coordination and co-operation CoP
+- Scaffolding Code of Practice
+- Managing the risk of falls at workplaces CoP
+- Electrical Safety Code of Practice — Working near overhead and underground electric lines
+
+ELECTRICAL LEGISLATION:
+- Electrical Safety Regulation 2013
+
+TRANSPORT:
+- National Transport Commission "Load Restraint Guide"
+
+CONTACTS:
+- Workplace Health and Safety Queensland: www.worksafe.qld.gov.au | 1300 362 128
+- Electrical Safety Office: https://www.worksafe.qld.gov.au/electricalsafety
+
+---

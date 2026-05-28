@@ -1,0 +1,166 @@
+DOCUMENT: Work Health and Safety Consultation, Cooperation and Coordination Code of Practice 2021 (Queensland)
+TYPE: Approved Code of Practice
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: all_workplaces, safety_management, consultation, worker_representation, construction
+SOURCE: Workplace Health and Safety Queensland (WHSQ)
+CURRENT AS AT: 2021 (varied 1 August 2022 and 27 September 2024)
+CLAUSE_PREFIX: s
+REFERENCE_STANDARD: WHS Act s16, s46, s47, s48, s49, s50–54, s70, s72, s75; WHS Regulation s309, s352, s371(2), s408, s416, s437, s546, s552, s557, s559, s561, s569, s574–575.
+NOTE: This CoP covers process and documentation requirements. Its value for SafetyScan is identifying whether consultation structures are in place on site — HSR lists, toolbox talk records, WHS management plans, safety noticeboards — rather than physical measurements.
+
+---
+
+CHUNK 1: Primary Duty to Consult
+Section: WHS Act s19, s27, s28, s47; COP s1.1
+Topic: Core legal obligation for worker consultation
+
+PRIMARY DUTY: A PCBU must consult, so far as is reasonably practicable, with workers who carry out work for the business or undertaking and who are, or are likely to be, DIRECTLY AFFECTED BY A HEALTH AND SAFETY MATTER.
+
+DUTY HOLDERS:
+- Officers: Must exercise due diligence to ensure the PCBU has appropriate processes for complying with the duty to consult workers and other duty holders
+- Workers: Must take reasonable care for their own safety and comply with reasonable instructions including procedures for consultation
+
+NATURE OF CONSULTATION:
+- Does NOT require consensus or agreement
+- But views MUST be taken into account
+- Consultation is "reasonably practicable" if it is both objectively possible and reasonable in the circumstances
+
+VISUAL INDICATORS:
+- Workers participating in a pre-start briefing or toolbox talk = active consultation occurring
+- Safety noticeboards in common areas displaying current hazard and safety information = positive information sharing
+- Toolbox talk records showing date, topic, attendee signatures = documented consultation
+- No evidence of any consultation process on a construction site = non-compliant
+- Workers unaware of site hazards or safety procedures = consultation failure
+
+---
+
+CHUNK 2: When Consultation is Mandatory
+Section: WHS Act s49; COP s2, s2.4
+Topic: Specific triggers requiring worker consultation
+
+A PCBU MUST consult with workers and their representatives when:
+- IDENTIFYING HAZARDS AND ASSESSING RISKS
+- MAKING DECISIONS ABOUT WAYS TO ELIMINATE OR MINIMISE those risks
+- Making decisions about the ADEQUACY OF FACILITIES for the welfare of workers
+- PROPOSING CHANGES that may affect the health or safety of workers (e.g. new equipment, restructuring, new processes)
+- Making decisions about procedures for:
+  - Consulting with workers
+  - Resolving health or safety issues
+  - Monitoring the health of workers or workplace conditions
+  - Providing information and training to workers
+
+VISUAL INDICATORS:
+- Written issue resolution procedure displayed in the workplace = compliant procedural development
+- Risk assessments signed by both management and workers or HSRs = documented collaborative assessment
+- New equipment introduced to site without evidence of worker consultation on risks = non-compliant
+- Changes to work processes without toolbox talk or safety communication = consultation failure
+
+---
+
+CHUNK 3: What Effective Consultation Requires
+Section: WHS Act s48; COP s3.1, s3.2, s3.4
+Topic: Mandatory steps for valid consultation
+
+Consultation REQUIRES that:
+- RELEVANT WHS INFORMATION IS SHARED with workers
+- Workers are given a REASONABLE OPPORTUNITY TO EXPRESS THEIR VIEWS and raise issues
+- Workers are given a REASONABLE OPPORTUNITY TO CONTRIBUTE TO THE DECISION-MAKING PROCESS
+- The VIEWS OF WORKERS ARE TAKEN INTO ACCOUNT
+- Workers are ADVISED OF THE OUTCOME of any consultation IN A TIMELY MANNER
+
+RESTRICTION: A PCBU is NOT required to give a representative access to:
+- Personal or medical information about a worker without the worker's consent
+- Confidential commercial information
+
+VISUAL INDICATORS:
+- A suggestion box or dedicated safety intranet page = multiple channels for worker contribution
+- Bilingual workers assisting with translation during safety meetings = addressing diverse language needs
+- Safety meeting minutes posted in a common area = timely advice of consultation outcomes
+- Workers stating they were not told about a new risk or change = consultation outcome communication failure
+
+---
+
+CHUNK 4: Health and Safety Representatives (HSRs)
+Section: WHS Act s50–54; COP s4.3
+Topic: Mandatory negotiation timeframes and training requirements
+
+HSR ELECTION:
+- If a worker requests an HSR, a PCBU must take all reasonable steps to COMPLETE NEGOTIATIONS WITHIN 14 DAYS after a worker makes the request
+- If workers do not request an HSR, the PCBU must ADVISE WORKERS IN WRITING that they may request the election of one or more HSRs
+
+HSR TRAINING — a PCBU has an obligation to ensure HSRs complete:
+- An INITIAL 5-DAY TRAINING COURSE
+- ANNUAL REFRESHER TRAINING thereafter
+
+HSR POWERS (key visual indicators):
+- HSR may issue a Provisional Improvement Notice (PIN) for a safety breach
+- HSR may direct cessation of unsafe work in certain circumstances
+
+VISUAL INDICATORS:
+- A list of names and work groups of all HSRs displayed in a prominent place = positive compliance indicator
+- HSR attending an approved 5-day training course = compliance with training obligations
+- HSR present and participating in management safety walkthroughs = inclusion in safety matters
+- No HSR list visible on a large construction site = flag — workers may not have been informed of their rights
+- PCBU refusing to negotiate HSR election after a worker request = non-compliant
+
+---
+
+CHUNK 5: Health and Safety Committees
+Section: WHS Act s75; COP s4.3
+Topic: Mandatory establishment timeframes and composition requirements
+
+MANDATORY ESTABLISHMENT: A PCBU must establish a health and safety committee AS SOON AS PRACTICABLE BUT NO LATER THAN 28 DAYS after being requested by:
+- FIVE OR MORE WORKERS at the workplace; OR
+- A HEALTH AND SAFETY REPRESENTATIVE
+
+COMPOSITION REQUIREMENT: At least HALF OF THE MEMBERS must be WORKERS WHO ARE NOT NOMINATED BY MANAGEMENT.
+
+MEETING FREQUENCY:
+- Must meet AT LEAST ONCE EVERY THREE MONTHS (i.e. at least 4 times per year)
+- Must also meet at any reasonable time at the request of at least half of the members
+
+VISUAL INDICATORS:
+- Committee terms of reference or constitution document = clear definition of roles
+- Meeting minutes showing at least 50% worker (non-management) attendance = compliant composition
+- Meeting schedule showing four or more sessions per year = compliance with quarterly requirement
+- Committee established more than 28 days after workers requested it = non-compliant
+- Management-only safety committee with no worker representatives = non-compliant composition
+
+---
+
+CHUNK 6: Coordination Between Duty Holders
+Section: WHS Act s16, s46; WHS Regulation s309; COP s5, s5.1
+Topic: Obligations when multiple PCBUs share a workplace
+
+MANDATORY DUTY: Each person with a duty must, so far as is reasonably practicable, CONSULT, COOPERATE AND COORDINATE ACTIVITIES with all other persons who have a duty in relation to the same matter.
+
+INDEPENDENCE OF DUTIES:
+- Each person RETAINS RESPONSIBILITY FOR THEIR OWN DUTY
+- Cannot transfer responsibilities to another person
+- Must discharge the duty to the extent to which they can INFLUENCE AND CONTROL the matter
+
+CONSTRUCTION PROJECTS: The PRINCIPAL CONTRACTOR must ensure the WHS MANAGEMENT PLAN includes the arrangements for consultation, cooperation, and coordination between all PCBUs at the site. (WHS Regulation s309)
+
+VISUAL INDICATORS:
+- Shared site induction involving multiple contractors = positive coordination indicator
+- WHS management plan available on site listing consultation arrangements = compliant
+- No WHS management plan on a construction project costing $250,000 or more = non-compliant
+- Subcontractors on site unaware of site safety rules or emergency procedures = coordination failure
+- Labour hire worker without site induction or safety briefing = shared duty coordination failure
+- PCBU claiming another party is "responsible for safety" as a reason for not acting = duty transfer — non-compliant
+
+---
+
+CHUNK 7: Worker Representatives and Excluded Entities
+Section: WHS Act s45A, s45B; COP s1.1
+Topic: Who may legally represent workers in consultation
+
+RELEVANT UNION: A union the worker is ELIGIBLE TO BE A MEMBER OF and whose rules entitle the union to represent the worker. Must be a REGISTERED EMPLOYEE ORGANISATION with the Fair Work Commission or QIRC.
+
+EXCLUDED ENTITY: An entity (other than a union) that is an association of employees or independent contractors, or that represents industrial interests, and IS NOT ALLOWED TO REPRESENT OR ASSIST a worker or HSR in WHS matters.
+
+VISUAL INDICATORS:
+- Worker requesting a union official be present at a safety consultation = lawful exercise of representation right
+- PCBU refusing a properly registered union representative access to a safety consultation = potential non-compliance
+- An ergonomist or engineer invited to a committee meeting as a technical specialist = effective use of suitable expertise

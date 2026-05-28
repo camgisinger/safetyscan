@@ -1,0 +1,1274 @@
+DOCUMENT: Queensland Manual of Uniform Traffic Control Devices (Queensland MUTCD) — Part 2: Traffic Control Devices for General Use
+TYPE: Queensland Government Technical Standard (amends and supplements AS 1742.2-2022)
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: construction, roads, traffic_management, temporary_traffic_management, signage, pavement_markings, demolition, civil_works, infrastructure, workzone_traffic_control
+SOURCE: Department of Transport and Main Roads (TMR), Queensland Government
+PUBLICATION_DATE: May 2026
+CURRENT AS AT: May 2026
+CLAUSE_PREFIX: Clauses referenced as section numbers within this document, read in conjunction with AS 1742.2-2022
+APPROVED UNDER: Transport Operations (Road Use Management) Act 1995 (Qld)
+RELATIONSHIP: This document takes PRECEDENCE over AS 1742.2-2022 when applied in Queensland. Read together; use Queensland MUTCD first, then refer to AS 1742.2-2022 for items not addressed.
+
+---
+
+CHUNK 1: Document Purpose, Hierarchy and How to Use
+Section: About this document; How to use this document
+Topic: Scope, relationship to Australian Standard AS 1742.2-2022, and Queensland precedence
+
+THIS DOCUMENT:
+- Specifies requirements for regulatory and warning signs, pavement markings and other devices for GENERAL USE on roads, including expressway-type roads
+- Sets out how these are applied at intersections, interchanges, between intersections, and at specific situations including curves, structures, pavement width changes, climbing/overtaking lanes, steep grades and water crossings
+- Is designed to be read and applied TOGETHER with AS 1742.2-2022 Manual of Uniform Traffic Control Devices Part 2
+- HAS PRECEDENCE over AS 1742.2-2022 when applied in Queensland
+- Uses the same section and clause numbering as AS 1742.2-2022
+
+APPLICABILITY CATEGORIES used in this document:
+- ACCEPTED — Australian Standard section or clause applies unchanged
+- ACCEPTED, WITH AMENDMENTS — part or all accepted, but with Queensland additions, deletions or differences
+- NEW — no equivalent in the Australian Standard (Queensland-only requirement)
+- NOT ACCEPTED — Australian Standard clause does not apply in Queensland
+
+REFERENCES RELEVANT TO CONSTRUCTION:
+- Queensland Guide to Temporary Traffic Management (QGTTM) — key reference for construction workzone TTM
+- Queensland Guide to Traffic Management (QGTM)
+- Road Planning and Design Manual (RPDM) 2nd Edition — Parts 3 and 6 referenced for design details
+- Transport Operations (Road Use Management) Act 1995 (Qld) — TORUM Act
+- TMR Traffic Control (TC) signs database (officially approved non-standard signs)
+- Main Roads Technical Specification MRTS45 Road Surface Delineation
+- Main Roads Technical Specification MRTS110 Coloured Surface Treatments
+
+VISUAL INDICATORS:
+- Traffic control devices on a Queensland construction site that do not match the Queensland MUTCD (not just AS 1742.2-2022) = possible non-compliance
+- Non-standard signs used without TMR Traffic Control Signs Database authorisation = non-compliance
+- Reference to outdated version of MUTCD on construction documentation = flag for review
+
+---
+
+CHUNK 2: Innovative Treatments — Approval Requirements
+Section: Clause 1.4.15 (NEW)
+Topic: Approval process for new or innovative traffic control devices and treatments on construction sites
+
+INNOVATIVE TREATMENTS — encouraged where they provide improved safety, efficiency or value-for-money outcomes. May include:
+(a) Innovative use of current devices
+(b) Alternative device layouts using existing and/or improved devices
+(c) New devices or practices
+
+APPROVAL REQUIREMENT:
+- New or improved devices, treatments or practices require APPROVAL BY TMR PRIOR to use or adoption
+- For TRIALS of new or innovative traffic control devices, treatments or practices:
+  → Submit a written submission to TrafficEngineering.Support@tmr.qld.gov.au
+  → Submission must comply with Clause 1.13 of Queensland MUTCD Part 1
+
+COMPLIANCE IMPLICATIONS FOR CONSTRUCTION:
+- Using a traffic control device or treatment not in the Queensland MUTCD or AS 1742.2-2022 without TMR approval = non-compliance
+- Site-specific innovation on construction workzone TTM layouts requires pre-approval
+
+VISUAL INDICATORS:
+- Unusual or non-standard traffic control device on construction site = verify TMR approval exists
+- Temporary traffic control arrangements that deviate from Queensland MUTCD standard layouts = flag for verification of prior approval
+
+---
+
+CHUNK 3: Non-Standard Signs and Devices — Construction Site Use
+Section: Clause 1.7.2.4 (Accepted, with amendments)
+Topic: When non-standard traffic signs and devices may be used, and the approval process
+
+QUEENSLAND ADDITION:
+- For guidance on the use of non-standard traffic signs and devices in Queensland, refer to Clause 1.8 of the Queensland MUTCD Part 1
+
+RELEVANCE TO CONSTRUCTION WORKSITES:
+- Construction sites commonly require temporary traffic control that may use non-standard devices
+- Any non-standard sign or device used in a construction workzone must be authorised under Queensland MUTCD Part 1 Clause 1.8 or listed in the TMR Traffic Control (TC) Signs Database
+- The TC signs database includes MUTCD Q-series signs (Queensland-approved non-standard signs)
+
+VISUAL INDICATORS:
+- Non-standard warning or regulatory signs on a construction site not recognisable as TC-series or standard MUTCD signs = flag
+- Construction site using signs that conflict with Queensland MUTCD requirements = non-compliance
+
+---
+
+CHUNK 4: Intersection Direction Control — KEEP LEFT/RIGHT Signs (R2-3 Series)
+Section: Clause 2.8.2 (Accepted, with amendments)
+Topic: Queensland-specific KEEP LEFT and KEEP RIGHT signs; restrictions on use of R2-3-Q02 series
+
+STANDARD SIGN — KEEP LEFT / KEEP RIGHT (R2-3) (L or R):
+- Standard R2-3 is the primary KEEP LEFT or KEEP RIGHT sign
+- Used where traffic must keep to a specified side of a median or island
+
+QUEENSLAND-SPECIFIC SIGN — R2-3-Q02 (KEEP LEFT — vertical format):
+- RESTRICTION: The R2-3-Q02 series KEEP LEFT sign shall ONLY be used where the width of a median or island is INSUFFICIENT to provide adequate clearance to the standard KEEP LEFT (R2-3) sign
+- This is a Queensland TC-series sign in vertical format to suit narrow medians/islands
+
+VISUAL INDICATORS:
+- R2-3-Q02 series vertical KEEP LEFT sign installed on wide median where a standard R2-3 could fit = non-compliant use
+- KEEP LEFT sign missing entirely at divided road or roundabout entry = flag for review
+
+---
+
+CHUNK 5: Turn Control — RIGHT LANE MUST U TURN Sign (R2-9-Q01)
+Section: Clause 2.8.5 (Accepted, with amendments)
+Topic: Queensland-specific sign for exclusive U-turn lanes at intersections
+
+SIGN: RIGHT LANE MUST U TURN (R2-9-Q01)
+USAGE:
+- SHOULD be provided where an exclusive U-turn lane exists at SIGNALISED intersections
+- MAY be provided for exclusive U-turn lanes at higher order UNSIGNALISED intersections
+- When provided: sign should be located in the MEDIAN near the BEGINNING OF THE MERGE TAPER
+- Where advance information is required (e.g. trap lane scenario): supplementary plates R7-2, R7-12 or R9-8 may be provided, along with additional R2-9-Q01 installations
+
+DEDICATED U-TURN FACILITY — related signs from TC database:
+- TC9632, TC9634, TC9635, TC9636 may be appropriate
+
+VISUAL INDICATORS:
+- Exclusive U-turn lane without R2-9-Q01 sign at signalised intersection = non-compliance (sign should be provided)
+- R2-9-Q01 sign absent from median at start of merge taper = flag
+
+---
+
+CHUNK 6: Supplementary Signs — Exception Classes (R9-Q04)
+Section: Clause 2.8.6 (Accepted, with amendments)
+Topic: Queensland-approved exception vehicle class signs; record-keeping obligations
+
+QUEENSLAND ADDITION — EXCEPTION SIGNS (R9-Q04 series):
+- Additional exception classes may supplement regulatory signs via the R9-Q04 template
+- Three sizes/formats: R9-Q04_1, R9-Q04_2, R9-Q04_3
+
+RECORD-KEEPING OBLIGATION:
+- Where a supplementary plate permits only AUTHORISED VEHICLES to be excepted, the road authority SHOULD keep adequate records of which vehicles have been authorised
+
+APPROVED VEHICLE EXCEPTION CLASSES for Queensland:
+CARS | TAXIS | TRAMS | TRUCKS | AUTHORISED BUSES | CONSTRUCTION VEHICLES | [COUNCIL] BUSES | CANE VEHICLES | EMERGENCY VEHICLES | LOCAL DELIVERIES | LOCAL TRAFFIC | POLICE VEHICLES | SCHOOL BUSES | SERVICE VEHICLES | STOCK VEHICLES | T2/T3 VEHICLES | ...t GVM AND UNDER | [COUNCIL] AUTHORISED VEHICLES | [COUNCIL] AUTHORISED BUSES | BUSES ... m AND UNDER | BUSES AND CONSTRUCTION VEHICLES | PERSONAL MOBILITY DEVICES | T3 AND TRUCK LANE VEHICLES | TRUCKS ... m AND UNDER | TRANSIT LANE VEHICLES | VEHICLES LONGER THAN ... m | VEHICLES SHORTER THAN ... m
+
+RELEVANCE TO CONSTRUCTION:
+- Construction vehicles may be excepted from certain regulatory sign requirements using R9-Q04 template with "CONSTRUCTION VEHICLES" exception class
+- Appropriate use for workzone access to one-way or restricted roads during construction
+
+VISUAL INDICATORS:
+- Exception sign for CONSTRUCTION VEHICLES used without authorisation from road authority = flag
+- Regulatory sign with exception plate but no corresponding authorised vehicle records = non-compliance
+
+---
+
+CHUNK 7: Supplementary Signs — ON SIDE ROAD Plate (R9-Q05)
+Section: Clause 2.8.6 (Accepted, with amendments)
+Topic: Queensland-specific supplementary plate for side road requirements
+
+SIGN: ON SIDE ROAD (R9-Q05) — LEFT and RIGHT variants
+USE: The ON SIDE ROAD (R9-Q05) supplementary plate may be used BELOW black-on-white signs to indicate that a message or requirement applies on a SIDE ROAD
+
+VISUAL INDICATORS:
+- Regulatory sign applicable to side road without R9-Q05 plate where signage is placed on main road = flag
+
+---
+
+CHUNK 8: Direction Control — THROUGH TRAFFIC KEEP LEFT/RIGHT Signs (R2-Q02)
+Section: Clause 2.8.7 (Accepted, with amendments)
+Topic: Queensland-specific signs to direct traffic at diverging roads
+
+SIGNS: THROUGH TRAFFIC KEEP LEFT (R2-Q02-L) / THROUGH TRAFFIC KEEP RIGHT (R2-Q02-R)
+USE: May be used to DIRECT TRAFFIC to the desired side of a DIVERGING ROAD
+
+VISUAL INDICATORS:
+- Diverging road (e.g. temporary diversion around construction zone) without appropriate direction control signs = flag
+
+---
+
+CHUNK 9: Warning Signs — Successive Side Road Intersections on a Curve (W2-Q01)
+Section: Clause 2.9.5 (Accepted, with amendments)
+Topic: Queensland-specific warning sign for two successive side road intersections on a curve
+
+SIGN: SUCCESSIVE SIDE ROAD INTERSECTIONS ON A CURVE — OUTSIDE (W2-Q01) — LEFT and RIGHT variants (W2-Q01-L, W2-Q01-R)
+APPLIES WHEN:
+- Two SUCCESSIVE SIDE ROAD INTERSECTIONS occur on a curve, AND
+- The existence of the curve CONTRIBUTES TO THE MAGNITUDE OF THE HAZARD
+LIMIT: The number of side roads shown on any one symbol shall be LIMITED TO TWO
+
+VISUAL INDICATORS:
+- Construction site access road creating successive side road intersections on a curve without appropriate advance warning signs = non-compliance
+
+---
+
+CHUNK 10: Warning Signs — SLOW TURNING TRAFFIC (W5-Q17)
+Section: Clause 2.9.9 (Accepted, with amendments)
+Topic: Queensland-specific warning sign for driveways with turning inhibition risk
+
+SIGN: SLOW TURNING TRAFFIC (W5-Q17)
+USE: May be used to warn of the possibility of vehicles being INHIBITED FROM ENTERING a driveway or property at a NORMAL TURNING SPEED due to a constraint such as:
+- Opening of automatic gateways
+- Pedestrian traffic
+
+RELEVANCE TO CONSTRUCTION:
+- Applicable at construction site entrances with auto-gates, boom gates, or significant pedestrian traffic
+- Should be considered where construction vehicles may slow unexpectedly to enter sites adjacent to roads
+
+VISUAL INDICATORS:
+- Construction site entry with automatic boom gate or security gate on road without SLOW TURNING TRAFFIC warning = flag
+
+---
+
+CHUNK 11: Expressway Signs — Restricted Road User Classes (R6-13 and GE6-2)
+Section: Clause 3.4.3 (Accepted, with amendments)
+Topic: Vehicle/road user classes that may be displayed on expressway access restriction signs in Queensland
+
+APPROVED CLASSES for display on R6-13 and GE6-2 signs in Queensland:
+- Pedestrians
+- Bicycles
+- Animals
+- Mopeds
+- Agricultural Machinery
+- Personal Mobility Devices
+
+RELEVANCE TO CONSTRUCTION:
+- Expressway construction worksites that restrict access must use correctly classified signs
+- Sign face must display only the above approved classes for Queensland
+
+VISUAL INDICATORS:
+- Access restriction signs on expressway construction sites displaying unapproved road user classes = non-compliance
+
+---
+
+CHUNK 12: Expressway Signs — Emergency Stopping Bay and Help Phone (G9-90-Q01)
+Section: Clause 3.5.2 (Difference + Addition)
+Topic: Sign requirements where help phones are co-located with emergency stopping bays on expressways
+
+QUEENSLAND DIFFERENCE (replaces AS 1742.2-2022 note to item d):
+- Where help phones are provided: the S2 symbol SHALL be used on the sign
+
+QUEENSLAND ADDITION — SIGN: EMERGENCY STOPPING BAY & HELP PHONE x (m / km) AHEAD (G9-90-Q01):
+- SHALL be used IN LIEU OF the G9-90 series signs WHERE A HELP PHONE IS AVAILABLE
+- Applicable to both metres (m) and kilometres (km) variants
+
+RELEVANCE TO CONSTRUCTION:
+- Expressway construction projects that modify or remove emergency stopping bays must ensure correct sign type is installed
+- Where help phone is in place: G9-90-Q01 mandatory, not the standard G9-90 series
+
+VISUAL INDICATORS:
+- Emergency stopping bay on expressway with help phone using standard G9-90 series sign instead of G9-90-Q01 = non-compliance
+
+---
+
+CHUNK 13: Guide Posts — Design and Construction Standard Drawing
+Section: Clause 4.2.4.2 (Accepted, with amendments)
+Topic: Queensland standard drawing for road edge guide posts
+
+QUEENSLAND ADDITION:
+- The Department of Transport and Main Roads has issued a STANDARD DRAWING for road edge guide posts
+- Reference: SD1356 Road Edge Guide Posts – Post and Installation Details
+
+APPLICATION:
+- All road edge guide post installations must comply with SD1356
+- Applies to construction projects requiring guide posts as part of traffic management or road design
+
+VISUAL INDICATORS:
+- Guide posts installed that do not match the SD1356 standard drawing specifications = non-compliance
+- Guide posts missing where required at road edge = flag
+
+---
+
+CHUNK 14: Guide Posts — Hazard Marker Posts at Bridges and Culverts
+Section: Clause 4.2.4.4 (Accepted, with amendments — item f added)
+Topic: Queensland requirement for hazard marker posts at bridge and culvert sites
+
+QUEENSLAND ADDITION (item f — Bridges and culverts):
+- Hazard marker posts MAY be installed to warn road users and maintenance personnel of a hazard in the vicinity of the hazard marker post
+- TMR has issued a standard drawing for hazard marker posts
+- Reference: SD1851 Hazard Marker – Post and Installation Details
+- SD1851 indicates the location of hazard marker posts in relation to road edge guide posts at bridges and culvert sites
+
+RELEVANCE TO CONSTRUCTION:
+- Bridge and culvert construction projects must consider hazard marker post requirements
+- Standard drawing SD1851 governs placement relative to road edge guide posts
+
+VISUAL INDICATORS:
+- Bridge or culvert site without hazard marker posts where SD1851 requires them = flag
+- Hazard marker posts incorrectly placed relative to road edge guide posts (not in accordance with SD1851) = non-compliance
+
+---
+
+CHUNK 15: Maintenance Marker Posts
+Section: Clause 4.2.7 (NEW — Queensland only)
+Topic: Requirement and standard for maintenance marker posts on Queensland roads
+
+MAINTENANCE MARKER POSTS:
+- SHOULD be installed in accordance with TMR SD1358 Maintenance Marker Posts – Post and Installation Details
+- Purpose: to indicate any item that requires REGULAR MAINTENANCE, or which may otherwise be DAMAGED BY OPERATION OF MAINTENANCE MACHINERY
+
+RELEVANCE TO CONSTRUCTION:
+- Where construction activities install infrastructure requiring periodic maintenance (drainage, electrical, signage), maintenance marker posts may be required
+- Must follow SD1358 for type and installation
+
+VISUAL INDICATORS:
+- Infrastructure items requiring regular maintenance installed alongside road without maintenance marker posts (where SD1358 applies) = flag
+
+---
+
+CHUNK 16: Warning Signs — Tilting Truck on Horizontal Curves (W1-8-Q01)
+Section: Clause 4.3.5 (Accepted, with amendments — item k added)
+Topic: Queensland-specific alternative to W1-8 series curve warning signs
+
+SIGN: TILTING TRUCK (W1-8-Q01) — Queensland-specific version in the W1-8 series
+USE CONDITION: SHALL ONLY BE USED when W1-8 series signs CANNOT be installed due to PHYSICAL CONSTRAINTS
+- Right-hand version is available
+- Arrow may be adjusted to any of the arrows within the W1-8 series
+- Normal preference: use standard W1-8 series; W1-8-Q01 is the fallback only
+
+RELEVANCE TO CONSTRUCTION:
+- Road construction or realignment creating new curves must use standard W1-8 series where physically possible
+- W1-8-Q01 is only acceptable alternative where physical installation constraints prevent standard sign use
+
+VISUAL INDICATORS:
+- W1-8-Q01 tilting truck sign installed where standard W1-8 series sign could fit = non-compliant use
+- No curve warning sign for heavy vehicles on a substandard horizontal curve = non-compliance
+
+---
+
+CHUNK 17: Warning Signs — WATCH FOR TRUCKS Supplementary Plate (W8-Q12)
+Section: Clause 4.3.5 (Accepted, with amendments — item l added)
+Topic: Supplementary plate to supplement curve warning signs on narrow winding roads
+
+SIGN: WATCH FOR TRUCKS (W8-Q12) — supplementary plate
+USE CONDITION:
+- SHOULD ONLY be used to supplement CURVE WARNING SIGNS on NARROW WINDING ROADS where there have been PROBLEMS WITH LARGE VEHICLES SWEEPING ACROSS THE CENTRE LINE
+- Not for general use; restricted to specific problem locations
+
+RELEVANCE TO CONSTRUCTION:
+- Roads adjacent to or serving construction sites with heavy vehicle movements on narrow curves may require this supplementary plate
+- Should only be installed where documented vehicle behaviour problems exist
+
+VISUAL INDICATORS:
+- W8-Q12 installed at location without documented centre-line sweeping problems by large vehicles = potentially excessive/non-compliant use
+
+---
+
+CHUNK 18: Curve Alignment Markers — Speed-Integrated CAM (D4-7-Q01)
+Section: Clause 4.3.6.2 (Accepted, with amendments — item b added)
+Topic: Queensland-specific curve alignment marker incorporating advisory speed
+
+SIGN: CURVE ALIGNMENT MARKER x km/h (D4-7-Q01) — Queensland-specific
+USE:
+- May REPLACE the FIRST Curve Alignment Marker sign in a series of CAMs around a curve
+- Used in accordance with D4-7 guidance
+- Only where ADDITIONAL DELINEATION is considered required
+
+RELEVANCE TO CONSTRUCTION:
+- Temporary road realignments or new curves created by construction must have appropriate CAMs
+- D4-7-Q01 may be used where the first CAM in a series needs to incorporate speed information
+
+VISUAL INDICATORS:
+- Series of curve alignment markers where first sign lacks speed advisory but additional delineation is needed = opportunity to apply D4-7-Q01
+- CAM series missing from substandard curves on construction-affected roads = non-compliance
+
+---
+
+CHUNK 19: Regulatory Signs at Structures — Ramp Load Limit (R6-3-Q01)
+Section: Clause 4.5.6.1 (Accepted, with amendments — item d added)
+Topic: Queensland-specific ramp load limit sign for on/off ramps
+
+SIGN: RAMP LOAD LIMIT x t GROSS (R6-3-Q01)
+USE:
+- MAY be used to indicate the MAXIMUM PERMISSIBLE GROSS LOAD in tonnes of an on/off ramp
+- Expressed in tonnes (gross)
+
+RELEVANCE TO CONSTRUCTION:
+- Construction vehicles using expressway on/off ramps may be subject to load limit restrictions
+- Any ramp load limit imposed requires R6-3-Q01 sign to be displayed
+
+VISUAL INDICATORS:
+- Expressway ramp with known load limit but missing R6-3-Q01 sign = non-compliance
+- Construction vehicles using ramp that exceeds signposted load limit = serious safety non-compliance
+
+---
+
+CHUNK 20: Regulatory Signs at Structures — Overall Width Limit (R6-33-Q01)
+Section: Clause 4.5.6.1 (Accepted, with amendments — item e added)
+Topic: Queensland-specific overall width limit sign for restricted road sections
+
+SIGN: OVERALL WIDTH LIMIT x m (R6-33-Q01)
+USE:
+- MAY be used to indicate the MAXIMUM PERMISSIBLE OVERALL WIDTH in metres of a vehicle on a restricted section of road
+- If used: SHALL be erected on the IMMEDIATE APPROACHES to the restricted section
+- DETOUR SIGNS shall be erected before and at an appropriate intersection in advance of the section to divert over-width vehicles (see Clauses 4.5.2.4 and 4.5.6.2)
+
+RELEVANCE TO CONSTRUCTION:
+- Temporary road narrowing created by construction may impose width restrictions requiring R6-33-Q01
+- Must be accompanied by detour signing for over-width vehicles
+
+VISUAL INDICATORS:
+- Temporary lane narrowing on construction site with width restriction but no R6-33-Q01 = non-compliance
+- Width restriction sign present but no detour signing for over-width vehicles = non-compliance
+
+---
+
+CHUNK 21: Detour Signs — Load Limit Ahead with Heavy Vehicle Detour (G9-4-Q01)
+Section: Clause 4.5.6.2 (Accepted, with amendments — item a added)
+Topic: Queensland-specific advance warning sign for load-limited roads with detour
+
+SIGN: LOAD LIMIT AHEAD x t GROSS, HEAVY VEHICLES DETOUR (G9-4-Q01) — LEFT and RIGHT variants
+USE:
+- MAY be used in Queensland IN ADVANCE OF AN INTERSECTION with a detour
+- Applies where a road section ahead has a gross load limit requiring heavy vehicle diversion
+
+RELEVANCE TO CONSTRUCTION:
+- Construction projects affecting road load capacity must provide appropriate advance detour signing for heavy vehicles
+- Especially relevant where construction causes temporary reduction in bridge or pavement capacity
+
+VISUAL INDICATORS:
+- Load-limited section ahead of intersection without G9-4-Q01 advance detour sign = non-compliance
+- Heavy vehicle detour signing missing where road construction has reduced allowable load limit = non-compliance
+
+---
+
+CHUNK 22: Warning Signs — OVERHEAD WIRES (W5-Q16) and BOATS LOWER MASTS (W8-Q16)
+Section: Clause 4.5.6.3 (Accepted, with amendments — items h and i added)
+Topic: Queensland-specific warning signs for overhead electrical wires near roads and waterways
+
+SIGN: OVERHEAD WIRES (W5-Q16)
+USE:
+- MAY be installed in advance of overhead wires above a ROADWAY, WATERWAY or THOROUGHFARE
+- Where boat masts are at risk of touching overhead wires: W8-Q16 supplementary plate SHOULD be installed BENEATH W5-Q16
+- Where a clearance height is required to be shown: W8-Q16 supplementary plate SHOULD be installed
+
+SIGN: BOATS LOWER MASTS (W8-Q16) — supplementary plate
+USE:
+- SHOULD ONLY be installed BELOW W5-Q16
+
+SIGN: CLEARANCE x m (W8-Q17) — supplementary plate
+USE:
+- SHOULD ONLY be installed BELOW W5-Q16
+
+RELEVANCE TO CONSTRUCTION:
+- Construction near overhead electrical lines or near waterways with overhead wire crossings requires W5-Q16
+- Critical for construction at bridge crossings over navigable waterways where cranes, machinery or vessels may be present
+- Clearance height signing (W8-Q17) is particularly important for construction crane operations near overhead lines
+
+VISUAL INDICATORS:
+- Overhead electrical wires crossing construction site access road without W5-Q16 warning sign = non-compliance
+- Waterway crossing site with mast-height risk and no W8-Q16 supplementary plate below W5-Q16 = non-compliance
+- Overhead wire crossing without clearance height sign (W8-Q17) where clearance is a design consideration = flag
+
+---
+
+CHUNK 23: Lane Change Signs — Right Lane Merge Left Modification
+Section: Clause 4.6.5.2 (Accepted, with amendments)
+Topic: Modification requirement for right-to-left lane merge signage
+
+QUEENSLAND ADDITION:
+- Where a lane change requires the RIGHT LANE TO MERGE LEFT, signs and pavement arrows in this clause SHALL BE MODIFIED ACCORDINGLY
+- This reverses the default left-merge configuration
+
+RELEVANCE TO CONSTRUCTION:
+- Construction worksites creating temporary lane closures where the right lane merges left (e.g. works in left lane) must modify standard merge signage accordingly
+- Common scenario in roadworks where traffic is shifted right
+
+VISUAL INDICATORS:
+- Temporary traffic management where right lane merges left but standard (left-merge) signs and arrows not modified = non-compliance
+- Lane arrows and signs inconsistent with actual merge direction required = safety non-compliance
+
+---
+
+CHUNK 24: Water Crossing Signs — ON SIDE ROAD Supplementary Plate (G9-21-1-Q01)
+Section: Clause 4.9.6 (Accepted, with amendments — item n added)
+Topic: Queensland supplementary plate for flood signing when floodway is on a nearby side road
+
+SIGN: ON SIDE ROAD (G9-21-1-Q01) — LEFT and RIGHT variants
+USE — SHALL be used with:
+- ROAD SUBJECT TO FLOODING INDICATORS SHOW DEPTH (G9-21-1 and G9-21-2), and
+- ROAD SUBJECT TO FLOODING DO NOT ENTER WHEN FLOODED (G9-21-3) signs
+- WHEN: a floodway on a SIDE ROAD is TOO CLOSE to the MAIN ROAD for G9-21-1, G9-21-2 or G9-21-3 to be installed on the side road itself
+
+RELEVANCE TO CONSTRUCTION:
+- Construction near floodways or water crossings adjacent to main roads requires this supplementary plate configuration
+
+VISUAL INDICATORS:
+- Floodway on side road close to main road, with flooding signs installed on main road but without ON SIDE ROAD (G9-21-1-Q01) supplementary plate = non-compliance
+
+---
+
+CHUNK 25: Boom Barrier Warning Sign (W5-Q11)
+Section: Clause 4.10.3 (Accepted, with amendments)
+Topic: Mandatory warning sign requirement where boom barriers are used across roadways
+
+SIGN: BOOM BARRIER (W5-Q11)
+USE — WHERE a boom barrier is used across the roadway OTHER THAN for active railway crossings:
+- The Boom Barrier (W5-Q11) warning sign SHALL be used IN ADVANCE of the barrier
+- Distance: in accordance with APPENDIX D (installation and location of signs)
+- Railway crossing boom barriers are dealt with under Queensland MUTCD Part 7 (not this document)
+
+RELEVANCE TO CONSTRUCTION:
+- Construction sites with boom gates or barriers controlling access to a road or construction haul road must display W5-Q11 in advance of the barrier
+- Mandatory requirement — SHALL be used
+
+VISUAL INDICATORS:
+- Construction site boom gate across a road without W5-Q11 warning sign in advance = serious non-compliance
+- Boom gate sign present but not at appropriate advance distance per Appendix D = flag
+- Boom gate at railway crossing using W5-Q11 instead of Part 7 signing = incorrect sign type
+
+---
+
+CHUNK 26: Warning Signs — High Wind Area (W5-Q12 and W8-Q14)
+Section: Clause 4.11.3 (Accepted, with amendments — item h added)
+Topic: Queensland-specific warning signs for exposed areas with vehicle stability risks from wind
+
+SIGNS:
+- HIGH WIND AREA (W5-Q12) — warning sign (symbol)
+- HIGH WIND AREA (W8-Q14) — text supplementary plate
+
+USE:
+- MAY be used in EXPOSED AREAS where there are POTENTIAL VEHICLE STABILITY ISSUES arising from STRONG CROSS WINDS
+- Used together: W5-Q12 with W8-Q14 supplementary plate
+
+RELEVANCE TO CONSTRUCTION:
+- Construction near exposed elevated structures, bridges or coastal areas may require these signs
+- Relevant for construction sites adjacent to roads where vehicles may be at risk from cross winds generated by or affected by construction activity
+
+VISUAL INDICATORS:
+- Exposed elevated road section or bridge with documented cross-wind vehicle stability issues but no wind warning signs = flag
+
+---
+
+CHUNK 27: Warning Signs — DRIFT SAND (W5-Q04) and SOFT EDGES (W5-Q05)
+Section: Clause 4.11.3 (Accepted, with amendments — items i added)
+Topic: Queensland-specific hazardous road condition warning signs
+
+SIGN: DRIFT SAND (W5-Q04)
+USE: MAY be used where the OCCURRENCE OF DRIFT SAND represents a hazard to drivers
+
+SIGN: SOFT EDGES (W5-Q05)
+USE: MAY be used where the PRESENCE OF SOFT, UNSEALED ROAD SHOULDERS represents a hazard to drivers
+
+RELEVANCE TO CONSTRUCTION:
+- Construction activities adjacent to roads that create loose material, expose unsealed shoulders, or disturb road edges require these signs
+- Earthworks near road shoulders exposing soft edges = W5-Q05 required
+- Construction haul road crossings creating loose sand/gravel spillage on roadway = W5-Q04 may be required
+
+VISUAL INDICATORS:
+- Earthworks adjacent to road with unsealed, soft road shoulders visible but no W5-Q05 warning = non-compliance
+- Loose material/sand spillage onto road from construction without drift sand or loose material warning = non-compliance
+
+---
+
+CHUNK 28: Warning Signs — EMERGENCY VEHICLES (W5-36-Q01)
+Section: Clause 4.11.4 (Accepted, with amendments — item c added)
+Topic: Queensland-specific combined emergency services warning sign
+
+SIGN: EMERGENCY VEHICLES (W5-36-Q01)
+USE:
+- SHALL be used where TWO OR MORE EMERGENCY SERVICES are CO-LOCATED
+- SHALL be provided IN LIEU of other signs such as FIRE STATION (W5-36) and AMBULANCE STATION (W5-37) where applicable
+
+RELEVANCE TO CONSTRUCTION:
+- Construction adjacent to sites with co-located emergency services (e.g. hospital, combined fire/ambulance station) requires W5-36-Q01
+- Replace individual service signs with combined sign
+
+VISUAL INDICATORS:
+- Road adjacent to site with two or more co-located emergency services using separate individual service signs instead of W5-36-Q01 = non-compliance
+
+---
+
+CHUNK 29: Warning Signs — Queued Traffic (W5-Q13) and Buses (W5-Q14)
+Section: Clause 4.11.4 (Accepted, with amendments — items g and h added)
+Topic: Queensland-specific warning signs for unexpected traffic situations
+
+SIGN: QUEUED TRAFFIC (W5-Q13)
+USE:
+- MAY be used to give ADVANCE WARNING of queued traffic ahead where STOPPING SIGHT DISTANCE to the end of queue MAY NOT BE ACHIEVED
+- Where installed: ACTIVE DEVICES that operate during times when queues are anticipated SHOULD be considered
+
+SIGN: BUSES (W5-Q14)
+USE:
+- MAY be used in advance of locations where ENTERING BUSES may constitute an UNEXPECTED HAZARD
+- Examples: intersection or driveway in proximity to a bus depot
+
+RELEVANCE TO CONSTRUCTION:
+- Construction causing traffic queuing beyond stopping sight distance requires W5-Q13 in advance
+- Active devices (e.g. flashing lights) should be added when queued traffic sign is installed
+- Critical for construction-phase traffic management where sight distance to queue is restricted
+
+VISUAL INDICATORS:
+- Active construction workzone causing traffic queuing beyond stopping sight distance without W5-Q13 advance warning = serious non-compliance
+- W5-Q13 installed without consideration of active supplementary devices = flag for review
+- Construction near bus depot access without bus warning sign = flag
+
+---
+
+CHUNK 30: Warning Signs — WANDERING STOCK (W5-Q10, W8-Q13)
+Section: Clause 4.11.5 (Accepted, with amendments)
+Topic: Warning signs for unfenced roads and wandering stock in Queensland
+
+SIGNS:
+- WANDERING STOCK (W5-Q10) — various configurations (with property name, distance, species)
+- WANDERING STOCK (W8-Q13) — supplementary plate (shall only be used below Stock W5-38 warning sign)
+
+USE:
+- W5-Q10 signs: MAY be used for warning of wandering stock due to ADJACENT UNFENCED PROPERTY
+- If used: sign SHALL be placed at the BEGINNING of the section of road concerned and REPEATED AS NECESSARY
+- A STATION/PROPERTY NAME should be used where applicable
+- W5-Q10 examples show both sheep and cattle — where a SINGLE TYPE of stock or horses are prevalent, an alternate warning sign may be used
+- W8-Q13: SHALL ONLY be used below the Stock (W5-38) warning sign
+
+RELEVANCE TO CONSTRUCTION:
+- Rural construction projects near unfenced properties must consider wandering stock warning signing
+- Fencing disturbance during construction may increase wandering stock risk = additional signing required
+
+VISUAL INDICATORS:
+- Rural construction site where fencing has been temporarily removed adjacent to unfenced rural property, without wandering stock warning signs = non-compliance
+- Wandering stock sign at start of section only, not repeated where section is extended by construction activity = flag
+
+---
+
+CHUNK 31: Wildlife Warning Signs — Installation Requirements (Clause 4.11.6.1)
+Section: Clause 4.11.6.1 (NEW — Queensland only)
+Topic: When wildlife warning signs must be installed on Queensland roads
+
+WILDLIFE WARNING SIGNS SHALL be installed when:
+(a) Wildlife FREQUENTLY ENCROACHES onto the road or roadside in LOCALISED AREAS when there is a SIGNIFICANT TRAFFIC VOLUME, OR
+(b) Where DRIVERS ARE UNLIKELY TO EXPECT wildlife
+
+IMPORTANT LIMITATIONS:
+- Wildlife warning and information signs are NOT specifically intended to perform an animal preservation role
+- Research indicates they are NOT particularly effective for animal preservation
+- If animal preservation is critical: other traffic management AND animal management treatments will be required; signs alone are not adequate
+- Wildlife warning signs SHOULD NOT be provided for MIGRATORY animals
+- Signs SHALL be CONTINUALLY ASSESSED for need and relevance
+- Signs SHALL be REMOVED IF NO LONGER RELEVANT
+
+SPACING FOR REPEAT SIGNS:
+- Rural areas: may be repeated (if warranted) at intervals of NOT LESS THAN 5 km
+- Urban areas: repeated as appropriate
+- May also be appropriate to sign short, individual lengths of road where the risk of animal/vehicle collision is greatest
+
+RELEVANCE TO CONSTRUCTION:
+- Construction in areas where wildlife movements are likely disturbed or increased (e.g. near national parks, wildlife corridors) may require wildlife warning signing
+- Vegetation clearing may increase wildlife/road interactions — assess need for wildlife warning signs
+
+VISUAL INDICATORS:
+- Construction in wildlife-sensitive area without wildlife warning signs where wildlife frequently crosses the road = non-compliance
+- Wildlife warning signs installed for migratory species = non-compliant use
+- Expired or irrelevant wildlife warning signs not removed after conditions change = non-compliance
+
+---
+
+CHUNK 32: Wildlife Warning Signs — Temporary Signs (W5-Q18 Series)
+Section: Clause 4.11.6.2 (NEW — Queensland only)
+Topic: Temporary wildlife warning signs for recent sightings of specific species
+
+SIGNS: TEMPORARY WILDLIFE WARNING SIGNS (W5-Q18 series)
+- Include "BEWARE [animal] RECENT CROSSINGS" and "TAKE CARE [animal] RECENT CROSSINGS" variants
+- Species examples: koalas, cassowaries, and other localised wildlife
+
+USE:
+- MAY be used where there have been RECENT SIGHTINGS of wildlife, especially koalas and cassowaries, in a LOCALISED AREA
+
+RELEVANCE TO CONSTRUCTION:
+- Vegetation clearing during construction may expose or displace koalas, cassowaries and other species into road corridors
+- Temporary wildlife signs should be deployed promptly when wildlife displaced by construction is sighted near roads
+
+VISUAL INDICATORS:
+- Recent wildlife sightings adjacent to construction clearing area without temporary wildlife warning signs on adjacent road = flag
+- Temporary wildlife signs remaining long after sightings ceased and conditions changed = flag
+
+---
+
+CHUNK 33: Wildlife Warning Signs — High-Impact Signs (Clause 4.11.6.3)
+Section: Clause 4.11.6.3 (NEW — Queensland only)
+Topic: High-impact wildlife warning sign design and application criteria
+
+HIGH-IMPACT WILDLIFE WARNING SIGNS:
+- Consist of a WHITE TARGET BOARD with a GREEN BORDER incorporating an animal warning sign
+- Supplementary plates may be installed below where required
+- Should be used SELECTIVELY at HOTSPOT LOCATIONS or in areas with SIGNIFICANT CONSERVATION VALUE
+- May be used in conjunction with Wildlife Conservation Area (WCA) signs (see Clause 4.11.6.4) to highlight hotspots within the conservation area
+
+SUPPLEMENTARY PLATE OPTIONS (visible on examples):
+- "NEXT [x] km" distance plate
+- "SLOW DOWN" instruction plate
+- "REPORT INJURED ANIMALS PHONE 1300 ANIMAL"
+
+VISUAL INDICATORS:
+- High-impact wildlife signs used broadly on all roads rather than selectively at hotspot locations = excessive use, flag
+- High-impact sign installed without underlying warrant (wildlife warning sign requirements not met) = non-compliance
+
+---
+
+CHUNK 34: Wildlife Conservation Area (WCA) Signing (Clause 4.11.6.4)
+Section: Clause 4.11.6.4 (NEW — Queensland only)
+Topic: Conditions for installing Wildlife Conservation Area (WCA) signs; eligible location types
+
+SIGN: CONSERVATION AREA FOR WILDLIFE (W5-Q19)
+- Should include the ANIMAL SYMBOLIC WARNING SIGN of the most prevalent animal in the area
+- SHALL ONLY be installed where the WARRANTS for the included warning sign (Clause 4.11.6) are MET
+
+ELIGIBLE LOCATIONS — WCA signs SHALL ONLY be installed within:
+(a) Protected areas under the Nature Conservation Act 1992 where vehicle/animal collisions are deemed likely:
+  - National parks
+  - Conservation parks
+  - Resources reserves
+  - Nature refuges
+  - Coordinated conservation areas
+  - Wilderness areas
+  - World Heritage management areas
+  - International agreement areas
+(b) Land within state forests, timber reserves or reserves for environmental purposes (Land Act 1994)
+(c) World Heritage Areas under the World Heritage Convention
+(d) Areas supporting a critically endangered or endangered ecological community (EPBC Act list)
+(e) Declared RAMSAR wetlands (EPBC Act)
+(f) Areas of high nature conservation value (Vegetation Management Act 1999)
+(g) Areas (other than state-controlled land) identified in a local government planning scheme as having special environmental significance for native wildlife
+
+PLACEMENT:
+- WCA signs should be erected AS CLOSE AS POSSIBLE TO THE BOUNDARY of the conservation area
+- SHALL be placed so as not to COMPETE WITH other traffic control devices or POSE A SAFETY HAZARD to road users
+- WCAs MAY be marked with wildlife threshold pavement marking (Clause 4.11.6.5)
+- GREEN RRPMs SHOULD be used in conjunction with WCA signs (Clause 4.11.6.6)
+
+RELEVANCE TO CONSTRUCTION:
+- Construction within or adjacent to WCA-eligible areas requires WCA signs if wildlife warning warrants are met
+- Construction must avoid disrupting WCA signing or creating conflicts with WCA boundary markers
+
+VISUAL INDICATORS:
+- WCA sign installed outside eligible location types = non-compliant use
+- WCA sign installed without underlying wildlife warning warrant being met = non-compliance
+- WCA sign location competing with other traffic control devices creating legibility issues = non-compliance
+
+---
+
+CHUNK 35: Wildlife Threshold Pavement Marking (Clause 4.11.6.5)
+Section: Clause 4.11.6.5 (NEW — Queensland only)
+Topic: Wildlife threshold pavement marking design and application restrictions
+
+WILDLIFE THRESHOLD PAVEMENT MARKING:
+- Detailed in TC2321
+- MAY be used to identify the START of signed Wildlife Conservation Areas (WCAs)
+- Bears the words "WILD LIFE" (two words) marked in accordance with Section 5.8
+
+DESIGN REQUIREMENTS:
+- GREEN BACKGROUND with YELLOW BORDER
+- Must meet SKID RESISTANCE requirements of TMR Technical Specification MRTS110 Coloured Surface Treatments
+
+RESTRICTIONS:
+- SHALL NOT be used at locations that DO NOT MEET the requirements of a WCA (Clause 4.11.6.4)
+- SHOULD NOT be used on MULTI-LANE ARTERIAL ROADS
+
+GREEN RRPMs REQUIREMENT:
+- Green RRPMs SHALL be installed at ALL wildlife threshold pavement marking installations (see Clause 4.11.6.6)
+
+RELEVANCE TO CONSTRUCTION:
+- Construction projects in or adjacent to WCAs that disturb or remove wildlife threshold pavement markings must reinstate them
+- Coloured surface treatments must meet MRTS110 skid resistance requirements
+- Green RRPMs must be reinstated along with any wildlife threshold pavement marking
+
+VISUAL INDICATORS:
+- Wildlife threshold pavement marking installed at non-WCA location = non-compliance
+- Wildlife threshold pavement marking on multi-lane arterial road = non-compliance
+- Wildlife threshold pavement marking without accompanying green RRPMs = non-compliance
+- Marking lacks proper coloured surface treatment meeting MRTS110 = non-compliance
+
+---
+
+CHUNK 36: Green Retroreflective Raised Pavement Markers (RRPMs) — Wildlife Conservation Areas
+Section: Clause 4.11.6.6 (NEW — Queensland only)
+Topic: Green RRPM requirements for WCA sections; installation rules and spacing
+
+GREEN RRPMs FOR WILDLIFE CONSERVATION AREAS:
+MAY be used at locations with WCA signs (Clause 4.11.6.4) to highlight areas of greater wildlife significance or where vehicle/animal collisions are significantly overrepresented.
+SHALL NOT be installed with wildlife INFORMATION signs.
+
+WHERE GREEN RRPMs ARE USED FOR WCA SIGNING, THEY SHALL:
+(a) Be installed OVER THE LENGTH of the WCA
+(b) Be REMOVED where no longer required
+(c) Be BI-DIRECTIONAL and installed ADJACENT TO THE ROAD EDGE LINE on BOTH SIDES of the road
+(d) Be installed IN ADDITION TO standard RRPM requirements (Section 5.9)
+(e) NOT be installed on MOTORWAYS
+(f) NOT be installed on roads or in locations where they may POSE A HAZARD to other road users
+(g) SPACING: MINIMUM 48 m, MAXIMUM 96 m — spacing (m) SHALL be UNIFORM over the length of the WCA area
+
+RELEVANCE TO CONSTRUCTION:
+- Construction in WCA zones must reinstate green RRPMs if disturbed
+- New road construction within WCA boundaries must include green RRPM installation at correct spacing
+- Green RRPMs must not be installed on motorways even if within a WCA boundary
+
+VISUAL INDICATORS:
+- Green RRPMs installed on motorway = non-compliance
+- Green RRPM spacing less than 48 m or greater than 96 m = non-compliance
+- Green RRPMs installed on one side only (not bi-directional, both sides) = non-compliance
+- Green RRPMs with non-uniform spacing over WCA length = non-compliance
+- Green RRPMs remaining after WCA conditions are no longer applicable = non-compliance
+
+---
+
+CHUNK 37: Vehicle Activated Wildlife Warning Devices (Clause 4.11.6.7)
+Section: Clause 4.11.6.7 (NEW — Queensland only)
+Topic: Vehicle activated flashing lights and signs for wildlife warning; operational parameters
+
+VEHICLE ACTIVATED DEVICES — MAY be used where:
+- There is an INCREASED RISK of animal/vehicle collisions, OR
+- Due to ELEVATED IMPACTS with animals
+
+Two types:
+
+TYPE 1 — VEHICLE ACTIVATED FLASHING LIGHTS ("WIG WAG" arrangement):
+- Must be installed with a RADAR DEVICE capable of detecting vehicle speeds
+- Activates flashing of lights in a WIG WAG arrangement
+- MUST be used with HIGH-IMPACT WILDLIFE WARNING SIGNS (Clause 4.11.6.3)
+- Flashing lights operate alternately when activated by an approaching vehicle EXCEEDING a nominated speed within prescribed operation times, OR during set times when animals are likely to be encountered
+- Lights SHALL CONTINUE TO FLASH until the vehicle speed reduces below the nominated speed or the vehicle passes the sign
+- SHOULD be used SELECTIVELY at critical locations where high-impact wildlife warning signs need enhancement to improve driver speed compliance
+
+TYPE 2 — VEHICLE ACTIVATED SIGNS:
+- MAY be used where presence of animals is expected AND there is POOR COMPLIANCE with posted speed
+- Installed with a RADAR DEVICE preset with the POSTED SPEED LIMIT
+- Displays a relevant animal symbol easily understood by drivers
+- ACTIVATION:
+  • Vehicle AT OR BELOW posted speed: activates, cycles between GREEN symbolic of animal and "THANK YOU" — cycle 1–2 seconds
+  • Vehicle ABOVE posted speed: activates, cycles between RED symbolic of animal and "SLOW DOWN" — cycle 1–2 seconds
+
+RELEVANCE TO CONSTRUCTION:
+- Construction zones near wildlife hotspots where speed compliance is poor may benefit from vehicle activated devices
+- Must be used with high-impact wildlife warning signs (Type 1)
+- Radar device must be preset to posted speed limit (Type 2)
+
+VISUAL INDICATORS:
+- Vehicle activated flashing lights not installed with high-impact wildlife warning signs = non-compliance
+- Vehicle activated sign preset to incorrect speed (not the posted speed limit) = non-compliance
+- Cycle speed other than 1–2 seconds for thank you/slow down messaging = non-compliance
+
+---
+
+CHUNK 38: Warning Signs — CHANGED TRAFFIC CONDITIONS (T1-23-Q01)
+Section: Clause 4.11.7 (Accepted, with amendments — item f added)
+Topic: Queensland-specific temporary hazard sign; strict application conditions
+
+SIGN: CHANGED TRAFFIC CONDITIONS (T1-23-Q01) — temporary/part-time hazard sign
+USE CONDITION — MAY ONLY be used on roads meeting BOTH:
+(a) A MAXIMUM POSTED SPEED LIMIT OF 60 km/h, AND
+(b) Available VERGE WIDTH is LESS THAN 2 m
+
+RELEVANCE TO CONSTRUCTION:
+- Applicable in urban construction zones where speed limit is ≤60 km/h and verge space is constrained
+- Cannot be used on higher-speed roads or where adequate verge space exists
+- Useful for warning motorists of changed conditions without specifying detail (e.g. lane narrowing, altered priority)
+
+VISUAL INDICATORS:
+- T1-23-Q01 installed on road with speed limit above 60 km/h = non-compliant use
+- T1-23-Q01 installed where verge width is 2 m or more = non-compliant use
+- Changed traffic conditions on construction site without T1-23-Q01 (where conditions are met) = flag
+
+---
+
+CHUNK 39: Vehicle Mounted Signs — Special Vehicle Requirements
+Section: Clause 4.11.8 (Accepted, with amendments — item c added)
+Topic: Reference to additional requirements for special vehicles in Queensland
+
+QUEENSLAND ADDITION — NOTE:
+- In addition to the signs prescribed in this clause, certain OTHER requirements for SPECIAL VEHICLES are prescribed in the Transport Operations (Road Use Management) Act 1995
+
+RELEVANCE TO CONSTRUCTION:
+- Construction vehicles classified as special vehicles (oversize, overmass, pilot vehicles, etc.) must comply with both MUTCD Part 2 vehicle-mounted sign requirements AND TORUM Act requirements
+- Pilot vehicles must carry appropriate signs as required under TORUM Act in addition to MUTCD requirements
+
+VISUAL INDICATORS:
+- Oversize construction vehicle or load with vehicle-mounted signs that don't comply with MUTCD Part 2 AND TORUM Act requirements = non-compliance
+- Pilot vehicle without required signs for special vehicle operation = non-compliance
+
+---
+
+CHUNK 40: Miscellaneous Signs — WEAVING TRAFFIC (W5-Q15)
+Section: Clause 4.12.2 (Accepted, with amendments — item h added)
+Topic: Queensland-specific warning sign for weaving traffic situations
+
+SIGN: WEAVING TRAFFIC (W5-Q15)
+USE:
+- MAY be used where TRAFFIC HAS A SHORT DISTANCE to cross between ADJACENT LANES to enter or exit a road
+
+RELEVANCE TO CONSTRUCTION:
+- Construction worksites creating short weave zones (where vehicles must merge and simultaneously access/exit) require this sign
+- Common at temporary diverge/merge points with short separation distances
+
+VISUAL INDICATORS:
+- Short weave zone created by construction traffic management without W5-Q15 warning = flag
+- W5-Q15 used at standard merge locations (not weaving zones) = inappropriate use
+
+---
+
+CHUNK 41: Lane Filtering Prohibited Signs (R6-020-Q01 and R6-020-Q02)
+Section: Clause 4.12.2 (Accepted, with amendments — item i added)
+Topic: Queensland-specific signs to prohibit motorcycle lane filtering
+
+SIGNS:
+- LANE FILTERING PROHIBITED (R6-020-Q01) — regulatory prohibition sign
+- END LANE FILTERING PROHIBITED (R6-020-Q02) — end of prohibition sign
+
+USE:
+- R6-020-Q01 and R6-020-Q02 SHALL be installed WHERE MOTORCYCLE RIDERS are to be PROHIBITED FROM LANE FILTERING
+
+RELEVANCE TO CONSTRUCTION:
+- Construction worksites where lane filtering would be dangerous (e.g. narrow lanes, active plant movements) may prohibit lane filtering using these signs
+- Both start and end signs must be installed to define the prohibited zone
+
+VISUAL INDICATORS:
+- Lane filtering prohibition zone without R6-020-Q01 at start = non-compliance
+- Lane filtering prohibition zone without R6-020-Q02 at end = non-compliance
+- Lane filtering prohibited in construction zone but signs absent = non-compliance
+
+---
+
+CHUNK 42: Heavy Vehicle Signs — Checking Station Entry (Clause 4.12.3)
+Section: Clause 4.12.3 (Difference)
+Topic: Queensland difference in signs for heavy vehicle checking station/interception site entry
+
+QUEENSLAND DIFFERENCE (replaces AS 1742.2-2022 item c):
+- The BUSES MUST ENTER (R6-18) and TRUCKS MUST ENTER (R6-27) signs SHALL NOT be used at the entrance to HEAVY VEHICLE CHECKING STATIONS (heavy vehicle interception sites)
+- For guidance on signing and line marking for heavy vehicle interception sites: refer to the Signing and Line Marking for Heavy Vehicle Interception Sites Guideline
+
+VISUAL INDICATORS:
+- R6-18 (BUSES MUST ENTER) or R6-27 (TRUCKS MUST ENTER) signs installed at a heavy vehicle interception site entrance = non-compliance — wrong sign type
+- Heavy vehicle interception site without correct signing per the Interception Sites Guideline = non-compliance
+
+---
+
+CHUNK 43: Heavy Vehicle Signs — TRUCKS AND BUSES USE LEFT LANE (R6-28-Q01)
+Section: Clause 4.12.3 (Accepted, with amendments — item e added)
+Topic: Queensland-specific mandatory lane sign for trucks and buses
+
+SIGN: TRUCKS AND BUSES USE LEFT LANE (R6-28-Q01)
+USE:
+- SHALL be used to indicate a MANDATORY REQUIREMENT for trucks and buses to use the LEFT LANE
+
+RELEVANCE TO CONSTRUCTION:
+- Construction projects on multi-lane roads that divert heavy vehicles to specific lanes must use R6-28-Q01 where left lane use is mandatory
+- Distinguishes from advisory lane signs; R6-28-Q01 is a MANDATORY requirement sign
+
+VISUAL INDICATORS:
+- Multi-lane road section where trucks/buses are mandated to use left lane but without R6-28-Q01 = non-compliance
+- Advisory sign used instead of R6-28-Q01 where mandatory requirement applies = wrong sign type, flag
+
+---
+
+CHUNK 44: Emergency Access Location Signs — Median Crossing (GE9-23 Series)
+Section: Clause 4.12.4 (Accepted, with amendments — item a added)
+Topic: Emergency median crossing signs and U-turn prevention in Queensland
+
+SIGNS COMBINATION at EMERGENCY ACCESS LOCATIONS in MEDIAN:
+Where there is a HISTORY or HIGH LIKELIHOOD of unauthorised vehicles performing U-turns at a median emergency crossing:
+- GE9-23-1 (Emergency Median Crossing sign)
+- R2-5 (No U Turn sign)
+- R9-Q04_2 (AUTHORISED VEHICLES EXCEPTED supplementary plate)
+These THREE signs may be used in combination
+
+VISUAL INDICATORS:
+- Emergency median crossing with history of unauthorised U-turns but missing R2-5 and R9-Q04_2 = flag for installation
+- Emergency median crossing signs present without AUTHORISED VEHICLES EXCEPTED plate where public may attempt U-turns = flag
+
+---
+
+CHUNK 45: Emergency Access Location Signs — Advance Signing (GE9-24 Series)
+Section: Clause 4.12.4 (Accepted, with amendments — item b added)
+Topic: Advance signing for emergency access points using supplementary distance plates
+
+SIGN: EMERGENCY ACCESS (GE9-24-1) and EMERGENCY ACCESS DIRECTION (GE9-24-2) (L and R)
+ADVANCE SIGNING:
+- Where an ADVANCE SIGN is required for GE9-24-1 or GE9-24-2: a SUPPLEMENTARY DISTANCE PLATE x m (G9-66) MAY be added BELOW the GE9-24 series signs
+
+VISUAL INDICATORS:
+- Emergency access point requiring advance warning without supplementary distance plate on GE9-24 series = flag for review
+
+---
+
+CHUNK 46: Warning Signs for Cane Vehicles — Crossing and Area Signs (Clause 4.12.5)
+Section: Clause 4.12.5 (NEW — Queensland only)
+Topic: Queensland-specific warning signs for cane vehicle crossings and sugar cane areas
+
+SIGNS FOR CANE VEHICLE CROSSINGS:
+(a) CANE VEHICLE CROSSING (W5-50-Q01) — symbolic warning sign
+    CANE VEHICLE CROSSING (W8-Q15) — text supplementary plate
+    USE: At locations where CANE VEHICLES CROSS THE ROADWAY
+    Where cane vehicles cross multiple locations or travel along a road → use item (b) instead
+
+(b) SUGAR CANE AREA WATCH FOR SLOW VEHICLES HAULING CANE (G9-Q03_1)
+    SUGAR CANE AREA SLOW VEHICLES (G9-Q03_2)
+    USE: Where CANE VEHICLES ARE LIKELY TO CROSS MULTIPLE LOCATIONS ALONG A ROAD, or TRAVEL ALONG A ROAD
+
+RELEVANCE TO CONSTRUCTION:
+- Construction in cane growing areas (common in North Queensland near Townsville, Ingham, Cairns, Bundaberg) must consider cane vehicle movements
+- Construction projects that disrupt existing cane crossing infrastructure require appropriate substitute warning signing
+- Road projects in cane areas must address interaction between construction traffic and cane vehicles
+
+VISUAL INDICATORS:
+- Road through cane area without appropriate cane vehicle crossing or area warning signs = flag
+- Single cane crossing sign used where multiple crossings exist along the road = wrong sign type, use G9-Q03 series
+
+---
+
+CHUNK 47: Pavement Markings — Audio-Tactile Line Marking (Clause 5.3.10.1)
+Section: Clause 5.3.10.1 (Accepted, with amendments)
+Topic: Queensland guidance reference for audio-tactile line marking
+
+QUEENSLAND ADDITION:
+- For ADDITIONAL GUIDANCE on audio-tactile line marking in Queensland: refer to RPDM PART 6
+
+RELEVANCE TO CONSTRUCTION:
+- Road construction or rehabilitation requiring audio-tactile (rumble strip) line marking must follow RPDM Part 6
+- Construction designs must specify audio-tactile marking consistent with RPDM Part 6 guidance
+
+VISUAL INDICATORS:
+- Audio-tactile edge or dividing line markings installed not in accordance with RPDM Part 6 guidance = flag
+
+---
+
+CHUNK 48: Wide Centre Line Treatment — Application Requirements (Clause 5.4.2)
+Section: Clauses 5.4.2.1, 5.4.2.2, 5.4.2.3, 5.4.2.6, 5.4.2.7 (Accepted, with amendments and differences)
+Topic: Queensland-specific requirements for wide centre line treatment (WCLT) design and signage
+
+GENERAL:
+- For additional guidance on WCLT in Queensland: refer to RPDM PART 3
+
+WIDTH — QUEENSLAND DIFFERENCE (replaces AS 1742.2-2022):
+- AS 1742.2-2022 allows width reduction to minimum 0.6 m where seal width is insufficient
+- QUEENSLAND RULE: Where seal width is NOT sufficient to provide a separation width of 1 m, a REDESIGN OF THE TREATMENT is required in accordance with RPDM PART 3
+- Queensland does NOT permit the 0.6 m minimum width fallback; redesign is mandatory
+
+START AND END TRANSITIONS — QUEENSLAND DIFFERENCE:
+- Transition distance: refer to RPDM PART 3 for WCLT transition distance requirements (replaces the AS 1742.2-2022 formula-based note)
+
+NARROW STRUCTURES — QUEENSLAND DIFFERENCE:
+- Width of WCLT over a narrow bridge structure = RESIDUAL WIDTH AVAILABLE while maintaining lane and shoulder widths
+- These widths MAY VARY at SUCCESSIVE STRUCTURES dependent on residual width available
+- Queensland does NOT apply the 0.6 m minimum through a structure (see redesign requirement above)
+
+SIGN REQUIREMENTS — QUEENSLAND ADDITION:
+The following G9-Q14 series signs may be used to inform motorists about overtaking permissions:
+- G9-Q14_1: OVERTAKING NOT PERMITTED (black on white, rectangular)
+- G9-Q14_2: OVERTAKING NOT PERMITTED (black on white, smaller format)
+- G9-Q14_3: OVERTAKING PERMITTED WHEN SAFE (black on white, rectangular)
+- G9-Q14_4: OVERTAKING PERMITTED WHEN SAFE (black on white, smaller format)
+
+RELEVANCE TO CONSTRUCTION:
+- Road construction or rehabilitation introducing or modifying WCLT must follow RPDM Part 3, not just AS 1742.2-2022
+- Critical: where pavement width is insufficient for standard 1 m separation, redesign is required — no Queensland shortcut to 0.6 m minimum
+- WCLT width at bridges and culverts constructed during road projects must be assessed per residual width approach
+
+VISUAL INDICATORS:
+- WCLT with separation width less than 1 m but no evidence of redesign per RPDM Part 3 = non-compliance
+- WCLT through a narrow structure where width has been reduced to 0.6 m (following AS 1742.2-2022 fallback) rather than redesigned per RPDM Part 3 = non-compliance in Queensland
+- Road with WCLT installed but no overtaking information signs (G9-Q14 series) where required = flag
+- WCLT transition not designed per RPDM Part 3 transition distance requirements = flag
+
+---
+
+CHUNK 49: Give Way Lines at Roundabouts — Queensland Difference (Clause 5.5.2)
+Section: Clause 5.5.2 (Difference — replaces AS 1742.2-2022 item c)
+Topic: Queensland-specific requirements for give way line placement at roundabouts
+
+QUEENSLAND DIFFERENCE (replaces AS 1742.2-2022 item c):
+At a ROUNDABOUT, to indicate the safe position for a vehicle to be held before entering:
+- The line SHALL be placed ACROSS THE ENTERING ROAD
+- The line MAY be ALONG THE EDGE OF THE CIRCULATING ROADWAY (as shown in Figures 2.8 and 2.9) OR SET BACK UP TO 5 m FROM THE EDGE OF CIRCULATING ROADWAY
+- The line MAY BE STAGGERED on MULTIPLE LANE APPROACHES
+
+MEASUREMENT: Set-back up to MAXIMUM 5 m from edge of circulating roadway
+
+RELEVANCE TO CONSTRUCTION:
+- Roundabout construction or modification must place give way lines in accordance with this Queensland requirement
+- Multiple lane roundabout approaches require staggered give way lines in Queensland
+- Set-back distance cannot exceed 5 m
+
+VISUAL INDICATORS:
+- Give way line at roundabout set back more than 5 m from circulating roadway edge = non-compliance
+- Multiple lane roundabout approach with non-staggered give way lines = non-compliance
+- Give way line not placed across the entering road = non-compliance
+
+---
+
+CHUNK 50: KEEP CLEAR Pavement Marking — Supplementary Sign (Clause 5.8.5)
+Section: Clause 5.8.5 (Accepted, with amendments)
+Topic: Queensland supplementary sign for ineffective KEEP CLEAR pavement markings
+
+QUEENSLAND ADDITION:
+- Where an installation of KEEP CLEAR pavement marking has PROVEN TO BE INEFFECTIVE:
+  → The KEEP INTERSECTION CLEAR (G9-67-Q01) sign MAY be installed to FURTHER DISCOURAGE queuing across the intersection
+  → Pre-condition: pavement marking must have been applied first and proven ineffective
+
+SIGN: KEEP INTERSECTION CLEAR (G9-67-Q01)
+RELEVANCE TO CONSTRUCTION:
+- Temporary traffic management in construction zones creating queuing across intersections should first try KEEP CLEAR pavement markings; if ineffective, add G9-67-Q01 sign
+- Applicable in construction phase when intersection management is required
+
+VISUAL INDICATORS:
+- Construction zone with queuing across an intersection but no KEEP CLEAR marking or G9-67-Q01 sign = flag
+- G9-67-Q01 sign installed without prior KEEP CLEAR pavement marking being tried = non-compliant use (must try pavement marking first)
+
+---
+
+CHUNK 51: Raised Pavement Markers — Bicycle Lane Placement Rule (Clause 5.9.5.2)
+Section: Clause 5.9.5.2 (Accepted, with amendments)
+Topic: Queensland rule for RRPM placement adjacent to narrow bicycle lanes
+
+QUEENSLAND ADDITION:
+- Where RRPMs are used to AUGMENT LANE LINES, EDGE LINES, and OUTLINE MARKINGS adjacent to:
+  • BICYCLE LANES less than 1.5 m wide, OR
+  • SEALED SHOULDERS forming part of an identified cycle network less than 1.5 m wide
+- RRPMs SHALL NOT be placed WITHIN the bicycle lane (or sealed shoulder)
+- Instead: RRPMs shall be placed on the OPPOSITE SIDE of the line which they are augmenting
+
+MEASUREMENT: Bicycle lane or sealed cycle shoulder less than 1.5 m wide = no RRPMs within the lane; place on opposite side
+
+RELEVANCE TO CONSTRUCTION:
+- Road construction creating or reinstating bicycle lanes less than 1.5 m wide must locate RRPMs outside the lane
+- Rehabilitation projects reinstating RRPMs adjacent to cycle infrastructure must follow this rule
+
+VISUAL INDICATORS:
+- RRPMs placed within a bicycle lane less than 1.5 m wide = non-compliance
+- RRPMs augmenting edge line of cycle path less than 1.5 m wide placed inside the cycle path = non-compliance
+- Bicycle lane 1.5 m wide or more — standard RRPM placement applies
+
+---
+
+CHUNK 52: Exit Ramp Pavement Marking — Green RRPMs for Delineation (Clause 5.11.7)
+Section: Clause 5.11.7 (NEW — Queensland only)
+Topic: Queensland-standard exit ramp marking using green RRPMs
+
+NORMAL EXIT RAMP MARKING — QUEENSLAND STANDARD (see Figure 5.11.7):
+To DELINEATE the approach to and entrance of an OFF RAMP, GREEN UNI-DIRECTIONAL RRPMs are used in ASSOCIATION WITH THE EDGE LINE
+
+SPACING AND ARRANGEMENT (from Figure 5.11.7):
+- GREEN REFLECTORISED MARKERS at 6 m spacing for 150 m (approach section)
+- CLUSTER OF GREEN REFLECTORISED MARKERS at 1.5 m spacing for 7.5 m (at ramp nose)
+- GREEN REFLECTORISED MARKERS at 6 m spacing for 150 m (beyond ramp nose)
+- Used in conjunction with a CONTINUITY LINE at the ramp nose area
+
+KEY MEASUREMENTS:
+- 6 m spacing — standard section (approach and beyond nose)
+- 1.5 m spacing — cluster at nose (7.5 m length)
+- 150 m — length of approach and exit RRPM runs
+
+RELEVANCE TO CONSTRUCTION:
+- Expressway construction or modification creating or reinstating exit ramps must install green RRPMs per this standard
+- Replacement or temporary delineation during construction must maintain the green RRPM delineation
+- All RRPMs are uni-directional green (not the standard bi-directional type used in other applications)
+
+VISUAL INDICATORS:
+- Exit ramp without green RRPMs (white or red RRPMs used instead) = non-compliance with Queensland standard
+- Green RRPM spacing on exit ramp approach not at 6 m = non-compliance
+- Cluster spacing at ramp nose not at 1.5 m over 7.5 m = non-compliance
+- Green RRPMs at exit ramp bi-directional instead of uni-directional = non-compliance
+
+---
+
+CHUNK 53: Wildlife Awareness Signs — Queensland Rules (Appendix H)
+Section: Appendix H (Normative — Accepted, with amendments)
+Topic: Queensland-specific rules for wildlife awareness signs; species, sizing and contact information
+
+SPECIES RULE:
+- Wildlife awareness signs shall indicate ONLY ONE ANIMAL SPECIES that is likely to be present
+- If DIFFERENT TYPES of animals encroach on the roadside within an area and signing is required for MULTIPLE species: only the animal MOST AT RISK FROM TRAFFIC STRIKES shall be installed
+
+SIZING:
+- SIZE A: 750 mm x 600 mm — where speed limit posted is ≤80 km/h
+- SIZE B: 900 mm x 720 mm — where speed limit posted is >80 km/h
+
+CONDITIONS FOR WILDLIFE AWARENESS SIGNS:
+- SHALL NOT be provided for MIGRATORY animals
+- SHOULD ONLY be provided where the PRESENCE OF ANIMALS ON THE ROAD IS EXPECTED
+- SHALL be CONTINUALLY ASSESSED for need and relevance
+- Signs that are NO LONGER APPLICABLE SHALL BE REMOVED
+- Wildlife awareness signs SHOULD NOT be erected on the SAME POST as wildlife WARNING signs (except W8-Q18)
+- Wildlife WARNING signs take PRECEDENCE over wildlife AWARENESS signs
+- Signs should be located WHERE ANIMALS ARE LIKELY TO BE ENCOUNTERED — not too far in advance
+
+CONTACT INFORMATION — 1300 ANIMAL SIGN (W8-Q18):
+- MAY be used to supplement wildlife awareness signs to provide a single contact for reporting injured animals
+- NO OTHER PHONE NUMBERS shall be included on the sign
+- RSPCA MUST be contacted FIRST prior to installation of a sign bearing the 1300 ANIMAL number to verify adequate services operate in the area
+
+AVAILABLE QUEENSLAND WILDLIFE AWARENESS SIGNS:
+- W5-Q20 series: "CARE FOR OUR WILDLIFE" with various animal symbols (freshwater turtle, snake, bird, possum/glider, and others)
+- W8-Q18: REPORT INJURED ANIMALS PHONE 1300 ANIMAL (supplementary plate)
+- W8-Q19: NEXT [x] km (supplementary plate)
+- W5-Q21: CARE FOR OUR ISLAND'S WILDLIFE REPORT INJURED ANIMALS PHONE 1300 ANIMAL (for island areas)
+- W5-Q22: FAUNA CROSSING (with vehicle and animal symbols)
+
+RELEVANCE TO CONSTRUCTION:
+- Construction projects disturbing habitat or increasing wildlife/road interactions should consider wildlife awareness signs
+- Any construction site adjacent to conservation areas must use correct sign sizes for the posted speed limit
+- Only one species to be shown; select the one most at risk from traffic
+- Verify RSPCA service coverage before installing 1300 ANIMAL signs
+
+VISUAL INDICATORS:
+- Wildlife awareness sign displaying more than one animal species = non-compliance
+- Size A sign (750x600mm) on road with speed limit >80 km/h = wrong size, non-compliance
+- Size B sign (900x720mm) on road with speed limit ≤80 km/h = oversized, flag
+- Wildlife awareness sign provided for migratory species = non-compliance
+- Wildlife awareness sign on same post as wildlife warning sign (except W8-Q18) = non-compliance
+- 1300 ANIMAL number on sign without prior RSPCA consultation/approval = non-compliance
+
+---
+
+CHUNK 54: Key Technical Standards and References — Summary for Construction
+Section: Normative References (Clause 1.3, added); Throughout document
+Topic: Complete list of Queensland-specific standards and references applicable to construction-related traffic control
+
+QUEENSLAND-SPECIFIC TECHNICAL STANDARDS:
+- TMR Traffic Control (TC) Signs Database — officially approved non-standard signs (required reference)
+- Main Roads Technical Specification MRTS45 Road Surface Delineation — for pavement marking materials
+- Main Roads Technical Specification MRTS110 Coloured Surface Treatments — for coloured surface treatments (skid resistance)
+- Road Planning and Design Manual (RPDM) Part 3: Geometric Design — for WCLT design, transition distances
+- Road Planning and Design Manual (RPDM) Part 6: Roadside Design, Safety and Barriers — for audio-tactile line marking
+- Signing and Line Marking of Heavy Vehicle Interception Sites Guideline — for heavy vehicle checking stations
+- Transport Operations (Road Use Management) Act 1995 (Qld) — TORUM Act — governing legislation
+
+KEY STANDARD DRAWINGS:
+- SD1356: Road Edge Guide Posts – Post and Installation Details
+- SD1851: Hazard Marker – Post and Installation Details (bridges and culverts)
+- SD1358: Maintenance Marker Posts – Post and Installation Details
+- TC2321: Wildlife threshold pavement marking detail
+
+KEY QUEENSLAND GUIDES (not codes of practice):
+- Queensland Guide to Traffic Management (QGTM)
+- Queensland Guide to Temporary Traffic Management (QGTTM) — primary reference for construction workzone TTM
+
+PRIMARY AUSTRALIAN STANDARD:
+- AS 1742.2-2022: Manual of Uniform Traffic Control Devices Part 2 — read together with this document; Queensland MUTCD Part 2 takes precedence where there is a difference
+
+VISUAL INDICATORS:
+- Construction site TTM plan referencing only AS 1742.2-2022 without Queensland MUTCD Part 2 = incomplete compliance basis — flag for review
+- Coloured surface treatments not meeting MRTS110 skid resistance = non-compliance
+- Road edge guide posts not to SD1356 = non-compliance
+- Hazard marker posts at bridges not to SD1851 = non-compliance
+
+---
+
+CHUNK 55: General Compliance Summary — Queensland Construction Site Checklist Reference
+Section: All sections
+Topic: Consolidated quick-reference compliance summary for SafetyScan construction site AI assessments
+
+MANDATORY "SHALL" REQUIREMENTS RELEVANT TO CONSTRUCTION:
+1. R2-9-Q01 (RIGHT LANE MUST U TURN) SHALL be provided at exclusive U-turn lanes at signalised intersections
+2. R6-33-Q01 (OVERALL WIDTH LIMIT) — if used, SHALL be on immediate approaches, and SHALL be accompanied by detour signs
+3. W5-Q11 (BOOM BARRIER) — SHALL be installed in advance of boom barriers across roadways (not railway crossings)
+4. R6-020-Q01 / R6-020-Q02 — SHALL be installed where lane filtering is to be prohibited
+5. R6-28-Q01 (TRUCKS AND BUSES USE LEFT LANE) — SHALL be used to indicate mandatory lane requirement
+6. W5-36-Q01 (EMERGENCY VEHICLES) — SHALL be used where two or more emergency services are co-located
+7. G9-21-1-Q01 (ON SIDE ROAD) — SHALL be used with flood signs where floodway on side road is too close to main road
+8. Green RRPMs: SHALL be installed at ALL wildlife threshold pavement marking installations
+9. Green RRPMs in WCAs: SHALL be bi-directional, on both sides, minimum 48 m / maximum 96 m spacing, uniform spacing, over full WCA length
+10. W5-Q19 (WCA signs) — SHALL ONLY be installed where wildlife warning warrants are met, and ONLY in eligible locations
+11. Wildlife awareness signs — ONLY ONE ANIMAL SPECIES per sign; use size A (750x600mm) for ≤80 km/h, size B (900x720mm) for >80 km/h
+12. Give way line at roundabout — SHALL be placed across the entering road; set-back SHALL NOT exceed 5 m
+13. RRPMs adjacent to cycle lanes <1.5 m wide — SHALL NOT be placed within the lane; place on opposite side of line
+14. WCLT width less than 1 m — redesign required per RPDM Part 3; no Queensland fallback to 0.6 m
+15. Innovations / non-standard devices — MUST have TMR approval prior to use
+16. Exit ramp green RRPMs — 6 m spacing approach/exit runs, 1.5 m spacing in nose cluster (7.5 m length)
+
+KEY "SHOULD" DEFAULTS FOR CONSTRUCTION:
+- Maintenance marker posts at items requiring regular maintenance (SD1358)
+- Hazard marker posts at bridges and culverts (SD1851)
+- W5-Q13 (QUEUED TRAFFIC) where stopping sight distance to end of queue may not be achieved
+- Active devices with queued traffic signs
+- 1300 ANIMAL signs — consult RSPCA first
+
+PENALTIES FOR NON-COMPLIANCE:
+- Non-compliance with Queensland MUTCD requirements may constitute a breach of the Transport Operations (Road Use Management) Act 1995 (TORUM Act)
+- WHS obligations may also apply where traffic control failures expose workers or the public to risk
+
+---
