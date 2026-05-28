@@ -44,7 +44,7 @@ export default function ScansPage() {
         supabase.from('sites').select('id, name'),
       ])
       setScans(scansRes.data || [])
-      setSites(sitesRes.data || [])
+      setSites((sitesRes.data || []) as { id: string; name: string }[])
       setLoading(false)
     }
     init()
