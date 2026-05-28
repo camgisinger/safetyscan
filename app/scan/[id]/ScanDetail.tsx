@@ -319,7 +319,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const inputStyle: React.CSSProperties = { display: 'block', width: '100%', padding: '0 14px', borderRadius: 12, border: 'none', background: 'var(--card-2)', fontSize: 14, fontFamily: 'var(--ff-sans)', color: 'var(--text)', boxSizing: 'border-box', outline: 'none', boxShadow: 'inset 0 0 0 1px var(--border)' }
 
   return (
-    <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)', willChange: 'transform, opacity' }}>
+    <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)' }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}} textarea,input{outline:none}`}</style>
       <AppHeader variant="detail" title="Scan" rightAction="share" onBack={() => router.push('/dashboard')}/>
 

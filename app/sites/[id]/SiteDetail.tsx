@@ -106,7 +106,7 @@ export default function SiteDetail({ id }: { id: string }) {
   const bars = [18,22,32,28,36,30,38,36,40,28,34,38,30,36,42,40,36,30,38,42,36,38,28,34,40,38,42,30,32,38]
 
   return (
-    <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)', willChange: 'transform, opacity' }}>
+    <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)' }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
       <AppHeader variant="detail" title="Site" onBack={() => router.push('/sites')}/>
 
