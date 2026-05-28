@@ -38,6 +38,11 @@
   --shadow-fab:        0 12px 28px -8px rgba(243,148,16,.35), 0 6px 16px -4px rgba(0,0,0,.25);
   --shadow-btn-amber:  0 6px 16px -8px rgba(243,148,16,.35);
 
+  /* ---- FAB (theme-specific) ---- */
+  --fab-bg:     var(--amber);
+  --fab-icon:   #fff;
+  --fab-shadow: 0 12px 28px -8px rgba(243,148,16,.35), 0 6px 16px -4px rgba(0,0,0,.25);
+
   /* ---- Raw ink (dark) palette ---- */
   --ink-bg:       #16181C;
   --ink-card:     #1E2025;
@@ -143,6 +148,15 @@
   --ss-border:       var(--ink-border);
   --ss-border-strong: rgba(255, 250, 240, 0.18);
   --ss-base:         #ECE7DD;
+}
+
+/* =========================================================
+   FAB — theme-specific overrides
+   ========================================================= */
+[data-theme="light"],
+.theme-paper {
+  --fab-bg:     var(--paper-text);
+  --fab-shadow: 0 12px 28px -8px rgba(0,0,0,.25), 0 6px 16px -4px rgba(0,0,0,.2);
 }
 
 /* =========================================================

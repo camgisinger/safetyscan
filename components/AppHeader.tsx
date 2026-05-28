@@ -24,6 +24,9 @@ export default function AppHeader({
 }: AppHeaderProps) {
   const router = useRouter()
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const openMenu = () => { setMenuOpen(true);  window.dispatchEvent(new CustomEvent('sidebar-open')) }
+  const closeMenu = () => { setMenuOpen(false); window.dispatchEvent(new CustomEvent('sidebar-close')) }
   const [isDark, setIsDark] = useState(true)
   const [userEmail, setUserEmail] = useState<string | null>(null)
 
@@ -46,7 +49,7 @@ export default function AppHeader({
   }
 
   const handleSignOut = async () => {
-    setMenuOpen(false)
+    closeMenu()
     await supabase.auth.signOut()
     router.push('/login')
   }
@@ -92,7 +95,7 @@ export default function AppHeader({
       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         {rightContent}
         {effectiveRightAction === 'menu' && (
-          <button onClick={() => setMenuOpen(true)} style={{ width: 32, height: 32, display: 'grid', placeItems: 'center', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text)', borderRadius: 10 }} aria-label="Open menu">
+          <button onClick={openMenu} style={{ width: 32, height: 32, display: 'grid', placeItems: 'center', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text)', borderRadius: 10 }} aria-label="Open menu">
             <svg width="16" height="13" viewBox="0 0 16 13" fill="currentColor">
               <rect y="0"   width="16" height="1.6" rx="0.8"/>
               <rect y="5.7" width="16" height="1.6" rx="0.8"/>
@@ -122,9 +125,9 @@ export default function AppHeader({
       {/* Drawer */}
       {menuOpen && (
         <>
-          <div onClick={() => setMenuOpen(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 40, animation: 'fadeIn 0.2s ease forwards' }}/>
+          <div onClick={closeMenu} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 40, animation: 'fadeIn 0.2s ease forwards' }}/>
           <div style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 280, background: '#16181C', zIndex: 50, display: 'flex', flexDirection: 'column', padding: 24, boxShadow: '-4px 0 24px rgba(0,0,0,0.4)', animation: 'slideInFromRight 0.28s cubic-bezier(0.2,0.7,0.3,1) forwards', willChange: 'transform' }}>
-            <button onClick={() => setMenuOpen(false)} style={{ alignSelf: 'flex-end', background: 'transparent', border: 'none', color: '#ECE7DD', fontSize: 22, cursor: 'pointer', marginBottom: 24, lineHeight: 1 }}>✕</button>
+            <button onClick={closeMenu} style={{ alignSelf: 'flex-end', background: 'transparent', border: 'none', color: '#ECE7DD', fontSize: 22, cursor: 'pointer', marginBottom: 24, lineHeight: 1 }}>✕</button>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 32 }}>
               <img src="/brand/mark-amber.svg" alt="" style={{ width: 28, height: 28 }}/>
               <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.01em' }}>
@@ -139,7 +142,7 @@ export default function AppHeader({
             </div>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 'auto' }}>
               {[{ label: 'Home', href: '/dashboard' }, { label: 'Scans', href: '/scans' }, { label: 'Sites', href: '/sites' }, { label: 'Profile', href: '/profile' }, { label: 'Guide', href: '/guide' }].map(item => (
-                <button key={item.href} onClick={() => { router.push(item.href); setMenuOpen(false) }}
+                <button key={item.href} onClick={() => { router.push(item.href); closeMenu() }}
                   style={{ background: 'transparent', border: 'none', color: '#ECE7DD', fontSize: 16, fontWeight: 500, cursor: 'pointer', textAlign: 'left', padding: '12px 0', borderBottom: '0.5px solid rgba(255,255,255,0.06)', fontFamily: 'inherit' }}>
                   {item.label}
                 </button>

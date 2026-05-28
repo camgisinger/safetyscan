@@ -42,7 +42,18 @@ export default function DashboardPage() {
   const [scans, setScans] = useState<Scan[]>([])
   const [sites, setSites] = useState<Site[]>([])
   const [loading, setLoading] = useState(true)
+  const [isDark, setIsDark] = useState(true)
   const router = useRouter()
+
+  useEffect(() => {
+    const saved = localStorage.getItem('theme')
+    setIsDark(saved !== 'light')
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.getAttribute('data-theme') !== 'light')
+    })
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     const init = async () => {
@@ -102,8 +113,8 @@ export default function DashboardPage() {
 
         {/* Guide banner */}
         <div onClick={() => router.push('/guide')} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px', borderRadius: 16, background: 'var(--card)', boxShadow: 'var(--shadow-card)', marginTop: 12, cursor: 'pointer' }}>
-          <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-            <img src="/brand/mark-ink-on-amber.svg" alt="" style={{ width: 22, height: 22 }}/>
+          <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'var(--card-2)', boxShadow: '0 0 0 1px var(--border)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
+            <img src={isDark ? '/brand/mark-amber.svg' : '/brand/mark-ink.svg'} alt="" style={{ width: 22, height: 22 }}/>
           </div>
           <div style={{ flex: 1, fontWeight: 600, fontSize: 14.5, color: 'var(--text)' }}>SafetyScan Guide</div>
           <span style={{ opacity: 0.5, fontSize: 16 }}>→</span>
