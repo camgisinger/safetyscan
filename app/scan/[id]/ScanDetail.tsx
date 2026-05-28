@@ -95,6 +95,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [generatingShare, setGeneratingShare] = useState(false)
   const [exportingPDF, setExportingPDF] = useState(false)
   const [reanalysing, setReanalysing] = useState(false)
+  const [reanalyseExpanded, setReanalyseExpanded] = useState(false)
   const [openLeg, setOpenLeg] = useState<number | null>(null)
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
@@ -373,6 +374,24 @@ export default function ScanDetail({ id }: { id: string }) {
                 </div>
               )}
             </div>
+            {/* Pending re-analyse photos strip */}
+            {continuePhotos.length > 0 && (
+              <div style={{ marginTop: 10 }}>
+                <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 9, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: 6 }}>
+                  Adding {continuePhotos.length} new photo{continuePhotos.length !== 1 ? 's' : ''}
+                </div>
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                  {continuePhotos.map((p, i) => (
+                    <div key={i} style={{ position: 'relative' }}>
+                      <img src={p.dataUrl} alt="" style={{ width: 60, height: 60, borderRadius: 10, objectFit: 'cover', border: '1.5px dashed var(--amber)', opacity: 0.9 }}/>
+                      <button onClick={() => setContinuePhotos(prev => prev.filter((_, idx) => idx !== i))}
+                        style={{ position: 'absolute', top: -5, right: -5, width: 18, height: 18, borderRadius: '50%', background: 'var(--status-red)', border: '2px solid var(--bg)', color: '#fff', fontSize: 10, cursor: 'pointer', display: 'grid', placeItems: 'center', padding: 0 }}>✕</button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {photoEnlarged !== false && (
               <div onClick={() => setPhotoEnlarged(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, cursor: 'pointer' }}>
                 <img src={photoUrls[photoEnlarged]} alt="Enlarged" style={{ maxWidth: '95vw', maxHeight: '95vh', objectFit: 'contain', borderRadius: 12 }}/>
@@ -529,11 +548,13 @@ export default function ScanDetail({ id }: { id: string }) {
 
         {/* Re-analyse + Export PDF */}
         <div style={{ display: 'flex', gap: 8, marginTop: 20 }}>
-          <button onClick={handleReanalyse} disabled={reanalysing}
-            style={{ flex: 1, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: 'var(--card)', border: 'none', borderRadius: 999, color: 'var(--text)', fontSize: 14, fontWeight: 600, cursor: reanalysing ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', boxShadow: '0 0 0 1px var(--border)', opacity: reanalysing ? 0.6 : 1 }}>
+          <button
+            onClick={() => { if (!reanalysing) setReanalyseExpanded(v => !v) }}
+            disabled={reanalysing}
+            style={{ flex: 1, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: reanalyseExpanded ? 'var(--text)' : 'var(--card)', border: 'none', borderRadius: 999, color: reanalyseExpanded ? 'var(--bg)' : 'var(--text)', fontSize: 14, fontWeight: 600, cursor: reanalysing ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', boxShadow: '0 0 0 1px var(--border)', opacity: reanalysing ? 0.6 : 1, transition: 'all 0.15s' }}>
             {reanalysing ? <><span style={{ width: 14, height: 14, border: '2px solid var(--border)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>Re-analysing…</> : <>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7a4 4 0 0 1 8 0M11 7a4 4 0 0 1-8 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 4v3h-3M3 10V7h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
-              Re-analyse
+              Re-analyse {reanalyseExpanded ? '▲' : '▼'}
             </>}
           </button>
           <button onClick={handleExportPDF} disabled={exportingPDF}
@@ -543,38 +564,47 @@ export default function ScanDetail({ id }: { id: string }) {
           </button>
         </div>
 
-        {/* Continue conversation (re-analyse with context) */}
-        {!hasFollowUp && (
-          <div style={{ background: 'var(--card)', borderRadius: 16, padding: '14px 16px', boxShadow: 'var(--shadow-card)', marginTop: 14 }}>
-            <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 12 }}>Continue conversation</div>
-            <textarea value={continueContext} onChange={e => setContinueContext(e.target.value)} placeholder="Describe what's changed, additional context, or what you'd like re-assessed…" rows={3}
+        {/* Re-analyse expanded panel */}
+        {reanalyseExpanded && !hasFollowUp && (
+          <div style={{ background: 'var(--card)', borderRadius: 16, padding: '14px 16px', boxShadow: 'var(--shadow-card)', marginTop: 10 }}>
+            <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 12 }}>Additional context</div>
+            <textarea
+              value={continueContext}
+              onChange={e => setContinueContext(e.target.value)}
+              placeholder="Describe what's changed, add context, or specify what you'd like re-assessed…"
+              rows={3}
+              autoFocus
               style={{ width: '100%', padding: '10px 14px', borderRadius: 12, border: 'none', background: 'var(--card-2)', fontSize: 13, fontFamily: 'var(--ff-sans)', resize: 'vertical', color: 'var(--text)', lineHeight: 1.5, boxSizing: 'border-box', boxShadow: 'inset 0 0 0 1px var(--border)' }}/>
-            <div style={{ marginTop: 10 }}>
-              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 36, padding: '0 14px', background: 'var(--card-2)', borderRadius: 999, cursor: 'pointer', fontSize: 13, color: 'var(--text-mut)', fontWeight: 500, boxShadow: '0 0 0 1px var(--border)' }}>
-                📷 Attach photos
+            <div style={{ marginTop: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
+              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 36, padding: '0 14px', background: 'var(--card-2)', borderRadius: 999, cursor: 'pointer', fontSize: 13, color: 'var(--text-mut)', fontWeight: 500, boxShadow: '0 0 0 1px var(--border)', flexShrink: 0 }}>
+                📷 Add photos
                 <input type="file" accept="image/*" multiple style={{ display: 'none' }} onChange={async (e) => {
                   const files = Array.from(e.target.files as FileList).slice(0, 3)
                   const converted = await Promise.all(files.map((f: File) => convertToJpeg(f)))
-                  setContinuePhotos((converted as string[]).map((d: string) => ({ dataUrl: d, base64: d.split(',')[1] })))
+                  setContinuePhotos(prev => [...prev, ...(converted as string[]).map((d: string) => ({ dataUrl: d, base64: d.split(',')[1] }))].slice(0, 5))
                   e.target.value = ''
                 }}/>
               </label>
               {continuePhotos.length > 0 && (
-                <div style={{ display: 'flex', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
-                  {continuePhotos.map((p, i) => (
-                    <div key={i} style={{ position: 'relative' }}>
-                      <img src={p.dataUrl} style={{ width: 52, height: 52, borderRadius: 10, objectFit: 'cover' }} alt=""/>
-                      <button onClick={() => setContinuePhotos(prev => prev.filter((_, idx) => idx !== i))} style={{ position: 'absolute', top: -4, right: -4, width: 16, height: 16, borderRadius: '50%', background: 'var(--status-red)', border: '1.5px solid var(--bg)', color: '#fff', fontSize: 10, cursor: 'pointer', display: 'grid', placeItems: 'center', padding: 0 }}>✕</button>
-                    </div>
-                  ))}
-                </div>
+                <span style={{ fontSize: 12, color: 'var(--amber)', fontFamily: 'var(--ff-mono)' }}>
+                  {continuePhotos.length} photo{continuePhotos.length !== 1 ? 's' : ''} added ↑
+                </span>
               )}
             </div>
             {continueError && <div style={{ marginTop: 10, padding: '8px 12px', background: 'var(--status-red-bg)', borderRadius: 10, fontSize: 12, color: 'var(--status-red)' }}>{continueError}</div>}
-            <button onClick={handleReanalyse} disabled={reanalysing || (continuePhotos.length === 0 && !continueContext.trim())}
-              style={{ marginTop: 12, height: 44, padding: '0 20px', background: reanalysing ? 'rgba(243,148,16,0.5)' : 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 14, fontWeight: 600, cursor: (reanalysing || (!continuePhotos.length && !continueContext.trim())) ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', display: 'flex', alignItems: 'center', gap: 8, opacity: (!continuePhotos.length && !continueContext.trim()) ? 0.4 : 1, boxShadow: 'var(--shadow-btn-amber)' }}>
-              {reanalysing ? <><span style={{ width: 14, height: 14, border: '2px solid rgba(255,255,255,0.4)', borderTopColor: '#fff', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>Re-analysing…</> : 'Re-analyse →'}
-            </button>
+            <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+              <button
+                onClick={() => { handleReanalyse(); setReanalyseExpanded(false) }}
+                disabled={reanalysing || (continuePhotos.length === 0 && !continueContext.trim())}
+                style={{ flex: 1, height: 44, background: reanalysing ? 'rgba(243,148,16,0.5)' : 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 14, fontWeight: 600, cursor: (reanalysing || (!continuePhotos.length && !continueContext.trim())) ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (!continuePhotos.length && !continueContext.trim()) ? 0.4 : 1, boxShadow: 'var(--shadow-btn-amber)' }}>
+                {reanalysing ? <><span style={{ width: 14, height: 14, border: '2px solid rgba(255,255,255,0.4)', borderTopColor: '#fff', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>Re-analysing…</> : 'Re-analyse →'}
+              </button>
+              <button
+                onClick={() => { setReanalyseExpanded(false); setContinueContext(''); setContinuePhotos([]) }}
+                style={{ height: 44, padding: '0 16px', background: 'var(--card-2)', border: 'none', borderRadius: 999, color: 'var(--text-mut)', fontSize: 13, cursor: 'pointer', fontFamily: 'var(--ff-sans)', flexShrink: 0 }}>
+                Cancel
+              </button>
+            </div>
           </div>
         )}
 
