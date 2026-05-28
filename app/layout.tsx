@@ -46,7 +46,13 @@ export const metadata: Metadata = {
     images: ['/brand/og-image.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
-  icons: { icon: '/favicon-dark.svg', apple: '/favicon-dark.svg' },
+  icons: {
+    icon: [
+      { url: '/brand/mark-ink.svg', type: 'image/svg+xml', media: '(prefers-color-scheme: light)' },
+      { url: '/brand/mark-amber-on-ink.svg', type: 'image/svg+xml', media: '(prefers-color-scheme: dark)' },
+    ],
+    apple: '/brand/mark-ink.svg',
+  },
 };
 
 export default function RootLayout({
