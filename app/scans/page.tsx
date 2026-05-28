@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { supabase, Site, Scan } from '../../lib/supabase'
+import { supabase, Scan } from '../../lib/supabase'
 import AppHeader from '../../components/AppHeader'
 
 type Filter = 'all' | 'issues' | 'clear' | 'pending'
@@ -30,7 +30,7 @@ function Badge({ status, count }: { status: string; count?: number }) {
 
 export default function ScansPage() {
   const [scans, setScans] = useState<Scan[]>([])
-  const [sites, setSites] = useState<Site[]>([])
+  const [sites, setSites] = useState<{ id: string; name: string }[]>([])
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState<Filter>('all')
   const router = useRouter()
