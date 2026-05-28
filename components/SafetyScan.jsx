@@ -3,7 +3,6 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "../lib/supabase";
 import { convertToJpeg, SYSTEM_PROMPT } from "./PhotoResultCard";
-import { ScanLoader } from "./ScanLoader";
 import AppHeader from "./AppHeader";
 
 if (typeof window !== 'undefined') {
@@ -15,19 +14,7 @@ if (typeof window !== 'undefined') {
   }
 }
 
-const NAVY = "#16181C";
-const AMBER = "#F39410";
-const OFFWHITE = "#EFEAE0";
-const FAIL_RED = "#E14B3D";
 const MAX_PHOTOS = 5;
-
-const BG = "var(--ss-bg)";
-const SURFACE = "var(--ss-surface)";
-const SURFACE2 = "var(--ss-surface-2)";
-const TEXT = "var(--ss-text)";
-const TEXT_MUTE = "var(--ss-text-mute)";
-const BORDER = "var(--ss-border)";
-const BORDER_STRONG = "var(--ss-border-strong)";
 
 async function analysePhotos(photoList, context) {
   const userContent = [
@@ -268,61 +255,96 @@ export default function SafetyScan() {
   };
 
   return (
-    <div className={exiting ? "page-slide-down" : "page-slide-up"} style={{ minHeight: "100vh", background: BG, fontFamily: "Inter, system-ui, sans-serif", willChange: "transform, opacity" }}>
-      <style>{`
-        @keyframes spin { to { transform: rotate(360deg); } }
-        @keyframes dotPulse { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1); } }
-        * { box-sizing: border-box; }
-        button:active { transform: scale(0.98); }
-      `}</style>
+    <div className={exiting ? "page-slide-down" : "page-slide-up"} style={{ minHeight: "100vh", background: "var(--bg)", fontFamily: "var(--ff-sans)", willChange: "transform, opacity" }}>
+      <style>{`@keyframes spin{to{transform:rotate(360deg)}} @keyframes ping{0%{transform:scale(0.5);opacity:0.8}100%{transform:scale(1.4);opacity:0}} textarea,input{outline:none;box-sizing:border-box}`}</style>
 
       <AppHeader onLogoClick={navigateToDashboard} rightContent={
-        <div style={{ fontSize: 11, padding: "4px 10px", background: "rgba(243,148,16,0.15)", color: AMBER, borderRadius: 10, border: "0.5px solid rgba(243,148,16,0.3)", fontWeight: 600 }}>Queensland</div>
+        <span style={{ fontFamily: "var(--ff-mono)", fontSize: 9.5, letterSpacing: "0.16em", padding: "4px 10px", background: "rgba(243,148,16,0.15)", color: "var(--amber)", borderRadius: 999, border: "0.5px solid rgba(243,148,16,0.3)", fontWeight: 500 }}>QLD</span>
       } />
 
-      <main style={{ maxWidth: 560, margin: "0 auto", padding: "20px 16px 48px" }}>
+      <main style={{ maxWidth: 560, margin: "0 auto", padding: "8px 18px 48px" }}>
 
+        {/* Analysing state */}
         {analysing && (
-          <div style={{ background: "#16181C", borderRadius: 16, padding: "36px 20px", border: "0.5px solid rgba(255,255,255,0.08)", textAlign: "center", marginBottom: 16 }}>
-            {console.log('[SafetyScan] scanLoaderState:', scanLoaderState, 'analysing:', analysing)}
-            <ScanLoader state={scanLoaderState} size={120} />
-            <div style={{ marginTop: 20, fontWeight: 600, color: "#EFEAE0", fontSize: 15, minHeight: 24 }}>{LOADING_MESSAGES[msgIdx]}</div>
-            <div style={{ height: 4, background: "#252A30", borderRadius: 2, overflow: "hidden", maxWidth: 280, margin: "12px auto 0" }}>
-              <div style={{ height: "100%", width: `${progress}%`, background: "#F39410", borderRadius: 2, transition: "width 0.8s ease" }} />
+          <div style={{ background: "var(--ink-bg)", borderRadius: 20, padding: "40px 20px", boxShadow: "inset 0 0 0 1px var(--ink-border)", textAlign: "center" }}>
+            {/* MarkLoader — radar arcs spin + ping ring */}
+            <div style={{ position: "relative", width: 160, height: 160, margin: "0 auto" }}>
+              <svg style={{ animation: "spin 3.6s linear infinite", transformOrigin: "50% 50%", position: "absolute", inset: 0 }} viewBox="0 0 240 240" width="160" height="160">
+                <g fill="none" strokeLinecap="butt" strokeWidth="14" stroke="#F39410">
+                  <g opacity=".25">
+                    <path d="M 210 120 A 90 90 0 0 1 48 174"/>
+                    <path d="M 186 120 A 66 66 0 0 1 66 156"/>
+                    <path d="M 162 120 A 42 42 0 0 1 84 138"/>
+                  </g>
+                  <path d="M 30 120 A 90 90 0 0 1 192 66"/>
+                  <path d="M 54 120 A 66 66 0 0 1 174 84"/>
+                  <path d="M 78 120 A 42 42 0 0 1 156 102"/>
+                </g>
+              </svg>
+              <svg style={{ position: "absolute", inset: 0 }} viewBox="0 0 240 240" width="160" height="160">
+                <circle cx="120" cy="120" r="10" fill="#F39410"/>
+                <circle style={{ animation: "ping 1.8s ease-out infinite", transformOrigin: "50% 50%" }} cx="120" cy="120" r="60" fill="none" stroke="#F39410" strokeWidth="3" opacity="0.5"/>
+              </svg>
+            </div>
+            <div style={{ marginTop: 28, fontWeight: 600, fontSize: 22, letterSpacing: "-0.01em", color: "#ECE7DD" }}>Reading your site</div>
+            <div style={{ fontSize: 13, marginTop: 8, opacity: 0.65, color: "#ECE7DD", maxWidth: 260, margin: "8px auto 0" }}>Cross-checking against QLD MUTCD &amp; WHS regs</div>
+            <div style={{ width: "100%", marginTop: 28, maxWidth: 360, margin: "28px auto 0" }}>
+              {/* Step cards */}
+              {[
+                { label: "Photos uploaded", meta: `${photos.length} / ${photos.length}`, done: true },
+                { label: "Detecting hazards", meta: "DONE", done: msgIdx >= 1 },
+                { label: LOADING_MESSAGES[msgIdx] || "Matching regulations", meta: "NOW", active: msgIdx >= 2 && msgIdx < 5, done: msgIdx >= 5 },
+                { label: "Compiling report", meta: "", dim: msgIdx < 3 },
+              ].map((s, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", background: "var(--ink-card-2)", borderRadius: 12, marginBottom: i < 3 ? 8 : 0, opacity: s.dim ? 0.5 : 1 }}>
+                  {s.done ? (
+                    <div style={{ width: 20, height: 20, borderRadius: 6, background: "var(--amber)", display: "grid", placeItems: "center", flexShrink: 0 }}>
+                      <span style={{ display: "block", width: 10, height: 6, borderLeft: "1.8px solid #fff", borderBottom: "1.8px solid #fff", transform: "rotate(-45deg) translate(1px,-1px)" }}/>
+                    </div>
+                  ) : s.active ? (
+                    <div style={{ width: 20, height: 20, borderRadius: "50%", border: "2px solid var(--amber)", borderTopColor: "transparent", animation: "spin 0.9s linear infinite", flexShrink: 0 }}/>
+                  ) : (
+                    <div style={{ width: 20, height: 20, borderRadius: 6, boxShadow: "inset 0 0 0 1.5px rgba(255,250,240,0.16)", flexShrink: 0 }}/>
+                  )}
+                  <span style={{ flex: 1, fontSize: 13, color: "#ECE7DD" }}>{s.label}</span>
+                  {s.meta && <span style={{ fontFamily: "var(--ff-mono)", fontSize: 10, letterSpacing: "0.16em", opacity: s.active ? 1 : 0.55, color: s.active ? "var(--amber)" : "#ECE7DD" }}>{s.meta}</span>}
+                </div>
+              ))}
             </div>
           </div>
         )}
+
+        {/* Upload form */}
         {!analysing && (
-          <div style={{ background: SURFACE, borderRadius: 16, padding: 20, border: `0.5px solid ${BORDER}` }}>
-            <h1 style={{ fontSize: 19, fontWeight: 700, color: TEXT, marginBottom: 3 }}>Compliance check</h1>
-            <p style={{ fontSize: 13, color: TEXT_MUTE, lineHeight: 1.5, marginBottom: 16 }}>Upload up to {MAX_PHOTOS} site photos. All photos are analysed together as a single inspection report.</p>
+          <div style={{ background: "var(--card)", borderRadius: 20, padding: 16, boxShadow: "var(--shadow-card)" }}>
+            <div style={{ fontSize: 22, fontWeight: 600, letterSpacing: "-0.02em", color: "var(--text)", marginBottom: 4 }}>Compliance check</div>
+            <div style={{ fontSize: 13, color: "var(--text-mut)", lineHeight: 1.5, marginBottom: 16 }}>Upload up to {MAX_PHOTOS} site photos. All photos are analysed together as a single inspection report.</div>
 
             {/* Photo strip */}
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: photos.length ? 12 : 0 }}>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: photos.length ? 14 : 0 }}>
               {photos.map((p, i) => (
                 <div key={i} style={{ position: "relative", width: 72, height: 72 }}>
-                  <img src={p.dataUrl} alt={`Photo ${i + 1}`} style={{ width: 72, height: 72, borderRadius: 8, objectFit: "cover", border: `1.5px solid ${BORDER}` }} />
-                  <button onClick={() => removePhoto(i)} style={{ position: "absolute", top: -6, right: -6, width: 20, height: 20, borderRadius: "50%", background: FAIL_RED, border: "2px solid #fff", color: "#fff", fontSize: 11, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, padding: 0 }}>✕</button>
+                  <img src={p.dataUrl} alt={`Photo ${i + 1}`} style={{ width: 72, height: 72, borderRadius: 10, objectFit: "cover" }}/>
+                  <button onClick={() => removePhoto(i)} style={{ position: "absolute", top: -6, right: -6, width: 20, height: 20, borderRadius: "50%", background: "var(--status-red)", border: "2px solid var(--bg)", color: "#fff", fontSize: 11, cursor: "pointer", display: "grid", placeItems: "center", fontWeight: 700, padding: 0 }}>✕</button>
                   <div style={{ position: "absolute", bottom: 3, left: 3, fontSize: 9, fontWeight: 700, color: "#fff", background: "rgba(0,0,0,0.55)", borderRadius: 3, padding: "1px 4px" }}>{i + 1}</div>
                 </div>
               ))}
-
               {photos.length < MAX_PHOTOS && (
                 <div onClick={() => fileRef.current.click()}
                   onDragOver={e => { e.preventDefault(); setDragOver(true); }}
                   onDragLeave={() => setDragOver(false)}
                   onDrop={e => { e.preventDefault(); setDragOver(false); addFiles(e.dataTransfer.files); }}
-                  style={{ width: photos.length === 0 ? "100%" : 72, height: photos.length === 0 ? 120 : 72, borderRadius: photos.length === 0 ? 12 : 8, border: dragOver ? `2px dashed ${AMBER}` : `1.5px dashed ${BORDER_STRONG}`, background: dragOver ? "rgba(243,148,16,0.08)" : SURFACE2, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", cursor: "pointer", transition: "all 0.15s", gap: 4 }}>
+                  style={{ width: photos.length === 0 ? "100%" : 72, height: photos.length === 0 ? 140 : 72, borderRadius: photos.length === 0 ? 16 : 10, border: dragOver ? "2px dashed var(--amber)" : "1.5px dashed var(--border)", background: dragOver ? "var(--status-amber-bg)" : "var(--card-2)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", cursor: "pointer", transition: "all 0.15s", gap: 4 }}>
                   {photos.length === 0 ? (
                     <>
                       <div style={{ fontSize: 32 }}>📷</div>
-                      <div style={{ fontWeight: 700, color: TEXT, fontSize: 13 }}>Tap to add photos</div>
-                      <div style={{ fontSize: 11, color: "#999" }}>Up to {MAX_PHOTOS} photos · JPG, PNG, HEIC</div>
+                      <div style={{ fontWeight: 600, color: "var(--text)", fontSize: 14 }}>Tap to add photos</div>
+                      <div style={{ fontSize: 12, color: "var(--text-dim)" }}>Up to {MAX_PHOTOS} photos · JPG, PNG, HEIC</div>
                     </>
                   ) : (
                     <>
-                      <div style={{ fontSize: 20, color: "#aaa" }}>+</div>
-                      <div style={{ fontSize: 9, color: "#aaa", fontWeight: 600 }}>{MAX_PHOTOS - photos.length} left</div>
+                      <div style={{ fontSize: 20, color: "var(--text-dim)" }}>+</div>
+                      <div style={{ fontSize: 9, color: "var(--text-dim)", fontWeight: 600 }}>{MAX_PHOTOS - photos.length} left</div>
                     </>
                   )}
                 </div>
@@ -330,77 +352,68 @@ export default function SafetyScan() {
             </div>
 
             <input ref={fileRef} type="file" accept="image/*" multiple style={{ display: "none" }}
-              onChange={e => { addFiles(e.target.files); e.target.value = ""; }} />
+              onChange={e => { addFiles(e.target.files); e.target.value = ""; }}/>
 
             {globalError && (
-              <div style={{ marginBottom: 10, padding: "9px 12px", background: "rgba(225,75,61,0.1)", border: "0.5px solid #F09595", borderRadius: 8, fontSize: 12, color: FAIL_RED }}>{globalError}</div>
+              <div style={{ marginBottom: 12, padding: "10px 14px", background: "var(--status-red-bg)", borderRadius: 10, fontSize: 12, color: "var(--status-red)", fontFamily: "var(--ff-mono)" }}>{globalError}</div>
             )}
 
             {photos.length > 0 && (
               <>
+                {/* Context */}
                 <div style={{ marginBottom: 12 }}>
-                  <label style={{ fontSize: 12, fontWeight: 600, color: TEXT_MUTE, display: "block", marginBottom: 5 }}>
-                    Context <span style={{ fontWeight: 400, color: "#999" }}>(optional)</span>
-                  </label>
+                  <div style={{ fontFamily: "var(--ff-mono)", fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--text-mut)", marginBottom: 6, paddingLeft: 2 }}>Context <span style={{ opacity: 0.6 }}>(optional)</span></div>
                   <textarea rows={2} placeholder='e.g. "Scaffold and traffic management on Ipswich Motorway upgrade, Brisbane"'
                     value={context} onChange={e => setContext(e.target.value)}
-                    style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: "inherit", resize: "none", color: TEXT, lineHeight: 1.5, outline: "none" }} />
+                    style={{ width: "100%", padding: "10px 14px", borderRadius: 12, border: "none", background: "var(--card-2)", fontSize: 13, fontFamily: "var(--ff-sans)", resize: "none", color: "var(--text)", lineHeight: 1.5, boxShadow: "inset 0 0 0 1px var(--border)" }}/>
                 </div>
 
+                {/* Site */}
                 <div style={{ marginBottom: 12 }}>
-                  <label style={{ fontSize: 12, fontWeight: 600, color: TEXT_MUTE, display: "block", marginBottom: 5 }}>
-                    Site <span style={{ fontWeight: 400, color: "#999" }}>(optional)</span>
-                  </label>
+                  <div style={{ fontFamily: "var(--ff-mono)", fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--text-mut)", marginBottom: 6, paddingLeft: 2 }}>Site <span style={{ opacity: 0.6 }}>(optional)</span></div>
                   <select value={siteDropdownValue} onChange={e => setSiteDropdownValue(e.target.value)}
-                    style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: "inherit", color: TEXT, cursor: "pointer" }}>
+                    style={{ display: "block", width: "100%", height: 50, padding: "0 14px", borderRadius: 12, border: "none", background: "var(--card-2)", fontSize: 14, fontFamily: "var(--ff-sans)", color: "var(--text)", cursor: "pointer", boxShadow: "inset 0 0 0 1px var(--border)" }}>
                     <option value="none">No site</option>
                     {sites.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
                     <option value="new">+ Create new site</option>
                   </select>
                   {siteDropdownValue === "new" && (
-                    <input value={newSiteName} onChange={e => setNewSiteName(e.target.value)}
-                      placeholder="Site name"
-                      style={{ marginTop: 8, width: "100%", padding: "9px 12px", borderRadius: 8, border: `0.5px solid ${BORDER_STRONG}`, background: SURFACE2, fontSize: 13, fontFamily: "inherit", color: TEXT, outline: "none" }} />
+                    <input value={newSiteName} onChange={e => setNewSiteName(e.target.value)} placeholder="Site name"
+                      style={{ marginTop: 8, display: "block", width: "100%", height: 50, padding: "0 14px", borderRadius: 12, border: "none", background: "var(--card-2)", fontSize: 14, fontFamily: "var(--ff-sans)", color: "var(--text)", boxShadow: "inset 0 0 0 1px var(--border)" }}/>
                   )}
                 </div>
 
-                <div style={{ marginBottom: 12 }}>
-                  <button
-                    onClick={() => setShowTips(!showTips)}
-                    style={{ background: "transparent", border: "none", cursor: "pointer", fontSize: 13, color: "#7A7468", fontFamily: "Inter, system-ui, sans-serif", padding: 0, display: "flex", alignItems: "center", gap: 6 }}
-                  >
-                    <span style={{ fontSize: 14 }}>{showTips ? "▲" : "▼"}</span>
+                {/* Tips */}
+                <div style={{ marginBottom: 14 }}>
+                  <button onClick={() => setShowTips(!showTips)}
+                    style={{ background: "none", border: "none", cursor: "pointer", fontSize: 13, color: "var(--text-mut)", fontFamily: "var(--ff-sans)", padding: 0, display: "flex", alignItems: "center", gap: 6 }}>
+                    <span>{showTips ? "▲" : "▼"}</span>
                     Tips for better results
                   </button>
                   {showTips && (
-                    <div style={{ marginTop: 10, padding: "12px 14px", background: SURFACE2, borderRadius: 8, border: `0.5px solid ${BORDER}`, display: "flex", flexDirection: "column", gap: 8 }}>
-                      {[
-                        "Good lighting and a clear angle improves accuracy significantly",
-                        "Add context in the text field — location and work type helps the AI identify the right legislation",
-                        "Upload multiple photos for a more thorough assessment"
-                      ].map((tip, i) => (
-                        <div key={i} style={{ display: "flex", gap: 10, fontSize: 13, color: TEXT_MUTE, lineHeight: 1.5 }}>
-                          <span style={{ color: "#F39410", fontWeight: 700, flexShrink: 0 }}>→</span>
+                    <div style={{ marginTop: 10, padding: "12px 14px", background: "var(--card-2)", borderRadius: 12, display: "flex", flexDirection: "column", gap: 8 }}>
+                      {["Good lighting and a clear angle improves accuracy significantly", "Add context in the text field — location and work type helps the AI identify the right legislation", "Upload multiple photos for a more thorough assessment"].map((tip, i) => (
+                        <div key={i} style={{ display: "flex", gap: 10, fontSize: 13, color: "var(--text-mut)", lineHeight: 1.5 }}>
+                          <span style={{ color: "var(--amber)", fontWeight: 700, flexShrink: 0 }}>→</span>
                           <span>{tip}</span>
                         </div>
                       ))}
                     </div>
                   )}
                 </div>
+
                 <button onClick={runAll}
-                  style={{ width: "100%", padding: 13, background: AMBER, border: "none", borderRadius: 10, color: NAVY, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "Inter, system-ui, sans-serif" }}>
+                  style={{ display: "block", width: "100%", height: 50, background: "var(--amber)", border: "none", borderRadius: 999, color: "#fff", fontSize: 14, fontWeight: 600, cursor: "pointer", fontFamily: "var(--ff-sans)", boxShadow: "var(--shadow-btn-amber)" }}>
                   Analyse {photos.length} photo{photos.length > 1 ? "s" : ""} for compliance →
                 </button>
               </>
             )}
 
-            <button
-              onClick={navigateToDashboard}
-              style={{ width: "100%", padding: "11px", background: "transparent", border: `0.5px solid ${BORDER_STRONG}`, borderRadius: 10, fontSize: 13, color: TEXT_MUTE, cursor: "pointer", fontFamily: "inherit", marginTop: 8 }}
-            >
+            <button onClick={navigateToDashboard}
+              style={{ display: "block", width: "100%", height: 44, background: "transparent", border: "none", borderRadius: 999, fontSize: 13, color: "var(--text-mut)", cursor: "pointer", fontFamily: "var(--ff-sans)", marginTop: 10, boxShadow: "0 0 0 1px var(--border)" }}>
               Back to dashboard
             </button>
-            <div style={{ marginTop: 10, fontSize: 11, color: "#bbb", textAlign: "center" }}>AI-assisted · Queensland legislation · Not a substitute for professional advice</div>
+            <div style={{ marginTop: 12, fontSize: 11, color: "var(--text-dim)", textAlign: "center", fontFamily: "var(--ff-mono)", letterSpacing: "0.04em" }}>AI-assisted · Queensland legislation · Not a substitute for professional advice</div>
           </div>
         )}
       </main>

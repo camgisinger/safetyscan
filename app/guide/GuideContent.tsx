@@ -3,51 +3,32 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import AppHeader from '@/components/AppHeader'
 
-const sections = [
+const steps = [
   {
-    title: "Getting started",
-    content: `SafetyScan is an AI-assisted Queensland construction compliance tool. It analyses site photos and checks them against relevant Queensland legislation and Australian Standards. It is designed to be used by site supervisors and foremen as a first-pass compliance check — not a replacement for professional advice.`
+    title: 'Snap the site, head to toe.',
+    body: 'Upload up to 5 photos of your site installation or work area. Add context — location and work type helps the AI identify the right legislation.',
   },
   {
-    title: "Running a scan",
-    content: `Tap the + button or New scan to open the scan page. Upload up to 5 photos of your site installation or work area. Add context in the text field — include the location and type of work to improve accuracy. Tap Analyse for compliance to start the scan. SafetyScan will identify the work type, check applicable Queensland legislation, and return colour-coded findings.`
+    title: 'The AI flags what doesn\'t match QLD code.',
+    body: 'Each issue is tagged with its source — MUTCD, AS 4576, WHS Reg — so your write-up is ready for the inspector.',
   },
   {
-    title: "Understanding results",
-    content: `Results are colour coded: green means likely compliant, amber means a warning or something that needs attention, red means a clear issue was identified. Each result shows the applicable Queensland legislation and specific clauses. Tap any legislation tag to expand it and see the relevant clauses. Confidence is shown as high, medium, or low — low confidence means the AI could not fully assess from the photo.`
+    title: 'Every issue, with its regulation.',
+    body: 'Results are colour-coded by severity. Tap any legislation tag to expand it and see the specific clauses that apply.',
   },
   {
-    title: "Follow-up questions",
-    content: `If SafetyScan needs more information to make a determination, it will ask follow-up questions. Answer these and optionally attach additional photos, then tap Re-analyse. The AI will build on its previous assessment rather than starting fresh.`
+    title: 'Track sites, week over week.',
+    body: 'Assign scans to sites to track compliance rates and checklist progress across your whole project portfolio.',
   },
   {
-    title: "Checklists",
-    content: `On any saved scan you can generate a site-specific checklist based on the findings and applicable legislation. Tap Generate checklist on the Checklist tab. Tick items off as you verify them on site. Delete items that are not relevant to your job. Checklist progress is tracked per scan and rolled up across all scans on a site.`
+    title: 'Share the report. PDF or link.',
+    body: 'Export a formatted PDF or generate a shareable link for a supervisor or client. No login required to view.',
   },
-  {
-    title: "Sites",
-    content: `Create sites to organise your scans by job site or project. Assign scans to a site during or after scanning. Each site shows a compliance rate, checklist progress, and a list of non-compliances across all scans. Archive sites when a project is complete to keep your dashboard tidy — archived sites are hidden by default but not deleted.`
-  },
-  {
-    title: "Sharing scans",
-    content: `You can generate a shareable link for any scan. Tap Share scan on the scan detail page. This creates a public link that can be viewed without logging in — useful for sending to a supervisor or client. You can disable sharing at any time from the same button.`
-  },
-  {
-    title: "Exporting to PDF",
-    content: `Tap Export PDF on any scan to generate a formatted compliance report. The PDF includes the scan photo, findings, legislation, checklist, notes, and a disclaimer. Save it to your device or share it directly.`
-  },
-  {
-    title: "Important disclaimer",
-    content: `SafetyScan is an AI-assisted first-pass tool only. Results are indicative and based on what is visible in the photo. Always verify findings with a qualified professional or certifier before sign-off. SafetyScan does not constitute legal or engineering advice. Legislation references are based on Queensland standards current at time of AI training — always check for the most current version of any standard or regulation.`
-  },
-  {
-    title: "Tips for better scans",
-    content: `Good lighting and a clear angle improves accuracy significantly. Add context in the text field — location and work type helps the AI identify the right legislation. Upload multiple photos for a more thorough assessment. If the AI asks follow-up questions, answer them — the more information provided the more accurate the result.`
-  }
 ]
 
 export default function GuideContent() {
   const router = useRouter()
+  const [step, setStep] = useState(0)
   const [exiting, setExiting] = useState(false)
 
   const navigateBack = () => {
@@ -55,36 +36,83 @@ export default function GuideContent() {
     setTimeout(() => router.push('/dashboard'), 280)
   }
 
+  const isDark = typeof window !== 'undefined' ? localStorage.getItem('theme') !== 'light' : true
+  const strokeColor = isDark ? '#F39410' : '#16181C'
+
   return (
-    <div className={exiting ? "page-slide-right-out" : "page-slide-right-in"} style={{ willChange: "transform, opacity" }}>
-      <div style={{ minHeight: "100vh", background: "var(--ss-bg)", fontFamily: "Inter, system-ui, sans-serif" }}>
-        <AppHeader onLogoClick={navigateBack} />
-        <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px 80px" }}>
-          <button onClick={navigateBack}
-            style={{ display: "flex", alignItems: "center", gap: 6, background: "var(--ss-surface)", border: "0.5px solid var(--ss-border-strong)", borderRadius: 8, padding: "8px 14px", fontSize: 13, fontWeight: 500, color: "var(--ss-text)", cursor: "pointer", fontFamily: "inherit", marginBottom: 16 }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-            Dashboard
-          </button>
-          <div style={{ marginBottom: 24 }}>
-            <h1 style={{ fontSize: 24, fontWeight: 800, color: "var(--ss-text)", letterSpacing: "-0.02em", marginBottom: 4 }}>SafetyScan guide</h1>
-            <p style={{ fontSize: 14, color: "var(--ss-text-mute)", lineHeight: 1.6 }}>Everything you need to know about using SafetyScan on site.</p>
-          </div>
-          {sections.map((s, i) => (
-            <div key={i} style={{ background: "var(--ss-surface)", borderRadius: 12, padding: "16px 18px", marginBottom: 10, border: "0.5px solid var(--ss-border)" }}>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "var(--ss-text)", marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}>
-                <span style={{ width: 22, height: 22, borderRadius: "50%", background: "#F39410", color: "#16181C", fontSize: 11, fontWeight: 700, display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{i + 1}</span>
-                {s.title}
-              </div>
-              <p style={{ fontSize: 13, color: "var(--ss-text-mute)", lineHeight: 1.7, margin: 0 }}>{s.content}</p>
+    <div className={exiting ? 'page-slide-right-out' : 'page-slide-right-in'} style={{ willChange: 'transform, opacity' }}>
+      <div style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)', display: 'flex', flexDirection: 'column' }}>
+        <AppHeader variant="modal" title="Guide" onClose={navigateBack} onLogoClick={navigateBack}/>
+
+        <main style={{ flex: 1, maxWidth: 600, width: '100%', margin: '0 auto', padding: '0 18px 48px', display: 'flex', flexDirection: 'column', boxSizing: 'border-box' }}>
+
+          {/* Step indicator */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 4px 18px' }}>
+            <span style={{ fontFamily: 'var(--ff-mono)', fontSize: 10.5, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', opacity: 0.65 }}>Step {step + 1} / {steps.length}</span>
+            <div style={{ display: 'flex', gap: 6 }}>
+              {steps.map((_, i) => (
+                <span key={i} onClick={() => setStep(i)} style={{ cursor: 'pointer', width: i === step ? 22 : 8, height: 8, borderRadius: 999, background: i === step ? 'var(--amber)' : 'var(--text-dim)', opacity: i === step ? 1 : 0.45, transition: 'all 0.2s' }}/>
+              ))}
             </div>
-          ))}
-          <div style={{ marginTop: 24, paddingTop: 16, borderTop: "0.5px solid var(--ss-border)" }}>
-            <button onClick={navigateBack}
-              style={{ width: "100%", padding: "12px", background: "transparent", border: "0.5px solid var(--ss-border-strong)", borderRadius: 10, fontSize: 14, color: "var(--ss-text-mute)", cursor: "pointer", fontFamily: "inherit" }}>
-              Back to dashboard
-            </button>
           </div>
-        </div>
+
+          {/* Hero art */}
+          <div style={{ height: 280, borderRadius: 20, background: 'var(--card)', boxShadow: 'var(--shadow-card)', display: 'grid', placeItems: 'center', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'relative', width: 180, height: 180 }}>
+              <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: 'var(--status-amber-bg)' }}/>
+              <svg viewBox="0 0 240 240" width="180" height="180" style={{ position: 'absolute', inset: 0 }}>
+                <g fill="none" strokeLinecap="butt" strokeWidth="14" stroke={strokeColor}>
+                  <g opacity=".25">
+                    <path d="M 210 120 A 90 90 0 0 1 48 174"/>
+                    <path d="M 186 120 A 66 66 0 0 1 66 156"/>
+                    <path d="M 162 120 A 42 42 0 0 1 84 138"/>
+                  </g>
+                  <path d="M 30 120 A 90 90 0 0 1 192 66"/>
+                  <path d="M 54 120 A 66 66 0 0 1 174 84"/>
+                  <path d="M 78 120 A 42 42 0 0 1 156 102"/>
+                </g>
+                <circle cx="120" cy="120" r="10" fill={strokeColor}/>
+              </svg>
+              {/* Sticker tags */}
+              <div style={{ position: 'absolute', top: -6, right: -28, padding: '6px 10px', borderRadius: 999, background: 'var(--status-red)', color: '#fff', fontSize: 11, fontWeight: 600, transform: 'rotate(8deg)', boxShadow: '0 6px 16px -6px rgba(0,0,0,0.35)' }}>Missing sign</div>
+              <div style={{ position: 'absolute', bottom: 8, left: -34, padding: '6px 10px', borderRadius: 999, background: 'var(--amber)', color: '#fff', fontSize: 11, fontWeight: 600, transform: 'rotate(-6deg)', boxShadow: '0 6px 16px -6px rgba(0,0,0,0.35)' }}>Cone gap 8m</div>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.18, marginTop: 28, padding: '0 2px', color: 'var(--text)' }}>
+            {steps[step].title}
+          </div>
+          <div style={{ fontSize: 13.5, lineHeight: 1.5, color: 'var(--text-mut)', padding: '10px 2px 0' }}>
+            {steps[step].body}
+          </div>
+
+          {/* Nav */}
+          <div style={{ display: 'flex', gap: 12, marginTop: 'auto', paddingTop: 28 }}>
+            {step > 0 ? (
+              <button onClick={() => setStep(s => s - 1)}
+                style={{ flex: '0 0 90px', height: 44, background: 'var(--card)', border: 'none', borderRadius: 999, fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', color: 'var(--text)', boxShadow: '0 0 0 1px var(--border)' }}>
+                Back
+              </button>
+            ) : (
+              <button onClick={navigateBack}
+                style={{ flex: '0 0 90px', height: 44, background: 'var(--card)', border: 'none', borderRadius: 999, fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', color: 'var(--text)', boxShadow: '0 0 0 1px var(--border)' }}>
+                Close
+              </button>
+            )}
+            {step < steps.length - 1 ? (
+              <button onClick={() => setStep(s => s + 1)}
+                style={{ flex: 1, height: 44, background: 'var(--amber)', border: 'none', borderRadius: 999, fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', color: '#fff', boxShadow: 'var(--shadow-btn-amber)' }}>
+                Next
+              </button>
+            ) : (
+              <button onClick={navigateBack}
+                style={{ flex: 1, height: 44, background: 'var(--amber)', border: 'none', borderRadius: 999, fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', color: '#fff', boxShadow: 'var(--shadow-btn-amber)' }}>
+                Done
+              </button>
+            )}
+          </div>
+        </main>
       </div>
     </div>
   )
