@@ -25,8 +25,14 @@ export default function AppHeader({
   const router = useRouter()
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const openMenu = () => { setMenuOpen(true);  window.dispatchEvent(new CustomEvent('sidebar-open')) }
+  const openMenu  = () => { setMenuOpen(true);  window.dispatchEvent(new CustomEvent('sidebar-open'))  }
   const closeMenu = () => { setMenuOpen(false); window.dispatchEvent(new CustomEvent('sidebar-close')) }
+
+  useEffect(() => {
+    const onFabClose = () => setMenuOpen(false)
+    window.addEventListener('sidebar-close', onFabClose)
+    return () => window.removeEventListener('sidebar-close', onFabClose)
+  }, [])
   const [isDark, setIsDark] = useState(true)
   const [userEmail, setUserEmail] = useState<string | null>(null)
 

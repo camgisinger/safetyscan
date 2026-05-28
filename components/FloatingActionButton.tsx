@@ -29,7 +29,10 @@ export default function FloatingActionButton() {
 
   return (
     <button
-      onClick={() => { if (!sidebarOpen) router.push('/') }}
+      onClick={() => {
+        if (sidebarOpen) window.dispatchEvent(new CustomEvent('sidebar-close'))
+        router.push('/')
+      }}
       style={{
         position: 'fixed',
         right: 24,
@@ -39,7 +42,7 @@ export default function FloatingActionButton() {
         borderRadius: '50%',
         background: 'var(--fab-bg)',
         border: 'none',
-        cursor: sidebarOpen ? 'default' : 'pointer',
+        cursor: 'pointer',
         padding: 0,
         display: 'grid',
         placeItems: 'center',
