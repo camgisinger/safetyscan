@@ -35,7 +35,7 @@ export async function searchDocuments(
   query: string,
   region: string = 'QLD',
   workTypes: string[] = [],
-  matchCount: number = 8
+  matchCount: number = 4
 ): Promise<Array<{ title: string; content: string; source: string; similarity: number }>> {
   const embedding = await generateEmbedding(query)
 

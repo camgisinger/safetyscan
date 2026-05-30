@@ -6,7 +6,7 @@ const AMBER = "#F39410";
 const PASS_GREEN = "#1a7a45";
 const FAIL_RED = "#E14B3D";
 const WARN_AMBER = "#a36200";
-const MAX_IMAGE_PX = 512;
+const MAX_IMAGE_PX = 1024;
 
 // SYSTEM_PROMPT is kept here for reference and for any client-side usage (e.g. re-analyse calls).
 // The WHAT YOU COVER sections have been removed — regulation knowledge is now injected
