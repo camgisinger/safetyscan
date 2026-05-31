@@ -51,21 +51,7 @@ CRITICAL RULES — MEASUREMENTS IN FINDINGS:
 - Only include measurements that are directly relevant to what is visible in the photo
 - Do not list measurements for things that cannot be assessed from the photo
 - Do not add measurements to general or administrative findings
-- Key measurements by work type to include when relevant:
-
-Scaffolding: handrail min 900mm (WHS Reg s.225), mid-rail max 450mm gap (WHS Reg s.225), toeboard min 150mm (AS/NZS 4576 cl.4.4), platform width min 450mm (AS/NZS 4576 cl.4.2), board gap max 25mm (AS/NZS 4576 cl.4.3), scaffold tied to structure every 4m vertical and 6m horizontal (AS/NZS 4576 cl.5.2)
-
-Traffic & signage: sign height min 2.1m from ground to bottom of sign (AS 1742.3), delineator spacing based on speed zone (AS 1742.3 Table 6.1), buffer zone min 1.5m from traffic (MUTCD Qld)
-
-Excavation: batter or shoring required for excavations over 1.5m deep (WHS Reg s.306), spoil min 1m from edge (WHS Reg s.306), plant min 2m from edge of unsupported excavation
-
-Working at heights: fall protection required above 2m (WHS Reg s.78), ladder angle 1:4 ratio (75 degrees), anchor points rated min 15kN (AS/NZS 1891.4)
-
-Electrical: minimum clearance from overhead powerlines 3m for up to 132kV (Electrical Safety Regulation 2013 s.46), RCD required on all portable equipment on site (AS/NZS 3012 cl.3.3)
-
-Crane & rigging: minimum 3m clearance from powerlines (Electrical Safety Act 2002), outrigger pads min 600x600mm (AS 2550)
-
-Confined spaces: rescue equipment within 5m of entry point (WHS Reg s.67)
+- Specific measurements are provided in the legislation database context below — use those values
 
 Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start with { and end with }.
 
