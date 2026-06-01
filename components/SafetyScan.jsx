@@ -35,7 +35,7 @@ async function analysePhotos(photoList, context) {
         max_tokens: 2000,
         // system prompt is now injected server-side with RAG context
         messages: [{ role: "user", content: userContent }],
-        searchQuery: [workType, context].filter(Boolean).join(" ") || "construction site safety compliance Queensland WHS",
+        searchQuery: [...workTypes, context].filter(Boolean).join(" ") || "construction site safety compliance Queensland WHS",
       }),
     });
   } catch (fetchErr) {
@@ -85,7 +85,7 @@ export default function SafetyScan() {
   const [showTips, setShowTips] = useState(false);
   const [exiting, setExiting] = useState(false);
   const [dragOver, setDragOver] = useState(false);
-  const [workType, setWorkType] = useState("");
+  const [workTypes, setWorkTypes] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const [sites, setSites] = useState([]);
   const [siteDropdownValue, setSiteDropdownValue] = useState("none");
@@ -383,23 +383,35 @@ export default function SafetyScan() {
                       style={{ marginTop: 8, display: "block", width: "100%", height: 46, padding: "0 14px", border: "1.5px solid var(--amber)", background: "var(--bg)", fontSize: 14, color: "var(--text)", borderRadius: 4, fontFamily: "inherit", boxSizing: "border-box" }}/>
                   )}
                 </div>
-                {/* Work type selector */}
+                {/* Work type selector — multi-select */}
                 <div style={{ marginBottom: 14 }}>
-                  <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--mut)", marginBottom: 10 }}>
-                    Work type <span style={{ opacity: 0.5 }}>(optional — improves accuracy)</span>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+                    <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--mut)" }}>
+                      Work type <span style={{ opacity: 0.5 }}>(optional — skip if unsure)</span>
+                    </div>
+                    {workTypes.length > 0 && (
+                      <button onClick={() => setWorkTypes([])}
+                        style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.1em", color: "var(--amber)", background: "none", border: "none", cursor: "pointer", fontFamily: "inherit", padding: 0 }}>
+                        Clear
+                      </button>
+                    )}
                   </div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {[
                       "Scaffolding", "Traffic Management", "Excavation",
-                      "Working at Heights", "Crane & Rigging", "Electrical",
-                      "Confined Spaces", "Demolition", "Formwork",
-                      "Concrete Pumping", "Plant & Equipment", "Hot Works",
-                      "Asbestos", "PPE Check",
+                      "Working at Heights", "Mobile Crane", "Tower Crane",
+                      "Crane & Rigging", "Electrical", "Confined Spaces",
+                      "Demolition", "Formwork", "Concrete Pumping",
+                      "Plant & Equipment", "Hot Works", "Asbestos",
+                      "Steel Construction", "Tilt-up & Precast",
+                      "Spray Painting", "Abrasive Blasting", "PPE Check",
                     ].map(type => {
-                      const selected = workType === type;
+                      const selected = workTypes.includes(type);
                       return (
                         <button key={type}
-                          onClick={() => setWorkType(selected ? "" : type)}
+                          onClick={() => setWorkTypes(prev =>
+                            selected ? prev.filter(t => t !== type) : [...prev, type]
+                          )}
                           style={{
                             padding: "6px 12px",
                             border: `1.5px solid ${selected ? "var(--amber)" : "var(--line)"}`,
