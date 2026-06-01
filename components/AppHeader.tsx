@@ -92,12 +92,11 @@ export default function AppHeader({
 
   return (
     <>
+    <div style={{ position: 'sticky', top: 0, zIndex: 10, background: 'var(--bg)' }}>
       <HazardStripe />
       <header style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         padding: '11px 18px 12px',
-        background: 'var(--bg)',
-        position: 'sticky', top: 7, zIndex: 10,
       }}>
         {/* Left */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
@@ -158,6 +157,7 @@ export default function AppHeader({
           )}
         </div>
       </header>
+    </div>
 
       {/* Drawer */}
       {menuOpen && (
