@@ -163,7 +163,7 @@ export default function AppHeader({
       {menuOpen && (
         <>
           <div onClick={closeMenu} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 40, animation: 'fadeIn 0.2s ease forwards' }}/>
-          <div style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 280, background: isDark ? '#221F19' : '#FAF8F2', zIndex: 50, display: 'flex', flexDirection: 'column', padding: 24, borderLeft: '1.5px solid var(--line)', animation: 'slideInFromRight 0.28s cubic-bezier(0.2,0.7,0.3,1) forwards', willChange: 'transform' }}>
+          <div style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 280, background: isDark ? '#221F19' : '#FAF8F2', zIndex: 50, display: 'flex', flexDirection: 'column', padding: '24px 24px 96px', borderLeft: '1.5px solid var(--line)', animation: 'slideInFromRight 0.28s cubic-bezier(0.2,0.7,0.3,1) forwards', willChange: 'transform', overflowY: 'auto' }}>
             <button onClick={closeMenu} style={{ alignSelf: 'flex-end', background: 'transparent', border: 'none', color: 'var(--text)', fontSize: 22, cursor: 'pointer', marginBottom: 24, lineHeight: 1 }}>✕</button>
             <div style={{ display: 'flex', alignItems: 'center', gap: 11, marginBottom: 28 }}>
               <img src={isDark ? '/brand/mark-amber.svg' : '/brand/mark-duo-light.svg'} alt="" style={{ width: 28, height: 28 }}/>
