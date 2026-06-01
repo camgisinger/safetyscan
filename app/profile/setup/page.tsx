@@ -97,12 +97,6 @@ export default function ProfileSetupPage() {
             <input value={company} onChange={e => setCompany(e.target.value)} placeholder="e.g. Marsden Construction" style={{ ...inp, background: 'var(--surf)' }}/>
           </div>
 
-          {/* QBCC license */}
-          <div>
-            <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>QBCC license no. <span style={{ opacity: 0.5 }}>(optional)</span></div>
-            <input value={license} onChange={e => setLicense(e.target.value)} placeholder="e.g. 14821" style={{ ...inp, background: 'var(--surf)' }}/>
-          </div>
-
           {error && (
             <div style={{ padding: '10px 14px', border: '1.5px solid var(--issue)', borderRadius: 6, fontSize: 12, fontWeight: 500, color: 'var(--issue-tx-theme)' }}>{error}</div>
           )}
