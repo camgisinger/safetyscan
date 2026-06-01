@@ -5,197 +5,172 @@ REGION: QLD
 WORK_TYPES: all_workplaces, risk_management, safety_planning, consultation, construction, manufacturing
 SOURCE: Workplace Health and Safety Queensland (WHSQ)
 CURRENT AS AT: 2021 (approved under section 274 of the Work Health and Safety Act 2011)
-CLAUSE_PREFIX: s
-REFERENCE_STANDARD: WHS Act s19, s20, s27, s28, s29, s46, s47, s48; WHS Regulation s34–38.
-NOTE: This CoP provides the foundational framework for risk management that underpins all other Codes of Practice. It defines the hierarchy of controls and systematic process used across all industries and hazard types.
 
 ---
 
-CHUNK 1: Primary Duties and Reasonably Practicable
-Section: s1.1, s1.2; WHS Act s18, s19
-Topic: Core legal obligations and factors for determining control feasibility
+CHUNK 1: Hierarchy of Controls — Mandatory Priority Order
+Section: s4, s4.1; Figure 2; WHS Regulation s36
+Topic: Required order for selecting control measures from most to least effective
 
-PRIMARY DUTY: A PCBU must ELIMINATE risks in the workplace, or if that is not reasonably practicable, MINIMISE the risks so far as is reasonably practicable.
+LEVEL 1 — ELIMINATION (most effective):
+- Remove the hazard completely
+- Example: Work at ground level instead of height; remove chemical from process
 
-DETERMINING "REASONABLY PRACTICABLE" — requires taking into account and weighing up ALL of the following:
-- The LIKELIHOOD of the hazard or risk occurring
-- The DEGREE OF HARM that might result from the hazard or risk
-- KNOWLEDGE about the hazard or risk, and ways of eliminating or minimising it
-- The AVAILABILITY AND SUITABILITY of ways to eliminate or minimise the risk
-- The COST associated with available ways of eliminating or minimising the risk, including whether the cost is GROSSLY DISPROPORTIONATE to the risk
+LEVEL 2 — SUBSTITUTION, ISOLATION, ENGINEERING:
+- SUBSTITUTION: Replace with less hazardous (water-based paint vs solvent; quieter equipment)
+- ISOLATION: Physical separation (guardrails, barriers, exclusion zones, enclosures)
+- ENGINEERING: Physical controls built in (mechanical hoists, machine guards, safety switches, local exhaust ventilation)
 
-IMPORTANT: Cost CANNOT be used as a reason for doing nothing. It also CANNOT be used as a reason for adopting controls that rely exclusively on changing people's behaviour when more effective controls (engineering or isolation) are available and practicable.
+LEVEL 3 — ADMINISTRATIVE:
+- Procedures, training, supervision, job rotation, permit systems, warning signs
+- Less reliable — depends on human behaviour
+
+LEVEL 4 — PPE (least effective):
+- Hard hats, gloves, safety glasses, hearing protection, respirators, harnesses
+- Must NOT be sole control if higher-order controls are practicable
 
 VISUAL INDICATORS:
-- Workers performing tasks in obviously hazardous ways without documented oversight = duty breach
-- A more effective control measure bypassed for a cheaper, less reliable option = reasonably practicable failure
-- Safety equipment present on site but not in use = supervision or worker duty failure
-- PPE provided but no higher-order controls implemented where they are practicable = hierarchy failure
+- PPE only for noisy machine when sound enclosure is practicable = hierarchy violation
+- Safety signs only at fall edge instead of physical guardrail = non-compliant
+- Guardrails or machine guards removed or bypassed = Level 2 failure
+- Workers relying on "don't go near edge" with no physical barrier = inadequate control
+- PPE visibly wrong type, damaged, or poor fit = Level 4 failure
 
 ---
 
-CHUNK 2: The Four-Step Risk Management Process
-Section: s1.2; Figure 1; WHS Regulation s34–38
-Topic: The systematic process all PCBUs must follow
-
-A PCBU must manage risks to health and safety by following this systematic process:
-1. IDENTIFY HAZARDS — find out what could cause harm
-2. ASSESS RISKS (if necessary) — understand the nature of the harm, its severity, and likelihood
-3. CONTROL RISKS — implement the MOST EFFECTIVE control measure that is reasonably practicable and ensure it remains effective over time
-4. REVIEW control measures to ensure they are working as planned
-
-MANDATORY RISK ASSESSMENTS — a risk assessment is mandatory under the WHS Regulation for:
-- Entry into CONFINED SPACES
-- DIVING WORK
-- LIVE ELECTRICAL WORK
-- Other activities as specified in the WHS Regulation
-
-VISUAL INDICATORS:
-- Risk register or hazard log visible on site = positive indicator of Steps 1 and 2
-- Safety meeting minutes or toolbox talk records = evidence of consultation in the process
-- Uncontrolled hazards (e.g. a spill, unguarded edge) left unattended = process failure
-- SWMS available at location of high-risk work = positive compliance indicator
-- No documented risk assessment for confined space entry = serious non-compliance
-
----
-
-CHUNK 3: Step 1 — Hazard Identification
+CHUNK 2: Hazard Identification — Common Categories
 Section: s2, s2.1; Table 1
-Topic: Finding hazards and common workplace categories
+Topic: Workplace hazard types that must be identified
 
-IDENTIFICATION DUTY: A duty holder must identify REASONABLY FORESEEABLE HAZARDS that could give rise to risk. Hazards generally arise from:
-- The PHYSICAL WORK ENVIRONMENT
-- EQUIPMENT and SUBSTANCES used
-- WORK TASKS performed
-- WORK DESIGN and MANAGEMENT
-
-COMMON HAZARD CATEGORIES (Table 1):
-- Manual tasks: Sustained or awkward postures, high or sudden force, repetition, vibration
-- Gravity: Falling objects, falls from height, slips and trips
-- Psychosocial: Excessive time pressure, bullying, violence, work-related fatigue
-- Machinery and equipment: Being hit by vehicles, caught in moving parts, plant failure
-- Hazardous chemicals: Acids, hydrocarbons, asbestos, silica, flammable substances
-- Extreme temperatures: Heat (burns, heat stroke) and cold (hypothermia, frostbite)
-- Electricity: Contact with energised parts, arc flash, electric shock
-- Noise and vibration: Hearing loss, hand-arm vibration syndrome
-- Biological hazards: Infectious diseases, contaminated materials
+COMMON HAZARD CATEGORIES:
+- Manual tasks: Sustained/awkward postures, high/sudden force, repetition, vibration
+- Gravity: Falling objects, falls from height, slips, trips
+- Psychosocial: Time pressure, bullying, violence, fatigue
+- Machinery/equipment: Hit by vehicles, caught in moving parts, plant failure
+- Hazardous chemicals: Acids, hydrocarbons, asbestos, silica, flammables
+- Extreme temperatures: Burns, heat stroke, hypothermia, frostbite
+- Electricity: Contact with energised parts, arc flash, shock
+- Noise/vibration: Hearing loss, hand-arm vibration syndrome
+- Biological: Infectious diseases, contaminated materials
 
 VISUAL INDICATORS:
-- Worker improvisations to avoid discomfort (e.g. standing on boxes to reach) = design or hazard identification gap
-- Cluttered walkways or obstructed emergency exits = gravity/trip hazard not controlled
-- Hired or used equipment with worn insulation or visible defects = new hazard introduced to workplace without assessment
-- No hazard identification process visible on site = PCBU duty gap
+- Worker standing on boxes to reach = design/hazard identification gap
+- Cluttered walkways or blocked emergency exits = gravity/trip hazard uncontrolled
+- Equipment with worn insulation or visible defects = new hazard not assessed
+- Worker improvisations to avoid discomfort = hazard identification failure
 
 ---
 
-CHUNK 4: Step 2 — Risk Assessment
+CHUNK 3: Risk Assessment — Severity and Likelihood
 Section: s3, s3.2; Table 2
-Topic: Evaluating severity and likelihood of harm
+Topic: Evaluating how severe and likely harm is
 
-PURPOSE OF RISK ASSESSMENT: To determine how severe a risk is, the effectiveness of existing controls, and how urgently action is required.
-
-SEVERITY FACTORS to consider:
-- Whether one failure could lead to other failures (chain reaction)
-- Whether a small event could ESCALATE TO A MUCH LARGER EVENT (e.g. a minor fire near combustible materials)
-- The number of people who could be harmed
-- The vulnerability of people at risk (e.g. new workers, young workers)
+SEVERITY FACTORS:
+- Chain reaction potential (one failure leads to others)
+- Escalation potential (small event becomes large — fire near combustibles)
+- Number of people who could be harmed
+- Vulnerability of people (new workers, young workers)
 
 LIKELIHOOD RATINGS:
-- Certain to occur: Expected in most circumstances
+- Certain: Expected in most circumstances
 - Very likely: Will probably occur in most circumstances
 - Possible: Might occur occasionally
 - Unlikely: Could happen at some time
 - Rare: Only in exceptional circumstances
 
-FACTORS THAT INCREASE LIKELIHOOD:
+FACTORS INCREASING LIKELIHOOD:
 - Worker fatigue during high-demand periods
-- Changes in environmental conditions without updated controls (e.g. rain, heat)
-- Inexperienced, young, or new workers performing complex tasks without close supervision
-- Distractions or time pressure in the work environment
+- Environmental changes without updated controls (rain, heat)
+- Inexperienced/new workers on complex tasks without close supervision
+- Distractions or time pressure
 
 VISUAL INDICATORS:
-- Visible worker fatigue during high-demand periods = increased likelihood of human error
-- Wet or slippery surfaces without updated controls = assessment gap
-- New or young workers performing high-risk tasks without a supervisor present = high-risk individual variability
-- No risk assessment records for activities with known hazards = non-compliant
+- Visible worker fatigue during high-demand periods = increased error likelihood
+- Wet/slippery surfaces without updated controls = assessment gap
+- New/young workers on high-risk tasks without supervisor present = high-risk variability
+- No risk assessment records for known hazards = non-compliant
 
 ---
 
-CHUNK 5: Step 3 — Hierarchy of Controls
-Section: s4, s4.1; Figure 2; WHS Regulation s36
-Topic: Mandatory priority order for controlling risks
-
-HIERARCHY OF CONTROL — must be applied in this order (highest to lowest effectiveness):
-
-LEVEL 1 — ELIMINATION (most effective):
-- The most effective control measure — remove the hazard completely
-- Must ALWAYS be considered first
-- Example: Doing work at ground level to eliminate fall risk; removing a chemical from the process
-
-LEVEL 2 — SUBSTITUTION, ISOLATION, AND ENGINEERING:
-- SUBSTITUTION: Replace with something less hazardous (e.g. water-based instead of solvent paints; quieter equipment)
-- ISOLATION: Physically separate people from the hazard (e.g. guardrails, barriers, exclusion zones, enclosures)
-- ENGINEERING CONTROLS: Physical controls built into the workplace or equipment (e.g. mechanical hoists, machine guards, safety switches, local exhaust ventilation)
-
-LEVEL 3 — ADMINISTRATIVE CONTROLS:
-- Work methods, procedures, training, and supervision to reduce exposure
-- Examples: Anti-bullying policies, job rotation, limiting exposure time, permit systems, warning signs, inductions
-- Less reliable than Level 2 — depend on human behaviour
-
-LEVEL 4 — PERSONAL PROTECTIVE EQUIPMENT (PPE) (least effective):
-- The lowest order control measure
-- Limits exposure only if worn and used correctly — every time
-- Must NOT be used as the only or primary control measure if higher-order controls are practicable
-- Examples: Hard hats, gloves, safety glasses, hearing protection, respirators, harnesses
-
-COMBINATIONS: More than one control from different levels can and should be combined. A single control is rarely sufficient for high-risk hazards.
-
-VISUAL INDICATORS:
-- Exclusive reliance on PPE (e.g. earplugs only) for a noisy machine when a sound enclosure is practicable = hierarchy violation
-- Safety signs only used as the sole barrier to a fall edge instead of a physical guardrail = non-compliant control level
-- Guardrails or machine guards removed or bypassed = Level 2 control failure
-- Workers relying on administrative procedure alone (e.g. "don't go near the edge") with no physical barrier = inadequate control
-- PPE worn but visibly inadequate for the hazard (wrong type, damaged, poor fit) = Level 4 control failure
-
----
-
-CHUNK 6: Step 4 — Reviewing Control Measures
+CHUNK 4: Control Review Triggers
 Section: s5; WHS Regulation s38
-Topic: Mandatory triggers for reviewing safety controls
+Topic: Mandatory situations requiring review of safety controls
 
-A review of control measures IS REQUIRED when:
-- The control measure is NOT EFFECTIVE in controlling the risk
-- BEFORE A CHANGE at the workplace that is likely to give rise to a new or different health and safety risk
-- If a NEW HAZARD OR RISK is identified
-- If the results of CONSULTATION indicate a review is necessary
-- If a HEALTH AND SAFETY REPRESENTATIVE (HSR) requests a review
-- After an INCIDENT or near miss
+REVIEW REQUIRED WHEN:
+- Control measure NOT EFFECTIVE in controlling risk
+- BEFORE A CHANGE at workplace creating new/different risk
+- NEW HAZARD OR RISK identified
+- CONSULTATION results indicate review necessary
+- HEALTH AND SAFETY REPRESENTATIVE requests review
+- After INCIDENT or near miss
 
 VISUAL INDICATORS:
-- Control measures introducing new problems (e.g. a long hose becoming a trip hazard) = review required immediately
-- A scheduled review date on a risk register that has already passed = compliance failure
-- Incident reports showing the same injury recurring = current controls are not effective; review mandatory
-- New plant, equipment or chemicals introduced without updated risk assessment = review not conducted
+- Control creating new problems (hose becomes trip hazard) = review required immediately
+- Scheduled review date on risk register already passed = compliance failure
+- Incident reports showing same injury recurring = controls not effective; review mandatory
+- New plant/equipment/chemicals without updated risk assessment = review not conducted
 
 ---
 
-CHUNK 7: Record Keeping
+CHUNK 5: Documentation and Record Keeping
 Section: s6
-Topic: Documentation for demonstrating compliance
+Topic: Required records for demonstrating compliance
 
-USEFUL RECORDS to maintain:
-- Identified hazards and chosen control measures
-- How and when controls were implemented and monitored
+USEFUL RECORDS:
+- Identified hazards and chosen controls
+- How/when controls implemented and monitored
 - Who was consulted
 - Training records (date, topic, attendees, signatures)
 
-MANDATORY RETENTION: For some hazards (e.g. hazardous chemicals, plant), records MUST be kept for the time specified in the WHS Regulation.
-
-SAFE WORK METHOD STATEMENTS (SWMS): Must be available at the location of high-risk construction work — not just in the site office.
+MANDATORY:
+- SWMS must be available AT LOCATION of high-risk construction work — not just site office
+- Some hazard records (chemicals, plant) must be kept for time specified in WHS Regulation
 
 VISUAL INDICATORS:
-- PCBU unable to produce a risk register during an inspection = serious documentation gap
-- No training records (date, topic, signatures) for a safety procedure = record-keeping failure
-- SWMS not available at the location of high-risk work = regulatory breach
+- PCBU unable to produce risk register during inspection = serious documentation gap
+- No training records (date, topic, signatures) for safety procedure = record-keeping failure
+- SWMS not available at location of high-risk work = regulatory breach
 - Risk register with no review dates or responsible persons = inadequate documentation
-- Hazard identification forms blank or incomplete = process not being followed
+- Hazard identification forms blank/incomplete = process not followed
+
+---
+
+CHUNK 6: Mandatory Risk Assessments
+Section: s1.2; WHS Regulation s34–38
+Topic: Activities requiring formal documented risk assessment
+
+MANDATORY RISK ASSESSMENT REQUIRED FOR:
+- Entry into CONFINED SPACES
+- DIVING WORK
+- LIVE ELECTRICAL WORK
+- Other activities specified in WHS Regulation
+
+VISUAL INDICATORS:
+- No documented risk assessment for confined space entry = serious non-compliance
+- Workers entering confined space without visible permit/assessment = regulatory breach
+- Live electrical work without documented risk assessment = non-compliant
+
+---
+
+CHUNK 7: Reasonably Practicable — Cost vs Risk
+Section: s1.1, s1.2; WHS Act s18, s19
+Topic: Factors determining control feasibility
+
+DETERMINING "REASONABLY PRACTICABLE" — weigh ALL factors:
+- LIKELIHOOD of hazard/risk occurring
+- DEGREE OF HARM that might result
+- KNOWLEDGE about hazard/risk and ways to eliminate/minimise
+- AVAILABILITY AND SUITABILITY of ways to eliminate/minimise
+- COST — including whether GROSSLY DISPROPORTIONATE to risk
+
+IMPORTANT:
+- Cost CANNOT justify doing nothing
+- Cost CANNOT justify behaviour-only controls when engineering/isolation is practicable
+
+VISUAL INDICATORS:
+- Workers in obviously hazardous ways without documented oversight = duty breach
+- More effective control bypassed for cheaper, less reliable option = reasonably practicable failure
+- Safety equipment present but not in use = supervision/worker duty failure
+- PPE provided but no higher-order controls where practicable = hierarchy failure
+
+---

@@ -7,355 +7,81 @@ SOURCE: Workplace Health and Safety Queensland, Office of Industrial Relations
 PUBLICATION_NO: PN12656
 CURRENT AS AT: 2021
 COMMENCED: 2021
-CLAUSE_PREFIX: s (WHS Act / WHS Regulation references); section numbers within CoP
-APPROVED UNDER: Work Health and Safety Act 2011 (Qld) s274
 
 ---
 
-CHUNK 1: Definition and Scope — What is Demolition Work?
-Section: CoP s1.1; WHS Regulation s289
-Topic: Legal definition of demolition work, what is included and excluded, relationship to construction work
-
-DEMOLITION WORK means work to demolish or dismantle a structure or part of a structure that is LOAD-BEARING or otherwise related to the PHYSICAL INTEGRITY of the structure.
-
-DEMOLITION WORK DOES NOT INCLUDE:
-(a) Dismantling of formwork, falsework, scaffolding or other structures designed or used to provide support, access or containment during construction work
-(b) Removal of power, light or telecommunication poles
-
-STRUCTURE means anything that is constructed, whether fixed or moveable, temporary or permanent. Includes:
-- Buildings
-- Sheds
-- Towers
-- Chimney stacks
-- Silos
-- Storage tanks
-
-IMPORTANT LEGAL RELATIONSHIPS:
-- Demolition work IS a type of CONSTRUCTION WORK — all construction work requirements apply
-- Demolition work IS also HIGH RISK CONSTRUCTION WORK if it involves demolition of an element that is load-bearing or related to physical integrity of the structure
-- A SAFE WORK METHOD STATEMENT (SWMS) MUST be prepared before high risk construction work starts
-
-VISUAL INDICATORS:
-- Any work dismantling load-bearing walls, columns, beams, slabs or structural frames = demolition work; SWMS required
-- Scaffolding or formwork being removed only = NOT demolition work under this definition
-- Removing power poles = NOT demolition work under this CoP
-- Any structure being taken down regardless of size (shed, tank, silo) = demolition work if load-bearing elements involved
-
----
-
-CHUNK 2: Duty Holders — Who Has Health and Safety Responsibilities?
-Section: CoP s1.2; WHS Act s19, s22–s29, s27, s28, s46, s47, s48, s49; WHS Regulation s46, s293, s308–s315
-Topic: Legal duties of PCBUs, principal contractors, designers, manufacturers, officers, workers and others in demolition work
-
-PRIMARY DUTY — PCBU (WHS Act s19):
-- Must ELIMINATE risks from demolition work
-- If elimination not reasonably practicable: MINIMISE risks so far as is reasonably practicable
-- Must manage risks of hazardous chemicals, airborne contaminants and plant
-- Must consult workers and cooperate/coordinate with other duty holders
-
-PRINCIPAL CONTRACTOR DUTIES (WHS Regulation s293, s308–s315):
-A construction project requiring a principal contractor exists where construction work costs $250,000 OR MORE. The principal contractor must:
-- Prepare, maintain and review a WHS Management Plan
-- Obtain a copy of each SWMS before high risk construction work commences
-- Install signs showing name, contact details and location of site office
-- Secure the construction workplace
-- Put in place arrangements for falls, facilities, first aid, emergency plan, traffic management
-- Document consultation, cooperation and coordination arrangements in the WHS Management Plan
-
-Note: Only ONE principal contractor is permitted per construction project. The demolition contractor may be appointed as the principal contractor.
-
-DESIGNER DUTIES (WHS Act s22; WHS Regulation s295):
-- Must ensure structure is designed to be without risks to health and safety, including during demolition
-- Must give person who commissioned the design a WRITTEN SAFETY REPORT specifying hazards relating to the design that create risks for construction workers
-- Report must cover hazards associated only with the particular design
-
-MANUFACTURERS, IMPORTERS, SUPPLIERS AND INSTALLERS (WHS Act s23–s26):
-- Must ensure plant or structures are without risks to health and safety
-- Must carry out testing and analysis and provide specific information
-- Manufacturers must consult designers of plant; importers must consult designers and manufacturers
-
-OFFICER DUTIES (WHS Act s27):
-- Officers (e.g. company directors) must exercise DUE DILIGENCE
-- Must take reasonable steps to ensure business has and uses appropriate resources and processes to eliminate or minimise risks
-
-WORKER DUTIES (WHS Act s28; WHS Regulation s46):
-- Must take reasonable care for own health and safety
-- Must not adversely affect health and safety of others
-- Must comply with reasonable instructions and policies
-- Must use or wear PPE provided, as far as reasonably able
-
-VISUAL INDICATORS:
-- No WHS Management Plan on site for projects $250,000+ = non-compliance by principal contractor
-- No SWMS available for high risk demolition work = non-compliance
-- No site signage identifying principal contractor = non-compliance
-- Workers operating without instruction/training specific to demolition = flag
-
----
-
-CHUNK 3: Risk Management Process — Overview
-Section: CoP s1.3, Chapter 2; WHS Regulation s34, s35, s36, s37, s38, s297, s299
-Topic: The four-step risk management process applicable to demolition work
-
-RISK MANAGEMENT PROCESS — four steps:
-1. IDENTIFY HAZARDS — find what could cause harm
-2. ASSESS RISKS (if necessary) — understand nature, severity and likelihood of harm. Note: not mandatory under WHS Regulation for demolition, but strongly recommended
-3. CONTROL RISKS — eliminate, or if not reasonably practicable, minimise using hierarchy of controls
-4. REVIEW CONTROL MEASURES — ensure they remain effective over time
-
-HIERARCHY OF CONTROL MEASURES (WHS Regulation s36) — in order from highest to lowest protection:
-1. ELIMINATION — remove the hazard entirely (e.g. do work at ground level)
-2. SUBSTITUTION — replace hazard with lesser risk (e.g. mechanical instead of manual demolition)
-3. ISOLATION — separate hazard from person (e.g. concrete barriers between pedestrians and plant)
-4. ENGINEERING CONTROLS — physical control measures (e.g. FOPS on excavators)
-5. ADMINISTRATIVE CONTROLS — e.g. warning signs, safe work procedures
-6. PPE — e.g. hard hats, hearing protection, high-vis vests (LEAST EFFECTIVE — must not be sole control)
-
-REVIEW TRIGGERS — control measures MUST be reviewed when:
-- Control measure does not control the risk so far as reasonably practicable
-- A change at the workplace may give rise to new or different risks
-- A new or relevant hazard or risk is identified
-- Consultation results indicate review is necessary
-- A health and safety representative requests a review
-
-VISUAL INDICATORS:
-- No documented risk assessment or SWMS for high risk demolition activities = non-compliance
-- PPE used as the only control without higher-order controls in place = non-compliant approach
-- No review of control measures after incident or near miss = flag
-
----
-
-CHUNK 4: Hazard Identification — Common Demolition Hazards
-Section: CoP s2.1; WHS Regulation s34
-Topic: Categories and specific examples of hazards to be identified before and during demolition work
-
-HAZARD CATEGORIES — hazards arise from:
-- Physical work environment
-- Equipment, materials and substances used
-- Work tasks and how they are performed
-- Work design and management
-
-SPECIFIC DEMOLITION HAZARDS — potential hazards include:
-- UNPLANNED STRUCTURE COLLAPSE
-- FALLS from one level to another
-- FALLING OBJECTS
-- ABOVE-GROUND ESSENTIAL SERVICES (gas, water, sewerage, telecommunications, electricity, chemicals, fuel, refrigerant in pipes or lines)
-- UNDERGROUND ESSENTIAL SERVICES
-- EXPOSURE TO ASBESTOS
-- EXPOSURE TO HAZARDOUS CHEMICALS (present in demolished material or in ground — contaminated sites)
-- HAZARDOUS NOISE from plant and explosives
-- PROXIMITY of building being demolished to other buildings or structures
-
-HAZARD IDENTIFICATION METHODS:
-- Inspect the workplace and observe how work is carried out
-- Talk to workers, manufacturers, suppliers and health and safety specialists
-- Review relevant information, records and incident reports
-
-VISUAL INDICATORS:
-- No pre-demolition site inspection documented = flag
-- Demolition proceeding without assessment of adjacent structures = non-compliance
-- No assessment for asbestos or hazardous chemicals before demolition commences = non-compliance
-- Essential services not marked, located or disconnected before demolition starts = serious non-compliance
-
----
-
-CHUNK 5: Risk Assessment — Factors Affecting Severity
-Section: CoP s2.2
-Topic: Factors that affect the nature and severity of demolition risks
-
-RISK ASSESSMENT FACTORS — nature and severity of risks depend on:
-- The structure to be demolished and its structural integrity
-- The method of demolition including its sequencing
-- The scheduling of the work
-- The layout of the workplace including whether there are fall hazards for people and objects
-- What plant and equipment will be used and the skill and experience required to use it safely
-- What exposures might occur (e.g. noise, ultraviolet rays)
-- The number of people involved
-- Local weather conditions
-
-A risk assessment is NOT MANDATORY under the WHS Regulation for demolition work. However, it IS required in many circumstances as the best way to determine appropriate control measures.
-
-For known risks with known controls, the assessment step can be bypassed and controls implemented directly.
-
-VISUAL INDICATORS:
-- Weather conditions (high winds, rain) present but no modified work controls in place = flag
-- Large number of workers on site without clear coordination arrangements = flag
-- High-noise demolition plant operating without noise monitoring or hearing protection program = flag
-
----
-
-CHUNK 6: Notifiable Demolition Work — Regulator Notification Requirements
+CHUNK 1: Notifiable Demolition Work — Regulator Notification Requirements
 Section: CoP s3.1; WHS Regulation s142
-Topic: Which demolition work requires prior written notice to the regulator and what information must be included
+Topic: Which demolition work requires prior written notice to the regulator (KEY MEASUREMENTS)
 
-MANDATORY NOTIFICATION — a PCBU who proposes to carry out ANY of the following MUST give written notice to the WHSQ regulator AT LEAST FIVE DAYS before work commences:
+MANDATORY NOTIFICATION — written notice to WHSQ regulator AT LEAST FIVE DAYS before work commences for:
 
-(a) Demolition of a structure, or part of a structure that is load-bearing or otherwise related to physical integrity, that is AT LEAST 6 METRES IN HEIGHT
+(a) Demolition of structure or load-bearing element AT LEAST 6 METRES IN HEIGHT
 (b) Demolition work involving LOAD SHIFTING MACHINERY ON A SUSPENDED FLOOR
 (c) Demolition work involving EXPLOSIVES
 
-HEIGHT MEASUREMENT: measured from the LOWEST LEVEL OF GROUND immediately adjacent to the base of the structure (at the point of measurement) to its HIGHEST POINT.
-
-NOTIFICATION MUST INCLUDE:
-- Name and contact details of the PCBU
-- If part of a construction project: name and contact details of the principal contractor or their representative
-- Name and contact details of the person directly supervising the work
-- Date of the notice
-- Nature of the demolition
-- Whether explosives will be used; if so, the licence details of the person using them
-- When the PCBU reasonably believes work will commence and be completed
-- Where the work is to be carried out
-
-EMERGENCY SERVICES EXCEPTION: Emergency services organisations carrying out notifiable demolition work in response to an emergency do not need to give five days notice — but must provide written notice to the regulator AS SOON AS REASONABLY PRACTICABLE (before or after the work).
+HEIGHT MEASUREMENT: from LOWEST LEVEL OF GROUND immediately adjacent to base of structure to its HIGHEST POINT.
 
 VISUAL INDICATORS:
 - Demolition of structure 6m+ in height without evidence of regulator notification = serious non-compliance
 - Load shifting machinery present on suspended floor during demolition without notification documentation = non-compliance
-- Explosives on site for demolition without notification or licencing evidence = serious non-compliance
+- Explosives on site for demolition without notification or licensing evidence = serious non-compliance
 
 ---
 
-CHUNK 7: Principal Contractor — Construction Project Duties
+CHUNK 2: WHS Management Plan — Construction Project Requirements
 Section: CoP s3.2; WHS Regulation s293, s308–s315
-Topic: Specific duties of the principal contractor for demolition forming part of a construction project
+Topic: Principal contractor duties for projects $250,000 or more
 
-A CONSTRUCTION PROJECT exists where construction work costs $250,000 OR MORE.
+CONSTRUCTION PROJECT exists where construction work costs $250,000 OR MORE.
 
-ONLY ONE principal contractor per project. Either:
-- The person commissioning the construction work, OR
-- A person appointed as principal contractor (e.g. the demolition contractor may be appointed)
+ONLY ONE principal contractor per project.
 
 PRINCIPAL CONTRACTOR MUST:
-- Prepare and review a WHS Management Plan for the project
-- Include in WHS Management Plan: arrangements for consultation, cooperation and coordination between PCBUs at the site
-- Take all reasonable steps to obtain a copy of the SWMS before high risk construction work commences
-- Put in place arrangements to manage the work environment: falls, facilities, first aid, emergency plan, traffic management
+- Prepare and review a WHS Management Plan
+- Obtain a copy of each SWMS before high risk construction work commences
 - Install signs showing: principal contractor's name, contact details and location of site office
 - Secure the construction workplace
+- Put in place arrangements for: falls, facilities, first aid, emergency plan, traffic management
 
 VISUAL INDICATORS:
-- No WHS Management Plan present on site = non-compliance for projects $250,000+
+- No WHS Management Plan present on site for projects $250,000+ = non-compliance
 - Signs absent identifying principal contractor name and contact details = non-compliance
 - High risk construction work commencing without SWMS sighted by principal contractor = non-compliance
 - Construction workplace not secured against unauthorised access = non-compliance
 
 ---
 
-CHUNK 8: Designers — Safety Reports and Engineering Investigation
-Section: CoP s3.3; WHS Act s22; WHS Regulation s295
-Topic: Designer obligations for demolition safety reports, engineering investigations and design documentation
-
-DESIGNER DUTY:
-Designers of structures must ensure, so far as reasonably practicable, that structures they design that could be used as or at a workplace are designed to be without risks to health and safety of persons carrying out demolition or disposal.
-
-WRITTEN SAFETY REPORT (mandatory):
-- Designer must give the person who commissioned the design a WRITTEN SAFETY REPORT
-- Report must specify hazards relating to the design that create risks for persons carrying out construction work
-- Must identify hazards: (a) creating risk to persons carrying out construction work, AND (b) associated only with the particular design
-- The principal contractor (or demolition contractor if no principal contractor) should take all reasonable steps to OBTAIN the designer's safety report
-
-MULTIPLE SAFETY REPORTS — may include:
-- Report prepared for original construction
-- Reports for subsequent additions or alterations
-- Report from designer engaged for the demolition work itself
-
-ENGINEERING INVESTIGATION REPORT:
-Required when:
-- As-built design documentation is NOT available, OR
-- There is concern the structure has been damaged or weakened (e.g. by fire, deterioration), OR
-- Plant is to be used on suspended floors
-Must be conducted by a COMPETENT PERSON such as a qualified structural engineer.
-
-KEY DESIGN MATTERS FOR DEMOLITION — must be taken into account:
-- Stability and structural integrity at ALL stages of demolition
-- Maximum permissible wind speed for partially demolished structures
-- Effect of proposed demolition sequence on stability
-- Stability requirements for all components as sequentially demolished
-- Proximity of adjacent or adjoining buildings
-- Competent person assessment of loadings at all stages
-- Clear instructions for temporary bracing
-- Plant to be used — size, type, position, coverage (shown on site plan)
-- Ground compaction to design specifications for plant movement
-- Proposed methods for handling heavy, bulky or awkward components
-- Lifting arrangements detailed on structural member drawings
-- Handling, lifting, storing, stacking and transportation of components
-- Provision of safe access and safe working areas
-
-ENGINEERING INVESTIGATION CONSIDERATIONS (Appendix C) include:
-- Obtaining as-built details of component members
-- Identifying type of structural system
-- Searching for engineering details (reinforcement type, size, configuration, material strength)
-- Assessing current load-carrying capacity accounting for: original standards vs current standards; material degradation; capacity to sustain loads without premature collapse
-- Verifying composition/quality using: core drilling, electronic reinforcement location, exposure of reinforcement
-- Assessing loss of structural strength from investigation methods
-- Identifying floor penetrations and structural irregularities
-- Assessing whether proposed demolition methods can be executed without unpremeditated collapse
-
-VISUAL INDICATORS:
-- Demolition proceeding with no designer safety report or engineering investigation available = flag
-- No evidence of as-built drawings or structural assessment on site = flag for engineer investigation requirement
-- Plant operating on suspended floors without engineering certification of floor capacity = serious non-compliance
-- No evidence of temporary bracing instructions or structural engineer input for complex structures = non-compliance
-
----
-
-CHUNK 9: Safe Work Method Statements (SWMS) — Requirements for Demolition
+CHUNK 3: Safe Work Method Statements (SWMS) — High Risk Demolition Work
 Section: CoP s3.4; WHS Regulation s299, s300
-Topic: When a SWMS is required, what it must contain, who prepares it, and compliance obligations
+Topic: When SWMS is required and compliance obligations
 
-SWMS IS REQUIRED FOR HIGH RISK CONSTRUCTION WORK. Demolition work is high risk construction work when it involves:
-- Demolition of an element that is load-bearing or related to physical integrity of a structure
-- Work involving a risk of a person FALLING MORE THAN 2 METRES
+SWMS REQUIRED FOR HIGH RISK CONSTRUCTION WORK including:
+- Demolition of load-bearing or structural integrity elements
+- Work with fall risk MORE THAN 2 METRES
 - Work involving or likely to involve DISTURBANCE OF ASBESTOS
-- Work ON OR NEAR energised electrical installations or services
-- Work involving the use of EXPLOSIVES
+- Work ON OR NEAR energised electrical installations
+- Work involving EXPLOSIVES
 - Work involving LOAD SHIFTING MACHINERY ON A SUSPENDED FLOOR
 - Work ON OR NEAR pressurised gas distribution mains or piping
 - Work ON OR NEAR chemical, fuel or refrigerant lines
-- Work near a TRENCH with excavated depth greater than 1.5 metres
-- Work where there is risk of MOBILE POWERED PLANT COLLIDING with pedestrians or other plant
+- Work near trench with excavated depth GREATER THAN 1.5 METRES
+- Work where risk of MOBILE POWERED PLANT COLLIDING with pedestrians or other plant
 
-SWMS MUST:
-- Identify the type of high risk construction work being done
-- Specify the health and safety hazards and risks arising from those hazards
-- Describe how the risks will be controlled
-- Describe how control measures will be implemented, monitored and reviewed
-- Be developed in CONSULTATION with workers and their representatives who will carry out the work
-
-WHO PREPARES THE SWMS:
-- A PCBU must prepare a SWMS — or ensure one has been prepared — BEFORE high risk construction work starts
-- The person responsible for carrying out the work is best placed to prepare it
-- If multiple PCBUs share the duty: must consult and cooperate to coordinate who prepares it
-
-ONE SWMS OR MULTIPLE:
-- One SWMS may cover multiple types of high risk construction work at the same workplace
-- OR separate SWMS may be prepared for each type — if so, consider how different work activities may impact each other
-
-COMPLIANCE WITH SWMS (WHS Regulation s300):
-If high risk construction work is NOT being carried out in accordance with the SWMS:
+COMPLIANCE: If high risk construction work is NOT being carried out in accordance with the SWMS:
 - Work MUST BE STOPPED immediately (or as soon as safe to do so)
 - Work MUST NOT BE RESUMED until it is in accordance with the SWMS
 
 VISUAL INDICATORS:
 - High risk demolition work commencing without a completed SWMS present = serious non-compliance
-- SWMS not developed with worker input/consultation = non-compliance
 - Work continuing after deviation from SWMS without stopping and reviewing = non-compliance
 - SWMS present but does not identify the specific hazards, risks and controls for the activities being performed = inadequate
 
 ---
 
-CHUNK 10: Demolition Licensing — Licence Requirements
-Section: CoP s3.5, s3.6; WHS Regulation s316, s422, s458
-Topic: Licensing requirements for demolition contractors and for asbestos removal
-
-DEMOLITION LICENCE:
-A licence may be required to undertake some demolition work. The PCBU who controls the workplace (principal contractor or demolition contractor) must seek advice from the local WHS regulator or building regulator about whether a demolition licence is required.
-
-HIGH RISK WORK LICENCES — required for persons operating certain plant, including:
-- Some cranes
-- Elevating work platforms (EWPs)
-- Forklifts
-
-ASBESTOS REMOVAL LICENCES (WHS Regulation s458):
+CHUNK 4: Asbestos Removal Licensing — Class A, Class B and Unlicensed Work
+Section: CoP s3.5, s3.6; WHS Regulation s458
+Topic: Licensing requirements for asbestos removal (KEY MEASUREMENTS)
 
 CLASS A LICENCE — can remove:
 - Any amount of friable asbestos or ACM
@@ -374,26 +100,19 @@ VISUAL INDICATORS:
 - Asbestos removal underway without licensed asbestos removalist on site = serious non-compliance
 - More than 10 m² of non-friable asbestos being removed without at least Class B licence = serious non-compliance
 - Any friable asbestos removal without Class A licence = serious non-compliance
-- Crane, EWP or forklift operator unable to produce high risk work licence = non-compliance
 
 ---
 
-CHUNK 11: Adjacent and Adjoining Buildings — Protection Requirements
+CHUNK 5: Adjacent Buildings — Lateral Support and Protection Requirements
 Section: CoP s3.7
-Topic: Obligations to protect adjacent structures from structural impact, vibration, water penetration and lateral force changes
+Topic: Obligations to protect adjacent structures from structural impact and vibration
 
-GENERAL REQUIREMENTS:
-- No part of the demolition process should ADVERSELY AFFECT THE STRUCTURAL INTEGRITY of any other building
-- Consideration must be given to SHORING AND UNDERPINNING and effects of changes in soil conditions as a result of demolition
+MANDATORY REQUIREMENTS:
+- No part of demolition process should ADVERSELY AFFECT THE STRUCTURAL INTEGRITY of any other building
 - LATERAL SUPPORT for adjoining structures must be EQUAL TO OR GREATER THAN that provided by the structure being demolished
 - Before existing lateral support is disturbed, TEMPORARY SUPPORTS must be erected and checked for effectiveness as demolition proceeds
-
-VIBRATION AND CONCUSSION:
-- Other buildings in and around the demolition site must not be adversely affected by VIBRATION or CONCUSSION
-- SPECIAL PRECAUTIONS may be required near hospitals and buildings with equipment sensitive to shock and vibration
-
-WATER PENETRATION:
-- No part of the demolition process should cause FLOODING or WATER PENETRATION to an adjoining building
+- Other buildings must not be adversely affected by VIBRATION or CONCUSSION
+- No part of demolition process should cause FLOODING or WATER PENETRATION to an adjoining building
 
 VISUAL INDICATORS:
 - Demolition adjacent to other occupied buildings with no shoring, propping or lateral support installed = non-compliance
@@ -402,45 +121,24 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 12: Essential Services — Location, Disconnection and Underground Services
+CHUNK 6: Essential Services — Disconnection and Underground Services Location
 Section: CoP s3.8; WHS Regulation s304, s305
-Topic: Requirements for identifying, disconnecting and managing essential services before and during demolition
-
-ESSENTIAL SERVICES include supply of:
-- Gas, water, sewerage, telecommunications, electricity
-- Chemicals, fuel and refrigerant in pipes or lines
+Topic: Requirements for identifying, disconnecting and managing essential services
 
 MANDATORY REQUIREMENTS:
 - All electric, gas, water, sewer, steam and other service lines NOT required in demolition process must be SHUT OFF, CAPPED or OTHERWISE CONTROLLED at or outside the building line BEFORE demolition work starts
-- The relevant utility agency MUST be notified in advance; their approval or services obtained if necessary
-- Services retained for demolition work must be ADEQUATELY PROTECTED as required by the relevant authority
-
-HIGH RISK CONSTRUCTION WORK — SWMS required when working on or near:
-- Pressurised gas distribution mains or piping
-- Chemical, fuel or refrigerant lines
-- Energised electrical installations
+- The relevant utility agency MUST be notified in advance
+- Services retained for demolition work must be ADEQUATELY PROTECTED
 
 UNDERGROUND ESSENTIAL SERVICES:
-Before work starts, the PCBU with management or control must:
+Before work starts, PCBU must:
 - Take ALL REASONABLE STEPS to get CURRENT underground essential services information for the work area AND adjacent areas
 - Contact DIAL BEFORE YOU DIG — phone 1100 or online enquiry at www.1100.com.au
 - Contact relevant authorities: electricity supply authorities, communication companies, local government, water authorities
 
 UNDERGROUND ESSENTIAL SERVICES INFORMATION MUST BE:
 - Made available to any worker, principal contractor and subcontractors
-- Readily available for inspection as required under the WHS Act
 - Retained until excavation work is completed, OR if there is a notifiable incident: for TWO YEARS after the incident
-
-LOCATING UNDERGROUND SERVICES:
-- POTHOLING: digging with hand tools to a pre-determined depth to verify if assets exist; may use insulated hand tools appropriate for the voltage, or vacuum pumping
-- ELECTROMAGNETIC CABLE LOCATORS
-- GROUND PENETRATING RADAR
-- Workers using such equipment must be TRAINED and COMPETENT in their use
-- A SWMS must be prepared for excavation work involving underground services
-
-WHERE AVAILABLE INFORMATION MAY NOT BE ACCURATE — initial examination of area required, e.g. sampling area by exposing short sections of underground services using water pressure and vacuum system (potholing)
-
-For private property: contact the owner or occupier about buried cables before starting work.
 
 VISUAL INDICATORS:
 - No evidence of Dial Before You Dig enquiry on site = non-compliance for underground services
@@ -450,49 +148,14 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 13: Hazardous Materials — General Requirements and Hazardous Chemical Management
-Section: CoP s4.2; WHS Regulation s49
-Topic: Managing hazardous chemicals and materials present in structures being demolished
-
-MANDATORY REQUIREMENT:
-- A PCBU must ensure no person at the workplace is exposed to a substance or mixture in an airborne concentration that EXCEEDS THE EXPOSURE STANDARD (WHS Regulation s49)
-- Exposure standards are set out in the Workplace Exposure Standards for Airborne Contaminants and in manufacturer's Safety Data Sheets (SDS)
-
-PRE-DEMOLITION EXAMINATION — before starting, ALL areas (including basements, cellars, vaults, waste dumps) must be examined to determine whether:
-- There are items that could be a fire or explosion risk
-- Previous site use might cause risk because of nature or decomposition of materials
-- There are toxic, radioactive or other hazardous chemicals present
-
-HAZARDOUS MATERIALS IN DEMOLITION include:
-- Lead (in paint, pipes, plumbing, sheet lead, solder, flashing, leadlights)
-- Asbestos / ACM
-- Polychlorinated biphenyls (PCBs) — in capacitors and transformers
-- Contaminated dust
-- Combustible materials
-- Synthetic mineral fibres (insulation in walls, ceilings, air-conditioning ductwork)
-
-PCBU MUST:
-- Identify hazardous materials using SDS, container labels, former hazardous chemicals register or manifest, and historical information from government agencies
-- Inform ALL workers and other persons at the workplace of the presence of hazardous chemicals and control measures before demolition work begins
-- Ensure relevant SDSs are readily available to anyone likely to be exposed
-- Ensure adequate clean facilities are provided so far as reasonably practicable
-
-VISUAL INDICATORS:
-- No pre-demolition hazardous materials assessment documented = non-compliance
-- SDS not available for hazardous chemicals present at workplace = non-compliance
-- Workers not briefed on presence of hazardous materials before demolition = non-compliance
-- No clean facilities provided where hazardous materials present = non-compliance
-
----
-
-CHUNK 14: Asbestos — Identification, Registers, Removal and Disposal
+CHUNK 7: Asbestos — Pre-Demolition Removal and Register Requirements
 Section: CoP s4.2; WHS Regulation s422, s426, s448, s449, s450, s451, s458
-Topic: Full asbestos requirements for demolition: identification, assumption, registers, removal, disposal
+Topic: Asbestos identification, assumption, registers and mandatory pre-demolition removal
 
 IDENTIFICATION (WHS Regulation s451):
-- PCBU with management or control of the workplace MUST ensure, so far as reasonably practicable, that ALL asbestos or ACM at the workplace (or assumed present) is IDENTIFIED BY A COMPETENT PERSON
+- PCBU with management or control MUST ensure ALL asbestos or ACM at the workplace (or assumed present) is IDENTIFIED BY A COMPETENT PERSON
 
-ASSUMPTION OF ASBESTOS — PCBU carrying out demolition or refurbishment MUST ASSUME asbestos or ACM is present if:
+ASSUMPTION OF ASBESTOS — PCBU carrying out demolition MUST ASSUME asbestos or ACM is present if:
 - The competent person is, on reasonable grounds, UNCERTAIN whether asbestos is fixed to or installed in the structure, OR
 - Part of the structure is INACCESSIBLE and likely to be disturbed
 
@@ -500,31 +163,15 @@ PRE-DEMOLITION REMOVAL — MANDATORY:
 - ALL asbestos likely to be disturbed MUST be identified and, so far as reasonably practicable, REMOVED BEFORE demolition starts
 - If only part of a building is being demolished: only asbestos likely to be disturbed in that part needs to be removed before that part commences
 
-PLANNING CONSIDERATIONS:
-- Age of building and likelihood of asbestos being present
-- Location of asbestos in relation to proposed demolition
-- Whether there are inaccessible areas likely to contain asbestos
-- Whether asbestos will be damaged or disturbed — if yes, can it be removed safely before work commences?
-- Type, condition and amount of asbestos present
-- Method of demolition and how it will affect the asbestos
-- Nature of ACM (friable or non-friable)
-
 ASBESTOS REGISTER REQUIREMENTS:
 - PCBU carrying out demolition must OBTAIN A COPY OF THE ASBESTOS REGISTER from the person with management or control before commencing
 - Person with management or control must: (a) review and revise register before demolition, and (b) give a copy to the demolition PCBU before work starts
-- If register is inadequate for the proposed work: MUST BE REVISED before demolition starts
 
 IF NO ASBESTOS REGISTER EXISTS:
 - PCBU must NOT carry out the work until the structure has been inspected by a COMPETENT PERSON
-- If asbestos is determined or assumed present:
-  - Domestic premises: inform the OCCUPIER and OWNER
-  - All other cases: inform the PERSON WITH MANAGEMENT OR CONTROL
-
-SWMS REQUIRED: Construction work involving or likely to involve disturbance of asbestos is HIGH RISK CONSTRUCTION WORK — SWMS must be prepared before work commences.
 
 DISPOSAL:
-- Asbestos removal MUST be carried out by a LICENSED ASBESTOS REMOVALIST (appropriately licensed for the class of work)
-- Asbestos waste MUST be transported and disposed of in accordance with relevant EPA requirements
+- Asbestos removal MUST be carried out by a LICENSED ASBESTOS REMOVALIST
 - Asbestos waste can ONLY be disposed of at a SITE LICENSED BY THE EPA
 - MUST NEVER be disposed of in the general waste system
 
@@ -533,14 +180,12 @@ VISUAL INDICATORS:
 - No asbestos identification by competent person before demolition = serious non-compliance
 - Asbestos disturbed or removed without licensed removalist present = serious non-compliance
 - Asbestos waste in general waste bins or skips = serious non-compliance
-- Friable asbestos being removed without Class A licence = serious non-compliance
-- More than 10 m² non-friable asbestos removed without Class B licence = serious non-compliance
 
 ---
 
-CHUNK 15: Lead, PCBs and Synthetic Mineral Fibres — Hazardous Material Controls
+CHUNK 8: Lead, PCBs and Synthetic Mineral Fibres — Hazardous Material Controls
 Section: CoP s4.2
-Topic: Specific controls for lead, polychlorinated biphenyls (PCBs) and synthetic mineral fibres in demolition
+Topic: Specific controls for lead, polychlorinated biphenyls (PCBs) and synthetic mineral fibres
 
 LEAD:
 Sources of lead by construction date:
@@ -548,31 +193,19 @@ Sources of lead by construction date:
 - 1920–1978: Lead PLUMBING fittings, pipes
 - 1923–1986: Automobile EXHAUST ACCUMULATION (ceiling dust)
 
-Other lead sources: sheet lead, solders, flashing, leadlight windows and glass.
-
 TESTING: If lead-based paint is suspected, a test MUST be conducted. Testing can identify dried paint film with MORE THAN 1% LEAD (by weight) as lead-containing paint. Refer to AS 4361.1.
-
-CONTROL MEASURES for lead during demolition:
-- Minimise generation of lead dust and fumes
-- Clean work areas properly during and after work
-- Wear appropriate PPE
-- Maintain good personal hygiene
 
 POLYCHLORINATED BIPHENYLS (PCBs):
 Workers may be exposed when dismantling electrical capacitors and transformers or cleaning up spills.
 
 CONTROL MEASURES for PCBs:
-- Implement controls when handling damaged capacitors to prevent spillage contacting workers
 - Place equipment or parts in a polyethylene bag, then into a marked sealable METAL CONTAINER
-- If cannot be transported immediately: store in PROTECTED AREA preventing discharge of PCBs to environment
 - PPE: gloves made of materials RESISTANT TO PCBs — polyethylene, nitrile rubber or neoprene
 
 SYNTHETIC MINERAL FIBRES:
 Used extensively in building insulation (walls, ceilings, air-conditioning ductwork).
 
 CONTROL MEASURES:
-- Identify the specific material and implement controls per manufacturer's instructions
-- Provide PPE to workers when insulation is being removed
 - SUPPRESS DUST by damping down
 
 VISUAL INDICATORS:
@@ -583,16 +216,11 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 16: Securing the Work Area — Exclusion Zones and Public Protection
+CHUNK 9: Securing the Work Area — Exclusion Zones and Public Protection
 Section: CoP s4.3
-Topic: Requirements for exclusion zones, public protection, barricading and overhead protection during demolition
+Topic: Requirements for exclusion zones, barricading and overhead protection (KEY MEASUREMENTS)
 
-EXCLUSION ZONES:
-- Must be considered to protect workers and PREVENT UNAUTHORISED PERSONNEL entering particular work areas
-- Area where falling object might reasonably land = DESIGNATED EXCLUSION ZONE
-- Protected/enclosed area must extend HORIZONTALLY to a safe distance beyond the overhead work area
-
-EXCLUSION ZONES ARE REQUIRED DURING:
+EXCLUSION ZONES REQUIRED DURING:
 - Stripping, removal and/or dropping of debris
 - Operation of demolition plant or equipment
 - Pre-weakening activities for deliberate collapse
@@ -600,33 +228,20 @@ EXCLUSION ZONES ARE REQUIRED DURING:
 
 EXCLUSION ZONE PLANNING MUST INCLUDE:
 - Erecting SECURE IMPASSABLE BARRICADES with adequate signage and appropriate lock-out procedures
-- Providing information to workers and other persons about status of exclusion zones
 - Providing SUPERVISION so no unauthorised person enters an exclusion zone
 
 PUBLIC ACCESS AND PROTECTION:
-- Adequate public safety must be maintained in public places and areas adjoining the workplace (roads, walkways)
 - Where demolition is adjacent to a public place with risk of falling debris or hazardous noise: a method of protection must be:
   (a) Erected BEFORE commencement of demolition work
   (b) Kept in position AT ALL TIMES during the work
   (c) Regularly inspected and maintained
 
-CONTROL MEASURES for isolating work from the public include:
-- Security fencing
-- Containment sheets and mesh
-- Overhead protective structures
-- Road closures
-- Specified exclusion zones
-
 OVERHEAD PROTECTIVE STRUCTURES:
 - Must be provided for public walkways in conjunction with perimeter fencing
-- May be constructed from scaffolding, fabricated steel or timber
 - Must be designed to WITHSTAND AN APPROPRIATE LOAD
 
 WORKPLACE SECURITY:
 - PCBU must ensure, so far as reasonably practicable, the workplace is SECURED to prevent unauthorised access
-- Monitoring of entry and exit points must be conducted during work
-
-REFERENCE: AS 2601 — The demolition of structures (for security fencing, falling materials, overhead protection and hoardings).
 
 VISUAL INDICATORS:
 - Demolition debris falling or able to fall into public areas without exclusion zones = serious non-compliance
@@ -637,7 +252,7 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 17: Emergency Plans
+CHUNK 10: Emergency Plans
 Section: CoP s4.4; WHS Regulation s43
 Topic: Requirements for emergency plans at demolition workplaces
 
@@ -654,102 +269,54 @@ EMERGENCY PLAN MUST PROVIDE FOR:
 2. TESTING of emergency procedures — including the FREQUENCY of testing
 3. INFORMATION, TRAINING AND INSTRUCTION to relevant workers in implementing emergency procedures
 
-EMERGENCY PLAN MUST CONSIDER:
-- Nature of the work being carried out
-- Nature of the hazards at the workplace
-- Size and location of the workplace (remoteness, proximity to health services)
-- Number and composition of workers (employees, contractors, visitors)
-
-MUST COVER a range of unexpected emergency incidents including:
-- Ground slip
-- Engulfment
-- Flooding
-- Gas leaks
-- Rescue of workers from excavation
-
-REVIEWING EMERGENCY PLANS — must be reviewed and revised when:
-- Changes to the workplace (relocation, refurbishments)
-- Changes in number or composition of staff including increased use of temporary contractors
-- New activities introduced
-- After the plan has been tested
-
 VISUAL INDICATORS:
 - No written emergency plan available at the demolition workplace = non-compliance
-- Emergency plan not reviewed after site layout change = non-compliance
 - Workers unaware of emergency procedures or evacuation routes = non-compliance
 - No evidence of emergency procedure testing (drill records) = flag
 
 ---
 
-CHUNK 18: Plant and Equipment — Management and Safe Use
+CHUNK 11: Plant and Equipment — Operator Protective Structures and Licensing
 Section: CoP s4.5, s4.6; WHS Regulation s206
-Topic: Requirements for plant selection, operation, protective devices, licensing and maintenance in demolition
+Topic: Requirements for plant protective devices and licensing (KEY MEASUREMENTS)
 
-GENERAL PLANT DUTIES (WHS Regulation s206):
-Person with management or control of plant MUST:
-- Take all reasonable steps to ensure plant is used ONLY FOR THE PURPOSE FOR WHICH IT IS DESIGNED (unless assessed that proposed use does not increase risk)
-- Ensure risk of proposed non-standard use is assessed by a COMPETENT PERSON
-- Take all reasonable steps to ensure all SAFETY FEATURES, WARNING DEVICES, GUARDING, OPERATIONAL CONTROLS, EMERGENCY STOPS are used in accordance with manufacturer's instructions
+OPERATOR PROTECTIVE STRUCTURES — MANDATORY:
+Powered mobile plant used for demolition work must be fitted with a SUITABLE COMBINATION of operator protective devices, typically:
+- FALLING OBJECT PROTECTIVE STRUCTURE (FOPS)
+- OPERATOR RESTRAINTS (e.g. seat belts)
+- ROLL-OVER PROTECTIVE STRUCTURE (ROPS)
 
-PLANT COMMONLY USED IN DEMOLITION:
-- Powered mobile plant (excavators, cranes, bulldozers, loaders)
-- Personnel and/or materials hoists
-- Air compressors
-- Electric generators
-- Jack hammers
-- Oxyacetylene cutting/welding equipment
-- Concrete saws and corers
-- Scaffolding
-- Ladders (limited use)
-- Handheld plant: angle grinders, power saws, hammers, demolition saws, hydraulic jacks, pinch/lever bars
+OPERATOR PROTECTIVE STRUCTURES must:
+- Allow operator to EXIT FROM THE CABIN DURING AN EMERGENCY — exits must be maintained and cleaned regularly
+- Windows and openings: protected against penetrating objects by wire mesh, steel bars or suitable polycarbonate material
 
-PLANT MANAGEMENT REQUIREMENTS:
-- Plant must be operated by a COMPETENT PERSON
-- Appropriate GUARDS and OPERATOR PROTECTIVE DEVICES must be fitted
-- Safe working load must be DISPLAYED and load measurement devices must be operating correctly
-- Ground must be PREPARED for placement of plant, especially on uneven terrain
-- Plant must be MAINTAINED per manufacturer's/supplier's instructions and relevant Australian Standards
-- Manufacturer's recommendations for oxyacetylene cutting equipment must be followed
+IF A DOOR IS FITTED: door must be CLOSED while machine is operating.
 
-POWERED MOBILE PLANT — ADDITIONAL REQUIREMENTS:
-- SWMS must be prepared before commencement
-- HIGH RISK WORK LICENCE required for some cranes, elevating work platforms and forklifts
-- TRAFFIC MANAGEMENT ARRANGEMENTS must be implemented to prevent collisions between pedestrians, other plant and mobile plant
+HIGH RISK WORK LICENCE required for:
+- Some cranes
+- Elevating work platforms (EWPs)
+- Forklifts
 
-CRANES:
-- May be used for lifting/lowering plant and/or materials, personnel work boxes, holding suspended loads
-- Many cranes require operator to hold a HIGH RISK WORK LICENCE
-- If cranes used to suspend loads to be cut and lowered: loads must be accurately calculated; may need to cut samples to determine weight per unit length or area
-- Cranes used to hold loads to be cut: rated capacity must be NOT LESS THAN 1.5 TIMES THE ASSESSED LOAD
+CRANES used to hold loads to be cut: rated capacity must be NOT LESS THAN 1.5 TIMES THE ASSESSED LOAD.
 
 VISUAL INDICATORS:
+- Excavator or mobile plant without FOPS operating in demolition environment = serious non-compliance
+- Machine door open while operating = non-compliance
 - Crane, EWP or forklift operator unable to produce high risk work licence = serious non-compliance
-- Excavator or mobile plant operating without FOPS or ROPS where required = non-compliance
-- No SWMS in place for powered mobile plant operation on demolition site = non-compliance
 - Crane lifting loads without load capacity calculations documented = non-compliance
 - Plant operating on uneven or uncompacted ground without assessment = flag
 
 ---
 
-CHUNK 19: Removal of Debris — Requirements and Controls
+CHUNK 12: Removal of Debris — Drop Zones, Chutes and Floor Openings
 Section: CoP s4.7
-Topic: Management of debris including removal timing, drop zones, chutes, floor openings and overhead demolition
+Topic: Management of debris including chutes and floor openings (KEY MEASUREMENTS)
 
 GENERAL REQUIREMENTS:
-- PCBU must manage risks to health and safety arising from storage, movement and disposal of construction materials and waste
-- Debris must be PROGRESSIVELY REMOVED to prevent build-up that could:
-  (a) Affect integrity of a suspended floor
-  (b) Affect workplace entry and exit
-  (c) Become a fire hazard
-  (d) Cause a health and safety hazard
+- Debris must be PROGRESSIVELY REMOVED to prevent build-up that could affect integrity of a suspended floor, affect workplace entry and exit, become a fire hazard, or cause a health and safety hazard
 
 FALLING DEBRIS CONTROL:
 - Demolished materials MUST NOT be allowed to fall freely UNLESS confined within a chute or similar enclosure, shaft and/or exclusion zone
-
-DEBRIS DROP ZONES:
-- Must be ENCLOSED and the risk of striking workers or public must be ELIMINATED
-- Must be CLEARLY IDENTIFIED
-- Areas where a worker or other person might be injured by falling or rebounding debris must be FENCED or BARRICADED to prevent access
 
 MULTI-STOREY INTERNAL FLOOR OPENINGS (e.g. lift shafts, debris drop zones):
 AT THE WORKING LEVEL:
@@ -763,10 +330,7 @@ AT ALL LEVELS BELOW THE WORKING LEVEL:
   (b) Erecting signs and barricades to prevent persons coming near the openings
 
 DEBRIS CHUTES:
-- Must be designed and constructed to prevent SPILLAGE of material and dust and to MINIMISE NOISE while debris passes through
 - Vertical chutes must be FULLY ENCLOSED with a cover or barrier at the top to PREVENT A PERSON FALLING INTO THE CHUTE
-- Must be ADEQUATELY SECURED to the building or structure
-- Securing must account for the WEIGHT OF THE CHUTE PLUS ACCUMULATED LOAD
 - Overhead demolition must CEASE during removal of debris bins
 - Signs warning of risk from falling or ejected material must be placed at the DISCHARGE END of every chute
 
@@ -780,18 +344,15 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 20: Falls — Managing Risk of Falls During Demolition
+CHUNK 13: Falls — Hierarchy of Fall Controls
 Section: CoP s4.8; WHS Regulation s78
-Topic: Hierarchy of fall controls for demolition work, fall prevention devices and high risk construction work thresholds
-
-MANDATORY REQUIREMENT:
-A PCBU must manage risks associated with a fall from one level to another that is REASONABLY LIKELY TO CAUSE INJURY.
+Topic: Hierarchy of fall controls for demolition work (KEY MEASUREMENTS)
 
 HIGH RISK CONSTRUCTION WORK threshold: work involving risk of a person falling MORE THAN 2 METRES = high risk construction work; SWMS must be prepared before commencing.
 
 HIERARCHY OF FALL CONTROLS — in order (next control can only be used if previous is not reasonably practicable):
 
-1. CARRY OUT WORK ON THE GROUND or solid construction (so far as reasonably practicable)
+1. CARRY OUT WORK ON THE GROUND or solid construction
 2. FALL PREVENTION DEVICE — e.g. temporary work platforms, guard rails, secure fencing, edge protection, covers
 3. WORK POSITIONING SYSTEM — e.g. industrial rope access systems
 4. FALL ARREST SYSTEM — e.g. catch platforms, industrial safety nets, safety harness system
@@ -802,11 +363,6 @@ SOLID CONSTRUCTION must have:
 - Even and readily negotiable surface and gradient
 - Safe means of entry and exit
 
-FALL PREVENTION DEVICE definition:
-Material or equipment designed to prevent a fall when carrying out temporary work at heights that, once in place after initial installation, DOES NOT REQUIRE ONGOING ADJUSTMENT, ALTERATION or OPERATION by any person to ensure its integrity.
-
-Includes: secure fencing, edge protection, working platforms, covers.
-
 VISUAL INDICATORS:
 - Workers at height above 2m without any fall prevention measures = serious non-compliance
 - Harness system used as primary fall control without establishing that fall prevention devices and work positioning systems were not reasonably practicable = flag
@@ -816,21 +372,13 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 21: Electricity — Managing Electrical Risks in Demolition
+CHUNK 14: Electricity — Disconnection and Isolation Requirements
 Section: CoP s4.9
-Topic: High risk construction work near energised services, disconnection requirements and control measures
+Topic: Electrical disconnection requirements before demolition
 
 HIGH RISK CONSTRUCTION WORK: Construction work carried out ON OR NEAR energised electrical installations or services — SWMS must be prepared before this work commences.
 
-ELECTRICAL HAZARDS from overhead and underground power sources include:
-- Direct electric shock and electrocution
-- Arcing
-- Explosion or fire causing burns
-- Unpredictable cable whiplash
-- Electrifying of other objects (signs, poles, trees, branches)
-
 MANDATORY CONTROLS:
-- Consult local electricity supply authority before work near powerlines
 - Before demolition commences: ALL LIVE ELECTRICAL WIRING AND COMPONENTS (apart from temporary electrical installations provided for the work) must be DISCONNECTED, ISOLATED or clearly marked and rendered safe by a COMPETENT PERSON — e.g. licensed electrical worker or, where necessary, the local electrical supply authority
 
 VISUAL INDICATORS:
@@ -841,24 +389,19 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 22: Fire Prevention During Demolition
+CHUNK 15: Fire Prevention — Equipment and Welding/Cutting Controls
 Section: CoP s4.10
-Topic: Fire prevention equipment requirements, sprinkler systems, welding and cutting fire hazards
+Topic: Fire prevention equipment requirements and hot work controls
 
 GENERAL FIRE PREVENTION:
 - Adequate fire prevention equipment must be provided and maintained AT ALL TIMES during demolition
-- Access to the fire protection service, including BOOSTER FITTING, must be maintained
 - If a SPRINKLER SYSTEM is installed: must be maintained in operable condition at each storey, so far as reasonably practicable
 - Portable fire extinguishers must be kept in working areas AT ALL TIMES and maintained in operable condition
 
 WELDING AND CUTTING — FIRE HAZARDS:
-- Welding and cutting operations present a severe fire hazard unless precautions are taken
 - Where floor, walls or ground cover are combustible: protect by SPRAYING WITH WATER, SPREADING DAMP SAND, laying fireproof blankets or other suitable means
 - Where serious fire might quickly develop: a FIRE SPOTTER should be assigned to the area
 - Fire extinguishing equipment must be readily available and ALL WORKERS trained in its use
-- Flammable and combustible material must be removed from the work area and must not accumulate to the extent it can become a fire hazard
-
-REFERENCE: Welding processes Code of Practice; AS 1674.1 Safety in welding and allied processes – Fire precautions.
 
 VISUAL INDICATORS:
 - No portable fire extinguisher in working areas = non-compliance
@@ -869,176 +412,69 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 23: Demolition Sequence — General Principles and Methods
-Section: CoP s4.10 (controlling risks of different demolition methods)
-Topic: Principles of demolition sequencing applicable to all demolition methods
-
-GENERAL PRINCIPLE — SEQUENTIAL DEMOLITION:
-Buildings and structures should generally be demolished in the REVERSE ORDER to their construction — "sequential demolition."
-
-SEQUENTIAL DEMOLITION RULES:
-- Must be carried out in REASONABLY EVEN STAGES, commencing from the ROOF or TOP of the building or structure
-- Multi-storey buildings: demolish STOREY BY STOREY
-- Masonry and brickwork: taken down in REASONABLY EVEN COURSES
-
-STABILITY RULE (applicable to ALL demolition methods):
-The building or structure and ALL its components must be maintained in a SAFE AND STABLE CONDITION at all times to prevent unexpected collapse. Temporary braces, propping, shoring or guys must be added where necessary.
-
-VISUAL INDICATORS:
-- Demolition proceeding from bottom up without engineering justification = flag for non-sequential demolition
-- Structure partially demolished with no temporary bracing or propping where needed = non-compliance
-- Masonry being taken down unevenly or in large sections without assessment = flag
-
----
-
-CHUNK 24: Manual Demolition — Hazards and Controls
+CHUNK 16: Manual Demolition — Roofs, Walls and Floors
 Section: CoP s4.11
-Topic: Controls specific to manual demolition including roofs, walls, floors and frameworks
+Topic: Controls specific to manual demolition including fragile roofs (KEY MEASUREMENTS)
 
 GENERAL:
 - Manual demolition should only be considered if it is NOT REASONABLY PRACTICABLE to use mechanical demolition
-- Manual demolition = use of hand tools (jack hammers, sledgehammers, picks)
-
-HAZARDS from manual demolition include: unexpected collapse, falls, falling objects, manual handling, exposure to noise, dust and hazardous chemicals.
-
-UNPLANNED COLLAPSE PREVENTION:
-- Condition of roofs, walls and floors must be ASSESSED BY A COMPETENT PERSON before commencing
-- Areas where debris will fall must be BARRICADED OFF and SIGNS erected before demolition starts
-- Reinforcement must NOT be cut while breaking of concrete is in progress
-- A competent person must advise on demolition sequence for pre and post-tensioned work
-
-MANUAL DEMOLITION OF ROOFS:
-BEFORE COMMENCING, consider:
-- Fall hazards
-- Structural stability
-- Condition and strength of roofing material, identification of fragile roofing
-- Identification of fragile panels or skylights in solid roofs
-- Crane access
-- Safe worker entry and exit
-- Fall protection: perimeter protection, anchor points for static lines, inertia reels and lanyards, safety net suitability
-- Means of rescuing persons from safety nets or safety harnesses
-- Condition of roof mesh or safety mesh
-- Methods of raising and lowering equipment and materials
-- Assessment of manual handling problems
-- Electrical safety including location of nearby power lines
-- Worker competency and training needs
-
-ROOF TRUSSES: must be removed using safe temporary work platforms. Removal must not cause WALL INSTABILITY.
 
 FRAGILE ROOFS:
 Brittle or fragile roofing materials include: asbestos cement, cellulose cement, glass panels, fibreglass, acrylic, or other similar synthetic moulded/fabricated material.
 
 When working on or adjacent to fragile roofs:
-- Consider whether need to work on roof could be ELIMINATED (e.g. use EWP or scaffold from within building)
-- Inspect underside to determine extent of fragile material, safety mesh existence and fixings, structural soundness
 - Complete work from a TEMPORARY WORK PLATFORM
 - Provide temporary WALKWAYS for entry and exit
 - On HIGH PITCH ROOFS (slope exceeding 1:6): secure and fix CLEATS to walkways
 - On STEEP ROOFS (exceeding 35 degrees): provide temporary ROOF LADDERS
-- Provide other fall protection as necessary (work positioning or fall arrest system)
 
 PURLIN TROLLEYS:
 - Must have a HOLDING BRAKE
 - Must have a device to prevent ACCIDENTAL DISLODGMENT from purlins
 - If workers are supported by trolley: must have SUITABLE SAFETY HARNESS ANCHORAGE POINTS
-- BEFORE placement: competent person (e.g. structural engineer) must confirm roof structure is suitable for the trolley and its operational loads
 
 MANUAL DEMOLITION OF WALLS:
 - Glass must be removed from windows, doors and openings BEFORE demolition commences
 - Walls and gables must be demolished COURSE BY COURSE
 - Work must be performed from SAFE WORKING PLATFORMS
 - Workers must NOT work from the TOP OF A WALL being demolished
-- Wall or partition must not stand unless EFFECTIVELY SUPPORTED against collapse including against lateral loads from wind and other forces
 
-MANUAL DEMOLITION OF FLOORS AND MEMBERS:
-- All floors and surfaces must be ASSESSED as capable of supporting the load (workers, plant, equipment, materials)
-- Suspended floors: must not be loaded to the extent there is excessive deflection, permanent deformation or danger of collapse
-- Increased weight of WATERED DEBRIS must be taken into account
+MANUAL DEMOLITION OF FLOORS:
 - Floor openings must be PROPERLY GUARDED or BOARDED OVER and boarding SECURED against accidental removal
 - Covers/boarding must be of SUFFICIENT STRENGTH to withstand expected loads
-- Drop zones must be isolated and/or guarded
-- When jack hammering concrete floors: SUFFICIENT REINFORCING STEEL must be left in position as protection against collapse or persons falling through
-
-MANUAL DEMOLITION OF FRAMEWORKS:
-- Before framework is demolished: take all reasonably practicable precautions to prevent the rest of the building collapsing
-- COMPETENT PERSON (e.g. structural engineer) must determine necessary supports required when cutting members
-- Members must NOT be cut unless SUPPORTED SAFELY AND EFFECTIVELY
-- Measures must prevent sudden spring, twist, collapse or other movement when cut, released or removed
-- Framework not demolished must be GUYED or SUPPORTED to ensure stability in adverse weather conditions
-- Members must be LOWERED IN A CONTROLLED MANNER
-- TAG LINES must be used on loads where necessary to control the load
 
 VISUAL INDICATORS:
 - Workers demolishing walls by standing on top of the wall = non-compliance
 - Floor openings not boarded over or guarded = non-compliance
-- Framework members being cut without support assessment = non-compliance
 - Workers on fragile roofs without fall protection or temporary walkways = non-compliance
 - Purlin trolleys in use without holding brake or dislodgement prevention = non-compliance
 - Glass not removed from windows before wall demolition commences = non-compliance
 
 ---
 
-CHUNK 25: Mechanical Demolition — Plant, Operator Protective Structures and Suspended Floors
+CHUNK 17: Mechanical Demolition — Operator Protective Structures and Suspended Floors
 Section: CoP s4.12
-Topic: Requirements for mechanical demolition including operator protective structures, suspended floor operations and demolition of walls
-
-MECHANICAL DEMOLITION involves: excavators, cranes, loaders and bulldozers (powered mobile plant). Mix of hand and mechanical methods may be applied.
+Topic: Requirements for mechanical demolition including FOPS and suspended floor operations (KEY MEASUREMENTS)
 
 OPERATOR PROTECTIVE STRUCTURES — MANDATORY:
 Powered mobile plant used for demolition work must be fitted with a SUITABLE COMBINATION of operator protective devices, typically:
 - FALLING OBJECT PROTECTIVE STRUCTURE (FOPS)
 - OPERATOR RESTRAINTS (e.g. seat belts)
-- ROLL-OVER PROTECTIVE STRUCTURE (ROPS) — may be appropriate for some crane types
-
-OPERATOR PROTECTIVE STRUCTURES must:
-- Be designed to eliminate or minimise, so far as reasonably practicable, risk of operator injury due to:
-  (a) Roll over and consequent cabin impact damage
-  (b) Objects falling on or over the cabin
-  (c) Objects penetrating the cabin
-  (d) Hazardous noise
-- Allow operator to EXIT FROM THE CABIN DURING AN EMERGENCY — exits must be maintained and cleaned regularly
-- Windows and openings: protected against penetrating objects by wire mesh, steel bars or suitable polycarbonate material
-- Follow recommendations in AS 2294.1 (Earthmoving machinery – Protective structures) and ISO 10262
+- ROLL-OVER PROTECTIVE STRUCTURE (ROPS)
 
 IF A DOOR IS FITTED: door must be CLOSED while machine is operating.
 
-DEMOLITION SEQUENCE: must be systematic and sequential — in REVERSE ORDER to construction.
-
 WORKING ON SUSPENDED FLOORS:
-- Suspended floors must NOT be loaded to extent of excessive deflection, permanent deformation or danger of collapse
-- Increased weight of WATERED DEBRIS must be taken into account
 - If powered mobile plant will operate on a suspended floor: a COMPETENT PERSON (e.g. structural engineer) must VERIFY AND DOCUMENT:
   (a) Type, size, weight and usage of specified plant
-  (b) Floor is capable of sustaining static and live loads of plant (including attachments and demolished materials) without excessive deformation or collapse — either without additional support, or with specified propping from below
+  (b) Floor is capable of sustaining static and live loads of plant (including attachments and demolished materials) without excessive deformation or collapse
 - Plant must be moved between suspended floor slabs by HOIST EQUIPMENT or APPROPRIATELY FABRICATED RAMP
-- If load-shifting equipment is to be used on suspended floors: NOTIFICATION TO REGULATOR is required (see Chunk 6)
-
-SWMS REVIEW FOR SUSPENDED FLOOR OPERATIONS — must confirm:
-- Where plant is specified in SWMS: substituted plant must be no larger or heavier than specified
-- Effective communication between equipment operator and demolition supervisor while equipment is operating
-- Debris is progressively removed from each floor
-- BUFFERS used to prevent plant falling over edge where plant is used to push/tip materials
-- Guarding, hoarding and/or exclusion zones to protect persons against falling debris
+- If load-shifting equipment is to be used on suspended floors: NOTIFICATION TO REGULATOR is required (at least 5 days before)
 
 LOAD SHIFTING EQUIPMENT must, so far as reasonably practicable, be LOCATED ON A BEAM.
 
-Note: skid steer loaders with breaker may not be appropriate on suspended floors due to limited reach.
-
 DEMOLITION OF WALLS (mechanical):
 - At least 900 MM OF WALL must be LEFT INTACT above floor level to provide a PROTECTIVE BARRIER at the perimeter of the building and around lift wells, stairwells, light wells and other places where persons or objects could fall
-- Remaining wall can later be safely demolished from the floor below
-- Remaining sections of walls should be identified and highlighted as buffers for edge protection
-- Guarding, hoarding and/or exclusion zones to protect workers and public from falling debris and materials
-- Walls must NOT be laterally loaded by accumulated rubble or debris to the extent they are in danger of collapse
-
-USING PLANT AND ATTACHMENTS:
-- Plant attachments must be PINNED AND SECURED as per manufacturer's requirements
-- Equipment must NOT be overloaded (risk of plant overturning)
-- When demolishing vertical features: columns or walls must not be so HIGH as to create risk of debris falling onto plant or operator
-- Members to be severed must either be EFFECTIVELY SUPPORTED or, if allowed to fall, will not endanger persons or plant or damage remaining structure
-- EXCLUSION ZONES must be established where necessary
-- No person should be in an area near mechanical demolition where there is possibility of being struck by flying debris
-- Areas where shears are operating: must be KEPT CLEAR of workers (risk of smaller pieces, e.g. bolts, flying off when sheared)
 
 VISUAL INDICATORS:
 - Excavator or mobile plant without FOPS operating in demolition environment = serious non-compliance
@@ -1050,38 +486,21 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 26: Induced Collapse — Requirements and Controls
+CHUNK 18: Induced Collapse — Wire Rope Pulling and Pre-Weakening
 Section: CoP s4.13
-Topic: Requirements for induced collapse including pre-weakening, wire rope/chain pulling and explosives
-
-INDUCED COLLAPSE involves: systematic/sequential removal of key structural members and application of force resulting in controlled collapse of all or part of a building.
+Topic: Requirements for induced collapse including wire rope pulling (KEY MEASUREMENTS)
 
 MANDATORY REQUIREMENTS:
 - Expert advice must be sought from a COMPETENT PERSON (e.g. structural engineer) BEFORE this method is used
 - Induced collapse must ONLY be used on DETACHED, ISOLATED STRUCTURES on REASONABLY LEVEL SITES
-- SUFFICIENT CLEAR SPACE must be available into which collapsing material will fall — large enough to contain collapsed material AND enable equipment and personnel to be removed to a SAFE DISTANCE before the collapse
+- SUFFICIENT CLEAR SPACE must be available into which collapsing material will fall
 - Explosives MUST NOT be used to induce collapse UNLESS APPROVED BY THE REGULATORY AUTHORITY
 
-PRE-WEAKENING:
-Structures not carrying design loads may be pre-weakened prior to deliberate collapse.
-RULES:
-- Despite pre-weakening, the remaining structure must have SUFFICIENT STRENGTH TO WITHSTAND WIND OR IMPACT LOADS until the actual collapse is initiated
-- Dead load can be reduced by systematically removing: surplus material, machinery, roofs, cladding, walls, parts of floors before demolishing the structural frame
-- If heavy loads are left at height to induce collapse: must be CAREFULLY ANALYSED AND DOCUMENTED by a competent person (e.g. structural engineer) to avoid premature collapse
-
 WIRE ROPE, SLINGS AND CHAIN PULLING:
-- PULLING MEDIUM must be: a securely anchored winch or plant designed for towing, heavy enough to apply required tension without sliding or lifting from surface
 - ROPE/CHAIN LENGTH: must be long enough to ensure HORIZONTAL DISTANCE from the demolition work to the pulling medium is AT LEAST TWICE THE HEIGHT OF THE HIGHEST PART TO BE PULLED
 - No person in a position where they could be struck by the wire rope, sling or chain in event of failure
 - Plant operator must be PROTECTED from rope breakage and flying debris
-- EXCLUSION ZONES must be established
-- Before pulling: wall must be cut into appropriate sections — chains or ropes must be attached to respective sections PRIOR to the first pull; free ends left at safe distance from structure
 - VERTICAL REINFORCING BARS must NOT be cut until after the wall has been pulled over
-- All wire rope, slings and chains must comply with relevant standards:
-  - AS 1353: Flat synthetic-webbing slings
-  - AS 3775: Chain slings for lifting purposes
-  - AS 1666.1: Wire-rope slings — Product specification
-  - AS 3569: Steel wire ropes
 
 VISUAL INDICATORS:
 - Induced collapse method used without structural engineer involvement = serious non-compliance
@@ -1093,24 +512,16 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 27: Explosives in Demolition — Licensing, Notification and Controls
+CHUNK 19: Explosives in Demolition — Licensing and Notification
 Section: CoP s4.14
-Topic: Requirements for use of explosives in demolition including licensing, SWMS, approval and notification
+Topic: Requirements for use of explosives in demolition
 
 MANDATORY REQUIREMENTS:
 - Construction work involving use of explosives = HIGH RISK CONSTRUCTION WORK; SWMS must be prepared BEFORE work commences
-- A COMPETENT PERSON experienced in controlled application of explosives for demolition MUST be consulted BEFORE deciding whether explosives may be used
 - Explosives MUST NOT be used to induce collapse of a structure UNLESS APPROVED BY THE REGULATORY AUTHORITY
 - Explosives must ONLY be used by a COMPETENT PERSON who is LICENSED in the use of explosives AND has experience in the work
 - A licensed competent person must develop and have AUTHORISED a BLAST MANAGEMENT PLAN prior to blasting starting
 - A NOTIFICATION MUST BE MADE TO THE REGULATOR if explosives are planned (at least 5 days before commencement)
-
-REGULATORY COMPLIANCE:
-- All possession, storage, handling and use of explosives must comply with relevant Queensland dangerous substances/explosives legislation
-- Transport of explosives must be in accordance with the Australian Code for the Transport of Explosives by Road and Rail
-- Requirements for use and blasting notification vary by jurisdiction — contact WHSQ for specific requirements
-
-REFERENCE: AS 2601: The demolition of structures; AS 2187.2: Explosives — Storage and use — Use of Explosives.
 
 VISUAL INDICATORS:
 - Explosives on demolition site without evidence of regulatory approval and notification = serious non-compliance
@@ -1120,57 +531,37 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 28: Special Structures — Pre/Post-Tensioned Concrete
+CHUNK 20: Pre/Post-Tensioned Concrete — Tendon Management
 Section: CoP s5.1
-Topic: Requirements for demolishing pre-tensioned and post-tensioned concrete including tendon management and documentation review
-
-DEFINITIONS:
-- PRE-TENSIONED CONCRETE: contains tendons (wires, strands or bars) tensioned BEFORE concrete is placed
-- POST-TENSIONED CONCRETE: contains tendons tensioned AFTER concrete has hardened
+Topic: Requirements for demolishing pre-tensioned and post-tensioned concrete
 
 KEY RISK:
-- Tensioned tendons require CONTROLLED REMOVAL because the HIGH LEVEL OF POTENTIAL ENERGY stored in the tendons poses a risk to health and safety of workers and can cause property damage
-- Structural stability must be maintained during and after tendon removal
-- Tendons can be subject to CORROSION that weakens them — damage is NOT USUALLY EVIDENT EXTERNALLY, even if strand breakage is extensive; conditions can vary widely within an individual structure
-
-BEFORE DEMOLISHING — REVIEW ALL AVAILABLE DOCUMENTATION including:
-- Building plans, designs and specifications (type of tensioning, load carried, anchorage points, number of tendons)
-- Construction photographs (anchorage details, construction sequencing, measures affecting moisture access)
-
-CONDITION ASSESSMENT before and during demolition:
-- Visual inspection confirming loads, obvious deviations from original design, waterproofing details
-- Assess conditions throughout the building; use selective testing in representative areas to assess weakening or breakage
-- Measure humidity within tendon sheathing; analyse sheathing contaminants
-- Remove, inspect and test a small number of tendons to assess condition
-- Continue to monitor tendon tension
+- Tensioned tendons require CONTROLLED REMOVAL because the HIGH LEVEL OF POTENTIAL ENERGY stored in the tendons poses a risk to health and safety of workers
+- Tendons can be subject to CORROSION that weakens them — damage is NOT USUALLY EVIDENT EXTERNALLY
 
 CONTROL MEASURES:
 - Use STEEL PLATES or other restraint measures at locations adjacent to pedestrian areas or where concrete cover is reduced — to minimise risk of personal injury or property damage from unexpected release of stored energy
 
 A COMPETENT PERSON must advise on the demolition sequence.
 
-SWMS required for demolition of structural elements.
-
 VISUAL INDICATORS:
 - Demolition of post-tensioned or pre-tensioned concrete without structural engineer involvement = serious non-compliance
-- No documentation review (building plans, specifications) before demolishing tensioned elements = non-compliance
 - No restraint measures in place adjacent to pedestrian areas during tensioned element demolition = non-compliance
 - Tendons being cut without controlled release procedure in place = serious non-compliance
 
 ---
 
-CHUNK 29: Special Structures — Fire-Damaged, Ruinous and Structurally Unsound Buildings
+CHUNK 21: Fire-Damaged and Structurally Unsound Buildings
 Section: CoP s5.2
-Topic: Assessment and demolition requirements for fire-damaged, ruinous or structurally unsound structures
+Topic: Assessment requirements for fire-damaged or structurally unsound structures
 
 ASSESSMENT REQUIREMENT:
-- Before demolition: assessment must be undertaken to identify ASBESTOS, HAZARDOUS MATERIALS and STRUCTURAL INTEGRITY ISSUES relating to fire-damaged, ruinous or structurally unsound buildings or structures
+- Before demolition: assessment must be undertaken to identify ASBESTOS, HAZARDOUS MATERIALS and STRUCTURAL INTEGRITY ISSUES
 - PCBU must request a WRITTEN REPORT by a COMPETENT PERSON specifying:
   (a) Hazards associated with the design and current state of the structure
   (b) Control measures to be applied to the demolition
 
 CONTROL MEASURES:
-- Must be taken, as far as reasonably practicable, during BOTH assessment and demolition stages
 - Where possible: fire-damaged, ruinous or structurally unsound structures should be demolished by MECHANICAL MEANS
 
 VISUAL INDICATORS:
@@ -1180,60 +571,24 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 30: Special Structures — Lift Shafts, Basements, Chimneys, Pylons, Precast Panels and Facade Retention
-Section: CoP s5.3–s5.9
-Topic: Requirements for demolishing lift shafts, basements, cellars, chimneys, spires, pylons, masts, precast panels and retained facades
+CHUNK 22: Chimneys, Precast Panels and Facade Retention
+Section: CoP s5.6, s5.8, s5.9
+Topic: Requirements for demolishing chimneys, precast panels and retained facades (KEY MEASUREMENTS)
 
-LIFT SHAFTS (s5.3):
-Demolition procedures must include:
-- Temporary support of lift cage; disconnection of electric power to all lift machinery areas
-- Lowering of counterweights to appropriate level for disconnection; controlled unwinding of cables before removal of drums
-- Provision of TEMPORARY DECKING in the lift shaft
-- Progressive demolition of lift shaft walls onto existing floors
-- Removal of debris
-
-BASEMENTS, CELLARS, VAULTS, DOMES AND ARCHED ROOFS (s5.4):
-- FREQUENT INSPECTIONS must be made during demolition to identify unplanned movement — if detected, appropriate action must be taken to avoid uncontrolled collapse
-- If adjoining another property: adjoining walls must be inspected by a COMPETENT PERSON to determine whether strong enough to withstand ground pressure — if not, strengthening methods must be assessed by a competent person (e.g. structural engineer)
-- If built in ground with HIGH WATER TABLE: measures must be taken, as far as reasonably practicable, to prevent collapse from hydraulic pressure, uncontrolled water inrush or flotation
-- If work is undertaken in a basement: determine if it is a CONFINED SPACE — specific WHS Regulation requirements apply; refer to Confined Spaces Code of Practice
-
-MASONRY AND BRICK ARCHES (s5.5):
-- Demolish in sequence allowing removal of as much dead load material as possible without interfering with stability of main arch rings
-- Spandrel infilling should only be removed DOWN TO THE SPRINGING LINE (load-carrying capacity of many old arches relies on filling between spandrels)
-- In MULTI-SPAN ARCHES: provide LATERAL RESTRAINTS at springing level before individual spans are removed
-
-INDEPENDENT CHIMNEYS AND SPIRES (s5.6):
-- DETAILED INSPECTION AND SURVEY before demolition — assess condition of structural material, faults (fractured stone, rotten timbers), deviation from perpendicular
-- Consider chimney instability from inclement weather during all demolition stages
+INDEPENDENT CHIMNEYS AND SPIRES:
 - Hand demolition: must be carried out PROGRESSIVELY FROM THE TOP and from SAFE WORKING PLATFORMS
-- Temporary supports may be required to prevent premature collapse
-- Control measures must include: temporary work platforms, falling object protection, exclusion zones, dust control
 - INDUCED COLLAPSE requires clear space of approximately 1.5 TIMES THE TOTAL HEIGHT OF THE CHIMNEY (of sufficient width)
 
-PYLONS AND MASTS (s5.7):
-- Hand demolition: DISMANTLE IN REVERSE ORDER to erection
-- Wire rope pulling: requires planning including adequate clear space
-
-PRECAST CONCRETE PANELS (s5.8):
-- Inspection of fixings, jointing between elements, and lifting points/fittings to establish nature and condition BEFORE demolition begins
-- Where possible: panels removed by CRANE IN THE REVERSE SEQUENCE to erection
-- Where panels act as bracing: SUFFICIENT TEMPORARY BRACING must be provided to maintain structure stability during and after panel removal
+PRECAST CONCRETE PANELS:
 - ORIGINAL LIFTING POINTS must NOT be reused if they have DETERIORATED OR CORRODED
 - Before removing an individual panel: must be FULLY SUPPORTED, both vertically and horizontally, ABOVE ITS CENTRE OF MASS, to prevent sudden rotational movement during detachment
 
-FACADE RETENTION (s5.9):
+FACADE RETENTION:
 - Retention must be PLANNED AND DOCUMENTED before demolition commences
-- Demolition method must take into account limits imposed by planned facade retention
-- Use guarding, hoarding and/or exclusion zones to protect persons from falling debris
-- Facade or footings may need REPAIR; temporary support may need to be installed BEFORE demolition starts and in STAGES during demolition
 - A COMPETENT PERSON (e.g. structural engineer) may need to supervise during various stages to monitor facade movement or cracking
 - Structure must be inspected after: HEAVY RAIN OR WIND, EARTH TREMOR, or ACCIDENTAL IMPACT on facade or supports
 
 VISUAL INDICATORS:
-- Lift shaft demolition without electric power disconnected = serious non-compliance
-- No frequent inspections of basement or vault demolition documented = non-compliance
-- Basement below existing occupied property with no adjoining wall structural assessment = non-compliance
 - Chimney hand demolition not proceeding top-down = non-compliance
 - Precast panel removed using deteriorated/corroded original lifting points = serious non-compliance
 - Precast panel removed without full vertical and horizontal support = serious non-compliance
@@ -1242,20 +597,15 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 31: Storage Tanks and Pipelines — Demolition Controls
+CHUNK 23: Storage Tanks and Pipelines — Demolition Controls
 Section: CoP s5.10
-Topic: Requirements for demolishing above-ground and underground storage tanks and associated pipelines
+Topic: Requirements for demolishing storage tanks and pipelines
 
 PRE-DEMOLITION:
-- Determine PREVIOUS USE of tank/pipeline and take appropriate action to identify and remove hazardous chemicals
 - Delivery lines and vent pipes must be PURGED
 - Tank must be EMPTIED and CERTIFIED BY A COMPETENT PERSON as being free of gas, flammable vapours or other hazardous chemicals
 
-CONFINED SPACE: If work is undertaken ON storage tanks — determine whether they are a CONFINED SPACE; specific WHS Regulation requirements apply; refer to Confined Spaces Code of Practice.
-
-GENERAL PRECAUTIONS during demolition of tanks and pipelines:
-- No flammable or toxic substance or combustible liquid to enter a DRAINAGE SYSTEM or WATERCOURSE
-- If excavating underground tanks/pipelines: check surrounding soil is NOT CONTAMINATED by leakage or spillage
+GENERAL PRECAUTIONS:
 - HOT WORK (welding, oxyacetylene cutting) MUST NOT be carried out where there is a chance flammable material may be present as a result of leakage/spillage OR after cleaning out the tank/pipe
 
 CONTAINERS THAT HAVE HELD FLAMMABLE OR COMBUSTIBLE MATERIAL:
@@ -1265,102 +615,17 @@ A container is considered UNSAFE until confirmed otherwise by a COMPETENT PERSON
 - Heavy oils, tars or solids (can release combustible gases when exposed to heat)
 - Flammable solids (finely divided particles may form explosive dust cloud)
 
-MANDATORY: Rigorous cleaning process must be followed before any hot work on containers.
-
-HAZARDOUS FACILITIES (chemical works, gas works, major hazard facilities):
-- Must be examined in conjunction with a COMPETENT PERSON (e.g. chemical engineer) to determine nature of plant, chemical deposits and their influence on demolition method
-- Location of flammable materials and their new locations must be determined BEFORE demolition starts
-
 VISUAL INDICATORS:
 - Hot work (welding, cutting) on storage tank or pipeline without competent person certification of gas-free status = serious non-compliance
 - Underground tank excavation without soil contamination check = non-compliance
 - Workers entering storage tank for demolition work without confined space assessment = serious non-compliance
 - Flammable waste from tanks entering stormwater drainage = serious non-compliance
-- Flammable material removal locations not determined before demolition = non-compliance
 
 ---
 
-CHUNK 32: Information, Training, Instruction and Supervision
-Section: CoP s1.4; WHS Act s19; WHS Regulation s39, s317
-Topic: Training, instruction, supervision and competency requirements for demolition workers
-
-MANDATORY REQUIREMENTS:
-- PCBU must ensure, so far as reasonably practicable, provision of any INFORMATION, TRAINING, INSTRUCTION OR SUPERVISION necessary to protect all persons from risks
-- Information, training or instruction must be SUITABLE AND ADEQUATE having regard to:
-  (a) Nature of the work
-  (b) Nature of the risks at the time
-  (c) Control measures implemented
-- Must be provided in a way READILY UNDERSTANDABLE to the recipient
-- Workers must be TRAINED and have APPROPRIATE SKILLS to carry out each task safely
-- Training must be provided by a COMPETENT PERSON
-
-TRAINING FOR DEMOLITION WORKERS must include:
-- Proper use, wearing, storage and maintenance of PPE
-
-SUPERVISION — additional specific duties apply where workers:
-- Use, generate or handle hazardous chemicals
-- Operate, test, maintain, repair or decommission a storage or handling system for a hazardous chemical
-- Are likely to be exposed to a hazardous chemical
-
-SITE-SPECIFIC TRAINING: Training specific to the demolition work AND to the site must be provided to workers by a competent person.
-
-PLANT OPERATORS: Workers operating certain types of plant must possess a VALID LICENCE to operate that plant.
-
-SUPERVISORY ROLES (leading hand, foreman): Must be EXPERIENCED AND TRAINED in the type of demolition being done to ensure work is carried out in accordance with the SWMS.
-
-GENERAL CONSTRUCTION INDUCTION: All workers carrying out construction work must hold a valid White Card (general construction induction training).
-
-VISUAL INDICATORS:
-- Workers unable to produce White Card for construction induction = non-compliance
-- Plant operators unable to produce required high risk work licence = non-compliance
-- Site supervisor with no evident training or experience in type of demolition being performed = flag
-- Workers handling hazardous chemicals without adequate supervision = non-compliance
-- No site-specific induction records maintained = flag
-
----
-
-CHUNK 33: Demolition Plan — Contents and Structure
-Section: CoP s3.0, Appendix B
-Topic: What should be included in a demolition plan for works involving multiple PCBUs
-
-WHEN REQUIRED:
-A demolition plan SHOULD be prepared for all demolitions where there is MORE THAN ONE PCBU (e.g. subcontractors). If the demolition contractor is also the principal contractor, the demolition plan should be incorporated into the WHS Management Plan.
-
-A demolition plan should NOT duplicate the WHS Management Plan or SWMS but may reference them.
-
-DEMOLITION PLAN CONTENTS (Appendix B) — may include:
-- Location of the site
-- Overall height of structure above ground level and least distance from structure to each site boundary
-- Type of building (occupancy class), structural support system and principal materials of construction
-- Proposed methods of demolition including number and types of major items of plant
-- Proposed methods for handling and disposing of demolished materials — especially hazardous materials
-- Proposed methods of controlling and maintaining entry and exit to workplace
-- Proposed sequence and estimate of time (in days) to complete each stage
-- Proposed hoardings, scaffolding, fencing and overhead sidewalk protection
-- Traffic management arrangements including managing vehicles and mobile plant hazards and interaction with the public
-- Location and condition of underground essential services (electricity, drainage and sewerage, gas, water, communications cables, hydraulic pressure mains, liquid fuel lines, lubrication systems, process lines)
-- Location and condition of above-ground essential services
-- Location and condition of hazardous materials including asbestos
-- Underground structures (basements, cellars, storage tanks)
-- Confined spaces where work will be undertaken
-- General condition of structures on adjoining properties (especially if close to or on boundaries)
-- Effect demolition may have on people in adjoining properties or seeking entry/exit to those properties
-- Emergency arrangements including equipment for rescue of injured persons
-
-VISUAL INDICATORS:
-- Multiple PCBUs on demolition site without a demolition plan prepared = flag
-- Demolition plan missing key elements such as hazardous materials location, essential services, or emergency arrangements = flag
-- No traffic management section in demolition plan for site adjacent to roads or public areas = flag
-
----
-
-CHUNK 34: PPE — Personal Protective Equipment in Demolition
+CHUNK 24: PPE — Personal Protective Equipment in Demolition
 Section: CoP s1.2, s4.2, s4.11, s4.12, s4.13; WHS Act s28; WHS Regulation s46
 Topic: PPE requirements applicable to demolition workers
-
-PPE IS THE LEAST EFFECTIVE CONTROL MEASURE — must be used in combination with higher-order controls, not as a substitute.
-
-Workers must use or wear PPE provided by the PCBU, as far as they are reasonably able, in accordance with information, instruction and training provided.
 
 TYPICAL PPE FOR DEMOLITION:
 - HARD HAT (safety helmet) — mandatory for all demolition work
@@ -1372,8 +637,6 @@ TYPICAL PPE FOR DEMOLITION:
 - GLOVES — for manual demolition, hazardous chemical handling, PCB-resistant gloves (polyethylene, nitrile rubber or neoprene) for PCB exposure
 - FALL PROTECTION EQUIPMENT (harness, lanyard, inertia reel) — when working at heights where fall arrest is required
 
-FOR ASBESTOS WORK: PPE must meet requirements set out in the asbestos removal regulations and relevant codes of practice.
-
 VISUAL INDICATORS:
 - Workers on demolition site without hard hat = serious non-compliance
 - Workers near mobile plant without high visibility vest = non-compliance
@@ -1381,81 +644,5 @@ VISUAL INDICATORS:
 - Workers in dusty demolition environment without respiratory protection = flag
 - Asbestos removal workers without appropriate respiratory protection = serious non-compliance
 - Workers handling PCBs without PCB-resistant gloves = non-compliance
-
----
-
-CHUNK 35: WHS Management Plan and SWMS — Summary Reference for Demolition
-Section: CoP s3.2, s3.4; WHS Regulation s309–s312, s299–s300
-Topic: Summary of WHS Management Plan and SWMS obligations as they apply across demolition projects
-
-WHS MANAGEMENT PLAN — required for construction projects costing $250,000 OR MORE:
-Must include:
-- Arrangements for consultation, cooperation and coordination between PCBUs at the site
-- Arrangements to manage the work environment: falls, facilities, first aid, emergency plan, traffic management
-- Must be reviewed and revised as necessary throughout the project
-
-SWMS — required for HIGH RISK CONSTRUCTION WORK in demolition, including:
-- Demolition of load-bearing or structural integrity elements
-- Work at height with fall risk >2m
-- Work involving asbestos disturbance
-- Work near energised electrical installations
-- Work involving explosives
-- Work involving load shifting machinery on suspended floors
-- Work near pressurised gas, chemical, fuel or refrigerant lines
-- Work near a trench >1.5m deep
-- Work where mobile powered plant may collide with pedestrians or other plant
-
-SWMS REVIEW: Must be reviewed when:
-- Work is not being carried out in accordance with the SWMS
-- A new hazard is identified
-- After an incident or near miss
-- Before resuming work stopped due to non-compliance
-
-BOTH DOCUMENTS must be readily available at the workplace.
-
-VISUAL INDICATORS:
-- Project cost $250,000+ but no WHS Management Plan on site = non-compliance
-- High risk demolition activity underway with no SWMS = serious non-compliance
-- SWMS not reviewed after deviation or incident = non-compliance
-- WHS Management Plan not updated after significant change to work scope or personnel = non-compliance
-
----
-
-CHUNK 36: Key Standards and References for Demolition Work
-Section: CoP Appendix D
-Topic: Technical standards referenced in the Demolition Work CoP
-
-KEY AUSTRALIAN STANDARDS referenced in this Code:
-- AS 2601: The demolition of structures (primary demolition standard — referenced throughout)
-- AS 2187.2: Explosives – Storage and use – Use of Explosives
-- AS 5488: Classification of Subsurface Utility Information (SUI)
-- AS 4361.1: Guide to hazardous paint management, Part 1: Lead and other hazardous metallic pigments in industrial applications
-- AS 2294.1: Earthmoving machinery – Protective structures – General
-- AS 1353 (set): Flat synthetic-webbing slings
-- AS 3775 (set): Chain slings for lifting purposes — Grade T(80) and V(100)
-- AS 3569: Steel wire ropes – Product specification
-- AS 1666.1: Wire-rope slings – Product specification
-- AS 2550.1: Cranes, hoists and winches – Safe use – General requirements
-- AS 1674.1: Safety in welding and allied processes – Fire precautions
-- ISO 10262: Earth-moving machinery – Hydraulic excavators – Laboratory tests and performance requirements for operator protective guards
-- AS/NZS 1170.2: Structural Design Actions: Wind Actions (referenced for satellite boom design)
-
-OTHER CODES OF PRACTICE referenced:
-- How to manage work health and safety risks CoP
-- Excavation work CoP
-- Work health and safety consultation, cooperation and co-ordination CoP
-- Managing risks of hazardous chemicals in the workplace CoP
-- Managing the work environment and facilities CoP
-- How to safely remove asbestos CoP
-- How to manage and control asbestos in the workplace CoP
-- Managing risks of plant in the workplace CoP
-- Managing electrical risks at the workplace CoP
-- Managing the risk of falls at workplaces CoP
-- Welding processes CoP
-- Safe design of structures CoP
-- Confined spaces CoP
-
-ESSENTIAL SERVICES CONTACT:
-- DIAL BEFORE YOU DIG: Phone 1100 or www.1100.com.au
 
 ---

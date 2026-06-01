@@ -9,260 +9,265 @@ CLAUSE_PREFIX: s
 
 ---
 
-CHUNK 1: Primary Duty of Care
-Section: s19
-Topic: Primary duty of care — what a PCBU must ensure
+CHUNK 1: Workplace Facilities and Access — Visible Compliance
+Section: s19(3)(a), s19(3)(e), s20
+Topic: Mandatory facilities and safe access/egress at workplaces
 
-A person conducting a business or undertaking (PCBU) must ensure, so far as is reasonably practicable, the health and safety of workers engaged or caused to be engaged, and other persons, while at work.
+MANDATORY FACILITIES visible on site:
+- Toilets accessible to workers
+- Drinking water supply
+- Hand-washing facilities
+- Shade or shelter for rest breaks
+- Clear, safe access and egress paths without trip hazards
 
-Without limiting this, a PCBU must ensure, so far as is reasonably practicable:
-(a) The provision and maintenance of a work environment without risks to health and safety
-(b) The provision and maintenance of safe plant and structures
-(c) The provision and maintenance of safe systems of work
-(d) The safe use, handling and storage of plant, structures and substances
-(e) The provision of adequate facilities for the welfare of workers, including access to those facilities
-(f) The provision of any information, training, instruction or supervision necessary to protect all persons from risks
-(g) Monitoring the health of workers and conditions at the workplace to prevent illness or injury
+WORKPLACE CONDITION REQUIREMENTS:
+- Work environment without visible risks (no exposed hazards, unguarded edges, unstable surfaces)
+- Plant and equipment visibly maintained, not damaged or makeshift
+- Safe systems visible: barricades, exclusion zones, signage in place
 
-WHAT THIS MEANS ON SITE (visual indicators of compliance):
-- Workers have access to amenities: toilets, drinking water, hand-washing, shade/shelter
-- Plant and equipment is visibly maintained, not damaged or makeshift
-- Safe systems are in place (e.g. barricades, exclusion zones, signage)
-- Workers appear to have received site induction (induction cards/stickers visible)
-- PPE is being worn appropriate to the task
-- Supervision is present for high-risk tasks
-
----
-
-CHUNK 2: Management of Risks — Hierarchy of Controls
-Section: s17, s18
-Topic: How risks must be managed — hierarchy of controls
-
-A duty to ensure health and safety requires the person to:
-(a) ELIMINATE risks to health and safety, so far as is reasonably practicable; AND
-(b) If elimination is not reasonably practicable, MINIMISE those risks so far as is reasonably practicable
-
-"Reasonably practicable" means what is reasonably able to be done, taking into account:
-- The likelihood of the hazard or risk occurring
-- The degree of harm that might result
-- What the person knows or ought to know about the hazard and ways to eliminate/minimise it
-- The availability and suitability of ways to eliminate or minimise the risk
-- The cost of available control measures (cost is not an excuse unless grossly disproportionate to the risk)
-
-HIERARCHY OF CONTROLS (most to least preferred):
-1. Elimination — remove the hazard entirely
-2. Substitution — replace with something less hazardous
-3. Isolation — separate people from the hazard
-4. Engineering controls — physical controls (guards, barriers, ventilation)
-5. Administrative controls — procedures, training, signage, supervision
-6. PPE — last resort, used in conjunction with other controls
-
-WHAT THIS MEANS ON SITE:
-- If a risk can be eliminated (e.g. by design), it must be — not just controlled
-- Physical barriers and engineering controls must be in place before relying on signage or PPE alone
-- PPE alone without other controls visible is a potential compliance issue
-- Evidence of risk assessment and control hierarchy should be visible in site setup
+VISUAL INDICATORS:
+- No toilets, drinking water or hand-washing visible on site = non-compliant
+- Blocked or unsafe site access/egress paths = non-compliant
+- No shade or shelter for workers = flag
+- Damaged, unmaintained plant or equipment = non-compliant
+- Makeshift or improvised equipment = serious non-compliance
+- No barricades or exclusion zones around hazards = non-compliant
 
 ---
 
-CHUNK 3: Notifiable Incidents — Definitions
-Section: s35, s36, s37
-Topic: What must be notified to the regulator (WorkSafe Queensland)
+CHUNK 2: PPE and Supervision — Visible Worker Protection
+Section: s19(3)(f)
+Topic: PPE appropriate to task and visible supervision for high-risk work
 
-A NOTIFIABLE INCIDENT means:
-(a) The death of a person; OR
-(b) A serious injury or illness of a person; OR
-(c) A dangerous incident
+MANDATORY PPE visible on workers:
+- Hard hats in construction zones
+- High-visibility vests in traffic areas or exclusion zones
+- Eye protection for grinding, cutting, concrete work
+- Safety boots
+- Gloves appropriate to task
+- Hearing protection in high-noise areas
+- Respiratory protection for dust/fume exposure
 
-A SERIOUS INJURY OR ILLNESS means an injury or illness requiring:
-(a) Immediate treatment as an in-patient in a hospital; OR
-(b) Immediate treatment for:
-    - Amputation of any part of the body
-    - A serious head injury
-    - A serious eye injury
-    - A serious burn
-    - Separation of skin from underlying tissue (degloving or scalping)
-    - A spinal injury
-    - Loss of a bodily function
-    - Serious lacerations
-(c) Medical treatment within 48 hours of exposure to a substance
+SUPERVISION REQUIREMENTS:
+- Supervisor or competent person visible during high-risk tasks (working at heights, confined spaces, excavation, crane lifts)
+- Workers appear to have received induction (cards/stickers visible)
 
-A DANGEROUS INCIDENT means an incident at a workplace that exposes a worker or any person to a serious risk to health or safety from immediate or imminent exposure to:
-(a) An uncontrolled escape, spillage or leakage of a substance
-(b) An uncontrolled implosion, explosion or fire
-(c) An uncontrolled escape of gas or steam
-(d) An uncontrolled escape of a pressurised substance
+VISUAL INDICATORS:
+- Workers without hard hats in construction zone = non-compliant
+- Workers in traffic areas without hi-vis vests = non-compliant
+- Line hand or concrete worker without eye protection = non-compliant
+- High-risk work (heights, excavation, crane lift) with no supervisor visible = flag
+- Workers without appropriate PPE for visible task = non-compliant
+
+---
+
+CHUNK 3: Notifiable Incidents — Dangerous Incident Categories Visible in Photos
+Section: s35, s36(3)
+Topic: Dangerous incidents requiring immediate notification to WorkSafe Queensland
+
+DANGEROUS INCIDENT = incident exposing person to serious risk from:
+(a) Uncontrolled escape, spillage or leakage of substance
+(b) Uncontrolled implosion, explosion or fire
+(c) Uncontrolled escape of gas or steam
+(d) Uncontrolled escape of pressurised substance
 (e) Electric shock
-(f) The fall or release from a height of any plant, substance or thing
-(g) The collapse, overturning, failure or malfunction of, or damage to, any plant required to be authorised for use under a regulation (e.g. cranes, EWPs, forklifts)
-(h) The collapse or partial collapse of a structure
-(i) The collapse or failure of an excavation or any shoring supporting an excavation
-(j) The inrush of water, mud or gas in workings, in an underground excavation or tunnel
-(k) The interruption of the main system of ventilation in an underground excavation or tunnel
+(f) Fall or release from height of plant, substance or thing
+(g) Collapse, overturning, failure or malfunction of plant requiring authorisation (cranes, EWPs, forklifts, hoists)
+(h) Collapse or partial collapse of structure
+(i) Collapse or failure of excavation or shoring
+(j) Inrush of water, mud or gas in underground excavation or tunnel
+(k) Interruption of main ventilation in underground excavation or tunnel
 
-WHAT THIS MEANS FOR PHOTO ANALYSIS:
-If a photo shows evidence of any of the above dangerous incident categories, this is a critical compliance issue requiring immediate reporting to WorkSafe Queensland. Examples visible in photos:
-- Collapsed scaffolding or structural elements
-- Unsupported excavation walls that have failed or are at risk
-- Overturned plant or equipment
-- Fire or explosion damage
-- Evidence of electric shock incident (burn marks, fallen lines)
-- Unsupported trenches in sandy/unstable soil
-- Cranes or EWPs that appear damaged or malfunctioning
-
----
-
-CHUNK 4: Duty to Notify and Preserve Incident Sites
-Section: s38, s39
-Topic: Obligations after a notifiable incident occurs
-
-DUTY TO NOTIFY (s38):
-- A PCBU must notify the regulator (WorkSafe Queensland) IMMEDIATELY after becoming aware a notifiable incident has occurred
-- Notice must be given by the fastest possible means — by telephone or in writing
-- A written record of each notifiable incident must be kept for at least 5 years
-
-DUTY TO PRESERVE INCIDENT SITES (s39):
-- The person with management or control of the workplace must ensure the site where the incident occurred is NOT disturbed until an inspector arrives or directs otherwise
-- Exception: disturbance is allowed to the extent necessary to:
-  - Assist an injured person
-  - Remove a deceased person
-  - Make the site safe or to prevent further notifiable incidents
-  - Comply with a direction given by the regulator or an inspector
-
-WHAT THIS MEANS FOR PHOTO ANALYSIS:
-If a photo shows an active incident site or aftermath of a dangerous incident, the PCBU must:
-1. Have already notified WorkSafe Queensland immediately
-2. Not disturb the site until an inspector arrives
-3. Document the incident
+VISUAL INDICATORS:
+- Collapsed scaffolding or structural elements = dangerous incident — must be notified immediately
+- Overturned crane, EWP, forklift or hoist = dangerous incident — must be notified immediately
+- Collapsed or failed excavation walls or shoring = dangerous incident — must be notified immediately
+- Fire or explosion damage visible = dangerous incident — must be notified immediately
+- Fallen powerlines or electric shock evidence (burn marks) = dangerous incident — must be notified immediately
+- Unsupported trench walls in sandy/unstable soil showing failure = dangerous incident — must be notified immediately
+- Plant damage indicating malfunction or failure = dangerous incident — must be notified immediately
 
 ---
 
-CHUNK 5: Duties Relating to Workplaces and Plant
-Section: s20, s21, s22, s23
-Topic: Duties of persons managing or controlling workplaces and plant
+CHUNK 4: Incident Site Preservation — Visible Disturbance Restrictions
+Section: s39
+Topic: Site preservation requirements after notifiable incident
 
-MANAGEMENT OR CONTROL OF A WORKPLACE (s20):
-A person with management or control of a workplace must ensure, so far as is reasonably practicable, that the workplace, the means of entering and exiting the workplace, and anything arising from the workplace are without risks to health and safety.
+MANDATORY after notifiable incident:
+- Site where incident occurred MUST NOT be disturbed until inspector arrives or directs otherwise
+- Exception: disturbance allowed ONLY to:
+  • Assist injured person
+  • Remove deceased person
+  • Make site safe or prevent further incidents
+  • Comply with inspector direction
 
-MANAGEMENT OR CONTROL OF FIXTURES, FITTINGS OR PLANT (s21):
-A person with management or control of fixtures, fittings or plant at a workplace must ensure, so far as is reasonably practicable, that the fixtures, fittings and plant are without risks to health and safety.
-
-DESIGN OF PLANT, SUBSTANCES OR STRUCTURES (s22):
-A designer must ensure, so far as is reasonably practicable, that plant, substance or structure is designed to be without risks to health and safety for persons who use, maintain, clean, repair or decommission it.
-
-INSTALL, CONSTRUCT OR COMMISSION PLANT OR STRUCTURES (s26):
-A person who installs, constructs or commissions plant or a structure must ensure, so far as is reasonably practicable, that the way in which the plant or structure is installed, constructed or commissioned ensures it is without risks to health and safety.
-
-WHAT THIS MEANS ON SITE:
-- Scaffolding must be erected to be without risk — not just functional but safe
-- All plant on site must be maintained and without risk
-- Site access and egress must be safe (no trip hazards, adequate lighting, clear paths)
-- Temporary structures must be designed and installed safely
+VISUAL INDICATORS:
+- Active incident site with equipment moved or cleaned up before inspector arrival = non-compliant (unless for safety)
+- Incident site with no preservation barriers or tape = flag
+- Evidence of cleanup or disturbance at recent incident site = potential non-compliance
+- No signage or barriers preventing access to incident site = flag
 
 ---
 
-CHUNK 6: Duty of Officers (Due Diligence)
-Section: s27
-Topic: Due diligence obligations of officers of a PCBU
-
-An officer of a PCBU must exercise due diligence to ensure the PCBU complies with its duties. Due diligence includes:
-(a) Acquiring and keeping up-to-date knowledge of work health and safety matters
-(b) Gaining an understanding of the nature of the operations of the business or undertaking and generally of the hazards and risks associated with those operations
-(c) Ensuring the PCBU has available for use, and uses, appropriate resources and processes to eliminate or minimise risks to health and safety
-(d) Ensuring the PCBU has appropriate processes for receiving and considering information regarding incidents, hazards and risks, and for responding in a timely way to that information
-(e) Ensuring the PCBU has, and implements, processes for complying with any duty or obligation under the WHS Act
-(f) Verifying the provision and use of the resources and processes above
-
-WHAT THIS MEANS ON SITE:
-- Site managers and supervisors must be knowledgeable about WHS requirements
-- There must be a system in place to identify and respond to hazards
-- Incidents and near-misses must be recorded and acted upon
-
----
-
-CHUNK 7: Consultation Requirements
-Section: s46, s47, s48
-Topic: When and how PCBUs must consult workers
-
-A PCBU must consult, so far as is reasonably practicable, with workers who carry out work for the business or undertaking and who are, or are likely to be, directly affected by a matter relating to work health or safety.
-
-Consultation is required when:
-(a) Identifying hazards and assessing risks to health and safety arising from work
-(b) Making decisions about ways to eliminate or minimise those risks
-(c) Making decisions about the adequacy of facilities for the welfare of workers
-(d) Proposing changes that may affect the health or safety of workers
-(e) Making decisions about the procedures for consulting with workers, resolving work health and safety issues, monitoring the health and safety of workers, monitoring conditions at the workplace, providing information and training
-
-WHAT THIS MEANS ON SITE:
-- Workers should be involved in safety decisions — toolbox talks, safety meetings are indicators of compliance
-- Workers should be aware of hazards and controls on site
-- Safety notice boards with consultation records are a positive compliance indicator
-
----
-
-CHUNK 8: Penalties for Non-Compliance
-Section: s31, s32, s33
-Topic: Penalties for failing to comply with health and safety duties
-
-CATEGORY 1 (most serious) — s31:
-Engaging in conduct that exposes a worker or other person to risk of death or serious injury or illness, with negligence or recklessness.
-Maximum penalty: Individual — 6,000 penalty units or 5 years imprisonment; Body corporate — 30,000 penalty units
-
-CATEGORY 2 — s32:
-Failure to comply with a health and safety duty, where the failure exposes a worker or other person to risk of death or serious injury or illness.
-Maximum penalty: Individual — 3,000 penalty units; Body corporate — 15,000 penalty units
-
-CATEGORY 3 — s33:
-Failure to comply with a health and safety duty.
-Maximum penalty: Individual — 500 penalty units; Body corporate — 3,000 penalty units
-
-INDUSTRIAL MANSLAUGHTER — s34C:
-A PCBU who, through negligent conduct, causes the death of a worker or other person.
-Maximum penalty: Individual — 20 years imprisonment; Body corporate — 100,000 penalty units
-
-NOTE ON PENALTY UNITS (QLD):
-As at 2026, 1 penalty unit = $143.75 (subject to annual adjustment).
-
----
-
-CHUNK 9: Key Definitions
-Section: s4, s5, s6, s7, s8
-Topic: Important definitions under the WHS Act
-
-PERSON CONDUCTING A BUSINESS OR UNDERTAKING (PCBU):
-A person who conducts a business or undertaking, whether alone or with others, and whether for profit or not. Includes employers, self-employed persons, principals, head contractors, subcontractors. Does NOT include a worker who is engaged solely as a worker.
-
-WORKER:
-A person who carries out work in any capacity for a PCBU, including an employee, contractor, subcontractor, employee of a contractor or subcontractor, labour hire employee, outworker, apprentice or trainee, student on work experience, or volunteer.
-
-WORKPLACE:
-A place where work is carried out for a business or undertaking and includes any place where a worker goes, or is likely to be, while at work. This includes construction sites, mobile workplaces, and vehicles.
-
-OFFICER:
-A director, secretary, or person who makes, or participates in making, decisions that affect the whole, or a substantial part, of the business or undertaking. Includes partners in a partnership, and managers with significant influence over PCBU management.
-
-HEALTH AND SAFETY REPRESENTATIVE (HSR):
-A worker elected to represent a work group on health and safety matters. HSRs have specific powers including the power to issue Provisional Improvement Notices (PINs) and direct cessation of unsafe work.
-
-REGULATOR:
-In Queensland, the regulator is Workplace Health and Safety Queensland (WHSQ), a division of the Office of Industrial Relations.
-
----
-
-CHUNK 10: Compliance Notices
+CHUNK 5: Compliance Notices — Visible Stop Work and Improvement Notices
 Section: s191, s195, s198
-Topic: Types of notices that can be issued by inspectors
+Topic: Inspector-issued notices visible on site or plant
 
 IMPROVEMENT NOTICE (s191):
-Issued by an inspector when they reasonably believe a person is contravening, or has contravened and is likely to contravene again, a provision of the WHS Act or Regulation. The notice specifies the contravention and a time to remedy it.
+- Specifies contravention and time to remedy
+- Must be displayed at workplace or on plant
 
 PROHIBITION NOTICE (s195):
-Issued by an inspector when they reasonably believe an activity involves or will involve a serious risk to the health or safety of a person. The notice prohibits the carrying on of the activity until the notice is complied with.
+- Prohibits activity involving serious risk until notice complied with
+- Must be displayed at workplace or on plant
+- Activity MUST CEASE immediately
 
 NON-DISTURBANCE NOTICE (s198):
-Issued by an inspector to preserve a site after an incident for investigation purposes.
+- Preserves site for investigation
+- Site MUST NOT be disturbed
 
-WHAT THIS MEANS FOR PHOTO ANALYSIS:
-- An Improvement Notice or Prohibition Notice on display at a site is a significant compliance indicator
-- Stop Work signs or tags on plant may indicate a Prohibition Notice is in force
-- Site with active stop work notices should be flagged as non-compliant
+VISUAL INDICATORS:
+- Improvement Notice or Prohibition Notice displayed on site = active compliance issue
+- Stop Work sign or tag on plant = Prohibition Notice likely in force — plant must not be used
+- Red tag or stop work notice on equipment = non-compliant if equipment in use
+- Non-Disturbance Notice visible = site must be preserved, no work permitted
+- Work continuing despite visible Prohibition Notice = serious non-compliance
+
+---
+
+CHUNK 6: Plant and Structure Installation — Visible Safe Installation
+Section: s21, s22, s26
+Topic: Plant, fixtures and structures must be installed without risk
+
+MANDATORY:
+- Plant must be installed, constructed or commissioned without risk to health and safety (s26)
+- Fixtures, fittings and plant at workplace must be without risk (s21)
+- Structures must be designed and installed without risk (s22)
+
+VISUAL INDICATORS:
+- Scaffolding erected unsafely (missing ties, unstable base, overloaded) = non-compliant
+- Temporary structures visibly unstable or inadequately braced = non-compliant
+- Plant installed on unstable or inadequate foundations = non-compliant
+- Formwork or falsework visibly inadequate or damaged = non-compliant
+- Cranes or hoists on soft ground without adequate pads = non-compliant
+- Electrical installations exposed or unsafe (no RCD, damaged cables) = non-compliant
+
+---
+
+CHUNK 7: Hierarchy of Controls — Visible Control Measures
+Section: s17, s18
+Topic: Risk elimination and minimisation — hierarchy of controls visible on site
+
+HIERARCHY (most to least preferred):
+1. Elimination — hazard removed entirely
+2. Substitution — less hazardous alternative used
+3. Isolation — people separated from hazard (barriers, exclusion zones)
+4. Engineering controls — guards, barriers, ventilation, interlocks
+5. Administrative controls — signage, procedures, training
+6. PPE — last resort, used WITH other controls
+
+MANDATORY:
+- Risks must be ELIMINATED if reasonably practicable (s17)
+- If elimination not practicable, risks must be MINIMISED (s18)
+- Physical controls (barriers, guards) must be in place BEFORE relying on signage or PPE alone
+
+VISUAL INDICATORS:
+- PPE only with no physical barriers or engineering controls = potential non-compliance
+- Unguarded machinery or edges with only signage = non-compliant
+- Exclusion zones marked by signage only without physical barriers = inadequate control
+- Workers relying on PPE alone for fall protection without edge protection = non-compliant
+- No physical separation between workers and moving plant = inadequate control
+
+---
+
+CHUNK 8: Serious Injury or Illness — Definitions Visible in Photos
+Section: s36(1), s36(2)
+Topic: Serious injuries requiring immediate notification to WorkSafe Queensland
+
+SERIOUS INJURY OR ILLNESS = injury/illness requiring:
+(a) Immediate treatment as hospital in-patient; OR
+(b) Immediate treatment for:
+  • Amputation
+  • Serious head injury
+  • Serious eye injury
+  • Serious burn
+  • Separation of skin from underlying tissue (degloving/scalping)
+  • Spinal injury
+  • Loss of bodily function
+  • Serious lacerations
+(c) Medical treatment within 48 hours of substance exposure
+
+VISUAL INDICATORS:
+- Worker with visible serious injury (head trauma, burns, lacerations, eye injury) = serious injury — must be notified immediately
+- Evidence of amputation incident = serious injury — must be notified immediately
+- Worker being treated by paramedics or transported to hospital = potential serious injury — must be notified if meets criteria
+- Incident involving substance exposure with worker receiving medical treatment = serious injury if within 48 hours
+
+---
+
+CHUNK 9: Officer Due Diligence — Visible Site Management Indicators
+Section: s27
+Topic: Visible indicators of officer due diligence and site management systems
+
+OFFICERS must exercise due diligence including:
+(a) Knowledge of WHS matters
+(b) Understanding of operations, hazards and risks
+(c) Appropriate resources and processes to eliminate/minimise risks
+(d) Processes for receiving and responding to incident/hazard information
+(e) Processes for complying with WHS duties
+(f) Verification of resource and process provision and use
+
+VISUAL INDICATORS:
+- Site managers/supervisors visibly present and engaged = positive indicator
+- Safety notice boards with current information, toolbox talk records, incident reports = positive indicator
+- No visible supervision or management presence = flag
+- No safety signage, notice boards or communication systems visible = flag
+- Hazards visible with no evidence of response or control = non-compliant
+- No incident reporting system visible (forms, boards, procedures) = flag
+
+---
+
+CHUNK 10: Worker Consultation — Visible Consultation Systems
+Section: s46, s47, s48
+Topic: Visible evidence of worker consultation on WHS matters
+
+CONSULTATION REQUIRED when:
+(a) Identifying hazards and assessing risks
+(b) Deciding on risk elimination/minimisation
+(c) Deciding on adequacy of welfare facilities
+(d) Proposing changes affecting worker health/safety
+(e) Making decisions on consultation procedures, issue resolution, monitoring, information and training
+
+VISUAL INDICATORS:
+- Safety notice boards with toolbox talk records, meeting minutes, consultation records = positive indicator
+- Workers participating in safety meetings or toolbox talks = positive indicator
+- Health and Safety Representative (HSR) contact details displayed = positive indicator
+- No safety notice boards or consultation records visible = flag
+- Workers unaware of hazards or controls (visible confusion, unsafe behavior) = potential consultation failure
+- No evidence of worker involvement in safety decisions = flag
+
+---
+
+CHUNK 11: Penalty Categories — Visible Risk Levels
+Section: s31, s32, s33, s34C
+Topic: Penalty categories based on visible risk exposure
+
+CATEGORY 1 (s31) — Reckless or negligent conduct exposing person to risk of death or serious injury:
+Maximum: Individual 6,000 penalty units or 5 years imprisonment; Body corporate 30,000 penalty units
+
+CATEGORY 2 (s32) — Failure exposing person to risk of death or serious injury:
+Maximum: Individual 3,000 penalty units; Body corporate 15,000 penalty units
+
+CATEGORY 3 (s33) — Failure to comply with health and safety duty:
+Maximum: Individual 500 penalty units; Body corporate 3,000 penalty units
+
+INDUSTRIAL MANSLAUGHTER (s34C) — Negligent conduct causing death:
+Maximum: Individual 20 years imprisonment; Body corporate 100,000 penalty units
+
+VISUAL INDICATORS:
+- Workers at unprotected heights without fall protection = Category 1 risk (death/serious injury)
+- Unsupported excavation with workers inside = Category 1 risk (death/serious injury)
+- Workers in crane lift exclusion zone = Category 1 risk (death/serious injury)
+- Unguarded machinery in operation = Category 2 risk (serious injury)
+- Missing PPE or inadequate facilities = Category 3 (duty failure)
+- Any fatality on site = potential Industrial Manslaughter investigation

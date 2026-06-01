@@ -1,58 +1,47 @@
-DOCUMENT: How to Manage and Control Asbestos in the Workplace Code of Practice 2021 (Queensland)
+DOCUMENT: How to Manage and Control Asbestos in the Workplace Code of Practice 2021
 TYPE: Approved Code of Practice
 JURISDICTION: QLD
 REGION: QLD
 WORK_TYPES: asbestos_management, demolition, refurbishment, maintenance, construction, manufacturing
-SOURCE: Workplace Health and Safety Queensland (WHSQ)
-CURRENT AS AT: 2021 (approved under section 274 of the Work Health and Safety Act 2011)
-CLAUSE_PREFIX: s
-REFERENCE_STANDARD: AS 4964 Method for the qualitative identification of asbestos in bulk samples; AS 1319 Safety signs for the occupational environment; AS/NZS ISO/IEC 17020 Conformity assessment; AS/NZS 1716 Respiratory protective devices; AS/NZS 1715 Selection, use and maintenance of respiratory protective equipment; AS/NZS 60335.2.69 Household and similar electrical appliances – Safety (Vacuum cleaners).
-RELATED DOCUMENT: How to Safely Remove Asbestos Code of Practice (covers detailed notification, clearance certificate content, and decontamination procedures)
+SOURCE: Workplace Health and Safety Queensland
+CURRENT AS AT: 2021
 
 ---
 
-CHUNK 1: Prohibitions and Exposure Standard
+CHUNK 1: Strict Prohibitions — Visible Work Methods
 Section: WHS Regulation s419, s420; COP s1.1, s1.2
-Topic: Mandatory bans and exposure limits
+Topic: Absolutely prohibited work methods and exposure standard
 
-GENERAL PROHIBITION: A PCBU must not carry out or direct or allow a worker to carry out work involving asbestos if that work involves manufacturing, supplying, transporting, storing, removing, using, installing, handling, treating, disposing of or disturbing asbestos or ACM, except in prescribed circumstances.
+EXPOSURE STANDARD:
+- 0.1 FIBRES PER MILLILITRE OF AIR (0.1 f/mL) measured in breathing zone over 8-hour working day
 
-EXPOSURE STANDARD: A PCBU must ensure the exposure standard for asbestos is not exceeded.
-- Standard: 0.1 FIBRES PER MILLILITRE OF AIR (0.1 f/mL)
-- Measured in the person's breathing zone
-- Expressed as a TIME WEIGHTED AVERAGE over an EIGHT-HOUR WORKING DAY
-
-STRICT PROHIBITIONS — the following are absolutely prohibited:
-- High-pressure water spray or compressed air used on ACM (e.g. fibro roof) = STRICTLY PROHIBITED
-- Installation of any new ACM products after 31 December 2003 = ILLEGAL
-- Dry sweeping of dust in any area where ACM is being worked on = PROHIBITED
-- Use of household vacuum cleaners near asbestos = PROHIBITED (must use H-Class HEPA vacuum)
-- High-speed power tools used on ACM without LEV dust control hood or shadow vacuuming = PROHIBITED
+STRICTLY PROHIBITED METHODS:
+- High-pressure water spray on ACM (fibro roof, cement sheeting)
+- Compressed air used on ACM
+- Dry sweeping of dust where ACM is being worked on
+- Household vacuum cleaners near asbestos
+- High-speed power tools on ACM without LEV dust control hood or shadow vacuuming
+- Installation of any new ACM products after 31 December 2003
 
 VISUAL INDICATORS:
-- High-pressure water spray being used on a fibro or corrugated cement roof = critical non-compliance
-- Worker using a household vacuum cleaner near asbestos dust = serious non-compliance
-- Newly installed corrugated cement or fibro sheeting on a building = illegal installation post-2003
+- High-pressure water spray on fibro or corrugated cement roof = critical non-compliance
+- Worker using household vacuum cleaner near asbestos dust = serious non-compliance
+- Newly installed corrugated cement or fibro sheeting = illegal installation post-2003
+- Dry sweeping visible in asbestos work area = prohibited
+- Angle grinder or circular saw cutting ACM without dust extraction hood = prohibited
 
 ---
 
-CHUNK 2: Identifying Asbestos and Competency
+CHUNK 2: High Probability ACM Locations
 Section: WHS Regulation s422; COP s2.2
-Topic: Requirements for identifying ACM at the workplace
+Topic: Visual indicators of likely asbestos presence
 
-MANDATORY IDENTIFICATION: A person with management or control of a workplace must ensure, so far as is reasonably practicable, that ALL asbestos or ACM at the workplace is identified by a COMPETENT PERSON.
-
-COMPETENT PERSON for identification must:
-- Be trained to handle and take samples
-- Be familiar with building practices to determine where asbestos is likely to be located
-- Be able to determine if material is friable or non-friable and evaluate its condition
-
-HIGH PROBABILITY INDICATORS — asbestos likely to be present in:
+HIGH PROBABILITY INDICATORS — asbestos likely present in:
 - Buildings constructed BEFORE 1990: cement sheets, roofs, wet areas (bathrooms, laundries), eaves, fencing
 - Plant installed BEFORE 31 DECEMBER 2003: gaskets, insulation, friction brake products
 - Corrugated cement roofing or "fibro" wall cladding
 - Vinyl floor tiles (particularly pre-1990)
-- Textured ceiling coatings (e.g. "popcorn" ceilings)
+- Textured ceiling coatings ("popcorn" ceilings)
 - Pipe lagging and insulation on old boilers and hot water systems
 
 VISUAL INDICATORS:
@@ -60,34 +49,39 @@ VISUAL INDICATORS:
 - Corrugated cement or fibro roofing, walls or fencing = likely ACM
 - Old pipe lagging on boilers or hot water systems = assume ACM until proven otherwise
 - Fire doors without compliance tags in pre-1990 buildings = presumed ACM core
+- Textured ceiling coating in older building = likely ACM
+- Vinyl floor tiles in pre-1990 building = assume ACM
 
 ---
 
-CHUNK 3: Mandatory Assumptions
+CHUNK 3: Mandatory Assumptions for Unidentified Materials
 Section: WHS Regulation s422, s423; COP s2.3, s2.4
 Topic: Treatment of unidentified or inaccessible materials
 
-A person with management or control of a workplace MUST:
-- ASSUME material is asbestos or ACM if it cannot be identified but a competent person reasonably believes it may be asbestos or ACM
-- ASSUME asbestos is present if part of the workplace is INACCESSIBLE and it is likely to contain asbestos or ACM
+MANDATORY ASSUMPTIONS:
+- Material MUST be assumed to be ACM if it cannot be identified but may reasonably be asbestos
+- Asbestos MUST be assumed present if area is INACCESSIBLE and likely to contain ACM
 
 INACCESSIBLE AREAS include:
 - Completely enclosed cavities
 - Inner linings of old boilers
-- Vinyl tiles covered by multiple layers of non-ACM flooring
+- Vinyl tiles covered by multiple layers of flooring
 
 VISUAL INDICATORS:
-- Unlabelled material that looks like asbestos cement but has not been tested = must be presumed ACM
-- Locked rooms or crawl spaces not listed in the asbestos register = non-compliant identification
+- Unlabelled material that looks like asbestos cement without test results = must be presumed ACM
+- Locked rooms or crawl spaces not listed in asbestos register = non-compliant identification
 - Enclosed ceiling or wall cavities in pre-1990 buildings = must be assumed to contain ACM
+- Sealed plant rooms or equipment housings in older buildings = assume ACM present
 
 ---
 
-CHUNK 4: Indicating Presence — Signs and Labels
-Section: WHS Regulation s424; COP s2.5; Appendix C
+CHUNK 4: Warning Signs and Labels — Exact Requirements
+Section: WHS Regulation s424; COP s2.5; Appendix C; AS 1319
 Topic: Mandatory marking of ACM locations
 
-REQUIRED MARKINGS: A person with management or control of a workplace must ensure the presence and location of ALL identified or assumed asbestos/ACM is clearly indicated. If reasonably practicable, this MUST be indicated by a LABEL.
+REQUIRED MARKINGS:
+- Presence and location of ALL identified or assumed ACM must be clearly indicated
+- If reasonably practicable, MUST be indicated by a LABEL
 
 WARNING SIGNS must:
 - Be weatherproof and adequately secured
@@ -99,73 +93,75 @@ CORRECT SIGN TEXT: "DANGER: ASBESTOS — CANCER AND LUNG DISEASE HAZARD"
 ASBESTOS WASTE BAGS must be labelled: "Danger Asbestos — Do not open or damage bag. Do not inhale dust"
 
 VISUAL INDICATORS:
-- "DANGER: ASBESTOS" sign at entrance to a plant room = compliant marking
-- ACM present in an area without any warning sign or label = non-compliant
+- "DANGER: ASBESTOS" sign at entrance to plant room = compliant marking
+- ACM present in area without warning sign or label = non-compliant
 - Asbestos waste bags without correct danger labelling = regulatory breach
-- Unmarked double-bagged material in a skip = flag — may be unlabelled asbestos waste
+- Unmarked double-bagged material in skip = flag — may be unlabelled asbestos waste
+- Sign text not matching required wording = non-compliant signage
 
 ---
 
-CHUNK 5: The Asbestos Register
+CHUNK 5: Asbestos Register Requirements
 Section: WHS Regulation s425, s426, s427, s428; COP s3.1, s3.2, s3.3
-Topic: Mandatory documentation and record keeping
+Topic: Mandatory documentation and review intervals
 
-PREPARATION: A person with management or control of a workplace MUST ensure an asbestos register is PREPARED AND KEPT AT THE WORKPLACE.
-
-EXEMPTION: Not required ONLY if the building was constructed AFTER 31 DECEMBER 1989, no asbestos has been identified, and no asbestos is likely to be present.
+MANDATORY REGISTER:
+- Must be PREPARED AND KEPT AT THE WORKPLACE
+- EXEMPTION: Only if building constructed AFTER 31 DECEMBER 1989, no asbestos identified, and none likely present
 
 REVIEW TRIGGERS — register MUST be reviewed and revised if:
 - Further asbestos is identified
 - Asbestos is removed, disturbed, sealed, or enclosed
 
-MINIMUM REVIEW FREQUENCY: At least ONCE EVERY FIVE YEARS
+MINIMUM REVIEW FREQUENCY: AT LEAST ONCE EVERY FIVE YEARS
 
-ACCESS: Workers carrying out work that may disturb ACM MUST be provided access to the register before commencing work.
+ACCESS: Workers carrying out work that may disturb ACM MUST be provided access to register before commencing work
 
 VISUAL INDICATORS:
-- PCBU unable to produce an asbestos register for a building built before 1990 = serious regulatory breach
-- Asbestos register dated more than 5 years ago without a review record = non-compliant
-- Worker performing maintenance on pipes or ceiling without having been provided the register = access violation
+- PCBU unable to produce asbestos register for building built before 1990 = serious regulatory breach
+- Asbestos register dated more than 5 years ago without review record = non-compliant
+- Worker performing maintenance on pipes or ceiling without having been provided register = access violation
 - Register does not include inaccessible areas or assumed ACM locations = incomplete register
 
 ---
 
-CHUNK 6: The Asbestos Management Plan (AMP)
+CHUNK 6: Asbestos Management Plan (AMP)
 Section: WHS Regulation s429, s430; COP s4.1, s4.2
 Topic: Written procedures for managing identified asbestos risks
 
-MANDATORY PLAN: A person with management or control of a workplace MUST ensure a written asbestos management plan is prepared if asbestos has been identified or assumed present.
+MANDATORY PLAN: Written asbestos management plan MUST be prepared if asbestos has been identified or assumed present
 
 PLAN MUST INCLUDE:
-- Identification of asbestos (linked to the register)
-- Decisions and reasons for decisions about management (e.g. safe work procedures, encapsulation vs removal)
+- Identification of asbestos (linked to register)
+- Decisions and reasons for management approach (safe work procedures, encapsulation vs removal)
 - Procedures for accidents, incidents, and emergencies involving asbestos
 - Details of workers carrying out asbestos work (consultation, training, supervision)
 
-REVIEW: The plan MUST be reviewed and, if necessary, revised AT LEAST ONCE EVERY FIVE YEARS.
+REVIEW: Plan MUST be reviewed and, if necessary, revised AT LEAST ONCE EVERY FIVE YEARS
 
 VISUAL INDICATORS:
-- Workplace with identified asbestos that has a register but no written AMP = regulatory breach
+- Workplace with identified asbestos that has register but no written AMP = regulatory breach
 - AMP not containing procedures for emergencies or responsible persons = incomplete plan
 - AMP not reviewed in over 5 years = non-compliant
+- AMP not accessible to workers at site = access violation
 
 ---
 
-CHUNK 7: Asbestos Removal Licence Classes and Thresholds
+CHUNK 7: Licence Classes and Removal Thresholds
 Section: WHS Regulation s458; COP s5.2
-Topic: When a licensed removalist is required and which licence class
+Topic: When licensed removalist is required and which licence class
 
 LICENCE CLASSES:
 - CLASS A LICENCE: Required for removal of FRIABLE ASBESTOS (any quantity)
-- CLASS B LICENCE: Required for removal of NON-FRIABLE ASBESTOS above the threshold
+- CLASS B LICENCE: Required for removal of NON-FRIABLE ASBESTOS above threshold
 
 LICENSING THRESHOLDS FOR NON-FRIABLE ACM:
-- MORE THAN 10m² of non-friable ACM: MUST be removed by a LICENSED ASBESTOS REMOVALIST (Class B or higher)
-- LESS THAN 10m² of non-friable ACM: Does not need to be undertaken by a licensed removalist, but still must be carried out safely with appropriate controls
+- MORE THAN 10m² of non-friable ACM: MUST be removed by LICENSED ASBESTOS REMOVALIST (Class B or higher)
+- LESS THAN 10m² of non-friable ACM: Does not need licensed removalist, but must be carried out safely with appropriate controls
 
 FRIABLE vs NON-FRIABLE:
-- FRIABLE: Can be crumbled, pulverised or reduced to powder by hand pressure when dry (e.g. pipe lagging, sprayed asbestos, insulation) — highest risk
-- NON-FRIABLE: Cannot be crumbled by hand when dry (e.g. asbestos cement sheets, floor tiles) — lower risk but becomes friable when damaged or drilled
+- FRIABLE: Can be crumbled, pulverised or reduced to powder by hand pressure when dry (pipe lagging, sprayed asbestos, insulation) — highest risk
+- NON-FRIABLE: Cannot be crumbled by hand when dry (asbestos cement sheets, floor tiles) — becomes friable when damaged or drilled
 
 VISUAL INDICATORS:
 - Workers removing large sections of fibro sheeting (>10m²) without licensed removalist signage = licensing breach
@@ -175,84 +171,80 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 8: Notification Requirements
+CHUNK 8: Emergency Demolition and Pre-Work Duties
 Section: WHS Regulation s453, s457; COP s5.3
-Topic: When WorkSafe Queensland must be notified
+Topic: Notification requirements and pre-demolition/refurbishment duties
 
 EMERGENCY DEMOLITION NOTIFICATION:
-- If an emergency requires demolition of a structure containing asbestos (e.g. structurally unsound, imminent collapse), the person with management or control MUST provide the REGULATOR WITH WRITTEN NOTICE:
-  - IMMEDIATELY after becoming aware of the emergency; AND
-  - BEFORE the demolition starts
-
-GENERAL REMOVAL NOTIFICATION:
-- Standard notification requirements (days' notice, forms) are specified in the How to Safely Remove Asbestos Code of Practice
+- If emergency requires demolition of structure containing asbestos (structurally unsound, imminent collapse), person with management or control MUST provide regulator with WRITTEN NOTICE:
+  - IMMEDIATELY after becoming aware of emergency; AND
+  - BEFORE demolition starts
 
 PRE-DEMOLITION AND REFURBISHMENT DUTIES:
-- Prior to any demolition or refurbishment, a person with management or control MUST:
-  - Review the asbestos register (revise if inadequate)
-  - Provide a copy of the register to the PCBU carrying out the work
-  - Ensure asbestos likely to be disturbed is identified and, so far as is reasonably practicable, REMOVED BEFORE WORK COMMENCES
+- Prior to any demolition or refurbishment, person with management or control MUST:
+  - Review asbestos register (revise if inadequate)
+  - Provide copy of register to PCBU carrying out work
+  - Ensure asbestos likely to be disturbed is identified and, so far as reasonably practicable, REMOVED BEFORE WORK COMMENCES
 
 VISUAL INDICATORS:
-- Demolition of a pre-1990 building commencing without a pre-demolition asbestos survey = serious non-compliance
+- Demolition of pre-1990 building commencing without pre-demolition asbestos survey = serious non-compliance
 - Refurbishment work disturbing walls or ceilings in pre-1990 building without asbestos survey = non-compliant
-- No notification records visible at a licensed removal site = flag
+- No notification records visible at licensed removal site = flag
+- Demolition equipment on site with ACM still visible in structure = non-compliant
 
 ---
 
-CHUNK 9: Safe Work Practices and Controls
+CHUNK 9: Safe Work Practices — Physical Controls and Measurements
 Section: WHS Regulation s419; COP s5.4, s7.1; Appendix G
 Topic: Controls during asbestos-related work and maintenance
 
 GENERAL REQUIREMENTS for asbestos-related work:
-- The area MUST be signed and barricaded
-- Facilities MUST be provided to allow for decontamination
-- Anything removed MUST be decontaminated or sealed in a container or bag
+- Area MUST be signed and barricaded
+- Facilities MUST be provided for decontamination
+- Anything removed MUST be decontaminated or sealed in container or bag
 - WETTING METHODS or thickened substances (pastes or gels) should be used to suppress fibres
 
-PLASTIC SHEETING: At a minimum, HEAVY-DUTY 200 µm THICK PLASTIC SHEETING should be used to cover surfaces.
+PLASTIC SHEETING: At minimum, HEAVY-DUTY 200 µm THICK PLASTIC SHEETING should be used to cover surfaces
 
-SEGREGATION ZONE: Vehicle brake repairs and similar work must be conducted with a 3-METRE SEGREGATION ZONE around the work area.
+SEGREGATION ZONE: Vehicle brake repairs and similar work must be conducted with 3-METRE SEGREGATION ZONE around work area
 
 VISUAL INDICATORS:
-- Worker drilling ACM using a hand drill with a cup of shaving cream enshrouding the drill bit = positive safe work practice
-- Vehicle brake repairs done without a 3-metre segregation zone = non-compliant asbestos-related work
-- No decontamination facilities (e.g. wet wipes, water, waste bags) at the asbestos work area = non-compliant
+- Worker drilling ACM using hand drill with cup of shaving cream enshrouding drill bit = positive safe work practice
+- Vehicle brake repairs done without 3-metre segregation zone = non-compliant asbestos-related work
+- No decontamination facilities (wet wipes, water, waste bags) at asbestos work area = non-compliant
 - Asbestos work area not signed or barricaded = non-compliant
 - Wetting not being used during ACM removal = flag
+- Plastic sheeting visibly thinner than heavy-duty grade = substandard control
 
 ---
 
-CHUNK 10: Air Monitoring and Clearance Certificates
+CHUNK 10: Clearance Certificates and Air Monitoring
 Section: WHS Regulation s445; COP s6.2
 Topic: When air monitoring is required and clearance before re-occupancy
 
-AIR MONITORING is required if the PCBU is uncertain on reasonable grounds as to whether the airborne concentration of asbestos exceeds the exposure standard (0.1 f/mL).
+AIR MONITORING TRIGGER:
+- Required if PCBU is uncertain on reasonable grounds whether airborne concentration of asbestos exceeds exposure standard (0.1 f/mL)
 
-WHO MUST CARRY OUT MONITORING:
-- A COMPETENT PERSON which may include:
-  - A licensed asbestos assessor
-  - A person who has undertaken the endorsed VET unit of competency for licensed asbestos assessors
-  - An occupational hygienist with experience in asbestos exposure monitoring
-
-CLEARANCE AIR MONITORING: Required to ensure the work area is FREE OF ASBESTOS FIBRES prior to being certified for reoccupation after removal.
+CLEARANCE AIR MONITORING:
+- Required to ensure work area is FREE OF ASBESTOS FIBRES prior to certification for reoccupation after removal
 
 CLEARANCE CERTIFICATE:
-- MANDATORY before the work area can be reoccupied after licensed removal work
-- Must be issued by a COMPETENT PERSON holding:
-  - A certification in relation to the specified VET course for asbestos assessor work; OR
-  - A tertiary qualification in occupational health and safety, occupational hygiene, science, building, construction, or environmental health
+- MANDATORY before work area can be reoccupied after licensed removal work
+- Must be issued by COMPETENT PERSON holding:
+  - Certification in relation to specified VET course for asbestos assessor work; OR
+  - Tertiary qualification in occupational health and safety, occupational hygiene, science, building, construction, or environmental health
 
 VISUAL INDICATORS:
-- Licensed asbestos removal site re-occupied without a clearance certificate visible = serious non-compliance
+- Licensed asbestos removal site re-occupied without clearance certificate visible = serious non-compliance
 - No air monitoring records available during or after licensed removal work = non-compliant
 - Work area barriers removed before clearance certificate issued = non-compliant
+- Workers re-entering area without visible clearance certificate posted = flag
 
 ---
 
-CHUNK 11: Health Monitoring and Training
+CHUNK 11: Health Monitoring Intervals and Record Retention
 Section: WHS Regulation s39, s445; COP s6.2, s6.3
-Topic: Medical tracking and competency records
+Topic: Medical tracking intervals and record keeping periods
 
 HEALTH MONITORING — must be provided to workers at risk of exposure for:
 - Licensed removal work
@@ -262,17 +254,17 @@ HEALTH MONITORING — must be provided to workers at risk of exposure for:
 MONITORING INTERVAL: At regular intervals, AT LEAST ONCE EVERY TWO YEARS
 
 RECORD RETENTION:
-- Health monitoring reports: MUST be kept as a CONFIDENTIAL RECORD for AT LEAST 40 YEARS
-- Training records: MUST be kept while the worker is carrying out the work AND FOR FIVE YEARS AFTER they stop
+- Health monitoring reports: MUST be kept as CONFIDENTIAL RECORD for AT LEAST 40 YEARS
+- Training records: MUST be kept while worker is carrying out work AND FOR FIVE YEARS AFTER they stop
 
 VISUAL INDICATORS:
-- Worker performing regular ACM maintenance who has not had a health monitoring examination in more than 2 years = non-compliant
-- PCBU unable to produce training records for a worker who left the company 3 years ago = regulatory breach (must keep for 5 years)
+- Worker performing regular ACM maintenance who has not had health monitoring examination in more than 2 years = non-compliant
+- PCBU unable to produce training records for worker who left company 3 years ago = regulatory breach (must keep for 5 years)
 
 ---
 
-CHUNK 12: PPE and Equipment Standards
-Section: COP s7.5, s7.7; AS/NZS 60335.2.69
+CHUNK 12: PPE and Equipment Specifications — Exact Standards
+Section: COP s7.5, s7.7; AS/NZS 60335.2.69; EN ISO 13982-1
 Topic: Mandatory gear and tool specifications
 
 VACUUM CLEANERS:
@@ -296,7 +288,10 @@ DISPOSAL BAGS:
 
 VISUAL INDICATORS:
 - Worker wearing coveralls with open pockets or velcro fastenings = non-compliant
-- Laced boots worn in an asbestos work area = non-compliant
+- Laced boots worn in asbestos work area = non-compliant
 - Single plastic bag used for asbestos waste = non-compliant (must be double-bagged)
 - Waste sealed with duct tape instead of adhesive cloth tape = substandard practice
 - Non-H-Class vacuum cleaner in use near asbestos = serious non-compliance
+- Household vacuum cleaner visible in asbestos work area = prohibited equipment
+
+---

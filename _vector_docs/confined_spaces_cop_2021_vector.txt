@@ -5,94 +5,55 @@ REGION: QLD
 WORK_TYPES: confined_spaces, excavation, demolition, plant_equipment, all_construction
 SOURCE: Workplace Health and Safety Queensland (WHSQ)
 CURRENT AS AT: 2021 (approved under s274 WHS Act 2011)
-CLAUSE_PREFIX: s
-REFERENCE_STANDARD: AS 2865 Confined Spaces; AS/NZS 1715 Respiratory Protective Equipment
 
 ---
 
-CHUNK 1: Confined Space — Definition and Classification
-Section: WHS Regulation s5; COP s1.1
-Topic: What is a confined space and how to determine whether a space qualifies
+CHUNK 1: Confined Space Signage and Access Control
+Section: WHS Regulation s68; CoP s4.8
+Topic: Mandatory signage and barriers at confined space entry points
 
-A "CONFINED SPACE" is an enclosed or partially enclosed space that:
-(a) Is NOT DESIGNED OR INTENDED PRIMARILY TO BE OCCUPIED BY A PERSON
-(b) Is, or is designed or intended to be, at NORMAL ATMOSPHERIC PRESSURE while any person is in the space
-(c) Is, or is likely to be, a risk to health and safety from at least ONE of:
-   - An atmosphere that DOES NOT HAVE A SAFE OXYGEN LEVEL
-   - Contaminants (airborne gases, vapours, dusts) that may cause injury from FIRE OR EXPLOSION
-   - HARMFUL CONCENTRATIONS of any airborne contaminants
-   - ENGULFMENT
+MANDATORY BEFORE WORK STARTS:
+- Signs must be erected at EACH ENTRANCE to the confined space
+- Signs must warn against entry by persons not listed on the entry permit
+- Signs must remain in place: while preparing to work, during work, and while packing up
 
-Does NOT include a mine shaft or the workings of a mine.
-
-ENTRY into a confined space occurs when a person's HEAD OR UPPER BODY enters the space or crosses its boundary.
-
-COMMON EXAMPLES of confined spaces (when they meet the definition):
-- Vats, tanks, pits, pipes, ducts, flues, chimneys, silos
-- Containers, pressure vessels
-- Underground sewers, wet or dry wells
-- Shafts, trenches (if atmospheric risk present), tunnels
-
-WHAT IS NOT A CONFINED SPACE:
-- Places intended for human occupancy with adequate ventilation, lighting and safe entry/exit (e.g. offices, workshops)
-- Abrasive blasting or spray painting booths designed for human occupancy
-- Spaces occasionally designed for occupancy with a READILY ACCESSIBLE DOOR AT GROUND LEVEL (e.g. cool stores with large ground-level openings, fumigated shipping containers with large ground-level openings)
-- Trenches are NOT confined spaces based on structural collapse risk alone — they become confined spaces only if they may contain harmful airborne contaminant concentrations
-
-DECLASSIFICATION RULE: A confined space CANNOT be declassified by temporary controls (e.g. temporary ventilation or a satisfactory pre-entry gas test). To be declassified, it must undergo permanent structural and use changes that eliminate ALL inherent hazards.
-
-SAFE OXYGEN LEVEL: 19.5% to 23.5% by volume.
+SECURITY DEVICES REQUIRED:
+- Locks or fixed barriers must be installed to prevent unauthorised entry
+- Signage alone is NOT sufficient
 
 VISUAL INDICATORS:
-- Tank, vessel, pit, silo, manhole, underground pipe access, or shaft = likely confined space — check criteria
-- Space with restricted entry (ladder access, small hatch) = potential confined space
-- Any space where a worker's head enters and which is not a normal human occupancy area = assess as confined space
-- "Confined Space — Authorised Entry Only" sign = confirmed confined space on site
-- Worker entering a manhole, tank, pit, or vessel = confined space entry requiring permit
+- "DANGER — CONFINED SPACE — AUTHORISED ENTRY ONLY" sign at access point = compliant
+- Confined space access without any signage = serious non-compliant (s68 offence)
+- Sign present but no barrier or lock = partially compliant, flag
+- Sign missing from one or more entry points during work = non-compliant
+- Traffic cones alone without signage = inadequate
 
 ---
 
-CHUNK 2: Confined Space — Hazardous Atmospheres
-Section: COP s3.2, s4.5; WHS Regulation s71, s72
-Topic: Atmospheric hazards, oxygen levels, flammable limits, and contaminant thresholds
+CHUNK 2: Atmospheric Testing — Oxygen and Flammable Gas Limits
+Section: CoP s3.2, s4.5; WHS Regulation s71, s72
+Topic: Safe oxygen levels, flammable gas thresholds, and testing requirements (KEY MEASUREMENTS)
 
-OXYGEN LEVELS:
+SAFE OXYGEN LEVEL:
 - SAFE RANGE: 19.5% to 23.5% by volume
-- OXYGEN DEFICIENCY (below 19.5%): causes impairment, loss of consciousness, asphyxiation
-- OXYGEN ENRICHMENT (above 23.5%): significantly increases fire and explosion risk
-- Air-supplied respiratory equipment MUST be provided to any worker entering a space with oxygen level LESS THAN 19.5% by volume
-
-CAUSES OF OXYGEN DEPLETION:
-- Biological processes (e.g. methane from sewers displacing oxygen)
-- Purging with inert gas
-- Surface oxidation/rusting inside metal tanks and vessels
-- Combustion of flammable substances
-- Absorption by grains, wood chips, soil, or chemicals in sealed silos
+- Below 19.5% = oxygen deficiency — air-supplied RPE MANDATORY
+- Above 23.5% = oxygen enrichment — fire/explosion risk
 
 FLAMMABLE GAS LIMITS (LEL = Lower Explosive Limit):
-- SAFE CONDITION: flammable gas/vapour/mist concentration LESS THAN 5% of LEL
-- DANGER ZONE: 5% to <10% of LEL — worker must be removed UNLESS a suitably calibrated CONTINUOUS-MONITORING FLAMMABLE GAS DETECTOR is in use
-- IMMEDIATE EVACUATION: concentration EQUAL TO OR GREATER THAN 10% of LEL — worker must be immediately removed
-- A FLAMMABLE ATMOSPHERE is one where flammable gas, vapour or mist is likely to EXCEED 5% of its LEL
+- SAFE: flammable gas/vapour/mist concentration LESS THAN 5% of LEL
+- DANGER ZONE: 5% to <10% of LEL — worker must be removed UNLESS continuous-monitoring flammable gas detector is in use
+- IMMEDIATE EVACUATION: concentration EQUAL TO OR GREATER THAN 10% of LEL
 
-PURGING RULES:
-- Purging is done using INERT GAS (e.g. nitrogen) to clear flammable gases before entry
-- PROHIBITION: Pure oxygen or gas mixtures with oxygen concentration GREATER THAN 21% by volume MUST NOT be used for purging or ventilating
-- After purging, ventilate with fresh air to restore oxygen to NORMAL LEVEL OF 21%
-- Atmospheric testing must be done BEFORE ENTRY after purging
-
-TESTING REQUIREMENTS (s71):
-Testing must cover:
-- OXYGEN CONTENT
-- Airborne concentration of FLAMMABLE CONTAMINANTS
-- Airborne concentration of POTENTIALLY HARMFUL CONTAMINANTS (e.g. H₂S, carbon monoxide)
-
-Testing methods:
-- INITIAL TESTING: from OUTSIDE the space using a sample probe inserted through access holes — test side to side AND top to bottom
+TESTING METHOD:
+- INITIAL TESTING: from OUTSIDE the space using sample probe inserted through access holes
+- Test side to side AND top to bottom
 - Hydrogen sulphide (H₂S): heavier than air — settles to BOTTOM
 - Methane: lighter than air — collects at TOP
-- Agitate liquids before monitoring as gases may be dissolved and released on disturbance
-- NEVER use human senses to determine if air is safe — many toxic/flammable gases are odourless
+- Agitate liquids before monitoring — gases may be dissolved and released on disturbance
+- NEVER use human senses to determine if air is safe
+
+PURGING PROHIBITION:
+- Pure oxygen or gas mixtures with oxygen concentration GREATER THAN 21% by volume MUST NOT be used for purging or ventilating
 
 VISUAL INDICATORS:
 - Gas detector being used before entry = positive compliance
@@ -104,36 +65,28 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 3: Confined Space — Entry Permit Requirements
-Section: WHS Regulation s65, s67, s77; COP s4.3
-Topic: Mandatory entry permit content, process, and record-keeping
+CHUNK 3: Entry Permit — Mandatory Content and Display
+Section: WHS Regulation s65, s67, s77; CoP s4.3
+Topic: Entry permit requirements, content, and record retention
 
-PROHIBITION: A PCBU MUST NOT allow or direct a worker to enter a confined space to carry out work UNLESS the worker has been issued a CONFINED SPACE ENTRY PERMIT.
+PROHIBITION: Worker MUST NOT enter a confined space without a CONFINED SPACE ENTRY PERMIT.
 
-Entry permit is also required when entering to conduct the INITIAL HAZARD IDENTIFICATION OR RISK ASSESSMENT.
-
-THE PERMIT MUST be completed IN WRITING by a COMPETENT PERSON and must:
-(a) SPECIFY the confined space to which it relates
-(b) RECORD the NAMES OF ALL PERSONS permitted to enter and the PERIOD OF TIME work will be carried out
-(c) SET OUT RISK CONTROL MEASURES based on the risk assessment, including:
-   - Control measures for SAFE ENTRY
-   - Details of SYSTEMS OF WORK
-   - List of equipment to be taken into the space
-   - Exclusions (e.g. ignition sources)
-   - Emergency rescue equipment required
-(d) Contain space for ACKNOWLEDGEMENT that work is completed and ALL PERSONS HAVE EXITED
+PERMIT MUST BE COMPLETED IN WRITING by a COMPETENT PERSON and must:
+- SPECIFY the confined space to which it relates
+- RECORD the NAMES OF ALL PERSONS permitted to enter and the PERIOD OF TIME work will be carried out
+- SET OUT RISK CONTROL MEASURES including: safe entry controls, systems of work, equipment list, exclusions, emergency rescue equipment required
+- Contain space for ACKNOWLEDGEMENT that work is completed and ALL PERSONS HAVE EXITED
 
 PERMIT SCOPE:
-- A single permit can cover MULTIPLE ENTRIES into one space and MULTIPLE ACCESS POINTS into the same single space
 - ONE PERMIT = ONE CONFINED SPACE
-- Permit must be RE-VALIDATED if: the person in direct management changes; a break in work continuity occurs; changes introduce new hazards; or new control measures are needed
+- Single permit can cover multiple entries and multiple access points into the same single space
+- Permit must be RE-VALIDATED if: person in direct management changes; break in work continuity; changes introduce new hazards; or new control measures needed
 
 RECORD RETENTION:
-- Permit must be kept until work is COMPLETED
-- If a NOTIFIABLE INCIDENT occurs: keep for AT LEAST 2 YEARS after work completion
-- Risk assessment copy must be kept for AT LEAST 28 DAYS after work completion, or 2 years after a notifiable incident
-- Risk assessment must be available to any relevant worker ON REQUEST
-- TRAINING RECORDS must be kept for 2 YEARS
+- Permit kept until work COMPLETED
+- If NOTIFIABLE INCIDENT occurs: keep for AT LEAST 2 YEARS after work completion
+- Risk assessment copy kept for AT LEAST 28 DAYS after work completion, or 2 years after notifiable incident
+- TRAINING RECORDS kept for 2 YEARS
 
 VISUAL INDICATORS:
 - Entry permit visible/posted at confined space entrance = positive compliance
@@ -144,53 +97,11 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 4: Confined Space — Risk Assessment Requirements
-Section: WHS Regulation s66, s77; COP s3.4
-Topic: Mandatory risk assessment obligations, content, and competency requirements
-
-MANDATORY: A risk assessment MUST be conducted BEFORE confined space work. It MUST be:
-- Conducted by a COMPETENT PERSON (person with training, qualification or experience)
-- RECORDED IN WRITING
-- REVIEWED AND REVISED whenever risks change
-
-Risk assessment must consider at minimum:
-(a) Whether work CAN BE CARRIED OUT WITHOUT ENTRY into the space
-(b) The NATURE OF THE CONFINED SPACE
-(c) CHANGES IN OXYGEN CONCENTRATION or airborne contaminant concentration
-(d) The WORK METHOD and range of methods available
-(e) The TYPE OF EMERGENCY PROCEDURES required (including rescue)
-
-Additional factors to assess:
-- Risk of ENGULFMENT
-- Number of persons in the space
-- Substances LAST CONTAINED in the space (indicates likely hazards)
-- Whether the space needs to be brought to ATMOSPHERIC PRESSURE before entry
-- Number of persons required OUTSIDE the space for communication, equipment, and emergency response
-- Risks from noise, electricity, biological hazards, mechanical plant
-- Physiological and psychological demands on workers
-
-GENERIC RISK ASSESSMENTS: Acceptable only where hazards, tasks, and circumstances are IDENTICAL across all spaces covered. Individual risk assessment required if hazards, tasks, or circumstances DIFFER.
-
-VISUAL INDICATORS:
-- Written risk assessment available on site = positive
-- No written risk assessment for confined space work = serious non-compliance
-- Risk assessment not reviewed after change in work conditions = non-compliant
-- Competency of person who conducted risk assessment not evident = flag
-
----
-
-CHUNK 5: Confined Space — Isolation Requirements
-Section: COP s4.4; AS 2865
-Topic: Energy and service isolation before confined space entry
+CHUNK 4: Isolation — Lockout/Tagout and Pipe Blanking
+Section: CoP s4.4; AS 2865
+Topic: Energy and service isolation methods before confined space entry (KEY MEASUREMENTS)
 
 ALL POTENTIALLY HAZARDOUS PLANT AND SERVICES must be ISOLATED BEFORE ENTRY.
-
-Isolation must prevent:
-- Introduction of hazardous contaminants through piping, ducts, vents, drains, conveyors, service pipes
-- ACTIVATION OR ENERGISING of machinery inside the space
-- Activation of heating/refrigerating or other plant outside the space that could affect the space
-- Release of STORED OR POTENTIAL ENERGY
-- Inadvertent use of electrical equipment
 
 PIPE WORK ISOLATION — acceptable methods (choose one):
 1. REMOVE valve, spool piece or expansion joint; then BLANK OR CAP the open end of piping (cap/blank must be tagged)
@@ -204,7 +115,6 @@ MOVING PARTS AND STORED ENERGY:
 
 LOCK AND TAG RULES:
 - Key must be kept by the PERSON PLACING THE LOCK
-- Spare keys must not be accessible except in emergencies
 - Tag must indicate a PERSON IS IN THE SPACE and isolation must not be removed until all persons have exited
 
 VISUAL INDICATORS:
@@ -216,15 +126,11 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 6: Confined Space — Standby Person and Communication
-Section: WHS Regulation s69; COP s4.6
+CHUNK 5: Standby Person and Communication System
+Section: WHS Regulation s69; CoP s4.6
 Topic: Standby person duties and communication requirements
 
-MANDATORY: A SYSTEM OF WORK must be in place that includes:
-(a) CONTINUOUS COMMUNICATION with the worker from outside the confined space
-(b) MONITORING OF CONDITIONS within the confined space by a STANDBY PERSON in the vicinity of the space
-
-A STANDBY PERSON MUST BE ASSIGNED before any worker enters a confined space.
+MANDATORY: A STANDBY PERSON MUST BE ASSIGNED before any worker enters a confined space.
 
 STANDBY PERSON MUST:
 - REMAIN OUTSIDE the confined space at ALL TIMES
@@ -232,12 +138,12 @@ STANDBY PERSON MUST:
 - Understand the NATURE OF HAZARDS inside the space and recognise symptoms workers may experience
 - Have ALL REQUIRED RESCUE EQUIPMENT IMMEDIATELY AVAILABLE (harnesses, lifting equipment, lifeline)
 - Have AUTHORITY TO ORDER WORKERS TO EXIT if a hazardous situation arises
-- NEVER ENTER THE SPACE TO ATTEMPT RESCUE (emergency services trained for rescue are to be used)
-- Communicate with persons inside the space using voice, radio, hand signals or other suitable methods
+- NEVER ENTER THE SPACE TO ATTEMPT RESCUE
 
 COMMUNICATION SYSTEM must enable:
 - Communication between persons inside and outside the space
 - Summoning help in an emergency
+- Methods: voice, radio, hand signals or other suitable methods
 
 VISUAL INDICATORS:
 - Person stationed outside confined space during entry = positive compliance (standby person)
@@ -245,47 +151,21 @@ VISUAL INDICATORS:
 - Standby person performing other tasks while workers are inside = non-compliant
 - Rescue equipment (harness, lifeline, hoist) visible at confined space opening = positive
 - No communication system visible for workers inside space = flag
-- "Confined Space — Authorised Entry Only" sign posted at entrance = positive
 
 ---
 
-CHUNK 7: Confined Space — Signage and Barricades
-Section: WHS Regulation s68; COP s4.8
-Topic: Required signage and access control at confined space entry points
-
-BEFORE any work in relation to a confined space starts, SIGNS MUST BE ERECTED at EACH ENTRANCE to the confined space.
-
-Signs must:
-- WARN AGAINST ENTRY by persons not listed on the confined space entry permit
-- Be in place: while PREPARING to work in the space; DURING WORK; and while PACKING UP after completion
-
-SIGNAGE ALONE IS NOT SUFFICIENT — SECURITY DEVICES (locks, fixed barriers) must also be installed to prevent unauthorised entry.
-
-VISUAL INDICATORS:
-- "DANGER — CONFINED SPACE — AUTHORISED ENTRY ONLY" sign at access point = compliant
-- Confined space access without any signage = non-compliant (direct regulatory offence under s68)
-- Sign present but no barrier or lock = partially compliant, flag
-- Sign missing from ONE OR MORE entry points while work is being carried out = non-compliant
-- Traffic cones alone without signage at confined space opening = inadequate
-
----
-
-CHUNK 8: Confined Space — Ventilation Requirements
-Section: COP s4.5; WHS Regulation s71
-Topic: Ventilation methods and requirements to maintain safe atmosphere
+CHUNK 6: Ventilation — Mechanical Systems and Monitoring
+Section: CoP s4.5; WHS Regulation s71
+Topic: Ventilation requirements to maintain safe atmosphere
 
 VENTILATION must be provided to ESTABLISH AND MAINTAIN a safe atmosphere for as long as anyone is in the confined space.
-
-VENTILATION OPTIONS:
-- Natural ventilation: only adequate if confined space has SUFFICIENT OPENINGS
-- Mechanical ventilation: required in most cases
 
 MECHANICAL VENTILATION EQUIPMENT MUST be:
 - CONTINUOUSLY MONITORED to ensure it operates while the space is occupied
 - Controls CLEARLY IDENTIFIED, TAGGED AND PROTECTED against unauthorised interference
 
 TYPES OF MECHANICAL VENTILATION:
-- LOCAL EXHAUST VENTILATION (LEV): effective where contaminant source is localised and extraction point can be close to the source (e.g. capturing welding fumes)
+- LOCAL EXHAUST VENTILATION (LEV): effective where contaminant source is localised and extraction point can be close to the source
 - DILUTION VENTILATION: air introduced to circulate throughout the space — supply point must ensure air is FRESH, BREATHABLE AND FREE OF CONTAMINANTS (must not source from near combustion engines or other pollutant sources)
 
 PROHIBITION: Ventilation must NOT introduce oxygen at concentrations GREATER THAN 21% by volume.
@@ -299,8 +179,8 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 9: Confined Space — Respiratory Protective Equipment (RPE)
-Section: COP s4.5; AS/NZS 1715
+CHUNK 7: Respiratory Protective Equipment (RPE) Requirements
+Section: CoP s4.5; AS/NZS 1715
 Topic: When RPE is required and what type must be used
 
 AIR-SUPPLIED RESPIRATORY EQUIPMENT (RPE) MUST be provided when:
@@ -312,8 +192,6 @@ AIR-SUPPLIED RESPIRATORY EQUIPMENT (RPE) MUST be provided when:
 RPE TYPES:
 - AIR-SUPPLIED respiratory equipment (airline breathing apparatus): preferred for most confined space work
 - SELF-CONTAINED BREATHING APPARATUS (SCBA): for rescue and situations where airline supply is impractical
-
-CONSERVATIVE APPROACH: When in any doubt about the airborne contaminant or RPE type required, use AIR-SUPPLIED RESPIRATORY EQUIPMENT.
 
 RESCUE ENTRY: Workers performing rescue who enter a confined space in an emergency must be provided with AIR-SUPPLIED RPE if:
 - The atmosphere DOES NOT HAVE A SAFE OXYGEN LEVEL; OR
@@ -328,8 +206,8 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 10: Confined Space — Emergency Procedures
-Section: WHS Regulation s74; COP Chapter 5
+CHUNK 8: Emergency Rescue Equipment and Procedures
+Section: WHS Regulation s74; CoP Chapter 5
 Topic: Emergency and rescue procedure requirements for confined spaces
 
 MANDATORY: A PCBU must ESTABLISH and PRACTISE first aid and rescue procedures for confined space emergencies.
@@ -341,15 +219,6 @@ PCBU MUST ENSURE:
 - Openings are NOT OBSTRUCTED during work
 - All plant, equipment and PPE provided for emergency rescue is MAINTAINED IN GOOD WORKING ORDER
 
-FACTORS THAT MUST BE CONSIDERED when establishing emergency procedures:
-- Geographic LOCATION of the confined space and distance from medical facilities
-- How workers inside will COMMUNICATE in an emergency and how the alarm is raised
-- Whether emergency personnel can access the site during NIGHT SHIFT, WEEKENDS AND HOLIDAYS
-- The types of emergencies contemplated and appropriate RESCUE AND RESUSCITATION EQUIPMENT
-- Whether rescue equipment is kept IN CLOSE PROXIMITY to the space for IMMEDIATE USE
-- Whether rescuers are TRAINED, SUFFICIENTLY FIT, and CAPABLE of using rescue equipment (breathing apparatus, lifelines, firefighting equipment)
-- Availability of first aid, trained first aiders, and local emergency services
-
 RESCUE PRINCIPLE: Rescue should be performed from OUTSIDE the confined space where possible.
 
 KEY RULE: If a person inside a confined space has been OVERCOME BY LACK OF OXYGEN or by airborne contaminants, ALWAYS ASSUME that entry for rescue is UNSAFE unless AIR-SUPPLIED RESPIRATORY EQUIPMENT is used.
@@ -360,77 +229,26 @@ VISUAL INDICATORS:
 - No rescue equipment at confined space entry = non-compliant
 - Confined space opening too small for rescue access = flag — design issue, must be addressed
 - Stand-by person without rescue equipment = non-compliant
-- Local emergency services not notified of confined space work at remote site = flag
 
 ---
 
-CHUNK 11: Confined Space — Training Requirements
-Section: WHS Regulation s76; COP s1.4
-Topic: Who must be trained and what training must cover
+CHUNK 9: Atmospheric Hazards — Toxic and Flammable Gases
+Section: CoP s3.2
+Topic: Common toxic and flammable gases in confined spaces
 
-RELEVANT WORKERS who must receive training include:
-- Workers who ENTER OR WORK IN a confined space
-- Workers who UNDERTAKE HAZARD IDENTIFICATION or risk assessment
-- Workers who IMPLEMENT RISK CONTROL MEASURES
-- Workers who COMPLETE ENTRY PERMITS
-- STANDBY PERSONS and those who MONITOR CONDITIONS
-- Workers who PURCHASE EQUIPMENT for confined space work
-- SUPERVISORS of any of the above
+TOXIC GASES:
+- Hydrogen sulphide (H₂S): heavier than air — settles to BOTTOM — sewers, drains, manure pits
+- Carbon monoxide (CO): from combustion engines near openings
+- Carbon dioxide (CO₂): from biological processes, fermentation
 
-TRAINING MUST COVER:
-(a) NATURE OF ALL HAZARDS associated with the confined space
-(b) NEED FOR AND APPROPRIATE USE of risk control measures
-(c) Selection, fit, use, wearing, testing, storage and maintenance of ALL PPE required
-(d) CONTENTS OF THE CONFINED SPACE ENTRY PERMIT
-(e) EMERGENCY PROCEDURES
-
-TRAINING RECORD RETENTION: Training records must be kept for AT LEAST 2 YEARS.
-
-VISUAL INDICATORS:
-- Workers unable to explain permit requirements or emergency procedures = inadequate training, flag
-- Standby person unaware of hazards inside the space = non-compliant training
-- No training records available for confined space workers = non-compliant
-- New workers on site performing confined space duties without induction = flag
-
----
-
-CHUNK 12: Confined Space — Hazard Types Reference
-Section: COP s3.2, s3.3
-Topic: Full list of hazards to identify and assess in confined spaces
-
-ATMOSPHERIC HAZARDS:
-- Oxygen deficiency (below 19.5% — asphyxiation risk)
-- Oxygen enrichment (above 23.5% — fire and explosion risk)
-- Toxic gases: hydrogen sulphide (H₂S), carbon monoxide (CO), carbon dioxide (CO₂)
-- Flammable gases: methane, petroleum vapours, solvent vapours
-- Airborne dust: flour, grain, coal, ceramic dust
-- Residues in tanks/vessels that evaporate on disturbance
+FLAMMABLE GASES:
+- Methane: lighter than air — collects at TOP — sewers, grain silos
+- Petroleum vapours: tanks, vessels previously containing fuel or solvents
+- Solvent vapours: paint, adhesive residues
 
 ENGULFMENT HAZARDS:
 - Grain, sand, fly ash, fertiliser, animal feed, coal, sewage, liquid
 - "BRIDGING" — grain/material forms a crust over a void; workers on the crust or below it risk engulfment if the bridge collapses
-
-BIOLOGICAL HAZARDS:
-- Sewers, grain silos, manure pits — viruses, bacteria, fungi causing disease or dermatitis
-
-MECHANICAL HAZARDS:
-- Augers, agitators, blenders, mixers, stirrers — entanglement, crushing, cutting
-
-ELECTRICAL HAZARDS:
-- Cables, transformers, capacitors, relays, exposed terminals, wet surfaces
-
-NOISE HAZARDS:
-- Amplified by hard surfaces inside confined spaces — may prevent hearing warning signals
-
-ENVIRONMENTAL HAZARDS:
-- Heat or cold stress from work, process or conditions
-- Slippery surfaces, poor lighting
-- Vertical openings — fall-in risk for persons outside
-
-EXTERNAL SOURCES OF CONTAMINATION:
-- COMBUSTION ENGINES operating near opening — carbon monoxide build-up inside space
-- Hot work near adjacent confined space containing flammable atmosphere — explosion risk
-- Traffic hazards at confined space entries on footpaths or roads
 
 VISUAL INDICATORS:
 - Evidence of previous contents (residue, staining, pipe connections) in tank/vessel = assess for atmospheric hazard
@@ -441,8 +259,23 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 13: Confined Space — Elimination and Minimisation (Hierarchy)
-Section: COP s4.1, s4.2; WHS Regulation s66
+CHUNK 10: Entry Opening Size and Obstruction
+Section: WHS Regulation s74; CoP Chapter 5
+Topic: Entry and exit opening requirements for emergency access
+
+MANDATORY:
+- Entry and exit openings must be of SUFFICIENT SIZE to allow emergency access
+- Openings must NOT BE OBSTRUCTED during work
+
+VISUAL INDICATORS:
+- Confined space opening too small for rescue access = flag — design issue, must be addressed
+- Equipment, hoses, or materials blocking confined space opening during work = non-compliant
+- Manhole cover partially closed during occupied work = obstruction, non-compliant
+
+---
+
+CHUNK 11: Elimination of Entry — Remote Work Methods
+Section: CoP s4.1, s4.2; WHS Regulation s66
 Topic: Hierarchy of control — eliminating the need to enter confined spaces
 
 FIRST PRIORITY — ELIMINATE THE NEED TO ENTER:
@@ -452,14 +285,22 @@ Work should always be carried out from outside the confined space where practica
 - REMOTELY OPERATED FLAIL DEVICES or air purgers to clear silo blockages
 - HOOKS, LONG-HANDLED CLASPS or magnets on strings to retrieve dropped objects
 
-IF ENTRY CANNOT BE AVOIDED — apply hierarchy in order:
-1. SUBSTITUTION: change work methods to minimise time inside or number of entrants
-2. ISOLATION: isolate moving parts, electrical services, pipework
-3. ENGINEERING CONTROLS: forced extraction ventilation, purging
-4. ADMINISTRATIVE CONTROLS: training, entry permits, standby persons, communication systems
-5. PPE (LAST RESORT): RPE, harnesses, hearing protection, protective clothing
-
 VISUAL INDICATORS:
 - Evidence of remote inspection tools being used before sending workers in = positive best practice
 - Workers entering confined space to perform tasks that could be done from outside = flag, not best practice
 - Only PPE and administrative controls used (no engineering controls) where engineering is practicable = non-compliant hierarchy application
+
+---
+
+CHUNK 12: Mechanical Hazards — Isolation of Moving Parts
+Section: CoP s3.2, s4.4
+Topic: Mechanical hazards requiring isolation before entry
+
+MECHANICAL HAZARDS requiring isolation:
+- Augers, agitators, blenders, mixers, stirrers — entanglement, crushing, cutting
+- All machinery must be REDUCED TO ZERO ENERGY condition before entry
+
+VISUAL INDICATORS:
+- Agitator or mixer present in vessel = mechanical isolation required before entry
+- Machinery inside confined space not de-energised before entry = serious non-compliance
+- Moving parts visible inside confined space during occupied work = life-threatening non-compliance

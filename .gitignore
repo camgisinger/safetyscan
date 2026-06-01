@@ -33,6 +33,12 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# one-off utility scripts containing credentials — run locally only
+rewrite_docs.mjs
+rewrite_scaffolding.mjs
+upload_docs.mjs
+upload_chunks.mjs
+
 # vercel
 .vercel
 

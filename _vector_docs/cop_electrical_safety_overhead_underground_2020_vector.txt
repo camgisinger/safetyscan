@@ -5,157 +5,159 @@ REGION: QLD
 WORK_TYPES: electrical_safety, construction, plant_operation, excavation, vegetation_management, agriculture, transport
 SOURCE: Electrical Safety Office (ESO)
 CURRENT AS AT: 2020 (Commenced 2 January 2020)
-CLAUSE_PREFIX: ES Regulation s, ES Act s, WHS Regulation s
-REFERENCE_STANDARD: AS/NZS 3760 In-service safety inspection and testing of electrical equipment; AS/NZS 3000 Electrical installations.
 
 ---
 
-CHUNK 1: Primary Duties and Electrical Safety
-Section: ES Act s30; ES Regulation s11, s68; COP s1.2
-Topic: Legislative framework and core safety obligations
+CHUNK 1: Exclusion Zones — Untrained Persons, Overhead Uninsulated Lines
+Section: ES Regulation s68, s69, Schedule 2; CoP s3.1, s3.2
+Topic: Mandatory minimum clearance distances for untrained workers and plant near overhead powerlines (KEY MEASUREMENTS)
 
-PRIMARY DUTY: A PCBU must ensure the person's business or undertaking is conducted in a way that is electrically safe. This includes ensuring that no person, plant or thing at the workplace comes within an unsafe distance of an overhead or underground electric line.
+UNTRAINED PERSONS — PERSON/PLANT EXCLUSION DISTANCES (with consultation / without consultation):
+- Low Voltage (<1000V): 1000mm with consultation / 3000mm without consultation
+- Above LV up to 33kV: 2000mm with consultation / 3000mm without consultation
+- Above 33kV up to 132kV: 3000mm
+- Above 132kV up to 220kV: 4500mm (Person); 6000mm (Plant)
+- Above 220kV up to 275kV: 5000mm (Person); 6000mm (Plant)
+- Above 275kV up to 330kV: 6000mm
+- Above 330kV up to 500kV: 6000mm (Person); 8000mm (Plant)
 
-DUTY HOLDERS:
-- Officers: Must exercise due diligence to ensure the PCBU complies with the ES Act and ES Regulation
-- Workers: Must take reasonable care for their own electrical safety and comply with reasonable instructions
-- Treatment of Lines: Electric lines MUST BE TREATED AS LIVE until they have been proven to be de-energised, isolated, and (for high voltage) effectively earthed
+UNTRAINED PERSONS — VEHICLE EXCLUSION DISTANCES:
+- Low Voltage: 600mm
+- Above LV up to 33kV: 900mm
+- Above 33kV up to 132kV: 2100mm
+- Above 132kV up to 220kV: 2900mm
+- Above 220kV up to 275kV: 2900mm
+- Above 275kV up to 330kV: 3400mm
+- Above 330kV up to 500kV: 4400mm
+
+DC LINES (untrained persons):
+- +/- 25kV: 3000mm (Person/Plant); 900mm (Vehicle)
+- +/- 85kV and +/- 150kV: 3000mm (Person/Plant); 2100mm (Vehicle)
 
 VISUAL INDICATORS:
-- Presence of overhead wires, poles, towers, or stay wires = potential electrical hazard
-- Workers using conductive tools (e.g. long ladders, metal pipes) near lines = high-risk indicator
-- Written confirmation from the person in control of the line that it is de-energised = positive safety indicator
+- Any part of worker, plant or load within the relevant exclusion distance = serious non-compliance
+- Tiger tails/Torapoli pipes on lines = lines are energised and marked, NOT insulated
+- Work within 3m of bare line without prior consultation = non-compliant for untrained persons
+- No exclusion zone markers (red warning tape) visible near energised lines during plant operation = non-compliant
 
 ---
 
-CHUNK 2: Unsafe Distances and Exclusion Zones
-Section: ES Regulation s68, s69, Schedule 2; COP s3.1, s3.2, s3.3
-Topic: Mandatory approach distances based on training and voltage
-
-EXCLUSION ZONE: A safety envelope around an electric line. No part of a worker, operating plant, or vehicle should enter an exclusion zone while the line is energised.
-
-LOW VOLTAGE DEFINITION: Voltage greater than extra low voltage but not more than 1000V AC RMS or 1500V ripple-free DC.
-
-UNTRAINED PERSONS — OVERHEAD UNINSULATED LINES (Person/Plant exclusion distance; Vehicle exclusion distance):
-- Low Voltage (<1000V): 1000mm with consultation / 3000mm without consultation; Vehicle: 600mm
-- Above LV up to 33kV: 2000mm with consultation / 3000mm without consultation; Vehicle: 900mm
-- Above 33kV up to 132kV: 3000mm (Person/Plant); Vehicle: 2100mm
-- Above 132kV up to 220kV: 4500mm (Person); 6000mm (Plant); Vehicle: 2900mm
-- Above 220kV up to 275kV: 5000mm (Person); 6000mm (Plant); Vehicle: 2900mm
-- Above 275kV up to 330kV: 6000mm (Person/Plant); Vehicle: 3400mm
-- Above 330kV up to 500kV: 6000mm (Person); 8000mm (Plant); Vehicle: 4400mm
-
-UNTRAINED PERSONS — DC LINES:
-- +/- 25kV: 3000mm (Person/Plant); Vehicle: 900mm
-- +/- 85kV and +/- 150kV: 3000mm (Person/Plant); Vehicle: 2100mm
+CHUNK 2: Exclusion Zones — Authorised/Instructed Persons, Overhead Lines
+Section: ES Regulation s68, s69, Schedule 2; CoP s3.1, s3.3
+Topic: Reduced clearance distances for trained workers with safety observer (KEY MEASUREMENTS)
 
 AUTHORISED/INSTRUCTED PERSONS — OVERHEAD UNINSULATED LINES:
 - Low Voltage: No exclusion zone prescribed (no-touch zone applies)
-- Up to 33kV: 700mm for persons; 1200mm for operating plant with a safety observer
+- Up to 33kV: 700mm (Person); 1200mm (Plant with safety observer)
 - Above 33kV up to 50kV: 750mm (Person/Vehicle); 1300mm (Plant)
 - Above 50kV up to 66kV: 1000mm (Person/Vehicle); 1400mm (Plant)
 
-PROHIBITIONS:
-- An untrained person MUST NOT allow any part of their body or anything they are handling or wearing to enter the relevant exclusion zone
-- A safety observer MUST NOT carry out any other work or function that compromises their role
-- A safety observer should not be required to observe more than one crane or operating plant at a time
-- The crane or operating plant MUST NOT be operated in the authorisation zone without a safety observer or another safe system of work
-- A safety observer SHOULD NOT be located on the work basket of an elevating work platform
-
-NOTE: Tiger Tails (Torapoli pipes) are used as visual indicators of line position only — they DO NOT insulate wires.
+SAFETY OBSERVER REQUIREMENTS (ES Regulation s69):
+- MUST NOT carry out any other work or function that compromises their role
+- Should NOT observe more than one crane or operating plant at a time
+- Should NOT be located on the work basket of an elevating work platform
+- MUST have authority to stop the operation
 
 VISUAL INDICATORS:
-- Tiger tails/Torapoli pipes on lines = lines are energised and marked, not insulated
-- Safety observer or spotter present and communicating with plant operators = positive compliance
-- Work within 3 metres of a bare line without prior consultation = non-compliant for untrained persons
-- No exclusion zone markers (red warning tape) visible near energised lines during plant operation = non-compliant
-- Visible stay wires on poles near work area = must be included in risk assessment — often overlooked
-- Safety observer positioned on the work basket of an EWP = non-compliant
+- Safety observer present and communicating with plant operator = positive compliance
+- Safety observer positioned on EWP work basket = non-compliant
 - Safety observer visibly doing another task while plant operates near lines = non-compliant
-- Plant operating on uneven terrain near lines where ground movement could cause surge toward lines = flag
-- Knuckle boom EWP with boom intruding toward lines during repositioning = flag
+- Plant operating within authorisation zone without safety observer or documented safe system = non-compliant
+- Operator and safety observer without two-way communication = flag
 
 ---
 
-CHUNK 3: Operating Plant Near Overhead Lines
-Section: COP s4.1, s4.3, s4.4
-Topic: Requirements for cranes, tip trucks, and elevated work platforms (EWPs)
+CHUNK 3: Operating Plant Near Overhead Lines — Cranes, Tip Trucks, EWPs
+Section: CoP s4.1, s4.3, s4.4
+Topic: Safety observer zone requirements and plant operation controls
 
-SAFETY OBSERVER ZONE: A crane or plant is in this zone when any part of the plant or load COULD enter the exclusion zone during operation.
-- A safety observer should be employed
-- The observer MUST NOT carry out any other work that compromises their role
-- The observer MUST have the authority to stop the operation
+SAFETY OBSERVER ZONE: Any part of plant or load COULD enter the exclusion zone during operation.
+- Safety observer MUST be employed
+- Observer MUST NOT carry out other work that compromises their role
+- Observer MUST have authority to stop the operation
 
-AUTHORISATION ZONE: Applies when plant is operated by an authorised or instructed person.
-- A safety observer OR another safe system of work must be used to prevent contact with the line
+AUTHORISATION ZONE: Plant operated by authorised/instructed person.
+- Safety observer OR another safe system of work MUST be used to prevent contact
+
+PROHIBITIONS:
+- Crane or operating plant MUST NOT be operated in authorisation zone without safety observer or safe system of work
+- Safety observer should NOT be required to observe more than one crane or plant at a time
 
 VISUAL INDICATORS:
-- Tip truck tray raised near overhead lines without a spotter = high-risk non-compliance
-- Safety observer using red warning tape to mark the exclusion zone boundary = positive indicator
+- Tip truck tray raised near overhead lines without spotter = high-risk non-compliance
+- Safety observer using red warning tape to mark exclusion zone boundary = positive indicator
 - Crane or EWP operating near lines with no safety observer = non-compliant
-- Operator remaining in the cabin while plant is in the safety observer zone = positive indicator (isolated from earth)
-- Plant operator and safety observer without two-way communication = flag
+- Operator remaining in cabin while plant in safety observer zone = positive indicator (isolated from earth)
+- Plant operating on uneven terrain near lines where ground movement could cause surge = flag
+- Knuckle boom EWP with boom intruding toward lines during repositioning = flag
+- Visible stay wires on poles near work area = must be included in risk assessment
 
 ---
 
-CHUNK 4: Work Near Low Voltage Lines on Buildings
-Section: COP s5.1, s5.2, s5.3
-Topic: Maintenance, painting, and scaffolding near structures
+CHUNK 4: Work Near Low Voltage Lines on Buildings — No-Touch Zone
+Section: CoP s5.1, s5.2, s5.3
+Topic: Maintenance, painting and scaffolding near insulated service lines
 
-NO-TOUCH ZONE: Applies to an insulated low voltage line examined for visible defects by a competent person. A worker may go as close as they need but MUST NOT TOUCH the line.
+NO-TOUCH ZONE: Applies to insulated low voltage line examined for visible defects by competent person.
+- Worker may go as close as needed but MUST NOT TOUCH the line
 
-VISUAL EXAMINATION — an insulated line should be visually checked to ensure:
-- The insulation is intact with no tears or cracks
-- There are no exposed live parts anywhere on the line
-- If effectively insulated cannot be determined, the line SHOULD BE TREATED AS BARE
+VISUAL EXAMINATION REQUIREMENTS — insulated line must be checked for:
+- Insulation intact with no tears or cracks
+- No exposed live parts anywhere on the line
+- If effectively insulated cannot be determined, line MUST BE TREATED AS BARE
+
+BARE LINE STATUS: If insulation defects visible, full exclusion zones apply (1000mm with consultation / 3000mm without consultation for untrained persons).
 
 VISUAL INDICATORS:
-- Scaffolding erected within 3 metres of an uninspected low voltage line without consultation = non-compliant
-- Worker using a metal roofing sheet near the point of attachment for a service line = high risk of encroachment
-- Visible tears, cracks or other physical defects in the insulation of a service line = "bare" line status; must maintain exclusion zones
-- No evidence of visual inspection of service line before work commenced near it = flag
-- Work being performed near the mains connection box or point where service lines attach to a building = flag — requires inspection of insulation before proceeding
+- Scaffolding erected within 3m of uninspected low voltage line without consultation = non-compliant
+- Worker using metal roofing sheet near service line attachment point = high risk of encroachment
+- Visible tears, cracks or physical defects in service line insulation = "bare" line status — exclusion zones apply
+- No evidence of visual inspection of service line before work commenced = flag
+- Work near mains connection box or service line attachment point without inspection = flag
 
 ---
 
-CHUNK 5: High Load Transportation
-Section: COP s8.2, s8.3
-Topic: Moving loads exceeding 4.6 metres in height
+CHUNK 5: High Load Transportation — Height Categories and Escort Requirements
+Section: CoP s8.2, s8.3
+Topic: Moving loads exceeding 4.6 metres in height on public roads (KEY MEASUREMENTS)
 
-HIGH LOAD CATEGORIES AND REQUIREMENTS:
+HIGH LOAD CATEGORIES:
 - Category 1 (Up to 4.6m): No notification required
-- Category 2 (Over 4.6m to 5.0m): Notification to the electricity entity is required; route should be scoped by a qualified person
+- Category 2 (Over 4.6m to 5.0m): Notification to electricity entity required; route scoped by qualified person
 - Category 3 (Over 5.0m to 5.5m): Notification required; route scoped; escort may be required
-- Category 4 (Exceeding 5.5m): Notification required; route scoped; escort is required
+- Category 4 (Exceeding 5.5m): Notification required; route scoped; escort REQUIRED
 
 VISUAL INDICATORS:
-- Load height exceeding 4.6m moving on public roads without an escort or scoping record = potential non-compliance
-- Presence of dips in the road profile = risk of the load rising into overhead lines
-- High load escort service provider directing the road transport operator = positive safety indicator
+- Load height exceeding 4.6m moving on public roads without escort or scoping record = potential non-compliance
+- Presence of dips in road profile = risk of load rising into overhead lines
+- High load escort service provider directing road transport operator = positive safety indicator
 - No height measuring device visible on oversize load = flag
+- Load exceeding 5.5m without escort vehicle = non-compliant
 
 ---
 
-CHUNK 6: Underground Electric Lines and Excavation
-Section: WHS Regulation s304; COP s9.1, s9.2, s9.3
-Topic: Safe digging and location of buried services
+CHUNK 6: Underground Electric Lines — Excavation and Service Location
+Section: WHS Regulation s304; CoP s9.1, s9.2, s9.3
+Topic: Mandatory service location and safe digging requirements
 
-LOCATION REQUIREMENTS: Before starting excavation, a PCBU must take all reasonable steps to obtain current underground essential services information.
-- Free Enquiry Service: Before You Dig Australia — phone 1100 or www.byda.com.au
-- Information obtained must include the location AND DEPTH of any pipes, cables or other plant
-- Any conditions on the proposed excavation work specified by the asset owner MUST be complied with
-- The person with management or control AND any PCBU given the information must have regard to it when carrying out or directing excavation (WHS Regulation s304; COP s9.3)
+BEFORE EXCAVATION STARTS:
+- PCBU MUST obtain current underground essential services information
+- Free service: Before You Dig Australia — phone 1100 or www.byda.com.au
+- Information MUST include location AND DEPTH of pipes, cables or other plant
+- Any conditions specified by asset owner MUST be complied with
+- Underground services information MUST be available for inspection until work completed
 
-NOTE: The Code does not prescribe a universal "no dig zone" numerical distance. The specific clearance distance is set by the asset owner in the conditions provided with the underground services information. Those conditions are mandatory.
+NO UNIVERSAL "NO DIG ZONE": Specific clearance distance is set by asset owner in conditions provided with underground services information. Those conditions are MANDATORY.
 
 RECORD KEEPING:
-- Underground essential services information must be available for inspection until the work is completed
-- If a notifiable incident occurs, records must be kept for at least 2 years after the incident
+- If notifiable incident occurs, records must be kept for at least 2 years after incident
 
 VISUAL INDICATORS:
-- Excavation (trenching or post-hole digging) starting without a BYDA report on site = serious non-compliance
-- Conduits or markers visible in a trench = positive identification of underground assets — stop and verify
-- Worker driving star pickets into the ground without checking for buried electrical cables = high-risk activity
+- Excavation (trenching or post-hole digging) starting without BYDA report on site = serious non-compliance
+- Conduits or markers visible in trench = positive identification of underground assets — stop and verify
+- Worker driving star pickets without checking for buried cables = high-risk activity
 - No underground services plans visible on site during excavation = non-compliant
 - Cable identification tape (yellow/orange) visible during excavation = underground electrical asset present — stop work
 - Excavation proceeding without regard to asset owner conditions = non-compliant
+
+---

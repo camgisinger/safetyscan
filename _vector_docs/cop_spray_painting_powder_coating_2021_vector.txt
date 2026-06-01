@@ -4,91 +4,69 @@ JURISDICTION: QLD
 REGION: QLD
 WORK_TYPES: spray_painting, powder_coating, manufacturing, automotive_refinishing, surface_preparation, metal_finishing, construction
 SOURCE: Workplace Health and Safety Queensland (WHSQ)
-CURRENT AS AT: 2021 (approved under section 274 of the Work Health and Safety Act 2011)
-CLAUSE_PREFIX: s
-REFERENCE_STANDARD: AS/NZS 4114 Spray painting booths, designated spray painting areas and paint mixing rooms; AS 3754 Safe application of powder coatings by electrostatic spraying; AS 2268 Electrostatic paint and powder spray guns for explosive atmospheres; AS/NZS 60079.10.1 Explosive atmospheres – Classification of areas; AS/NZS 1715 Respiratory protective equipment; AS/NZS 1716 Respiratory protective devices.
+CURRENT AS AT: 2021
 
 ---
 
-CHUNK 1: Definitions and Primary Duties
-Section: s1.1, s1.2; WHS Act s19
-Topic: Legislative scope and core safety obligations
-
-SPRAY PAINTING means a process by which liquid paint is applied under pressure to an object, including conventional compressed air, airless spray painting, and electrostatic spray painting.
-
-POWDER COATING means a process by which electrostatically charged powder is applied onto an earthed object.
-
-PRIMARY DUTY: A PCBU must ELIMINATE risks arising from spray painting or powder coating, or if not reasonably practicable, MINIMISE the risks so far as is reasonably practicable.
-
-DUTY HOLDERS:
-- Designers/Manufacturers/Suppliers: Must ensure, so far as is reasonably practicable, that plant or substances are without risks to health and safety, including carrying out testing and providing specific information
-- Workers: Must take reasonable care for their own safety and comply with any reasonable instructions
-
-VISUAL INDICATORS:
-- Workers performing spray painting without a designated booth or exclusion zone = duty breach
-- Worker describing two-pack polyurethane paint application as "minor touch-up" to avoid controls = non-compliant risk assessment
-- No SDS available for spray paint products being used = non-compliant
-
----
-
-CHUNK 2: Prohibited and Restricted Chemicals
+CHUNK 1: Prohibited Chemicals — Banned Substances for Spray Painting
 Section: s3.1; Schedule 10
-Topic: Mandatory bans on specific hazardous substances for spray painting
+Topic: Mandatory bans on specific hazardous substances (KEY MEASUREMENTS)
 
-PROHIBITED FOR SPRAY PAINTING — a PCBU MUST NOT use, handle or store these chemicals for spray painting:
+PROHIBITED FOR SPRAY PAINTING — MUST NOT use, handle or store:
 - Arsenic and its compounds
-- Benzene (benzol): if the substance contains MORE THAN 1 PER CENT BY VOLUME
+- Benzene (benzol): if substance contains MORE THAN 1% BY VOLUME
 - Carbon disulphide (carbon bisulphide)
 - Lead carbonate
-- Methanol (methyl alcohol): if the substance contains MORE THAN 1 PER CENT BY VOLUME
+- Methanol (methyl alcohol): if substance contains MORE THAN 1% BY VOLUME
 - Tetrachloroethane and Tetrachloromethane (carbon tetrachloride)
 - Tributyl tin
 
-ISOCYANATES: Commonly found in two-pack polyurethane paints. Exposure SHOULD BE CONSIDERED AS HIGH RISK. Full air-supplied respiratory protection is mandatory when spraying isocyanates in any enclosed booth.
+ISOCYANATES (two-pack polyurethane paints):
+- Exposure is HIGH RISK
+- Full air-supplied respiratory protection MANDATORY when spraying in any enclosed booth (s3.10)
 
 VISUAL INDICATORS:
-- SDS for a spray paint showing Benzene content >1% by volume = illegal/prohibited
-- SDS showing Methanol content >1% by volume = prohibited for spray painting
-- Two-pack polyurethane spray painting without air-supplied respirator = life-threatening non-compliance
-- Sanding of polyurethane paints that are not fully cured = high risk of isocyanate exposure via dust
+- SDS showing Benzene content >1% by volume = illegal/prohibited
+- SDS showing Methanol content >1% by volume = prohibited
+- Two-pack polyurethane spraying without air-supplied respirator = life-threatening non-compliance
+- Sanding uncured polyurethane paint = high isocyanate exposure risk
 
 ---
 
-CHUNK 3: Spray Booths — Design and Ventilation
+CHUNK 2: Spray Booth Ventilation — Minimum Airflow Speeds
 Section: s4.1; AS/NZS 4114
-Topic: Mandatory engineering controls and airflow thresholds
+Topic: Mandatory air movement thresholds for spray booths (KEY MEASUREMENTS)
 
-BOOTH REQUIREMENT: A spray booth SHOULD BE USED when spray painting with a hazardous chemical, except for items that cannot fit in a booth or for minor touch-ups.
-
-VENTILATION SPEEDS — minimum air movement the system must be capable of producing:
+MINIMUM VENTILATION SPEEDS (system must be capable of producing):
 - Full DOWN-DRAUGHT BOOTH: 0.3 m/s
 - ELECTROSTATIC SPRAYING: 0.4 m/s
 - ANY OTHER BOOTH: 0.5 m/s
 
-POST-PURGE CYCLE: Control systems should operate a MINIMUM FIVE-MINUTE POST-PURGE PERIOD following spraying before personnel re-enter.
+POST-PURGE CYCLE:
+- MINIMUM FIVE MINUTES after spraying before personnel re-enter
 
 PROHIBITIONS inside spray booths:
-- Absence of an air filter medium inside the booth = PROHIBITED
-- Use of absorbent materials (paper, cardboard, wood) on booth floors = fire and maintenance breach
+- Absence of air filter medium = PROHIBITED — booth must not be used
+- Absorbent materials (paper, cardboard, wood) on booth floors = fire and maintenance breach
 
 VISUAL INDICATORS:
-- No air filter medium visible inside spray booth = prohibited — booth must not be used
-- Worker positioned between the spray gun and the exhaust air outlet = dangerous positioning (should be beside or behind gun)
-- Absorbent materials on booth floor = fire risk
+- No air filter medium visible inside spray booth = prohibited
 - Booth ventilation system not running during spray operations = serious non-compliance
 - Booth filters visibly clogged or saturated = reduced ventilation — must be replaced
+- Worker positioned between spray gun and exhaust outlet = dangerous positioning
+- Absorbent materials on booth floor = fire risk
 
 ---
 
-CHUNK 4: Spraying Outside a Booth — Exclusion Zones
+CHUNK 3: Spraying Outside a Booth — Exclusion Zone Distances
 Section: s4.1; Appendix C
-Topic: Mandatory distances for open-air and outdoor spraying
+Topic: Mandatory exclusion zone dimensions for open-air spraying (KEY MEASUREMENTS)
 
-EXCLUSION ZONES — when spraying outside a booth, a zone must be designated:
+EXCLUSION ZONES when spraying outside a booth:
 
 GENERAL RULE (low risk open area):
 - AT LEAST 6 METRES HORIZONTAL (ensuring 3 metres distance in all directions from sprayer)
-- AT LEAST 2 METRES VERTICAL CLEARANCE above and below the point of application
+- AT LEAST 2 METRES VERTICAL CLEARANCE above and below point of application
 
 OPEN SPRAY BOOTH (per AS 4114):
 - AT LEAST 2 METRES extending in all directions from any opening or outlet
@@ -96,31 +74,36 @@ OPEN SPRAY BOOTH (per AS 4114):
 OUTDOOR SPRAYING (low risk):
 - AT LEAST 3 METRES in all directions
 
-ENTRY RESTRICTION: People other than the sprayer MUST NOT ENTER the zone unless they wear EQUIVALENT PPE to the sprayer.
+ENTRY RESTRICTION:
+- People other than sprayer MUST NOT ENTER zone unless wearing EQUIVALENT PPE to sprayer
 
-MANDATORY SIGNAGE: "SPRAY PAINTING AREA — AUTHORISED PERSONNEL ONLY" must be displayed at the exclusion boundary.
+MANDATORY SIGNAGE:
+- "SPRAY PAINTING AREA — AUTHORISED PERSONNEL ONLY" must be displayed at exclusion boundary
 
 VISUAL INDICATORS:
-- No exclusion zone signage at boundary of spray painting area = non-compliant
-- Electrical equipment not certified for explosive atmospheres located within the exclusion zone = fire/explosion risk
+- No exclusion zone signage at boundary = non-compliant
+- Electrical equipment not certified for explosive atmospheres within exclusion zone = fire/explosion risk
 - Bystanders within 3 metres of outdoor spraying without PPE = non-compliant
 - No clear demarcation of exclusion zone boundary = non-compliant
 
 ---
 
-CHUNK 5: Powder Coating Controls
+CHUNK 4: Powder Coating — TGIC Hazard and Cleaning Controls
 Section: s4.2; AS 3754
-Topic: TGIC hazard, electrostatic risks, and cleaning requirements
+Topic: TGIC powder hazards and mandatory cleaning methods
 
 TGIC (TRIGLYCIDYL ISOCYANURATE) HAZARD:
 - Toxic by ingestion and inhalation
-- A skin sensitiser
+- Skin sensitiser
 - Commonly found in powder coating formulations
 
+CLEANING REQUIREMENTS:
+- Use vacuum cleaner with HEPA FILTER only
+- DO NOT use compressed air to clean powder dust
+- DO NOT use dry sweeping
+
 ENGINEERING CONTROLS:
-- Interlocks: PCBUs should interlock the power supply and powder coating feed lines with the air extraction system so that if ventilation fails, supplies are cut off automatically
-- Cleaning: Use a vacuum cleaner with a HEPA FILTER only
-- DO NOT use compressed air or dry sweeping to clean powder dust
+- Interlocks: Power supply and powder feed lines should interlock with air extraction — if ventilation fails, supplies cut off automatically
 
 VISUAL INDICATORS:
 - Worker using compressed air to blow powder dust off clothing = serious health and explosion risk
@@ -130,72 +113,89 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 6: Electrical Safety and Static Electricity
+CHUNK 5: Electrostatic Spray Equipment — Earthing Requirements
 Section: s3.6, s4.2; AS/NZS 1020
-Topic: Managing high-voltage and static ignition risks
+Topic: High-voltage earthing and static electricity controls (KEY MEASUREMENTS)
 
-ELECTROSTATIC VOLTAGE: Droplets are charged to a high voltage of AT LEAST 60 KILOVOLTS.
+ELECTROSTATIC VOLTAGE:
+- Droplets charged to AT LEAST 60 KILOVOLTS
 
-EARTHING REQUIREMENTS — ALL of the following within 3 metres of the charged head of the spray gun MUST BE EARTHED:
-- All equipment and metal surfaces within 3 METRES of the spray gun head
-- The FLOOR OF THE EXCLUSION ZONE (must be electrically conducting)
-- The METAL HOUSING AND HANDLE of the spray gun
+EARTHING REQUIREMENTS — ALL of the following within 3 METRES of charged spray gun head MUST BE EARTHED:
+- All equipment and metal surfaces within 3 METRES of spray gun head
+- FLOOR OF THE EXCLUSION ZONE (must be electrically conducting)
+- METAL HOUSING AND HANDLE of spray gun
 
 ANTI-STATIC FOOTWEAR — recommended resistance range:
 - NOT LESS THAN 7.5 x 10⁴ OHMS
 - NOT GREATER THAN 10 x 10⁷ OHMS
 
 VISUAL INDICATORS:
-- Dirty or paint-covered hooks used to suspend objects being coated = earthing failure (insulating layer of paint breaks earth connection)
+- Dirty or paint-covered hooks suspending objects = earthing failure (insulating paint layer breaks earth connection)
 - Worker wearing synthetic or untreated wool clothing near electrostatic equipment = static discharge risk
 - Non-conducting floor surface in electrostatic spray area = earthing failure
-- No anti-static footwear being worn by operators = non-compliant
+- No anti-static footwear worn by operators = non-compliant
 
 ---
 
-CHUNK 7: Personal Protective Equipment (PPE)
+CHUNK 6: Respiratory Protection — Isocyanate Spraying Requirements
 Section: s3.10; Appendix C
-Topic: Mandatory PPE specifications for hazardous paint systems
+Topic: Mandatory air-supplied respirators for isocyanate spray painting
 
 RESPIRATORY PROTECTION:
-- AIR-SUPPLIED RESPIRATOR: MANDATORY when spray painting using ISOCYANATES within any enclosed extraction booth — a half-face P2 respirator is NOT SUFFICIENT and is life-threatening non-compliance
+- AIR-SUPPLIED RESPIRATOR: MANDATORY when spray painting using ISOCYANATES within any enclosed extraction booth
+- Half-face P2 respirator is NOT SUFFICIENT and is life-threatening non-compliance
 - Recommended for two-part polyurethane, two-part epoxy, and catalytic acrylic paints
+
+PPE DECONTAMINATION:
+- Disposable overalls MUST NOT be taken home — must be disposed of at workplace
+
+VISUAL INDICATORS:
+- Worker wearing only half-face respirator for isocyanate spraying in booth = life-threatening non-compliance
+- Disposable overalls being taken home by worker = contamination breach
+- No eye protection worn during spray painting = non-compliant
+- Air-supplied respirator hose kinked or disconnected during spraying = serious non-compliance
+
+---
+
+CHUNK 7: Paint Injection Injury Prevention — Gun Cleaning Prohibition
+Section: s3.10
+Topic: High-pressure paint gun cleaning safety
 
 PAINT INJECTION INJURY PREVENTION:
 - Pressurised paint pots and guns MUST HAVE PRESSURE RELEASED PRIOR TO CLEANING
-- PROHIBITION: The gun MUST NEVER be cleaned by covering the nozzle with a cloth or material held in the hand — risk of PAINT INJECTION INJURY (high-pressure paint can penetrate skin and cause serious internal damage)
-
-PPE DECONTAMINATION:
-- Disposable overalls must NOT be taken home — must be disposed of at the workplace
+- PROHIBITION: Gun MUST NEVER be cleaned by covering nozzle with cloth or material held in hand
+- Risk: High-pressure paint can penetrate skin and cause serious internal damage
 
 VISUAL INDICATORS:
-- Worker wearing only a half-face respirator for isocyanate spraying in a booth = life-threatening non-compliance
 - Worker covering spray gun nozzle with hand or cloth while cleaning = injection injury risk
-- Disposable overalls being taken home by a worker = contamination breach
-- No eye protection worn during spray painting = non-compliant
+- Pressure gauge on paint pot showing pressure while worker attempts to clean gun = serious non-compliance
+- Worker pointing pressurised gun at body or hand = injection injury risk
 
 ---
 
-CHUNK 8: Fire and Explosion Management
+CHUNK 8: Fire and Explosion Controls — Flammable Liquid Handling
 Section: s3.4; WHS Regulation s51–53
-Topic: Accumulation limits, ignition control, and flammable liquid handling
+Topic: Static ignition prevention and flammable atmosphere limits (KEY MEASUREMENTS)
 
-HAZARDOUS ATMOSPHERE DEFINITION: An atmosphere where the concentration of flammable gas, vapour, mist or fume EXCEEDS FIVE PER CENT OF THE LOWER EXPLOSIVE LIMIT (LEL).
+HAZARDOUS ATMOSPHERE DEFINITION:
+- Concentration of flammable gas, vapour, mist or fume EXCEEDS FIVE PER CENT OF LOWER EXPLOSIVE LIMIT (LEL)
 
 FLAMMABLE LIQUID TRANSFER:
-- Before pouring flammable liquids: SET BOTH CONTAINERS DOWN ON AN EARTHED SURFACE and keep them in contact while pouring (prevents static ignition)
+- Before pouring: SET BOTH CONTAINERS DOWN ON EARTHED SURFACE and keep in contact while pouring (prevents static ignition)
 
 WASTE MANAGEMENT:
-- Solvent-soaked rags SHOULD BE STORED WET and safely contained after use in a closed metal container
+- Solvent-soaked rags SHOULD BE STORED WET in closed metal container
 
 IGNITION SOURCE PROHIBITION:
 - No lit cigarettes, open flames, or ignition sources in or near spray painting areas
-- Only intrinsically safe (explosion-proof) electrical equipment within the hazardous zone
+- Only intrinsically safe (explosion-proof) electrical equipment within hazardous zone
 
 VISUAL INDICATORS:
-- Containers of flammable liquid left in direct sunlight = fire hazard from thermal expansion and vapour generation
+- Containers of flammable liquid in direct sunlight = fire hazard from thermal expansion
 - Lids left off paint or solvent containers when not in use = vapour accumulation risk
-- Lit cigarette or open flame in a spray painting workshop = critical safety breach
-- Solvent-soaked rags in an open bin or on the floor = fire risk
-- Standard (non-intrinsically safe) electrical equipment within the exclusion zone = explosion risk
-- Pouring flammable liquids from one container to another without earthing both = static ignition risk
+- Lit cigarette or open flame in spray painting workshop = critical safety breach
+- Solvent-soaked rags in open bin or on floor = fire risk
+- Standard (non-intrinsically safe) electrical equipment within exclusion zone = explosion risk
+- Pouring flammable liquids without earthing both containers = static ignition risk
+
+---

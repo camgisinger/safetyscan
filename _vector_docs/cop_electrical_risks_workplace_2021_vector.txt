@@ -4,89 +4,98 @@ JURISDICTION: QLD
 REGION: QLD
 WORK_TYPES: electrical_work, maintenance, testing, manufacturing, construction, service_industries
 SOURCE: Electrical Safety Office (ESO)
-CURRENT AS AT: 2021 (Approved under section 44 of the Electrical Safety Act 2002)
+CURRENT AS AT: 2021
 CLAUSE_PREFIX: s
-REFERENCE_STANDARD: AS/NZS 3000 Electrical installations (Wiring Rules); AS/NZS 3760 In-service safety inspection and testing of electrical equipment; AS/NZS 3012 Electrical installations – Construction and demolition sites; AS/NZS 3190 Residual current devices; AS/NZS 4836 Safe working on or near low-voltage and extra-low voltage electrical installations and equipment; AS/NZS IEC 61111 Electrical insulating mats.
+REFERENCE_STANDARD: AS/NZS 3000, AS/NZS 3760, AS/NZS 3012, AS/NZS 3190, AS/NZS 4836, AS/NZS IEC 61111
 
 ---
 
-CHUNK 1: Definitions and Primary Duties
-Section: COP s1.2, s1.3; ES Act s18, s30; ES Regulation s11
-Topic: Legal definitions and core electrical safety obligations
-
-ELECTRICAL WORK means:
-- Connecting electricity supply wiring to electrical equipment or disconnecting electricity supply wiring from electrical equipment; OR
-- Manufacturing, constructing, installing, removing, adding, testing, replacing, repairing, altering or maintaining electrical equipment or an electrical installation
-
-PRIMARY DUTY: A PCBU must ensure the person's business or undertaking is conducted in a way that is electrically safe. This includes:
-- Ensuring all electrical equipment used is electrically safe
-- Ensuring persons performing work involving contact with, or being near to, exposed parts are electrically safe
-- Complying with the prohibition on electrical work on or near energised electrical equipment
+CHUNK 1: Voltage Thresholds and Metallic Items Prohibition
+Section: CoP s1.2, s1.3; ES Act s18, s30
+Topic: Voltage definitions and prohibited metallic personal items during electrical work
 
 VOLTAGE THRESHOLDS:
 - Extra-low voltage: Not exceeding 50V AC or 120V ripple-free DC
 - Low voltage: Exceeds extra-low voltage but does not exceed 1000V AC RMS or 1500V ripple-free DC
-- High voltage: Voltage that exceeds low voltage (i.e. above 1000V AC RMS)
-- NOTE: Serious consequences can occur from contact with as little as 50V AC or 120V DC
-- FAULT CURRENT: Can flow at up to 20 TIMES the rated current of the supply transformer during fault conditions
+- High voltage: Above 1000V AC RMS or 1500V DC
+- Serious consequences can occur from contact with as little as 50V AC or 120V DC
+- Fault current can flow at up to 20 TIMES the rated current of the supply transformer
+
+PROHIBITED ITEMS:
+- Workers MUST NOT wear metallic personal items (watches, jewellery, body piercings) while working near exposed energised parts
+- Workers MUST NOT wear metal spectacle frames during electrical work near live parts
 
 FIRE EXTINGUISHER PROHIBITION:
 - Water, foam, and wet chemical extinguishers MUST NOT be used on electrical fires
 - CO2 or dry powder extinguishers must be used on electrical fires
 
 VISUAL INDICATORS:
-- Unlicensed worker performing wiring connections = primary duty breach
-- Worker wearing metallic personal items (watches, jewellery, body piercings) while working near exposed energised parts = non-compliant
-- Worker wearing metal spectacle frames during electrical work near live parts = non-compliant
-- Conductive material (concrete, wet timber, water) providing a path to earth near exposed parts = high-risk indicator
-- Electrical work being carried out by a person who cannot produce an electrical licence = non-compliant
+- Worker wearing watch, rings, or visible piercings near exposed energised parts = non-compliant
+- Worker wearing metal-framed glasses during live electrical work = non-compliant
 - Water or foam fire extinguisher as the only extinguisher near electrical equipment = non-compliant
+- Conductive material (concrete, wet timber, water) providing a path to earth near exposed parts = high-risk indicator
+
+---
+
+CHUNK 2: Cable Management and Work Area Security
+Section: CoP s1.3
+Topic: Physical cable protection and work area isolation requirements
+
+CABLE MANAGEMENT:
+- Leads or flexible cables running across floors, through doorways, or over sharp edges MUST have physical protection
+- Unfinished electrical work areas MUST be tagged and taped off
+
+TEST EQUIPMENT:
+- Test instruments with cracked or broken insulation on leads, probes or clips = unsafe test gear
+- Conductive tools (metallic tape measures, rulers, wire-reinforced ladders) MUST NOT be used near exposed energised parts
+
+VISUAL INDICATORS:
 - Leads or flexible cables running across floors, through doorways, or over sharp edges without protection = non-compliant cable management
 - Unfinished electrical work areas not tagged and taped off = non-compliant
 - Test instruments with cracked or broken insulation on leads, probes or clips = unsafe test gear
 - Conductive tools (metallic tape measures, rulers, wire-reinforced ladders) near exposed energised parts = non-compliant
+- Unlicensed worker performing wiring connections = primary duty breach
 
 ---
 
-CHUNK 2: Unsafe Equipment and Mandatory Testing
-Section: COP s3.1, s3.2; ES Regulation s101, s194, Part 6 Div 6
-Topic: Requirements for inspecting, testing, and tagging equipment
+CHUNK 3: Unsafe Equipment Disconnection and Test Tags
+Section: CoP s3.1, s3.2; ES Regulation s101, s194
+Topic: Mandatory disconnection of unsafe equipment and test tag requirements
 
-UNSAFE EQUIPMENT: A PCBU must ensure that any unsafe electrical equipment:
-- Is DISCONNECTED OR ISOLATED from its electricity supply immediately
-- Is NOT RECONNECTED until it is repaired or tested by a competent person and found to be safe, or is replaced or permanently removed from use
+UNSAFE EQUIPMENT — MUST be:
+- DISCONNECTED OR ISOLATED from its electricity supply immediately
+- NOT RECONNECTED until repaired or tested by a competent person and found safe, or replaced or permanently removed
 
-INSPECTION AND TESTING (test and tag) — required at specific intervals based on work type:
-- Construction and demolition sites: most frequent interval (refer ES Regulation s194)
+TEST AND TAG INTERVALS (ES Regulation s194):
+- Construction and demolition sites: most frequent interval
 - Manufacturing environments: regular interval
 - Amusement industries: regular interval
 - Service and office environments: least frequent interval
-- Rural industry: specific interval
-- New equipment: does not have to be tested before first use but SHOULD BE VISUALLY INSPECTED
-- Hire equipment: MUST be inspected and tested in accordance with ES Regulation s194 before use
+- Hire equipment: MUST be inspected and tested before use
+
+NEW EQUIPMENT:
+- Does not have to be tested before first use but SHOULD BE VISUALLY INSPECTED
 
 VISUAL INDICATORS:
 - Electrical equipment labelled "UNSAFE" or "OUT OF SERVICE" but still connected to power = regulatory breach
-- Missing test tags on equipment in a construction or manufacturing environment = non-compliance with interval requirements
+- Missing test tags on equipment in construction or manufacturing environment = non-compliance
 - Equipment with visible discolouration, broken insulation, or loose cord anchors = unsafe indicator
 - Test tag date expired = equipment overdue for inspection
 - No test tag present on portable electrical equipment on construction site = non-compliant
 
 ---
 
-CHUNK 3: Safety Switches (Residual Current Devices — RCDs)
-Section: COP s3.3; AS/NZS 3190
-Topic: Mandatory RCD protection and performance thresholds
-
-DEFINITION: A safety switch is an electrical safety device designed to immediately switch off the supply when electricity leaking to earth is detected at harmful levels — typically 30 milliamps or a lesser amount.
+CHUNK 4: Safety Switches (RCDs) — Performance Thresholds
+Section: CoP s3.3; AS/NZS 3190
+Topic: RCD performance specifications and faulty device tagging (KEY MEASUREMENTS)
 
 CLASSES OF SAFETY SWITCHES:
 - Type I: Residual current rating NOT EXCEEDING 10 MILLIAMPS; tripping time WITHIN 40 MILLISECONDS (used for equipment directly connected to people)
 - Type II: Residual current rating GREATER THAN 10 MILLIAMPS BUT NOT EXCEEDING 30 MILLIAMPS; tripping time WITHIN 300 MILLISECONDS
 
-FAULTY DEVICES: If a safety switch is tested and found to be faulty, the PCBU must ensure:
-- A DURABLE TAG IS IMMEDIATELY ATTACHED warning people not to use the safety switch
-- It is IMMEDIATELY WITHDRAWN FROM USE
+FAULTY DEVICES — MUST:
+- Have a DURABLE TAG IMMEDIATELY ATTACHED warning people not to use the safety switch
+- Be IMMEDIATELY WITHDRAWN FROM USE
 
 VISUAL INDICATORS:
 - Safety switch without a "Test" or "Trip" button = non-compliant device
@@ -97,64 +106,75 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 4: Working De-energised (Isolation)
-Section: COP s4.1, s5.1; ES Act s55; ES Regulation s13–16
-Topic: Verification of isolation and "Test for Dead" principles
+CHUNK 5: Isolation Verification and Locking Off
+Section: CoP s4.1, s5.1; ES Act s55; ES Regulation s13–16
+Topic: Test for dead principle and isolation point security
 
 MANDATORY PRINCIPLE: "TEST FOR DEAD BEFORE YOU TOUCH" — apply at all times.
 
-MANDATORY TESTING: A PCBU must ensure that before electrical work is carried out on or near electrical equipment, the equipment is TESTED BY A COMPETENT PERSON to determine whether or not it is energised.
+ASSUMPTION: ALL conductors and electrical components MUST BE ASSUMED energised until proven de-energised.
 
-ASSUMPTION: It MUST BE ASSUMED that all conductors and electrical components are energised until they have been proven to have been de-energised.
-
-SECURING ISOLATION: A PCBU must ensure that electrical equipment de-energised for work is not inadvertently re-energised:
+SECURING ISOLATION:
 - High-voltage: Each high-voltage exposed part MUST BE EARTHED after being de-energised
 - Locking off: Isolation points should be fitted with control mechanisms (hasps, locks) to prevent inadvertent re-energising
+- Each worker should apply their own lock
 
 VISUAL INDICATORS:
 - Worker using a panel voltmeter as the sole method to determine if a part is de-energised = unsafe/non-compliant method
 - Danger tag or lock MISSING from an isolation point while work is in progress = serious isolation failure
 - Out-of-service or caution tags not removed by a competent person after repair = procedure failure
-- Multiple workers on same isolation point with only one lock = inadequate isolation (each worker should apply their own lock)
+- Multiple workers on same isolation point with only one lock = inadequate isolation
 - Isolation board with no locks or tags visible while electrical work is in progress = non-compliant
 
 ---
 
-CHUNK 5: Energised Electrical Work (Live Work)
-Section: COP s6.1, s6.2, s6.3; ES Regulation s12, s14, s19, s22
-Topic: Strict prohibitions and mandatory exceptions for live work
+CHUNK 6: Energised Work Prohibition and "Near" Definition
+Section: CoP s6.1, s6.2; ES Regulation s12, s14, s19
+Topic: Live work prohibition and proximity threshold (KEY MEASUREMENT)
 
-PROHIBITION: A PCBU MUST ENSURE work is NOT carried out on or near energised electrical equipment UNLESS:
-- It is necessary in the interests of health and safety (e.g. life-saving equipment that cannot be switched off)
+PROHIBITION: Work MUST NOT be carried out on or near energised electrical equipment UNLESS:
+- It is necessary in the interests of health and safety
 - It is necessary for the work to be carried out properly
 - It is necessary for testing under section 15(1)
 - There is no reasonable alternative means
 
 PERFORMING WORK FOR CONVENIENCE ALONE IS ILLEGAL.
-ENERGISED WORK MUST NOT be carried out unless the safety risk of a supply interruption is HIGHER than the risk of the live work itself.
 
 "NEAR" DEFINITION: Near, in relation to electrical equipment, means WITHIN 3 METRES of an exposed energised part of the equipment.
 
-PLANNING REQUIREMENTS — before energised work commences, a PCBU must ensure:
-- A RISK ASSESSMENT is conducted by a competent person and RECORDED
-- The area is CLEAR OF OBSTRUCTIONS for easy access and exit
-- The isolation point is CLEARLY MARKED OR LABELLED and CAPABLE OF BEING OPERATED QUICKLY
-- The work is carried out in accordance with a SAFE WORK METHOD STATEMENT (SWMS)
-
 VISUAL INDICATORS:
 - Electrical work being performed within 3 metres of live parts without an SWMS on site = regulatory breach
-- Isolation point blocked by equipment or materials = obstruction breach
+- Worker performing live work alone without safety observer = non-compliant (see Chunk 7)
 - No risk assessment record available for live electrical work = non-compliant
-- Worker performing live work alone without safety observer = non-compliant (see Chunk 6)
-- Safety barrier made of conductive material that is not correctly earthed used to protect workers from live parts = non-compliant
 
 ---
 
-CHUNK 6: Safety Observers and Competency
-Section: COP s6.3; ES Regulation s22
-Topic: Mandatory supervision for energised electrical work
+CHUNK 7: Energised Work Planning and Area Clearance
+Section: CoP s6.3; ES Regulation s22
+Topic: Mandatory planning requirements before live work commences
 
-MANDATORY OBSERVER: A PCBU must ensure energised electrical work is carried out WITH A SAFETY OBSERVER PRESENT.
+PLANNING REQUIREMENTS — before energised work commences:
+- A RISK ASSESSMENT must be conducted by a competent person and RECORDED
+- The area must be CLEAR OF OBSTRUCTIONS for easy access and exit
+- The isolation point must be CLEARLY MARKED OR LABELLED and CAPABLE OF BEING OPERATED QUICKLY
+- The work must be carried out in accordance with a SAFE WORK METHOD STATEMENT (SWMS)
+
+SAFETY BARRIERS:
+- Safety barrier made of conductive material MUST be correctly earthed
+
+VISUAL INDICATORS:
+- Isolation point blocked by equipment or materials = obstruction breach
+- No risk assessment record available for recent live electrical work = non-compliant
+- Safety barrier made of conductive material that is not correctly earthed = non-compliant
+- No SWMS on site during live electrical work = regulatory breach
+
+---
+
+CHUNK 8: Safety Observer Requirements and Competency
+Section: CoP s6.3; ES Regulation s22
+Topic: Mandatory safety observer presence and competency thresholds (KEY MEASUREMENT)
+
+MANDATORY OBSERVER: Energised electrical work MUST be carried out WITH A SAFETY OBSERVER PRESENT.
 
 OBSERVER COMPETENCY REQUIREMENTS:
 - Must be competent to implement control measures AND rescue and resuscitate the worker
@@ -177,20 +197,45 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 7: Tools, PPE, and Record Retention
-Section: COP s7.2, s7.4, s7.5; ES Regulation s22, s23
-Topic: Equipment standards and documentation retention periods
+CHUNK 9: Test Instrument Ratings and Proximity Voltage Testers
+Section: CoP s7.2; ES Regulation s22, s23
+Topic: Test instrument category ratings and prohibited sole-use devices
 
 TEST INSTRUMENT RATINGS:
 - Instruments should be rated CATEGORY III OR IV to enable use on all parts of the equipment
 - Must be checked to prove functioning correctly IMMEDIATELY BEFORE AND AFTER a test
+
+PROXIMITY VOLTAGE TESTER PROHIBITION:
 - A proximity voltage tester MUST NOT be used as the only tool to prove de-energisation — not reliable
+
+VISUAL INDICATORS:
+- Worker using a proximity voltage tester as the only tool to prove de-energisation = unsafe and non-compliant
+- Test instrument without visible category rating (CAT III or CAT IV) = questionable suitability
+- Worker not checking test instrument before and after use = procedure failure
+
+---
+
+CHUNK 10: PPE and Clothing Requirements
+Section: CoP s7.4; ES Regulation s22
+Topic: Mandatory PPE specifications and prohibited materials
 
 PPE REQUIREMENTS — must be suitable for the work, properly tested, and maintained in good working order:
 - Clothing: Use NON-SYNTHETIC, FLAME RESISTANT clothing of non-fusible material
 - Clothing containing METAL THREADS MUST NOT BE WORN
-- Metallic, wire reinforced ladders must be avoided near electrical hazards
-- Conductive tools must not be used near live parts
+- Metallic, wire reinforced ladders MUST be avoided near electrical hazards
+- Conductive tools MUST NOT be used near live parts
+
+VISUAL INDICATORS:
+- Metallic or wire-reinforced ladder in use near electrical switchboards = dangerous/to be avoided
+- Worker wearing synthetic clothing (e.g. polyester shirt) during live electrical work = PPE failure
+- Worker wearing clothing with visible metallic threads near live parts = non-compliant
+- Conductive tools in use near exposed energised parts = non-compliant
+
+---
+
+CHUNK 11: Record Retention Periods
+Section: CoP s7.5; ES Regulation s22, s23
+Topic: Minimum retention periods for electrical work documentation (KEY MEASUREMENTS)
 
 RECORD RETENTION:
 - Risk assessment: Keep until at least 28 DAYS AFTER THE WORK is completed
@@ -198,7 +243,6 @@ RECORD RETENTION:
 - Serious incidents: If a serious incident occurs, keep assessment and SWMS for at least 2 YEARS
 
 VISUAL INDICATORS:
-- Worker using a proximity voltage tester as the only tool to prove de-energisation = unsafe and non-compliant
-- Metallic or wire-reinforced ladder in use near electrical switchboards = dangerous/to be avoided
-- Worker wearing synthetic clothing (e.g. polyester shirt) during live electrical work = PPE failure
 - No records of risk assessment available for recent live electrical work = non-compliant
+- SWMS discarded before work completion = non-compliant
+- Records of serious incident work discarded within 2 years = regulatory breach

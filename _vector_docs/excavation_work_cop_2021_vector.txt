@@ -6,328 +6,424 @@ WORK_TYPES: excavation, construction, trenching, tunnelling, shafts, ground_coll
 SOURCE: Workplace Health and Safety Queensland, Office of Industrial Relations
 PUBLICATION_NO: PN12677
 CURRENT AS AT: 2021
-COMMENCED: 2021
-CLAUSE_PREFIX: s (WHS Act / WHS Regulation references); section numbers within CoP
-APPROVED UNDER: Work Health and Safety Act 2011 (Qld) s274
 
 ---
 
-CHUNK 1: Definition and Scope — What is Excavation Work?
-Section: CoP s1.1; WHS Regulation s289
-Topic: Legal definition of excavation work, what is included and excluded, relationship to construction work and high risk construction work
+CHUNK 1: High Risk Construction Work Triggers — SWMS Mandatory
+Section: CoP s1.1; WHS Regulation s289, s299
+Topic: Depth and activity triggers requiring Safe Work Method Statements for excavation work
 
-EXCAVATION WORK means work to MAKE an excavation OR to FILL or PARTLY FILL an excavation.
-
-EXCAVATION WORK commonly includes:
-- Removal of soil or rock from a site to form an open face, hole or cavity
-- Trenches
-- Shafts
-- Tunnels
-- Work generally carried out using tools, machinery or explosives
-
-EXCAVATION WORK DOES NOT INCLUDE:
-- Work at a mine
-- A bore to which a relevant water law applies
-- A trench used as a place of interment (burial)
-
-IMPORTANT LEGAL RELATIONSHIP — CONSTRUCTION WORK:
-Work connected with an excavation IS a type of "construction work" — therefore ALL construction work requirements must also be complied with.
-
-HIGH RISK CONSTRUCTION WORK — a SWMS must be prepared before commencing any of the following:
-- Work in or near a SHAFT or TRENCH with an excavated depth of GREATER THAN 1.5 METRES
-- Work in or near a TUNNEL
-- Work involving a risk of a person FALLING MORE THAN 2 METRES
-- Work involving ASBESTOS disturbance
-- Work near ENERGISED ELECTRICAL INSTALLATIONS
-- Work near PRESSURISED GAS DISTRIBUTION MAINS or piping
-- Work near CHEMICAL, FUEL or REFRIGERANT lines
-- Work involving EXPLOSIVES
-- Work where POWERED MOBILE PLANT may collide with pedestrians or other powered mobile plant
+SWMS MANDATORY for excavation work involving:
+- Trench or shaft DEEPER THAN 1.5 METRES
+- Any tunnel work
+- Fall risk GREATER THAN 2 METRES
+- Asbestos disturbance
+- Work near energised electrical installations
+- Work near pressurised gas distribution mains or piping
+- Work near chemical, fuel or refrigerant lines
+- Use of explosives
+- Powered mobile plant that may collide with pedestrians or other plant
 
 VISUAL INDICATORS:
-- Any trench, shaft or tunnel excavation deeper than 1.5m = high risk construction work; SWMS mandatory
-- Any excavation work of any kind at a construction site = construction work requirements apply
-- Excavation work in progress with no SWMS available on site = serious non-compliance
+- Trench/shaft >1.5m deep with no SWMS on site = serious non-compliance
 - Workers entering excavations >1.5m deep without ground support installed = serious non-compliance
+- Any tunnel work without SWMS = serious non-compliance
+- Excavation work with powered mobile plant near workers without SWMS = non-compliance
 
 ---
 
-CHUNK 2: Duty Holders — Who Has Health and Safety Responsibilities?
-Section: CoP s1.2; WHS Act s19, s22–s29, s27, s28, s46, s47, s48, s49; WHS Regulation s46, s293, s308–s315
-Topic: Legal duties of PCBUs, principal contractors, designers, manufacturers, officers, workers and others
+CHUNK 2: Trench Depth Trigger — 1.5 Metres for Ground Support and Securing
+Section: CoP s3.7, s5.1; WHS Regulation s306
+Topic: Mandatory requirements when trench depth reaches or exceeds 1.5 metres
 
-PRIMARY DUTY — PCBU (WHS Act s19):
-- Must ELIMINATE risks from excavation work, or if not reasonably practicable: MINIMISE risks so far as is reasonably practicable
-- Must manage risks of hazardous chemicals, airborne contaminants and plant
-- Must consult workers and cooperate/coordinate with other duty holders
-- Additional duties apply BEFORE excavation work starts for risks of: person falling into excavation; person being trapped by collapse; person being struck by a falling thing; person being exposed to an airborne contaminant
+TRENCH ≥1.5 METRES DEEP — MANDATORY:
+- Work area MUST be secured from unauthorised access including inadvertent entry
+- ALL SIDES of trench must be adequately supported by ONE OR MORE of:
+  - SHORING (shielding or comparable means)
+  - BENCHING
+  - BATTERING
 
-PRINCIPAL CONTRACTOR DUTIES (WHS Regulation s293, s308–s315):
-Required when construction project costs $250,000 OR MORE. Must:
-- Prepare, maintain and review a WHS Management Plan (including consultation, cooperation and coordination arrangements)
-- Prepare or take all reasonable steps to obtain a SWMS before high risk construction work commences
-- Install signs showing principal contractor's name, contact details and site office location
-- Secure the construction workplace
-- Put in place arrangements for falls, facilities, first aid, emergency plan, traffic management
-Note: Only ONE principal contractor permitted per construction project. Where significant excavation work is being carried out before building works start, the EXCAVATION CONTRACTOR may be appointed as principal contractor for the site preparation phase.
+EXCEPTION — ground support not required IF:
+- Written advice from GEOTECHNICAL ENGINEER states all sides are safe from collapse
+- Advice must state the period of time it applies to
+- May be subject to conditions
 
-DESIGNER DUTIES (WHS Act s22; WHS Regulation s295):
-- Must ensure structure designed to be without risks to health and safety, including during construction
-- Must give person commissioning design a WRITTEN SAFETY REPORT specifying hazards relating to the design that create risks for construction workers
-- Designers should consider possible excavation work methods and health and safety control measures when producing final design documents
-
-MANUFACTURERS, IMPORTERS, SUPPLIERS AND INSTALLERS (WHS Act s23–s26):
-- Must ensure plant or structures are without risks to health and safety
-- Must carry out testing, analysis and provide specific information
-
-OFFICER DUTIES (WHS Act s27):
-- Officers (e.g. company directors) must exercise DUE DILIGENCE
-- Must take reasonable steps to ensure business has and uses appropriate resources and processes to eliminate or minimise risks
-
-WORKER DUTIES (WHS Act s28; WHS Regulation s46):
-- Must take reasonable care for own health and safety
-- Must not adversely affect health and safety of others
-- Must comply with reasonable instructions and policies
-- Must use or wear PPE provided, as far as reasonably able
+ENGULFMENT RISK:
+- Where risk of engulfment exists when worker enters trench: implement controls REGARDLESS OF DEPTH
 
 VISUAL INDICATORS:
-- No WHS Management Plan on site for projects $250,000+ = non-compliance
-- No SWMS available for excavation work in trench/shaft/tunnel >1.5m deep = serious non-compliance
-- No site signage identifying principal contractor = non-compliance
-- Workers in excavations without documented ground support system = serious non-compliance
+- Trench ≥1.5m deep with no shoring, benching or battering = serious non-compliance
+- Workers inside trench ≥1.5m deep without ground support = serious non-compliance; stop work
+- Trench ≥1.5m deep with no perimeter fencing or barriers = serious non-compliance
+- No geotechnical written advice where ground support omitted = non-compliance
+- Trench of any depth in sandy/wet soil with workers inside and no support = implement controls immediately
 
 ---
 
-CHUNK 3: Risk Management Process — Overview
-Section: CoP s1.3, Chapter 2; WHS Regulation s34, s35, s36, s37, s38, s297, s299, s305
-Topic: The four-step risk management process applicable to excavation work, hierarchy of controls
+CHUNK 3: Benching and Battering — Maximum Angle 45 Degrees
+Section: CoP s6.2
+Topic: Angle limits and design requirements for benching and battering as ground collapse controls
 
-ADDITIONAL PRE-START DUTIES — before excavation work commences, PCBU must manage risks of:
-1. A person FALLING INTO an excavation
-2. A person being TRAPPED by the COLLAPSE of an excavation
-3. A person working in an excavation being STRUCK BY A FALLING THING
-4. A person working in an excavation being EXPOSED TO AN AIRBORNE CONTAMINANT
+MAXIMUM ANGLE OF REPOSE:
+- 45 DEGREES SHOULD NOT BE EXCEEDED
+- Exception: unless designed by competent person and certified in writing
 
-All relevant matters must be considered including:
-- The nature of the excavation
-- The nature of the excavation work including the range of possible methods of carrying out the work
-- The means of ENTRY INTO and EXIT FROM the excavation, if applicable
+BENCHING:
+- Series of horizontal steps with vertical surfaces between levels
+- Benches must be wide enough to stabilise slopes and prevent material from top falling to working area
+- Benches should be sloped to reduce water scouring
 
-RISK MANAGEMENT PROCESS — four steps:
-1. IDENTIFY HAZARDS — find what could cause harm
-2. ASSESS RISKS (if necessary) — understand nature, severity and likelihood of harm. Note: A risk assessment is NOT mandatory under WHS Regulation for excavation work, but in many circumstances it will be the best way to determine control measures
-3. CONTROL RISKS — eliminate, or if not reasonably practicable, minimise using hierarchy of controls
-4. REVIEW CONTROL MEASURES — ensure they remain effective
+BATTERING:
+- Wall of excavation sloped back to predetermined angle
+- Should start from BOTTOM of excavation
+- Safe slope = ground is stable, does not flatten over time, no material movement down slope, toe remains in same place
 
-HIERARCHY OF CONTROL MEASURES (WHS Regulation s36) — highest to lowest:
-1. ELIMINATION — remove the hazard entirely (e.g. undertake work above ground to eliminate the use of trenches, tunnels or shafts)
-2. SUBSTITUTION — replace hazard with lesser risk (e.g. use excavator with rock breaker rather than manual method)
-3. ISOLATION — separate hazard from person (e.g. concrete barriers between pedestrians and powered mobile plant)
-4. ENGINEERING CONTROLS — physical control measures (e.g. benching, battering or shoring sides of excavation)
-5. ADMINISTRATIVE CONTROLS — e.g. installing warning signs near excavation
-6. PPE — e.g. hard hats, hearing protectors, high visibility vests (LEAST EFFECTIVE — must not be sole control)
-
-REVIEW TRIGGERS — control measures MUST be reviewed when:
-- Control measure does not control the risk so far as reasonably practicable
-- Change at workplace likely to give rise to new or different risks
-- A new or relevant hazard or risk is identified
-- Consultation results indicate review is necessary
-- A health and safety representative requests a review
-- Where high risk construction work: SWMS must also be reviewed and revised where necessary
+DESIGN REQUIREMENT:
+- Control measures should be designed by competent person (geotechnical engineer)
+- Relative to: soil type, moisture content, planned height of excavated face, surcharge loads
 
 VISUAL INDICATORS:
-- No SWMS for excavation work in trench/shaft/tunnel >1.5m deep = serious non-compliance
-- PPE used as the only control = non-compliant approach
-- No review of control measures after incident or near miss = flag
-- Pre-start checks of atmospheric conditions not documented for confined excavations = flag
+- Excavation walls sloped at more than 45 degrees without geotechnical certification = non-compliance
+- Benching or battering where slope is flattening or material is moving = imminent collapse risk; immediate action required
+- No re-assessment of battered/benched excavation after heavy rain = flag
+- Benches too narrow to stabilise material from top levels = flag
 
 ---
 
-CHUNK 4: Hazard Identification — Common Excavation Hazards
-Section: CoP s2.1; WHS Regulation s34
-Topic: Specific excavation hazards to be identified before and during excavation work
+CHUNK 4: Spoil and Load Clearance — Minimum 1000mm from Edge
+Section: CoP s4.1; Figure 2, Figure 15
+Topic: Minimum clearance distances for excavated material, vehicles and loads near excavations
 
-EXCAVATION-SPECIFIC HAZARDS:
-- UNDERGROUND ESSENTIAL SERVICES including gas, water, sewerage, telecommunications, electricity, chemicals and fuel or refrigerant in pipes or lines
-- FALL OR DISLODGEMENT of earth or rock
-- FALLS from one level to another
-- FALLING OBJECTS
-- INAPPROPRIATE PLACEMENT of excavated materials, plant or other loads
-- INSTABILITY OF ADJOINING STRUCTURES caused by the excavation
-- PREVIOUS DISTURBANCE of the ground including previous excavation
-- INSTABILITY OF THE EXCAVATION due to persons or plant working adjacent to the excavation
-- PRESENCE OF or possible IN-RUSH OF WATER or other liquid
-- HAZARDOUS MANUAL TASKS
-- HAZARDOUS CHEMICALS which may be present in the soil
-- HAZARDOUS ATMOSPHERE in an excavation (e.g. methyl ethyl ketone (MEK) solvent for PVC pipes in poorly ventilated trenches)
-- VIBRATION AND HAZARDOUS NOISE
-- OVERHEAD ESSENTIAL SERVICES (e.g. powerlines) and GROUND-MOUNTED ESSENTIAL SERVICES (e.g. transformers, gas and water meters)
+MINIMUM CLEARANCE:
+- 1000mm (1 METRE) from edge of excavation for vehicles and spoil heaps
+- Applies to both shoring configurations
 
-RISK ASSESSMENT FACTORS — severity of risks depends on:
-- Local site conditions (access, ground slope, adjacent buildings and structures, surface and underground water courses and trees)
-- Depth of the excavation
-- Soil properties (variable soil types, stability, shear strength, cohesion, presence of groundwater, effect of exposure to the elements)
-- Fractures or faults in rocks (joints, bedding planes, dip and strike directions and angles, clay seams)
-- Specialised plant or work methods required
-- Method(s) of transport, haul routes and disposal
-- What exposures might occur (noise, ultraviolet radiation, hazardous chemicals)
-- Number of people involved
-- Possibility of unauthorised access to the work area
-- Local weather conditions
-- Length of time the excavation will be open
+ZONE OF INFLUENCE:
+- Mechanical plant, vehicles and storage of materials (including excavated material or heavy loads) SHOULD NOT be located in zone of influence UNLESS ground support system designed by competent person to carry such loads
+
+SPOIL PLACEMENT CONSIDERATIONS:
+- Placing material on LOWER SIDE reduces effective height and reduces risk of material falling or being washed in
+- TOEBOARD required where material placed on uphill side
+- Material on high side must not increase risk of ground collapse or flooding
+- Excavated material should channel rainwater AWAY from excavation
+
+OLD SERVICE LINES:
+- Place excavated material on side OPPOSITE old service line to prevent excessive loading on previously weakened ground
 
 VISUAL INDICATORS:
-- Overhead powerlines within proximity of excavation plant without approach distance controls = serious hazard
-- Excavation near or below adjacent building footings without structural assessment = serious hazard
-- Freshly excavated area with no indication of underground services check = flag
-- Visible water seepage into trench walls = imminent collapse risk; flag immediately
-- Tension cracks on surface near trench edge = imminent collapse risk; flag immediately
+- Spoil heaps or plant positioned less than 1000mm from edge of unsupported excavation = non-compliance
+- Vehicles operating within zone of influence without shoring designed to carry those loads = serious hazard
+- Excavated material placed on uphill side with no toeboard = flag
+- Spoil heap positioned to channel water toward excavation = flag
 
 ---
 
-CHUNK 5: Planning Excavation Work — Pre-Start Requirements
-Section: CoP s3.0; WHS Regulation s299, s305
-Topic: Planning obligations and consultation requirements before excavation work commences
+CHUNK 5: Ground Collapse Warning Signs — Immediate Hazards
+Section: CoP s6.1
+Topic: Visual indicators of imminent ground collapse requiring immediate action
 
-EXCAVATION WORK MUST BE CAREFULLY PLANNED before work starts. Planning involves identifying hazards, assessing risks and determining control measures in consultation with all relevant persons including:
-- Principal contractor for a construction project
-- Excavation contractor
-- Designers
-- Mobile plant operators
-- Structural or geotechnical engineers (where applicable)
+SIGNS OF IMMINENT COLLAPSE:
+- Water seeping into excavation
+- TENSION CRACKS on surface near trench edge
+- Building side walls showing distortion
+- Seepage along slipping plane
+- Areas of tension as wall starts to collapse
 
-PRE-START CONSULTATION MUST INCLUDE:
-- Nature and condition of the ground and working environment
-- Weather conditions
-- Nature of the work and other activities that may affect health and safety
-- Static and dynamic loads near the excavation
-- Interaction with other trades
-- Site access
-- SWMS
-- Management of surrounding vehicle traffic and ground vibration
-- Types of equipment used for excavation work
-- Public safety
-- Existing services and their location
-- Length of time the excavation is to remain open
-- Providing facilities
-- Procedures to deal with emergencies
+CRITICAL WEIGHT REFERENCE:
+- Sand wedge over 1 METRE length of 2-METRE-deep trench weighs approximately 3 TONNES
+
+FACTORS INCREASING SOIL STRESS:
+- Deep cuts and steep slopes
+- Loads on ground surface near top of face
+- Shock and vibration (pile-driving, blasting, passing loads, vibration-producing plant)
+- Water pressure from groundwater flow
+- Soil saturation
 
 VISUAL INDICATORS:
-- Excavation work commenced without any documented planning or SWMS = serious non-compliance
-- No consultation records for high risk excavation work = flag
-- No geotechnical assessment for deep or complex excavations adjacent to structures = flag
-- Excavation work in public areas without traffic management in place = non-compliance
+- Tension cracks visible on surface adjacent to open trench = IMMEDIATE hazard; work must stop
+- Water seeping into trench walls = imminent collapse risk; flag immediately
+- Hard compact soil excavation with no shoring or benching = serious risk — "looks safe" is not safe
+- Vibrating plant operating adjacent to open unsupported excavation = serious hazard
+- Prolonged inactivity at excavation site with no re-evaluation of soil conditions = flag
 
 ---
 
-CHUNK 6: Principal Contractor Duties for Excavation Projects
-Section: CoP s3.1; WHS Regulation s292, s293, s308–s315
-Topic: Specific duties of principal contractors for construction projects involving excavation work
+CHUNK 6: Shoring — Timber Soldier Set Specifications
+Section: CoP s6.3; Figure 15
+Topic: Exact measurements for timber soldier set installations
 
-CONSTRUCTION PROJECT definition: involves construction work where cost is $250,000 OR MORE.
-Only ONE principal contractor per construction project.
-The principal contractor is either the person commissioning the construction work OR a person they appoint.
+TIMBER SOLDIER SET SPECIFICATIONS:
+- Soldiers protrude 500mm ABOVE TOP of trench
+- Top tom: no lower than 300mm from trench top
+- Maximum spacing of toms: 750mm
+- Maximum spacing between soldier sets: 1.5 METRES
+- Soldier minimum size: 150mm × 38mm
+- Tom minimum size: 150mm × 38mm
+- Space between bottom tom and trench floor: normally no more than 1000mm
+- Spoil heap: at least 1000mm clear of excavation
 
-PRINCIPAL CONTRACTOR MUST:
-- Prepare and review a WHS Management Plan
-- Prepare, or take all reasonable steps to obtain, a SWMS before high risk construction work starts
-- Put in place arrangements to manage the work environment including falls, facilities, first aid, emergency plan and traffic management
-- Install signs showing principal contractor's name, contact details and location of site office
-- Secure the construction workplace
-
-WHERE SIGNIFICANT EXCAVATION WORK IS BEING CARRIED OUT before building works start:
-- The person commissioning construction work may appoint the EXCAVATION CONTRACTOR as principal contractor for the site preparation phase
-- The building contractor then takes over as principal contractor after this phase is completed
-- The excavation contractor appointed as principal contractor MUST comply with all principal contractor duties during their phase
+USE LIMITATION:
+- Open soldier sets ONLY suitable for STABLE SOIL TYPES (rock, stiff clays)
+- Only provide ground support at regular intervals — NOT positive ground support to whole excavated face
 
 VISUAL INDICATORS:
-- No site signage showing principal contractor details = non-compliance
-- WHS Management Plan not available for inspection on site for project $250,000+ = non-compliance
-- Different contractors working without clear principal contractor coordination structure = flag
-- SWMS not obtained before high risk excavation work commences = serious non-compliance
+- Open soldier sets installed in unstable or wet/sandy soil = serious non-compliance
+- Soldier set spacing exceeding 1.5m = non-compliance
+- Tom spacing exceeding 750mm = non-compliance
+- Soldiers not protruding 500mm above trench top = non-compliance
+- Top tom lower than 300mm from trench top = non-compliance
 
 ---
 
-CHUNK 7: Safe Work Method Statements (SWMS) for Excavation Work
-Section: CoP s3.3; WHS Regulation s299, s300
-Topic: SWMS requirements, content, preparation responsibilities and compliance obligations
+CHUNK 7: Shoring — Steel Sheet Piling Minimum Height
+Section: CoP s6.3
+Topic: Minimum protrusion height for steel sheet piling above ground surface
 
-SWMS IS REQUIRED for all 'high risk construction work' activities in excavation. In the context of excavation, high risk construction work includes:
-- Work in or near a shaft or TRENCH DEEPER THAN 1.5 METRES
-- Work in or near a TUNNEL
-- Work involving a risk of a person FALLING MORE THAN 2 METRES
-- Work near ENERGISED ELECTRICAL INSTALLATIONS
-- Work near PRESSURISED GAS DISTRIBUTION MAINS or piping
-- Work near CHEMICAL, FUEL or REFRIGERANT lines
-- Work involving USE OF EXPLOSIVES
-- Work where POWERED MOBILE PLANT may collide with pedestrians or other powered mobile plant
-- Construction or demolition work involving ASBESTOS disturbance
-
-SWMS MUST:
-- Identify the TYPE of high risk construction work being done
-- Specify the HEALTH AND SAFETY HAZARDS and risks arising from those hazards
-- Describe how the risks will be CONTROLLED
-- Describe how control measures will be IMPLEMENTED, MONITORED and REVIEWED
-- Be developed in CONSULTATION WITH WORKERS and their representatives
-
-WHO PREPARES THE SWMS:
-- A PCBU must prepare a SWMS — or ensure one has been prepared — before high risk construction work starts
-- The person RESPONSIBLE for carrying out the high risk construction work is best placed to prepare it
-- If more than one PCBU has the duty, they must consult and cooperate to decide who prepares it
-- One SWMS may cover multiple types of high risk construction work at the same workplace, OR separate SWMS can be prepared for each type
-
-COMPLYING WITH A SWMS (WHS Regulation s300):
-If high risk construction work is NOT being carried out in accordance with the SWMS:
-- Work MUST be STOPPED IMMEDIATELY or as soon as it is safe to do so
-- Work may only be RESUMED IN ACCORDANCE WITH THE STATEMENT
+STEEL SHEET PILING:
+- MINIMUM HEIGHT ABOVE SURFACE: 300mm
+- Generally used for major excavations (large building foundations, large embankments)
+- Used where excavation in close proximity to adjoining buildings
+- Can be installed PRIOR TO excavation work commencing
+- Must be installed BEFORE excavation starts when ground so unstable that sidewall collapse likely during excavation (loose and running sand)
 
 VISUAL INDICATORS:
-- Excavation work in trench/shaft/tunnel >1.5m with no SWMS on site = serious non-compliance
-- SWMS exists but workers cannot demonstrate awareness of its contents = flag
-- Work being carried out in a manner inconsistent with the SWMS without revision = non-compliance; work must stop
-- Multiple high risk activities present (trenching + powered mobile plant near pedestrians) with only one activity covered in SWMS = flag
+- Sheet piling less than 300mm above surface level = non-compliance
+- Sheet piling not installed before excavation in loose/running sand = serious hazard
 
 ---
 
-CHUNK 8: Asbestos — Identification, Licensing and Removal in Excavation
+CHUNK 8: Hydraulic Shoring — Inspection and Maintenance Requirements
+Section: CoP s6.3
+Topic: Inspection frequency and defect identification for hydraulic shoring systems
+
+HYDRAULIC SHORING:
+- Must be designed by competent person in consultation with geotechnical engineer
+- Hydraulic capacity must resist expected ground pressures and potential for collapse
+- FREQUENT INSPECTIONS of pressure hoses and rams required to detect: abrasion, fatigue, damage, bent or notched rams
+- When trench fully supported: hydraulic supports should be dismantled to prevent costly damage
+- Must be inspected, repaired if necessary and carefully stored prior to re-use
+
+Standard: AS 5047–2005: Hydraulic shoring and trench lining equipment
+
+VISUAL INDICATORS:
+- Hydraulic shoring with damaged hoses = non-compliance; remove from service
+- Bent or notched rams on hydraulic shoring = non-compliance; remove from service
+- Hydraulic shoring with visible leaks = flag; remove from service
+- No documented inspection records for hydraulic shoring = flag
+
+---
+
+CHUNK 9: Shoring Removal — Sequence and Worker Protection
+Section: CoP s6.4
+Topic: Safe removal sequence and worker protection during shoring dismantling
+
+SHORING REMOVAL REQUIREMENTS:
+- Must be removed in REVERSE ORDER TO ITS INSTALLATION
+- Persons performing work SHOULD NOT work OUTSIDE THE PROTECTION of ground support system during removal
+- NO PART of ground support system should be removed UNTIL TRENCH IS READY FOR FINAL BACKFILL AND COMPACTION
+- Temporary structural members may need to be installed before removal begins
+
+VISUAL INDICATORS:
+- Shoring being removed before trench ready for final backfill = non-compliance
+- Workers inside trench during shoring removal without remaining protection = serious hazard
+- Shoring being removed in order other than reverse of installation sequence = flag
+- No temporary structural members where needed before removal of permanent shoring = flag
+
+---
+
+CHUNK 10: Trench Shields and Boxes — Design and Maintenance
+Section: CoP s6.5
+Topic: Requirements for trench shields as worker protection devices (not collapse prevention)
+
+KEY DISTINCTION:
+- Shields and boxes protect workers IF collapse occurs — do NOT prevent collapse
+- Shoring prevents collapse
+
+DESIGN AND USE:
+- Must be designed by competent person (engineer)
+- Pre-manufactured to job-specific dimensions
+- Must NOT be subjected to loads exceeding design capacity
+- Incorporate specific lifting points for installation and removal
+
+MAINTENANCE:
+- Must be regularly inspected for damage
+- Only altered or modified with approval of competent person
+- Manufacturer's instructions for installation, use, removal and maintenance must be followed
+- Stored and transported per manufacturer's instructions
+
+VISUAL INDICATORS:
+- Trench box visibly damaged, bent or with welds compromised = remove from service immediately
+- Trench box not pre-engineered for actual trench depth and ground conditions = flag
+- Workers inside trench box being overloaded by vehicles or heavy loads not accounted for in design = serious hazard
+
+---
+
+CHUNK 11: Underground Services — Dial Before You Dig Mandatory
+Section: CoP s3.6; WHS Regulation s304
+Topic: Mandatory pre-excavation service location requirements and contact obligations
+
+PRE-EXCAVATION MANDATORY STEPS:
+- Take ALL REASONABLE STEPS to get CURRENT INFORMATION about underground essential services in all areas where excavation will be carried out AND adjacent areas
+- DIAL BEFORE YOU DIG: Phone 1100 | Website: www.1100.com.au
+- MUST contact before excavating in public place to identify all electrical cables
+
+ADDITIONAL CONTACTS:
+- Electricity supply authorities
+- Communication companies
+- Local government authorities
+- Water authorities
+- On PRIVATE PROPERTY: contact owner or occupier about buried cables
+
+POTHOLING:
+- Required when exact location cannot be determined
+- Dig with hand tools to pre-determined depth to verify if assets exist
+- Use insulated hand digging tools suitable for voltage concerned, OR vacuum pumping
+
+INFORMATION RETENTION:
+- Underground services information must be made available to ANY WORKER, PRINCIPAL CONTRACTOR and SUBCONTRACTORS
+- Retained until excavation work COMPLETED or, if notifiable incident: for TWO YEARS after incident
+
+VISUAL INDICATORS:
+- Excavation work commenced with no Dial Before You Dig reference or services location records = serious non-compliance
+- Mechanical excavation within clear zone of marked underground services without potholing = serious hazard
+- Underground services information not available to workers or subcontractors = non-compliance
+- Information not retained post-incident for two years = non-compliance
+
+---
+
+CHUNK 12: Powered Mobile Plant — Traffic Management and High-Visibility Clothing
+Section: CoP s4.3; WHS Regulation s215
+Topic: Mandatory traffic management, high-visibility clothing and communication requirements
+
+TRAFFIC MANAGEMENT:
+- TRAFFIC MANAGEMENT ARRANGEMENTS MUST be implemented when powered mobile plant used for excavation work to PREVENT COLLISION with pedestrians or other mobile plant
+- SWMS MUST be prepared for excavation work involving powered mobile plant
+
+HIGH-VISIBILITY CLOTHING:
+- Mobile plant operators AND ground workers MUST wear high-visibility clothing
+
+COMMUNICATION SYSTEM:
+- EFFECTIVE SYSTEM based on TWO-WAY ACKNOWLEDGEMENT must be established between mobile plant operators and ground workers
+- System must STOP ground workers from approaching plant UNTIL operator has agreed to request
+- System must STOP operators from moving plant closer than set distance from ground workers until operator advised by ground workers they are aware of proposed movement
+- Relevant workers must be trained in procedures BEFORE work commences
+
+WARNING DEVICES:
+- Plant operating near ground personnel or other plant MUST have warning device (reversing alarms, revolving lights)
+
+VISUAL INDICATORS:
+- Ground workers approaching powered mobile plant without operator's acknowledgement = serious hazard
+- No reversing alarms or warning lights on plant operating near workers = non-compliance
+- Ground workers without high-visibility vests near mobile plant = non-compliance
+- No documented traffic management plan where mobile plant and pedestrians share space = non-compliance
+
+---
+
+CHUNK 13: Powered Mobile Plant — Operator Protection and ROPS/FOPS
+Section: CoP s4.3
+Topic: Mandatory operator protective structures for earthmoving machinery
+
+OPERATOR PROTECTION MANDATORY:
+- Powered mobile plant MUST be equipped with combination of operator protection devices to PREVENT EJECTION of operator or being struck by falling objects
+- Devices must be maintained and used
+- Passengers must have EQUIVALENT PROTECTION to operator
+
+ROPS/FOPS REQUIREMENT:
+- Earthmoving machinery weighing MORE THAN 1500kg (not including attachments) designed to have seated operator MUST have:
+  - ROPS (Roll-Over Protective Structures), and/or
+  - FOPS (Falling Object Protective Structures) — depending on application
+
+VISUAL INDICATORS:
+- Powered mobile plant without ROPS or FOPS for earthmoving machinery >1500kg = serious non-compliance
+- ROPS or FOPS visibly damaged or removed = serious non-compliance
+- Operator not using seatbelt in enclosed cabin = flag
+
+---
+
+CHUNK 14: Powered Mobile Plant — Proximity to Excavations
+Section: CoP s4.3
+Topic: Critical rules for plant operation near excavation edges and trenches
+
+CRITICAL RULES:
+- Large earthmoving machinery (bulldozers) SHOULD NOT operate close to overhang or deep excavation — weight may collapse sides
+- Equipment should approach embankments or trenches FROM ACROSS THE LINE OF A TRENCH, NOT parallel to it
+- Powered mobile plant should NOT operate or travel near edge of excavation UNLESS ground support system designed by competent person to carry such loads
+- PHYSICAL BARRIERS (wheel stoppers) should be used to restrict plant movement near excavation
+
+VISUAL INDICATORS:
+- Powered mobile plant operating parallel to trench edge = serious hazard
+- Plant operating near excavation edge without wheel stoppers or barriers = flag
+- Heavy plant near excavation without ground support designed to carry those loads = serious hazard
+
+---
+
+CHUNK 15: Powered Mobile Plant — Blind Spots and Operator Visibility
+Section: CoP s4.3; Figure 4
+Topic: Blind spot awareness and visibility restrictions for earthmoving machinery
+
+OPERATOR BLIND SPOTS:
+- Operators can have SEVERELY RESTRICTED VISIBILITY of ground workers or nearby pedestrians, particularly those close to plant
+- Plant types with documented blind spots: Dump trucks, Tractor scrapers, Bulldozers, Articulated rollers, Articulated loaders, Excavators, Graders
+- Mobile plant operators and ground workers must be made familiar with blind spots of particular items of plant being used
+
+VISUAL INDICATORS:
+- Ground workers in documented blind spot zones without operator acknowledgement = serious hazard
+- No documented blind spot training or awareness for plant operators and ground workers = flag
+
+---
+
+CHUNK 16: Atmospheric Hazards — Combustion Engines in Confined Excavations
+Section: CoP s4.6; WHS Regulation s50
+Topic: Prohibition on combustion engines in confined excavations and atmospheric monitoring
+
+CRITICAL RULE — COMBUSTION ENGINES:
+- Plant using COMBUSTION ENGINE (air compressors, electrical generators) MUST NEVER be used in CONFINED EXCAVATION (trench) if WORKERS ARE IN THE TRENCH
+- Build-up of exhaust gases, particularly CARBON MONOXIDE, can cause DEATH
+
+GASES HEAVIER THAN AIR that collect in tunnels and excavations:
+- Gas (general)
+- Sulphur dioxide
+- Engine fumes
+- Carbon monoxide
+- Carbon dioxide
+- Leakage from gas bottles, fuel tanks, sewers, drains, gas pipes, LPG tanks
+
+AIR MONITORING MANDATORY when:
+- NOT CERTAIN whether airborne concentration of substance exceeds relevant exposure standards
+- Monitoring NECESSARY TO DETERMINE whether there is risk to health
+
+VISUAL INDICATORS:
+- Air compressors or generators running inside trench or confined excavation with workers present = serious non-compliance; immediate stop
+- No ventilation provided in enclosed or confined excavations = flag
+- No gas monitors in use in excavations near drains, sewers or gas pipes = serious hazard
+- Workers in tunnels or deep shafts without personal atmospheric monitors = flag
+- No buddy/observer system for workers in confined excavations = flag
+
+---
+
+CHUNK 17: Asbestos — Identification and Licensing Requirements
 Section: CoP s3.4; WHS Regulation s422, s426, s448, s449, s450, s451, s458
-Topic: Asbestos obligations applicable to excavation work including identification, licensing, removal and disposal
+Topic: Asbestos identification, removal licensing thresholds and disposal requirements
 
-DURING EXCAVATION WORK — you may encounter asbestos in:
+ASBESTOS IN EXCAVATION WORK — may be encountered in:
 - Underground water pipes
 - Telecommunications pits
 - Naturally occurring asbestos in excavated material
 
-PCBU OBLIGATIONS:
-- Must ensure ALL asbestos or ACM at the workplace, or ASSUMED PRESENT, is IDENTIFIED BY A COMPETENT PERSON
-- All asbestos likely to be disturbed must be identified and, so far as reasonably practicable, REMOVED BEFORE DEMOLITION OR EXCAVATION STARTS
-- If a part of a structure is inaccessible or the competent person is uncertain, asbestos MUST BE ASSUMED to be present
+IDENTIFICATION MANDATORY:
+- ALL asbestos or ACM at workplace, or ASSUMED PRESENT, must be identified by COMPETENT PERSON
+- All asbestos likely to be disturbed must be identified and, so far as reasonably practicable, REMOVED BEFORE excavation starts
+- If part of structure inaccessible or competent person uncertain: asbestos MUST BE ASSUMED present
 - Construction work involving disturbance of asbestos = HIGH RISK CONSTRUCTION WORK; SWMS mandatory
 
-ASBESTOS LICENCE REQUIREMENTS:
-Class A Licence — can remove:
-- Any amount of FRIABLE asbestos or ACM
-- Any amount of ACD (asbestos contaminated dust)
-- Any amount of NON-FRIABLE asbestos or ACM
-
-Class B Licence — can remove:
-- Any amount of NON-FRIABLE asbestos or ACM
-- ACD associated with removal of non-friable asbestos or ACM
-
-NO LICENCE REQUIRED for removal of:
-- UP TO 10m² of non-friable asbestos or ACM
-- ACD associated with removal of LESS THAN 10m² of non-friable asbestos or ACM (where not also associated with friable asbestos)
-- ACD that is a minor contamination not associated with removal of friable or non-friable asbestos
-
-ASBESTOS REGISTER OBLIGATIONS:
-- PCBU carrying out excavation or demolition must obtain a copy of the asbestos register from the person with management or control of the workplace BEFORE work starts
-- If NO asbestos register exists: structure must be inspected by a competent person to determine if asbestos or ACM is present before work starts
-- If asbestos found or assumed: owner and occupier of domestic premises must be informed; in any other case: person with management or control of the workplace must be informed
+LICENCE REQUIREMENTS:
+- Class A Licence: any amount of friable asbestos or ACM; any amount of ACD; any amount of non-friable asbestos or ACM
+- Class B Licence: any amount of non-friable asbestos or ACM; ACD associated with removal of non-friable asbestos or ACM
+- NO LICENCE required: UP TO 10m² of non-friable asbestos or ACM; ACD associated with removal of LESS THAN 10m² non-friable ACM (where not also associated with friable asbestos)
 
 DISPOSAL:
-- Asbestos waste must be transported and disposed of in accordance with relevant state EPA requirements
-- Can only be disposed of at an EPA-LICENSED SITE
-- MUST NEVER be disposed of in the general waste system
+- Can only be disposed of at EPA-LICENSED SITE
+- MUST NEVER be disposed of in general waste system
 
 VISUAL INDICATORS:
 - Excavation near or through underground pipes/pits with no asbestos assessment = non-compliance
@@ -338,608 +434,70 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 9: Adjacent Buildings and Structures
+CHUNK 18: Adjacent Buildings and Structures — Excavation Below Footings
 Section: CoP s3.5
-Topic: Obligations to protect adjacent buildings and structures from excavation-induced instability, vibration and flooding
+Topic: Requirements when excavating below footing level of adjacent structures
 
-EXCAVATION WORK MUST NOT START until steps are taken to PREVENT THE COLLAPSE or PARTIAL COLLAPSE of potentially affected buildings or structures.
+EXCAVATION BELOW FOOTING LEVEL:
+- Excavation BELOW THE LEVEL OF THE FOOTING of structure (including retaining walls) that could affect structural stability:
+  - Must be ASSESSED BY COMPETENT PERSON
+  - Must be SECURED BY GROUND SUPPORT SYSTEM designed by competent person
+  - Suitable STRUCTURAL BRACING may also be required; identified by competent person
 
-KEY REQUIREMENTS:
-- EXCAVATION BELOW THE LEVEL OF THE FOOTING of a structure (including retaining walls) that could affect structural stability:
-  - Must be ASSESSED BY A COMPETENT PERSON
-  - Must be SECURED BY A GROUND SUPPORT SYSTEM designed by a competent person
-  - Suitable STRUCTURAL BRACING may also be required; identified by a competent person
-
-- VIBRATION AND CONCUSSION: Other buildings in and around the excavation site must not be adversely affected
-  - SPECIAL PRECAUTIONS required in the vicinity of hospitals and buildings containing equipment sensitive to shock and vibration
-
-- FLOODING OR WATER PENETRATION to adjacent buildings must be prevented
+ADDITIONAL REQUIREMENTS:
+- Vibration and concussion: other buildings in and around excavation site must not be adversely affected
+- Special precautions required near hospitals and buildings containing equipment sensitive to shock and vibration
+- Flooding or water penetration to adjacent buildings must be prevented
 
 VISUAL INDICATORS:
 - Excavation below footing level of adjacent structures without geotechnical assessment = serious non-compliance
 - No structural support or monitoring for retaining walls adjacent to excavation = flag
-- Hospital, heritage building, or sensitive facility nearby with no vibration assessment = flag
+- Hospital, heritage building or sensitive facility nearby with no vibration assessment = flag
 - Water diversion from excavation pointing toward adjacent structures = flag
 
 ---
 
-CHUNK 10: Underground Essential Services — Pre-Excavation Requirements
-Section: CoP s3.6; WHS Regulation s304
-Topic: Mandatory requirements for identifying and managing underground essential services before and during excavation
-
-ESSENTIAL SERVICES include: gas, water, sewerage, telecommunications, electricity, chemicals, fuel and refrigerant in pipes or lines.
-
-PRE-EXCAVATION — MANDATORY STEPS:
-Before directing or allowing work to start, the person with management or control of the workplace MUST:
-- Take ALL REASONABLE STEPS to get CURRENT INFORMATION about underground essential services in ALL areas where excavation will be carried out AND in adjacent areas
-- HAVE REGARD to that information when carrying out, directing or allowing the excavation work
-
-DIAL BEFORE YOU DIG (MANDATORY CONTACT):
-- Phone: 1100
-- Online: www.1100.com.au
-- Must contact BEFORE excavating in a public place to identify all electrical cables
-
-ADDITIONAL CONTACTS — relevant authorities including:
-- Electricity supply authorities
-- Communication companies
-- Local government authorities
-- Water authorities
-- On PRIVATE PROPERTY: contact the OWNER or OCCUPIER about buried cables before starting work
-
-NOTE: Available information about underground services MAY NOT BE ACCURATE — even after Dial Before You Dig, an initial physical examination of the area is required.
-
-POTHOLING — required when exact location of underground service cannot be determined:
-- Involves digging with hand tools to a PRE-DETERMINED DEPTH to verify if assets exist
-- Insulated hand digging tools suitable for the voltage concerned must be used, OR
-- Vacuum pumping may be used to locate the underground cable
-- Typically using water pressure and a vacuum system to excavate or 'pothole' the area
-
-UNDERGROUND LOCATORS:
-- Electromagnetic cable locators
-- Ground penetrating radar
-- Workers operating such equipment MUST be trained and competent in their use
-
-A SWMS must be prepared for excavation work involving underground services.
-
-INFORMATION RETENTION OBLIGATIONS:
-Underground essential services information obtained MUST be:
-- Made available to ANY WORKER, PRINCIPAL CONTRACTOR and SUBCONTRACTORS
-- Readily available for inspection, as required under the WHS Act
-- Retained until the excavation work is COMPLETED or, if there is a NOTIFIABLE INCIDENT relating to the excavation work, for TWO YEARS after the incident occurs
-
-HIGH RISK CONSTRUCTION WORK — SWMS required for work on or near:
-- Pressurised gas distribution mains or piping
-- Chemical, fuel or refrigerant lines
-- Energised electrical installations
-
-SPECIFIC CONTROLS near OVERHEAD POWERLINES:
-- Consult the relevant authority regarding APPROACH DISTANCES before using excavators or earthmoving machinery near overhead powerlines
-- Control measures must prevent any part of the plant or load from coming too close to or contacting overhead powerlines
-- All non-required electric, gas, water, sewer, steam and other service lines should be shut off, capped or controlled at or outside the building line before work starts
-
-VISUAL INDICATORS:
-- Excavation work commenced with no Dial Before You Dig reference or services location records = serious non-compliance
-- Mechanical excavation within clear zone of marked underground services without potholing = serious hazard
-- Excavation plant operating near overhead powerlines without documented approach distance controls = serious non-compliance
-- Underground services information not available to workers or subcontractors = non-compliance
-- Information not retained post-incident for two years = non-compliance
-
----
-
-CHUNK 11: Securing the Work Area — Trench Depth Trigger
-Section: CoP s3.7; WHS Regulation s306
-Topic: Obligations to secure excavations from unauthorised access, including specific depth trigger for trenches
-
-TRENCH DEPTH TRIGGER FOR SECURING:
-A PCBU who proposes to excavate a TRENCH AT LEAST 1.5 METRES DEEP must ensure, so far as is reasonably practicable, that the WORK AREA IS SECURED FROM UNAUTHORISED ACCESS, including INADVERTENT ENTRY.
-
-Note: This is separate to — and in addition to — the general duty the person with management or control of the construction site has to ensure the SITE is secured from unauthorised access from members of the public.
-
-CONSIDERATIONS in securing the trench or excavation:
-- Risks to health and safety arising from unauthorised access to the work area
-- Likelihood of unauthorised access occurring
-- Proximity to schools, parks, shops or other public places
-
-VISUAL INDICATORS:
-- Trench ≥1.5m deep with no perimeter fencing, hoarding or physical barrier = serious non-compliance
-- Open trench adjacent to public access area with no barriers or covers = serious non-compliance
-- After-hours excavation site with no security measures = flag
-- Warning signs only (no physical barrier) for trench >1.5m in public area = likely non-compliance
-
----
-
-CHUNK 12: Emergency Plans for Excavation Work
-Section: CoP s3.8; WHS Regulation s43
-Topic: Emergency plan obligations, required content and review obligations specific to excavation sites
-
-A PCBU at a workplace MUST ensure there is an EMERGENCY PLAN for the workplace. The emergency plan is a WRITTEN SET OF INSTRUCTIONS outlining what workers and others should do in an emergency.
-
-EXCAVATION-SPECIFIC EMERGENCY SCENARIOS the plan should cover:
-- Ground slip
-- Engulfment
-- Flooding
-- Gas leaks
-- RESCUING WORKERS FROM AN EXCAVATION
-
-EMERGENCY PLAN MUST PROVIDE FOR:
-- Emergency procedures, including an effective response to an emergency
-- Evacuation procedures
-- Notifying emergency service organisations AT THE EARLIEST OPPORTUNITY
-- Medical treatment and assistance
-- Effective communication between the person authorised to coordinate emergency response and ALL people at the workplace
-- Testing of the emergency procedures — including the FREQUENCY OF TESTING
-- Information, training and instruction to relevant workers in relation to implementing emergency procedures
-
-PREPARATION CONSIDERATIONS:
-- Nature of the work being carried out
-- Nature of the hazards at the workplace
-- Size and location of the workplace (e.g. remoteness, proximity to health services)
-- Number and composition of workers (employees, contractors, visitors)
-
-The plan should be incorporated as part of the broader CONSTRUCTION PROJECT EMERGENCY PLAN prepared by the principal contractor.
-
-REVIEW TRIGGERS — emergency plan must be reviewed and revised when:
-- Changes to the workplace (relocation, refurbishments)
-- Changes in the number or composition of staff (increase in temporary contractors)
-- New activities introduced
-- After the plan has been TESTED
-
-VISUAL INDICATORS:
-- No written emergency plan on excavation site = non-compliance
-- Emergency plan does not address engulfment or ground collapse rescue procedures = flag for excavation sites
-- No evidence emergency procedures have been tested = flag
-- Workers unable to identify the emergency response coordinator = flag
-- Site in remote location with no documented access arrangements for emergency services = flag
-
----
-
-CHUNK 13: Common Hazards and Control Measures — Summary Table
-Section: CoP s4.0 (Table 2)
-Topic: Quick-reference summary of common excavation hazards and their required control measures
-
-GROUND COLLAPSE:
-Control measures: Shoring — using benching or installing ground support
-
-WATER IN-RUSH:
-Control measures: Pumps or other dewatering systems to remove water and prevent build-up
-
-FALLS:
-Control measures: Fall prevention devices including secure fences, edge protection, working platforms and covers; ramps, steps or other access into excavation
-
-HAZARDOUS MANUAL TASKS:
-Control measures: Rotating tasks between workers
-
-AIRBORNE CONTAMINANTS:
-Control measures: Air monitoring and mechanical ventilation to remove airborne contaminants
-
-BURIED CONTAMINANTS:
-Control measures: Training to identify buried contaminants and what action to take
-
-UNDERGROUND SERVICES:
-Control measures: Obtain information from relevant authorities on location of underground services (Dial Before You Dig: 1100)
-
-ASBESTOS CONTAINING MATERIAL (ACM):
-Control measures: Asbestos and ACM at workplace must be identified by a competent person and recorded in the asbestos register
-
-POWERED MOBILE PLANT:
-Control measures: Implement a traffic management plan
-
-VISUAL INDICATORS:
-- Any of these hazards present without corresponding control = non-compliance
-- No traffic management plan where powered mobile plant is used near workers = non-compliance
-- Dewatering equipment not in place when water is visibly present in excavation = flag
-- No air monitoring in enclosed or confined excavations = flag
-
----
-
-CHUNK 14: Excavated Material and Loads Near Excavations — Zone of Influence
-Section: CoP s4.1
-Topic: Requirements for placement of excavated material, plant and heavy loads relative to excavation zones
-
-ZONE OF INFLUENCE:
-- The zone in which there may be an INFLUENCE ON THE EXCAVATION including possible ground collapse
-- Depends on the ground conditions
-- MECHANICAL PLANT, VEHICLES and STORAGE OF MATERIALS (including excavated material or heavy loads) SHOULD NOT be located in the zone of influence of an excavation UNLESS the ground support system has been DESIGNED BY A COMPETENT PERSON (e.g. geotechnical engineer) to carry such loads
-
-MINIMUM CLEARANCE — MATERIALS AND SPOIL:
-- Excavated or loose material should be stored AWAY from the excavation, OUTSIDE the zone of influence
-- Excavated material placed near edge increases risk of: collapse of the side of the excavation; persons working inside being put at risk
-- When dumped, soils settle at their characteristic angle of repose — NOTE: it is POOR PRACTICE to relate the safe slope of an excavation to the angle of repose
-
-SPECIFIC FIGURE REFERENCES:
-- Figure 2: Minimum clearance of 1000mm (1 metre) from edge of excavation for vehicles and spoil heaps — applicable to both shoring configurations shown
-  - Top diagram: Shoring designed to carry vehicle and material loads (limited space conditions)
-  - Bottom diagram: Shoring designed only to carry excavated face loads — zone of influence shown extending beyond 1000mm minimum clearance
-
-SLOPING GROUND — SIDE FOR EXCAVATED MATERIAL:
-Consider: ground conditions, access to excavation, existing underground services, need for earthmoving machinery beside excavation, service installation and backfilling requirements, manual work in excavation
-- Placing material on the LOWER SIDE reduces effective height of excavation and reduces risk of material falling or being washed in
-- A TOEBOARD should be used where material is placed on the uphill side to prevent it falling into trench (see Figure 3)
-- Material placed on HIGH SIDE must NOT increase risk of ground collapse or flooding by ponding or holding back run-off water
-- Excavated material should be placed to CHANNEL RAINWATER AWAY from the excavation
-
-OLD SERVICE LINES: When trenching beside an old service line, excavated material should be placed on the SIDE OPPOSITE the old service line to prevent excessive loading on previously weakened ground
-
-OBSTRUCTIONS (fences, buildings, trees): If excavated material must be placed close to trench due to obstructions:
-- The weight may overload sides of the trench
-- Ground support system should be STRENGTHENED at these locations
-- BARRIERS (e.g. toe boards) may need to be provided to prevent material falling into excavation
-
-VISUAL INDICATORS:
-- Spoil heaps or plant positioned less than 1000mm from edge of unsupported excavation = non-compliance
-- Vehicles operating within zone of influence of excavation without shoring designed to carry those loads = serious hazard
-- Excavated material placed on uphill side of trench with no toeboard = flag
-- Spoil heap positioned to channel water toward excavation = flag
-
----
-
-CHUNK 15: Plant and Equipment — Selection, Operation and Maintenance
-Section: CoP s4.2; WHS Regulation s206
-Topic: Requirements for plant and equipment used in excavation work
-
-PERSON WITH MANAGEMENT OR CONTROL of plant MUST:
-- Take all reasonable steps to ensure plant is only used for the PURPOSE for which it is DESIGNED, unless assessed that proposed use does not increase risk
-- In determining whether proposed use increases risk: ensure risk is assessed by a COMPETENT PERSON
-- Take all reasonable steps to ensure all SAFETY FEATURES, WARNING DEVICES, GUARDING, OPERATIONAL CONTROLS, EMERGENCY STOPS are used in accordance with instructions
-
-PLANT USED IN EXCAVATION WORK includes:
-- Powered mobile plant (excavators, bulldozers, scrapers, backhoes, tip trucks — see Chunk 16)
-- Air compressors
-- Electric generators
-- Jackhammers
-- Hydraulic jacks
-- Oxyacetylene (gas cutting or welding)
-- Scaffolding
-- Ladders
-- Handheld plant (shovels, picks, hammers, pinch/lever bars)
-
-PERSON WITH MANAGEMENT OR CONTROL OF PLANT should ensure:
-- Plant is used and operated by a COMPETENT PERSON
-- Guards and operator protective devices are FITTED
-- Safe working load is DISPLAYED and load measurement devices are operating correctly
-- Ground is PREPARED for plant placement, especially on uneven terrain
-- Plant is MAINTAINED in accordance with manufacturer's/supplier's instructions or relevant Australian Standards
-
-LASERS:
-- Laser equipment on plant must be protected so no operator or other person is exposed to direct radiation, reflected or secondary radiation
-- Lasers CLASSES 3B and 4 (within AS 2397: Safe use of lasers in the building and construction industry) MUST NOT be used in construction work — these are capable of producing hazardous diffuse reflections or constituting a fire hazard
-- Workers operating lasers must be TRAINED in use of the equipment
-
-VISUAL INDICATORS:
-- Unlicensed or unqualified operator on excavation plant = non-compliance
-- Safety guards or operator protective structures missing or damaged = non-compliance
-- Plant being used for a purpose outside its design specification without documented risk assessment = flag
-- Laser equipment in use without operator training records = flag
-
----
-
-CHUNK 16: Powered Mobile Plant — Traffic Management and Operator Safety
-Section: CoP s4.3; WHS Regulation s215
-Topic: Specific control requirements for powered mobile plant used in excavation work including traffic management, blind spots, operator protection and maintenance
-
-HIGH RISK WORK LICENCE:
-- Required to operate SOME types of powered mobile plant
-- EARTHMOVING MACHINERY generally does not require a high risk work licence if used for the purpose for which it was originally designed
-- Earthmoving machinery operators must be able to demonstrate COMPETENCE to operate the specific type of plant and attachments
-
-TRAFFIC MANAGEMENT:
-- TRAFFIC MANAGEMENT ARRANGEMENTS MUST be implemented when powered mobile plant is used for excavation work, to PREVENT COLLISION with pedestrians or other mobile plant
-- A SWMS MUST be prepared for excavation work involving the use of powered mobile plant
-
-EARTHMOVING MACHINERY — types used:
-- Bulldozers (excavate and move large amounts, short distances; hydraulic rippers for rock)
-- Self-propelled rubber tyred scrapers (large quantities, long distances; careful attention to haul roads and traffic management required)
-- Excavators (work >1.5m deep typically; tunnelling machines and raise-bores)
-- Backhoes, rubber-tyred loaders, skid steer loaders (e.g. bobcats), trench diggers, graders, tip trucks
-
-NEAR EXCAVATIONS — CRITICAL RULE:
-- Large earthmoving machinery (e.g. bulldozers) SHOULD NOT operate close to an OVERHANG or DEEP EXCAVATION — the weight may collapse the sides
-- Equipment should always approach embankments or trenches FROM ACROSS THE LINE OF A TRENCH, NOT parallel to it
-- Powered mobile plant should NOT operate or travel near the EDGE of an excavation unless the ground support system has been designed by a competent person to carry such loads
-- PHYSICAL BARRIERS (e.g. wheel stoppers) should be used to restrict plant movement near an excavation
-
-OPERATOR BLIND SPOTS:
-- Operators can have SEVERELY RESTRICTED VISIBILITY of ground workers or nearby pedestrians, particularly those close to the plant
-- Plant types with documented blind spots include: Dump trucks, Tractor scrapers, Bulldozers, Articulated rollers, Articulated loaders, Excavators, Graders (see Figure 4)
-- Mobile plant operators and ground workers must be made familiar with the blind spots of particular items of plant being used
-
-COMMUNICATION SYSTEM (before work starts):
-- An EFFECTIVE SYSTEM OF COMMUNICATION based on TWO-WAY ACKNOWLEDGEMENT must be established between mobile plant operators and ground workers
-- System must STOP GROUND WORKERS from approaching mobile plant UNTIL the operator has AGREED to their request to approach
-- System must STOP OPERATORS from moving plant CLOSER THAN A SET DISTANCE from ground workers until operator has been ADVISED by ground workers they are aware of the proposed movement
-- Relevant workers must be trained in the procedures BEFORE work commences
-
-HIGH-VISIBILITY CLOTHING:
-- Mobile plant operators AND ground workers MUST be provided with and REQUIRED TO WEAR high-visibility clothing
-
-WARNING DEVICES:
-- If powered mobile plant operates near ground personnel or other powered mobile plant, the person with management or control MUST ensure it has a WARNING DEVICE (e.g. REVERSING ALARMS, revolving lights)
-- Operators of powered mobile plant MUST ensure the plant does not collide with pedestrians or other powered mobile plant
-
-OPERATOR PROTECTION:
-- Powered mobile plant MUST be equipped with a combination of operator protection devices (e.g. enclosed cabin and seatbelts) to PREVENT EJECTION of operator or being struck by falling objects
-- Devices MUST be maintained and used
-- Passengers on plant must have EQUIVALENT PROTECTION to that provided to the operator
-- Earthmoving machinery weighing MORE THAN 1500kg (not including attachments) designed to have a seated operator MUST have OPERATOR PROTECTIVE STRUCTURES fitted:
-  - ROPS (Roll-Over Protective Structures), and/or
-  - FOPS (Falling Object Protective Structures) — depending on application
-
-INSPECTION AND MAINTENANCE:
-- Regular planned inspection, maintenance and testing by a COMPETENT PERSON, in accordance with manufacturer's recommendations
-- If no manufacturer's recommendations: in accordance with recommendations of a competent person
-- Both MECHANICAL and ELECTRICAL testing required
-- Daily PRE-START CHECKS by plant operator on general condition and maintenance
-- Regular inspections by a competent person per manufacturer's/supplier's specifications or Australian Standards
-- Plant defects must be REPORTED IMMEDIATELY to PCBU
-- Defect likely to pose IMMEDIATE RISK = plant REMOVED FROM SERVICE until rectified
-- Logbooks and inspection check sheets (full service and repair history including reported defects) must be kept current and retained for the LIFE OF THE PLANT
-- Records transfer to purchaser on sale of plant
-
-VISUAL INDICATORS:
-- Ground workers approaching powered mobile plant without operator's acknowledgement = serious hazard
-- No reversing alarms or warning lights on plant operating near workers = non-compliance
-- Ground workers without high-visibility vests near mobile plant = non-compliance
-- Plant without ROPS or FOPS for earthmoving machinery >1500kg = serious non-compliance
-- Powered mobile plant operating parallel to trench edge = serious hazard
-- No documented traffic management plan where mobile plant and pedestrians share space = non-compliance
-- Wheel stoppers or barriers absent at excavation edges near plant operations = flag
-- No daily pre-start check documented = flag
-
----
-
-CHUNK 17: Falls — Managing the Risk of Falls into and Within Excavations
-Section: CoP s4.4; WHS Regulation s78
-Topic: Fall prevention hierarchy, specific control measures and SWMS requirements for excavation fall risks
-
-LEGAL DUTY (WHS Regulation s78):
-A PCBU MUST manage risks to health and safety associated with a FALL BY A PERSON from one level to another that is reasonably likely to cause injury.
-
-HIERARCHY FOR FALL CONTROL — in order, so far as is reasonably practicable:
-1. FIRST: Carry out work on the GROUND or on a SOLID CONSTRUCTION
-   A solid construction must have:
-   - A surface structurally capable of supporting all persons and things on it
-   - Barriers around its perimeter and any openings to prevent a fall
-   - An even and readily negotiable surface and gradient
-   - A safe means of entry and exit
-2. If elimination not reasonably practicable, MINIMISE risk — in this order:
-   a. FALL PREVENTION DEVICE (e.g. temporary work platforms, guardrails, fencing, covers)
-   b. WORK POSITIONING SYSTEM (e.g. industrial rope access systems) — only if fall prevention device not reasonably practicable
-   c. FALL ARREST SYSTEM (e.g. catch platforms, safety harness) — only if work positioning system not reasonably practicable
-
-NOTE: Each level can only be used if the previous level is not reasonably practicable.
-
-FALL PREVENTION DEVICE definition:
-Material or equipment — or combination — designed to PREVENT a fall for temporary work at heights. Once in place after initial installation, does NOT require any ongoing adjustment, alteration or operation to ensure integrity. Includes: secure fencing, edge protection, working platforms, covers.
-
-SPECIFIC CONTROL MEASURES for excavation falls:
-- Trench box extensions or trench sheets LONGER THAN THE TRENCH DEPTH (support system extending above ground) — Figure 6
-- Guard rails or covers on trench shields — Figure 7
-- Guard rails and toe-boards inserted into the ground immediately next to supported excavation side
-- Landing platforms or scaffold towers inside DEEP EXCAVATIONS
-- Ladders SECURED to trench shields
-- Effective barriers or barricades
-- Clearly defined PEDESTRIAN DETOURS
-- Alternative ACCESS and EGRESS POINTS for emergency use
-- Backfilling excavation as work progresses
-
-HIGH RISK CONSTRUCTION WORK TRIGGER:
-- Construction work involving risk of a person falling MORE THAN 2 METRES = high risk construction work
-- SWMS MUST be prepared before this work commences
-
-VISUAL INDICATORS:
-- Open trench with no edge protection or barriers = serious non-compliance
-- No guardrails around excavations adjacent to pedestrian or worker movement areas = non-compliance
-- Workers entering excavations using informal access (jumping in) rather than ladders or steps = flag
-- Excavation >2m deep with no formal fall arrest or prevention system in place = serious non-compliance
-- Trench shields not extending above ground level where workers are present = flag
-- Ladders not secured to trench shields = flag
-
----
-
-CHUNK 18: Explosives Use in Excavation Work
-Section: CoP s4.5; WHS Act; relevant dangerous substances legislation
+CHUNK 19: Explosives Use — Licensing and Notification
+Section: CoP s4.5; WHS Act
 Topic: Requirements for using explosives in excavation work
 
-CLASSIFICATION: Construction work involving use of explosives = HIGH RISK CONSTRUCTION WORK; SWMS MUST be prepared before this work starts.
+CLASSIFICATION:
+- Construction work involving use of explosives = HIGH RISK CONSTRUCTION WORK
+- SWMS MUST be prepared before this work starts
 
 REQUIREMENTS:
-- A COMPETENT PERSON experienced in the controlled application of explosives for excavation MUST be consulted before deciding whether explosives may be used
-- All possession, storage, handling and use of explosives must comply with relevant dangerous substances/goods or explosives legislation in your state or territory
-- Transport of explosives must be in accordance with the Australian Code for the Transport of Explosives by Road and Rail
-- Explosives MUST ONLY be used by a COMPETENT PERSON who is LICENSED in the use of explosives and has EXPERIENCE in the work to be carried out
-- A LICENSED COMPETENT PERSON must develop and have authorised a BLAST MANAGEMENT PLAN before blasting starts
-- A NOTIFICATION MUST BE MADE TO THE REGULATOR if explosives are planned to be used
+- Competent person experienced in controlled application of explosives for excavation MUST be consulted before deciding whether explosives may be used
+- Explosives MUST ONLY be used by COMPETENT PERSON who is LICENSED in use of explosives and has EXPERIENCE in work to be carried out
+- Licensed competent person must develop and have authorised BLAST MANAGEMENT PLAN before blasting starts
+- NOTIFICATION MUST BE MADE TO REGULATOR if explosives planned to be used
 
-KEY STANDARD: AS 2187.2: Explosives – Storage and use – Use of Explosives
+Key Standard: AS 2187.2: Explosives – Storage and use – Use of Explosives
 
 VISUAL INDICATORS:
 - Explosives on excavation site without licensed explosives user present = serious non-compliance
 - No blast management plan prepared before blasting commences = serious non-compliance
-- No regulator notification where explosives are to be used = non-compliance
+- No regulator notification where explosives to be used = non-compliance
 - SWMS not prepared before explosive excavation work commences = serious non-compliance
 
 ---
 
-CHUNK 19: Atmospheric Conditions and Ventilation in Excavations
-Section: CoP s4.6; WHS Regulation s50
-Topic: Management of atmospheric contamination, gas build-up, ventilation and air monitoring in excavations
-
-RISK: Gases and fumes HEAVIER THAN AIR can collect in tunnels and excavations including:
-- Gas (general)
-- Sulphur dioxide
-- Engine fumes
-- Carbon monoxide
-- Carbon dioxide
-- Leakage from gas bottles, fuel tanks, sewers, drains, gas pipes, LPG tanks
-
-CRITICAL RULE — COMBUSTION ENGINES:
-Plant using a COMBUSTION ENGINE (e.g. air compressors, electrical generators) MUST NEVER be used in a CONFINED EXCAVATION (e.g. a trench) if WORKERS ARE IN THE TRENCH. Build-up of exhaust gases, particularly CARBON MONOXIDE, can cause DEATH.
-
-VENTILATION SYSTEMS help to:
-- Maintain oxygen levels
-- Dilute flammable gases, fumes and certain dusts (e.g. coal and sulphide can ignite within explosive limits)
-- Reduce dust, fumes and hazardous contaminants
-- Control air temperature and humidity
-
-VENTILATION SYSTEM DESIGN:
-- Must be designed by a COMPETENT PERSON
-- Must provide adequate ventilation through the excavation (e.g. through a tunnel during construction)
-- May include extra localised extraction ventilation for dust, heat or fumes from plant and other activities
-- Design must allow for installing ducting as excavation progresses to maintain air supply to the working face
-
-AIR MONITORING (WHS Regulation s50) — MANDATORY when:
-- It is NOT CERTAIN whether the airborne concentration of a substance exceeds the relevant EXPOSURE STANDARDS
-- Monitoring is NECESSARY TO DETERMINE whether there is a risk to health
-
-OTHER CONTROL MEASURES:
-- Pre-start checks of atmospheric conditions
-- Use of gas monitors, including workers wearing PERSONAL MONITORS near their airways
-- Ensuring adequate ventilation — natural or mechanical
-- Working in PAIRS, with one person as SAFETY OBSERVER at the surface to monitor conditions
-- Ensuring familiarity with RESCUE PROCEDURES
-- Using appropriate PPE
-
-VISUAL INDICATORS:
-- Air compressors or generators running inside a trench or confined excavation with workers present = serious non-compliance; immediate stop
-- No ventilation provided in enclosed or confined excavations = flag
-- No gas monitors in use in excavations near drains, sewers or gas pipes = serious hazard
-- Workers in tunnels or deep shafts without personal atmospheric monitors = flag
-- No buddy/observer system for workers in confined excavations = flag
-- No documented pre-start atmospheric check = flag
-
----
-
-CHUNK 20: Manual Work in Excavations
-Section: CoP s4.7; WHS Regulation s60
-Topic: Manual excavation methods, musculoskeletal disorder risks and proximity requirements
-
-WHEN MANUAL EXCAVATION IS TYPICALLY USED:
-- Small, shallow excavations — generally LESS THAN 1.5 METRES DEEP in soft soils
-
-PCBU DUTY (WHS Regulation s60):
-Must manage risks relating to MUSCULOSKELETAL DISORDERS associated with hazardous manual tasks.
-
-PROXIMITY REQUIREMENT:
-- When working in CLOSE PROXIMITY, workers should be kept SUFFICIENTLY FAR APART to prevent injury from the use of picks or other hand tools
-- Applies particularly to work in TRENCHES and SMALL EXCAVATIONS
-
-VIBRATION RISK:
-- Preparatory drilling and use of hand drills may increase risk of musculoskeletal disorders, including disorders associated with EXPOSURE TO VIBRATION
-
-TRIMMING TECHNIQUE:
-- For some trench excavations, manual trimming will be required
-- Trimming can often be accomplished FROM OUTSIDE THE TRENCH by shovelling or using a long-handled tool to push material to the bottom for pick-up by excavation plant
-- Risks associated with falls and working with powered mobile plant must be controlled
-
-VISUAL INDICATORS:
-- Workers using picks or hand tools in close proximity without adequate spacing = flag
-- Workers using hand drills extensively without vibration exposure records = flag
-- Workers entering excavation for trimming that could be done from the surface = flag
-
----
-
-CHUNK 21: Trenching — Method-Specific Requirements
-Section: CoP s5.1; WHS Regulation s306
-Topic: Specific legal requirements for trench excavations including depth triggers, support obligations and access controls
-
-LEGAL REQUIREMENTS — TRENCH DEPTH TRIGGER 1.5 METRES:
-A PCBU who proposes to excavate a TRENCH AT LEAST 1.5 METRES DEEP MUST ensure, so far as is reasonably practicable, that:
-1. The WORK AREA IS SECURED from unauthorised entry including inadvertent entry
-2. The risk of COLLAPSE is minimised by ensuring ALL SIDES of the trench are ADEQUATELY SUPPORTED by implementing ONE OR MORE of the following:
-   a. SHORING — by shielding or other comparable means
-   b. BENCHING
-   c. BATTERING
-
-ENGULFMENT EXCEPTION:
-Where there is a risk of ENGULFMENT when a worker ENTERS A TRENCH, these control measures (shoring, benching, battering) should be implemented REGARDLESS OF THE DEPTH of the trench.
-
-GEOTECHNICAL ENGINEER — may be required for:
-- A REPORT on stability and safety of a trench excavation
-- Report should include: soil conditions, shoring or trench support requirements, dewatering requirements, longer-term effects on stability and safety
-- A competent person (e.g. engineer) should design support systems or be involved in selecting other ground collapse control measures (e.g. trench shields)
-
-WHEN SHORING, BENCHING AND BATTERING MAY NOT BE REQUIRED:
-- Written advice received from a GEOTECHNICAL ENGINEER that all sides of the trench are SAFE FROM COLLAPSE
-- Advice must state the PERIOD OF TIME it applies to
-- Advice may be subject to conditions (e.g. certain natural occurrences may create a risk of collapse)
-
-BUILT-UP AREAS:
-- In built-up areas or streets the excavation may have to be FULLY OR PARTLY SHEETED or supported to prevent collapse due to localised vehicle movement
-
-PREPARATION AND EXCAVATION:
-- Bulldozers, scrapers, excavators and other earthmoving equipment are commonly used for site preparation and trenching
-- Manual trimming from outside the trench is preferred where possible using long-handled tools
-
-VISUAL INDICATORS:
-- Trench ≥1.5m deep with no shoring, benching or battering installed = serious non-compliance
-- Workers inside trench ≥1.5m deep without any ground collapse protection = serious non-compliance; work must stop
-- Unsupported trench in built-up area adjacent to road with vehicle traffic = serious non-compliance
-- No written geotechnical advice where shoring/benching/battering has been omitted = non-compliance
-- Trench of any depth with workers inside and visible risk of engulfment (e.g. sandy, wet soil) = implement controls regardless of depth
-
----
-
-CHUNK 22: Tunnelling — Design, Hazards and Controls
+CHUNK 20: Tunnelling — Design Obligations and Ground Support
 Section: CoP s5.2; WHS Regulation s295
-Topic: Requirements specific to tunnel construction including design obligations, hazards and control measures
+Topic: Designer obligations and mandatory ground support for tunnel construction
 
-NATURE OF TUNNELLING: Complex and highly specialised — requires high levels of engineering expertise during planning, investigation, design and construction stages.
-
-DESIGNER OBLIGATIONS (WHS Regulation s295):
-Safe tunnel construction depends on adequate PRE-CONSTRUCTION ENGINEERING INVESTIGATION of the ground and site.
-Designers should:
-- Obtain or be provided with all available relevant information
-- Be advised of gaps in information for planning and construction
-- Undertake or be involved in data acquisition for the site investigation program
-- Have on-site involvement during engineering investigation
+DESIGNER OBLIGATIONS:
+- Safe tunnel construction depends on adequate PRE-CONSTRUCTION ENGINEERING INVESTIGATION of ground and site
+- Designer must give commissioning PCBU WRITTEN REPORT specifying hazards relating to design that create risk to health or safety of persons carrying out construction work on tunnel
 
 TUNNEL DESIGN MUST INCLUDE:
 - Tunnel dimensions and allowable excavation tolerances
-- Temporary and FINAL SUPPORT AND LINING requirements for each location within the tunnel
+- Temporary and FINAL SUPPORT AND LINING requirements for each location within tunnel
 - Details of expected tunnel drive lengths and shaft location
-- Other requirements for the finished tunnel
-- Information on excavation methods and ground conditions considered in the design (to allow review if method changes or ground conditions differ)
-- Construction methods must be accounted for in the design
+- Information on excavation methods and ground conditions considered in design
 
-DESIGNER MUST GIVE the commissioning PCBU a WRITTEN REPORT specifying hazards relating to the design that:
-- Create a risk to health or safety of persons carrying out construction work on the tunnel
-- Are associated only with the particular design and not with other designs of the same type
-
-TUNNELLING HAZARDS:
-- Tunnel stability — rock or earth falls and rock bursts
-- Changing ground conditions — strata and stress fluctuations
-- Limited space and access — possible confined spaces
-- Air contamination or oxygen depletion
-- Fire or explosion
-- Use of fixed and powered mobile plant
-- Interaction of people and powered mobile plant
-- Temporary electrical supplies and circuits including loss of power for lighting and ventilation
-- Compressed air use and high pressure hydraulics
-- Large scale materials and equipment handling
-- Overhead seepage, ground and process water
-- Uneven and wet or slippery surfaces
-- Falls of people or objects
-- Contaminated groundwater
-- Ground gas and water in-rush
-- Noise
-- Vibration
-- Heat and humidity
-- Ground loss or settlement at surface level
-- Hazardous substances
-
-TUNNELLING CONTROL MEASURES:
-- Ground support: tunnelling shields, mesh, rockbolts, shotcrete
-- Fall protection: temporary work platforms
-- Plant and vehicle traffic management systems
-- Regular plant maintenance
-- Pumps or dewatering systems to remove groundwater
-- Mechanical ventilation to control airborne contaminants and air temperature/humidity
-- Dust extraction
-- Plant fitted with water scrubbers
-- Plant fitted with catalytic converters
-- Breathing equipment when hazardous atmosphere cannot be effectively ventilated
-
-CRITICAL RULE: All excavation for tunnelling MUST be supported. Using ground support designed for the unique circumstances of the work is ESSENTIAL to control risk of collapse or tunnel support failure.
+CRITICAL RULE:
+- All excavation for tunnelling MUST be supported
+- Using ground support designed for unique circumstances of work is ESSENTIAL to control risk of collapse or tunnel support failure
 
 VISUAL INDICATORS:
 - Tunnel excavation proceeding without adequate ground support = serious non-compliance; immediate risk
@@ -949,59 +507,17 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 23: Shafts — Hazards and Control Measures
+CHUNK 21: Shafts — Access Control and Covers
 Section: CoP s5.3
-Topic: Requirements specific to shaft construction including access control, hazards and control measures
-
-SHAFTS — varieties:
-- Access or ventilation to a tunnel
-- Foundation investigation or construction
-- Dewatering
-- Openings to underground facilities
-- May be VERTICAL or INCLINED; LINED or UNLINED; VARIOUS SHAPES; excavated by various techniques
-
-SHAFT SINKING METHODS:
-- Shaft sinking from the top (access and spoil removal from top)
-- RAISE-BORING — constructing a shaft where underground access already established; can be remote-executed (no people required to enter the shaft)
+Topic: Requirements for securing shaft openings and controlling access
 
 ACCESS CONTROL:
-- Access to shaft openings should be controlled by using a SECURE COVER that is LOCKABLE and accessible ONLY BY A DESIGNATED PERSON; OR
-- Suitable GUARDRAIL and TOE BOARD with a GATE for access, with sides supported by steel frames or timber sets
-- Special cases: precast concrete or steel liners may be used
+- Access to shaft openings should be controlled by using SECURE COVER that is LOCKABLE and accessible ONLY BY DESIGNATED PERSON; OR
+- Suitable GUARDRAIL and TOE BOARD with GATE for access, with sides supported by steel frames or timber sets
 
 DESIGN REQUIREMENT:
-- Shafts can have special features — design and construction advice should be obtained from a COMPETENT PERSON (e.g. engineer) before excavation and installation
+- Shafts can have special features — design and construction advice should be obtained from COMPETENT PERSON (engineer) before excavation and installation
 - Special VENTILATION FACILITIES may be required
-
-SHAFT HAZARDS:
-- Shaft dimensions limiting work space — possible confined space
-- Potential for ground instability for lifting and removing spoil
-- Falls and falling objects including fine material and water from shaft wall
-- Hoisting equipment (winches, ropes, hooks)
-- Hoisting and winching people, materials, spoil and plant
-- Water in-flow/in-rush and dewatering
-- Airborne contaminants and ventilation
-- Confined space
-- Manual tasks
-- Hazardous materials
-- Fire or explosion
-- Inadequate communication systems
-- Mobile plant
-- Noise
-- Emergency exits
-
-SHAFT CONTROL MEASURES:
-- Stabilising ground at head of shaft and removal of spoil
-- Continuously lining or supporting the shaft
-- Providing fall protection (temporary work platforms)
-- Providing and maintaining hoisting equipment
-- Installing dewatering systems
-- Installing mechanical ventilation to control airborne contaminants and air temperature/humidity
-- Isolating access to moving parts of plant and equipment
-- Guiding the working platforms and material
-- AVOIDING OVERFILLING material kibbles and cleaning kibbles before lifting
-- CLOSING SHAFT DOORS before tipping
-- Cleaning spillage off doors, stage and steelwork
 
 VISUAL INDICATORS:
 - Shaft opening without lockable cover or guardrail = serious non-compliance
@@ -1011,554 +527,22 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 24: Preventing Ground Collapse — Overview and Ground Conditions
-Section: CoP s6.0, s6.1
-Topic: Ground collapse as primary excavation risk, ground type classification and soil strength factors
-
-GROUND COLLAPSE — PRIMARY RISK IN EXCAVATION:
-- Can occur QUICKLY AND WITHOUT WARNING, giving a worker virtually NO TIME TO ESCAPE
-- TRENCH COLLAPSES CAN BE FATAL: A buried worker is likely to die from suffocation before help arrives — either because their head is buried, or chest is so restricted by weight that the worker can no longer breathe
-- The weight of a wedge of SAND over a ONE METRE LENGTH of trench TWO METRES DEEP is approximately THREE TONNES
-
-SIGNS OF IMMINENT COLLAPSE:
-- Water seeping into the excavation
-- TENSION CRACKS on the surface near the trench edge
-- Building side walls showing distortion
-- Seepage along the slipping plane (may not be obvious at trench bottom until actual collapse)
-- Areas of tension as wall starts to collapse
-
-PLANNING CONSIDERATIONS for ground collapse control:
-- If the need for people to enter the excavation can be eliminated
-- Type and strength of material to be excavated (natural self-supporting ground vs previously backfilled)
-- Moisture content of the soil
-- Whether ground is level or sloping
-- Whether groundwater is present
-- Discontinuities or faults in strata
-- Other nearby watercourses, drains or runoff that might affect stability
-- Work area and access or operational limitations
-- Planned height of the excavated face
-- Vehicle traffic and powered mobile plant near excavation
-- Other construction activity nearby (vibration)
-- Other loads adjacent to planned excavation (buildings, tanks, retaining walls, trees)
-- Underground essential services
-
-THREE GROUND TYPES — classification:
-1. HARD, COMPACT SOIL — paradoxically the MOST DANGEROUS TYPE: "looks good" and leads to risks being taken
-2. SOIL LIABLE TO CRACK OR CRUMBLE — "doubtful" — requires careful consideration
-3. LOOSE OR RUNNING MATERIAL — often the safest in practice because need for safety precautions is obvious from the start
-
-NON-COHESIVE FACES:
-- With right moisture content can LOOK SAFE AND SOLID
-- A LITTLE LOSS OF WATER by evaporation or INCREASE in water content from rain can cause soil to crumble
-- Stability depends on SOIL STRENGTH exceeding STRESSES at all times
-
-FACTORS INCREASING SOIL STRESS (leading to failure):
-- Deep cuts and steep slopes (removal of natural side support)
-- Loads on ground surface near top of face (excavated material, digging equipment, plant)
-- SHOCK AND VIBRATION (pile-driving, blasting, passing loads, vibration-producing plant)
-- Water pressure from GROUNDWATER FLOW (fills cracks, increases horizontal stresses, undermining risk)
-- SOIL SATURATION (increases weight, and in some cases volume)
-
-FACTORS REDUCING SOIL STRENGTH:
-- Excess water pressure in SANDY SOIL (causes boils, saturates soil, increases plasticity)
-- DRYNESS may reduce cohesion in sandy soil and soils high in organic content
-- PROLONGED STRESS may cause plastic deformity (squeezing or flowing)
-- PROLONGED INACTIVITY at excavation site — a SOIL EVALUATION should be carried out before work restarts
-
-THREE MAIN TYPES OF GROUND COLLAPSE CONTROL MEASURES:
-1. BENCHING AND BATTERING — slope or step excavation walls
-2. POSITIVE GROUND SUPPORT — e.g. SHORING (prevents collapse)
-3. SHIELDING — protects workers INSIDE the shield IF collapse occurs (does NOT prevent collapse)
-
-VISUAL INDICATORS:
-- Hard compact soil excavation with no shoring or benching = serious risk — "looks safe" is not safe
-- Tension cracks visible on surface adjacent to open trench = IMMEDIATE hazard; work must stop
-- Water seeping into trench walls = imminent collapse risk; flag immediately
-- Previous excavation or backfill in area being re-excavated = elevated risk; increased controls required
-- Vibrating plant operating adjacent to open unsupported excavation = serious hazard
-- Prolonged inactivity at excavation site with no re-evaluation of soil conditions = flag
-
----
-
-CHUNK 25: Benching and Battering — Methods and Requirements
-Section: CoP s6.2
-Topic: Detailed requirements for benching and battering as ground collapse control measures including angle limits and design obligations
-
-BENCHING:
-Definition: Creation of a SERIES OF STEPS in the VERTICAL WALL of an excavation to reduce the wall height and ensure stability.
-Method: Excavating the sides of an excavation to form one or more HORIZONTAL LEVELS or STEPS with vertical surfaces between levels (see Figure 9).
-
-BATTERING:
-Definition: Where the WALL OF AN EXCAVATION IS SLOPED BACK to a PREDETERMINED ANGLE to ensure stability.
-Method: Cutting the excavated face back to a SAFE SLOPE. Battering prevents ground collapse by cutting the face back.
-START: Battering should start from the BOTTOM of the excavation.
-COMBINATION: In some circumstances it may be appropriate to use a COMBINATION of both benching and battering (see Figure 11).
-
-SAFE SLOPE DEFINITION:
-An excavated slope is SAFE when the ground is STABLE, meaning:
-- The slope does NOT FLATTEN when left for a considerable period
-- There is NO MOVEMENT of material down the slope
-- The TOE OF THE SLOPE remains in the same place
-
-WHEN NOT WORKING WITH POSITIVE GROUND SUPPORT (i.e. relying on benching/battering only):
-- Continuing safety DEPENDS ON CONDITIONS during construction
-- If conditions NOT AS EXPECTED, or if conditions CHANGE (e.g. different soils, heavy rain/flooding): action MUST be taken IMMEDIATELY to protect workers, persons and property
-- Implement control measures: e.g. temporarily suspend work until ground is stable, or provide positive ground support
-
-MAXIMUM ANGLE OF REPOSE — CRITICAL MEASUREMENT:
-- When benching or battering: AN ANGLE OF REPOSE OF 45 DEGREES SHOULD NOT BE EXCEEDED
-- Exception: unless DESIGNED BY A COMPETENT PERSON and CERTIFIED IN WRITING
-
-EXEMPTION — not necessary to bench or batter where:
-- A COMPETENT PERSON DETERMINES the excavation is in STABLE ROCK, or
-- A competent person has ASSESSED THERE IS NO RISK OF COLLAPSE
-
-DESIGN REQUIREMENTS:
-- Control measures should be DESIGNED BY A COMPETENT PERSON (e.g. geotechnical engineer)
-- Relative to: soil type, moisture content of soil, planned height of excavated face, surcharge loads acting on excavated face
-
-BENCH DESIGN:
-- Benches must be WIDE ENOUGH to stabilise slopes and prevent material from top falling to working area
-- Benches should be SLOPED to reduce possibility of water scouring
-- Size and type of earthmoving machinery and haul routes should be CONSIDERED when designing face slopes and bench widths
-
-VISUAL INDICATORS:
-- Excavation walls sloped at more than 45 degrees without geotechnical certification = non-compliance
-- Benching or battering installed without geotechnical design for deep excavations adjacent to structures = flag
-- Benching where slope is flattening or material is moving = imminent collapse risk; immediate action required
-- No re-assessment of battered/benched excavation after heavy rain = flag
-- Benches too narrow to stabilise material from top levels = flag
-
----
-
-CHUNK 26: Shoring — Types, Design and Installation Requirements
-Section: CoP s6.3
-Topic: Shoring as a positive ground support system — when required, types, design and installation obligations
-
-SHORING definition: The provision of SUPPORT FOR AN EXCAVATED FACE or faces to PREVENT THE MOVEMENT OF SOIL and therefore GROUND COLLAPSE. It is the provision of POSITIVE GROUND SUPPORT.
-
-WHEN SHORING MUST BE USED:
-- When the location or depth of an excavation makes battering and benching IMPRACTICABLE
-- When ground is NOT SELF-SUPPORTING and benching or battering are not practical or effective
-- When there is a risk of a person being BURIED, STRUCK or TRAPPED by dislodged or falling material that forms the side of, or is adjacent to, the excavation work
-- Where installing shoring itself creates a risk to workers entering the excavation: OTHER CONTROL MEASURES must be in place to ensure their health and safety
-
-DESIGN REQUIREMENT:
-- Shoring should ALWAYS be designed for the SPECIFIC WORKPLACE CONDITIONS by a COMPETENT PERSON (e.g. engineer)
-
-PROGRESSION RULE:
-- Shoring the face of an excavation should progress AS THE EXCAVATION WORK PROGRESSES
-- Where earthmoving machinery is used: risk assessment should determine whether part of trench may be left unsupported
-- System of work in SWMS should ensure workers DO NOT ENTER a part of the excavation that is NOT PROTECTED
-- Workers SHOULD NOT work AHEAD OF THE SHORING PROTECTION if being progressively installed
-
-COMMON USE:
-- Most common in TRENCH EXCAVATION where unstable ground conditions are often encountered (soft ground, or ground liable to be wet — sand, silt, soft moist clay)
-
-TYPES OF SHORING:
-
-1. HYDRAULIC SYSTEMS:
-   - Commonly used to provide TEMPORARY or MOBILE ground support while other ground supports are being installed
-   - Ground pressures must be considered prior to installation
-   - Must be designed by a competent person in consultation with geotechnical engineer
-   - Hydraulic capacity MUST be designed to resist expected ground pressures and potential for collapse
-   - Hydraulic support systems may become UNRELIABLE if not properly maintained and used
-   - FREQUENT INSPECTIONS of pressure hoses and rams required to detect abrasion, fatigue or damage (bent or notched rams)
-   - When trench is fully supported: hydraulic supports should be DISMANTLED to prevent costly damage; inspected, repaired if necessary and carefully stored prior to re-use
-   - Standard: AS 5047–2005: Hydraulic shoring and trench lining equipment
-
-2. STEEL SHEET PILING:
-   - Generally used for MAJOR EXCAVATIONS (large building foundations, large embankments)
-   - Used where excavation is in CLOSE PROXIMITY TO ADJOINING BUILDINGS
-   - Can be installed PRIOR TO EXCAVATION WORK COMMENCING
-   - Must be installed BEFORE EXCAVATION STARTS when ground is so unstable that sidewall collapse is likely during excavation (e.g. loose and running sand)
-   - MINIMUM HEIGHT ABOVE SURFACE: 300mm
-   - Components include: Sheet piling, Hanging bar, Waling, Centre capped single tom, Twin toms, Twin capping; Twin steel jacks where extra strength required due to heavy loading
-
-3. STEEL TRENCH SHEETING:
-   - Lighter weight than normal sheet piling
-   - May be driven by hand-held pneumatic hammers or electrically operated vibrating hammers
-   - NOTE: High risk of MANUAL HANDLING INJURIES and LACERATIONS from sharp metal protrusions during driving — must be addressed before driving starts
-   - Projections on underside of anvil of jackhammers should be REMOVED to prevent damage to driving cap and potential injury to operator
-   - NOISE: If workers may be exposed to noise levels exceeding the exposure standard, a method of controlling noise exposure is required
-   - Toms and walings placed into position as soil is excavated; adjustable jacks or struts recommended over timber
-   - Standard: AS 4744.1: Steel shoring and trench lining – Design
-
-4. TIMBER SOLDIER SETS:
-   - Simple form of trench support — steel or timber
-   - Mostly used in ROCK, STIFF CLAYS and similar self-supporting soil types
-   - Only provide ground support at REGULAR INTERVALS — do not provide positive ground support to WHOLE excavated face
-   - OPEN SOLDIER SETS: only suitable for use in STABLE SOIL TYPES
-   - Retain earth where there may be a fault in the embankment
-   - SPECIFICATIONS (Figure 15):
-     - Spoil heap: at least 1000mm clear of excavation
-     - Soldiers: protrude 500mm above top of trench
-     - Top tom: no lower than 300mm from trench top
-     - Maximum spacing of toms: no more than 750mm
-     - Maximum spacing between soldier sets: 1.5 metres
-     - Soldier minimum size: 150mm × 38mm
-     - Tom minimum size: 150mm × 38mm
-     - Space between bottom tom and trench floor: normally no more than 1000mm (to allow pipe installation)
-     - Toms placed from surface using special timbering tongs
-
-5. PREFABRICATED CONCRETE PANELS — listed as a type of shoring
-
-6. GROUND ANCHORS:
-   - A TIE-BACK to the soil behind the face requiring support
-   - Typically used with STEEL SHEET PILING
-   - May be installed in GRANULAR or CLAY soils
-   - DESIGN must be carried out by a COMPETENT PERSON (e.g. geotechnical engineer)
-   - In granular soil: anchorage zone is usually a PLUG OF GROUT located behind the active soil limit line, resisting tension force in stressing cables through shear and cohesion forces
-   - Removal of soil above installed ground anchors: ONLY after APPROVAL from a competent person
-   - Removal of soil between retaining wall and active soil limit line may cause sheet piling to BEND — releasing load in stressing cable and rendering ground anchor useless and dangerous
-   - Ground anchor may not recover original load capacity on replacement of soil
-   - Anchorage at face of sheet piling may be dislodged or loosened
-   - While ground anchoring system is operative: PERIODIC CHECKS with hydraulic jacks and pressure gauges to assess anchor behaviour over long periods
-
-7. CLOSED SHEETING:
-   - Continuous frame with vertical or horizontal sheathing planks placed SIDE BY SIDE to form a CONTINUOUS RETAINING WALL
-   - Supported by other members of a ground support system
-   - When closed sheeting or side lacing is used, workers MUST NOT:
-     - Enter excavation PRIOR TO INSTALLATION of sheeting or lacing
-     - Work INSIDE a trench OUTSIDE THE PROTECTION of sheeting or lacing
-     - Enter excavation AFTER sheeting or lacing has been REMOVED
-     - Enter area where there is sheeting or lacing OTHER THAN BY A LADDER
-
-8. SIDE LACING:
-   - A form of CLOSED SHEETING
-   - Prevents soil from slipping by placement of fill behind timber boards or steel plates
-   - Used in ALL TYPES OF GROUND
-   - Particularly useful where: long or large diameter pipes are to be installed; variable ground conditions where steel or timber supports are difficult to install
-   - Side lacing must be FIRMLY WEDGED into ground to prevent movement when fill is placed against it
-
-VISUAL INDICATORS:
-- Workers inside trench working ahead of the leading edge of progressively installed shoring = serious non-compliance; stop work
-- Shoring not progressing with the excavation face = flag
-- Hydraulic shoring with damaged hoses, bent or notched rams = non-compliance; remove from service
-- Open soldier sets installed in unstable or wet/sandy soil = serious non-compliance
-- Sheet piling less than 300mm above surface level = non-compliance
-- Workers entering excavation without using a ladder where closed sheeting or side lacing is present = non-compliance
-- Ground anchors installed with no geotechnical design = non-compliance
-- Ground above installed ground anchors being excavated without competent person approval = serious hazard
-
----
-
-CHUNK 27: Removal of Shoring Supports
-Section: CoP s6.4
-Topic: Safe removal of shoring systems — sequence and worker protection requirements
-
-SHORING REMOVAL — CRITICAL REQUIREMENTS:
-- Must be removed in a way that PROTECTS WORKERS FROM: ground collapse; structural collapse; being struck by structural members
-- Before removal begins: TEMPORARY STRUCTURAL MEMBERS may need to be installed to ensure worker safety
-- Support system should be EXTRACTED OR DISMANTLED IN REVERSE ORDER TO ITS INSTALLATION
-- Persons performing work in the excavation should NOT work OUTSIDE THE PROTECTION of the ground support system during removal
-- NO PART of a ground support system should be REMOVED UNTIL THE TRENCH IS READY FOR FINAL BACKFILL AND COMPACTION
-
-VISUAL INDICATORS:
-- Shoring being removed before trench is ready for final backfill = non-compliance
-- Workers inside trench during shoring removal without remaining protection = serious hazard
-- Shoring being removed in order other than reverse of installation sequence = flag
-- No temporary structural members in place before removal of permanent shoring where needed = flag
-
----
-
-CHUNK 28: Shields and Trench Boxes — Use, Design and Maintenance
-Section: CoP s6.5
-Topic: Requirements for trench shields and boxes as worker protection (not collapse prevention) devices
-
-KEY DISTINCTION:
-- SHORING: designed to PREVENT COLLAPSE
-- SHIELDS AND BOXES: designed to PROTECT WORKERS IF A COLLAPSE OCCURS — they do NOT ensure ground stability
-
-TRENCH SHIELDS (TRENCH BOXES) — definition:
-- Steel structure able to WITHSTAND FORCES IMPOSED BY A GROUND COLLAPSE and protect workers within
-- Can be PERMANENTLY INSTALLED or PORTABLE (designed to move along as work progresses)
-- Designed and constructed to withstand EARTH PRESSURES of particular TRENCH DEPTHS and GROUND TYPES
-- Incorporate specific LIFTING POINTS for installation and removal
-
-WHEN USED:
-- Where it is NOT REASONABLY PRACTICABLE to install other forms of support
-- Mainly used in OPEN AREAS where access is available for excavator or backhoe to lower and raise boxes or shields
-- GENERALLY NOT SUITABLE where access is difficult and ground conditions prevent the use of lifting equipment
-
-DESIGN REQUIREMENTS:
-- Shields and boxes should be DESIGNED BY A COMPETENT PERSON (e.g. engineer)
-- Pre-manufactured to JOB SPECIFIC DIMENSIONS
-- Steel boxes can be LIGHT OR HEAVY DUTY depending on trench depth and ground conditions
-- MUST NOT be subjected to loads exceeding those which the system was DESIGNED TO WITHSTAND
-- Earth pressures are reduced when correct benching and battering practices are used
-
-MAINTENANCE:
-- Shields and boxes must be MAINTAINED — may fail unexpectedly if abused or misused
-- REGULARLY INSPECTED for damage
-- ONLY altered or modified with approval of a competent person
-- Manufacturer's instructions for INSTALLATION, USE, REMOVAL and MAINTENANCE must always be followed
-
-STORAGE AND TRANSPORT:
-- Stored and transported in accordance with manufacturer's instructions
-- Heavy duty equipment may require DISASSEMBLY for transport
-
-VISUAL INDICATORS:
-- Workers relying on trench box as sole collapse prevention measure in extremely unstable soil without benching or battering = flag — boxes protect workers IF collapse occurs, but are not a prevention measure
-- Trench box visibly damaged, bent or with welds compromised = remove from service immediately
-- Trench box not pre-engineered for actual trench depth and ground conditions = flag
-- Workers inside trench box that is being overloaded by vehicles or heavy loads not accounted for in design = serious hazard
-
----
-
-CHUNK 29: Other Ground Support Methods — Chemical Stabilisation
-Section: CoP s6.6
-Topic: Chemical stabilisation as a supplementary ground support method
-
-CHEMICAL STABILISATION:
-- Support to the face of an excavation can sometimes be effectively provided by the use of CHEMICAL STABILISATION TECHNIQUES
-- Involves INJECTION UNDER PRESSURE of chemical solutions that BIND AND SOLIDIFY SOIL
-- ONLY POSSIBLE IN POROUS SOILS
-- A supplementary or alternative ground support method
-
-VISUAL INDICATORS:
-- Chemical stabilisation used in non-porous soil conditions = flag; method may be ineffective
-
----
-
-CHUNK 30: Regular Inspection of Excavations
-Section: CoP s6.7
-Topic: Obligations and frequency of inspection of excavations and ground support systems
-
-SOIL CONDITION CHANGES — can happen quickly due to:
-- Soil drying out
-- Changes in the water table
-- Water saturation of the soil
-
-INSPECTION REQUIREMENTS:
-- The SOIL CONDITION and STATE OF SHORING, BATTERING and TRENCH WALLS must be FREQUENTLY CHECKED by a COMPETENT PERSON for signs of:
-  - Earth FRETTING
-  - SLIPPING
-  - SLUMPING
-  - Ground SWELLING
-
-ACTION REQUIRED:
-- Where necessary: REPAIR THE EXCAVATION or STRENGTHEN THE SHORING SYSTEM FROM ABOVE before allowing work below ground to continue
-
-VISUAL INDICATORS:
-- No documented inspection records for shoring or trench walls = non-compliance
-- Shoring showing signs of bowing, movement or distortion = immediate action required; stop work
-- Trench walls showing fretting, slipping or slumping = immediate action required
-- Inspection being conducted by person who is not a competent person = flag
-- No inspection after rain, water table change or prolonged inactivity = non-compliance
-
----
-
-CHUNK 31: Workers — Consultation, Training and Supervision Requirements
-Section: CoP s1.4, s1.2; WHS Act s47, s48, s49, s19; WHS Regulation s39, s317
-Topic: Worker consultation rights, training obligations and supervision requirements for excavation work
-
-CONSULTATION DUTIES (WHS Act s47):
-- PCBU MUST CONSULT, so far as is reasonably practicable, with workers who carry out work for the business or undertaking AND who are or are likely to be DIRECTLY AFFECTED by a health and safety matter
-- Workers are entitled to TAKE PART IN CONSULTATIONS
-- Workers may be represented by a HEALTH AND SAFETY REPRESENTATIVE
-- SWMS must be developed IN CONSULTATION WITH WORKERS and their representatives
-
-CONSULTATION MAY INCLUDE DISCUSSIONS ABOUT:
-- Excavation methods
-- Types of risk control measures
-- Interaction with other trades
-- SWMS
-- Provision of appropriate amenities
-- Procedures to deal with emergencies
-- Changes affecting health and safety of workers
-- Procedures for consulting with workers
-- Resolving WHS issues
-- Monitoring the health of workers
-- Monitoring conditions at any workplace
-- Providing information and training
-
-CONSULTING WITH OTHER DUTY HOLDERS (WHS Act s46):
-- A PCBU must consult, cooperate and coordinate activities with all other persons who have a WHS duty in relation to the same matter
-- Civil engineers and contractors should consult about risks including traffic and plant movements near the excavation area
-- Duty holders should cooperate to ensure their activities do not create risks for other workers
-
-TRAINING REQUIREMENTS (WHS Act s19; WHS Regulation s39, s317):
-- PCBU must ensure provision of any information, training, instruction or supervision necessary to protect persons from risks
-- Information, training and instruction must be SUITABLE AND ADEQUATE having regard to:
-  - Nature of work carried out by the worker
-  - Nature of risks associated with the work
-  - Control measures implemented
-- Information, training and instruction must be provided in a way READILY UNDERSTANDABLE for the person
-- Training must be provided by a COMPETENT PERSON
-- Information, training and instruction should include proper use, wearing, storage and maintenance of PPE
-- Training must be SPECIFIC TO THE EXCAVATION WORK AND SITE
-- Workers operating LICENSED PLANT must possess a VALID LICENCE
-
-SUPERVISION:
-- Workers must be trained and have appropriate skills to carry out the task SAFELY
-- Supervisory role workers (leading hand, foreman) should be EXPERIENCED and TRAINED IN EXCAVATION WORK
-- Supervisors must ensure work is carried out IN ACCORDANCE WITH A SWMS
-- Specific supervision duties exist where workers: use, generate or handle hazardous chemicals; operate, test, maintain, repair or decommission a hazardous chemical storage or handling system; are likely to be exposed to a hazardous chemical
-
-VISUAL INDICATORS:
-- Workers unable to identify hazards or controls specific to their excavation work = training deficiency; flag
-- Workers unaware of the SWMS applicable to their work = non-compliance
-- No induction records for excavation site workers = flag
-- Supervisory staff without excavation-specific training = flag
-- Workers from non-English speaking backgrounds receiving information only in English = flag
-
----
-
-CHUNK 32: SWMS and WHS Management Plan — Summary Reference for Excavation
-Section: CoP s3.3; WHS Regulation s299, s300, s309–s312
-Topic: Consolidated summary of SWMS and WHS Management Plan obligations for excavation projects
-
-WHS MANAGEMENT PLAN — required for construction projects costing $250,000 OR MORE:
-Must include:
-- Arrangements for consultation, cooperation and coordination between PCBUs at the site
-- Arrangements to manage the work environment: falls, facilities, first aid, emergency plan, traffic management
-- Must be reviewed and revised as necessary throughout the project
-- Must be KEPT on site (WHS Regulation s313)
-
-SWMS — required for HIGH RISK CONSTRUCTION WORK. For excavation, this includes:
-- Work in or near a trench or shaft DEEPER THAN 1.5 METRES
-- Work in or near a TUNNEL
-- Work involving FALL RISK >2 METRES
-- Work involving ASBESTOS disturbance
-- Work near ENERGISED ELECTRICAL INSTALLATIONS
-- Work near PRESSURISED GAS DISTRIBUTION MAINS
-- Work near CHEMICAL, FUEL or REFRIGERANT LINES
-- Work involving EXPLOSIVES
-- Work involving POWERED MOBILE PLANT that may collide with pedestrians or other plant
-- Work involving UNDERGROUND SERVICES
-
-SWMS REVIEW — must be reviewed and revised where:
-- Work is not being carried out in accordance with the SWMS
-- A new hazard is identified
-- After an incident or near miss
-- Before resuming work stopped due to non-compliance
-
-BOTH DOCUMENTS MUST BE:
-- Readily available at the workplace
-- Available for inspection by workers and inspectors
-
-VISUAL INDICATORS:
-- Project $250,000+ with no WHS Management Plan on site = serious non-compliance
-- High risk excavation activity without SWMS = serious non-compliance
-- SWMS not reviewed and updated after incident, near miss or deviation = non-compliance
-- WHS Management Plan not updated after significant changes to scope, personnel or methods = non-compliance
-
----
-
-CHUNK 33: Key Measurements and Thresholds — Quick Reference
-Section: CoP throughout; WHS Regulation s306, s299, s78
-Topic: Consolidated list of all specific measurements, dimensions and numeric thresholds in the Excavation Work Code of Practice
-
-DEPTH THRESHOLDS:
-- 1.5 METRES: Trench depth trigger for:
-  - HIGH RISK CONSTRUCTION WORK (SWMS mandatory)
-  - Mandatory securing from unauthorised entry
-  - Mandatory ground support (shoring, benching or battering) for all trench sides
-  - Where engulfment risk exists: apply controls REGARDLESS OF DEPTH
-- 2 METRES: Fall risk trigger for high risk construction work (SWMS mandatory for fall >2m)
-
-GROUND SUPPORT MEASUREMENTS:
-- Sheet piling minimum protrusion ABOVE SURFACE: 300mm
-- Timber soldier set — soldier minimum protrusion ABOVE TRENCH TOP: 500mm
-- Timber soldier set — TOP TOM: no lower than 300mm from trench top
-- Timber soldier set — MAXIMUM TOM SPACING: 750mm
-- Timber soldier set — MAXIMUM SOLDIER SET SPACING: 1.5 metres
-- Timber soldier set — SOLDIER MINIMUM SIZE: 150mm × 38mm
-- Timber soldier set — TOM MINIMUM SIZE: 150mm × 38mm
-- Timber soldier set — BOTTOM TOM TO TRENCH FLOOR: normally no more than 1000mm
-
-SPOIL/LOAD CLEARANCE:
-- MINIMUM CLEARANCE: 1000mm (1 metre) from edge of excavation for vehicles and spoil heaps (Figure 2 and Figure 15 reference)
-- Zone of influence: determined by ground conditions — varies; must be assessed by competent person
-
-ANGLE OF REPOSE:
-- MAXIMUM BATTER ANGLE: 45 degrees (should not be exceeded without competent person design certified in writing)
-
-WEIGHT REFERENCE:
-- Sand wedge over 1 metre length of 2-metre-deep trench ≈ 3 TONNES
-
-ASBESTOS LICENCE THRESHOLDS:
-- NO LICENCE required to remove UP TO 10m² of non-friable asbestos or ACM
-- CLASS B LICENCE required for any quantity above 10m² non-friable ACM
-- CLASS A LICENCE required for any friable asbestos or ACM regardless of quantity
-
-CONSTRUCTION PROJECT THRESHOLD:
-- $250,000 construction cost = principal contractor and WHS Management Plan required
-
-EARTHMOVING MACHINERY ROPS/FOPS TRIGGER:
-- MACHINERY WEIGHING MORE THAN 1500kg (not including attachments) with seated operator = ROPS/FOPS mandatory
-
-RECORD RETENTION:
-- Underground essential services information must be retained UNTIL EXCAVATION WORK COMPLETED, or if notifiable incident: for TWO YEARS after incident
-
-TIMBER SOLDIER SET ANCHOR DETAIL:
-- Cleats securely nailed to soldiers BEFORE placing soldiers in trench
-
-VISUAL INDICATORS:
-- Any trench exceeding 1.5m depth without SWMS, ground support and secured perimeter = multiple serious non-compliances
-- Any fall risk exceeding 2m without SWMS = serious non-compliance
-- Spoil or vehicles closer than 1000mm to unsupported trench edge = non-compliance
-- Battering angle steeper than 45 degrees without written certification = non-compliance
-- Earthmoving machine >1500kg without ROPS or FOPS = serious non-compliance
-
----
-
-CHUNK 34: Key Standards and References for Excavation Work
-Section: CoP Appendix B; throughout
-Topic: Technical standards and key references cited in the Excavation Work Code of Practice
-
-KEY AUSTRALIAN STANDARDS referenced:
-- AS 5488: Classification of Subsurface Utility Information (SUI)
-- AS 2397: Safe use of lasers in the building and construction industry
-- AS 2187.2: Explosives – Storage and use – Use of Explosives
-- AS 5047–2005: Hydraulic shoring and trench lining equipment
-- AS 4744.1: Steel shoring and trench lining – Design
-
-OTHER CODES OF PRACTICE referenced:
-- How to manage work health and safety risks Code of Practice
-- Work health and safety consultation, cooperation and co-ordination Code of Practice
-- How to safely remove asbestos Code of Practice
-- How to manage and control asbestos in the workplace Code of Practice
-- Managing the work environment and facilities Code of Practice
-- Managing risks of plant in the workplace Code of Practice
-- Managing the risk of falls at workplaces Code of Practice
-- Hazardous manual tasks Code of Practice
-- Managing noise and preventing hearing loss at work Code of Practice
-- Confined spaces Code of Practice
-- Safe design of structures Code of Practice
-- Emergency plans factsheet
-- Information Sheet: Safe Work Method Statement for high risk construction work
-- Guidance Material – Working in the vicinity of overhead and underground electric lines
-
-ESSENTIAL SERVICES CONTACTS:
-- DIAL BEFORE YOU DIG: Phone 1100 | Website: www.1100.com.au
-
-INTERPRETIVE GUIDANCE:
-- Interpretive Guideline: The health and safety duty of an officer under section 27
-
----
-
-CHUNK 35: PPE Requirements for Excavation Workers
+CHUNK 22: PPE Requirements for Excavation Workers
 Section: CoP s1.4, s4.6, s4.7; WHS Act s28; WHS Regulation s46
-Topic: PPE obligations and typical PPE for excavation workers
+Topic: Mandatory and typical PPE for excavation work
 
-PPE IS THE LEAST EFFECTIVE CONTROL MEASURE — must be used in combination with higher-order controls, not as a substitute.
-
-Workers MUST use or wear PPE provided by the PCBU, as far as reasonably able, in accordance with information, instruction and training provided.
-
-TYPICAL PPE FOR EXCAVATION WORK:
+MANDATORY PPE:
 - HARD HAT (safety helmet) — mandatory on all construction sites
 - HIGH-VISIBILITY VEST — mandatory when near powered mobile plant or in construction zones; both mobile plant operators AND ground workers must wear
 - SAFETY BOOTS — mandatory on construction sites
+
+TYPICAL PPE FOR SPECIFIC HAZARDS:
 - EYE PROTECTION — near falling debris, during drilling/blasting, power tools
 - HEARING PROTECTION — when noise at or near exposure standard; particularly during steel trench sheeting driving with pneumatic hammers
-- RESPIRATORY PROTECTION — when exposed to dust (including crystalline silica, asbestos dust), chemical vapours or fumes; mandatory for asbestos work
+- RESPIRATORY PROTECTION — when exposed to dust (crystalline silica, asbestos dust), chemical vapours or fumes; mandatory for asbestos work
 - GLOVES — for manual work, hazardous chemical handling, asbestos work
 - FALL PROTECTION EQUIPMENT (harness, lanyard) — when fall arrest system required and other controls not reasonably practicable
 - PERSONAL ATMOSPHERIC MONITORS — when working in or near confined excavations, tunnels or areas with risk of gas or oxygen deficiency
-
-PPE INFORMATION, TRAINING AND INSTRUCTION includes: proper USE, WEARING, STORAGE and MAINTENANCE of each item of PPE provided.
 
 VISUAL INDICATORS:
 - Workers on excavation site without hard hat = serious non-compliance
@@ -1570,38 +554,141 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 36: Confined Spaces — Interaction with Excavation Work
-Section: CoP s4.6, s5.2, s5.3; WHS Regulation s50; Confined Spaces Code of Practice
-Topic: When excavations become confined spaces and applicable confined space requirements
+CHUNK 23: Principal Contractor — WHS Management Plan for Projects $250,000+
+Section: CoP s3.1; WHS Regulation s292, s293, s308–s315
+Topic: Principal contractor appointment and WHS Management Plan requirements
 
-WHEN EXCAVATIONS BECOME CONFINED SPACES:
-Excavations — including trenches, tunnels, shafts and chambers — may constitute CONFINED SPACES when they meet the criteria under the Confined Spaces Code of Practice and WHS Regulation.
+CONSTRUCTION PROJECT THRESHOLD:
+- $250,000 OR MORE = principal contractor and WHS Management Plan required
+- Only ONE principal contractor per construction project
 
-RELEVANT CONFINED SPACE HAZARDS IN EXCAVATIONS:
-- Atmospheric contamination (gases, fumes heavier than air)
-- Oxygen depletion
-- Carbon monoxide from combustion engines operating within the excavation
-- MEK solvent for PVC pipes in poorly ventilated trenches
-- LPG leakage, gas pipe leakage, sewer/drain gases
+PRINCIPAL CONTRACTOR MUST:
+- Prepare and review WHS Management Plan
+- Prepare, or take all reasonable steps to obtain, SWMS before high risk construction work starts
+- Put in place arrangements to manage work environment including falls, facilities, first aid, emergency plan and traffic management
+- Install signs showing principal contractor's name, contact details and location of site office
+- Secure the construction workplace
 
-CRITICAL RULE REPEATED:
-Plant using a COMBUSTION ENGINE MUST NEVER be used in a confined excavation if workers are in that excavation. Build-up of CARBON MONOXIDE can cause DEATH.
-
-CONFINED SPACE CONTROLS applicable to excavations:
-- Air monitoring (mandatory where not certain exposure standards are not exceeded)
-- Mechanical ventilation
-- Pre-start checks of atmospheric conditions
-- Personal gas monitors worn near airways
-- Working in pairs (safety observer at surface)
-- Familiarity with rescue procedures
-- PPE
-
-FURTHER REFERENCE: Confined spaces Code of Practice (separate document — refer for confined space entry permit requirements, attendant requirements, and confined space risk management procedures)
+EXCAVATION CONTRACTOR AS PRINCIPAL CONTRACTOR:
+- Where significant excavation work carried out before building works start: excavation contractor may be appointed as principal contractor for site preparation phase
 
 VISUAL INDICATORS:
-- Deep narrow trench, tunnel or shaft being worked in without any atmospheric monitoring = serious hazard
-- Workers in confined excavation without a safety observer/standby person at surface = flag
-- Combustion-engine plant running in same space as workers in enclosed excavation = IMMEDIATE serious non-compliance; stop work
-- No confined space risk assessment or entry permit for qualifying excavations = non-compliance
+- No site signage showing principal contractor details = non-compliance
+- WHS Management Plan not available for inspection on site for project $250,000+ = non-compliance
+- Different contractors working without clear principal contractor coordination structure = flag
+- SWMS not obtained before high risk excavation work commences = serious non-compliance
+
+---
+
+CHUNK 24: Inspection of Excavations — Frequency and Competent Person
+Section: CoP s6.7
+Topic: Mandatory inspection obligations for excavations and ground support systems
+
+INSPECTION REQUIREMENTS:
+- SOIL CONDITION and STATE OF SHORING, BATTERING and TRENCH WALLS must be FREQUENTLY CHECKED by COMPETENT PERSON for signs of:
+  - Earth FRETTING
+  - SLIPPING
+  - SLUMPING
+  - Ground SWELLING
+
+SOIL CONDITION CHANGES can happen quickly due to:
+- Soil drying out
+- Changes in water table
+- Water saturation of soil
+
+ACTION REQUIRED:
+- Where necessary: REPAIR EXCAVATION or STRENGTHEN SHORING SYSTEM FROM ABOVE before allowing work below ground to continue
+
+VISUAL INDICATORS:
+- No documented inspection records for shoring or trench walls = non-compliance
+- Shoring showing signs of bowing, movement or distortion = immediate action required; stop work
+- Trench walls showing fretting, slipping or slumping = immediate action required
+- Inspection being conducted by person who is not competent person = flag
+- No inspection after rain, water table change or prolonged inactivity = non-compliance
+
+---
+
+CHUNK 25: Emergency Plans — Excavation-Specific Requirements
+Section: CoP s3.8; WHS Regulation s43
+Topic: Emergency plan content and testing obligations for excavation sites
+
+EMERGENCY PLAN MANDATORY:
+- PCBU at workplace must ensure there is EMERGENCY PLAN for workplace
+- Must be WRITTEN SET OF INSTRUCTIONS
+
+EXCAVATION-SPECIFIC EMERGENCY SCENARIOS:
+- Ground slip
+- Engulfment
+- Flooding
+- Gas leaks
+- RESCUING WORKERS FROM AN EXCAVATION
+
+EMERGENCY PLAN MUST PROVIDE FOR:
+- Emergency procedures including effective response to emergency
+- Evacuation procedures
+- Notifying emergency service organisations AT EARLIEST OPPORTUNITY
+- Medical treatment and assistance
+- Effective communication between person authorised to coordinate emergency response and ALL people at workplace
+- Testing of emergency procedures — including FREQUENCY OF TESTING
+- Information, training and instruction to relevant workers in relation to implementing emergency procedures
+
+REVIEW TRIGGERS:
+- Changes to workplace
+- Changes in number or composition of staff
+- New activities introduced
+- After plan has been TESTED
+
+VISUAL INDICATORS:
+- No written emergency plan on excavation site = non-compliance
+- Emergency plan does not address engulfment or ground collapse rescue procedures = flag for excavation sites
+- No evidence emergency procedures have been tested = flag
+- Workers unable to identify emergency response coordinator = flag
+- Site in remote location with no documented access arrangements for emergency services = flag
+
+---
+
+CHUNK 26: Key Measurements Summary — All Numeric Thresholds
+Section: CoP throughout; WHS Regulation s306, s299, s78
+Topic: Consolidated numeric thresholds and measurements for excavation work
+
+DEPTH THRESHOLDS:
+- 1.5 METRES: Trench/shaft depth trigger for high risk construction work (SWMS mandatory); mandatory securing from unauthorised entry; mandatory ground support (shoring, benching or battering)
+- 2 METRES: Fall risk trigger for high risk construction work (SWMS mandatory)
+
+GROUND SUPPORT MEASUREMENTS:
+- Sheet piling minimum protrusion above surface: 300mm
+- Timber soldier set — soldier protrusion above trench top: 500mm
+- Timber soldier set — top tom: no lower than 300mm from trench top
+- Timber soldier set — maximum tom spacing: 750mm
+- Timber soldier set — maximum soldier set spacing: 1.5 METRES
+- Timber soldier set — soldier minimum size: 150mm × 38mm
+- Timber soldier set — tom minimum size: 150mm × 38mm
+- Timber soldier set — bottom tom to trench floor: normally no more than 1000mm
+
+CLEARANCE DISTANCES:
+- Minimum clearance for vehicles and spoil heaps from edge: 1000mm (1 METRE)
+
+ANGLE LIMITS:
+- Maximum batter angle: 45 DEGREES (unless competent person design certified in writing)
+
+WEIGHT REFERENCE:
+- Sand wedge over 1 metre length of 2-metre-deep trench: approximately 3 TONNES
+
+ASBESTOS THRESHOLDS:
+- No licence required: up to 10m² of non-friable asbestos or ACM
+- Class B licence: any quantity above 10m² non-friable ACM
+- Class A licence: any friable asbestos or ACM regardless of quantity
+
+PROJECT COST THRESHOLD:
+- $250,000: Principal contractor and WHS Management Plan required
+
+PLANT WEIGHT THRESHOLD:
+- Earthmoving machinery >1500kg (not including attachments): ROPS/FOPS mandatory
+
+RECORD RETENTION:
+- Underground services information: until excavation completed or, if notifiable incident, TWO YEARS after incident
+
+VISUAL INDICATORS:
+- Any measurement deviation from above thresholds without documented competent person approval = non-compliance
 
 ---

@@ -5,279 +5,266 @@ REGION: QLD
 WORK_TYPES: construction, formwork, high_risk_construction_work, concrete_placement
 SOURCE: Workplace Health and Safety Queensland (WHSQ)
 CURRENT AS AT: 2016 (Approved 31 March 2016; varied 1 July 2018)
-CLAUSE_PREFIX: s
-REFERENCE_STANDARD: AS3610 Formwork for concrete; AS3600 Concrete structures; AS1170.2 Wind actions; AS6669 Plywood – Formwork; AS/NZS 1680.1 Interior workplace lighting; AS/NZS 1576.1 Scaffolding; AS1379 Specification and supply of concrete; AS2759 Steel wire rope; AS3775.2 Chain slings; AS4497 Roundslings; AS1353.2 Flat synthetic-webbing slings; AS1657 Fixed platforms, walkways, stairways and ladders.
 
 ---
 
-CHUNK 1: Definitions and Primary Duties
-Section: s1.1, s1.2; WHS Act s19, s22
-Topic: Legal definitions and core safety obligations
+CHUNK 1: Engineering Certification Thresholds — Height and Thickness Triggers
+Section: CoP s2.2.1, Table 1, Table 2
+Topic: Mandatory RPEQ certification requirements based on measurable dimensions
 
-FORMWORK means the surface used to contain and shape wet concrete until it is self-supporting, including the forms, frames, and bracing providing stability.
+VERTICAL FORMWORK (walls/columns):
+- 2.4m to 3.5m high: RPEQ certification required
+- MORE THAN 3.5m high: RPEQ certification required
+- Single-sided vertical formwork MORE THAN 2.4m: RPEQ certification required
 
-PRIMARY DUTIES:
-- PCBU must ELIMINATE risks arising from formwork activity, or if not reasonably practicable, MINIMISE the risks so far as is reasonably practicable
-- Designers must ensure, so far as is reasonably practicable, that plant or structure is designed to be without risks to the health and safety of persons who construct the structure
-- Workers must take reasonable care for their own health and safety and must comply with any reasonable instructions
+SOFFIT FORMWORK:
+- MORE THAN 3m high OR MORE THAN 250mm thick: RPEQ certification required
+- Pre-pour sign-off MUST be by an ENGINEER (not just competent person)
 
-NOTE: Formwork erection and dismantling is HIGH RISK CONSTRUCTION WORK under the WHS Regulation (risk of fall >2m) and requires a SWMS.
+STAIR AND LANDING FORMWORK:
+- MORE THAN 3m high OR MORE THAN 200mm thick: RPEQ certification required
+
+MULTISTOREY FORMWORK AND BACK-PROPPING:
+- Engineer required for BOTH design AND pre-pour inspection
 
 VISUAL INDICATORS:
-- Workers assembling frames or bracing = formwork activity identified
-- Wet concrete being poured into temporary structures = active formwork
-- Worker performing high-risk construction work without a site-specific induction = non-compliance
-- No SWMS visible on site for formwork erection/dismantling = non-compliant
+- Tall columns (>3.5m) being poured without engineer certification visible = non-compliant
+- Soffit formwork visibly >3m high without engineer pre-pour sign-off = serious non-compliance
+- Thick slab (>250mm) being poured without engineer documentation = non-compliant
+- Multi-storey construction without visible reshoring plans = non-compliant
 
 ---
 
-CHUNK 2: Engineering Design and Certification
-Section: s2.2.1, Table 1, Table 2
-Topic: Mandatory thresholds for Registered Professional Engineer Queensland (RPEQ) involvement
-
-RPEQ CERTIFICATION REQUIRED FOR:
-- Vertical formwork (walls/columns) 2.4 metres to 3.5 metres high
-- Vertical formwork (walls/columns) MORE THAN 3.5 metres high
-- Single-sided vertical formwork MORE THAN 2.4 metres
-- Soffit formwork MORE THAN 3 metres high OR MORE THAN 250mm thick
-- Stair and landing formwork MORE THAN 3 metres high OR MORE THAN 200mm thick
-- Multistorey formwork and back-propping (reshoring) — engineer required for both design and pre-pour inspection
-
-PRE-POUR INSPECTION SIGN-OFF:
-- Sign-off by an engineer or competent person is MANDATORY following the final pre-pour inspection
-- For soffit formwork >3m high or >250mm thick: sign-off must be by an ENGINEER
-- For simpler formwork: sign-off may be by a COMPETENT PERSON
-
-VARIATIONS: Any variation from the original design (e.g. thicker slab, fewer frames, changed loading) MUST be certified in writing by an engineer before proceeding.
-
-VISUAL INDICATORS:
-- Engineer's certification letter missing from site documentation = regulatory breach
-- Tall columns (>3.5m) being poured without evidence of pre-pour engineer inspection = non-compliance
-- Variations from original design not certified in writing by an engineer = serious safety risk
-- No formwork drawings visible on site = non-compliant
-
----
-
-CHUNK 3: Erection and Working Platforms
-Section: s4.1, s4.1.2
-Topic: Mandatory dimensions and load ratings for work surfaces
+CHUNK 2: Working Platform Width — Minimum 450mm
+Section: CoP s4.1, s4.1.2
+Topic: Mandatory working surface dimensions for formwork erection
 
 PLATFORM WIDTH:
-- A person MUST be provided with a working platform of AT LEAST 450mm WIDE (typically two planks)
-- It is NOT ACCEPTABLE for a person to stand on a single bearer or a single plank
+- Minimum: 450mm WIDE (typically two planks)
+- Single bearer or single plank = NOT ACCEPTABLE
 
-FALSE DECKS — required if a person must stand at heights of 2 METRES OR MORE to install timbers:
-- Gap limit: No gap must EXCEED 225mm WIDTH
-- Point load capacity: Must withstand 2kN distributed over an area of 100 x 100mm
-- UDL capacity: Must withstand a uniformly distributed load of 2kPa
-
-BASE PLATES AND SOLE PLATES:
-- Base plates MUST be provided under props and standards on formwork frames unless the prop/standard has an integral foot or an engineer documents it is unnecessary
-- Sole plates (sole boards) should be used under props and standards on NATURAL GROUND unless an engineer states otherwise
-- Sole plates must be on adequate foundations and MUST NOT BE ECCENTRICALLY PLACED
-- U-heads: Where only single bearers are placed in the U-head, the bearer MUST BE PLACED CENTRALLY unless an engineer states otherwise
+FALSE DECK SPECIFICATIONS (when working at 2m or more height):
+- Maximum gap width: 225mm
+- Point load capacity: 2kN over 100 x 100mm area
+- UDL capacity: 2kPa
 
 VISUAL INDICATORS:
-- Worker standing on a single plank or bearer = serious non-compliance
-- Gaps between planks in a false deck exceeding 225mm = safety breach
-- Base plates missing from under props/standards on a suspended slab = engineering failure
+- Worker standing on single plank or bearer = serious non-compliance
+- Gaps between planks in false deck exceeding 225mm = non-compliant
+- Working platform visibly less than 450mm wide = non-compliant
+
+---
+
+CHUNK 3: Base Plates, Sole Plates and U-Head Loading
+Section: CoP s4.1.2
+Topic: Prop foundation and bearing requirements
+
+BASE PLATES:
+- MUST be provided under props and standards on formwork frames unless prop has integral foot OR engineer documents it is unnecessary
+
+SOLE PLATES (on natural ground):
+- Should be used under props and standards unless engineer states otherwise
+- MUST NOT BE ECCENTRICALLY PLACED
+- Must be on adequate foundations
+
+U-HEADS:
+- Single bearers MUST BE PLACED CENTRALLY unless engineer states otherwise
+
+VISUAL INDICATORS:
+- Base plates missing from under props/standards on suspended slab = non-compliant
 - Props on natural ground without sole plates = non-compliant
-- Eccentrically placed sole plates = non-compliant
-- Bearer not centred in U-head = flag
+- Sole plates visibly offset or eccentrically placed = non-compliant
+- Bearer not centred in U-head = flag for engineer review
 
 ---
 
-CHUNK 4: Fall Protection and Leading Edges
-Section: s4.1.5, s4.1.6
-Topic: Physical controls for preventing falls from heights
+CHUNK 4: Leading Edge Protection — 4 Joists at 450mm Centres
+Section: CoP s4.1.5, s4.1.6
+Topic: Physical fall protection at deck edges
 
-LEADING EDGE PROTECTION:
-- If a false deck is OVER 2 METRES BELOW, a minimum of FOUR JOISTS AT 450mm CENTRES (totalling 1.8 metres) must be located next to the worker
-- If a leading edge is left unattended, it MUST be provided with PERIMETER EDGE PROTECTION or a BARRICADE 1.8 METRES BACK FROM THE EDGE with "Keep Out" signs
+LEADING EDGE REQUIREMENTS (when false deck is OVER 2m below):
+- Minimum: FOUR JOISTS at 450mm CENTRES (totalling 1.8m) located next to worker
 
-HARNESS RESTRICTION:
-- Use of travel restraint or fall arrest harness systems is NOT RECOMMENDED and DISCOURAGED for formwork erection and dismantling due to inadequate free fall distance
-- Primary fall protection method must be physical — platforms, edge protection, and barricades
+UNATTENDED LEADING EDGES must have:
+- Perimeter edge protection, OR
+- Barricade 1.8m BACK FROM EDGE with "Keep Out" signs
+
+HARNESS USE:
+- Travel restraint or fall arrest harness systems NOT RECOMMENDED for formwork erection/dismantling due to inadequate free fall distance
 
 VISUAL INDICATORS:
-- Workers laying ply with fewer than 4 joists extended in front of them = high-risk activity
-- Open deck edge without handrails or a 1.8m set-back barricade = non-compliance
-- Formwork only zone not clearly demarcated by signage and flagging = safety breach
-- Worker wearing harness as the only fall protection during formwork erection = non-recommended approach — check for alternative physical controls
+- Workers laying ply with fewer than 4 joists extended in front = high-risk non-compliance
+- Open deck edge without handrails or 1.8m set-back barricade = non-compliant
+- Unattended edge without physical protection or barricade = serious non-compliance
+- Worker wearing harness as only fall protection during formwork erection = non-recommended practice
 
 ---
 
-CHUNK 5: Penetrations
-Section: s4.1.8
-Topic: Requirements for covering and signing holes in floors
+CHUNK 5: Penetration Covers — Mechanical Fixing and Mesh Size
+Section: CoP s4.1.8
+Topic: Hole cover specifications and fixing requirements
 
-COVER SPECIFICATIONS:
-- Fall protection cover MUST be able to withstand the impact of a fall
-- MUST be SECURELY FIXED IN PLACE to prevent accidental removal
-- Horizontal covers MUST be MECHANICALLY FIXED to the floor and REQUIRE THE USE OF A TOOL TO REMOVE (e.g. insert type anchor) — covers cannot simply be laid over holes
+HORIZONTAL PENETRATION COVERS:
+- MUST be MECHANICALLY FIXED to floor
+- MUST REQUIRE A TOOL TO REMOVE (e.g. insert anchor)
+- Cannot simply be laid over holes
+- Must be painted bright colour
+- Must be marked "DANGER HOLE UNDER"
 
-MESH REQUIREMENTS for vertical penetrations (e.g. lift doors):
-- MUST be FULLY ENCLOSED WITH MESH as a minimum standard
-- Maximum MESH SIZE: 50 x 50mm
-
-COVER MARKING:
-- Covers should be painted a bright colour
-- Must be marked with the words "DANGER HOLE UNDER"
+VERTICAL PENETRATION MESH (e.g. lift shafts):
+- MUST be FULLY ENCLOSED WITH MESH
+- Maximum mesh size: 50 x 50mm
 
 VISUAL INDICATORS:
-- Ply cover over a hole not painted a bright colour or missing the words "Danger Hole Under" = non-compliant
-- Unsecured ply sheets sitting over penetrations (not mechanically fixed) = life-safety hazard
-- Penetration exposed during stripping without prior protection installation = procedural failure
-- Lift shaft opening enclosed with mesh larger than 50 x 50mm = non-compliant
-- Penetration cover that can be slid aside without a tool = non-compliant
+- Ply cover over hole not mechanically fixed (can be slid aside without tool) = life-safety hazard
+- Cover not painted bright colour or missing "Danger Hole Under" marking = non-compliant
+- Unsecured ply sheets sitting over penetrations = serious non-compliance
+- Lift shaft mesh larger than 50 x 50mm = non-compliant
+- Penetration exposed during stripping without protection = non-compliant
 
 ---
 
-CHUNK 6: Pre-Pour Inspection
-Section: s4.2, Table 2
-Topic: Mandatory checks before concrete is poured
+CHUNK 6: Pre-Pour Inspection Sign-Off Requirements
+Section: CoP s4.2, Table 2
+Topic: Mandatory verification before concrete placement
 
-PRE-POUR INSPECTION IS MANDATORY — sign-off required before any pour commences.
+PRE-POUR INSPECTION MANDATORY — sign-off required before pour commences.
+
+SIGN-OFF AUTHORITY:
+- Soffit formwork >3m high or >250mm thick: MUST be signed by ENGINEER
+- Simpler formwork: may be signed by COMPETENT PERSON
 
 INSPECTION MUST VERIFY:
-- Correct SPACING OF FRAMES, PROPS, AND TIMBERS (as per design)
-- Correct JOIST AND BEARER SIZES
-- Acceptable JACK EXTENSIONS
-- QUALITY OF MATERIALS being used
-- BACK PROPPING (reshoring) is correct
-- ADEQUATE BRACING to ensure stability
-- BASE PLATES AND SOLE PLATES correctly installed
+- Correct spacing of frames, props, timbers (as per design)
+- Correct joist and bearer sizes
+- Acceptable jack extensions
+- Quality of materials
+- Back-propping correct
+- Adequate bracing
+- Base plates and sole plates correctly installed
 - U-heads correctly loaded
 
-DOCUMENTATION REQUIRED ON SITE:
-- Formwork design drawings
-- Engineer certification (where required)
-- Pre-pour inspection checklist signed by engineer or competent person
-- Concrete supplier documentation verifying concrete specification (available on request)
-- Minimum stripping times and stripping procedures
-
 VISUAL INDICATORS:
-- No pre-pour inspection checklist visible on site = non-compliant
 - Pour commencing without signed engineer or competent person sign-off = regulatory breach
-- Jack extensions visibly excessive or near maximum extension = flag for engineer review
+- No pre-pour inspection checklist visible on site = non-compliant
+- Jack extensions visibly excessive or near maximum = flag for engineer review
 - Formwork props visibly out of plumb or leaning = structural risk
-- No concrete supplier documentation on site = flag
 
 ---
 
-CHUNK 7: Stripping and Removal
-Section: s4.3, s4.3.4
-Topic: Managing hazards during formwork removal
+CHUNK 7: Stripping Zone Cordoning and Drop Stripping Prohibition
+Section: CoP s4.3, s4.3.4
+Topic: Formwork removal safety controls
 
-STRIPPING CERTIFICATION: Prior to stripping, a COMPETENT PERSON from the principal contractor MUST PROVIDE WRITTEN CERTIFICATION that formwork can be removed. This must be based on:
-- The engineer's specifications for the building
-- The strength of the concrete mix
-- The time period that has elapsed since the pour
+DROP STRIPPING PROHIBITED:
+- All supports removed allowing ply to drop = MUST NOT BE USED
+- Ply must be PROGRESSIVELY REMOVED as support system gradually lowered
 
-NOTE: The Code does not provide universal MPa or hour thresholds — these are site-specific and must be determined by the project engineer for the specific structural design. Minimum stripping times must be documented in project documentation.
+STRIPPING ZONE REQUIREMENTS:
+- Area MUST be cordoned off
+- Signs: "DANGER — FORMWORK STRIPPING IN PROGRESS"
+- Other trades MUST NOT work on floor where soffit stripping is active without cordon and signage
 
-DROP STRIPPING: This method (where all supports are removed and ply is allowed to drop) MUST NOT BE USED. Ply must be PROGRESSIVELY REMOVED as the support system is gradually lowered.
-
-STRIPPING ZONE SAFETY:
-- Area must be cordoned off with "DANGER — FORMWORK STRIPPING IN PROGRESS" signs
-- Other trades must not work on a floor where soffit stripping is active without cordon and signage
+STRIPPING CERTIFICATION:
+- COMPETENT PERSON from principal contractor MUST provide WRITTEN CERTIFICATION before stripping
+- Based on: engineer's specifications, concrete strength, elapsed time since pour
 
 VISUAL INDICATORS:
-- Other trades working on a floor where soffit stripping is active without cordon/signage = non-compliance
-- Formply falling in an uncontrolled manner = drop stripping identified = serious non-compliance
+- Formply falling in uncontrolled manner = drop stripping = serious non-compliance
+- Other trades working on floor where soffit stripping active without cordon/signage = non-compliant
 - Stripping area not cordoned off with danger signs = regulatory breach
-- No written stripping certification visible on site = non-compliant
-- Stripping commencing before minimum time period elapsed = structural risk
+- No written stripping certification visible = non-compliant
 
 ---
 
-CHUNK 8: Reshoring (Back-Propping)
-Section: s4.3, s5.1
-Topic: Multi-storey formwork and back-propping requirements
+CHUNK 8: Back-Propping Edge Distance — 2/3 Prop Length Rule
+Section: CoP s4.3, s5.1
+Topic: Reshoring requirements and edge prop anchoring
 
-RESHORING REQUIREMENTS:
-- Multistorey formwork and back-propping requires an ENGINEER for both DESIGN and PRE-POUR INSPECTION
-- Details of back-propping that may be required and MINIMUM TIME INTERVALS BETWEEN POURS must be included in project documentation
-- Back-propping plans and elevations (including tying in) must be AVAILABLE FOR INSPECTION ON SITE
-- A competent person must ensure back-propping is correct as part of the construction checklist
+BACK-PROPPING REQUIREMENTS:
+- Multi-storey formwork requires ENGINEER for BOTH design AND pre-pour inspection
+- Back-propping plans and elevations MUST be AVAILABLE ON SITE
 
-POST-TENSIONING: Special requirements include checking of back-propping AFTER POST-TENSIONING.
+EDGE PROP ANCHORING:
+- Exposed back props located CLOSER THAN 2/3 THE LENGTH OF THE PROP from exposed edge MUST be BOLTED TO CONCRETE
 
-EDGE SAFETY: Exposed back props located CLOSER THAN 2/3 THE LENGTH OF THE PROP from an exposed edge must be BOLTED TO THE CONCRETE (specific checklist requirement for climbing screens).
+POST-TENSIONING:
+- Back-propping must be checked AFTER post-tensioning
 
 VISUAL INDICATORS:
-- Multi-storey concrete construction without visible reshoring on lower floors = structural risk
+- Multi-storey construction without visible reshoring on lower floors = structural risk
 - Back-propping plans not available on site = non-compliant
 - Props near exposed edges not bolted to concrete = non-compliant
 - Back-propping installed without engineer design documentation = non-compliant
 
 ---
 
-CHUNK 9: Crane and Load Handling
-Section: s4.4.1, s4.4.4
-Topic: Mechanical lifting and point loading safety
+CHUNK 9: Lifting Box Chain Configuration and Formply Orientation
+Section: CoP s4.4.1, s4.4.4
+Topic: Crane lifting requirements for formwork materials
 
-LOAD HANDLING:
-- Materials MUST NOT be placed on the formwork deck if documentation prohibits those loadings
-- Lifting gear boxes must be ENGINEER-DESIGNED AND CERTIFIED
-- Lifting boxes MUST HAVE FOUR CHAINS fitted — one in each corner
-- Specifically-designed boxes MUST BE USED for small components like Z-bars or spigots
-- Formply loads MUST be lifted FLAT — not in a vertical position
+LIFTING BOXES:
+- MUST be ENGINEER-DESIGNED AND CERTIFIED
+- MUST HAVE FOUR CHAINS fitted — one in each corner
+- Specifically-designed boxes MUST be used for small components (Z-bars, spigots)
 
-INSPECTION REQUIREMENTS:
-- Lifting slings must be inspected EVERY 12 MONTHS — inspection tags must be current
+FORMPLY LIFTING:
+- MUST be lifted FLAT — NOT in vertical position
+
+SLING INSPECTION:
+- Lifting slings MUST be inspected EVERY 12 MONTHS
+- Inspection tags must be current
 
 VISUAL INDICATORS:
-- Smaller formwork components (U-heads, base plates) lifted in a bin with open mesh larger than the components = risk of falling objects
-- Missing or expired inspection tags on lifting slings = non-compliance
-- Loads of formply being lifted in a vertical position = safety breach
-- Lifting box without four chains = non-compliant
+- Lifting box without four chains (one per corner) = non-compliant
+- Formply loads lifted in vertical position = safety breach
+- Small components lifted in bin with open mesh larger than components = falling object risk
+- Missing or expired inspection tags on lifting slings = non-compliant
 - Materials stacked on formwork deck beyond engineered load limits = structural risk
 
 ---
 
-CHUNK 10: Vertical Forms, Access, and Wind Bracing
-Section: s4.5, s6.1
-Topic: Wind bracing and ladder safety requirements
+CHUNK 10: Ladder Extension and One-Hand Operation Rule
+Section: CoP s6.1
+Topic: Ladder access requirements for formwork
 
-WIND BRACING:
-- Vertical elements MUST BE FULLY BRACED prior to and during stripping until the construction provides adequate support
-- Bracing MUST BE VERIFIED AND SIGNED OFF BY AN ENGINEER
+LADDER SPECIFICATIONS:
+- Person's feet MUST NOT be HIGHER THAN 900mm FROM TOP of ladder
+- Ladder MUST EXTEND AT LEAST 1m ABOVE accessed surface
+- Materials MUST NEVER BE CARRIED while using ladder
+- Equipment used on ladder MUST be operable with ONE HAND
 
-LADDER SAFETY:
-- Stair tread systems are to be used as the PRIMARY FORM OF ACCESS — ladders are secondary
-- If a ladder is used:
-  - A person's feet should NOT be HIGHER THAN 900mm FROM THE TOP of the ladder
-  - Ladders MUST EXTEND AT LEAST 1 METRE ABOVE the accessed surface
-  - Materials MUST NEVER BE CARRIED while using a ladder
-  - Equipment used on a ladder must be capable of being operated with ONE HAND
+PRIMARY ACCESS:
+- Stair tread systems are PRIMARY access method — ladders are secondary
 
 VISUAL INDICATORS:
-- Worker using both hands to remove a tie bar while standing on a ladder = serious breach
-- Columns braced with only one anchor point or using nails instead of through-bolts = engineering failure
-- Mobile work platform (scaffold) used with unlocked castors during a pour = non-compliance
-- Ladder not extending 1 metre above the accessed landing = non-compliant
-- Worker carrying materials while climbing a ladder = non-compliant
+- Worker using both hands to operate equipment while on ladder = serious breach
+- Ladder not extending 1m above landing = non-compliant
+- Worker carrying materials while climbing ladder = non-compliant
+- Worker's feet higher than 900mm from top of ladder = non-compliant
 
 ---
 
-CHUNK 11: Slip Forms and Jump Forms
-Section: s7.1, s7.2.1, s7.3
-Topic: Specialised climbing formwork systems
+CHUNK 11: Jump Form Platform Gap — Maximum 100mm
+Section: CoP s7.2.1, s7.3
+Topic: Slip form and jump form access requirements
+
+PLATFORM GAP:
+- Gap between trailing platforms and building MUST NOT EXCEED 100mm
 
 ACCESS AND EGRESS:
-- TWO FORMS OF ACCESS AND EGRESS to the form should be maintained AT ALL TIMES
-- A trailing access stair system should be the PRIMARY MEANS over a ladder system
-- The gap between trailing platforms and the building MUST NOT EXCEED 100mm
+- TWO FORMS of access and egress must be maintained AT ALL TIMES
+- Trailing access stair system should be PRIMARY means over ladder
 
 TRAPDOORS:
-- Must be constructed from A SINGLE PIECE OF MATERIAL
-- Should be marked with the words "DANGER HOLE UNDER"
-- MUST BE CLOSED except when being actively accessed
+- MUST be constructed from SINGLE PIECE OF MATERIAL
+- Should be marked "DANGER HOLE UNDER"
+- MUST BE CLOSED except when actively accessed
 
 VISUAL INDICATORS:
-- Gap between the jump form platform and the building wall wider than 100mm = fall hazard
-- Single ladder being the only exit from a jump form cell = emergency egress failure
-- Workers on a trailing platform being crane-lifted without a rescue procedure in place = non-compliance
+- Gap between jump form platform and building wall wider than 100mm = fall hazard
+- Single ladder as only exit from jump form cell = emergency egress failure
 - Trapdoor left open when not being accessed = non-compliant
 - Trapdoor made from multiple pieces of material = non-compliant
+
+---

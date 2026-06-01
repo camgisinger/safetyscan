@@ -12,333 +12,46 @@ APPROVED UNDER: Work Health and Safety Act 2011 (Qld) s274
 
 ---
 
-CHUNK 1: Definitions — Key Terms for Falls Risk Management
-Section: CoP Appendix A (Glossary); WHS Regulation s78–s80
-Topic: Legal definitions of falls, fall prevention device, work positioning system, fall arrest system, solid construction, competent person
+CHUNK 1: High Risk Construction Work — SWMS Requirement
+Section: CoP s1.1; WHS Regulation s291
+Topic: SWMS mandatory for falls >2m
 
-FALL means:
-- A fall by a person FROM ONE LEVEL TO ANOTHER that is reasonably likely to cause injury
-- Includes falls at ground level INTO HOLES (e.g. trenches, service pits)
-- Not limited to falls from height — ground-level openings are within scope
-
-RISK OF A FALL means circumstances exposing a worker or other person to a risk of a fall reasonably likely to cause injury, including where the person is:
-- In or on plant or a structure AT AN ELEVATED LEVEL
-- In or on plant being used to GAIN ACCESS TO AN ELEVATED LEVEL
-- In the vicinity of an OPENING through which a person could fall
-- In the vicinity of an EDGE over which a person could fall
-- On or in the vicinity of a SURFACE THROUGH WHICH a person could fall
-- On or near a SLIPPERY, SLOPING OR UNSTABLE SURFACE
-
-FREE FALL means:
-- Any fall or part of a fall where the person is under the UNRESTRAINED INFLUENCE OF GRAVITY over any fall distance, whether vertically or on a slope where it is not possible to walk without assistance of a handrail or hand line
-
-SOLID CONSTRUCTION means an area that has:
-- A surface STRUCTURALLY CAPABLE of supporting all people and things on it
-- BARRIERS around its perimeter and any openings to prevent a fall
-- An EVEN AND READILY NEGOTIABLE surface and gradient
-- A SAFE MEANS OF ENTRY AND EXIT
-
-FALL PREVENTION DEVICE means:
-- Material or equipment (or combination) designed to prevent a fall for TEMPORARY WORK AT HEIGHTS
-- Once in place after initial installation, requires NO ONGOING ADJUSTMENT, ALTERATION OR OPERATION by any person to ensure its integrity
-- Includes: secure fencing, edge protection, working platforms, covers
-
-WORK POSITIONING SYSTEM means:
-- Any plant or structure, OTHER THAN A TEMPORARY WORK PLATFORM, that enables a person to be POSITIONED AND SAFELY SUPPORTED at a location in such a way that a fall is prevented
-
-FALL ARREST SYSTEM means:
-- Plant or material designed to ARREST A FALL
-- Includes: catch platforms, safety nets, individual fall arrest systems (harnesses, anchorage lines/rails)
-
-TEMPORARY WORK PLATFORM means:
-- A working platform, other than a permanently installed fixed platform, used to provide a working area for the duration of the work
-- The design of the platform prevents workers from falling
-- Includes: scaffolds, EWPs, mast climbers, workboxes, building maintenance units, portable/mobile fabricated platforms
-
-COMPETENT PERSON means:
-- A person who has acquired through TRAINING, QUALIFICATION OR EXPERIENCE the knowledge and skills to carry out the task
-
-ENERGY ABSORBER means:
-- A device that REDUCES DECELERATION FORCE when a fall is suddenly arrested
-- Reduces loadings on the anchorage and the person's body
-- May be a separate item or manufactured as part of the lanyard
-
-TOTAL FALL DISTANCE means:
-- The TOTAL DISTANCE a person is likely to fall during both the free and restrained parts of a fall
-- Includes the MAXIMUM DYNAMIC EXTENSION of all supporting components
-
-VISUAL INDICATORS:
-- Any unprotected edge, hole, opening or level change on a construction site = fall hazard requiring assessment and control
-- Workers accessing elevated areas with no physical fall prevention in place = non-compliance
-- Ground-level openings (trenches, service pits, penetrations) with no cover or barricading = non-compliance
-- Surfaces visibly fragile, sloping, wet or unstable with workers present and no controls = flag
-
----
-
-CHUNK 2: Duty Holders — Who Has Health and Safety Duties for Falls?
-Section: CoP s1.1; WHS Act s19, s22–s29, s27, s28, s46, s47; WHS Regulation s78, s79
-Topic: Legal duties of PCBUs, designers, manufacturers, officers, workers and other persons at the workplace
-
-PRIMARY DUTY — PCBU (WHS Act s19):
-- Must ELIMINATE the risk of falls in the workplace, OR if not reasonably practicable: MINIMISE those risks so far as is reasonably practicable
-- Must ensure, so far as is reasonably practicable, that any work involving risk of a fall is carried out ON THE GROUND OR ON A SOLID CONSTRUCTION
-- Must provide SAFE MEANS OF ACCESS TO AND EXIT FROM the workplace and from areas from which a person could fall
-- Must provide ADEQUATE PROTECTION against fall risk in the following priority order (WHS Regulation s79):
-  1. Fall prevention device (if reasonably practicable)
-  2. Work positioning system (if fall prevention device not reasonably practicable)
-  3. Fall arrest system (if neither of the above is reasonably practicable)
-- A COMBINATION of controls may be used if a single control is not sufficient
-
-HIGH RISK CONSTRUCTION WORK — SWMS MANDATORY:
-- Work involving a risk of a person FALLING MORE THAN 2 METRES = high risk construction work
+MANDATORY:
+- Work involving risk of a person falling MORE THAN 2 METRES = high risk construction work (WHS Regulation s291)
 - A SAFE WORK METHOD STATEMENT (SWMS) MUST be prepared BEFORE the work starts
 
-DESIGNER / MANUFACTURER / IMPORTER / SUPPLIER DUTIES (WHS Act Part 2 Division 3):
-- Must ensure, so far as is reasonably practicable, that plant or structure is WITHOUT RISKS TO HEALTH AND SAFETY
-- Must carry out testing and analysis
-- Must provide specific information about the plant or structure
-- Manufacturers must CONSULT WITH DESIGNERS of plant
-- Importers must CONSULT WITH DESIGNERS AND MANUFACTURERS
-- Person commissioning construction work must CONSULT WITH THE DESIGNER of the structure
-
-OFFICER DUTIES (WHS Act s27):
-- Must exercise DUE DILIGENCE to ensure the PCBU complies with the WHS Act and Regulation
-- Must take reasonable steps to:
-  - Gain an understanding of the HAZARDS AND RISKS associated with the operations
-  - Ensure the business has and uses APPROPRIATE RESOURCES AND PROCESSES to eliminate or minimise fall risks
-
-WORKER DUTIES (WHS Act s28):
-- Must take REASONABLE CARE for own health and safety
-- Must not adversely affect health and safety of other persons
-- Must COMPLY WITH REASONABLE INSTRUCTIONS so far as reasonably able
-- Must COOPERATE with health and safety policies and procedures notified to workers
-- Must USE OR WEAR PPE in accordance with information, training and instruction provided
-
-OTHER PERSONS AT THE WORKPLACE (WHS Act s29):
-- Must take reasonable care for own health and safety
-- Must comply, so far as reasonably able, with reasonable instructions given by the PCBU
-
-CONSULTATION — WORKERS (WHS Act s47):
-- PCBU MUST consult with workers who are directly affected by a health and safety matter
-- Covers employees, contractors, subcontractors, on-hire workers, outworkers, apprentices, trainees, work experience students, volunteers
-- Workers ENTITLED to participate and be represented by a health and safety representative
-
-CONSULTATION — OTHER DUTY HOLDERS (WHS Act s46):
-- PCBU MUST consult, cooperate and coordinate with ALL OTHER PERSONS who have a WHS duty in relation to the same matter
-
 VISUAL INDICATORS:
-- No SWMS available for construction work with fall risk >2m = serious non-compliance
-- No physical fall controls in place (reliance on signage/training only) = non-compliant hierarchy
-- No evidence of worker consultation on fall hazards = flag
-- Multiple PCBUs on site with no coordination arrangements for fall controls = flag
+- Construction work at heights >2m with no SWMS available on site = serious non-compliance
+- Workers at heights >2m with no documented safe work procedures = non-compliance
 
 ---
 
-CHUNK 3: Risk Management Process — Identifying, Assessing and Controlling Fall Hazards
-Section: CoP s1.2, s3.1–s3.4; WHS Regulation s34–s38
-Topic: Four-step risk management process; hazard identification; risk assessment; hierarchy of controls for falls
+CHUNK 2: Hierarchy of Controls for Falls — Mandatory Priority Order
+Section: CoP s1.2, s3.4; WHS Regulation s78, s79
+Topic: Legal priority order for fall controls; when each level is permitted
 
-RISK MANAGEMENT — FOUR STEPS:
-1. IDENTIFY HAZARDS — find out what could cause harm
-2. ASSESS RISKS (if necessary) — understand the nature and severity of harm and likelihood of it occurring
-   - Note: If the risk is known with known controls, formal risk assessment may not be required
-3. CONTROL RISKS — implement the most effective controls reasonably practicable, in accordance with the hierarchy
-4. REVIEW CONTROL MEASURES — ensure they remain effective over time
-
-HAZARD IDENTIFICATION — KEY THINGS TO LOOK FOR:
-- EDGES — open edges of floors, working platforms, walkways, walls or roofs requiring protection
-- HOLES, OPENINGS OR EXCAVATIONS — requiring guarding
-- SURFACES — check for: stability, fragility or brittleness; strength/load capacity; slip potential (wet, polished or glazed surfaces); safe movement where surfaces change; slope of work surfaces
-- LEVELS — where levels change and workers may be exposed to a fall from one level to another
-- STRUCTURES — stability of temporary or permanent structures
-- GROUND — evenness and stability for safe support of scaffolds or work platforms
-- WORKING AREA — whether crowded or cluttered
-- SAFE MEANS OF ACCESS TO AND EXIT FROM the workplace and working area
-- HAND GRIP — places where hand grip may be lost
-
-WORK TASKS REQUIRING SPECIAL ATTENTION:
-- Near an UNPROTECTED OPEN EDGE (e.g. incomplete stairwells, leading formwork edges)
-- Using EQUIPMENT TO WORK AT ELEVATED LEVEL (EWPs, portable ladders)
-- On or alongside a FRAGILE SURFACE (cement sheeting, rusty metal, fibreglass sheeting, skylights)
-- On a POTENTIALLY UNSTABLE SURFACE (risk of ground collapse)
-- On a SLOPING OR SLIPPERY SURFACE
-- Near a HOLE, SHAFT OR PIT (trenches, lift shafts, service pits, floor/column penetrations)
-
-RISK ASSESSMENT — FACTORS TO CONSIDER:
-- What could happen if a fall occurred and HOW LIKELY it is to happen
-- The DESIGN AND LAYOUT of elevated work areas including DISTANCE OF POTENTIAL FALL
-- Number and movement of people at the workplace
-- PROXIMITY OF WORKERS to unsafe areas (loading docks, work above people, risk of falling objects)
-- ADEQUACY of inspection and maintenance of plant (e.g. scaffolds)
-- ADEQUACY OF LIGHTING
-- Weather conditions (rain, wind, extreme heat/cold — slippery/unstable conditions)
-- Suitability of FOOTWEAR AND CLOTHING
-- Suitability and condition of LADDERS including where/how they are being used
-- ADEQUACY OF KNOWLEDGE AND TRAINING (particularly young, new or inexperienced workers)
-- Adequacy of EMERGENCY PROCEDURES
-
-HIERARCHY OF CONTROLS FOR FALLS (WHS Regulation s78, s79) — mandatory priority order:
+HIERARCHY OF CONTROLS (WHS Regulation s78, s79) — mandatory priority order:
 1. WORK ON THE GROUND OR SOLID CONSTRUCTION — eliminate the fall hazard (HIGHEST)
 2. FALL PREVENTION DEVICE — e.g. edge protection, working platforms, covers, guardrails
 3. WORK POSITIONING SYSTEM — e.g. restraint technique, industrial rope access
 4. FALL ARREST SYSTEM — e.g. catch platforms, safety nets, individual fall arrest harness systems
 5. ADMINISTRATIVE CONTROLS — no go areas, permit systems, work sequencing (LOWEST; must not be used exclusively unless higher controls not reasonably practicable)
 
-MAINTAINING AND REVIEWING CONTROLS (WHS Regulation s37, s38):
-- Control measures must be maintained so they remain FIT FOR PURPOSE, suitable for the NATURE AND DURATION of the work, and CORRECTLY INSTALLED, SET UP AND USED
-- INSPECTION REGIME must include:
-  - Equipment to be inspected including UNIQUE IDENTIFICATION
-  - FREQUENCY AND TYPE of inspection (pre-use checks, detailed inspections)
-  - ACTION to be taken on finding defective equipment
-  - MEANS OF RECORDING inspections
-  - Training of users
-  - System of MONITORING the inspection regime to verify inspections are carried out appropriately
-- REVIEW MUST OCCUR when:
-  - Control measure does not control the risk so far as reasonably practicable
-  - Before a CHANGE at the workplace likely to give rise to a new or different risk
-  - A new relevant hazard or risk is identified
-  - Results of CONSULTATION indicate review is necessary
-  - A HSR requests a review
+PCBU must provide adequate protection in the following priority order (WHS Regulation s79):
+- Fall prevention device (if reasonably practicable)
+- Work positioning system (if fall prevention device not reasonably practicable)
+- Fall arrest system (if neither of the above is reasonably practicable)
+- A COMBINATION of controls may be used if a single control is not sufficient
 
 VISUAL INDICATORS:
-- No inspection records for scaffolds, EWPs or fall arrest equipment = non-compliance
-- Defective fall arrest/restraint equipment in use = serious non-compliance
 - Administrative controls (signs, barricades only) used as the sole fall control where physical controls are practicable = non-compliant hierarchy
-- No documented risk assessment or SWMS for high-risk construction work with falls >2m = serious non-compliance
+- Workers at height with no physical fall prevention or arrest system in place = non-compliance
 
 ---
 
-CHUNK 4: Information, Training, Instruction and Supervision
-Section: CoP s1.3; WHS Act s19; WHS Regulation s39, s317
-Topic: Training obligations, content requirements, supervision, general construction induction
-
-PCBU TRAINING OBLIGATIONS (WHS Act s19; WHS Regulation s39):
-- Must ensure information, training and instruction is SUITABLE AND ADEQUATE having regard to:
-  - The NATURE OF THE WORK carried out
-  - The NATURE OF THE RISKS at the time of training
-  - The CONTROL MEASURES implemented
-- Must ensure information, training and instruction are provided in a way that is READILY UNDERSTANDABLE for the person receiving it
-- Workers must be TRAINED AND HAVE APPROPRIATE SKILLS to carry out tasks safely
-- Training must be provided by a COMPETENT PERSON
-
-TRAINING CONTENT — MINIMUM FOR WORKERS EXPOSED TO FALL RISK AT ANY HEIGHT:
-- Proper USE, WEARING, STORAGE AND MAINTENANCE of PPE
-- HAZARDS AND RISKS associated with work at these heights
-- How to follow HEALTH AND SAFETY PROCEDURES including contents of any SWMS
-- REASONS fall protection measures have been put in place and HOW TO USE THEM PROPERLY
-- PROCEDURES FOR EMERGENCY AND RESCUE
-- Procedures for REPORTING fall hazards and incidents
-- Correct SELECTION, FITTING, USE, CARE, INSPECTION, MAINTENANCE AND STORAGE of fall arrest and restraint equipment (where used)
-- Correct use of TOOLS AND EQUIPMENT (e.g. using a tool belt instead of carrying tools)
-- Control measures for OTHER POTENTIAL HAZARDS (e.g. electrical hazards, crushing/entanglement from EWPs)
-
-SUPERVISION REQUIREMENTS:
-- Workers exposed to fall risk must be ADEQUATELY SUPERVISED by a competent person, especially when:
-  - Undergoing training
-  - Unfamiliar with the working environment
-- PCBU must check that:
-  - Only workers who have received training and instruction ARE AUTHORISED to carry out the work
-  - Workers USE FALL CONTROL MEASURES in the correct manner
-
-GENERAL CONSTRUCTION INDUCTION (WHS Regulation s317):
-- PCBU MUST NOT direct or allow a worker to carry out CONSTRUCTION WORK unless the worker has SUCCESSFULLY COMPLETED GENERAL CONSTRUCTION INDUCTION TRAINING
-- Worker must hold a GENERAL CONSTRUCTION INDUCTION TRAINING CARD (White Card) or certification
-
-VISUAL INDICATORS:
-- Workers using fall arrest harnesses, EWPs or rope access without visible competency evidence = flag
-- No White Card evidence for construction workers = non-compliance
-- Workers new to site or task working at height without supervisor present = flag
-- No tool belts or equivalent — workers carrying tools up ladders in hands = unsafe practice
-
----
-
-CHUNK 5: Role of Designers — Eliminating Falls at the Design Stage
-Section: CoP s2.1–s2.3; WHS Act Part 2 Division 3
-Topic: Designer obligations; safer building design; plant design; building/structure design; planning for maintenance and site layout
-
-DESIGNER OBLIGATIONS:
-- Must ensure, so far as is reasonably practicable, that workers involved with construction, USE OR SUBSEQUENT MAINTENANCE are not exposed to risks associated with work at height
-- Must consider the WHOLE LIFE CYCLE of the plant or structure: manufacture, use through to demolition and disposal
-- When risks remain, information MUST BE INCLUDED WITH THE DESIGN to alert others to the risks
-- Consultation, cooperation and coordination MUST occur between the builder and other designers to ensure SAFE INTERACTION OF DIFFERENT DESIGN ASPECTS
-
-SAFER BUILDING DESIGN — MEASURES TO ELIMINATE OR MINIMISE FALL RISK:
-- LOW-LEVEL MOUNTING of roof vents
-- Locating air conditioning and similar plant AT GROUND LEVEL
-- Locating AC units and roof-mounted plant (satellite dishes) AWAY FROM EDGES
-- Specifying NON-FRAGILE MATERIAL for the roof
-- Using PERMANENT SAFETY MESH
-- SAFER GUTTERS: large volume gutters/downpipes to minimise roof access; locate gutters at ground level or away from edges; smooth transition from roof to walls
-- SAFE ENTRY TO AND EXIT from work areas including scaffolding
-- Designing PERMANENT GUARDRAILS or edge protection (e.g. parapet walls) for permanent fall prevention on roofs
-- Planning for FUTURE MAINTENANCE (AC units, sloping exteriors, windows)
-- Specifying STRENGTH OF ROOF MEMBERS and anchor/guardrail fixing points
-- Designing PREFABRICATION OF STRUCTURES ON THE GROUND before lifting into position
-- Specific safety requirements for: antenna/satellite dish installers; AC service contractors; window and gutter cleaners
-
-PLANT DESIGN — MEASURES TO ELIMINATE OR MINIMISE FALL RISK:
-- Providing STEPS AND HANDRAILS on vehicles (e.g. dump trucks)
-- Incorporating systems to PREVENT FALLS in silos and overhead conveyors
-- Ensuring workers can SAFELY MAINTAIN, REPAIR OR CLEAN the plant
-- Safe access to and exit from the plant
-- Considering the SAFETY OF PASSENGERS
-
-BUILDING/STRUCTURE DESIGN — CONSTRUCTION STAGE MEASURES:
-- Reducing risk for those at height — e.g. installing GUARDRAILS TO PERIMETER STRUCTURAL MEMBERS BEFORE ERECTION
-- Reducing TIME SPENT AT HEIGHTS by pre-fabricating modules on the ground before lifting
-- SEQUENCING OF WORK to be carried out at heights
-- Locating ACCESS ROADS to enable cranes to place materials in most accessible positions
-- Preparing ground/floor below work area — must be COMPACTED AND LEVEL to support cranes and EWPs
-- IDENTIFYING UNDERGROUND SERVICES including drainage (for safe crane set-up)
-- Providing PERMANENT SAFETY MESH
-
-PLANNING FOR BUILDING MAINTENANCE:
-- Consider methods for maintenance, repair or cleaning AT DESIGN STAGE, e.g.:
-  - Designing WINDOW CLEANING BAYS OR GANGWAYS integrated into structural frame
-  - Designing PERMANENT ANCHORAGE AND HOISTING POINTS into structures
-
-PLANNING SITE LAYOUT — FACTORS TO CONSIDER:
-- FIRM, LEVEL SURFACES below work areas for EWPs and mobile scaffolds
-- Condition of ACCESS ROADS so plant can place and retrieve materials, reducing manual handling at height
-- SAFE ACCESS TO AND EXIT FROM work areas and amenities (stairways, ladders, catwalks, guardrails, barriers)
-- Direct and unobstructed means of ESCAPE AND RESCUE in event of emergency
-
-VISUAL INDICATORS:
-- Roof-mounted plant positioned at roof edges with no access/egress system = design failure requiring remediation
-- Fragile roofing materials (fibreglass, corrugated sheeting, skylights) with no safety mesh or fall controls = high risk
-- Roof structure with no permanent anchor points or edge protection = flag for sites with ongoing maintenance
-- Building maintenance requiring roof access with no permanent guardrails, BMU or anchor system = design deficiency
-
----
-
-CHUNK 6: Work on the Ground — Elimination of Fall Risk
-Section: CoP s4.1; WHS Regulation s78
-Topic: Eliminating the need to work at height; ground-level task examples
-
-ELIMINATION — HIGHEST ORDER CONTROL:
-- Eliminating the NEED TO WORK AT HEIGHT is the most effective way of protecting workers from the risk of falls
-- A PCBU can only take steps to MINIMISE the risk of a fall if it is NOT REASONABLY PRACTICABLE TO ELIMINATE that risk
-
-EXAMPLES OF TASKS THAT CAN BE PERFORMED ON THE GROUND:
-- Prefabricating ROOFS AT GROUND LEVEL
-- Prefabricating WALL FRAMES horizontally then standing them up
-- Installing AIR-CONDITIONING UNITS at ground level
-- Using MECHANICAL TARP SPREADERS to cover truck loads from the ground
-- REDUCING SHELVING HEIGHTS so workers can access items from ground level
-- Using TOOLS WITH EXTENDABLE HANDLES (e.g. paint rollers) — note: assess musculoskeletal disorder risk
-- Lowering a CONCERT HALL CHANDELIER to repair it
-- Fitting OUTLETS, INLETS AND CONTROLS of large tanks and silos near the ground
-
-VISUAL INDICATORS:
-- Workers climbing to access items that could be repositioned at ground level = elimination not considered
-- Roof trusses being assembled at height when ground-level prefabrication is practicable = flag
-- Workers manually adjusting loads on truck trays by climbing on the load = elimination not considered
-
----
-
-CHUNK 7: Work on a Solid Construction — Requirements and Specifications
+CHUNK 3: Solid Construction — Four Mandatory Requirements
 Section: CoP s4.2; WHS Regulation s78
-Topic: Definition and requirements for solid construction; structural strength; barriers; hole/penetration protection; surface/gradient standards; entry and exit
+Topic: Definition and specifications for solid construction
 
 SOLID CONSTRUCTION — FOUR REQUIREMENTS (all must be met):
 1. Surface STRUCTURALLY CAPABLE of supporting workers, materials and all other loads
@@ -346,42 +59,53 @@ SOLID CONSTRUCTION — FOUR REQUIREMENTS (all must be met):
 3. EVEN AND READILY NEGOTIABLE surface and gradient
 4. SAFE MEANS OF ENTRY AND EXIT
 
-STRUCTURAL STRENGTH:
-- Surface and supports must SAFELY CARRY THE EXPECTED LOADS — workers, materials, tools and equipment
-- When in doubt: have a STRUCTURAL ENGINEER DETERMINE THE SAFE LOAD CAPACITY BEFORE USE
-
-BARRIERS — WHERE REQUIRED:
-- Perimeters of buildings or other structures
-- Floors including MEZZANINE FLOORS
-- OPENINGS IN FLOORS
-- The open edge of a STAIR, LANDING, PLATFORM or SHAFT OPENING
-
 BARRIER SPECIFICATIONS:
-- Must be designed and constructed to WITHSTAND THE FORCE OF SOMEONE FALLING AGAINST IT
-- Must consist of GUARDRAILS, SOLID BALUSTRADES or other structural components (e.g. wire mesh with posts and reinforced top edge)
 - TOP OF GUARDRAIL OR COMPONENT: between 900 mm AND 1100 mm above the working surface
 - Guardrail systems must also have: MID-RAILS AND TOE-BOARDS or wire mesh infill panels
-- If access is required to equipment (e.g. a hoist): must be protected with GATES OR OTHER MEANS to prevent a person falling
-
-PROTECTION AROUND HOLES, PENETRATIONS AND OPENINGS:
-- A fall prevention device MUST be used to provide and maintain a safe system of work where persons work near holes, penetrations and openings through which a person could fall (if reasonably practicable to do so)
-- Holes, penetrations and openings must be made safe IMMEDIATELY AFTER BEING FORMED, e.g. with covers, barricading or embedded mesh
-- When MESH IS USED: an additional cover must be used to prevent things falling through the mesh
-
-COVER SPECIFICATIONS:
-- Must be made of material STRONG ENOUGH to prevent people or objects falling through the hole
-- Must be SECURELY FIXED to prevent dislodgement or accidental removal
-- Must be designed to safely withstand a POINT LOAD OF AT LEAST 2 KILONEWTONS (200 KG)
-- PLYWOOD COVERS ALONE ARE NOT PREFERRED because:
-  - May be INDISTINGUISHABLE from other plywood pieces
-  - Difficult to determine if properly secured
-  - Can be unsecured to gain access and not re-secured
-- MUST INCLUDE SIGNAGE indicating purpose — e.g. 'DANGER HOLE BENEATH'
 
 SURFACE AND GRADIENT SPECIFICATIONS:
 - Surfaces must be NON-SLIP and FREE FROM TRIP HAZARDS
 - General maximum gradient: 7 DEGREES (1 in 8 gradient)
 - CLEATED SURFACES (greater slip-resistance): must NOT BE STEEPER THAN 20 DEGREES (1 in 3 gradient)
+
+VISUAL INDICATORS:
+- Guardrail top rail height outside 900–1100 mm range = non-compliance
+- Guardrail system missing mid-rails or toe-boards = non-compliance
+- Working surface gradient exceeding 7 degrees with no cleating = slip hazard / non-compliance
+- Surfaces visibly slippery, wet or unstable with workers present and no controls = flag
+
+---
+
+CHUNK 4: Hole and Penetration Protection — Cover Specifications
+Section: CoP s4.2; WHS Regulation
+Topic: Requirements for covers over holes, penetrations and openings
+
+COVER SPECIFICATIONS:
+- Must be made of material STRONG ENOUGH to prevent people or objects falling through the hole
+- Must be SECURELY FIXED to prevent dislodgement or accidental removal
+- Must be designed to safely withstand a POINT LOAD OF AT LEAST 2 KILONEWTONS (200 KG)
+- MUST INCLUDE SIGNAGE indicating purpose — e.g. 'DANGER HOLE BENEATH'
+
+PLYWOOD COVERS:
+- PLYWOOD COVERS ALONE ARE NOT PREFERRED because:
+  - May be INDISTINGUISHABLE from other plywood pieces
+  - Difficult to determine if properly secured
+  - Can be unsecured to gain access and not re-secured
+
+MESH PROTECTION:
+- When MESH IS USED: an additional cover must be used to prevent things falling through the mesh
+
+VISUAL INDICATORS:
+- Hole or penetration with no cover, or cover with no signage = non-compliance
+- Plywood cover over penetration with no fixing and no signage = non-preferred / flag
+- Cover not securely fixed — can be displaced = non-compliance
+- Ground-level openings (trenches, service pits, penetrations) with no cover or barricading = non-compliance
+
+---
+
+CHUNK 5: Grid Mesh and Checker Plate Flooring — Installation Requirements
+Section: CoP s4.2
+Topic: Fixing and assembly requirements for grid mesh flooring panels
 
 GRID MESH OR CHECKER PLATE FLOORING — REQUIREMENTS:
 - Flooring panels must be SECURELY FIXED and assembled to manufacturer's specifications
@@ -390,32 +114,16 @@ GRID MESH OR CHECKER PLATE FLOORING — REQUIREMENTS:
 - During installation: secured by TACK WELDING, PANEL GRIPS or other means to prevent movement before permanent fixing
 - If panels are REMOVED: edge protection must be provided and gaps protected
 
-ENTRY AND EXIT — REQUIREMENTS:
-- Must have SAFE MEANS for people to enter, exit and move around the work area
-- Examples: permanently installed platforms, ramps, stairways or FIXED LADDERS
-- Reference standard: AS 1657 Fixed platforms, walkways, stairways and ladders
-- Safety considerations for entries/exits:
-  - Exposure to WEATHER (rain → slippery surfaces; wind → loss of hand grip)
-  - Providing NATURAL OR ARTIFICIAL LIGHTING to access ways
-  - Clearing OBSTRUCTIONS so people can move easily to and from the workplace
-- PORTABLE STEPLADDERS AND TRESTLE LADDERS must NOT be used for entries or exits
-- SINGLE OR EXTENSION LADDERS: only used for entry/exit where use of safer systems is NOT REASONABLY PRACTICABLE
-
 VISUAL INDICATORS:
-- Guardrail top rail height outside 900–1100 mm range = non-compliance
-- Guardrail system missing mid-rails or toe-boards = non-compliance
-- Hole or penetration with no cover, or cover with no signage = non-compliance
-- Plywood cover over penetration with no fixing and no signage = non-preferred / flag
-- Working surface gradient exceeding 7 degrees with no cleating = slip hazard / non-compliance
 - Grid mesh panels not fixed — loose underfoot = non-compliance
-- Workers using stepladders as primary access to elevated work areas = flag
-- No lighting at access ways = flag
+- Panels being installed without securing each panel before placing the next = unsafe practice
+- Gaps in flooring with no edge protection after panel removal = non-compliance
 
 ---
 
-CHUNK 8: Fall Prevention Devices — Scaffolds (General Requirements)
-Section: CoP s5.1; WHS Regulation s225; AS/NZS 4576, AS/NZS 1576 (set)
-Topic: Scaffold compliance requirements; inspection obligations; duty ratings; safety considerations; worker information requirements
+CHUNK 6: Scaffold Inspection and Handover — Mandatory Requirements
+Section: CoP s5.1; WHS Regulation s225
+Topic: Inspection obligations, handover certificates, 30-day inspections
 
 SCAFFOLD INSPECTION — MANDATORY REQUIREMENTS (WHS Regulation s225):
 - A person with management or control of a scaffold must NOT ALLOW USE of a scaffold from which a person or object could fall MORE THAN 4 METRES unless a COMPETENT PERSON, who has INSPECTED the scaffold, provides WRITTEN CONFIRMATION that the scaffold has been completed (HANDOVER CERTIFICATE)
@@ -425,6 +133,17 @@ SCAFFOLD INSPECTION — MANDATORY REQUIREMENTS (WHS Regulation s225):
   - AT LEAST EVERY 30 DAYS
 - If inspection indicates risk to health or safety: repairs, alterations and additions MUST be made, and scaffold MUST BE INSPECTED AGAIN by a competent person before use is resumed
 - UNAUTHORISED ACCESS to incomplete scaffold left unattended must be PREVENTED (e.g. danger tags and warning signs at appropriate locations)
+
+VISUAL INDICATORS:
+- No handover certificate displayed or available for scaffold where fall >4m is possible = serious non-compliance
+- No 30-day inspection tag/record on scaffold = non-compliance
+- Danger tags and warning signs absent from incomplete scaffold = non-compliance
+
+---
+
+CHUNK 7: Scaffold Duty Ratings and Safe Load Limits
+Section: CoP s5.1; AS/NZS 4576, AS/NZS 1576 (set)
+Topic: Duty ratings, safe load limits, platform width requirements
 
 SCAFFOLD DUTY RATINGS — SAFE LOAD LIMITS (includes weight of people AND materials, tools, debris):
 - LIGHT DUTY: up to 225 KG PER BAY — painting, electrical work, light carpentry; platform at least TWO PLANKS WIDE (approx. 450 mm)
@@ -437,24 +156,31 @@ EXAMPLE SAFE LOAD CALCULATION (light duty):
   - Can safely support ONE 80 kg worker + 145 kg of tools/materials, OR
   - TWO 80 kg workers + 65 kg of tools/materials
 
-SCAFFOLD — SAFETY CONSIDERATIONS:
-- Must conform to AS/NZS 4576 (Guidelines for Scaffolding) and AS/NZS 1576 (set)
-- Must be erected, altered and dismantled by COMPETENT PEOPLE
+VISUAL INDICATORS:
+- Materials overloaded on scaffold platform beyond rated SWL = non-compliance
+- Platform width visibly less than required for duty rating = non-compliance
+
+---
+
+CHUNK 8: Scaffold Edge Protection and Licensing
+Section: CoP s5.1; WHS Regulation
+Topic: Edge protection requirements; licensing for erection/alteration/dismantling
+
+SCAFFOLD — SAFETY REQUIREMENTS:
+- EDGE PROTECTION (handrails, mid-rails and toe-boards) must be provided at EVERY OPEN EDGE of a work platform
 - Scaffolds with fall potential >4 metres: must be erected, altered and dismantled by a person holding a SCAFFOLDING HIGH RISK WORK LICENCE, or a TRAINEE UNDER DIRECT SUPERVISION of a licensed scaffolder
 - PREFABRICATED SCAFFOLDS: same type only — no mixing components unless APPROVED BY MANUFACTURER
-- SAFE ACCESS TO AND EXIT FROM the scaffold must be provided
-- EDGE PROTECTION (handrails, mid-rails and toe-boards) must be provided at EVERY OPEN EDGE of a work platform
 
-WORKER INFORMATION, TRAINING AND INSTRUCTION — SCAFFOLD-SPECIFIC:
-- Emergency response procedures
-- What loads the scaffold can safely take (SAFE WORKING LOAD — SWL)
-- Must not make UNAUTHORISED ALTERATIONS (removing guardrails, planks, ties, toe-boards, braces)
-- Keep working platforms CLEAR OF DEBRIS and obstructions along their length
-- Never access INCOMPLETE OR DEFECTIVE SCAFFOLDS
-- IMMEDIATELY REPORT DEFECTS
-- Isolate ELECTRICAL LEADS from metal scaffold frame with plastic lead hooks or insulated rubber material (where reasonably practicable)
-- SWMS required for work at or above 2 metres
-- Comply with electrical PERMIT TO WORK requirements for work within powerline 'no go' zone
+VISUAL INDICATORS:
+- Scaffold with missing handrails, mid-rails or toe-boards at open edges = non-compliance
+- Mixed prefabricated scaffold components from different manufacturers without approval = flag
+- Scaffold >4m being erected/altered/dismantled by unlicensed workers without supervision = non-compliance
+
+---
+
+CHUNK 9: Mobile Scaffold — Additional Safety Requirements
+Section: CoP s5.1
+Topic: Mobile scaffold specific requirements; castor locking; access; movement
 
 MOBILE SCAFFOLD — ADDITIONAL SAFETY REQUIREMENTS:
 - Workers must be trained in use, including ensuring scaffold:
@@ -465,30 +191,17 @@ MOBILE SCAFFOLD — ADDITIONAL SAFETY REQUIREMENTS:
   - Accessed using an INTERNAL LADDER (except for low height platforms where not reasonably practicable)
 
 VISUAL INDICATORS:
-- No handover certificate displayed or available for scaffold where fall >4m is possible = serious non-compliance
-- No 30-day inspection tag/record on scaffold = non-compliance
-- Scaffold with missing handrails, mid-rails or toe-boards at open edges = non-compliance
-- Materials overloaded on scaffold platform beyond rated SWL = non-compliance
 - Mobile scaffold accessed from outside via climbing the frame rather than internal ladder = non-compliance
 - Mobile scaffold with castors unlocked while workers are on it = serious safety risk
-- Mixed prefabricated scaffold components from different manufacturers without approval = flag
-- Danger tags and warning signs absent from incomplete scaffold = non-compliance
+- Mobile scaffold being moved with workers on it = serious non-compliance
 
 ---
 
-CHUNK 9: Fall Prevention Devices — Suspended (Swing Stage) Scaffolds
+CHUNK 10: Suspended (Swing Stage) Scaffolds — Harness Requirement
 Section: CoP s5.1; AS 1576.4
-Topic: Types of suspended scaffold; licensing requirements; safety management
-
-SUSPENDED SCAFFOLD — TYPES:
-- SWING STAGES with cradles supported by a SINGLE ROW of suspension ropes
-- DOUBLE ROPE SCAFFOLDS with cradles supported by TWO ROWS of suspension ropes
-- WORK CAGES — small cradles supported by ONE SUSPENSION ROPE only
-- FALSE CARS — specialised form, often used during lift construction before lift cars are installed
+Topic: Licensing and harness requirements for suspended scaffolds
 
 SUSPENDED SCAFFOLD — SAFETY REQUIREMENTS:
-- Working load and specifications must conform to AS 1576.4: Scaffolding — Suspended Scaffolding
-- Workers operating suspended scaffolds must be TRAINED IN THEIR SAFE OPERATION
 - Workers INSTALLING OR SERVICING a suspended scaffold must EITHER:
   - Hold an ADVANCED RIGGING or ADVANCED SCAFFOLDING HIGH RISK WORK LICENCE, OR
   - Be enrolled in a training course to obtain that licence AND be SUPERVISED by the holder of an advanced rigging or advanced scaffolding high risk work licence
@@ -502,29 +215,9 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 10: Fall Prevention Devices — Elevating Work Platforms (EWPs)
+CHUNK 11: Elevating Work Platforms — Harness and Licensing Requirements
 Section: CoP s5.1; AS 2550.10
-Topic: Types of EWP; hazards; risk controls; licensing requirements; harness obligations
-
-EWP TYPES:
-- BOOM-TYPE EWPs (including travel towers, cherry pickers)
-- SCISSOR LIFTS
-- Some designed for HARD FLAT SURFACES ONLY; others for ROUGH TERRAIN
-- Some for INDOOR USE only — not suitable for windy conditions outdoors
-
-MAIN HAZARDS WHEN USING EWPs:
-- Contact with ELECTRIC LINES
-- OVERTURNING the machine
-- FALLING FROM THE WORK PLATFORM
-- CRUSHING HAZARDS when elevating the platform or moving laterally
-
-EWP RISK CONTROL MEASURES:
-- Train and instruct workers in SAFE OPERATING PROCEDURES for the specific brand and type of EWP
-- Train workers in SAFE WORK PROCEDURES to avoid crushing and electrical hazards
-- Train workers in SAFE USE OF FALL ARREST EQUIPMENT and EMERGENCY RESCUE PROCEDURES
-- EWP only used as WORKING PLATFORM — not as means of entering and exiting a work area unless conditions in AS 2550.10 are met
-- Only used on SOLID LEVEL SURFACE unless designed for rough terrain
-- CHECK SURFACE AREA for penetrations or obstructions that could cause uncontrolled movement or overturning
+Topic: EWP harness requirements; licensing for boom-type EWPs; surface requirements
 
 FALL ARREST HARNESS — EWP REQUIREMENTS:
 - Workers in TRAVEL TOWERS, BOOM LIFTS or CHERRY PICKERS must wear a PROPERLY ANCHORED FALL ARREST HARNESS where not reasonably practicable to use fall prevention device or work positioning system
@@ -536,65 +229,55 @@ LICENSING — BOOM-TYPE EWPs:
   - Hold a BOOM-TYPE EWP HIGH RISK WORK LICENCE, OR
   - Be enrolled in a training course for that licence AND be SUPERVISED by the holder of a boom-type EWP high risk work licence
 
+EWP SURFACE REQUIREMENTS:
+- Only used on SOLID LEVEL SURFACE unless designed for rough terrain
+- CHECK SURFACE AREA for penetrations or obstructions that could cause uncontrolled movement or overturning
+
 VISUAL INDICATORS:
-- EWP operated on uneven or soft ground not rated for rough terrain = overturn risk
 - Workers in boom lifts/cherry pickers with no fall arrest harness attached = serious non-compliance
 - Lanyard attached to EWP handrail (not manufacturer's anchor point) = non-compliance
 - Operator of boom EWP with boom ≥11m with no visible licence = non-compliance
-- EWP positioned adjacent to powerlines without appropriate clearance = serious non-compliance
+- EWP operated on uneven or soft ground not rated for rough terrain = overturn risk
 
 ---
 
-CHUNK 11: Fall Prevention Devices — Mast Climbing Work Platforms
+CHUNK 12: Mast Climbing Work Platforms — Licensing
 Section: CoP s5.1; AS 2550.16
-Topic: What mast climbers are; configuration limitations; licensing requirements
-
-MAST CLIMBING WORK PLATFORMS — DESCRIPTION:
-- Hoists with a working platform used to RAISE WORKERS AND MATERIAL to a temporary working position
-- Use a DRIVE SYSTEM MOUNTED ON AN EXTENDABLE MAST — may need to be TIED TO A BUILDING under manufacturer-prescribed circumstances
-- Can be set up in SINGLE-MAST or MULTI-MAST configurations
-- GENERALLY NOT SUITABLE where profile of structure changes at different elevations (e.g. upper floors step back; balconies protrude)
+Topic: Licensing requirements for erection and dismantling
 
 LICENSING — ERECTION AND DISMANTLING:
 - Must be carried out by workers who:
   - Hold a BASIC RIGGING OR INTERMEDIATE SCAFFOLDING HIGH RISK WORK LICENCE, OR
   - Are enrolled in a training course to obtain that licence AND are supervised by the holder of a basic rigging or intermediate scaffolding high risk work licence
-- Reference standard: AS 2550.16 Cranes — Safe Use — Part 16: Mast Climbing Work Platforms
 
 VISUAL INDICATORS:
 - Mast climbing work platform being erected or dismantled by workers without required licence or supervision = non-compliance
-- Mast not tied to building where building profile requires it (per manufacturer) = non-compliance
 
 ---
 
-CHUNK 12: Fall Prevention Devices — Workboxes and Work Platforms
-Section: CoP s5.1; AS 1418.17; AS 2550.1; AS 2359.1-2015; AS 2359.2
-Topic: Types and use of workboxes and forklift work platforms; mandatory precautions; prohibitions
+CHUNK 13: Crane Workboxes — Design Registration and Safety Requirements
+Section: CoP s5.1; AS 1418.17; AS 2550.1
+Topic: Design registration, harness requirements, operator obligations, prohibited practices
 
-WORKBOXES AND WORK PLATFORMS — DESCRIPTION:
-- Platform surrounded by EDGE PROTECTION, designed to provide an elevated work area
-- WORKBOXES: supported FROM ABOVE by crane, hoist or other mechanical device
-- WORK PLATFORMS: supported FROM UNDERNEATH OR SIDE by forklifts or other mechanical devices
-- Where reasonably practicable: use EWPs or scaffolds as ALTERNATIVE to workboxes/work platforms
-
-GENERAL SAFETY PRECAUTIONS:
-- Workbox/work platform must be DESIGNED FOR THE TASK and securely attached to the crane, hoist, forklift or other mechanical device
-- Must NOT BE SUSPENDED OVER PEOPLE
-- Effective MEANS OF COMMUNICATION between person in workbox/platform and operator
-- OPERATOR MUST REMAIN AT THE CONTROLS at all times
-- LIFTING ATTACHMENTS AND RECORDS must be checked by a competent person before use
-
-CRANE WORKBOXES — ADDITIONAL REQUIREMENTS:
+CRANE WORKBOXES — REQUIREMENTS:
 - Must be DESIGN REGISTERED before use in the workplace (WHS Regulation)
-- Workbox must be designed to AS 1418.17: Cranes — Part 17: Design and Construction of Workboxes
 - Must be fitted with ANCHORAGE capable of withstanding fall forces specified in AS/NZS 1891.4
 - Where risk of falling from height: person MUST BE ATTACHED TO ANCHORAGE by lanyard and harness UNLESS workbox is FULLY ENCLOSED
 - Workers must REMAIN WITHIN THE WORKBOX while being lifted or suspended
 - Except in an emergency: workers must NOT ENTER OR LEAVE THE WORKBOX WHEN ELEVATED unless conditions in AS 2550.1 s6.19.3 are met
+- OPERATOR MUST REMAIN AT THE CONTROLS at all times
 - Directions to crane operator from workbox must be provided by a person holding a DOGGING OR RIGGING LICENCE
-- Crane must be fitted with means to SAFELY LOWER WORKBOX in emergency or power failure
-- Crane must be SUITABLY STABILISED while workbox is in use
-- 'Drive up' and 'drive down' controls on both hoisting and luffing motions must be used — NO DECLUTCHING ALLOWING FREE FALL while workbox is in use
+
+VISUAL INDICATORS:
+- Crane workbox in use without harness worn by occupants (and workbox not fully enclosed) = serious non-compliance
+- Crane operator not at controls while workbox is elevated = serious non-compliance
+- Dogging/rigging licence holder not directing crane from workbox = non-compliance
+
+---
+
+CHUNK 14: Forklift Work Platforms — Design and Attachment Requirements
+Section: CoP s5.1; AS 2359.1–2015; AS 2359.2
+Topic: Design requirements, attachment specifications, prohibited practices
 
 FORKLIFT WORK PLATFORMS — REQUIREMENTS:
 - Must be ENGINEER-DESIGNED and constructed to AS 2359.1–2015: Powered Industrial Trucks — Part 1: General Requirements
@@ -603,7 +286,6 @@ FORKLIFT WORK PLATFORMS — REQUIREMENTS:
 - Workers must REMAIN WITHIN THE WORK PLATFORM when elevated or being raised/lowered
 - NO OTHER DEVICE (ladder, pallet) must be used to GAIN ADDITIONAL HEIGHT from the platform
 - SAFETY GATE must be SELF-CLOSING and KEPT SHUT when in the elevated position
-- Reference standard: AS 2359.2 Powered Industrial Trucks — Part 2: Operations
 
 PROHIBITED PRACTICES — FORKLIFT:
 - Using a forklift as a working platform by standing on the TYNES = UNACCEPTABLE PRACTICE
@@ -613,26 +295,18 @@ PROHIBITED PRACTICES — FORKLIFT:
 VISUAL INDICATORS:
 - Worker standing on forklift tynes or pallet (not in a compliant work platform) = serious non-compliance
 - Ladder placed on forklift to gain additional height = serious non-compliance
-- Crane workbox in use without harness worn by occupants (and workbox not fully enclosed) = serious non-compliance
 - Safety gate on forklift work platform left open when elevated = non-compliance
-- Crane operator not at controls while workbox is elevated = serious non-compliance
-- Dogging/rigging licence holder not directing crane from workbox = non-compliance
+- Work platform not secured with locking bracket and pin = non-compliance
 
 ---
 
-CHUNK 13: Fall Prevention Devices — Building Maintenance Units
+CHUNK 15: Building Maintenance Units — Anchorage and Operator Requirements
 Section: CoP s5.1; AS 1418.13; AS 2550.13
-Topic: Description, design requirements, and operator obligations for BMUs
+Topic: Anchorage point requirements and operator competency
 
-BUILDING MAINTENANCE UNIT (BMU) — DESCRIPTION:
-- POWER-OPERATED SUSPENDED WORKING PLATFORM fixed permanently to a building or structure
-- Used for ACCESS FOR BUILDING MAINTENANCE OR WINDOW CLEANING
-
-BMU — REQUIREMENTS:
-- Must be designed to AS 1418.13: Cranes — Part 13: Building Maintenance Units
+BUILDING MAINTENANCE UNIT (BMU) — REQUIREMENTS:
 - Must have CLEARLY DESIGNATED FALL ARREST HARNESS ANCHORAGE POINTS designed to withstand forces caused by a fall of a person located ANYWHERE ON THE PLATFORM
 - Must be operated by COMPETENT PEOPLE in accordance with AS 2550.13: Cranes — Safe Use — Building Maintenance Units
-- Operators must possess a SUITABLE ATTITUDE FOR WORKING AT HEIGHT, including a responsible attitude to safety
 
 VISUAL INDICATORS:
 - BMU operated by uncertified or untrained workers = non-compliance
@@ -640,15 +314,13 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 14: Fall Prevention Devices — Trestle Ladder Platforms
+CHUNK 16: Trestle Ladder Platforms — Height Limits and Specifications
 Section: CoP s5.1; WHS Regulation s306O(3)(a)
-Topic: Trestle scaffold limitations; height thresholds; guardrail requirements; platform width; pin requirements
+Topic: Height limitations, guardrail requirements, platform width, pin specifications
 
 TRESTLE SCAFFOLD — LIMITATIONS:
 - GENERALLY NOT SUITABLE for working at heights of 2 METRES OR ABOVE
 - If used above 2 metres: GUARDRAILING AND TOE-BOARDS must be used to prevent people and material falling off open sides or ends of the work platform
-- Suitable mostly for LIGHT DUTY work only (painting, rendering)
-- Work should only be carried out BETWEEN THE TRESTLES
 
 PLATFORM WIDTH:
 - Working platforms on trestle scaffolds must have a width of at least 450 MM (TWO PLANKS) — except as described in WHS Regulation s306O(3)(a)
@@ -661,11 +333,6 @@ PIN REQUIREMENTS:
 - DO NOT USE NAILS OR PIECES OF REINFORCING BAR
 - Pins should be attached to the trestle by a CHAIN to prevent loss
 
-ALTERNATIVES TO CONSIDER:
-- EWPs (e.g. small scissor lifts)
-- Light duty aluminium MOBILE SCAFFOLDS
-- MODULAR SCAFFOLDING
-
 VISUAL INDICATORS:
 - Trestle scaffold used above 2m with no guardrails or toe-boards = non-compliance
 - Trestle scaffold platform narrower than 450mm (two planks) = non-compliance
@@ -674,16 +341,9 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 15: Fall Prevention Devices — Perimeter Guardrails
-Section: CoP s5.2; AS/NZS 4994 (set); WHS Regulation (edge protection in construction)
-Topic: Where guardrails are required; specifications; load resistance; trenching applications
-
-GUARDRAILS — WHERE REQUIRED:
-- At the EDGES OF ROOFS
-- At the edges of MEZZANINE FLOORS, WALKWAYS, STAIRWAYS, RAMPS and LANDINGS
-- On top of PLANT AND STRUCTURES where access is required
-- Around OPENINGS IN FLOOR AND ROOF STRUCTURES
-- At the edges of SHAFTS, PITS and other EXCAVATIONS
+CHUNK 17: Perimeter Guardrails — Specifications and Load Resistance
+Section: CoP s5.2; AS/NZS 4994 (set)
+Topic: Guardrail height, mid-rail and toe-board requirements, load capacity
 
 GUARDRAIL SPECIFICATIONS:
 - TOP RAIL: 900 mm TO 1100 mm above the working surface
@@ -706,18 +366,14 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 16: Fall Prevention Devices — Safety Mesh
+CHUNK 18: Safety Mesh — Wire Specifications and Installation
 Section: CoP s5.3; AS/NZS 4389
-Topic: Purpose and limitations of safety mesh; wire specifications; installation requirements
+Topic: Wire diameter and spacing, installation requirements, limitations
 
-SAFETY MESH — PURPOSE AND SCOPE:
+SAFETY MESH — PURPOSE AND LIMITATIONS:
 - Designed to PREVENT INTERNAL FALLS THROUGH A ROOF
-- Provides fall protection for ROOF INSTALLERS and long-term protection for maintenance/repair workers
 - Does NOT prevent falls from the EDGE OF A ROOF or through HOLES IN A ROOF
 - MUST ALWAYS BE USED IN CONJUNCTION WITH OTHER FALL PREVENTION DEVICES (e.g. edge protection/guardrails) or other control measures (e.g. fall arrest systems)
-
-SAFETY MESH — COMPLIANCE STANDARD:
-- Must comply with AS/NZS 4389: Roof Safety Mesh
 
 WIRE SPECIFICATIONS:
 - Formed from 2 MM DIAMETER WIRE, WELDED into a mesh
@@ -727,96 +383,61 @@ WIRE SPECIFICATIONS:
 - LONGITUDINAL WIRES: minimum tensile strength of 500 MPa
 
 INSTALLATION REQUIREMENTS:
-- Must be installed by COMPETENT PEOPLE in accordance with manufacturer's instructions
-- Workers installing roof safety mesh must be protected by control measures DURING INSTALLATION (e.g. scaffolding, EWPs, fall arrest systems — whichever is reasonably practicable)
-- Mesh must be SECURELY CONNECTED TO THE STRUCTURE
+- Must be SECURELY CONNECTED TO THE STRUCTURE
 - OVERLAP BETWEEN ADJACENT SECTIONS must be sufficient to generate the necessary strength to resist the force of a person falling onto it
-- Safety mesh must be COVERED BY ROOF CLADDING as soon as reasonably practicable after installation
+- Workers installing roof safety mesh must be protected by control measures DURING INSTALLATION (e.g. scaffolding, EWPs, fall arrest systems — whichever is reasonably practicable)
 
 VISUAL INDICATORS:
 - Roof safety mesh installed without edge protection at roof perimeter = non-compliance (mesh alone is insufficient)
 - Mesh wires visibly wider apart than 150 mm (longitudinal) or 300 mm (cross) = may not meet AS/NZS 4389
-- Safety mesh left uncovered by cladding for extended period = flag
 - Workers installing mesh with no fall control measures in place during installation = non-compliance
 
 ---
 
-CHUNK 17: Work Positioning Systems — Restraint Technique
+CHUNK 19: Restraint Technique — Setup and Suitability Conditions
 Section: CoP s6.1; WHS Regulation
-Topic: What restraint technique is; conditions for use; when it is NOT suitable; installation requirements
+Topic: Restraint system setup, when suitable, when NOT suitable
 
 RESTRAINT TECHNIQUE — DESCRIPTION:
 - Controls a person's movement by PHYSICALLY PREVENTING THE PERSON FROM REACHING a position at which there is a risk of a fall
-- Consists of a HARNESS CONNECTED BY A LANYARD TO AN ANCHORAGE OR HORIZONTAL LIFELINE
 - MUST BE SET UP TO PREVENT THE WEARER FROM REACHING AN UNPROTECTED EDGE
 
 CONDITIONS FOR SUITABLE USE:
 - User CAN MAINTAIN SECURE FOOTING without having to tension the restraint line and without the aid of another handhold or lateral support
-- When assessing secure footing: consider slope of surface, supporting material type, texture of surface and whether it is likely to be wet, oily or otherwise slippery
 
-WHEN RESTRAINT TECHNIQUE MUST NOT BE USED (situations where individual fall arrest system may be more appropriate):
+WHEN RESTRAINT TECHNIQUE MUST NOT BE USED:
 - The user CAN REACH A POSITION WHERE A FALL IS POSSIBLE
 - The user has a RESTRAINT LINE THAT CAN BE ADJUSTED IN LENGTH so that a free fall position can be reached
 - There is danger the user may FALL THROUGH THE SURFACE (e.g. fragile roofing material)
 - The slope is OVER 15 DEGREES
 - Any other reasonably likely use or misuse of the system could lead to FREE FALL
 
-RESTRAINT TECHNIQUE — MUST ONLY BE USED when it is not reasonably practicable to use:
-1. Ground-level or solid construction work
-2. A fall prevention device (e.g. guardrail)
-
 INSTALLATION AND ANCHOR REQUIREMENTS:
-- Must be installed by a COMPETENT PERSON in accordance with manufacturer's instructions
-- Restraint anchorage should be designed for FALL ARREST LOADING
-- A PURPOSE-DESIGNED ROOF ANCHOR, used in accordance with designer's/manufacturer's instructions, may be used as part of restraint technique on METAL DECK OR TILED ROOFS
 - Restraint anchorage should be designed for FALL ARREST LOADING (not restraint loading only)
 
 VISUAL INDICATORS:
 - Restraint lanyard of sufficient length to allow worker to reach the roof edge = system misuse / non-compliance
 - Restraint technique used on slope >15 degrees = not suitable — higher order control required
 - Restraint system used over fragile roofing materials = not suitable
-- Workers using work positioning systems without training evidence = flag
 
 ---
 
-CHUNK 18: Work Positioning Systems — Industrial Rope Access
-Section: CoP s6.2; AS/NZS 4488 (set); WHS Regulation (high risk construction work)
-Topic: Rope access system description; when to use; risk assessment; supervision and operator requirements
-
-INDUSTRIAL ROPE ACCESS — DESCRIPTION:
-- Used for GAINING ACCESS TO AND WORKING AT A WORKFACE, usually by means of VERTICALLY SUSPENDED ROPES
-- Fall arrest components are used in the system, but the main purpose is ACCESS, not backup fall protection
-- OTHER METHODS (EWPs, BMUs) must be CONSIDERED BEFORE rope access
+CHUNK 20: Industrial Rope Access — Supervision and Operator Requirements
+Section: CoP s6.2; AS/NZS 4488 (set); WHS Regulation
+Topic: SWMS requirement, supervision, back-up system, exclusion zones
 
 HIGH RISK CONSTRUCTION WORK:
 - Rope access involving construction work with risk of a person FALLING MORE THAN 2 METRES = high risk construction work
 - SWMS must be prepared BEFORE the work starts
 
-PRE-WORK RISK ASSESSMENT — must consider:
-- Location of work and SPECIAL FEATURES OF THE STRUCTURE
-- ANCHOR POINTS
-- EMERGENCY ACCESS
-- WEATHER CONDITIONS
-
 SUPERVISION AND OPERATOR REQUIREMENTS:
 - Rope access work must be PROPERLY SUPERVISED
-- Supervisors must have the necessary EXPERIENCE AND COMPETENCE to supervise the work AND any potential RESCUE for each project
-- Operators must be COMPETENT in the technique
-- Operators must possess a SUITABLE ATTITUDE FOR WORKING AT HEIGHT
-- Operators must be FIT FOR WORK — not affected by alcohol, drugs or prescribed medication that may impair ability to work at height
 - Operators must NOT WORK ALONE in case they require assistance in an emergency
 
-PPE REQUIREMENTS:
-- Appropriate PPE for tasks: HELMETS, GLOVES, HEARING PROTECTION, GOGGLES OR MASKS
-
 OPERATIONAL REQUIREMENTS:
-- Systems installed where PROMPT ASSISTANCE OR RESCUE can be provided if required
-- Equipment CHECKED REGULARLY by a competent person
-- FIXED ANCHORAGE POINTS checked by a competent person BEFORE ATTACHING ROPE ACCESS LINES
 - BACK-UP SYSTEM for each person — use TWO INDEPENDENTLY ANCHORED ROPES per person
 - Person WITHIN 3 METRES OF AN UNGUARDED EDGE must be adequately secured
 - Operators wear FULL BODY OR WORK POSITIONING SIT HARNESS WITH SHOULDER STRAPS
-- Supervisors can COMMUNICATE WITH WORKERS
 - EXCLUSION ZONES established and enforced on access areas below working area and anchorage locations
 
 VISUAL INDICATORS:
@@ -828,30 +449,21 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 19: Fall Arrest Systems — Catch Platforms
-Section: CoP s7.1; WHS Regulation (catch platforms in construction)
-Topic: Catch platform construction requirements; licensing; deck, positioning and edge protection specifications
-
-CATCH PLATFORMS — PURPOSE:
-- Temporary platform located BELOW A WORK AREA to catch a worker in a fall
-- Must be of ROBUST CONSTRUCTION and designed to withstand the MAXIMUM POTENTIAL IMPACT LOAD
-- Scaffolding components may be used to construct fixed and mobile catch platforms
-
-LICENSING — CANTILEVERED, SPUR OR TUBE AND COUPLER CATCH PLATFORMS:
-- Must be installed by people who:
-  - Hold a high risk work licence for INTERMEDIATE OR ADVANCED SCAFFOLDING, OR
-  - Are enrolled in training to obtain that licence AND supervised by the holder of an intermediate or advanced scaffolding high risk work licence
-
-LICENSING — PREFABRICATED SCAFFOLDING CATCH PLATFORMS (where fall >4m is possible):
-- Must be installed by people who:
-  - Hold a high risk work licence for BASIC SCAFFOLDING, OR
-  - Are enrolled in training to obtain that licence AND supervised by the holder of a basic scaffolding high risk work licence
+CHUNK 21: Catch Platforms — Positioning and Construction Specifications
+Section: CoP s7.1; WHS Regulation
+Topic: Deck extension, positioning distance, edge protection, licensing
 
 CATCH PLATFORM SPECIFICATIONS:
 - Must incorporate a FULLY PLANKED-OUT DECK
 - Deck must extend AT LEAST 2 METRES BEYOND UNPROTECTED EDGES of the work area (EXCEPT where extended guardrailing is fitted to the catch platform)
 - Positioned AS CLOSE AS POSSIBLE TO THE UNDERSIDE OF THE WORK AREA — distance a person could fall before landing on the catch platform must be NO MORE THAN 1 METRE
 - Must ALWAYS be used with EDGE PROTECTION
+
+LICENSING — CANTILEVERED, SPUR OR TUBE AND COUPLER CATCH PLATFORMS:
+- Must be installed by people who hold a high risk work licence for INTERMEDIATE OR ADVANCED SCAFFOLDING, OR are enrolled in training AND supervised by the holder of an intermediate or advanced scaffolding high risk work licence
+
+LICENSING — PREFABRICATED SCAFFOLDING CATCH PLATFORMS (where fall >4m is possible):
+- Must be installed by people who hold a high risk work licence for BASIC SCAFFOLDING, OR are enrolled in training AND supervised by the holder of a basic scaffolding high risk work licence
 
 VISUAL INDICATORS:
 - Catch platform deck not extending 2m beyond unprotected edges = non-compliance
@@ -861,28 +473,17 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 20: Fall Arrest Systems — Safety Nets
+CHUNK 22: Safety Nets — Positioning and Precautions
 Section: CoP s7.2; WHS Regulation
-Topic: Safety net specifications; licensing; positioning; inspection; precautions
-
-SAFETY NETS — PURPOSE AND LIMITATIONS:
-- Provide satisfactory means of protection while allowing workers MAXIMUM FREEDOM OF MOVEMENT
-- Must NOT BE USED to ENTER OR EXIT a work area or as a WORKING PLATFORM
+Topic: Positioning distance, tensioning, hot work prohibition, debris accumulation
 
 LICENSING — SAFETY NET ERECTION AND SERVICING:
-- Must be carried out by people who:
-  - Hold a high risk work licence for BASIC RIGGING OR BASIC SCAFFOLDING, OR
-  - Are enrolled in training to obtain that licence AND supervised by the holder of a basic rigging or basic scaffolding high risk work licence
+- Must be carried out by people who hold a high risk work licence for BASIC RIGGING OR BASIC SCAFFOLDING, OR are enrolled in training AND supervised by the holder of a basic rigging or basic scaffolding high risk work licence
 
 SAFETY NET SPECIFICATIONS AND REQUIREMENTS:
-- Constructed of material STRONG ENOUGH to catch a falling person or thing
 - SECURELY ANCHORED before work starts
 - HUNG AS CLOSE AS PRACTICABLE to the underside of the working area — but NO MORE THAN 2 METRES BELOW the working area
 - SUFFICIENTLY TENSIONED and have clearance to prevent a falling person CONTACTING ANY SURFACE OR STRUCTURE BELOW THE NET
-- INSPECTED, particularly after installation, relocation or repair
-
-SAFETY NET STORAGE:
-- Stored in DRY, SHADED AREAS with GOOD AIR CIRCULATION
 
 PRECAUTIONS WHEN USING SAFETY NETS:
 - NO HOT WORK (welding, oxy cutting or work that may damage the net) above safety nets
@@ -897,30 +498,36 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 21: Fall Arrest Systems — Individual Fall Arrest Systems (General)
+CHUNK 23: Individual Fall Arrest Systems — Component Requirements and Inspection
 Section: CoP s7.3; AS/NZS 1891 (set)
-Topic: Components; worker obligations; head protection; component inspection; free fall distance limits; harness requirements; anchor point requirements
-
-INDIVIDUAL FALL ARREST SYSTEMS — COMPONENTS:
-- Anchorages including rail system
-- Lifelines, lanyard, shock absorber and inertia reel
-- Rope and wire grabs
-- HARNESS
-- Snap hooks and karabiners — DOUBLE OR TRIPLE ACTION to prevent roll-out
-- Rescue equipment
+Topic: Component compliance, inspection obligations, post-fall requirements
 
 MANDATORY CONDITIONS:
 - Must only be used where it is NOT REASONABLY PRACTICABLE TO USE HIGHER LEVEL CONTROL MEASURES
-- Workers must be TRAINED IN SAFE USE of the system
 - Equipment must comply with AS/NZS 1891 (set): Industrial Fall-Arrest Systems and Devices
-- Equipment must be PERMANENTLY MARKED OR LABELLED with relevant information to reduce misuse
 - Workers using a fall arrest system must wear appropriate HEAD PROTECTION
+- Snap hooks and karabiners — DOUBLE OR TRIPLE ACTION to prevent roll-out
 
 IF EQUIPMENT HAS BEEN USED TO ARREST A FALL:
 - Must NOT BE USED AGAIN until inspected and CERTIFIED BY A COMPETENT PERSON as safe to use
 
-FALL ARREST LINES — EDGE CONTACT:
-- Fall arrest lines that can come into contact with edges (concrete or steel beam edges) must be of a type that has been shown to NOT FAIL DURING SUCH USE
+COMPONENT INSPECTION REQUIREMENTS:
+- Each component must be inspected by a competent person:
+  - AFTER INSTALLATION but BEFORE USE
+  - AT REGULAR INTERVALS
+  - IMMEDIATELY AFTER USE TO ARREST A FALL
+- Signs of excessive wear or defects = COMPONENTS MUST BE WITHDRAWN FROM USE
+
+VISUAL INDICATORS:
+- Equipment used to arrest a previous fall still in service without competent person certification = serious non-compliance
+- No head protection worn with fall arrest system = non-compliance
+- Non-compatible components combined in fall arrest system = flag
+
+---
+
+CHUNK 24: Individual Fall Arrest Systems — Anchorage Point Requirements
+Section: CoP s7.3; AS/NZS 1891.4:2009
+Topic: Anchor strength, insert-type anchor prohibition, testing requirements
 
 ANCHORAGE POINT REQUIREMENTS:
 - Must comply with anchor strength specified in AS/NZS 1891.4:2009
@@ -929,30 +536,25 @@ ANCHORAGE POINT REQUIREMENTS:
 - For insert-type anchors: PULL-OUT TESTING REQUIRED — cannot be assessed by visual inspection alone
 - Each anchorage point must be located so that lanyard CAN BE ATTACHED BEFORE the person moves into a position where they could fall
 
-COMPONENT INSPECTION REQUIREMENTS:
-- Each component must be inspected by a competent person:
-  - AFTER INSTALLATION but BEFORE USE
-  - AT REGULAR INTERVALS
-  - IMMEDIATELY AFTER USE TO ARREST A FALL
-- Inspection must be in accordance with MANUFACTURER'S SPECIFICATIONS and relevant standards
-- Signs of excessive wear or defects = COMPONENTS MUST BE WITHDRAWN FROM USE
+VISUAL INDICATORS:
+- Insert-type anchor used where loading is direct pull-out = non-compliance
+- No evidence of anchorage testing before use = flag
+- Anchorage point positioned so worker must move into fall zone before attaching = non-compliance
+
+---
+
+CHUNK 25: Individual Fall Arrest Systems — Free Fall Distance and Harness Requirements
+Section: CoP s7.3; AS/NZS 1891 (set)
+Topic: Maximum free fall distance, clearance requirements, harness fitting and attachment
 
 FREE FALL DISTANCE — LIMITING REQUIREMENTS:
 - Maximum free fall distance before system takes effect: 2 METRES (lesser free fall distance is preferable)
 - There must be sufficient distance between the work surface and surface below to enable the system (including shock absorber) to FULLY DEPLOY
-- FACTORS TO CONSIDER FOR TOTAL FALL DISTANCE CALCULATION:
-  - Worker's HEIGHT
-  - Height and position of the ANCHORAGE POINT
-  - Length of the LANYARD
-  - Any SLACK IN THE HORIZONTAL LIFELINE
-  - Any STRETCHING of the lanyard or lifeline when extended by a fall
-  - Length of ENERGY ABSORBER when extended by a fall
 - Do NOT use lanyards in conjunction with INERTIA REELS — can result in excessive free fall
 
 HARNESS REQUIREMENTS:
 - FULL BODY HARNESS must be worn and must be CORRECTLY FITTED
 - Connect fall arrest line to attachment point (DORSAL or CHEST) providing best protection for the situation
-- Consider: potential fall distance, impact with structure, body position after fall, need to interact with rope-grabs
 
 MAINTAINING MINIMUM SLACK — LANYARD:
 - Must maintain a MINIMUM OF SLACK in the fall arrest lanyard between user and attachment
@@ -962,77 +564,48 @@ MAINTAINING MINIMUM SLACK — LANYARD:
 INERTIA REELS — CORRECT USE:
 - May NOT BE EFFECTIVE on steeply pitched roofs (line may keep extending from reel without locking)
 - Must NOT BE USED AS WORKING SUPPORTS by locking the system and allowing it to support the user
-- CAN BE USED as a control measure in connection with work from bosun's chairs and ladders
 - Only ONE PERSON may be attached to one inertia reel line
+
+VISUAL INDICATORS:
+- Anchorage point visibly below the worker's attachment point = unsafe (increases free fall)
+- Inertia reel combined with lanyard = non-compliance
+- Fall arrest harness worn but not connected to any anchorage = non-compliance
+
+---
+
+CHUNK 26: Individual Fall Arrest Systems — Compatible Components and Rescue Planning
+Section: CoP s7.3; AS/NZS 1891 (set)
+Topic: Component compatibility, snap hook requirements, rescue obligations
 
 COMPATIBLE COMPONENTS — REQUIREMENT:
 - Use of NON-COMPATIBLE COMPONENTS may lead to 'ROLL-OUT' — resulting in injury or death
-- Hazard cannot always be avoided even with same-brand components — CHECK WITH MANUFACTURER
 - SNAP HOOKS must be DOUBLE ACTION TYPE (at least two consecutive deliberate actions to open)
 - Snap hooks must NOT be connected to each other (risk of roll-out)
-- HEX NUT CONNECTORS may be appropriate for semi-permanent connections
 
 RESCUE — MANDATORY PLANNING:
 - PCBU implementing fall arrest system MUST establish EMERGENCY AND RESCUE PROCEDURES
 - Procedures must be TESTED to ensure they are effective
-- Workers must receive suitable and adequate INFORMATION, TRAINING AND INSTRUCTION in relation to emergency procedures
 - Rescue of suspended worker should occur PROMPTLY to prevent suspension intolerance and treat injuries
 - Worker must NOT use fall arrest system unless THERE IS AT LEAST ONE OTHER PERSON ON SITE who can rescue them if they fall
 
 VISUAL INDICATORS:
 - Worker alone on site using fall arrest harness = non-compliance (rescue requirement not met)
-- Fall arrest harness worn but not connected to any anchorage = non-compliance
-- Anchorage point visibly below the worker's attachment point = unsafe (increases free fall)
 - Snap hooks connected to each other = roll-out risk / non-compliance
-- Non-compatible components combined in fall arrest system = flag
-- Equipment used to arrest a previous fall still in service without competent person certification = serious non-compliance
-- No head protection worn with fall arrest system = non-compliance
-- Inertia reel combined with lanyard = non-compliance
+- No emergency and rescue procedure on site where fall arrest systems are in use = serious non-compliance
 
 ---
 
-CHUNK 22: Individual Fall Arrest Systems — Swing Down and Swing Back Hazards
-Section: CoP s7.3 (Individual fall arrest system: hazards); AS/NZS 1891 (set)
-Topic: Swing down and swing back hazard descriptions; prevention measures
-
-SWING DOWN — DESCRIPTION:
-- Occurs if the LANYARD SLIDES BACK ALONG THE PERIMETER EDGE OF THE ROOF until it is vertical
-- Person may HIT THE GROUND, OR the LANYARD MAY BREAK from contact with the roof edge
-
-MEASURES TO ADDRESS SWING DOWN RISK:
-- Installation of GUARDRAILS
-- Placing the ANCHORAGE POINT AT A RIGHT ANGLE to the position of the lanyard at the perimeter edge (e.g. using a MOBILE ANCHORAGE)
-- Installation of a SECOND ANCHORAGE POINT AND BELAY DEVICES — intermediate anchorages
-
-SWING BACK — DESCRIPTION:
-- Person swings back INTO THE BUILDING OR STRUCTURE after an arrested fall
-- Length of lanyard and positioning of anchor may allow the worker to HIT THE STRUCTURE
-
-VISUAL INDICATORS:
-- Single anchor point located well back from working position near roof edge with no intermediate anchorages = swing down risk
-- Lanyard length allows worker to reach perimeter edge and swing vertically = swing down risk
-- Anchor placement allowing worker to contact the structure face on a swing back = assess anchorage position
-
----
-
-CHUNK 23: Fall Arrest Systems — Vertical Anchorage Lines or Rails
+CHUNK 27: Vertical Anchorage Lines or Rails — Specifications
 Section: CoP s7.4; AS/NZS 1891 (set)
-Topic: Description; where used; safety precautions; post-fall inspection
+Topic: Ladder fall arrest systems, connection point, free fall limits
 
-VERTICAL ANCHORAGE LINES OR RAILS — DESCRIPTION:
-- Temporary or permanent fall arrest systems for WORKERS USING LADDERS OR CLIMBING TOWERS
-- Can be used on PLANT (tower cranes) and on BUILDINGS AND STRUCTURES
-- Person has CONTINUOUS FALL PROTECTION by being attached to the anchorage line and harness
-
-SAFETY PRECAUTIONS:
-- Systems must comply with AS/NZS 1891 (set) — including suitable harness and check that USE BY DATE has not passed
+VERTICAL ANCHORAGE LINES OR RAILS — REQUIREMENTS:
 - LOCKING DEVICE attached to the FRONTAL ATTACHMENT POINT of the harness
 - LANYARD ASSEMBLY: maximum 300 mm length
 - POINT OF CONNECTION onto anchorage system must be NEAR THE BASE OF THE LADDER to allow:
   - Connection to be made BEFORE beginning to ascend
   - Continuous connection to the DISCONNECTING POINT when at a safe higher level
 - FREE FALL LIMITED TO A MAXIMUM OF 600 mm
-- Permanent systems must be of WIRE OR RAIL CONSTRUCTION and installed according to manufacturer's instructions
 
 POST-FALL:
 - REMOVE THE SYSTEM FROM SERVICE and have inspected by a COMPETENT PERSON before use again
@@ -1045,48 +618,37 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 24: Fall Arrest Systems — Double Lanyards
+CHUNK 28: Double Lanyards — Correct Use and Prohibited Practices
 Section: CoP s7.5; AS/NZS 1891 (set)
-Topic: Description; correct use; misuse prevention; limitations
+Topic: Double lanyard setup, prohibited practices, side loading
 
 DOUBLE LANYARDS — DESCRIPTION:
 - Also known as TWIN TAIL or 'Y' LANYARD
-- Allow person climbing to ALWAYS BE CONNECTED TO THE LADDER OR STRUCTURE
 - Must include DOUBLE ACTION CONNECTORS to prevent unintentional opening during use
 
 PROHIBITED PRACTICES WITH DOUBLE LANYARDS:
 - NO BACK HOOKING
 - Must NOT be wrapped around the body or passed BETWEEN THE LEGS
 - CHEST CONNECTION must NEVER be higher than the HIGHEST ATTACHMENT POINT
-- NOT SUITABLE FOR FREQUENT USE because of possible misuse or muscle injury
 - The ladder or structure ATTACHMENT POINTS MUST BE CAPABLE OF ARRESTING FORCES generated by a fall with the double lanyard
-
-SIDE LOADING NOTE:
-- In applications where connectors will slide down to the lowest point on the rail: connectors are likely subject to SIDE LOADING
-- Side loading controlled by: SOFT CONNECTIONS LIKE SLINGS or use of HOOKS RATED TO WITHSTAND SIDE LOADING
 
 VISUAL INDICATORS:
 - Double lanyard used with back hooking = non-compliance
 - Double lanyard wrapped around body or passed between legs = non-compliance
 - Chest connection positioned higher than highest attachment point = non-compliance
-- Standard hooks used where side loading is expected without assessment of side load rating = flag
 
 ---
 
-CHUNK 25: Administrative Controls — No Go Areas, Permit Systems, Work Sequencing
-Section: CoP s8.1–s8.3; WHS Regulation s79
-Topic: When administrative controls are permissible; no go areas; permit systems; work sequencing
+CHUNK 29: Administrative Controls — No Go Areas and Permit Systems
+Section: CoP s8.1–s8.2; WHS Regulation s79
+Topic: When administrative controls are permissible; no go area requirements; permit systems
 
 ADMINISTRATIVE CONTROLS — GENERAL RULE:
 - May be used to SUPPORT OTHER CONTROL MEASURES
 - Must NOT be used EXCLUSIVELY to minimise the risk of falls unless it is NOT REASONABLY PRACTICABLE to use a higher order control
-- If relying on administrative controls: may be necessary to provide a HIGH LEVEL OF SUPERVISION to ensure they are being adhered to
 
 NO GO AREAS:
-- Effective method of ensuring people are not exposed to FALL HAZARDS or FALLING OBJECT RISKS
 - Require CLEAR SIGNS warning people not to access the hazardous area
-- Can highlight risks of entry where there is an UNGUARDED HAZARD, or where WORK IS CARRIED OUT OVERHEAD
-- INFORMATION AND INSTRUCTION must be provided about no go areas with supervision to ensure NO UNAUTHORISED ENTRY
 - BARRIERS must be used in conjunction with signs to cordon off areas — must be HIGHLY VISIBLE and SECURELY FIXED to prevent displacement
 
 PERMIT SYSTEMS:
@@ -1095,37 +657,26 @@ PERMIT SYSTEMS:
   - TAGGING ACCESS POINTS to incomplete scaffold with 'ONLY LICENSED SCAFFOLDERS PERMITTED' to restrict unauthorised access during erection/dismantling
   - Requiring PERMITS for access to areas where restraint or fall arrest systems are to be used
 
-ORGANISING AND SEQUENCING OF WORK:
-- Sequence jobs so that DIFFERENT TRADES ARE NOT WORKING ABOVE OR BELOW EACH OTHER at the same time
-- Plan so that work is NOT CARRIED OUT FOR EXTENDED PERIODS FROM A LADDER
-- Plan so that WORK AT HEIGHT IS MINIMISED IN EXTREMELY HOT OR COLD WEATHER
-
 VISUAL INDICATORS:
 - Barricades/no go area signs not securely fixed — can be displaced = non-compliance
 - Workers entering no go area without authorisation and no supervisor present = non-compliance
 - Administrative controls (signs only) used as the exclusive fall control where physical controls are practicable = non-compliant hierarchy
-- Different trades working directly above and below each other simultaneously = flag
 
 ---
 
-CHUNK 26: Ladders — General Rules and Preference Hierarchy
-Section: CoP s9; WHS Regulation (construction)
-Topic: When ladders should and should not be used; the preference hierarchy; types of portable ladders
+CHUNK 30: Ladders — Preference Hierarchy and Selection
+Section: CoP s9; WHS Regulation
+Topic: When ladders should and should not be used; load rating requirements
 
 LADDER PREFERENCE RULE:
-- Falls from ladders have caused SIGNIFICANT SERIOUS AND FATAL INJURIES, even at LOW HEIGHTS
-- Ladders are OFTEN INCORRECTLY CONSIDERED THE FIRST OPTION when working at heights
 - Ladders must only be considered AFTER SAFER ALTERNATIVES (EWPs, scaffolding) have been considered first and found to be NOT REASONABLY PRACTICABLE
+
+SELECTING LADDERS:
+- Must have a LOAD RATING OF AT LEAST 120 KG and be manufactured for INDUSTRIAL USE
+- DOMESTIC or 'HOMEMADE' LADDERS must NOT be used for industrial use or construction sites
 
 TYPES OF PORTABLE LADDERS:
 - EXTENSION OR SINGLE LADDERS: should only be used as ACCESS TO OR EXIT from a work area, OR for SHORT DURATION LIGHT WORK that can be carried out safely from the ladder
-- STEP PLATFORMS: provide improved level of fall protection over traditional step/single ladders — include a small WORKING PLATFORM and PARTIAL HANDRAIL
-
-SELECTING LADDERS:
-- Must be selected to SUIT THE WORK to be carried out
-- Consider: DURATION OF WORK, PHYSICAL SURROUNDINGS and PREVAILING WEATHER CONDITIONS
-- Must have a LOAD RATING OF AT LEAST 120 KG and be manufactured for INDUSTRIAL USE
-- DOMESTIC or 'HOMEMADE' LADDERS must NOT be used for industrial use or construction sites
 
 VISUAL INDICATORS:
 - Domestic grade ladder in use on a construction site = non-compliance
@@ -1134,18 +685,13 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 27: Ladders — Positioning, Setup, and Safe Use
+CHUNK 31: Ladders — Setup and Slope Requirements
 Section: CoP s9.1; AS/NZS 1892 (set)
-Topic: Pre-use inspection; setup requirements; slope; securing; three points of contact; prohibited uses
+Topic: Pre-use inspection, slope ratio, securing requirements
 
 PRE-USE INSPECTION:
 - Must inspect ladder for VISIBLE DAMAGE OR FAULTS before setup (e.g. broken rungs, stiles, footings)
 - FAULTY OR DAMAGED LADDERS MUST BE REMOVED FROM SERVICE
-
-SETUP — CHECKS REQUIRED:
-- Ladder is the CORRECT HEIGHT for the work to avoid over-reaching or stretching
-- LOCKING DEVICES are secure
-- Ladder is NOT PLACED so that the weight is supported by the RUNGS
 
 SETUP — SLIP PREVENTION FOR SINGLE AND EXTENSION LADDERS:
 - Ensuring ladder has NON-SLIP FEET
@@ -1154,17 +700,22 @@ SETUP — SLIP PREVENTION FOR SINGLE AND EXTENSION LADDERS:
 
 STEPLADDERS:
 - Must be set up in the FULLY OPENED POSITION
-- May require a second person to 'FOOT' the ladder for added stability
+
+VISUAL INDICATORS:
+- Ladder slope clearly not at 4:1 (too steep or too shallow) = non-compliance
+- Ladder not secured at top or bottom = non-compliance
+- Stepladder not fully opened = non-compliance
+
+---
+
+CHUNK 32: Ladders — Three Points of Contact and Prohibited Practices
+Section: CoP s9.1; AS/NZS 1892 (set)
+Topic: Three points of contact rule, prohibited practices, tool carrying
 
 SAFE USE — THREE POINTS OF CONTACT (mandatory):
 - When GOING UP OR DOWN: always have TWO FEET AND ONE HAND, or ONE FOOT AND TWO HANDS, on the ladder
 - When WORKING FROM A LADDER: have TWO FEET AND ONE OTHER POINT OF CONTACT (e.g. hand or thighs against ladder)
 - Use a TOOL BELT OR SIDE POUCH — do not carry tools or materials in hands while climbing
-- Only LIGHT DUTY WORK carried out from ladder — tools must be operable safely with ONE HAND
-- ENSURE NO-ONE WORKS UNDERNEATH the ladder
-- DO NOT allow anyone else on the ladder AT THE SAME TIME
-- DO NOT STRADDLE the ladder
-- Wear SLIP-RESISTANT FOOTWEAR
 
 ABSOLUTELY PROHIBITED LADDER PRACTICES:
 - Using METAL OR METAL-REINFORCED ladders when working on LIVE ELECTRICAL INSTALLATIONS
@@ -1174,107 +725,59 @@ PROHIBITED UNLESS ADDITIONAL FALL PROTECTION IS IN PLACE:
 - Using a stepladder NEAR THE EDGE OF AN OPEN FLOOR, PENETRATION OR BESIDE A RAILING
 - OVER-REACHING — centre of torso must remain WITHIN THE LADDER STILES throughout work
 - Using POWER OR HAND TOOLS REQUIRING TWO HANDS (concrete cutting saws, circular saws)
-- Using tools requiring HIGH DEGREE OF LEVERAGE FORCE that could cause over-balancing or fall (stillsons, pinch bars)
 - FACING AWAY FROM THE LADDER when going up, going down, or when working from it
 - Standing on a rung CLOSER THAN 900 mm TO THE TOP of a single or extension ladder
 - Standing HIGHER THAN THE SECOND TREAD BELOW THE TOP PLATE of a stepladder (exception: three-rung stepladders, or when working through an overhead opening providing additional support)
 
-ADDITIONAL PRECAUTIONS — SPECIAL SITUATIONS:
-- In ACCESS AREAS OR DOORWAYS: erect a barrier or lock the door shut
-- NEXT TO POWERLINES: only if worker is trained/authorised and correct ladder is used
-- In VERY WET OR WINDY CONDITIONS: additional precautions required
-- NEXT TO TRAFFIC AREAS: work area must be barricaded
-
-USING LADDERS FOR ENTRY AND EXIT — WHERE USED:
-- Firm, stable WORK PLATFORM to step onto from ladder
-- Ladder must be SECURELY FIXED
-- Ladder must extend AT LEAST 1 METRE ABOVE THE STEPPING-OFF POINT on the working platform
-- FALL PROTECTION must be provided at the stepping-off point where people access the working platform
-- Consider installing STAIRCASE AS SOON AS POSSIBLE as an alternative
-
 VISUAL INDICATORS:
-- Ladder slope clearly not at 4:1 (too steep or too shallow) = non-compliance
-- Ladder not secured at top or bottom = non-compliance
 - Worker carrying materials in hands (no tool belt) while climbing = unsafe practice
 - Worker facing away from ladder while working from it = unsafe practice
 - Worker standing on top tread/top plate of stepladder = non-compliance
 - Worker using two-handed power tool from ladder without additional fall protection = non-compliance
-- Ladder not extending at least 1m above stepping-off point = non-compliance
 - Metal ladder in use near electrical installations = serious risk
 
 ---
 
-CHUNK 28: Ladders — Special Situations and Entry/Exit Requirements
+CHUNK 33: Ladders — Entry/Exit Requirements
 Section: CoP s9.1; AS/NZS 1892 (set)
-Topic: Additional precautions for doorways, powerlines, wet/windy conditions, traffic areas; ladder as entry/exit requirements
-
-SPECIAL SITUATIONS — LADDER USE:
-
-IN ACCESS AREAS OR DOORWAYS:
-- If necessary: ERECT A BARRIER or LOCK THE DOOR SHUT
-
-NEXT TO POWERLINES:
-- Only carried out if worker is TRAINED AND AUTHORISED and the CORRECT LADDER is being used
-
-IN VERY WET OR WINDY CONDITIONS:
-- Additional safety precautions in place
-
-NEXT TO TRAFFIC AREAS:
-- Working area must be BARRICADED
+Topic: Ladder as entry/exit specifications
 
 WHERE LADDERS USED FOR ENTRY AND EXIT — REQUIREMENTS:
 - Firm, stable WORK PLATFORM free from obstructions to step onto from the ladder
 - Ladder SECURELY FIXED
 - Ladder extends at least 1 METRE ABOVE THE STEPPING-OFF POINT on the working platform
 - FALL PROTECTION provided at the stepping-off point where people access the working platform
-- Alternative: consider having the STAIRCASE INSTALLED AS SOON AS POSSIBLE in stairwells
 
 VISUAL INDICATORS:
-- Ladder as sole access to elevated work area in a stairwell when staircase installation is practicable = flag
+- Ladder not extending at least 1m above stepping-off point = non-compliance
 - Ladder accessing a platform with no fall protection at stepping-off point = non-compliance
-- Ladder not extending 1m above stepping-off point = non-compliance
-- Ladder in doorway without barrier or locked door = flag
 
 ---
 
-CHUNK 29: Ladders — Fixed Ladders
+CHUNK 34: Fixed Ladders — Angle and Fall Arrest Requirements
 Section: CoP s9.2; AS 1657
-Topic: Fixed ladder angle requirements; ladder cages; fall arrest systems for fixed ladders; rescue procedures
+Topic: Fixed ladder angle specifications, ladder cage limitations, fall arrest systems
 
 FIXED LADDERS — DESIGN REQUIREMENTS (AS 1657):
-- Must be installed in accordance with AS 1657: Fixed Platforms, Walkways, Stairways and Ladders — Design, Construction and Installation
 - Angle of slope: must NOT BE LESS THAN 70 DEGREES to the horizontal and NOT GREATER THAN 75 DEGREES to the horizontal
 - In NO CASE should the ladder OVERHANG THE PERSON CLIMBING the ladder
 
 LADDER CAGES:
 - On vertical fixed ladders (>75 degrees to horizontal), ladder cages:
   - Do NOT stop a fall — they FUNNEL A FALL
-  - In some cases, MORE INJURIES can occur from striking protective backguards on the way down
   - May HINDER RESCUES
 - Therefore: fixed ladders with angles EXCEEDING 75 DEGREES to the horizontal should be fitted with a PERMANENT OR TEMPORARY FALL ARREST SYSTEM using anchorage lines or rails
-
-FALL ARREST SYSTEM FOR FIXED LADDERS WHERE ANGLE >75 DEGREES:
-- Must provide a SAFE SYSTEM OF WORK to prevent falls
-- Options: PERMANENT FALL ARREST SYSTEM or FULL BODY HARNESS WITH DOUBLE LANYARD
-
-RESCUE PROCEDURES:
-- A SPECIFICALLY DESIGNED RESCUE PROCEDURE must be developed for use in LADDER CAGE SITUATIONS
-- Training in rescue procedures must occur BEFORE USING THE FIXED LADDER
 
 VISUAL INDICATORS:
 - Fixed ladder with angle >75 degrees relying only on ladder cage with no fall arrest system = non-compliance
 - Fixed ladder with angle <70 degrees or >75 degrees = does not meet AS 1657 requirements
-- No rescue procedure developed or training undertaken for ladder cage situations = non-compliance
 - Fixed ladder overhanding the climber = does not meet AS 1657
 
 ---
 
-CHUNK 30: Ladders — Maintenance and Inspection
+CHUNK 35: Ladder Maintenance — Defects Requiring Removal from Service
 Section: CoP s9.3
-Topic: Inspection frequency; defects requiring removal from service; maintenance requirements
-
-LADDER MAINTENANCE:
-- Ladders must be REGULARLY INSPECTED by a COMPETENT PERSON in accordance with MANUFACTURER'S RECOMMENDATIONS
+Topic: Inspection requirements and specific defects
 
 DEFECTS REQUIRING REMOVAL FROM SERVICE OR REPAIR:
 - FIBREGLASS STILES: cracked, chipped or severely faded with fibres exposed
@@ -1295,51 +798,22 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 31: Emergency Procedures for Falls — Requirements and Considerations
+CHUNK 36: Emergency Procedures — Mandatory Requirements and Planning
 Section: CoP s10; WHS Regulation s80, s42
-Topic: Mandatory emergency and rescue procedures; first aid obligations; suspension intolerance; rescue planning factors
+Topic: Emergency procedure obligations, rescue equipment, first aid, response time
 
 EMERGENCY PROCEDURES — MANDATORY (WHS Regulation s80):
 - PCBU who provides a FALL ARREST SYSTEM as a control measure MUST ESTABLISH EMERGENCY AND RESCUE PROCEDURES
 - Procedures MUST BE TESTED to ensure they are effective
 - Workers must be provided with SUITABLE AND ADEQUATE INFORMATION, INSTRUCTION AND TRAINING in relation to emergency procedures
-- Emergency procedures must be incorporated into the EMERGENCY PLAN required for the workplace under WHS Regulation
+
+RESCUE EQUIPMENT:
+- Equipment must include: emergency rapid response kit with man-made fibre rope per AS/NZS 4142.3
+- Rescue equipment must be kept IN CLOSE PROXIMITY to the work area so it can be used IMMEDIATELY
 
 FIRST AID OBLIGATIONS (WHS Regulation s42):
 - PCBU must ensure workers have access to FIRST AID EQUIPMENT AND FACILITIES
 - Workers must be trained to administer first aid OR workers have ACCESS TO PEOPLE TRAINED IN FIRST AID
-
-TYPICAL INJURIES FROM FALLS:
-- Unconsciousness
-- Blocked airway
-- Impalement
-- Serious head or abdominal injuries
-- Fractures
-- SUSPENSION INTOLERANCE (from being suspended in harness after fall arrest)
-
-EMERGENCY PROCEDURE PLANNING — KEY CONSIDERATIONS:
-- LOCATION OF WORK AREA:
-  - Is it remote or isolated?
-  - How accessible in an emergency?
-  - How far from medical facilities?
-  - Can rescue after arrested fall be provided IMMEDIATELY without relying on emergency services?
-- COMMUNICATIONS:
-  - How can workers at height communicate in an emergency?
-- RESCUE EQUIPMENT:
-  - What emergencies may arise?
-  - Provision of suitable rescue equipment depending on nature of work and control measures used
-  - Equipment must include: emergency rapid response kit with man-made fibre rope per AS/NZS 4142.3
-  - Rescue equipment must be kept IN CLOSE PROXIMITY to the work area so it can be used IMMEDIATELY
-- CAPABILITIES OF RESCUERS:
-  - Properly trained and sufficiently fit?
-  - Capable of using equipment (breathing apparatus, lifelines, firefighting equipment)?
-  - Have emergency procedures been tested?
-- FIRST AID:
-  - First aid available for fall injuries?
-  - Trained first aid officers available?
-- LOCAL EMERGENCY SERVICES (if to be relied on for rescue):
-  - How will ambulance etc. be notified?
-  - What is the likely RESPONSE TIME?
 
 VISUAL INDICATORS:
 - No emergency and rescue procedure on site where fall arrest systems are in use = serious non-compliance
@@ -1350,22 +824,17 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 32: Suspension Intolerance — Recognition and Prevention
+CHUNK 37: Suspension Intolerance — Recognition and Prevention
 Section: CoP s10.1–s10.2
-Topic: What suspension intolerance is; physiological process; prevention; rescue training
+Topic: What suspension intolerance is, urgency of rescue, prevention measures
 
 SUSPENSION INTOLERANCE — DESCRIPTION:
 - Can occur when a person has an ARRESTED FALL and is suspended in an UPRIGHT, VERTICAL POSITION in a harness
-- The lower legs' capacity to store large amounts of blood REDUCES RETURN OF BLOOD TO THE HEART
-- Slows the heart rate → person may FAINT
 - Can lead to RENAL FAILURE and eventually DEATH, depending on person's susceptibility
-- Worsened by HEAT AND DEHYDRATION
 
 URGENCY OF RESCUE:
 - QUICK RESCUE AS SOON AS POSSIBLE is vital
-- Workers must be capable of conducting a rescue AND BE FAMILIAR with on-site RESCUE EQUIPMENT AND PROCEDURES
-- Relevant workers MUST BE TRAINED in rescue procedures
-- Workers must be able to RECOGNISE the risks of suspension intolerance and ACT QUICKLY
+- Rescue process should START IMMEDIATELY
 
 PREVENTING SUSPENSION INTOLERANCE:
 - Workers must NEVER WORK ALONE when using a harness as fall protection
@@ -1375,153 +844,9 @@ PREVENTING SUSPENSION INTOLERANCE:
   - MOVE THEIR LEGS IN THE HARNESS and push against any footholds
   - MOVE LEGS OR BODY TO A NEAR HORIZONTAL POSITION
 
-TRAINING FOR RESCUES (CoP s10.2):
-- Rescue process should START IMMEDIATELY
-- TRAINING FREQUENCY should account for worker's competence and their ability to RETAIN COMPETENCE through regular exposure to equipment and skills
-- Workers must NOT PUT THEMSELVES AT RISK during a rescue
-
 VISUAL INDICATORS:
 - Worker in harness suspended after arrested fall with no rescue commenced promptly = life-threatening emergency
 - Only one person on site with no rescue capability = non-compliance with fall arrest system requirements
 - No harness providing the ability to raise legs to near horizontal for longer rescues = flag for high sites
-- Workers not trained in rescue procedures or unfamiliar with rescue equipment on site = non-compliance
 
 ---
-
-CHUNK 33: Inspection Checklist — Falls Risk Compliance Audit Reference
-Section: CoP s3.2, s4.2, s5.1–s5.3, s7.3, s9.1–s9.3
-Topic: Comprehensive site audit checklist for fall hazard identification and control compliance
-
-SITE LAYOUT AND ENVIRONMENT:
-- Are all floor/roof openings, penetrations and holes covered or barricaded?
-- Are hole covers secure, clearly signed ('DANGER HOLE BENEATH') and capable of withstanding 2 kN (200 kg)?
-- Are all open edges at perimeters, stairwells, mezzanines and roofs protected by compliant guardrails (900–1100 mm top rail, mid-rail, toe-board)?
-- Are surfaces non-slip and free from trip hazards?
-- Do work surface gradients comply with 7 degrees maximum (or 20 degrees for cleated surfaces)?
-- Is grid mesh flooring securely fixed and assembled to manufacturer's specifications?
-- Are no go area signs and barriers clearly visible, securely fixed and supervised?
-
-SCAFFOLDS:
-- Is a handover certificate available for any scaffold from which fall >4m is possible?
-- Has the scaffold been inspected by a competent person within the last 30 days?
-- Does edge protection (handrails, mid-rails, toe-boards) exist at every open edge of every working platform?
-- Is the duty rating of each platform clearly known and not exceeded?
-- Is the scaffold clear of debris, obstructions and unauthorised materials?
-- Are mobile scaffold castors locked whenever workers are on the platform?
-- Is access to mobile scaffold via internal ladder only?
-- Are incomplete scaffolds tagged and protected from unauthorised access?
-- Are prefabricated scaffold components all from the same manufacturer (or mixing approved)?
-
-ELEVATING WORK PLATFORMS:
-- Is the EWP on a solid, level surface appropriate for its design?
-- Are workers in boom lifts/cherry pickers wearing a properly anchored fall arrest harness?
-- Is the harness lanyard attached to the designated anchor point on the EWP (not the handrail)?
-- Does the operator of a boom EWP with boom ≥11m hold the appropriate high risk work licence?
-- Are surface penetrations and obstructions checked before EWP operation?
-- Is appropriate powerline clearance maintained?
-
-FORKLIFT WORK PLATFORMS AND CRANE WORKBOXES:
-- Is the work platform engineer-designed and certified?
-- Is the work platform secured to the forklift carriage with a locking bracket and pin?
-- Are workers remaining within the platform when elevated?
-- Is the safety gate self-closing and kept shut?
-- Is the crane operator at the controls at all times when the workbox is elevated?
-- Are workers in crane workboxes wearing a fall arrest harness and connected to the designated anchorage?
-
-LADDERS:
-- Is the ladder industrial grade with a load rating of at least 120 kg?
-- Has the ladder been inspected and found to be free of defects?
-- Is the ladder set up at a 4:1 slope (for single/extension ladders)?
-- Is the ladder secured at top or bottom?
-- Are workers maintaining three points of contact?
-- Is the ladder extending at least 1m above the stepping-off point (where used for access)?
-- Are workers using tool belts and not carrying tools in hands while climbing?
-- Are workers facing the ladder at all times?
-
-INDIVIDUAL FALL ARREST SYSTEMS:
-- Is the equipment compliant with AS/NZS 1891 (set) and in date?
-- Are all components compatible and approved for use together?
-- Is the maximum free fall distance less than 2m?
-- Is the anchorage point as high as possible?
-- Is the harness correctly fitted and connected to the appropriate attachment point?
-- Is there sufficient clearance below for the system (including shock absorber) to fully deploy?
-- Has the equipment been inspected by a competent person before use?
-- If previously used to arrest a fall — has equipment been re-certified?
-
-ROPE ACCESS:
-- Is a SWMS prepared for rope access construction work involving falls >2m?
-- Are two independently anchored ropes in use for each person?
-- Is supervision in place by a suitably experienced and competent supervisor?
-- Is there an exclusion zone below the working area?
-- Are workers not working alone?
-
-SAFETY NETS AND CATCH PLATFORMS:
-- Are safety nets within 2m of the underside of the working area?
-- Are safety nets sufficiently tensioned and free of debris?
-- Is no hot work occurring directly above safety nets?
-- Are catch platforms planked out fully and within 1m below the work area?
-- Do catch platforms extend at least 2m beyond unprotected edges?
-
-EMERGENCY PROCEDURES:
-- Are emergency and rescue procedures documented and tested?
-- Is rescue equipment kept in close proximity to the work area?
-- Are trained first aid officers accessible?
-- Are workers trained in rescue procedures including recognition of suspension intolerance?
-- Is at least one other person on site capable of rescue whenever a fall arrest system is in use?
-
----
-
-CHUNK 34: Standards and Legislation Reference
-Section: CoP Appendix B
-Topic: All referenced Australian Standards, legislation and codes of practice
-
-AUSTRALIAN STANDARDS REFERENCED:
-- AS/NZS 1576 (set): Scaffolding (including Parts 1–6)
-- AS 1576.3: Prefabricated and tube-and-coupler scaffolding
-- AS 1576.4: Scaffolding — Suspended Scaffolding
-- AS 1576.5: Scaffolding — Prefabricated Splitheads and Trestles
-- AS/NZS 1576.6: Metal Tube-and-Coupler Scaffolding
-- AS/NZS 4576: Guidelines for Scaffolding
-- AS 1657: Fixed Platforms, Walkways, Stairways and Ladders — Design, Construction and Installation
-- AS/NZS 1891 (set): Industrial Fall-Arrest Systems and Devices (Parts 1–4):
-  - AS/NZS 1891.1: Harnesses and Ancillary Equipment
-  - AS/NZS 1891.2: Horizontal Lifeline and Rail Systems (including Supp 1: Prescribed Configurations)
-  - AS/NZS 1891.3: Fall-Arrest Devices
-  - AS/NZS 1891.4: Selection, Use and Maintenance
-- AS/NZS 1892 (set): Portable Ladders (Parts 1, 2, 3, 5):
-  - AS/NZS 1892.1: Metal
-  - AS 1892.2: Timber
-  - AS/NZS 1892.3: Reinforced Plastic
-  - AS/NZS 1892.5: Selection, Safe Use and Care
-- AS 1418.13: Cranes — Part 13: Building Maintenance Units
-- AS 1418.17: Cranes — Part 17: Design and Construction of Workboxes
-- AS 2550.1: Cranes, Hoists and Winches — Safe Use — Part 1: General Requirements
-- AS 2550.10: Cranes, Hoists and Winches — Safe Use — Part 10: Mobile Elevating Work Platforms
-- AS 2550.13: Cranes — Safe Use — Building Maintenance Units
-- AS 2550.16: Cranes — Safe Use — Part 16: Mast Climbing Work Platforms
-- AS 2359.1–2015: Powered Industrial Trucks — Part 1: General Requirements
-- AS 2359.2: Powered Industrial Trucks — Part 2: Operations
-- AS/NZS 4389: Roof Safety Mesh
-- AS/NZS 4488 (set): Industrial Rope Access Systems (Parts 1 and 2):
-  - AS/NZS 4488.1: Specifications
-  - AS/NZS 4488.2: Selection, Use and Maintenance
-- AS/NZS 4994 (set): Temporary Edge Protection (Parts 1–4):
-  - AS/NZS 4994.1: General Requirements
-  - AS/NZS 4994.2: Roof Edge Protection — Installation and Dismantling
-  - AS/NZS 4994.3: Installation and Dismantling for Edges Other than Roof Edges
-  - AS/NZS 4994.4: Perimeter Protection Screens
-- AS/NZS 4142.3: Fibre Ropes — Part 3: Man-Made Fibre Rope for Static Life Rescue Lines
-
-LEGISLATION:
-- Work Health and Safety Act 2011 (Qld)
-- Work Health and Safety Regulation 2011 (Qld) — particularly s78, s79, s80, s225
-
-OTHER CODES OF PRACTICE REFERENCED:
-- How to Manage Work Health and Safety Risks Code of Practice
-- Work Health and Safety Consultation, Cooperation and Coordination Code of Practice
-- Safe Work Method Statement for High Risk Construction Work — Information Sheet
-- First Aid in the Workplace Code of Practice
-- Managing Risks of Plant in the Workplace Code of Practice
-
-KEY WEBSITE:
-- worksafe.qld.gov.au

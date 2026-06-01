@@ -1,162 +1,90 @@
 /* =========================================================
-   SafetyScan — Design Tokens
-   Handoff: paper (light) + ink (dark) themes
+   SafetyScan — Design Tokens v2
+   Concrete · Schibsted Grotesk · Worklog-Ticket · Amber
    ========================================================= */
 
 :root {
-  /* ---- Brand (theme-independent) ---- */
-  --amber:        #F39410;
-  --amber-soft:   #FFB552;
-  --amber-deep:   #C7770B;
-  --amber-glow:   rgba(243, 148, 16, 0.35);
+  /* ---- Brand ---- */
+  --amber:      #F58A22;    /* dark theme amber (default) */
+  --amber-light: #EE801A;   /* light theme amber */
+  --amber-glow: rgba(238, 128, 26, 0.50);
 
-  /* ---- Status (theme-independent) ---- */
-  --status-red:       #E15A4E;
-  --status-red-bg:    rgba(225, 90, 78, 0.12);
-  --status-green:     #4FB07A;
-  --status-green-bg:  rgba(79, 176, 122, 0.14);
-  --status-amber-bg:  rgba(243, 148, 16, 0.14);
+  /* ---- Status ---- */
+  --issue:    #D63A26;
+  --issue-tx: #C5341F;
+  --issue-bg: rgba(214, 58, 38, 0.12);
+  --clear:    #3E8E5A;
+  --clear-bg: rgba(62, 142, 90, 0.12);
+  --pend-bg:  rgba(238, 128, 26, 0.14);
 
-  /* ---- Typography ---- */
-  --ff-sans: var(--font-geist, 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif);
-  --ff-mono: var(--font-geist-mono, 'Geist Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace);
+  /* ---- Dark (Ink) — root defaults ---- */
+  --bg:    #16150F;
+  --surf:  #221F19;
+  --line:  #100E09;
+  --div:   rgba(241, 239, 230, 0.10);
+  --text:  #F1EFE6;
+  --mut:   #948E80;
+  --clear-tx: #67B083;
+  --issue-tx-theme: #E8705C;
+
+  /* ---- Type ---- */
+  --ff:      var(--font-schibsted, 'Schibsted Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  --ff-mono: var(--font-geist-mono, 'JetBrains Mono', ui-monospace, Menlo, monospace);
 
   /* ---- Radius ---- */
-  --r-card:    16px;
-  --r-card-lg: 20px;
-  --r-input:   12px;
+  --r-card:    4px;
+  --r-control: 8px;
   --r-pill:    999px;
-  --r-thumb:   10px;
 
-  /* ---- Spacing (4px scale) ---- */
+  /* ---- Spacing ---- */
   --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
   --s-5: 20px; --s-6: 24px; --s-7: 32px; --s-8: 40px;
 
   /* ---- Shadows ---- */
-  --shadow-card-paper: 0 1px 0 rgba(28,25,20,.08), 0 6px 14px -10px rgba(28,25,20,.18);
-  --shadow-card-ink:   inset 0 0 0 1px rgba(255,250,240,.07);
-  --shadow-fab:        0 12px 28px -8px rgba(243,148,16,.35), 0 6px 16px -4px rgba(0,0,0,.25);
-  --shadow-btn-amber:  0 6px 16px -8px rgba(243,148,16,.35);
+  --shadow-fab: 0 10px 24px -8px rgba(238,128,26,0.55), 0 4px 10px -4px rgba(0,0,0,0.30);
 
-  /* ---- FAB (theme-specific) ---- */
-  --fab-bg:     var(--amber);
-  --fab-icon:   #fff;
-  --fab-shadow: 0 12px 28px -8px rgba(243,148,16,.35), 0 6px 16px -4px rgba(0,0,0,.25);
-
-  /* ---- Raw ink (dark) palette ---- */
-  --ink-bg:       #16181C;
-  --ink-card:     #1E2025;
-  --ink-card-2:   #25272C;
-  --ink-text:     #ECE7DD;
-  --ink-text-mut: #847B6D;
-  --ink-text-dim: #5A554C;
-  --ink-border:   rgba(255, 250, 240, 0.07);
-  --ink-divider:  rgba(255, 250, 240, 0.05);
-  --ink-thumb:    #2A2C32;
-  --ink-thumb-2:  #32343A;
-
-  /* ---- Raw paper (light) palette ---- */
-  --paper-bg:       #F1E7D3;
-  --paper-card:     #FBF4E4;
-  --paper-card-2:   #F7EFDC;
-  --paper-text:     #1B1D22;
-  --paper-text-mut: #7A7263;
-  --paper-text-dim: #ADA293;
-  --paper-border:   rgba(28, 25, 20, 0.08);
-  --paper-divider:  rgba(28, 25, 20, 0.06);
-  --paper-thumb:    #E7DBC4;
-  --paper-thumb-2:  #DFD2B8;
-
-  /* ---- Semantic aliases — defaults to ink (dark) ---- */
-  --bg:       var(--ink-bg);
-  --card:     var(--ink-card);
-  --card-2:   var(--ink-card-2);
-  --text:     var(--ink-text);
-  --text-mut: var(--ink-text-mut);
-  --text-dim: var(--ink-text-dim);
-  --border:   var(--ink-border);
-  --divider:  var(--ink-divider);
-  --thumb:    var(--ink-thumb);
-  --thumb-2:  var(--ink-thumb-2);
-  --shadow-card: var(--shadow-card-ink);
-
-  /* ---- Legacy --ss-* aliases (used by pages not yet rebuilt) ---- */
-  --ss-bg:           var(--ink-bg);
-  --ss-surface:      var(--ink-card);
-  --ss-surface-2:    var(--ink-card-2);
-  --ss-text:         var(--ink-text);
-  --ss-text-mute:    var(--ink-text-mut);
-  --ss-border:       var(--ink-border);
-  --ss-border-strong: rgba(255, 250, 240, 0.18);
+  /* ---- Legacy --ss-* aliases ---- */
+  --ss-bg:           var(--bg);
+  --ss-surface:      var(--surf);
+  --ss-surface-2:    var(--surf);
+  --ss-text:         var(--text);
+  --ss-text-mute:    var(--mut);
+  --ss-border:       var(--div);
+  --ss-border-strong: var(--line);
   --ss-amber:        var(--amber);
 
-  /* ---- Loader-specific ---- */
+  /* ---- Loader ---- */
   --ss-cycle:  2.8s;
-  --ss-base:   #ECE7DD;
+  --ss-base:   #F1EFE6;
   --ss-accent: var(--amber);
 }
 
 /* =========================================================
-   LIGHT THEME  (data-theme="light" or .theme-paper)
+   LIGHT THEME
    ========================================================= */
-[data-theme="light"],
-.theme-paper {
-  --bg:       var(--paper-bg);
-  --card:     var(--paper-card);
-  --card-2:   var(--paper-card-2);
-  --text:     var(--paper-text);
-  --text-mut: var(--paper-text-mut);
-  --text-dim: var(--paper-text-dim);
-  --border:   var(--paper-border);
-  --divider:  var(--paper-divider);
-  --thumb:    var(--paper-thumb);
-  --thumb-2:  var(--paper-thumb-2);
-  --shadow-card: var(--shadow-card-paper);
+[data-theme="light"] {
+  --amber:    #EE801A;
+  --bg:    #E2DED5;
+  --surf:  #FAF8F2;
+  --line:  #1B1A12;
+  --div:   rgba(27, 26, 18, 0.12);
+  --text:  #1B1A12;
+  --mut:   #6F6A5C;
+  --clear-tx: #3E8E5A;
+  --issue-tx-theme: #C5341F;
+  --issue-bg: rgba(214, 58, 38, 0.12);
+  --clear-bg: rgba(62, 142, 90, 0.14);
+  --pend-bg:  rgba(238, 128, 26, 0.14);
 
-  --ss-bg:           var(--paper-bg);
-  --ss-surface:      var(--paper-card);
-  --ss-surface-2:    var(--paper-card-2);
-  --ss-text:         var(--paper-text);
-  --ss-text-mute:    var(--paper-text-mut);
-  --ss-border:       var(--paper-border);
-  --ss-border-strong: rgba(28, 25, 20, 0.20);
-  --ss-base:         #1B1D22;
-}
-
-/* =========================================================
-   DARK THEME  (data-theme="dark" or .theme-ink)
-   ========================================================= */
-[data-theme="dark"],
-.theme-ink {
-  --bg:       var(--ink-bg);
-  --card:     var(--ink-card);
-  --card-2:   var(--ink-card-2);
-  --text:     var(--ink-text);
-  --text-mut: var(--ink-text-mut);
-  --text-dim: var(--ink-text-dim);
-  --border:   var(--ink-border);
-  --divider:  var(--ink-divider);
-  --thumb:    var(--ink-thumb);
-  --thumb-2:  var(--ink-thumb-2);
-  --shadow-card: var(--shadow-card-ink);
-
-  --ss-bg:           var(--ink-bg);
-  --ss-surface:      var(--ink-card);
-  --ss-surface-2:    var(--ink-card-2);
-  --ss-text:         var(--ink-text);
-  --ss-text-mute:    var(--ink-text-mut);
-  --ss-border:       var(--ink-border);
-  --ss-border-strong: rgba(255, 250, 240, 0.18);
-  --ss-base:         #ECE7DD;
-}
-
-/* =========================================================
-   FAB — theme-specific overrides
-   ========================================================= */
-[data-theme="light"],
-.theme-paper {
-  --fab-bg:     var(--paper-text);
-  --fab-shadow: 0 12px 28px -8px rgba(0,0,0,.25), 0 6px 16px -4px rgba(0,0,0,.2);
+  --ss-bg:           var(--bg);
+  --ss-surface:      var(--surf);
+  --ss-surface-2:    var(--surf);
+  --ss-text:         var(--text);
+  --ss-text-mute:    var(--mut);
+  --ss-border:       var(--div);
+  --ss-border-strong: var(--line);
+  --ss-base:         #1B1A12;
+  --shadow-fab: 0 10px 24px -8px rgba(238,128,26,0.55), 0 4px 10px -4px rgba(0,0,0,0.30);
 }
 
 /* =========================================================
@@ -164,28 +92,22 @@
    ========================================================= */
 @keyframes spin  { to { transform: rotate(360deg); } }
 @keyframes ping  { 0%   { transform: scale(0.5); opacity: 0.8; }
-                   100% { transform: scale(1.4); opacity: 0; } }
-@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; }
-                   50%       { transform: scale(1.05); opacity: 0.7; } }
+                   100% { transform: scale(1.45); opacity: 0; } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 /* =========================================================
    PAGE TRANSITIONS
    ========================================================= */
-@keyframes slideUpIn        { from { transform: translateY(100%); opacity: 0; }
-                              to   { transform: translateY(0);     opacity: 1; } }
-@keyframes slideDownOut     { from { transform: translateY(0);     opacity: 1; }
-                              to   { transform: translateY(100%);  opacity: 0; } }
-@keyframes slideInFromRight { from { transform: translateX(100%);  opacity: 0; }
-                              to   { transform: translateX(0);     opacity: 1; } }
-@keyframes slideOutToRight  { from { transform: translateX(0);     opacity: 1; }
-                              to   { transform: translateX(100%);  opacity: 0; } }
+@keyframes slideUpIn        { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes slideDownOut     { from { transform: translateY(0); opacity: 1; } to { transform: translateY(100%); opacity: 0; } }
+@keyframes slideInFromRight { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slideOutToRight  { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
 
 .page-slide-up        { animation: slideUpIn        0.32s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
 .page-slide-down      { animation: slideDownOut     0.28s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
 .page-slide-right-in  { animation: slideInFromRight 0.32s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
 .page-slide-right-out { animation: slideOutToRight  0.28s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
-.page-fade-in         { animation: fadeIn           0.2s  ease                            forwards; }
+.page-fade-in         { animation: fadeIn           0.2s  ease forwards; }
 
 @media (prefers-reduced-motion: reduce) {
   .page-slide-up, .page-slide-down, .page-slide-right-in, .page-slide-right-out {
@@ -194,16 +116,16 @@
 }
 
 /* =========================================================
-   SCAN LOADER  (unchanged — relies on --ss-* aliases above)
+   SCAN LOADER
    ========================================================= */
-.scan-loader { display: inline-block; line-height: 0; color: var(--ss-accent, #F39410); }
+.scan-loader { display: inline-block; line-height: 0; color: var(--ss-accent, var(--amber)); }
 .scan-loader svg { width: 100%; height: 100%; display: block; overflow: visible; }
-.scan-loader.on-amber { --ss-base: #16181C; --ss-accent: #16181C; }
-.scan-loader .ss-shield { fill: none; stroke: var(--ss-base, #ECE7DD); stroke-width: 8; stroke-linejoin: miter; }
-.scan-loader.complete .ss-shield { stroke: var(--ss-accent, #F39410); }
-.scan-loader .ss-brackets { fill: var(--ss-base, #ECE7DD); opacity: 1; }
+.scan-loader.on-amber { --ss-base: #1B1A12; --ss-accent: #1B1A12; }
+.scan-loader .ss-shield { fill: none; stroke: var(--ss-base, #F1EFE6); stroke-width: 8; stroke-linejoin: miter; }
+.scan-loader.complete .ss-shield { stroke: var(--ss-accent, var(--amber)); }
+.scan-loader .ss-brackets { fill: var(--ss-base, #F1EFE6); opacity: 1; }
 .scan-loader.scanning .ss-brackets { opacity: .7; }
-.scan-loader .ss-beam-bar { fill: var(--ss-accent, #F39410); }
+.scan-loader .ss-beam-bar { fill: var(--ss-accent, var(--amber)); }
 .scan-loader .ss-beam-bar.faint { opacity: .4; }
 .scan-loader.scanning .ss-beam-group {
   animation: ss-beam-sweep var(--ss-cycle, 2.8s) cubic-bezier(.45,0,.55,1) infinite;
@@ -218,13 +140,11 @@
   100% { transform: translateY(-70px); opacity: 0; }
 }
 .scan-loader .ss-tick {
-  fill: none; stroke: var(--ss-accent, #F39410);
+  fill: none; stroke: var(--ss-accent, var(--amber));
   stroke-width: 16; stroke-linecap: square; stroke-linejoin: miter;
   stroke-dasharray: 95; stroke-dashoffset: 95;
 }
-.scan-loader.complete .ss-tick {
-  animation: ss-tick-draw .55s cubic-bezier(.2,.7,.3,1.1) forwards;
-}
+.scan-loader.complete .ss-tick { animation: ss-tick-draw .55s cubic-bezier(.2,.7,.3,1.1) forwards; }
 @keyframes ss-tick-draw { to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) {
   .scan-loader.scanning .ss-beam-group { animation: none; opacity: 1; }

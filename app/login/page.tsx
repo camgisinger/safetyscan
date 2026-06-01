@@ -1,31 +1,22 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
 
 type Tab = 'signin' | 'signup'
 
 export default function LoginPage() {
-  const [tab, setTab] = useState<Tab>('signin')
-  const [email, setEmail] = useState('')
+  const [tab, setTab]           = useState<Tab>('signin')
+  const [email, setEmail]       = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [error, setError]       = useState('')
+  const [loading, setLoading]   = useState(false)
   const [signedUp, setSignedUp] = useState(false)
-  const [isDark, setIsDark] = useState(true)
   const router = useRouter()
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    setIsDark(saved !== 'light')
-  }, [])
-
-  const markSrc = isDark ? '/brand/mark-amber.svg' : '/brand/mark-ink.svg'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setError('')
-    setLoading(true)
+    setError(''); setLoading(true)
     try {
       if (tab === 'signin') {
         const { error } = await supabase.auth.signInWithPassword({ email, password })
@@ -36,65 +27,58 @@ export default function LoginPage() {
         if (error) throw error
         setSignedUp(true)
       }
-    } catch (err: any) {
-      setError(err.message || 'Something went wrong')
-    } finally {
-      setLoading(false)
-    }
+    } catch (err: any) { setError(err.message || 'Something went wrong') }
+    finally { setLoading(false) }
   }
 
-  const inputStyle: React.CSSProperties = {
-    display: 'block', width: '100%', height: 50, padding: '0 16px',
-    borderRadius: 12, border: 'none', outline: 'none',
-    background: 'var(--card)',
-    boxShadow: 'inset 0 0 0 1px var(--border)',
-    fontSize: 14, fontFamily: 'var(--ff-sans)', color: 'var(--text)',
-    boxSizing: 'border-box',
+  const inp: React.CSSProperties = {
+    display: 'block', width: '100%', height: 50,
+    padding: '0 16px', borderRadius: 8, border: '1.5px solid var(--line)',
+    background: 'var(--surf)', fontSize: 14, color: 'var(--text)', boxSizing: 'border-box',
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)', display: 'flex', flexDirection: 'column' }}>
-      <style>{`input::placeholder{color:var(--text-dim)}`}</style>
+    <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', flexDirection: 'column' }}>
+      <style>{`@keyframes spin{to{transform:rotate(360deg)}} input::placeholder{color:var(--mut)}`}</style>
+      {/* Hazard stripe at top */}
+      <div style={{ height: 7, background: 'repeating-linear-gradient(-45deg, var(--line) 0 10px, var(--amber) 10px 20px)', flexShrink: 0 }} />
 
-      <div style={{ flex: 1, maxWidth: 420, width: '100%', margin: '0 auto', padding: '40px 26px 32px', display: 'flex', flexDirection: 'column', boxSizing: 'border-box' }}>
-
+      <div style={{ flex: 1, maxWidth: 420, width: '100%', margin: '0 auto', padding: '32px 26px 32px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
         {signedUp ? (
           <div style={{ textAlign: 'center', paddingTop: 60 }}>
-            <div style={{ fontSize: 40, marginBottom: 16 }}>📬</div>
+            <div style={{ fontSize: 36, marginBottom: 16 }}>📬</div>
             <div style={{ fontSize: 20, fontWeight: 600, color: 'var(--text)', marginBottom: 8 }}>Check your email</div>
-            <div style={{ fontSize: 13, color: 'var(--text-mut)', lineHeight: 1.6, marginBottom: 24 }}>
-              We sent a confirmation link to <strong>{email}</strong>. Click it to activate your account.
-            </div>
+            <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.6, marginBottom: 24 }}>We sent a confirmation link to <strong>{email}</strong>.</div>
             <button onClick={() => { setTab('signin'); setSignedUp(false) }}
-              style={{ height: 44, padding: '0 24px', background: 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)' }}>
+              style={{ height: 46, padding: '0 24px', background: 'var(--amber)', border: '1.5px solid var(--line)', borderRadius: 8, color: '#1B1A12', fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
               Back to sign in
             </button>
           </div>
         ) : (
           <>
             {/* Brand */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 22 }}>
-              <div style={{ width: 44, height: 44, borderRadius: 14, background: 'var(--card)', boxShadow: '0 0 0 1px var(--border)', display: 'grid', placeItems: 'center' }}>
-                <img src={markSrc} alt="" style={{ width: 32, height: 32 }}/>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 28 }}>
+              <div style={{ width: 40, height: 40, borderRadius: 10, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
+                <img src="/brand/mark-ink.svg" alt="" style={{ width: 28, height: 28 }}/>
               </div>
-              <div style={{ fontSize: 24, fontWeight: 700, letterSpacing: '-0.01em', color: 'var(--text)' }}>
-                Safety<span style={{ color: 'var(--amber)' }}>Scan</span>
-              </div>
+              <span style={{ fontWeight: 600, fontSize: 24, letterSpacing: '-0.02em', color: 'var(--text)' }}>
+                Safety<b style={{ color: 'var(--amber)' }}>Scan</b>
+              </span>
             </div>
 
-            {/* Headline */}
-            <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.15, marginBottom: 6, color: 'var(--text)' }}>
+            {/* Heading */}
+            <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: '-0.025em', lineHeight: 1.15, marginBottom: 6, color: 'var(--text)' }}>
               Walk the site.<br/>Catch the gap.
             </div>
-            <div style={{ fontSize: 13, color: 'var(--text-mut)', marginBottom: 20, lineHeight: 1.5 }}>
+            <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', marginBottom: 24, lineHeight: 1.5 }}>
               QLD construction compliance in your pocket.
             </div>
 
-            {/* Tab toggle */}
-            <div style={{ display: 'flex', padding: 4, borderRadius: 999, background: 'var(--card-2)', marginBottom: 28 }}>
+            {/* Segmented toggle */}
+            <div style={{ display: 'flex', padding: 3, borderRadius: 999, background: 'var(--surf)', border: '1.5px solid var(--line)', marginBottom: 24 }}>
               {(['signin', 'signup'] as Tab[]).map(t => (
                 <button key={t} onClick={() => { setTab(t); setError('') }}
-                  style={{ flex: 1, textAlign: 'center', padding: '10px 0', borderRadius: 999, fontSize: 13, fontWeight: 500, border: 'none', cursor: 'pointer', fontFamily: 'var(--ff-sans)', background: tab === t ? 'var(--amber)' : 'transparent', color: tab === t ? '#fff' : 'var(--text-mut)', transition: 'all 0.15s' }}>
+                  style={{ flex: 1, textAlign: 'center', height: 38, borderRadius: 999, fontSize: 13, fontWeight: 600, border: 'none', cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.15s', background: tab === t ? 'var(--amber)' : 'transparent', color: tab === t ? '#1B1A12' : 'var(--mut)' }}>
                   {t === 'signin' ? 'Sign in' : 'Create account'}
                 </button>
               ))}
@@ -102,38 +86,41 @@ export default function LoginPage() {
 
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <div>
-                <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 6, paddingLeft: 2 }}>Email</div>
-                <input type="email" value={email} onChange={e => setEmail(e.target.value)} required placeholder="you@company.com.au" style={inputStyle}/>
+                <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>Email</div>
+                <input type="email" value={email} onChange={e => setEmail(e.target.value)} required placeholder="you@company.com.au" style={inp}/>
               </div>
               <div>
-                <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 6, paddingLeft: 2 }}>Password</div>
-                <input type="password" value={password} onChange={e => setPassword(e.target.value)} required placeholder="••••••••" minLength={6} style={inputStyle}/>
+                <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>Password</div>
+                <input type="password" value={password} onChange={e => setPassword(e.target.value)} required placeholder="••••••••" minLength={6} style={inp}/>
               </div>
 
               {error && (
-                <div style={{ padding: '10px 12px', background: 'var(--status-red-bg)', borderRadius: 10, fontSize: 12, color: 'var(--status-red)', fontFamily: 'var(--ff-mono)', letterSpacing: '0.04em' }}>
-                  {error}
-                </div>
+                <div style={{ padding: '10px 14px', background: 'var(--issue-bg)', border: '1.5px solid var(--issue)', borderRadius: 6, fontSize: 12, fontWeight: 500, color: 'var(--issue-tx-theme)', fontFamily: 'var(--ff-mono)', letterSpacing: '0.04em' }}>{error}</div>
               )}
 
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, fontWeight: 500, color: 'var(--text)' }}>
+                  <div style={{ width: 16, height: 16, borderRadius: 4, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none"><path d="M1 3L4 6L9 1" stroke="#1B1A12" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                  Keep me signed in
+                </div>
+                <button type="button" style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', fontSize: 12.5, fontWeight: 500, color: 'var(--amber)' }}>Forgot?</button>
+              </div>
+
               <button type="submit" disabled={loading}
-                style={{ height: 50, background: loading ? 'rgba(243,148,16,0.5)' : 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 14, fontWeight: 600, cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', marginTop: 6, boxShadow: loading ? 'none' : 'var(--shadow-btn-amber)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-                {loading ? (
-                  <>
-                    <span style={{ width: 16, height: 16, border: '2px solid rgba(255,255,255,0.4)', borderTopColor: '#fff', borderRadius: '50%', animation: 'spin 0.7s linear infinite', display: 'inline-block' }}/>
-                    Please wait…
-                  </>
-                ) : tab === 'signin' ? 'Sign in' : 'Create account'}
+                style={{ height: 50, background: loading ? 'rgba(238,128,26,0.5)' : 'var(--amber)', border: '1.5px solid var(--line)', borderRadius: 8, color: '#1B1A12', fontSize: 13.5, fontWeight: 600, cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
+                {loading ? <><span style={{ width: 16, height: 16, border: '2px solid rgba(27,26,18,0.3)', borderTopColor: '#1B1A12', borderRadius: '50%', animation: 'spin 0.7s linear infinite', display: 'inline-block' }}/> Please wait…</> : tab === 'signin' ? 'Sign in' : 'Create account'}
               </button>
             </form>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '22px 0' }}>
-              <div style={{ flex: 1, height: 1, background: 'var(--divider)' }}/>
-              <span style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-dim)' }}>OR</span>
-              <div style={{ flex: 1, height: 1, background: 'var(--divider)' }}/>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '20px 0' }}>
+              <div style={{ flex: 1, height: 1.5, background: 'var(--div)' }}/>
+              <span style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--mut)' }}>or</span>
+              <div style={{ flex: 1, height: 1.5, background: 'var(--div)' }}/>
             </div>
 
-            <button style={{ height: 50, background: 'var(--card)', border: 'none', borderRadius: 999, fontSize: 14, fontWeight: 500, cursor: 'pointer', fontFamily: 'var(--ff-sans)', color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, boxShadow: '0 0 0 1px var(--border)' }}>
+            <button style={{ height: 50, background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 8, fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
               <svg width="16" height="16" viewBox="0 0 18 18">
                 <path d="M17.5 9.2c0-.7-.06-1.2-.15-1.7H9v3.4h4.7c-.1.9-.6 2.2-1.9 3l-.02.12 2.78 2.15.2.02c1.8-1.66 2.74-4.1 2.74-7z" fill="#4285F4"/>
                 <path d="M9 18c2.5 0 4.6-.83 6.16-2.26l-2.94-2.28c-.8.55-1.84.94-3.22.94-2.5 0-4.6-1.62-5.35-3.86l-.11.01-2.9 2.24-.04.1A9 9 0 0 0 9 18z" fill="#34A853"/>
@@ -143,13 +130,12 @@ export default function LoginPage() {
               Continue with Google
             </button>
 
-            <div style={{ marginTop: 'auto', textAlign: 'center', fontSize: 11.5, color: 'var(--text-mut)', paddingTop: 24, opacity: 0.55, lineHeight: 1.5 }}>
+            <div style={{ marginTop: 'auto', textAlign: 'center', fontSize: 11.5, fontWeight: 500, color: 'var(--mut)', paddingTop: 20, opacity: 0.7 }}>
               By signing in you agree to our Terms · Privacy
             </div>
           </>
         )}
       </div>
-      <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
     </div>
   )
 }

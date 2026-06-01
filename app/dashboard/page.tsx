@@ -4,56 +4,60 @@ import { useRouter } from 'next/navigation'
 import { supabase, Site, Scan } from '../../lib/supabase'
 import AppHeader from '../../components/AppHeader'
 
-function Thumb({ url }: { url?: string | null }) {
-  if (url) return <img src={url} alt="" style={{ width: 44, height: 44, borderRadius: 10, objectFit: 'cover', flexShrink: 0 }}/>
-  return (
-    <div style={{
-      width: 44, height: 44, borderRadius: 10, flexShrink: 0,
-      backgroundColor: 'var(--thumb)',
-      backgroundImage: 'repeating-linear-gradient(135deg, var(--thumb-2) 0 1px, transparent 1px 8px)',
-      backgroundSize: '8px 8px',
-    }}/>
-  )
+// Shared helpers
+function statusBar(status: string) {
+  return status === 'pass' ? '#3E8E5A' : status === 'fail' ? '#D63A26' : 'var(--amber)'
+}
+function statusLabel(status: string, count?: number) {
+  if (status === 'pass') return 'Clear'
+  if (status === 'fail') return count ? `${count} issue${count !== 1 ? 's' : ''}` : 'Issues'
+  return 'Pending'
+}
+function statusColor(status: string) {
+  if (status === 'pass') return 'var(--clear-tx)'
+  if (status === 'fail') return 'var(--issue-tx-theme)'
+  return 'var(--amber)'
 }
 
-function Badge({ status, count }: { status: string; count?: number }) {
-  const cfg: Record<string, { bg: string; color: string; dot: string; label: string }> = {
-    pass:      { bg: 'var(--status-green-bg)', color: 'var(--status-green)', dot: 'var(--status-green)', label: 'Clear' },
-    fail:      { bg: 'var(--status-red-bg)',   color: 'var(--status-red)',   dot: 'var(--status-red)',   label: count ? `${count} issue${count !== 1 ? 's' : ''}` : 'Issues' },
-    uncertain: { bg: 'var(--status-amber-bg)', color: 'var(--amber)',        dot: 'var(--amber)',        label: 'Pending' },
+function Thumb({ url }: { url?: string | null }) {
+  const bg = url ? undefined : {
+    backgroundColor: 'var(--surf)',
+    backgroundImage: 'repeating-linear-gradient(135deg, var(--div) 0 1.5px, transparent 1.5px 8px)',
+    backgroundSize: '8px 8px',
   }
-  const c = cfg[status] || cfg.uncertain
+  if (url) return (
+    <img src={url} alt="" style={{ width: 46, alignSelf: 'stretch', objectFit: 'cover', display: 'block', borderRight: '1.5px solid var(--line)', flexShrink: 0 }}/>
+  )
+  return <div style={{ width: 46, alignSelf: 'stretch', borderRight: '1.5px solid var(--line)', flexShrink: 0, ...bg }} />
+}
+
+function ActivityTicket({ scan, siteName, onClick }: { scan: Scan; siteName?: string; onClick: () => void }) {
+  const photoUrl = scan.photo_urls?.[0] || scan.photo_url
+  const issueCount = (scan.findings || []).filter((f: any) => f.type === 'critical').length
+  const d = new Date(scan.created_at)
+  const meta = [siteName?.toUpperCase(), d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' }).toUpperCase(), d.toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit', hour12: true }).toUpperCase().replace(' ', '')].filter(Boolean).join(' · ')
   return (
-    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11, fontWeight: 500, padding: '4px 10px 4px 8px', borderRadius: 999, background: c.bg, color: c.color, flexShrink: 0 }}>
-      <span style={{ width: 6, height: 6, borderRadius: '50%', background: c.dot, flexShrink: 0 }}/>
-      {c.label}
+    <div onClick={onClick} style={{ display: 'flex', alignItems: 'stretch', background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 4, overflow: 'hidden', cursor: 'pointer', marginBottom: 8 }}>
+      <div style={{ width: 5, flexShrink: 0, background: statusBar(scan.status) }} />
+      <Thumb url={photoUrl} />
+      <div style={{ flex: 1, padding: '11px 13px', minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div style={{ fontWeight: 600, fontSize: 15, lineHeight: 1.1, letterSpacing: '-0.02em', color: 'var(--text)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{scan.work_type || 'Unnamed scan'}</div>
+        <div style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--mut)', marginTop: 4 }}>{meta}</div>
+      </div>
+      <div style={{ alignSelf: 'center', paddingRight: 13, textAlign: 'right', flexShrink: 0 }}>
+        <div style={{ fontWeight: 600, fontSize: 12.5, letterSpacing: '-0.005em', color: statusColor(scan.status) }}>
+          {statusLabel(scan.status, issueCount || undefined)}
+        </div>
+      </div>
     </div>
   )
-}
-
-function formatMeta(createdAt: string, siteName?: string) {
-  const d = new Date(createdAt)
-  const day = d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' }).toUpperCase()
-  const time = d.toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit', hour12: true }).toUpperCase().replace(' ', '')
-  return siteName ? `${siteName.toUpperCase()} · ${day} · ${time}` : `${day} · ${time}`
 }
 
 export default function DashboardPage() {
   const [scans, setScans] = useState<Scan[]>([])
   const [sites, setSites] = useState<Site[]>([])
   const [loading, setLoading] = useState(true)
-  const [isDark, setIsDark] = useState(true)
   const router = useRouter()
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    setIsDark(saved !== 'light')
-    const observer = new MutationObserver(() => {
-      setIsDark(document.documentElement.getAttribute('data-theme') !== 'light')
-    })
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
-    return () => observer.disconnect()
-  }, [])
 
   useEffect(() => {
     const init = async () => {
@@ -72,89 +76,70 @@ export default function DashboardPage() {
 
   if (loading) return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ width: 32, height: 32, border: '2.5px solid var(--border)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
+      <div style={{ width: 32, height: 32, border: '2px solid var(--line)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>
     </div>
   )
 
-  // This-month stats
   const now = new Date()
   const monthStart = new Date(now.getFullYear(), now.getMonth(), 1)
-  const thisMonth = scans.filter(s => new Date(s.created_at) >= monthStart)
+  const thisMonth  = scans.filter(s => new Date(s.created_at) >= monthStart)
   const monthIssues = thisMonth.filter(s => s.status === 'fail').length
   const activeSites = sites.filter(s => !s.archived).length
-  const recentActivity = scans.slice(0, 10)
+  const recent = scans.slice(0, 8)
 
   return (
-    <div className="page-fade-in" style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)', willChange: 'opacity' }}>
+    <div className="page-fade-in" style={{ minHeight: '100vh', background: 'var(--bg)', paddingBottom: 96 }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
       <AppHeader />
-      <main style={{ maxWidth: 600, margin: '0 auto', padding: '0 18px 96px' }}>
 
-        {/* Stats card */}
-        <div style={{ background: 'var(--card)', borderRadius: 16, padding: 16, boxShadow: 'var(--shadow-card)' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 2 }}>
-            <span style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)' }}>This month</span>
-            <button onClick={() => router.push('/scans')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--amber)', fontSize: 12.5, fontWeight: 500, fontFamily: 'var(--ff-sans)', display: 'flex', alignItems: 'center', gap: 4, padding: 0 }}>View all <span>→</span></button>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, paddingTop: 14 }}>
-            {[
-              { num: thisMonth.length, label: 'Scans', amber: false },
-              { num: activeSites,      label: 'Sites', amber: false },
-              { num: monthIssues,      label: 'Issues', amber: true },
-            ].map((s, i) => (
-              <div key={i}>
-                <div style={{ fontSize: 32, fontWeight: 600, lineHeight: 1, letterSpacing: '-0.02em', color: s.amber ? 'var(--amber)' : 'var(--text)' }}>{s.num}</div>
-                <div style={{ marginTop: 6, fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)' }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
+      <div style={{ padding: '0 18px' }}>
+        {/* Stats strip */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 4, overflow: 'hidden' }}>
+          {[
+            { n: thisMonth.length, l: 'Scans', amber: false },
+            { n: activeSites,      l: 'Sites', amber: false },
+            { n: monthIssues,      l: 'Issues', amber: true },
+          ].map((s, i) => (
+            <div key={i} style={{ padding: '12px 14px', borderRight: i < 2 ? '1.5px solid var(--div)' : 'none' }}>
+              <div style={{ fontWeight: 700, fontSize: 28, lineHeight: 1, letterSpacing: '-0.02em', color: s.amber ? 'var(--amber)' : 'var(--text)', fontVariantNumeric: 'tabular-nums' }}>{s.n}</div>
+              <div style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--mut)', marginTop: 6 }}>{s.l}</div>
+            </div>
+          ))}
         </div>
 
         {/* Guide banner */}
-        <div onClick={() => router.push('/guide')} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px', borderRadius: 16, background: 'var(--card)', boxShadow: 'var(--shadow-card)', marginTop: 12, cursor: 'pointer' }}>
-          <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'var(--card-2)', boxShadow: '0 0 0 1px var(--border)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-            <img src={isDark ? '/brand/mark-amber.svg' : '/brand/mark-ink.svg'} alt="" style={{ width: 22, height: 22 }}/>
+        <div onClick={() => router.push('/guide')}
+          style={{ display: 'flex', alignItems: 'center', gap: 13, padding: '13px 14px', background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 4, marginTop: 8, cursor: 'pointer' }}>
+          <div style={{ width: 34, height: 34, borderRadius: 4, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
+            <img src="/brand/mark-ink.svg" alt="" style={{ width: 24, height: 24 }}/>
           </div>
-          <div style={{ flex: 1, fontWeight: 600, fontSize: 14.5, color: 'var(--text)' }}>SafetyScan Guide</div>
-          <span style={{ opacity: 0.5, fontSize: 16 }}>→</span>
+          <div style={{ flex: 1, fontWeight: 600, fontSize: 15.5, letterSpacing: '-0.02em', color: 'var(--text)' }}>SafetyScan Guide</div>
+          <span style={{ color: 'var(--mut)', fontSize: 17 }}>›</span>
         </div>
 
-        {/* Recent activity */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 4px 10px' }}>
-          <span style={{ fontFamily: 'var(--ff-mono)', fontSize: 10.5, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'var(--text-mut)' }}>Recent activity</span>
-          <button onClick={() => router.push('/scans')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--amber)', fontSize: 12.5, fontWeight: 500, fontFamily: 'var(--ff-sans)', display: 'flex', alignItems: 'center', gap: 4, padding: 0 }}>View all <span>→</span></button>
+        {/* Section header */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '22px 2px 11px' }}>
+          <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }}/>
+          <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)' }}>Recent activity</span>
+          <button onClick={() => router.push('/scans')} style={{ marginLeft: 'auto', fontWeight: 500, fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--amber)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>View all</button>
         </div>
 
-        {recentActivity.length === 0 ? (
-          <div style={{ textAlign: 'center', padding: '48px 20px', color: 'var(--text-mut)' }}>
-            <div style={{ fontSize: 32, marginBottom: 12 }}>📷</div>
-            <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--text)', marginBottom: 6 }}>No scans yet</div>
-            <div style={{ fontSize: 13 }}>Tap + to run your first compliance scan</div>
+        {recent.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '48px 20px', color: 'var(--mut)' }}>
+            <div style={{ fontSize: 13, fontWeight: 500 }}>No scans yet — tap + to start</div>
           </div>
         ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {recentActivity.map(scan => {
-              const photoUrl = scan.photo_urls?.[0] || scan.photo_url
-              const siteName = sites.find(s => s.id === scan.site_id)?.name
-              const issueCount = (scan.findings || []).filter((f: any) => f.type === 'critical').length
-              return (
-                <div key={scan.id} onClick={() => router.push(`/scan/${scan.id}`)}
-                  style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderRadius: 16, background: 'var(--card)', boxShadow: 'var(--shadow-card)', cursor: 'pointer' }}>
-                  <Thumb url={photoUrl}/>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontWeight: 600, fontSize: 14.5, color: 'var(--text)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{scan.work_type || 'Unnamed scan'}</div>
-                    <div style={{ marginTop: 2, fontFamily: 'var(--ff-mono)', fontSize: 10.5, letterSpacing: '0.06em', color: 'var(--text-mut)', textTransform: 'uppercase', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                      {formatMeta(scan.created_at, siteName)}
-                    </div>
-                  </div>
-                  <Badge status={scan.status} count={issueCount || undefined}/>
-                </div>
-              )
-            })}
+          <div>
+            {recent.map(scan => (
+              <ActivityTicket key={scan.id} scan={scan}
+                siteName={sites.find(s => s.id === scan.site_id)?.name}
+                onClick={() => router.push(`/scan/${scan.id}`)}
+              />
+            ))}
           </div>
         )}
-      </main>
+      </div>
     </div>
   )
 }

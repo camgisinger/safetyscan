@@ -9,356 +9,225 @@ CLAUSE_PREFIX: s
 
 ---
 
-CHUNK 1: High Risk Construction Work — Definition
-Section: s291
-Topic: What counts as high risk construction work requiring a SWMS
+CHUNK 1: High Risk Construction Work — Fall and Excavation Thresholds
+Section: s291(a), s291(g)
+Topic: Visible fall and excavation depth triggers for high risk work classification
 
-High risk construction work means construction work that:
-(a) Involves a risk of a person FALLING MORE THAN 2m
-(b) Is carried out on a telecommunication tower
-(c) Involves demolition of a load-bearing element or element related to structural integrity
-(d) Involves, or is likely to involve, disturbance of ASBESTOS
-(e) Involves structural alterations or repairs that require TEMPORARY SUPPORT to prevent collapse
-(f) Is carried out in or near a CONFINED SPACE
-(g) Is carried out in or near a SHAFT OR TRENCH with an excavated depth GREATER THAN 1.5m, or a tunnel
-(h) Involves the use of EXPLOSIVES
-(i) Is carried out on or near PRESSURISED GAS DISTRIBUTION MAINS or piping
-(j) Is carried out on or near CHEMICAL, FUEL OR REFRIGERANT LINES
-(k) Is carried out on or near ENERGISED ELECTRICAL INSTALLATIONS OR SERVICES
-(l) Is carried out in an area that may have a CONTAMINATED OR FLAMMABLE ATMOSPHERE
-(m) Involves TILT-UP OR PRECAST CONCRETE
-(n) Is carried out on, in or adjacent to a ROAD, RAILWAY, SHIPPING LANE OR TRAFFIC CORRIDOR in use by traffic
-(o) Is carried out in an area with MOVEMENT OF POWERED MOBILE PLANT
-(p) Is carried out in ARTIFICIAL EXTREMES OF TEMPERATURE
-(q) Is carried out in or near WATER OR LIQUID involving a risk of drowning
-(r) Involves DIVING WORK
-
-A CONSTRUCTION PROJECT means construction work where the cost is $250,000 or more.
+HIGH RISK WORK THRESHOLDS (KEY MEASUREMENTS):
+- Fall risk: GREATER THAN 2m
+- Shaft or trench: excavated depth GREATER THAN 1.5m
 
 VISUAL INDICATORS:
-- Any work at height >2m without edge protection or fall arrest = non-compliant high risk work
-- Excavation >1.5m deep without barriers = high risk work requiring SWMS
-- Work near energised electrical services without isolation evidence = high risk work
+- Work at height >2m without edge protection or fall arrest = high risk work
+- Excavation >1.5m deep without barriers or shoring = high risk work
+- Workers on scaffold/roof/slab edge >2m without visible fall controls = flag
+- Open trench visibly deeper than 1.5m without support = serious non-compliance
+
+---
+
+CHUNK 2: High Risk Construction Work — Electrical and Plant Proximity
+Section: s291(k), s291(o)
+Topic: Work near energised services and mobile plant movement zones
+
+HIGH RISK WORK includes:
+- Work on or near ENERGISED ELECTRICAL INSTALLATIONS OR SERVICES
+- Work in area with MOVEMENT OF POWERED MOBILE PLANT
+
+VISUAL INDICATORS:
+- Work near overhead powerlines without isolation evidence = high risk work
+- Excavation near underground services without service location = flag
+- Mobile plant (excavators, loaders, trucks) operating in area without exclusion zones = high risk work
+- Workers on foot in mobile plant operating zone = serious non-compliance risk
+
+---
+
+CHUNK 3: High Risk Construction Work — Asbestos and Demolition
+Section: s291(c), s291(d)
+Topic: Demolition of structural elements and asbestos disturbance
+
+HIGH RISK WORK includes:
+- Demolition of LOAD-BEARING ELEMENT or element related to structural integrity
+- Work involving or likely to involve disturbance of ASBESTOS
+
+VISUAL INDICATORS:
+- Demolition of structural walls/columns/beams without engineering plan = high risk work
 - Asbestos work without licensed removalist signage = potential non-compliance
-- Mobile plant operating in area without exclusion zones = high risk work issue
+- Friable asbestos removal without Class A licence signage = serious non-compliance
+- Asbestos barrier/exclusion zone signage visible = positive indicator
 
 ---
 
-CHUNK 2: Safe Work Method Statements (SWMS)
-Section: s299, s300, s301, s302, s303
-Topic: SWMS requirements for high risk construction work
+CHUNK 4: Principal Contractor Signage — Mandatory Display
+Section: s308
+Topic: Required signage at construction projects $250,000+
 
-REQUIREMENT: A SWMS must be prepared BEFORE high risk construction work commences.
+MANDATORY SIGNAGE must show:
+- Principal contractor's NAME
+- TELEPHONE CONTACT NUMBERS (including after-hours number)
+- LOCATION OF SITE OFFICE (if any)
+- Must be CLEARLY VISIBLE FROM OUTSIDE the workplace
 
-A SWMS must:
-(a) Identify the work that is high risk construction work
-(b) State hazards and risks associated with those hazards
-(c) Describe the measures to be implemented to control the risks
-(d) Describe how control measures are to be implemented, monitored and reviewed
-(e) Be readily accessible and understandable to the persons who use it
-
-IMPORTANT: If the SWMS for work involving a fall risk >2m states that ONLY administrative controls or PPE will be used, the SWMS must describe ALL control measures considered and why physical controls were ruled out.
-
-COMPLIANCE REQUIREMENTS:
-- High risk work must be carried out IN ACCORDANCE with the SWMS — if not, work must stop immediately
-- A copy of the SWMS must be given to the principal contractor before work commences
-- The SWMS must be kept until the high risk construction work is completed
-- If a notifiable incident occurs, the SWMS must be kept for at least 2 years after the incident
-
-VISUAL INDICATORS OF COMPLIANCE:
-- SWMS should be visible/accessible on site for workers doing high risk work
-- Work being carried out differently from any visible SWMS = non-compliance
-- No SWMS available for high risk work = serious non-compliance
-
----
-
-CHUNK 3: WHS Management Plan — Principal Contractor Duties
-Section: s308, s309, s310
-Topic: Principal contractor obligations for construction projects ($250,000+)
-
-PRINCIPAL CONTRACTOR SIGNAGE (s308) — MANDATORY:
-Signs must be installed that:
-(a) Show the principal contractor's NAME and TELEPHONE CONTACT NUMBERS (including after-hours number)
-(b) Show the LOCATION OF THE SITE OFFICE (if any)
-(c) Are CLEARLY VISIBLE FROM OUTSIDE the workplace
-
-This is a hard legal requirement — if the sign is missing, it is a direct offence.
-
-WHS MANAGEMENT PLAN (s309) must include:
-(a) Names, positions and health and safety responsibilities of all persons with specific WHS roles
-(b) Arrangements for consultation, cooperation and coordination between PCBUs
-(c) Arrangements for managing WHS incidents
-(d) Site-specific health and safety rules and how all persons are informed of them
-(e) Arrangements for collecting, assessing, monitoring and reviewing SWMS
-
-VISUAL INDICATORS OF COMPLIANCE:
-- Principal contractor signage clearly visible from outside site = compliant
-- Missing PC sign = direct offence under s308
-- No site office or contact number visible = non-compliant
-- Safety notice board visible on site = positive indicator of WHS management plan
-
----
-
-CHUNK 4: Falls from Height — General Requirements
-Section: s78, s79, s80
-Topic: Managing the risk of falls at any workplace
-
-GENERAL DUTY (s78):
-A PCBU must manage risks associated with a fall by a person from one level to another that is reasonably likely to cause injury. This includes falls:
-- In or on an elevated workplace
-- In the vicinity of an opening through which a person could fall
-- In the vicinity of an edge over which a person could fall
-- On a surface through which a person could fall
-
-PREFERRED APPROACH — work on the ground or solid construction (s78(3)).
-
-"SOLID CONSTRUCTION" means an area that has:
-- A surface structurally capable of supporting all persons and things on it
-- BARRIERS around its perimeter and any openings to prevent a fall
-- An even and readily negotiable surface and gradient
-- A safe means of entry and exit
-
-HIERARCHY FOR FALL RISK CONTROL (s79) — in order of preference:
-1. FALL PREVENTION DEVICE (first choice, if reasonably practicable):
-   - Secure fence
-   - Edge protection
-   - Working platforms
-   - Covers over openings
-2. WORK POSITIONING SYSTEM (if fall prevention not practicable)
-3. FALL ARREST SYSTEM (last resort — harness, safety nets)
-
-If a fall arrest system is used, EMERGENCY AND RESCUE PROCEDURES must be established and tested (s80).
+This is a direct legal requirement — missing sign = offence.
 
 VISUAL INDICATORS:
-- Work at height without any fall prevention = serious non-compliance
-- Edge protection present = compliant (subject to specification checks below)
+- Principal contractor sign clearly visible from street/public area = compliant
+- No PC sign visible from outside site = direct non-compliance under s308
+- Sign present but illegible or faded = non-compliant
+- Sign showing only company name without contact numbers = non-compliant
+
+---
+
+CHUNK 5: Falls — Construction Work Thresholds (KEY MEASUREMENTS)
+Section: s306C, s306D
+Topic: Two-tier fall risk thresholds triggering different control requirements
+
+LOWER THRESHOLD (s306C) — hazard ID and risk assessment required:
+- Housing construction: fall risk LESS THAN 3m
+- Other construction: fall risk LESS THAN 2m
+- Roof work: slope NOT OVER 26°
+
+HIGHER THRESHOLD (s306D) — MANDATORY fall prevention or arrest controls:
+- Housing construction: fall risk AT LEAST 3m
+- Other construction: fall risk AT LEAST 2m
+- Roof work: slope OVER 26°
+
+At higher threshold, MUST use EITHER:
+(a) Fall PREVENTION (edge protection, covers, travel restraint); OR
+(b) Fall ARREST (harness, safety net, arresting platform)
+
+VISUAL INDICATORS:
+- Work at ≥2m (or ≥3m housing) without any fall control = serious non-compliance
+- Edge protection present at perimeter = compliant (check measurements below)
 - Harness worn without visible anchor point = potentially non-compliant
-- Opening in floor/roof without cover or barrier = non-compliant
-- Ladder as only means of access to elevated work area = check if appropriate
+- Roof slope visibly steep (>26°) without fall controls = non-compliant
 
 ---
 
-CHUNK 5: Falls — Construction Work Specific Requirements (KEY MEASUREMENTS)
-Section: s306C, s306D, s306E
-Topic: Specific fall control requirements with exact measurements
+CHUNK 6: Edge Protection Specifications (KEY MEASUREMENTS)
+Section: s306E
+Topic: Exact dimensions for compliant edge protection
 
-TWO THRESHOLD LEVELS:
+TOP RAIL HEIGHT:
+- At least 900mm above work surface
 
-LOWER THRESHOLD — s306C applies when:
-- Housing construction work with fall risk LESS THAN 3m; OR
-- Other construction work with fall risk LESS THAN 2m; OR
-- Construction work on a roof with slope NOT OVER 26°
+BOTTOM RAIL OR TOE BOARD:
+- At least 150mm but NOT OVER 250mm above base surface; OR
+- Toe board at least 150mm high
 
-At this lower threshold: hazards must be IDENTIFIED and risks ASSESSED before work starts. Control measures must be used.
+GAP BETWEEN RAILS:
+- NOT OVER 450mm between any rail and nearest rail
 
-HIGHER THRESHOLD — s306D applies when:
-- Housing construction work with fall risk AT LEAST 3m; OR
-- Other construction work with fall risk AT LEAST 2m; OR
-- Construction work on a roof with slope OVER 26°
+SLOPES OVER 26°:
+- Sturdy mesh or sheeting at least 900mm high from base
 
-At this higher threshold: MANDATORY control measures BEFORE work starts to either:
-(a) PREVENT a person falling any distance (edge protection, fall protection cover, travel restraint system); OR
-(b) If prevention not practicable — ARREST the fall (fall arresting platform, fall-arrest harness, industrial safety net)
+Edge protection must withstand force of person falling against it.
 
-EDGE PROTECTION SPECIFICATIONS (s306E) — EXACT MEASUREMENTS:
-Top rail must be at least:
-- 900mm higher than the work surface (where base is at least 1,200mm wide); OR
-- 900mm higher than the work surface (in most other cases)
+VISUAL CHECKLIST:
+- Top rail at least 900mm above working surface
+- No gap greater than 450mm between rails
+- Bottom rail/toe board between 150–250mm from base
+- No visible damage, movement or missing sections
+- Installed for full length of exposed edge
 
-If edge protection has rails, it must have:
-- Bottom rail: at least 150mm but NOT OVER 250mm above the base surface (OR a toe board at least 150mm high)
-- Gap between rails: NOT OVER 450mm between any rail and the nearest rail
-- For slopes over 26°: sturdy mesh/sheeting at least 900mm high from base
-
-Edge protection must be designed to withstand the force of a person falling against it.
-
-VISUAL CHECKLIST FOR EDGE PROTECTION:
-✓ Top rail at least 900mm above working surface
-✓ No gap greater than 450mm between rails
-✓ Bottom rail/toe board between 150-250mm from base
-✓ No visible damage or movement
-✓ Installed for full length of exposed edge
+VISUAL INDICATORS:
+- Top rail visibly lower than 900mm = non-compliant
+- Gap between rails visibly wider than 450mm = non-compliant
+- No bottom rail or toe board = non-compliant
+- Edge protection damaged, loose or incomplete = non-compliant
 
 ---
 
-CHUNK 6: Ladders in Construction
-Section: s306K, s306L, s306M
-Topic: Ladder requirements and restrictions in construction work
+CHUNK 7: Ladder Requirements — Securing and Limb Contact
+Section: s306L, s306M
+Topic: Ladder securing methods and three-point contact rule (KEY MEASUREMENTS)
 
-WHAT WORK CAN BE DONE FROM A SINGLE/EXTENSION LADDER (s306K):
-Ladders may only be used for construction work (not just access) if the work is "permitted work" — generally only short-duration light duty tasks.
+WHEN WORKING FROM LADDER AT HEIGHT ≥2m (or ≥3m housing):
+- Person must have AT LEAST 3 LIMBS on ladder at all times (two hands + one foot, or two feet + one hand); OR
+- Be prevented from falling by other control (not harness attached to ladder)
 
-WHEN WORKING FROM A LADDER AT HEIGHT ≥2m (or ≥3m housing) (s306L):
-Person must have at least 3 limbs on the ladder at all times (two hands and one foot, or two feet and one hand), OR be prevented from falling by a control measure (e.g. pole strap or fall arrest harness not attached to the ladder).
+LADDER MUST BE SECURED:
+- At or near TOP (tied to wall plate, clamped to steel); OR
+- At or near BOTTOM (tied to pegs, held by another person)
 
-The ladder must be SECURED:
-- At or near the TOP to prevent movement (tied to wall plate, clamped to steel); OR
-- At or near the BOTTOM to prevent movement (tied to pegs, held by another person)
-
-LADDER SPECIFICATIONS (s306M):
+LADDER SPECIFICATIONS:
 - Load rating: at least 120kg
-- Manufactured for INDUSTRIAL USE (must be marked by manufacturer)
+- Manufactured for INDUSTRIAL USE (must be marked)
 - Maximum lengths:
   - Single ladder: 6.1m
-  - Extension ladder (electrical work): 9.2m
+  - Extension ladder (electrical): 9.2m
   - Other extension ladder: 7.5m
-- Must not be used for purposes beyond its design
 
 VISUAL INDICATORS:
-- Domestic/household ladder on a construction site = non-compliant (must be industrial rated)
+- Domestic/household ladder on construction site = non-compliant
 - Ladder not secured at top or bottom = non-compliant
 - Person on ladder with only 2 limbs in contact = non-compliant
-- Ladder longer than 7.5m (non-electrical) = non-compliant
-- Ladder used as primary access without fixed ladder or stair alternative (for regular access) = flag
+- Ladder visibly longer than 7.5m (non-electrical) = non-compliant
+- Ladder leaning unsecured against wall = non-compliant
 
 ---
 
-CHUNK 7: Scaffolding Requirements
-Section: s306P, s306Q
-Topic: Erecting and dismantling scaffolding
+CHUNK 8: Scaffolding Erection — Progressive Platform System
+Section: s306P
+Topic: Platform width and spacing during scaffold erection (KEY MEASUREMENTS)
 
-ERECTING SCAFFOLDING (s306P):
-A person must NOT erect scaffolding where a person could fall ≥2m (other construction) or ≥3m (housing) UNLESS:
-- The person erecting is prevented from falling by a control measure; OR
-- The person is using a fall arrest harness system; OR
-- The following progressive platform system is used:
+PROGRESSIVE PLATFORM REQUIREMENTS during erection where fall risk ≥2m (or ≥3m housing):
 
-PROGRESSIVE PLATFORM REQUIREMENTS during erection:
-(a) As each level is reached, install IMMEDIATELY:
-   - A platform at least 450mm wide along the full length of the section
-   - Edge protection across the outer frame at that level
-   - Means of access (stairs or ladder) to that level
-(b) Before erecting the next level: a platform must be installed below at a distance NOT MORE THAN:
-   - 3m below (housing construction); OR
-   - 2m below (other construction)
+AS EACH LEVEL IS REACHED, install IMMEDIATELY:
+- Platform at least 450mm wide along full length of section
+- Edge protection across outer frame at that level
+- Means of access (stairs or ladder) to that level
 
-DISMANTLING SCAFFOLDING (s306Q):
-Same fall risk thresholds apply. Edge protection and access must be maintained while practicable. Platform at level being dismantled must be at least 450mm wide. Lower platform must be within 2m (3m for housing) of dismantling level.
+BEFORE ERECTING NEXT LEVEL:
+- Platform must be installed below at distance NOT MORE THAN:
+  - 3m below (housing construction)
+  - 2m below (other construction)
 
 VISUAL INDICATORS:
-- Scaffolding being erected/dismantled without fall protection = serious non-compliance
+- Scaffolding being erected without fall protection = serious non-compliance
 - Missing platforms during erection = non-compliant
-- Scaffold platform width visibly less than 450mm = flag
+- Scaffold platform width visibly less than 450mm = non-compliant
+- Vertical gap between platforms exceeding 2m (or 3m housing) = non-compliant
 - No edge protection at scaffold perimeter = non-compliant
 - Scaffold planks not covering full platform width = non-compliant
 
-HIGH RISK WORK LICENCES REQUIRED FOR SCAFFOLDING:
-- Basic scaffolding: prefabricated modular/mobile scaffolding, suspended scaffolding
-- Intermediate scaffolding: includes tube and coupler, mast climbing work platforms
-- Advanced scaffolding: cantilevered hoists, hung scaffolds, suspended scaffolds
-Workers must hold the appropriate licence for the type of scaffolding being erected.
-
 ---
 
-CHUNK 8: Excavation Requirements
-Section: s305, s306 (in Chapter 6)
-Topic: Managing risks in excavation work
+CHUNK 9: Excavation — Trench Depth Trigger and Support Requirements
+Section: s306
+Topic: Trench depth threshold and mandatory support methods (KEY MEASUREMENTS)
 
-EXCAVATION WORK RISKS that must be managed:
-(a) A person FALLING INTO an excavation
-(b) A person being TRAPPED BY COLLAPSE of an excavation
-(c) A person being STRUCK BY A FALLING THING while working in an excavation
-(d) A person being EXPOSED TO AN AIRBORNE CONTAMINANT
+TRENCH AT LEAST 1.5m DEEP — MANDATORY REQUIREMENTS:
 
-TRENCH REQUIREMENTS (s306):
-Any trench AT LEAST 1.5m DEEP:
-(1) WORK AREA MUST BE SECURED FROM UNAUTHORISED ACCESS — barriers required to prevent inadvertent entry
-(2) ALL SIDES MUST BE ADEQUATELY SUPPORTED to minimise collapse risk by one or more of:
+(1) WORK AREA MUST BE SECURED from unauthorised access — barriers required
+
+(2) ALL SIDES MUST BE ADEQUATELY SUPPORTED by one or more of:
    - Shoring (shielding or comparable means)
    - Benching
    - Battering (sloping the sides)
 
-Exception: Shoring/battering/benching NOT required if a GEOTECHNICAL ENGINEER provides WRITTEN ADVICE that the sides are safe from collapse (advice must state the period it applies for).
+EXCEPTION: Shoring/battering/benching NOT required if GEOTECHNICAL ENGINEER provides WRITTEN ADVICE that sides are safe from collapse.
 
-KEY MEASUREMENTS:
+KEY MEASUREMENT:
 - 1.5m depth = trigger for trench security and shoring requirements
-- >1.5m = HIGH RISK CONSTRUCTION WORK requiring a SWMS
 
-VISUAL INDICATORS OF NON-COMPLIANCE:
+VISUAL INDICATORS:
 - Trench ≥1.5m deep without visible shoring, benching or battering = serious non-compliance
-- No barriers around open trench in area accessible to workers/public = non-compliant
+- No barriers around open trench in accessible area = non-compliant
 - Vertical walls in sandy/unstable soil without support = imminent collapse risk
-- Workers in unsupported trench = life-threatening non-compliance
-- No evidence of geotechnical clearance where unshored ≥1.5m trench = flag
+- Workers in unsupported trench ≥1.5m = life-threatening non-compliance
+- Shoring/shielding visible in trench = compliant
+- Battered (sloped) trench sides = compliant
+- Benched (stepped) trench sides = compliant
 
 ---
 
-CHUNK 9: First Aid Requirements
-Section: s42
-Topic: First aid obligations at workplaces
-
-A PCBU MUST ensure:
-(a) Provision of FIRST AID EQUIPMENT for the workplace
-(b) Each worker has ACCESS TO the equipment
-(c) Access to FACILITIES FOR ADMINISTRATION of first aid
-
-A PCBU MUST also ensure:
-(a) An ADEQUATE NUMBER OF WORKERS are trained to administer first aid; OR
-(b) Workers have access to an adequate number of TRAINED FIRST AIDERS
-
-What is "adequate" depends on:
-- Nature of the work being carried out
-- Nature of the hazards at the workplace
-- SIZE AND LOCATION of the workplace
-- Number and composition of workers
-
-VISUAL INDICATORS:
-- First aid kit visible and accessible on site = positive
-- First aid kit locked away or inaccessible = non-compliant
-- No first aid kit visible on site = non-compliant
-- First aid sign/location marker visible = positive
-- Remote site or high-hazard work with no trained first aider identified = flag
-
----
-
-CHUNK 10: Emergency Plans
-Section: s43
-Topic: Emergency plan requirements
-
-A PCBU MUST prepare an emergency plan for the workplace that provides for:
-(a) Emergency procedures including:
-   - Effective response to an emergency
-   - EVACUATION PROCEDURES
-   - Notifying emergency services at the earliest opportunity
-   - Medical treatment and assistance
-   - Effective communication between the emergency coordinator and all persons
-(b) TESTING of emergency procedures including frequency of testing
-(c) Information, training and instruction to relevant workers in implementing the procedures
-
-The emergency plan must be MAINTAINED so it remains effective, and IMPLEMENTED in the event of an emergency.
-
-VISUAL INDICATORS:
-- Emergency evacuation plan/muster point sign visible on site = positive
-- Emergency assembly point marked = positive
-- No emergency information visible on site = flag
-- Site with no visible emergency egress signage = non-compliant
-
----
-
-CHUNK 11: Personal Protective Equipment (PPE)
+CHUNK 10: PPE — Hard Hats, Hi-Vis and Safety Footwear
 Section: s44
-Topic: PPE requirements
+Topic: Mandatory PPE visible on construction workers
 
-PPE is the LAST LINE OF DEFENCE in the hierarchy of controls — it must be used when risks cannot be eliminated or sufficiently controlled by other means.
-
-PCBU MUST ensure PPE is:
-(a) SELECTED to minimise risk:
-   - Suitable for the nature of the work and hazards
-   - A suitable SIZE AND FIT for the worker
-   - Reasonably comfortable
-(b) MAINTAINED — clean, hygienic, and in good working order
-(c) USED correctly by the worker
-
-PPE must be PROVIDED to workers by the PCBU (not sourced by the worker at their own cost).
-
-Workers MUST:
-- Wear/use PPE as instructed
-- Not misuse or damage PPE
-- Report damage or defects
-
-COMMON PPE FOR CONSTRUCTION SITES (visual indicators):
+COMMON MANDATORY PPE FOR CONSTRUCTION (visual indicators):
 - Hard hat: required on all construction sites
-- High-visibility vest: required in traffic management zones, around plant
+- High-visibility vest: required in traffic management zones, around mobile plant
 - Safety footwear (steel-capped boots): required on construction sites
 - Safety glasses/goggles: for cutting, grinding, concrete work
 - Hearing protection: near loud plant/equipment
@@ -366,7 +235,12 @@ COMMON PPE FOR CONSTRUCTION SITES (visual indicators):
 - Gloves: for handling materials, chemicals
 - Harness: for work at height using fall arrest system
 
-NON-COMPLIANCE INDICATORS:
+PPE must be:
+- Suitable size and fit for worker
+- Maintained clean and in good working order
+- Used correctly by worker
+
+VISUAL INDICATORS:
 - Workers without hard hats on construction site = non-compliant
 - Workers without hi-vis in traffic/plant zones = non-compliant
 - Workers without safety footwear = non-compliant
@@ -376,49 +250,63 @@ NON-COMPLIANCE INDICATORS:
 
 ---
 
-CHUNK 12: General Construction Induction Training (White Card)
+CHUNK 11: White Card — Construction Induction Training
 Section: s316, s317
-Topic: Construction induction card requirements
+Topic: General construction induction card requirement for all construction workers
 
-EVERY WORKER must have a General Construction Induction Training Card (White Card) before carrying out construction work.
-
-A PCBU MUST NOT direct or allow a worker to carry out construction work unless:
-(a) The worker has SUCCESSFULLY COMPLETED general construction induction training; AND
-(b) If the training was completed MORE THAN 2 YEARS AGO — the worker has carried out construction work in the preceding 2 years
+EVERY WORKER must have White Card before carrying out construction work.
 
 Workers must hold EITHER:
-- A general construction induction training CARD (White Card); OR
-- A general construction induction training CERTIFICATION issued within the preceding 60 days (while awaiting the card)
+- General construction induction training CARD (White Card); OR
+- General construction induction training CERTIFICATION issued within preceding 60 days (while awaiting card)
 
-The White Card must be available for inspection on site.
+Card must be available for inspection on site.
 
 VISUAL INDICATORS:
 - Workers with White Cards visible on person or available for inspection = compliant
 - Worker unable to produce White Card = non-compliant
-- New workers on site without White Card = non-compliant for PCBU that allowed this
+- New workers on site without White Card = non-compliant for PCBU
 
 ---
 
-CHUNK 13: High Risk Work Licences
+CHUNK 12: High Risk Work Licences — Scaffolding Classes
 Section: s81, Schedule 3
-Topic: Who needs a licence and for what work
+Topic: Scaffolding licence classes and what work each permits
 
-A person MUST NOT carry out high risk work unless they hold a HIGH RISK WORK LICENCE for that class of work.
+SCAFFOLDING LICENCE CLASSES:
 
-CLASSES OF HIGH RISK WORK REQUIRING A LICENCE (Schedule 3):
+BASIC SCAFFOLDING:
+- Prefabricated modular scaffolding
+- Mobile scaffolding
+- Spur scaffolding
+- Elevated work platforms
+- Boatswain chairs
 
-SCAFFOLDING:
-- Basic Scaffolding: prefabricated modular/mobile/spur scaffolding, elevated work platforms, boatswain chairs
-- Intermediate Scaffolding: includes all Basic + tube and coupler scaffolds, mast climbing work platforms, perimeter safety screens
-- Advanced Scaffolding: includes all Intermediate + cantilevered hoists, hung scaffolds, suspended scaffolds
+INTERMEDIATE SCAFFOLDING (includes all Basic plus):
+- Tube and coupler scaffolds
+- Mast climbing work platforms
+- Perimeter safety screens
 
-RIGGING:
-- Dogging: application of slinging techniques and directing crane operators
-- Basic Rigging: structural steel erection, hoists, precast concrete, safety nets
-- Intermediate Rigging: includes Basic + hoists with jibs, cranes, tilt slabs, demolition
-- Advanced Rigging: includes Intermediate + gin poles, flying foxes, guyed derricks
+ADVANCED SCAFFOLDING (includes all Intermediate plus):
+- Cantilevered hoists
+- Hung scaffolds
+- Suspended scaffolds
 
-CRANES:
+Person must hold appropriate licence for type of scaffolding being erected.
+
+VISUAL INDICATORS:
+- Scaffolding being erected by unlicensed worker = non-compliance
+- Tube and coupler scaffold erected by Basic licence holder only = non-compliant
+- Licence cards should be available for inspection on site
+- Suspended scaffold erected by Intermediate licence holder = non-compliant (requires Advanced)
+
+---
+
+CHUNK 13: High Risk Work Licences — Cranes and EWPs
+Section: s81, Schedule 3
+Topic: Crane and elevating work platform licence requirements
+
+CRANE LICENCES:
 - Tower crane
 - Self-erecting tower crane
 - Non-slewing mobile crane (capacity >3t)
@@ -426,76 +314,46 @@ CRANES:
 - Vehicle loading crane (≥10 tonne-metres capacity)
 - Bridge and gantry crane
 
-ELEVATING WORK PLATFORMS:
-- Boom-type EWP: use of a boom-type elevated work platform (e.g. cherry picker, knuckle boom)
+ELEVATING WORK PLATFORM:
+- Boom-type EWP (e.g. cherry picker, knuckle boom)
 
-FORKLIFTS:
-- Forklift truck: use of any powered industrial truck with load-lifting attachment
+FORKLIFT:
+- Forklift truck (any powered industrial truck with load-lifting attachment)
 
 VISUAL INDICATORS:
-- Person operating a crane without licence card = serious non-compliance
-- Scaffolding being erected by unlicensed worker = non-compliance
+- Person operating crane without licence card = serious non-compliance
 - EWP operator unable to produce licence = non-compliant
 - Forklift being operated without licence = non-compliant
 - Licence cards should be available for inspection on site
+- Crane operating without visible registration plate = flag (see plant registration)
 
 ---
 
-CHUNK 14: Confined Space Entry
-Section: s67 (Chapter 4, Part 4.3, Division 3)
-Topic: Confined space entry requirements
+CHUNK 14: Confined Space Entry — Permit and Standby Person
+Section: s67
+Topic: Confined space entry controls visible from outside
 
-A confined space is an enclosed or partially enclosed space that:
-- Is not designed or intended for human occupancy
-- Is at risk of having an atmosphere that could cause injury or death
-- Could have restricted entry or exit
+BEFORE ENTRY:
+- Atmosphere test must be carried out
+- CONFINED SPACE ENTRY PERMIT must be issued
+- STANDBY PERSON must be outside confined space during entry
 
-BEFORE ENTRY, the PCBU must:
-(a) Carry out an atmosphere test of the confined space
-(b) Issue a CONFINED SPACE ENTRY PERMIT
-(c) Ensure the confined space is isolated from energy sources
-(d) Provide appropriate respiratory equipment, rescue equipment
-(e) Ensure a standby person is outside the confined space during entry
-(f) Establish rescue procedures
-
-NO PERSON may enter a confined space without a valid entry permit.
+NO PERSON may enter without valid permit.
 
 VISUAL INDICATORS:
 - "Confined Space — Do Not Enter" signage on tank/vessel/pit = correct
 - Worker entering confined space without visible permit = non-compliant
 - No standby person visible outside confined space during entry = non-compliant
 - No atmosphere testing equipment visible before entry = flag
+- Permit displayed at entry point = positive indicator
 
 ---
 
-CHUNK 15: Noise Exposure
-Section: s56, s57
-Topic: Managing risk of hearing loss from noise
+CHUNK 15: Plant Registration — Compliance Plates
+Section: s240, s241
+Topic: Registered plant identification and inspection markings
 
-EXPOSURE STANDARD FOR NOISE:
-- LAeq,8h of 85 dB(A) (equivalent continuous sound level over 8 hours), OR
-- LC,peak of 140 dB(C) (peak noise level)
-
-If noise levels are at or above the exposure standard, a PCBU must:
-(a) Eliminate the risk of hearing loss, so far as is reasonably practicable
-(b) If not practicable, minimise the risk using the hierarchy of controls
-(c) Provide hearing protectors where noise cannot be adequately reduced
-
-AUDIOMETRIC TESTING must be provided to workers who are frequently required to use hearing protectors.
-
-VISUAL INDICATORS:
-- Loud plant/equipment operating without hearing protection for nearby workers = flag
-- Workers wearing hearing protection in noisy areas = positive
-- No hearing protection available in high-noise zones = non-compliant
-
----
-
-CHUNK 16: Plant Registration and Inspection
-Section: s240, s241 (Chapter 5, Part 5.2)
-Topic: Plant that must be registered and inspected
-
-PLANT THAT MUST BE REGISTERED (registered plant):
-Certain plant must be registered with the regulator before use, including:
+PLANT THAT MUST BE REGISTERED:
 - Tower cranes
 - Self-erecting tower cranes
 - Vehicle loading cranes (≥10 tonne-metres)
@@ -505,11 +363,7 @@ Certain plant must be registered with the regulator before use, including:
 - Elevating work platforms (boom type, ≥11m boom)
 - Pressure vessels above certain thresholds
 
-PCBU MUST ensure:
-- Plant is registered with the regulator
-- Current inspection records are maintained
-- Plant is not used if it fails inspection or is damaged
-- Log books are kept and current
+Plant must have registration/compliance plate visible.
 
 VISUAL INDICATORS:
 - Registration/compliance plate visible on crane/EWP/hoist = positive
@@ -517,3 +371,45 @@ VISUAL INDICATORS:
 - Plant with obvious damage being operated = non-compliant
 - Log book not available for inspection = non-compliant
 - Plant without current inspection markings = flag
+
+---
+
+CHUNK 16: First Aid Kit and Emergency Assembly Points
+Section: s42, s43
+Topic: First aid equipment and emergency plan signage visible on site
+
+FIRST AID (s42):
+- First aid equipment must be provided
+- Workers must have access to equipment
+- Adequate number of trained first aiders required
+
+EMERGENCY PLAN (s43):
+- Emergency procedures including evacuation
+- Emergency assembly/muster points
+
+VISUAL INDICATORS:
+- First aid kit visible and accessible on site = positive
+- First aid kit locked away or inaccessible = non-compliant
+- No first aid kit visible on site = non-compliant
+- First aid sign/location marker visible = positive
+- Emergency evacuation plan/muster point sign visible = positive
+- Emergency assembly point marked = positive
+- No emergency information visible on site = flag
+
+---
+
+CHUNK 17: Noise Exposure — Hearing Protection in High-Noise Zones
+Section: s56, s57
+Topic: Hearing protection use near loud plant and equipment
+
+EXPOSURE STANDARD:
+- LAeq,8h of 85 dB(A); OR
+- LC,peak of 140 dB(C)
+
+If noise at or above standard, hearing protectors must be provided where noise cannot be adequately reduced.
+
+VISUAL INDICATORS:
+- Loud plant/equipment operating without hearing protection for nearby workers = flag
+- Workers wearing hearing protection (earmuffs/plugs) in noisy areas = positive
+- No hearing protection available in high-noise zones = non-compliant
+- Jackhammers, concrete saws, grinders operating without worker hearing protection = flag

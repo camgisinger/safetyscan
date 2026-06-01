@@ -312,17 +312,24 @@ export default function ScanDetail({ id }: { id: string }) {
 
   const issueFindings = findings.filter(f => f.type === 'critical' || f.type === 'warning')
   const issueCount = issueFindings.length
-  const statusBadge = scan.status === 'pass'
-    ? { bg: 'var(--status-green-bg)', color: 'var(--status-green)', dot: 'var(--status-green)', label: 'Clear' }
-    : scan.status === 'fail'
-    ? { bg: 'var(--status-red-bg)', color: 'var(--status-red)', dot: 'var(--status-red)', label: `${issueCount} issue${issueCount !== 1 ? 's' : ''} found` }
-    : { bg: 'var(--status-amber-bg)', color: 'var(--amber)', dot: 'var(--amber)', label: 'Pending review' }
+  const statusBarColor = scan.status === 'pass' ? '#3E8E5A' : scan.status === 'fail' ? '#D63A26' : 'var(--amber)'
+  const statusColor    = scan.status === 'pass' ? 'var(--clear-tx)' : scan.status === 'fail' ? 'var(--issue-tx-theme)' : 'var(--amber)'
+  const statusLbl      = scan.status === 'pass' ? 'Clear' : scan.status === 'fail' ? `${issueCount} issue${issueCount !== 1 ? 's' : ''} found` : 'Pending review'
 
-  const inputStyle: React.CSSProperties = { display: 'block', width: '100%', padding: '0 14px', borderRadius: 12, border: 'none', background: 'var(--card-2)', fontSize: 14, fontFamily: 'var(--ff-sans)', color: 'var(--text)', boxSizing: 'border-box', outline: 'none', boxShadow: 'inset 0 0 0 1px var(--border)' }
+  const inp: React.CSSProperties = { display: 'block', width: '100%', border: '1.5px solid var(--line)', background: 'var(--surf)', fontSize: 14, color: 'var(--text)', boxSizing: 'border-box', outline: 'none' }
+  const secHead = (label: string) => (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '18px 2px 11px' }}>
+      <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }}/>
+      <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase' as const, color: 'var(--mut)' }}>{label}</span>
+    </div>
+  )
+
+  const card: React.CSSProperties = { background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 4 }
+  const btn = (amber?: boolean): React.CSSProperties => ({ height: 46, borderRadius: 8, border: '1.5px solid var(--line)', fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: amber ? 'var(--amber)' : 'var(--surf)', color: amber ? '#1B1A12' : 'var(--text)' })
 
   return (
-    <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)' }}>
-      <style>{`@keyframes spin{to{transform:rotate(360deg)}} textarea,input{outline:none}`}</style>
+    <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)' }}>
+      <style>{`@keyframes spin{to{transform:rotate(360deg)}} textarea,input{outline:none;box-sizing:border-box}`}</style>
       <AppHeader variant="detail" title="Scan" rightAction="share" onBack={() => router.push('/dashboard')}/>
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '0 18px 48px' }}>
@@ -331,26 +338,22 @@ export default function ScanDetail({ id }: { id: string }) {
         {editingName ? (
           <div style={{ display: 'flex', gap: 8, alignItems: 'center', padding: '4px 0 12px' }}>
             <input value={scanName} onChange={e => setScanName(e.target.value)} onKeyDown={e => e.key === 'Enter' && saveName()} autoFocus
-              style={{ ...inputStyle, flex: 1, height: 44, fontSize: 18, fontWeight: 600 }}/>
-            <button onClick={saveName} style={{ height: 44, padding: '0 16px', background: 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', flexShrink: 0 }}>Save</button>
-            <button onClick={() => { setScanName(scan.work_type || ''); setEditingName(false) }} style={{ height: 44, padding: '0 14px', background: 'var(--card-2)', border: 'none', borderRadius: 999, color: 'var(--text-mut)', fontSize: 13, cursor: 'pointer', fontFamily: 'var(--ff-sans)', flexShrink: 0 }}>Cancel</button>
+              style={{ ...inp, flex: 1, height: 44, padding: '0 14px', borderRadius: 8, fontSize: 18, fontWeight: 600 }}/>
+            <button onClick={saveName} style={{ ...btn(true), height: 44, padding: '0 16px', flexShrink: 0 }}>Save</button>
+            <button onClick={() => { setScanName(scan.work_type || ''); setEditingName(false) }} style={{ ...btn(), height: 44, padding: '0 14px', flexShrink: 0 }}>Cancel</button>
           </div>
         ) : (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 4px 4px' }}>
-            <h1 style={{ fontSize: 24, fontWeight: 600, letterSpacing: '-0.02em', color: 'var(--text)', margin: 0 }}>{scanName || 'Unnamed scan'}</h1>
-            <button onClick={() => setEditingName(true)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-mut)', fontSize: 15, padding: '2px 4px', lineHeight: 1 }}>✎</button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, paddingTop: 4 }}>
+            <h1 style={{ fontSize: 23, fontWeight: 600, letterSpacing: '-0.025em', color: 'var(--text)', margin: 0 }}>{scanName || 'Unnamed scan'}</h1>
+            <button onClick={() => setEditingName(true)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--mut)', fontSize: 14, padding: '2px 4px', lineHeight: 1 }}>✎</button>
           </div>
         )}
-
-        {/* Meta line */}
-        <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10.5, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--text-mut)', padding: '0 4px 14px', marginTop: -2 }}>
-          {meta}
-        </div>
+        <div style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--mut)', paddingTop: 4, paddingBottom: 14 }}>{meta}</div>
 
         {/* Photo carousel */}
         {photoUrls.length > 0 && (
           <div style={{ marginBottom: 14 }}>
-            <div style={{ position: 'relative', borderRadius: 16, overflow: 'hidden', height: 220, cursor: 'pointer', backgroundColor: 'var(--card-2)', backgroundImage: 'repeating-linear-gradient(135deg, var(--thumb-2) 0 1.5px, transparent 1.5px 14px)' }}
+            <div style={{ position: 'relative', height: 216, borderRadius: 6, overflow: 'hidden', border: '1.5px solid var(--line)', cursor: 'pointer', backgroundColor: 'var(--surf)', backgroundImage: 'repeating-linear-gradient(135deg, var(--div) 0 1.5px, transparent 1.5px 13px)' }}
               onClick={() => setPhotoEnlarged(activePhoto)}>
               <img src={photoUrls[activePhoto]} alt={`Photo ${activePhoto + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}/>
               {photoUrls.length > 1 && (
@@ -402,12 +405,12 @@ export default function ScanDetail({ id }: { id: string }) {
         )}
 
         {/* Status + confidence row */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 500, padding: '6px 12px 6px 10px', borderRadius: 999, background: statusBadge.bg, color: statusBadge.color }}>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: statusBadge.dot }}/>
-            {statusBadge.label}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ width: 9, height: 9, borderRadius: 2, background: statusBarColor, flexShrink: 0 }}/>
+            <span style={{ fontWeight: 600, fontSize: 13, color: statusColor }}>{statusLbl}</span>
           </div>
-          <span style={{ fontFamily: 'var(--ff-mono)', fontSize: 10.5, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-mut)', opacity: 0.6 }}>
+          <span style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--mut)', opacity: 0.7 }}>
             AI · {scan.confidence?.toUpperCase() || 'LOW'} CONFIDENCE
           </span>
         </div>
@@ -415,8 +418,8 @@ export default function ScanDetail({ id }: { id: string }) {
         {/* AI Analysis */}
         {scan.summary && (
           <>
-            <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10.5, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'var(--text-mut)', padding: '4px 4px 10px' }}>AI Analysis</div>
-            <div style={{ background: 'var(--card-2)', borderRadius: 16, padding: '14px 16px', fontSize: 13.2, lineHeight: 1.55, color: 'var(--text)', marginBottom: 4 }}>
+            {secHead('AI Analysis')}
+            <div style={{ ...card, padding: '14px 15px', fontSize: 13, fontWeight: 500, lineHeight: 1.55, color: 'var(--text)', marginBottom: 4 }}>
               {scan.summary}
             </div>
             {legislation.length > 0 && (
@@ -425,26 +428,22 @@ export default function ScanDetail({ id }: { id: string }) {
                   const isOpen = openLeg === i
                   return (
                     <div key={i} style={{ marginBottom: 8 }}>
-                      <button
-                        onClick={() => setOpenLeg(isOpen ? null : i)}
-                        style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '6px 12px', borderRadius: 999, border: 'none', cursor: 'pointer', fontWeight: 600, transition: 'all 0.15s', background: isOpen ? 'var(--text)' : 'var(--card-2)', color: isOpen ? 'var(--bg)' : 'var(--text-mut)' }}>
-                        {l.code}
-                        <span style={{ fontSize: 9, opacity: 0.6 }}>{isOpen ? '▲' : '▼'}</span>
+                      <button onClick={() => setOpenLeg(isOpen ? null : i)}
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontWeight: 600, fontSize: 9.5, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 10px', borderRadius: 4, border: '1.5px solid var(--line)', cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.15s', background: isOpen ? 'var(--line)' : 'var(--surf)', color: isOpen ? 'var(--surf)' : 'var(--mut)' }}>
+                        {l.code} <span style={{ fontSize: 9, opacity: 0.6 }}>{isOpen ? '▲' : '▼'}</span>
                       </button>
                       {isOpen && (
-                        <div style={{ marginTop: 6, padding: '12px 14px', background: 'var(--card)', borderRadius: 12, boxShadow: 'var(--shadow-card)' }}>
-                          {l.description && (
-                            <div style={{ fontSize: 13, color: 'var(--text-mut)', lineHeight: 1.55, marginBottom: l.clauses?.length ? 10 : 0 }}>{l.description}</div>
-                          )}
+                        <div style={{ marginTop: 6, ...card, padding: '12px 14px' }}>
+                          {l.description && <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.55, marginBottom: l.clauses?.length ? 10 : 0 }}>{l.description}</div>}
                           {l.clauses?.length > 0 && (
                             <>
-                              <div style={{ height: 1, background: 'var(--divider)', marginBottom: 10 }}/>
-                              <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 10 }}>Applicable clauses</div>
+                              <div style={{ height: 1.5, background: 'var(--div)', marginBottom: 10 }}/>
+                              <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 10 }}>Clauses</div>
                               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                                 {l.clauses.map((c: any, j: number) => (
                                   <div key={j} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                                    <span style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.06em', padding: '3px 8px', borderRadius: 6, background: 'var(--card-2)', color: 'var(--amber)', flexShrink: 0 }}>{c.ref}</span>
-                                    <span style={{ fontSize: 12.5, color: 'var(--text)', lineHeight: 1.5, paddingTop: 2 }}>{c.summary}</span>
+                                    <span style={{ fontWeight: 600, fontSize: 9.5, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '3px 8px', borderRadius: 4, border: '1.5px solid var(--line)', background: 'var(--bg)', color: 'var(--amber)', flexShrink: 0 }}>{c.ref}</span>
+                                    <span style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text)', lineHeight: 1.5, paddingTop: 2 }}>{c.summary}</span>
                                   </div>
                                 ))}
                               </div>
@@ -455,7 +454,7 @@ export default function ScanDetail({ id }: { id: string }) {
                     </div>
                   )
                 })}
-                <div style={{ fontSize: 10, color: 'var(--text-dim)', paddingLeft: 2, marginTop: -2, fontFamily: 'var(--ff-mono)' }}>Tap each to expand</div>
+                <div style={{ fontWeight: 600, fontSize: 9.5, color: 'var(--mut)', paddingLeft: 2, marginTop: -2, letterSpacing: '0.08em' }}>Tap each to expand</div>
               </div>
             )}
           </>
@@ -464,15 +463,15 @@ export default function ScanDetail({ id }: { id: string }) {
         {/* Issues */}
         {issueFindings.length > 0 && (
           <>
-            <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10.5, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'var(--text-mut)', padding: '14px 4px 10px' }}>Issues</div>
+            {secHead('Issues')}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {issueFindings.map((f: any, i: number) => (
-                <div key={i} style={{ display: 'flex', gap: 12, padding: '12px 14px', borderRadius: 16, background: 'var(--card)', boxShadow: 'var(--shadow-card)', alignItems: 'flex-start' }}>
-                  <span style={{ width: 8, height: 8, borderRadius: '50%', marginTop: 7, flexShrink: 0, background: f.type === 'critical' ? 'var(--status-red)' : 'var(--amber)' }}/>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: 600, fontSize: 13.5, color: 'var(--text)', marginBottom: 3 }}>{f.title || f.text}</div>
-                    {f.detail && <div style={{ fontSize: 12.5, color: 'var(--text-mut)', lineHeight: 1.45, marginBottom: 6 }}>{f.detail}</div>}
-                    {f.legislation && <span style={{ fontFamily: 'var(--ff-mono)', fontSize: 9.5, letterSpacing: '0.18em', textTransform: 'uppercase', padding: '3px 8px', borderRadius: 999, background: 'var(--card-2)', color: 'var(--text-mut)' }}>{f.legislation}</span>}
+                <div key={i} style={{ display: 'flex', alignItems: 'stretch', ...card, overflow: 'hidden' }}>
+                  <div style={{ width: 5, flexShrink: 0, background: f.type === 'critical' ? '#D63A26' : 'var(--amber)' }} />
+                  <div style={{ flex: 1, padding: '12px 14px' }}>
+                    <div style={{ fontWeight: 600, fontSize: 14, letterSpacing: '-0.01em', color: 'var(--text)', marginBottom: f.detail ? 4 : 0 }}>{f.title || f.text}</div>
+                    {f.detail && <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.45, marginBottom: f.legislation ? 8 : 0 }}>{f.detail}</div>}
+                    {f.legislation && <span style={{ fontWeight: 600, fontSize: 9.5, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '3px 8px', borderRadius: 4, border: '1.5px solid var(--line)', background: 'var(--bg)', color: 'var(--mut)' }}>{f.legislation}</span>}
                   </div>
                 </div>
               ))}
@@ -482,65 +481,62 @@ export default function ScanDetail({ id }: { id: string }) {
 
         {/* OK findings */}
         {findings.filter(f => f.type === 'ok').length > 0 && (
-          <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 8 }}>
             {findings.filter(f => f.type === 'ok').map((f: any, i: number) => (
-              <div key={i} style={{ display: 'flex', gap: 10, padding: '10px 14px', borderRadius: 12, background: 'var(--card)', boxShadow: 'var(--shadow-card)', alignItems: 'center' }}>
-                <span style={{ width: 8, height: 8, borderRadius: '50%', flexShrink: 0, background: 'var(--status-green)' }}/>
-                <span style={{ fontSize: 13, color: 'var(--text)' }}>{f.text || f.title}</span>
+              <div key={i} style={{ display: 'flex', alignItems: 'stretch', ...card, overflow: 'hidden' }}>
+                <div style={{ width: 5, flexShrink: 0, background: '#3E8E5A' }} />
+                <div style={{ flex: 1, padding: '11px 14px', fontSize: 13, fontWeight: 500, color: 'var(--text)' }}>{f.text || f.title}</div>
               </div>
             ))}
           </div>
         )}
 
         {/* Checklist */}
-        <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10.5, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'var(--text-mut)', padding: '18px 4px 10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span>Checklist{checklist.length > 0 ? ` (${visibleCount})` : ''}</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '18px 2px 11px' }}>
+          <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }}/>
+          <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)' }}>Checklist{checklist.length > 0 ? ` (${visibleCount})` : ''}</span>
           {checklist.length > 0 && !generatingChecklist && (
-            <button onClick={() => setConfirmRegenerate(true)} style={{ fontFamily: 'var(--ff-sans)', fontSize: 12, padding: '4px 10px', background: 'var(--card-2)', border: 'none', borderRadius: 999, color: 'var(--text-mut)', cursor: 'pointer' }}>Regenerate</button>
+            <button onClick={() => setConfirmRegenerate(true)} style={{ marginLeft: 'auto', fontWeight: 600, fontSize: 10.5, letterSpacing: '0.06em', padding: '4px 10px', border: '1.5px solid var(--line)', borderRadius: 4, color: 'var(--mut)', background: 'var(--surf)', cursor: 'pointer', fontFamily: 'inherit' }}>Regenerate</button>
           )}
         </div>
 
         {confirmRegenerate && (
-          <div style={{ marginBottom: 10, padding: '12px 14px', background: 'var(--status-amber-bg)', borderRadius: 12, fontSize: 13, color: 'var(--text)' }}>
+          <div style={{ marginBottom: 10, ...card, padding: '12px 14px', fontSize: 13, fontWeight: 500, color: 'var(--text)' }}>
             This will reset your checklist progress. Are you sure?
             <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
-              <button onClick={handleGenerateChecklist} style={{ height: 36, padding: '0 14px', background: 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)' }}>Yes, regenerate</button>
-              <button onClick={() => setConfirmRegenerate(false)} style={{ height: 36, padding: '0 14px', background: 'var(--card-2)', border: 'none', borderRadius: 999, color: 'var(--text-mut)', fontSize: 13, cursor: 'pointer', fontFamily: 'var(--ff-sans)' }}>Cancel</button>
+              <button onClick={handleGenerateChecklist} style={{ ...btn(true), height: 36, padding: '0 14px', flex: 'none' }}>Yes, regenerate</button>
+              <button onClick={() => setConfirmRegenerate(false)} style={{ ...btn(), height: 36, padding: '0 14px', flex: 'none' }}>Cancel</button>
             </div>
           </div>
         )}
 
         {generatingChecklist ? (
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 0' }}>
-            <div style={{ width: 20, height: 20, border: '2px solid var(--border)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>
-            <span style={{ fontSize: 13, color: 'var(--text-mut)' }}>Generating checklist…</span>
+            <div style={{ width: 20, height: 20, border: '2px solid var(--line)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.85s linear infinite' }}/>
+            <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)' }}>Generating checklist…</span>
           </div>
         ) : checklist.length === 0 ? (
-          <div style={{ background: 'var(--card)', borderRadius: 16, padding: 16, boxShadow: 'var(--shadow-card)' }}>
-            <div style={{ fontSize: 13, color: 'var(--text-mut)', lineHeight: 1.5, marginBottom: 14 }}>Generate a custom checklist based on this scan's findings and applicable legislation.</div>
-            {checklistError && <div style={{ marginBottom: 12, padding: '8px 12px', background: 'var(--status-red-bg)', borderRadius: 10, fontSize: 12, color: 'var(--status-red)', fontFamily: 'var(--ff-mono)' }}>{checklistError}</div>}
-            <button onClick={handleGenerateChecklist} style={{ height: 44, padding: '0 18px', background: 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', boxShadow: 'var(--shadow-btn-amber)' }}>
-              Generate checklist →
-            </button>
+          <div style={{ ...card, padding: 16 }}>
+            <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 14 }}>Generate a custom checklist based on this scan's findings and applicable legislation.</div>
+            {checklistError && <div style={{ marginBottom: 12, padding: '8px 12px', border: '1.5px solid var(--issue)', borderRadius: 4, fontSize: 12, fontWeight: 500, color: 'var(--issue-tx-theme)' }}>{checklistError}</div>}
+            <button onClick={handleGenerateChecklist} style={{ ...btn(true), padding: '0 18px', flex: 'none' }}>Generate checklist →</button>
           </div>
         ) : (
-          <div style={{ background: 'var(--card)', borderRadius: 16, padding: '4px 16px', boxShadow: 'var(--shadow-card)' }}>
+          <div style={{ ...card, overflow: 'hidden' }}>
             {checklist.map((item: any, i: number) => {
               if (checklistState[`d_${i}`]) return null
               const checked = !!checklistState[`c_${i}`]
               const isLast = checklist.slice(i + 1).every((_: any, j: number) => checklistState[`d_${i + 1 + j}`])
               return (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 0', borderBottom: isLast ? 'none' : '1px solid var(--divider)' }}>
-                  <div onClick={() => toggleCheck(i)} style={{ width: 20, height: 20, borderRadius: 6, display: 'grid', placeItems: 'center', flexShrink: 0, cursor: 'pointer', background: checked ? 'var(--amber)' : 'transparent', boxShadow: checked ? 'none' : 'inset 0 0 0 1.5px var(--border)' }}>
-                    {checked && (
-                      <span style={{ display: 'block', width: 10, height: 6, borderLeft: '1.8px solid #fff', borderBottom: '1.8px solid #fff', transform: 'rotate(-45deg) translate(1px,-1px)' }}/>
-                    )}
+                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderBottom: isLast ? 'none' : '1.5px solid var(--div)' }}>
+                  <div onClick={() => toggleCheck(i)} style={{ width: 20, height: 20, borderRadius: 6, display: 'grid', placeItems: 'center', flexShrink: 0, cursor: 'pointer', border: `1.5px solid ${checked ? 'var(--amber)' : 'var(--line)'}`, background: checked ? 'var(--amber)' : 'transparent' }}>
+                    {checked && <span style={{ display: 'block', width: 10, height: 6, borderLeft: '1.8px solid #1B1A12', borderBottom: '1.8px solid #1B1A12', transform: 'rotate(-45deg) translate(1px,-1px)' }}/>}
                   </div>
                   <div style={{ flex: 1, cursor: 'pointer' }} onClick={() => toggleCheck(i)}>
-                    <div style={{ fontSize: 13.5, color: checked ? 'var(--text-mut)' : 'var(--text)', textDecoration: checked ? 'line-through' : 'none', opacity: checked ? 0.55 : 1 }}>{item.item}</div>
-                    {item.category && <div style={{ fontSize: 10, color: 'var(--text-dim)', marginTop: 2, fontFamily: 'var(--ff-mono)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{item.category}</div>}
+                    <div style={{ fontSize: 13.5, fontWeight: 500, color: checked ? 'var(--mut)' : 'var(--text)', textDecoration: checked ? 'line-through' : 'none', opacity: checked ? 0.55 : 1 }}>{item.item}</div>
+                    {item.category && <div style={{ fontWeight: 600, fontSize: 9.5, color: 'var(--mut)', marginTop: 2, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{item.category}</div>}
                   </div>
-                  <button onClick={() => deleteItem(i)} style={{ background: 'none', border: 'none', color: 'var(--text-dim)', fontSize: 18, cursor: 'pointer', padding: '0 2px', lineHeight: 1 }}>×</button>
+                  <button onClick={() => deleteItem(i)} style={{ background: 'none', border: 'none', color: 'var(--mut)', fontSize: 18, cursor: 'pointer', padding: '0 2px', lineHeight: 1 }}>×</button>
                 </div>
               )
             })}
@@ -548,36 +544,28 @@ export default function ScanDetail({ id }: { id: string }) {
         )}
 
         {/* Re-analyse + Export PDF */}
-        <div style={{ display: 'flex', gap: 8, marginTop: 20 }}>
-          <button
-            onClick={() => { if (!reanalysing) setReanalyseExpanded(v => !v) }}
-            disabled={reanalysing}
-            style={{ flex: 1, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: reanalyseExpanded ? 'var(--text)' : 'var(--card)', border: 'none', borderRadius: 999, color: reanalyseExpanded ? 'var(--bg)' : 'var(--text)', fontSize: 14, fontWeight: 600, cursor: reanalysing ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', boxShadow: '0 0 0 1px var(--border)', opacity: reanalysing ? 0.6 : 1, transition: 'all 0.15s' }}>
-            {reanalysing ? <><span style={{ width: 14, height: 14, border: '2px solid var(--border)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>Re-analysing…</> : <>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7a4 4 0 0 1 8 0M11 7a4 4 0 0 1-8 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 4v3h-3M3 10V7h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
-              Re-analyse {reanalyseExpanded ? '▲' : '▼'}
-            </>}
+        <div style={{ display: 'flex', gap: 8, marginTop: 18 }}>
+          <button onClick={() => { if (!reanalysing) setReanalyseExpanded(v => !v) }} disabled={reanalysing}
+            style={{ ...btn(reanalyseExpanded), flex: 1, opacity: reanalysing ? 0.6 : 1, cursor: reanalysing ? 'not-allowed' : 'pointer' }}>
+            {reanalysing
+              ? <><span style={{ width: 14, height: 14, border: '2px solid var(--div)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>Re-analysing…</>
+              : <><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7a4 4 0 0 1 8 0M11 7a4 4 0 0 1-8 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 4v3h-3M3 10V7h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>Re-analyse {reanalyseExpanded ? '▲' : '▼'}</>}
           </button>
-          <button onClick={handleExportPDF} disabled={exportingPDF}
-            style={{ flex: 1, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 14, fontWeight: 600, cursor: exportingPDF ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', boxShadow: 'var(--shadow-btn-amber)', opacity: exportingPDF ? 0.6 : 1 }}>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 9v2h8V9M7 2v7m0 0L4 6m3 3 3-3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          <button onClick={handleExportPDF} disabled={exportingPDF} style={{ ...btn(true), flex: 1, opacity: exportingPDF ? 0.6 : 1, cursor: exportingPDF ? 'not-allowed' : 'pointer' }}>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 9v2h8V9M7 2v7m0 0L4 6m3 3 3-3" stroke="#1B1A12" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             {exportingPDF ? 'Exporting…' : 'Export PDF'}
           </button>
         </div>
 
         {/* Re-analyse expanded panel */}
         {reanalyseExpanded && (
-          <div style={{ background: 'var(--card)', borderRadius: 16, padding: '14px 16px', boxShadow: 'var(--shadow-card)', marginTop: 10 }}>
-            <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 12 }}>Additional context</div>
-            <textarea
-              value={continueContext}
-              onChange={e => setContinueContext(e.target.value)}
-              placeholder="Describe what's changed, add context, or specify what you'd like re-assessed…"
-              rows={3}
-              autoFocus
-              style={{ width: '100%', padding: '10px 14px', borderRadius: 12, border: 'none', background: 'var(--card-2)', fontSize: 13, fontFamily: 'var(--ff-sans)', resize: 'vertical', color: 'var(--text)', lineHeight: 1.5, boxSizing: 'border-box', boxShadow: 'inset 0 0 0 1px var(--border)' }}/>
+          <div style={{ ...card, padding: '14px 16px', marginTop: 8 }}>
+            <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 12 }}>Additional context</div>
+            <textarea value={continueContext} onChange={e => setContinueContext(e.target.value)} rows={3} autoFocus
+              placeholder="Describe what's changed, add context, or what you'd like re-assessed…"
+              style={{ width: '100%', padding: '10px 14px', border: '1.5px solid var(--line)', background: 'var(--bg)', fontSize: 13, fontWeight: 500, resize: 'vertical', color: 'var(--text)', lineHeight: 1.5, borderRadius: 4 }}/>
             <div style={{ marginTop: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
-              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 36, padding: '0 14px', background: 'var(--card-2)', borderRadius: 999, cursor: 'pointer', fontSize: 13, color: 'var(--text-mut)', fontWeight: 500, boxShadow: '0 0 0 1px var(--border)', flexShrink: 0 }}>
+              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 36, padding: '0 14px', border: '1.5px solid var(--line)', borderRadius: 4, cursor: 'pointer', fontSize: 13, fontWeight: 600, color: 'var(--mut)', flexShrink: 0, background: 'var(--bg)' }}>
                 📷 Add photos
                 <input type="file" accept="image/*" multiple style={{ display: 'none' }} onChange={async (e) => {
                   const files = Array.from(e.target.files as FileList).slice(0, 3)
@@ -586,48 +574,39 @@ export default function ScanDetail({ id }: { id: string }) {
                   e.target.value = ''
                 }}/>
               </label>
-              {continuePhotos.length > 0 && (
-                <span style={{ fontSize: 12, color: 'var(--amber)', fontFamily: 'var(--ff-mono)' }}>
-                  {continuePhotos.length} photo{continuePhotos.length !== 1 ? 's' : ''} added ↑
-                </span>
-              )}
+              {continuePhotos.length > 0 && <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--amber)', letterSpacing: '0.06em' }}>{continuePhotos.length} photo{continuePhotos.length !== 1 ? 's' : ''} added ↑</span>}
             </div>
-            {continueError && <div style={{ marginTop: 10, padding: '8px 12px', background: 'var(--status-red-bg)', borderRadius: 10, fontSize: 12, color: 'var(--status-red)' }}>{continueError}</div>}
+            {continueError && <div style={{ marginTop: 10, padding: '8px 12px', border: '1.5px solid var(--issue)', borderRadius: 4, fontSize: 12, fontWeight: 500, color: 'var(--issue-tx-theme)' }}>{continueError}</div>}
             <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
-              <button
-                onClick={() => { handleReanalyse(); setReanalyseExpanded(false) }}
+              <button onClick={() => { handleReanalyse(); setReanalyseExpanded(false) }}
                 disabled={reanalysing || (continuePhotos.length === 0 && !continueContext.trim())}
-                style={{ flex: 1, height: 44, background: reanalysing ? 'rgba(243,148,16,0.5)' : 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 14, fontWeight: 600, cursor: (reanalysing || (!continuePhotos.length && !continueContext.trim())) ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (!continuePhotos.length && !continueContext.trim()) ? 0.4 : 1, boxShadow: 'var(--shadow-btn-amber)' }}>
-                {reanalysing ? <><span style={{ width: 14, height: 14, border: '2px solid rgba(255,255,255,0.4)', borderTopColor: '#fff', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>Re-analysing…</> : 'Re-analyse →'}
+                style={{ ...btn(true), flex: 1, opacity: (reanalysing || (!continuePhotos.length && !continueContext.trim())) ? 0.4 : 1, cursor: (reanalysing || (!continuePhotos.length && !continueContext.trim())) ? 'not-allowed' : 'pointer' }}>
+                {reanalysing ? <><span style={{ width: 14, height: 14, border: '2px solid rgba(27,26,18,0.3)', borderTopColor: '#1B1A12', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>Re-analysing…</> : 'Re-analyse →'}
               </button>
-              <button
-                onClick={() => { setReanalyseExpanded(false); setContinueContext(''); setContinuePhotos([]) }}
-                style={{ height: 44, padding: '0 16px', background: 'var(--card-2)', border: 'none', borderRadius: 999, color: 'var(--text-mut)', fontSize: 13, cursor: 'pointer', fontFamily: 'var(--ff-sans)', flexShrink: 0 }}>
-                Cancel
-              </button>
+              <button onClick={() => { setReanalyseExpanded(false); setContinueContext(''); setContinuePhotos([]) }}
+                style={{ ...btn(), height: 46, padding: '0 16px', flex: 'none' }}>Cancel</button>
             </div>
           </div>
         )}
 
         {/* Notes */}
-        <div style={{ background: 'var(--card)', borderRadius: 16, padding: '14px 16px', boxShadow: 'var(--shadow-card)', marginTop: 14 }}>
-          <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 10 }}>Notes</div>
+        {secHead('Notes')}
+        <div style={{ ...card, padding: '14px 16px' }}>
           <textarea value={notes} onChange={e => handleNotesChange(e.target.value)} placeholder="Add notes about this scan…" rows={4}
-            style={{ width: '100%', padding: '10px 14px', borderRadius: 12, border: 'none', background: 'var(--card-2)', fontSize: 14, fontFamily: 'var(--ff-sans)', resize: 'none', color: 'var(--text)', lineHeight: 1.5, boxSizing: 'border-box', boxShadow: 'inset 0 0 0 1px var(--border)' }}/>
+            style={{ width: '100%', padding: '10px 14px', border: '1.5px solid var(--line)', background: 'var(--bg)', fontSize: 14, fontWeight: 500, resize: 'none', color: 'var(--text)', lineHeight: 1.5, borderRadius: 4 }}/>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 10 }}>
-            <button onClick={() => saveNotes(notes)} disabled={notesSaving}
-              style={{ height: 36, padding: '0 16px', background: 'var(--card-2)', border: 'none', borderRadius: 999, color: 'var(--text)', fontSize: 13, fontWeight: 500, cursor: notesSaving ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', boxShadow: '0 0 0 1px var(--border)', opacity: notesSaving ? 0.6 : 1 }}>
+            <button onClick={() => saveNotes(notes)} disabled={notesSaving} style={{ ...btn(), height: 36, padding: '0 16px', fontSize: 13, opacity: notesSaving ? 0.6 : 1 }}>
               {notesSaving ? 'Saving…' : 'Save notes'}
             </button>
-            {notesSaved && <span style={{ fontSize: 12, color: 'var(--status-green)' }}>✓ Saved</span>}
+            {notesSaved && <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--clear-tx)' }}>✓ Saved</span>}
           </div>
         </div>
 
         {/* Assign to site */}
-        <div style={{ background: 'var(--card)', borderRadius: 16, padding: '14px 16px', boxShadow: 'var(--shadow-card)', marginTop: 14 }}>
-          <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 10 }}>Assign to site</div>
+        {secHead('Assign to site')}
+        <div style={{ ...card, padding: '14px 16px' }}>
           <select value={selectedSiteId || ''} onChange={e => handleSiteChange(e.target.value)}
-            style={{ display: 'block', width: '100%', height: 50, padding: '0 14px', borderRadius: 12, border: 'none', background: 'var(--card-2)', fontSize: 14, fontFamily: 'var(--ff-sans)', color: 'var(--text)', cursor: 'pointer', boxShadow: 'inset 0 0 0 1px var(--border)', boxSizing: 'border-box' }}>
+            style={{ display: 'block', width: '100%', height: 46, padding: '0 14px', borderRadius: 6, border: '1.5px solid var(--line)', background: 'var(--bg)', fontSize: 14, fontWeight: 500, color: 'var(--text)', cursor: 'pointer', boxSizing: 'border-box', fontFamily: 'inherit' }}>
             <option value="">No site</option>
             {sites.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
             <option value="__new__">＋ Create new site</option>
@@ -636,55 +615,44 @@ export default function ScanDetail({ id }: { id: string }) {
             <div style={{ marginTop: 10, display: 'flex', gap: 8 }}>
               <input autoFocus value={newSiteName} onChange={e => setNewSiteName(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleCreateAndAssign()}
                 placeholder="Site name e.g. Ipswich Motorway Upgrade"
-                style={{ flex: 1, height: 50, padding: '0 14px', borderRadius: 12, border: '1.5px solid var(--amber)', background: 'var(--card-2)', fontSize: 14, fontFamily: 'var(--ff-sans)', color: 'var(--text)', outline: 'none', boxSizing: 'border-box' }}/>
-              <button onClick={handleCreateAndAssign} disabled={!newSiteName.trim() || savingSite}
-                style={{ height: 50, padding: '0 16px', background: 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', opacity: newSiteName.trim() ? 1 : 0.5 }}>
-                {savingSite ? '…' : 'Create'}
-              </button>
-              <button onClick={() => { setCreatingNewSite(false); setNewSiteName('') }}
-                style={{ height: 50, padding: '0 14px', background: 'var(--card-2)', border: 'none', borderRadius: 999, color: 'var(--text-mut)', fontSize: 13, cursor: 'pointer', fontFamily: 'var(--ff-sans)', boxShadow: '0 0 0 1px var(--border)' }}>
-                Cancel
-              </button>
+                style={{ flex: 1, height: 46, padding: '0 14px', border: '1.5px solid var(--amber)', background: 'var(--bg)', fontSize: 14, color: 'var(--text)', borderRadius: 6, boxSizing: 'border-box', fontFamily: 'inherit' }}/>
+              <button onClick={handleCreateAndAssign} disabled={!newSiteName.trim() || savingSite} style={{ ...btn(true), height: 46, padding: '0 16px', opacity: newSiteName.trim() ? 1 : 0.5 }}>{savingSite ? '…' : 'Create'}</button>
+              <button onClick={() => { setCreatingNewSite(false); setNewSiteName('') }} style={{ ...btn(), height: 46, padding: '0 14px' }}>Cancel</button>
             </div>
           )}
         </div>
 
-        {/* Share + PDF alt */}
-        <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
-          <button onClick={() => setShareMenuOpen(v => !v)}
-            style={{ flex: 1, height: 44, background: 'var(--card)', border: 'none', borderRadius: 999, color: 'var(--text)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', boxShadow: '0 0 0 1px var(--border)' }}>
+        {/* Share */}
+        <div style={{ marginTop: 14 }}>
+          <button onClick={() => setShareMenuOpen(v => !v)} style={{ ...btn(shareMenuOpen), width: '100%' }}>
             {shareEnabled ? '🔗 Sharing on' : '🔗 Share scan'}
           </button>
-        </div>
-
-        {shareMenuOpen && (
-          <div style={{ background: 'var(--card)', borderRadius: 16, padding: '14px 16px', boxShadow: 'var(--shadow-card)', marginTop: 8 }}>
-            <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--text-mut)', marginBottom: 12 }}>Share scan</div>
-            {shareEnabled && shareLink ? (
-              <>
-                <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
-                  <div style={{ flex: 1, padding: '10px 12px', background: 'var(--card-2)', borderRadius: 10, fontSize: 11, color: 'var(--text-mut)', wordBreak: 'break-all', fontFamily: 'var(--ff-mono)' }}>{shareLink}</div>
-                  <button onClick={handleShare} style={{ height: 40, padding: '0 14px', background: 'var(--card-2)', border: 'none', borderRadius: 10, color: 'var(--text)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', flexShrink: 0 }}>
-                    {linkCopied ? '✓ Copied' : 'Copy'}
+          {shareMenuOpen && (
+            <div style={{ ...card, padding: '14px 16px', marginTop: 8 }}>
+              <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 12 }}>Share scan</div>
+              {shareEnabled && shareLink ? (
+                <>
+                  <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
+                    <div style={{ flex: 1, padding: '10px 12px', border: '1.5px solid var(--line)', borderRadius: 4, fontSize: 11, color: 'var(--mut)', wordBreak: 'break-all', fontFamily: 'var(--ff-mono)', background: 'var(--bg)' }}>{shareLink}</div>
+                    <button onClick={handleShare} style={{ ...btn(), height: 40, padding: '0 14px', fontSize: 12, flexShrink: 0 }}>{linkCopied ? '✓ Copied' : 'Copy'}</button>
+                  </div>
+                  <button onClick={handleToggleShare} style={{ fontSize: 12, fontWeight: 600, color: 'var(--issue-tx-theme)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', padding: 0 }}>Disable sharing</button>
+                </>
+              ) : (
+                <>
+                  <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 14 }}>Generate a link anyone can view without logging in.</div>
+                  <button onClick={handleShare} disabled={generatingShare} style={{ ...btn(true), padding: '0 18px', opacity: generatingShare ? 0.6 : 1 }}>
+                    {generatingShare ? 'Generating…' : 'Enable sharing & copy link'}
                   </button>
-                </div>
-                <button onClick={handleToggleShare} style={{ fontSize: 12, color: 'var(--status-red)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--ff-sans)', padding: 0 }}>Disable sharing</button>
-              </>
-            ) : (
-              <>
-                <div style={{ fontSize: 13, color: 'var(--text-mut)', lineHeight: 1.5, marginBottom: 14 }}>Generate a link anyone can view without logging in.</div>
-                <button onClick={handleShare} disabled={generatingShare}
-                  style={{ height: 44, padding: '0 18px', background: 'var(--amber)', border: 'none', borderRadius: 999, color: '#fff', fontSize: 14, fontWeight: 600, cursor: generatingShare ? 'not-allowed' : 'pointer', fontFamily: 'var(--ff-sans)', boxShadow: 'var(--shadow-btn-amber)', opacity: generatingShare ? 0.6 : 1 }}>
-                  {generatingShare ? 'Generating…' : 'Enable sharing & copy link'}
-                </button>
-              </>
-            )}
-          </div>
-        )}
+                </>
+              )}
+            </div>
+          )}
+        </div>
 
         {/* Delete */}
         <button onClick={() => setShowDeleteConfirm(true)}
-          style={{ width: '100%', height: 44, background: 'transparent', border: '1px solid var(--status-red)', borderRadius: 12, color: 'var(--status-red)', fontSize: 13, cursor: 'pointer', fontFamily: 'var(--ff-sans)', marginTop: 14 }}>
+          style={{ width: '100%', height: 44, background: 'transparent', border: '1.5px solid var(--issue)', borderRadius: 6, color: 'var(--issue-tx-theme)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', marginTop: 14 }}>
           Delete scan
         </button>
       </main>
@@ -692,12 +660,12 @@ export default function ScanDetail({ id }: { id: string }) {
       {/* Delete confirm modal */}
       {showDeleteConfirm && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20 }}>
-          <div style={{ background: 'var(--card)', borderRadius: 20, padding: 24, maxWidth: 320, width: '100%' }}>
+          <div style={{ ...card, padding: 24, maxWidth: 320, width: '100%' }}>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--text)', marginBottom: 8 }}>Delete this scan?</div>
-            <div style={{ fontSize: 14, color: 'var(--text-mut)', lineHeight: 1.5, marginBottom: 20 }}>This will permanently delete the scan and all associated photos.</div>
-            <div style={{ display: 'flex', gap: 10 }}>
-              <button onClick={() => setShowDeleteConfirm(false)} style={{ flex: 1, height: 44, background: 'var(--card-2)', border: 'none', borderRadius: 999, fontSize: 14, cursor: 'pointer', fontFamily: 'var(--ff-sans)', color: 'var(--text-mut)' }}>Cancel</button>
-              <button onClick={handleDelete} style={{ flex: 1, height: 44, background: 'var(--status-red)', border: 'none', borderRadius: 999, fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--ff-sans)', color: '#fff' }}>Delete</button>
+            <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 20 }}>This will permanently delete the scan and all associated photos.</div>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button onClick={() => setShowDeleteConfirm(false)} style={{ ...btn(), flex: 1 }}>Cancel</button>
+              <button onClick={handleDelete} style={{ flex: 1, height: 46, background: '#D63A26', border: '1.5px solid var(--issue)', borderRadius: 8, fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', color: '#fff' }}>Delete</button>
             </div>
           </div>
         </div>

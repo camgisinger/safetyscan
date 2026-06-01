@@ -4,202 +4,231 @@ JURISDICTION: QLD
 REGION: QLD
 WORK_TYPES: all_workplaces, manufacturing, construction, high_risk_work, office_work
 SOURCE: Workplace Health and Safety Queensland (WHSQ)
-CURRENT AS AT: 2021 (approved under section 274 of the Work Health and Safety Act 2011)
+CURRENT AS AT: 2021
 CLAUSE_PREFIX: s
-REFERENCE_STANDARD: AS 1319 Safety Signs for the Occupational Environment; AS 4775 Emergency eyewash and shower equipment; AS 4031 Non-reusable containers for the collection of sharp medical items; AS/NZS 4261 Reusable containers for the collection of sharp items; AS/NZS 1269.3 Occupational noise management.
+REFERENCE_STANDARD: AS 1319 Safety Signs for the Occupational Environment; AS 4775 Emergency eyewash and shower equipment; AS 4031 Non-reusable containers for the collection of sharp medical items; AS/NZS 4261 Reusable containers for the collection of sharp items
 
 ---
 
-CHUNK 1: Primary Duty and Legal Requirements
-Section: WHS Regulation s42; WHS Act s19, s27, s28
-Topic: Mandatory provision of first aid and duty holder responsibilities
+CHUNK 1: First Aid Kit Identification and Signage
+Section: CoP s3.1; AS 1319
+Topic: Mandatory kit marking and visual identification standards
 
-PRIMARY DUTY — a PCBU MUST ensure:
-- Provision of first aid equipment
-- Each worker at the workplace has access to the equipment
-- Access to facilities for administering first aid
-- An adequate number of workers are trained to administer first aid, OR workers have access to an adequate number of other people who have been trained to administer first aid
+MANDATORY MARKING:
+- Each first aid kit MUST display a WHITE CROSS ON GREEN BACKGROUND prominently on the outside
+- Red or blue background = non-compliant
+- Kit must be immediately identifiable as first aid equipment
 
-DETERMINING REQUIREMENTS — must have regard to all relevant matters including:
-- The nature of the work being carried out at the workplace
-- The nature of the hazards at the workplace
-- The size and location of the workplace
-- The number and composition of the workers and other persons at the workplace
+LOCATION SIGNAGE:
+- First aid equipment locations must be clearly marked with directional signage
+- Emergency floor plans must display first aid kit locations
 
 VISUAL INDICATORS:
-- First aid kits clearly accessible to night shift and overtime workers = positive compliance
-- Workers on a shared site with a formal agreement to access another business's first aiders = coordinated duty (acceptable)
-- Lack of clean water supplies for administering first aid = facility deficiency
-- First aid kit locked or inaccessible = non-compliant
+- First aid kit with white cross on red or blue background = non-compliant identification
+- No visible first aid signage or directional arrows = non-compliant
+- Kit locked or inaccessible to workers = non-compliant
+- Emergency evacuation plan not showing first aid station location = gap
 
 ---
 
-CHUNK 2: First Aid Kits — Design and Prohibitions
-Section: COP s3.1; Appendix E
-Topic: Mandatory kit standards and restricted contents
+CHUNK 2: First Aid Kit Contents — Prohibited Items
+Section: CoP s3.1; Appendix E
+Topic: Medication prohibition and restricted contents
 
-DESIGN:
-- Each kit should be immediately identifiable with a WHITE CROSS ON GREEN BACKGROUND prominently displayed on the outside
-- Should be made of material that will protect the contents from dust, moisture and contamination
+PROHIBITED CONTENTS:
+- Paracetamol MUST NOT be included
+- Aspirin MUST NOT be included
+- Any analgesic medication MUST NOT be included
 
-MEDICATION PROHIBITION: Medication including analgesics like PARACETAMOL and ASPIRIN MUST NOT be included in first aid kits because of their potential to cause adverse health effects. Workers requiring these should carry their own for personal use.
+PERMITTED EXCEPTIONS (with appropriate training):
+- Asthma-relieving inhaler and spacer
+- Epinephrine auto-injector
 
-EXCEPTIONS — workplaces may consider including:
-- An asthma-relieving inhaler and a spacer
-- An epinephrine auto-injector
-Provided first aiders have appropriate training for these items.
-
-MAINTENANCE:
-- A person should be nominated to maintain the kit
-- Regular checks should be carried out after each use OR at least once every 12 months
-- An inventory list should be signed and dated after each check
+MAINTENANCE EVIDENCE:
+- Inventory list must be signed and dated after each check
+- Checks required after each use OR at least once every 12 months
 
 VISUAL INDICATORS:
-- First aid kit with a white cross on a red or blue background = non-compliant identification (must be green background)
-- Paracetamol or aspirin found inside a general-access first aid kit = non-compliant content
-- Expired sterile products or tampered seals in kit = maintenance failure
+- Paracetamol or aspirin visible in general-access first aid kit = non-compliant content
+- Expired sterile products or tampered seals = maintenance failure
 - No inventory checklist or check date visible in kit = maintenance failure
-- Kit stored in a locked cabinet without worker access = non-compliant
+- Opened and resealed saline bottle = non-compliant (must be discarded after opening)
 
 ---
 
-CHUNK 3: Specialised Equipment — AEDs, Emergency Showers, and Eye Wash
-Section: COP s3.3; AS 4775
-Topic: Requirements for high-risk injury equipment
+CHUNK 3: Emergency Showers — Proximity and Access
+Section: CoP s3.3; AS 4775
+Topic: Immediate access requirements for chemical burn risks
 
-AUTOMATED EXTERNAL DEFIBRILLATORS (AEDs):
-Should be considered where:
-- There is a risk of electrocution
-- There is a delay in ambulance services reaching the workplace
-- There are large numbers of members of the public
+MANDATORY PROVISION where risk of:
+- Serious burns to large area of face or body (chemical/electrical burns)
+- Burns LARGER THAN A 20 CENT PIECE
+- Hazardous chemical exposure causing skin absorption or contamination
 
-EMERGENCY SHOWERS — immediate access should be provided where there is a risk of:
-- Serious burns to a large area of the face or body (including chemical/electrical burns or burns LARGER THAN A 20 CENT PIECE)
-- Exposure to hazardous chemicals resulting in skin absorption or contamination
-
-EYE WASH:
-- Equipment should be provided where there is a risk of hazardous chemicals or infectious substances causing eye injuries
-- Sterile saline solution or sterile water provided for irrigating eye wounds MUST BE DISCARDED AFTER OPENING — resealed bottles are non-compliant
+LOCATION:
+- Must provide IMMEDIATE ACCESS from hazard area
+- Must be within immediate reach of chemical handling area
 
 VISUAL INDICATORS:
-- AED located in an area exposed to extreme temperatures = non-compliant storage
-- Opened but resealed saline bottle in a first aid kit = non-compliant (must be discarded after opening)
 - No emergency shower within immediate reach of chemical handling area = non-compliant
-- No eye wash station near hazardous chemical use area = non-compliant
-- Portable plastic shower hose attached to tap in a low-risk area = acceptable portable deluge facility
+- Emergency shower blocked or obstructed = non-compliant
+- Portable plastic shower hose attached to tap in low-risk area = acceptable portable facility
+- Shower located in area exposed to extreme temperatures = non-compliant storage
 
 ---
 
-CHUNK 4: First Aid Rooms — Recommendation Thresholds
-Section: COP s3.4
-Topic: When a dedicated first aid room is required
+CHUNK 4: Eye Wash Equipment and Sterile Solution
+Section: CoP s3.3; AS 4775
+Topic: Eye wash provision and sterile solution handling
 
-RECOMMENDED THRESHOLDS — a first aid room should be established for:
-- LOW RISK workplaces with 200 WORKERS OR MORE
-- HIGH RISK workplaces with 100 WORKERS OR MORE
+MANDATORY PROVISION where risk of:
+- Hazardous chemicals causing eye injuries
+- Infectious substances causing eye injuries
 
-ROOM SPECIFICATIONS:
-- Sink: Must have easy access to a sink with hot and cold water (if not in the room)
-- Entrance: Must be CLEARLY MARKED with first aid signage
-- Size: Corridors and entrances must be wide enough to permit transport of persons supported on a stretcher or wheelchair
-- Contents must include:
-  - A bowl or bucket with a MINIMUM 2 LITRES CAPACITY
-  - A sharps container
-  - A waterproof examination couch
-- Should be a safe distance from hazardous operations
-- Must not be used as a thoroughfare or for general storage
+STERILE SOLUTION RULE:
+- Sterile saline or sterile water for irrigating eye wounds MUST BE DISCARDED AFTER OPENING
+- Resealed bottles = non-compliant
+
+VISUAL INDICATORS:
+- No eye wash station near hazardous chemical use area = non-compliant
+- Opened but resealed saline bottle in first aid kit = non-compliant
+- Eye wash equipment inaccessible or obstructed = non-compliant
+
+---
+
+CHUNK 5: AED Placement and Storage
+Section: CoP s3.3
+Topic: Automated External Defibrillator location requirements
+
+RECOMMENDED where:
+- Risk of electrocution exists
+- Delay in ambulance services reaching workplace
+- Large numbers of public present
+
+STORAGE:
+- Must not be exposed to extreme temperatures
+
+VISUAL INDICATORS:
+- AED located in area exposed to extreme temperatures = non-compliant storage
+- AED cabinet locked without worker access = non-compliant
+- No AED visible at high-risk electrical work site with delayed ambulance access = gap
+
+---
+
+CHUNK 6: First Aid Room — Size and Access Requirements
+Section: CoP s3.4
+Topic: Physical specifications for dedicated first aid rooms
+
+THRESHOLDS:
+- Low risk workplaces: 200 workers or more
+- High risk workplaces: 100 workers or more
+
+MANDATORY SPECIFICATIONS:
+- Corridors and entrances MUST be wide enough to permit transport of persons on a stretcher or wheelchair
+- Entrance MUST be clearly marked with first aid signage
+- Must have easy access to sink with hot and cold water (if not in room)
+- Must NOT be used as a thoroughfare or for general storage
 
 VISUAL INDICATORS:
 - High-risk site with 100+ workers but no dedicated first aid room = non-compliant with recommendations
-- First aid room used as storage or thoroughfare = non-compliant
-- Corridors to first aid room that cannot accommodate a horizontal stretcher = design failure
+- Corridors to first aid room cannot accommodate horizontal stretcher = design failure
 - First aid room entrance without clear signage = non-compliant
-- No sharps container in first aid room = non-compliant
+- First aid room used as storage or thoroughfare = non-compliant
 
 ---
 
-CHUNK 5: First Aiders — Ratios and Training Renewal
-Section: WHS Regulation s42; COP s3.5; Appendix C
-Topic: Worker-to-first-aider ratios and mandatory refreshers
+CHUNK 7: First Aid Room — Mandatory Equipment
+Section: CoP s3.4; AS 4031
+Topic: Required contents and equipment specifications
 
-RECOMMENDED RATIOS:
+MANDATORY CONTENTS:
+- Bowl or bucket with MINIMUM 2 LITRES CAPACITY
+- Sharps container (rigid-walled, puncture-resistant)
+- Waterproof examination couch
+
+VISUAL INDICATORS:
+- No sharps container in first aid room = non-compliant
+- Bowl or bucket visibly less than 2 litres capacity = non-compliant
+- No waterproof examination couch = non-compliant
+- Sharps container not rigid-walled or puncture-resistant = non-compliant
+
+---
+
+CHUNK 8: First Aider Ratios — Worker Count Requirements
+Section: WHS Regulation s42; CoP s3.5; Appendix C
+Topic: Minimum first aider to worker ratios by risk level
+
+MANDATORY RATIOS:
 - Low risk workplaces: ONE FIRST AIDER FOR EVERY 50 WORKERS
 - High risk workplaces: ONE FIRST AIDER FOR EVERY 25 WORKERS
 - Remote high-risk workplaces: ONE FIRST AIDER FOR EVERY 10 WORKERS
 
-TRAINING RENEWAL:
-- CPR refresher training should be carried out ANNUALLY
-- First aid qualifications should be renewed EVERY THREE YEARS
-
-MINIMUM TRAINING LEVEL: First aiders should hold a nationally recognised Statement of Attainment for the unit of competency PROVIDE FIRST AID or equivalent.
-
 VISUAL INDICATORS:
-- Construction site (high risk) with 60 workers and only 1 first aider = non-compliant ratio (requires minimum 3)
-- First aiders identified by high-visibility vests of a particular colour = positive identification method
-- First aider certificate showing a "last trained" date more than 3 years ago = non-compliant refresher status
-- No first aider identification visible on site = flag — workers cannot identify who to call
+- Construction site (high risk) with 60 workers and only 1 first aider visible = non-compliant ratio (requires minimum 3)
 - Site with 30+ workers and no trained first aider on site = non-compliant
+- Remote site with 25 workers and only 1 first aider = non-compliant (requires minimum 3)
 
 ---
 
-CHUNK 6: Emergency Plans and Information Provision
-Section: WHS Regulation s43; COP s3.6, s3.7
-Topic: Mandatory emergency response and worker information
+CHUNK 9: First Aider Identification and Training Currency
+Section: CoP s3.5; Appendix C
+Topic: Visual identification and qualification renewal requirements
 
-EMERGENCY PLAN MUST include:
-- Medical treatment and assistance
-- Effective response and evacuation procedures
-- Notifying emergency services at the earliest opportunity
+TRAINING RENEWAL:
+- CPR refresher: ANNUALLY
+- First aid qualification renewal: EVERY THREE YEARS
 
-INFORMATION THAT MUST BE PROVIDED TO WORKERS:
-- The LOCATION of first aid equipment and facilities
-- The NAMES AND LOCATION of people trained to administer first aid
-- The PROCEDURES to be followed when first aid is required
+IDENTIFICATION:
+- First aiders should be visibly identifiable to workers
+- High-visibility vests of particular colour = acceptable identification method
 
 VISUAL INDICATORS:
-- Emergency floor plans displaying the location of first aid kits = positive compliance
-- Directional arrows on first aid signs leading to equipment = compliant signage
-- Workers unable to identify their nearest first aider during site induction = training failure
-- No first aid location signs visible on site = non-compliant
-- Emergency evacuation plan not displaying first aid station location = gap
+- First aiders identified by high-visibility vests of particular colour = positive identification method
+- No first aider identification visible on site = flag — workers cannot identify who to call
+- First aider certificate showing "last trained" date more than 3 years ago = non-compliant refresher status
 
 ---
 
-CHUNK 7: Infection Control and Waste Disposal
+CHUNK 10: Infection Control — PPE and Sharps Disposal
 Section: Appendix F; AS 4031
-Topic: Standard precautions for first aiders
+Topic: Mandatory precautions and waste handling
 
-STANDARD PRECAUTIONS — first aiders should assume they could be exposed to infection:
-- Wash hands with soap and water BEFORE AND AFTER administering first aid
-- Wear disposable gloves when providing first aid
-- Use resuscitation masks for CPR
+MANDATORY PRECAUTIONS:
+- Disposable gloves MUST be worn when providing first aid
+- Resuscitation masks MUST be used for CPR
+- Hands must be washed with soap and water before and after administering first aid
 
-SHARPS DISPOSAL: Sharps (needles, syringes) MUST be disposed of in a RIGID-WALLED, PUNCTURE-RESISTANT SHARPS CONTAINER by the person who used them.
-
-SPILL CLEANING: Surfaces contaminated with blood or body substances should be wiped with paper towelling and cleaned with warm soapy water.
+SHARPS DISPOSAL:
+- Sharps (needles, syringes) MUST be disposed of in RIGID-WALLED, PUNCTURE-RESISTANT SHARPS CONTAINER
+- Must be disposed by the person who used them
 
 VISUAL INDICATORS:
-- First aider performing CPR without a resuscitation mask = non-compliant infection control
-- Sharps being placed in a general plastic waste bag = life-safety breach
+- First aider performing CPR without resuscitation mask = non-compliant infection control
+- Sharps being placed in general plastic waste bag = life-safety breach
 - Disposable gloves being reused between injured persons = infection control failure
 - No sharps container available on site where sharps are used = non-compliant
 - No disposable gloves in first aid kit = non-compliant
 
 ---
 
-CHUNK 8: High Risk Workplace Definitions
+CHUNK 11: High Risk Workplace Classification — Visual Triggers
 Section: Appendix A
-Topic: Identifying work that requires higher first aid ratios and equipment levels
+Topic: Activities that trigger high-risk first aid ratios (1:25)
 
-HIGH RISK WORKPLACES include those where workers:
-- Use hazardous machinery (e.g. mobile plant, chainsaws, power presses)
-- Use hazardous substances (e.g. chemical manufacture, horticulture, petrol stations)
-- Carry out hazardous forms of work including: CONFINED SPACES, WELDING, DEMOLITION, ELECTRICAL WORK, ABRASIVE BLASTING
-- Are exposed to extreme heat or cold (e.g. foundries, prolonged outdoor work in Queensland summer)
-- Are at risk of physical violence (e.g. cash handling, aggressive customers)
+HIGH RISK CLASSIFICATION applies when workers:
+- Use hazardous machinery (mobile plant, chainsaws, power presses)
+- Carry out CONFINED SPACES work
+- Carry out WELDING
+- Carry out DEMOLITION
+- Carry out ELECTRICAL WORK on energised equipment
+- Carry out ABRASIVE BLASTING
+- Are exposed to extreme heat or cold (foundries, prolonged outdoor work in Queensland summer)
 
 VISUAL INDICATORS:
-- Presence of a welder, demolition activity, or abrasive blasting pot = site automatically classified as HIGH RISK for first aid ratios (1:25)
-- Outdoor work in extreme summer temperatures = high risk classification applies
-- Confined space entry work on site = high risk classification applies
-- Electrical work on energised equipment = high risk classification applies
+- Presence of welder, demolition activity, or abrasive blasting pot = site automatically HIGH RISK (1:25 ratio applies)
+- Outdoor work in extreme summer temperatures = high risk classification
+- Confined space entry work on site = high risk classification
+- Electrical work on energised equipment = high risk classification
+- Mobile plant, chainsaws or power presses in use = high risk classification
+
+---

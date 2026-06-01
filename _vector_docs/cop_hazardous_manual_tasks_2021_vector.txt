@@ -4,163 +4,221 @@ JURISDICTION: QLD
 REGION: QLD
 WORK_TYPES: all_workplaces, manufacturing, construction, healthcare, office_work, agriculture
 SOURCE: Workplace Health and Safety Queensland (WHSQ)
-CURRENT AS AT: 2021 (approved under section 274 of the Work Health and Safety Act 2011)
+CURRENT AS AT: 2021
 CLAUSE_PREFIX: s
 REFERENCE_STANDARD: AS ISO 5349.1–2013 Mechanical vibration—Measurement and evaluation of human exposure to hand-transmitted vibration; AS ISO 5349.2–2013 Mechanical vibration—Practical guidance for measurement at the workplace.
 
 ---
 
-CHUNK 1: Definitions and Legal Duties
-Section: COP s1.1, s1.2, s1.3; WHS Act s19
-Topic: Defining hazardous tasks and primary safety obligations
+CHUNK 1: Repetitive and Sustained Task Thresholds
+Section: CoP s2.1, s2.2, s3.3
+Topic: Exact time and frequency measurements defining hazardous manual tasks (KEY MEASUREMENTS)
 
-MUSCULOSKELETAL DISORDER (MSD): An injury to, or a disease of, the musculoskeletal system, whether occurring suddenly or over time. Includes sprains, strains, back injuries, nerve compression (e.g. carpal tunnel), and chronic pain.
+REPETITIVE MOVEMENT:
+- Movement or force performed MORE THAN TWICE PER MINUTE = repetitive hazard
 
-HAZARDOUS MANUAL TASK: A task requiring a person to lift, lower, push, pull, carry or otherwise move, hold or restrain any person, animal or thing involving one or more of:
-- Repetitive or sustained force
-- High or sudden force
-- Repetitive movement
-- Sustained or awkward posture
-- Exposure to vibration
+SUSTAINED POSTURE OR FORCE:
+- Posture or force held for MORE THAN 30 SECONDS AT A TIME = sustained hazard
 
-PRIMARY DUTY: A PCBU must manage risks to health and safety relating to a musculoskeletal disorder associated with a hazardous manual task. Must ELIMINATE risks, or if not reasonably practicable, MINIMISE the risks so far as is reasonably practicable.
+LONG DURATION TASK:
+- Task done for MORE THAN 2 HOURS TOTAL OVER A WHOLE SHIFT, OR
+- Task done CONTINUOUSLY FOR MORE THAN 30 MINUTES AT A TIME = long duration hazard
+
+HIGH FORCE INDICATOR:
+- Task requires TWO PEOPLE to complete safely = high force
+- Task requires a stronger person than currently assigned = high force
 
 VISUAL INDICATORS:
-- Worker performing a task with jerky or unexpected movements = sudden force hazard
-- Worker using improvisations (e.g. standing on flattened cartons to reach higher) = design/layout deficiency
-- Two people assigned to handle a heavy load = high force indicator
-- Worker visibly grimacing or stopping to stretch during repetitive task = MSD risk sign
-- No mechanical aids available for heavy or bulky loads = control measure gap
+- Worker performing same motion more than twice per minute without rotation = repetitive risk
+- Worker holding heavy power tool unsupported for several minutes = sustained force risk
+- Packaging line worker repeating same motion continuously = repetitive movement risk
+- Two people assigned to handle a load = high force indicator
+- Worker visibly grimacing or stopping to stretch during task = MSD risk sign
 
 ---
 
-CHUNK 2: Identification and Duration Thresholds
-Section: COP s2.1, s2.2, s3.3
-Topic: Exact measurements for repetitive and sustained hazards
+CHUNK 2: Awkward Posture Angle Thresholds
+Section: CoP s3.3, Table 1; Appendix F
+Topic: Exact degree measurements for awkward postures (KEY MEASUREMENTS)
 
-KEY THRESHOLDS:
-- REPETITIVE: A movement or force performed MORE THAN TWICE A MINUTE
-- SUSTAINED: A posture or force held for MORE THAN 30 SECONDS AT A TIME
-- LONG DURATION: Task done for MORE THAN A TOTAL OF 2 HOURS OVER A WHOLE SHIFT or CONTINUOUSLY FOR MORE THAN 30 MINUTES AT A TIME
-- HIGH FORCE: Any task that a worker describes as very demanding physically, needs help to complete, or REQUIRES A STRONGER PERSON OR TWO PEOPLE TO COMPLETE
+BACK AND NECK BENDING:
+- Bending back or head FORWARDS OR SIDEWAYS MORE THAN 20 DEGREES = awkward posture
+- Bending back or head BACKWARDS MORE THAN 5 DEGREES = awkward posture
+- Twisting back or neck MORE THAN 20 DEGREES = awkward posture
 
-VISUAL INDICATORS:
-- Worker holding a heavy power tool (e.g. 3kg drill) unsupported for several minutes = sustained force risk
-- Packaging tins from a fast-moving process line = repetitive movement risk (likely >2 times/minute)
-- Worker showing signs of white finger or numbness = vibration exposure symptom
-- Task clearly requiring two people being done by one = high force indicator
-- Worker performing same motion repeatedly without rotation or rest = repetitive risk
+ARM AND REACH:
+- Working with one or both hands ABOVE SHOULDER HEIGHT = awkward posture
+- Reaching forwards or sideways MORE THAN 30cm FROM THE BODY = awkward posture
 
----
-
-CHUNK 3: Posture and Movement Risk Factors
-Section: COP s3.3, Table 1; Appendix F
-Topic: Exact degree thresholds for awkward postures
-
-AWKWARD POSTURES — risk of MSD increases if the task involves:
-- Bending the back or head FORWARDS OR SIDEWAYS MORE THAN 20 DEGREES
-- Twisting the back or neck MORE THAN 20 DEGREES
-- Bending the back or head BACKWARDS MORE THAN 5 DEGREES
-- Working with one or both hands ABOVE SHOULDER HEIGHT
-- Reaching forwards or sideways MORE THAN 30cm FROM THE BODY
-- Standing with most of the body's weight on ONE LEG
+STANDING:
+- Standing with most body weight on ONE LEG = awkward posture
 
 VISUAL INDICATORS:
-- Workstation height forcing a worker to bend neck forward significantly = bending >20 degrees
-- Storage shelves positioned so high that arms are constantly overhead = hand height risk
-- Worker reaching behind their body to grab components = awkward movement risk
+- Workstation height forcing worker to bend neck forward significantly = bending >20 degrees
+- Storage shelves positioned so arms are constantly overhead = hand height risk
+- Worker reaching across wide conveyor or workbench = reach >30cm risk
 - Worker twisting torso repeatedly to place items = twisting >20 degrees risk
 - Worker leaning forward significantly over work surface = back flexion >20 degrees
-- Worker reaching across a wide conveyor or workbench = reach >30cm risk
+- Worker reaching behind body to grab components = awkward movement risk
 
 ---
 
-CHUNK 4: Control Measures — Hierarchy and Design
-Section: COP s4.1, s4.3, Table 2
-Topic: Mandatory order of controls and workspace requirements
+CHUNK 3: Office Seating Specifications
+Section: CoP s4.3, Table 2
+Topic: Mandatory features for office chairs used in seated tasks (KEY MEASUREMENTS)
 
-HIERARCHY OF CONTROL (most to least preferred):
-1. ELIMINATION: Automate the task (e.g. robotics) or deliver goods directly to point of use
-2. SUBSTITUTION/ENGINEERING: Replace hand tools with power tools; use mechanical lifting aids; provide height-adjustable workstations; redesign the task or workplace
-3. ADMINISTRATIVE: Rotate workers between different tasks; develop safe lifting procedures; limit exposure duration
-4. PPE: Heat-resistant gloves; shock-absorbent shoes for concrete floors (last resort only)
-
-OFFICE SEATING REQUIREMENTS — for seated tasks, seating should have:
+OFFICE SEATING MUST HAVE:
 - Adjustable seat height AND angle
-- A contoured backrest with a lumbar curve
-- A swivel action
-- A five-point base with castors
+- Contoured backrest with lumbar curve
+- Swivel action
+- Five-point base with castors
 
 VISUAL INDICATORS:
-- Absence of mechanical aids (trolleys, hoists) for moving heavy pallets = hierarchy failure
-- Office chairs with only 4 legs or no height adjustment = non-compliant equipment
-- Workstations that cannot be adjusted to suit different worker heights = design failure
-- Workers relying on PPE (back belts) as the primary control for heavy lifting = inadequate hierarchy
-- No height-adjustable workstation available where workers of different heights do the same task = design gap
+- Office chair with only 4 legs = non-compliant equipment
+- Chair with no height adjustment mechanism = non-compliant
+- Chair with no swivel action = non-compliant
+- Chair with flat backrest (no lumbar curve) = non-compliant
+- Chair with fewer than 5 base points = non-compliant
 
 ---
 
-CHUNK 5: Tools and Mechanical Aids
-Section: COP s4.4; Appendix B
-Topic: Ergonomic tool selection and mechanical support
+CHUNK 4: Hand Tool Grip and Design Requirements
+Section: CoP s4.4; Appendix B
+Topic: Ergonomic tool specifications (KEY MEASUREMENTS)
 
-TOOL DESIGN — hand tools should be designed and selected to:
-- Be held in a NEUTRAL WRIST OR HANDSHAKE POSITION
-- Be light and well-balanced, with the HEAVIEST PART OF THE TOOL BEHIND THE WRIST
-- Have a GRIP SPAN OF 10cm OR LESS for crimping/clamping tools
-
-MECHANICAL AIDS: PCBUs must ensure, so far as is reasonably practicable, that workers are given adequate information, training, instruction and supervision when a mechanical aid is introduced.
-- Examples: Conveyors, overhead cranes, vacuum-assisted lifters, loading dock levellers
+HAND TOOL DESIGN REQUIREMENTS:
+- Tool must be held in NEUTRAL WRIST OR HANDSHAKE POSITION
+- Heaviest part of tool must be BEHIND THE WRIST
+- Grip span of crimping/clamping tools: 10cm OR LESS
 
 VISUAL INDICATORS:
-- Worker using pliers with straight handles that force the wrist into a bent position = improper tool design
-- Heavy rolls of material being lifted manually to a high spindle = engineering control gap (should use adjustable spindle or mechanical aid)
-- Hammer drills or grinders being used without vibration-reducing features = vibration hazard
+- Worker using pliers with straight handles forcing wrist into bent position = improper tool design
 - Tool grip span visibly wider than 10cm on crimping/clamping tools = non-compliant tool
-- Mechanical aid available but not being used = administrative/training failure
+- Heavy power tool with weight forward of wrist = poor tool design
+- Worker's wrist bent upward or downward while using tool = neutral position not maintained
+- Hammer drills or grinders without vibration-reducing features = vibration hazard
 
 ---
 
-CHUNK 6: Systems of Work and Environment
-Section: COP s4.5, s4.6, s4.7
-Topic: Managing workloads, team handling, and environmental stressors
+CHUNK 5: Team Handling and Mechanical Aid Requirements
+Section: CoP s4.4, s4.5
+Topic: When team handling indicates task redesign is mandatory
 
-TEAM HANDLING:
-- Should only be used until a more effective control can be implemented or for tasks undertaken rarely
-- If there is a REGULAR NEED for team handling, the manual task MUST BE REDESIGNED to allow use of mechanical equipment
+TEAM HANDLING RULES:
+- Team handling should only be used UNTIL a more effective control can be implemented OR for tasks undertaken RARELY
+- If there is REGULAR NEED for team handling, the task MUST BE REDESIGNED to allow mechanical equipment use
 
-WORK RATE: Workers should not have to work at a rate that is at the limit of their ability.
-
-ENVIRONMENTAL CONTROLS:
-- Cold: Provide PPE (gloves with good grip) and heaters; ensure rest breaks in a warm place
-- Heat: Provide fans/air-conditioning; supply cool drinking water; use screens to shield from radiant heat
-- Lighting: Must suit the task; use diffusers or reflectors to prevent glare or shadows
-- Floors: Must be free of clutter or obstacles that force workers to adopt awkward postures
+MECHANICAL AIDS MUST BE PROVIDED where reasonably practicable:
+- Examples: conveyors, overhead cranes, vacuum-assisted lifters, loading dock levellers, trolleys, hoists
 
 VISUAL INDICATORS:
-- Two workers struggling to carry a bulky load through a narrow thoroughfare = high-risk team handling
-- Regular team lifting occurring without any mechanical alternative in sight = must be redesigned
-- Floors with clutter or obstacles forcing workers to reach over items = poor housekeeping and awkward posture risk
+- Two workers struggling to carry bulky load through narrow thoroughfare = high-risk team handling
+- Regular team lifting occurring without mechanical alternative visible = must be redesigned
+- Heavy rolls of material being lifted manually to high spindle = engineering control gap
+- Mechanical aid (trolley, hoist) available but not being used = training/supervision failure
+- Absence of mechanical aids for moving heavy pallets = hierarchy failure
+
+---
+
+CHUNK 6: Packaging and Load Labelling Requirements
+Section: CoP s6.2; WHS Regulation s61
+Topic: Mandatory features for packaged loads
+
+PACKAGING MUST PROVIDE:
+- TWO HANDLES to prevent one-handed lifting
+- Label indicating HEAVIEST SIDE of off-centred load
+- Label showing WEIGHT of load
+- Label showing STABILITY characteristics of load
+
+VISUAL INDICATORS:
+- Heavy cardboard boxes without reinforced handholds = supplier duty gap
+- Large boxes with no weight labels = information provision failure
+- Large boxes with no stability labels = non-compliant
+- Boxes with only one handle or grip point = non-compliant packaging
+- Large equipment without designated lifting points for cranes = design deficiency
+
+---
+
+CHUNK 7: Environmental Controls — Temperature and Lighting
+Section: CoP s4.7
+Topic: Visible environmental stressors affecting manual task safety
+
+COLD ENVIRONMENT CONTROLS:
+- PPE: gloves with good grip
+- Heaters must be provided
+- Rest breaks in warm place required
+
+HEAT ENVIRONMENT CONTROLS:
+- Fans or air-conditioning must be provided
+- Cool drinking water must be supplied
+- Screens to shield from radiant heat sources
+
+LIGHTING REQUIREMENTS:
+- Lighting must suit the task
+- Diffusers or reflectors must prevent glare or shadows
+
+FLOORS:
+- Must be free of clutter or obstacles that force awkward postures
+
+VISUAL INDICATORS:
 - Workers perspiring heavily while handling slippery loads = heat/humidity risk
-- Inadequate lighting causing workers to lean closer to their work = posture risk from environment
+- Inadequate lighting causing workers to lean closer to work = posture risk from environment
+- Floors with clutter or obstacles forcing workers to reach over items = poor housekeeping and awkward posture risk
+- No fans or air movement visible in hot environment = heat control gap
+- Glare or shadows on work surface = lighting deficiency
 
 ---
 
-CHUNK 7: Duties of Upstream Duty Holders
-Section: COP s6.1, s6.2; WHS Regulation s61
-Topic: Obligations for designers and manufacturers
+CHUNK 8: Workstation Height and Adjustability
+Section: CoP s4.3, Table 2
+Topic: Height-adjustable workstations and workspace design
 
-DESIGN DUTY: A designer MUST ENSURE plant or structure is designed to ELIMINATE the need to carry out a hazardous manual task.
-
-INFORMATION PROVISION: Manufacturers and designers must give each person provided with the design or plant adequate information about features that eliminate or minimise the need for hazardous manual tasks.
-
-PACKAGING — manufacturers should consider:
-- Providing TWO HANDLES to prevent one-handed lifting
-- Labelling loads to indicate the HEAVIEST SIDE of an off-centred load
-- Labelling the WEIGHT AND STABILITY of the load
+WORKSTATION DESIGN:
+- Height-adjustable workstations must be provided where workers of different heights perform same task
+- Workstations must allow neutral postures (no bending >20 degrees, no reaching >30cm)
 
 VISUAL INDICATORS:
-- Heavy cardboard boxes arriving without reinforced handholds = supplier duty gap
-- Large equipment arriving without designated lifting points for cranes = design deficiency
-- Large boxes arriving with no weight or stability labels = information provision failure
-- Machinery delivered without manual handling instructions or lifting point markings = non-compliant
+- Workstations that cannot be adjusted to suit different worker heights = design failure
+- No height-adjustable workstation where workers of different heights do same task = design gap
+- Worker forced to bend forward significantly due to fixed workstation height = non-compliant design
+- Worker standing on improvised platform (flattened cartons, blocks) to reach work height = design deficiency
+- Work surface too high forcing arms above shoulder height = awkward posture risk
+
+---
+
+CHUNK 9: PPE as Last Resort Control
+Section: CoP s4.1, s4.3, Table 2
+Topic: PPE hierarchy position and examples
+
+PPE IS THE LAST RESORT — only after elimination, substitution, engineering and administrative controls:
+- Heat-resistant gloves (for thermal hazards)
+- Shock-absorbent shoes for concrete floors
+- Gloves with good grip (for cold environments)
+
+PPE MUST NOT be the primary control for heavy lifting or high force tasks.
+
+VISUAL INDICATORS:
+- Workers relying on back belts as primary control for heavy lifting = inadequate hierarchy
+- Workers wearing PPE (gloves, belts) but no mechanical aids available = hierarchy failure
+- Back support belts visible on workers performing regular heavy lifting = control measure gap
+
+---
+
+CHUNK 10: Work Rate and Task Rotation
+Section: CoP s4.5, s4.6
+Topic: Workload management and rotation requirements
+
+WORK RATE:
+- Workers must NOT have to work at a rate that is at the limit of their ability
+
+TASK ROTATION:
+- Rotate workers between different tasks to reduce exposure duration
+- Rotation is an administrative control (lower in hierarchy than engineering controls)
+
+VISUAL INDICATORS:
+- Worker unable to keep pace with process line speed = work rate exceeds capacity
+- Same worker performing repetitive task for extended period without rotation = administrative control gap
+- Worker showing signs of fatigue or strain during shift = work rate or rotation issue
+- No evidence of task rotation where repetitive tasks exceed 2 hours total = administrative failure
+
+---

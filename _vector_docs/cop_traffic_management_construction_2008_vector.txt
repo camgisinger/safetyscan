@@ -5,206 +5,272 @@ REGION: QLD
 WORK_TYPES: construction, road_maintenance, traffic_control, civil_works, landscaping, excavation
 SOURCE: Workplace Health and Safety Queensland (WHSQ)
 CURRENT AS AT: 2008 (Preserved under WHS Act 2011; varied 1 July 2018)
-CLAUSE_PREFIX: s
-REFERENCE_STANDARD: Manual of Uniform Traffic Control Devices Part 3 (MUTCD Part 3) — PRIMARY TECHNICAL STANDARD for all sign placement distances, delineation specifications, and device requirements; AS/NZS 4602 High visibility safety garments; AS/NZS 1906 Retroreflective materials; AS/NZS 1768 Lightning protection; ISO 9533 Earth-moving machinery alarms.
-NOTE: MUTCD Part 3 is the primary technical document for sign distances, cone spacing, and delineation device specifications. This CoP covers the legal duty framework, roles, accreditation, and site management obligations.
 
 ---
 
-CHUNK 1: Primary Duties and Application
-Section: s1.3, s1.4, s2.2, s2.5
-Topic: Legislative framework and who this CoP applies to
+CHUNK 1: Traffic Controller Speed Limit and Signage
+Section: s5.1, s5.2
+Topic: Maximum approach speed for traffic controller operations and mandatory signage (KEY MEASUREMENT)
 
-PRIMARY DUTY: A PCBU must ensure, as far as reasonably practicable, that workers and other persons are not exposed to health and safety risks arising from construction or maintenance work on or adjacent to a road.
+MAXIMUM APPROACH SPEED:
+- Traffic controller MUST NOT direct traffic if approach speed exceeds 60 km/hr
+- Work in 80 km/hr or higher zones requires additional engineering controls — controller alone is insufficient
 
-APPLICATION — this CoP applies to:
-- Construction work on or adjacent to a road: building roads, laying pipes, excavation
-- Maintenance work on or adjacent to a road: mowing medians, tree trimming, utility service work, pothole repair
-
-PRINCIPAL CONTRACTOR:
-- Required for construction projects costing MORE THAN $250,000
-- Must prepare a WRITTEN WHS MANAGEMENT PLAN before work starts
-- The plan must include or attach a TRAFFIC MANAGEMENT PLAN OR GUIDANCE SCHEME (per MUTCD Part 3)
+MANDATORY SIGNAGE:
+- "TRAFFIC CONTROLLER AHEAD / PREPARE TO STOP" sign MUST be erected at start of shift
+- Sign MUST be removed when work suspended or completed
 
 VISUAL INDICATORS:
-- Workers trimming trees on a median strip without any traffic management controls = application of this CoP; duty breach
-- WHS management plan available on site for a road project costing >$250,000 = positive compliance
-- Maintenance workers on a road-adjacent area without high-visibility garments = primary duty failure
-- No traffic management plan on a construction project adjacent to a live road = serious non-compliance
+- Traffic controller directing traffic in 80 km/hr or higher zone = serious non-compliance
+- "Traffic Controller Ahead" sign missing while controller active = mandatory signage failure
+- Sign still displayed when no controller present = non-compliant
 
 ---
 
-CHUNK 2: High Risk Construction Work and SWMS
-Section: s2.1, s2.3, s3.1
-Topic: SWMS requirements for road-adjacent work
+CHUNK 2: Traffic Controller Prohibitions and Accreditation
+Section: s5.2, s5.3
+Topic: Prohibited activities and mandatory accreditation requirements
 
-CLASSIFICATION: Construction work on or adjacent to a road is defined as HIGH RISK CONSTRUCTION WORK under the WHS Regulation.
+PROHIBITED:
+- Mobile phone use while directing traffic — ANY USE
+- Blood alcohol concentration above ZERO while performing functions
 
-SWMS REQUIREMENT: A PCBU must ensure a SAFE WORK METHOD STATEMENT IS PREPARED before work starts. The SWMS must:
-- Identify the work that is high risk construction work
-- Specify hazards and risks associated with the work
-- Describe control measures (including compliance with MUTCD Part 3)
-- Describe how control measures are to be implemented, monitored and reviewed
-- Be SITE-SPECIFIC — generic SWMS without site-specific details (actual lane configuration, speed zone, device layout) are not acceptable
+ACCREDITATION:
+- Only ACCREDITED traffic controllers may perform controller duties
+- Must CARRY identity card at all times while working
+- Must present card on request
 
 VISUAL INDICATORS:
-- Work commencing on a road-adjacent area without a written SWMS on site = regulatory breach
-- Generic SWMS not updated with site-specific details (actual lane configuration, speed environment) = process failure
-- Workers performing tasks outside the work zone delineated in the SWMS = non-compliance
-- SWMS not available for inspection on site = non-compliant
+- Traffic controller using mobile phone while holding Stop/Slow bat = prohibited activity
+- Controller unable to produce accreditation card = compliance failure
+- Controller showing signs of impairment = zero-tolerance breach
 
 ---
 
-CHUNK 3: Traffic Management Principles and MUTCD Compliance
-Section: s4.2, s4.3, s4.4
-Topic: Planning and placement of traffic control devices
-
-TECHNICAL STANDARD: MUTCD Part 3 is the PRIMARY TECHNICAL STANDARD for temporary traffic control signs, devices, distances, and layouts. All traffic guidance schemes must comply.
-
-BASIC MANDATORY PRINCIPLES:
-- Signs and devices MUST BE ERECTED AND DISPLAYED BEFORE WORK COMMENCES — not after plant has started
-- Devices MUST BE REGULARLY CHECKED AND MAINTAINED throughout the shift
-- Signs MUST BE REMOVED AS SOON AS PRACTICABLE after work is complete
-- Appropriate warning signs SHOULD REMAIN in place until related work (loose stone removal, line marking) is also completed
-
-VISUAL INDICATORS:
-- Roadwork signs found face-down, damaged, or blown over during active work = maintenance failure
-- Worker setting up traffic cones AFTER heavy plant has already begun excavating = timing breach — devices must precede work
-- "Workers Ahead" or "Road Works" signs present when no workers are on site (e.g. during lunch, after hours) = planning failure — must be removed or covered
-- Traffic guidance scheme devices not matching the layout in the site SWMS or traffic management plan = non-compliant implementation
-
----
-
-CHUNK 4: Traffic Controller Roles and Prohibitions
-Section: s5.1, s5.2, s5.3
-Topic: Mandatory standards for accredited traffic controllers
-
-SPEED LIMIT RESTRICTION: A traffic controller MUST NOT DIRECT TRAFFIC through a worksite unless the APPROACH SPEED IS 60 km/hr OR LESS.
-- Work requiring traffic control in 80 km/hr or higher zones requires additional engineering controls — a traffic controller alone is not sufficient
-
-ALCOHOL: A traffic controller MUST MAINTAIN A ZERO PER CENT BLOOD ALCOHOL CONCENTRATION while performing functions.
-
-MOBILE PHONES: MUST NOT be used in any circumstances while directing traffic.
-
-MANDATORY SIGNAGE: The "TRAFFIC CONTROLLER AHEAD / PREPARE TO STOP" sign MUST BE:
-- Erected correctly at the START OF A SHIFT
-- REMOVED when work is suspended or completed
-
-VISUAL INDICATORS:
-- Traffic controller directing traffic in an 80 km/hr or higher zone = serious safety breach
-- Traffic controller using a mobile phone while holding a Stop/Slow bat = prohibited activity
-- "Traffic Controller Ahead" sign missing while a controller is active on the road = mandatory signage failure
-- Traffic controller visibly impaired or showing signs of alcohol or drug use = zero-tolerance breach
-- Traffic controller wearing non-high-visibility clothing = non-compliant
-
----
-
-CHUNK 5: Training, Accreditation, and Certifications
-Section: s5.3, s6.2, s6.3
-Topic: Mandatory certifications for traffic controllers and site workers
-
-TRAFFIC CONTROLLER ACCREDITATION:
-- PCBUs must use ONLY ACCREDITED TRAFFIC CONTROLLERS to perform controller duties
-- Controllers must CARRY THEIR IDENTITY CARD AT ALL TIMES while working
-- Must present accreditation card on request
-
-GENERAL SITE INDUCTION: All workers must have SUCCESSFULLY COMPLETED a general construction safety induction (White Card) before working on site.
-
-MUTCD TRAINING LEVELS — three tiers:
-1. WORKING IN PROXIMITY TO TRAFFIC (Parts 1 and 2): For workers on or adjacent to a road who are not controlling traffic
-2. TRAFFIC MANAGEMENT IMPLEMENT: For persons implementing (setting up) a traffic management plan or guidance scheme
-3. TRAFFIC MANAGEMENT DESIGN: For persons designing traffic management plans and guidance schemes
-
-VISUAL INDICATORS:
-- Worker on site unable to produce a White Card or equivalent induction evidence = training breach
-- Traffic controller refusing to present accreditation ID card = compliance failure
-- Complex traffic plan designed by a person without Traffic Management Design qualification = accreditation breach
-- Worker installing devices without Traffic Management Implement qualification = non-compliant
-- No evidence of any MUTCD training for road-adjacent workers = non-compliant
-
----
-
-CHUNK 6: Site Routines and Record Keeping
-Section: s7.1, s7.4, s7.5, s7.6
-Topic: Mandatory inspections and daily documentation
-
-REQUIRED RECORDS: Daily records of the TRAFFIC GUIDANCE SCHEME (including regulatory signs and speed restrictions) MUST BE KEPT in a site diary or work sheet.
-
-DAILY ROUTINES:
-
-BEFORE WORK:
-- Inspect all signs and devices
-- Check water-ballasted barriers for damage and water level
-- Conduct an INSPECTION DRIVE-THROUGH from a road-user perspective before opening to traffic
-
-DURING WORK:
-- Periodically drive through to check signs are satisfactory from a road-user perspective
-- Move personnel clear of traffic hazard zones during breaks
-
-END OF DAY:
-- Carry out pre-closedown inspection
-- REMOVE "Traffic Controller Ahead" signs
-- Affix and light lamps on advance signs if work zone will be left overnight
-
-VISUAL INDICATORS:
-- Site diary with no record of sign arrangement, changes, or inspection times = record-keeping failure
-- Water-ballasted barrier modules that are empty or visibly damaged = maintenance failure
-- No evidence of morning drive-through inspection = routine breach
-- Work zone left overnight without lamps on advance signs = non-compliant after-hours setup
-- Site diary not available for inspection = non-compliant
-
----
-
-CHUNK 7: Night Work and Low-Light Conditions
+CHUNK 3: Night Work Staffing and Equipment Requirements
 Section: s8.2, s8.3
-Topic: Additional requirements when visibility is reduced
+Topic: Minimum staffing and mandatory equipment for night operations (KEY MEASUREMENT)
 
-NIGHT WORK DEFINITION: Conditions from sunset to sunrise OR any time when there is INSUFFICIENT LIGHT TO SEE A PERSON OR VEHICLE AT 150 METRES.
+NIGHT WORK DEFINITION:
+- Sunset to sunrise OR insufficient light to see person/vehicle at 150 METRES
 
-NIGHT WORK REQUIREMENTS:
-- At least TWO WORKERS at any time during night work
-- Workers must wear RETROREFLECTIVE CLOTHING (vests AND gaiters)
-- Traffic cones must have RETROREFLECTIVE BANDS — plain cones are non-compliant at night
+MANDATORY REQUIREMENTS:
+- Minimum TWO WORKERS on site at all times during night work
+- Workers must wear RETROREFLECTIVE clothing — vests AND gaiters
+- Traffic cones must have RETROREFLECTIVE BANDS — plain cones non-compliant
 
 VISUAL INDICATORS:
-- Night works in progress with only ONE WORKER on site = safety breach
-- Traffic cones used at night WITHOUT RETROREFLECTIVE BANDS = visibility failure
-- Workers wearing high-vis vests but not retroreflective gaiters during night work = incomplete PPE
-- Work area at night with no additional lighting beyond standard traffic devices = flag
+- Night work with only ONE worker visible = safety breach
+- Traffic cones without retroreflective bands at night = visibility failure
+- Workers wearing hi-vis vests but no retroreflective gaiters at night = incomplete PPE
 
 ---
 
-CHUNK 8: Environmental Hazards
-Section: s8.4, s8.7, s8.8, s8.9
-Topic: Heat, lightning, wet weather, and manual tasks
+CHUNK 4: Device Timing and Maintenance
+Section: s4.2, s4.3, s4.4
+Topic: Mandatory timing for sign/device placement and ongoing maintenance
 
-HEAT AND UV:
-- UV radiation risk is highest BETWEEN 9am AND 3pm
-- Workers should be provided shade, sun protection, and hydration
+TIMING REQUIREMENTS:
+- Signs and devices MUST be erected BEFORE work commences — not after plant starts
+- Signs MUST be removed as soon as practicable after work complete
+- Warning signs should remain until related work (loose stone removal, line marking) also complete
 
-LIGHTNING:
-- Metal objects (including metal Stop/Go bats) can act as conductors during electrical storms
-- Workers MUST BE PROTECTED from lightning strikes during thunderstorms
+MAINTENANCE:
+- Devices MUST be regularly checked and maintained throughout shift
+
+VISUAL INDICATORS:
+- Worker setting up cones AFTER excavator already operating = timing breach
+- "Road Works" signs present when no workers on site (lunch, after hours) = planning failure
+- Signs face-down, damaged, or blown over during active work = maintenance failure
+
+---
+
+CHUNK 5: High Visibility Garments and PPE
+Section: s8.2, s8.3; AS/NZS 4602
+Topic: Mandatory high-visibility clothing requirements
+
+DAY WORK:
+- High visibility safety vest mandatory for all workers on or adjacent to road
+
+NIGHT WORK:
+- RETROREFLECTIVE clothing mandatory — vests AND gaiters
+- Standard high-vis vests alone insufficient at night
+
+VISUAL INDICATORS:
+- Workers on road-adjacent area without high-vis vests = primary duty failure
+- Night workers wearing only standard hi-vis vest without gaiters = incomplete night PPE
+- Workers in non-high-visibility clothing = non-compliant
+
+---
+
+CHUNK 6: Lightning and Metal Objects
+Section: s8.7
+Topic: Lightning strike protection and metal conductor hazards
+
+LIGHTNING HAZARD:
+- Metal objects (including metal Stop/Go bats) act as conductors during electrical storms
+- Workers MUST be protected from lightning strikes during thunderstorms
 - Work should cease and workers shelter during active lightning
 
-WET WEATHER:
-- Increases risk of SLIPPERY SURFACES for workers and vehicles
-- Significantly increases risk of EXCAVATIONS CAVING IN — trench shoring requirements become more critical
-- Electric cables must not be left lying on wet ground — must be raised
+VISUAL INDICATORS:
+- Traffic controller holding METAL Stop/Go bat during active electrical storm = critical life-safety risk
+- Workers continuing road work during visible lightning without shelter = non-compliant weather control
 
-RECYCLED WATER:
-- Non-potable water used for dust control or barrier filling is a "substance" under the WHS Act
-- PCBUs must prevent injury or illness from its use (bacterial contamination risk)
-- Warning signs required for public if recycled water is used for dust suppression
+---
 
-MANUAL TASKS — sign and device handling involves grasping, carrying, and moving loads:
-- Bend at the knees
+CHUNK 7: Wet Weather Controls
+Section: s8.8
+Topic: Additional hazards and controls during wet conditions
+
+WET WEATHER HAZARDS:
+- Slippery surfaces for workers and vehicles
+- Significantly increased excavation cave-in risk — shoring becomes more critical
+- Electric cables MUST NOT lie on wet ground — must be raised
+
+VISUAL INDICATORS:
+- Electric cables lying directly on wet ground during rain = non-compliant
+- Excavation without additional shoring during heavy rain = elevated cave-in risk
+
+---
+
+CHUNK 8: Overnight Work Zone Requirements
+Section: s7.6
+Topic: Mandatory controls when work zone left overnight
+
+END OF DAY REQUIREMENTS:
+- "Traffic Controller Ahead" signs MUST be removed
+- Lamps MUST be affixed and lit on advance signs if work zone left overnight
+
+VISUAL INDICATORS:
+- Work zone left overnight without lamps on advance signs = non-compliant after-hours setup
+- "Traffic Controller Ahead" sign still displayed overnight with no controller = non-compliant
+
+---
+
+CHUNK 9: Water-Ballasted Barriers
+Section: s7.4
+Topic: Daily inspection requirements for water-filled barrier modules
+
+DAILY INSPECTION REQUIRED:
+- Check for damage
+- Check water level
+
+VISUAL INDICATORS:
+- Water-ballasted barrier modules visibly empty = maintenance failure
+- Barriers with visible damage (cracks, splits, deformation) = non-compliant condition
+
+---
+
+CHUNK 10: Recycled Water Warning Signs
+Section: s8.9
+Topic: Public warning requirements when using non-potable water
+
+RECYCLED WATER USE:
+- Non-potable water used for dust control or barrier filling is a "substance" under WHS Act
+- Warning signs REQUIRED for public if recycled water used for dust suppression
+
+VISUAL INDICATORS:
+- Workers using recycled water for dust suppression without public warning signs = health risk management failure
+- Visible recycled water use (purple-tinted water, tanker markings) without signage = non-compliant
+
+---
+
+CHUNK 11: Manual Handling of Traffic Devices
+Section: s8.9
+Topic: Safe lifting and handling requirements for signs and barriers
+
+MANUAL TASK CONTROLS:
+- Bend at knees when lifting
 - Use team lifting or obtain assistance for heavy items
 - Use mechanical aids where available
 
 VISUAL INDICATORS:
-- Traffic controller continuing to hold a METAL STOP/GO BAT during an active electrical storm = critical life-safety risk
-- Single worker attempting to manually lift a large concrete barrier module = hazardous manual task
-- Electric cables lying directly on wet ground during rain = non-compliant weather control
-- Workers using recycled water for dust suppression without public warning signs = health risk management failure
-- Workers with no shade, sun protection, or water during peak UV hours = heat management failure
+- Single worker attempting to manually lift large concrete barrier module = hazardous manual task
+- Worker lifting heavy sign with bent back/straight legs = poor manual handling technique
+
+---
+
+CHUNK 12: Heat and UV Protection Timing
+Section: s8.4
+Topic: Peak UV radiation period and worker protection (KEY MEASUREMENT)
+
+UV RADIATION RISK:
+- Highest BETWEEN 9am AND 3pm
+- Workers should be provided shade, sun protection, and hydration
+
+VISUAL INDICATORS:
+- Workers with no shade, sun protection, or water during peak UV hours (9am–3pm) = heat management failure
+- No water supply visible on site during hot conditions = inadequate hydration provision
+
+---
+
+CHUNK 13: MUTCD Compliance and Device Layout
+Section: s4.2, s4.3
+Topic: Technical standard compliance for traffic control devices
+
+TECHNICAL STANDARD:
+- MUTCD Part 3 is PRIMARY TECHNICAL STANDARD for temporary traffic control signs, devices, distances, and layouts
+- All traffic guidance schemes must comply
+
+VISUAL INDICATORS:
+- Traffic guidance scheme devices not matching MUTCD Part 3 specifications = non-compliant implementation
+- Sign placement distances not matching MUTCD Part 3 requirements = technical breach
+- Device layout not matching site SWMS or traffic management plan = non-compliant implementation
+
+---
+
+CHUNK 14: Construction Project Value Threshold
+Section: s2.5
+Topic: Written WHS management plan requirement trigger (KEY MEASUREMENT)
+
+PRINCIPAL CONTRACTOR REQUIREMENT:
+- Required for construction projects costing MORE THAN $250,000
+- Must prepare WRITTEN WHS MANAGEMENT PLAN before work starts
+- Plan must include or attach TRAFFIC MANAGEMENT PLAN OR GUIDANCE SCHEME (per MUTCD Part 3)
+
+VISUAL INDICATORS:
+- WHS management plan available on site for road project costing >$250,000 = positive compliance
+- No traffic management plan on construction project adjacent to live road = serious non-compliance
+- Generic plan without site-specific details (actual lane configuration, speed zone) = process failure
+
+---
+
+CHUNK 15: White Card and MUTCD Training Evidence
+Section: s5.3, s6.2, s6.3
+Topic: Mandatory certifications and training levels
+
+GENERAL INDUCTION:
+- All workers must have completed general construction safety induction (White Card) before working on site
+
+MUTCD TRAINING LEVELS:
+1. WORKING IN PROXIMITY TO TRAFFIC (Parts 1 and 2): Workers on/adjacent to road not controlling traffic
+2. TRAFFIC MANAGEMENT IMPLEMENT: Persons setting up traffic management plan/guidance scheme
+3. TRAFFIC MANAGEMENT DESIGN: Persons designing traffic management plans
+
+VISUAL INDICATORS:
+- Worker unable to produce White Card or equivalent = training breach
+- Worker installing devices without Traffic Management Implement qualification = non-compliant
+- No evidence of MUTCD training for road-adjacent workers = non-compliant
+
+---
+
+CHUNK 16: Site Diary and Daily Records
+Section: s7.1, s7.5
+Topic: Mandatory documentation and inspection records
+
+REQUIRED RECORDS:
+- Daily records of TRAFFIC GUIDANCE SCHEME (including regulatory signs and speed restrictions) MUST be kept in site diary or worksheet
+
+DAILY INSPECTION REQUIREMENTS:
+
+BEFORE WORK:
+- Inspect all signs and devices
+- Conduct INSPECTION DRIVE-THROUGH from road-user perspective before opening to traffic
+
+DURING WORK:
+- Periodically drive through to check signs satisfactory from road-user perspective
+
+VISUAL INDICATORS:
+- Site diary with no record of sign arrangement, changes, or inspection times = record-keeping failure
+- No evidence of morning drive-through inspection = routine breach
+- Site diary not available for inspection = non-compliant

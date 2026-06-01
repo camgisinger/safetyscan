@@ -12,619 +12,355 @@ APPROVED UNDER: Work Health and Safety Act 2011 (Qld) s274
 
 ---
 
-CHUNK 1: Definitions — What is a Tower Crane?
-Section: CoP s1.1; WHS Regulation definitions
-Topic: Legal definitions of tower crane and self-erecting tower crane under Queensland WHS Regulation
+CHUNK 1: Design Registration Plate and Item Registration
+Section: CoP s2.1; WHS Regulation s243–s245
+Topic: Mandatory design and item registration for tower cranes; registration plate requirements
 
-TOWER CRANE DEFINITION (WHS Regulation):
-- A TOWER CRANE means a crane that has a BOOM OR JIB MOUNTED ON A TOWER STRUCTURE
-- For HIGH RISK WORK LICENSING purposes, a tower crane, if a jib crane, may be a HORIZONTAL OR LUFFING JIB TYPE and the tower structure may be DEMOUNTABLE OR PERMANENT
-- 'Tower crane' does NOT include a self-erecting tower crane for HRW licensing purposes
+MANDATORY:
+- ALL tower cranes (luffing, hammerhead, self-erecting) require DESIGN REGISTRATION before supply (WHS Regulation s243)
+- ALL tower cranes require ITEM REGISTRATION before commissioning
+- Design registration number must be ACCESSIBLE on site
+- Manufacturer's plate must show: date of manufacture, serial number, design registration number
 
-SELF-ERECTING TOWER CRANE DEFINITION (WHS Regulation):
-- A crane that is NOT DISASSEMBLED into a tower element and a boom or jib element in the normal course of use
-- ERECTING AND DISMANTLING PROCESSES are an inherent part of the crane's function
-
-THREE TYPES OF TOWER CRANES USED IN AUSTRALIA:
-1. LUFFING — boom angle adjustable; used where horizontal boom reach is limited
-2. HAMMERHEAD (including topless) — horizontal jib; trolley traverses jib
-3. SELF-ERECTING — does not require a mobile crane for erection; counterweight at base; typically remote-controlled
-
-REGISTRATION:
-- ALL THREE TYPES require both DESIGN REGISTRATION and ITEM REGISTRATION under WHS Regulation Schedule 5
-- Design registration required BEFORE supply; item registration required BEFORE commissioning
-
-VISUAL INDICATORS:
-- Any tower crane (luffing, hammerhead, self-erecting) on site without plant design registration number accessible = serious non-compliance
-- Tower crane in operation without item registration = serious non-compliance
-- Self-erecting tower crane operated by person in crane cabin (not typical) = flag for assessment
-
----
-
-CHUNK 2: Duty Holders — Who Has Health and Safety Duties for Tower Cranes?
-Section: CoP s1.2; WHS Act s19, s21–s29; WHS Regulation s203–s213, s219–s220
-Topic: Legal duties of all parties involved in tower crane design, supply, ownership, and operation
-
-PRIMARY DUTY — PCBU (WHS Act s19):
-- Must ELIMINATE risks arising from tower crane operations, or if not reasonably practicable: MINIMISE risks so far as is reasonably practicable
-- Specific duties include ensuring:
-  - PROVISION AND MAINTENANCE OF SAFE PLANT including cranes
-  - SAFE USE, HANDLING, STORAGE AND TRANSPORT of plant
-
-PCBU WITH MANAGEMENT OR CONTROL OF PLANT (WHS Regulation s203–s213):
-- Applies to principal contractors, crane owners, hirers, and lessees
-- If you OWN a crane = person with management or control
-- If you HIRE OR LEASE a crane = you have management or control for the period of hire
-- Both owner and hirer simultaneously have duties to eliminate or minimise risks
-
-DESIGNERS, MANUFACTURERS, SUPPLIERS AND IMPORTERS (WHS Act s22–s26):
-- Must ensure plant is WITHOUT RISKS to health and safety so far as reasonably practicable
-- Must carry out ANALYSIS, TESTING OR EXAMINATION and provide SPECIFIC INFORMATION
-- SUPPLIERS must provide a purchaser of a crane requiring design registration with the DESIGN REGISTRATION NUMBER
-
-OFFICERS (WHS Act s27):
-- Must exercise DUE DILIGENCE to ensure PCBU compliance
-- Must ensure business has APPROPRIATE RESOURCES AND PROCESSES to eliminate or minimise risks from plant
-
-WORKERS AND OTHER PERSONS (WHS Act s28–s29):
-- Must take REASONABLE CARE for own health and safety
-- Must NOT ADVERSELY AFFECT other persons' health and safety
-- Must COMPLY WITH REASONABLE INSTRUCTIONS
-
-CRANE OWNER SPECIFIC DUTIES:
-- Must establish crane is, so far as reasonably practicable, WITHOUT RISKS before commissioning
-- Must ensure construction or commissioning completed by COMPETENT PERSON
-- Must ensure all MANUFACTURER'S INFORMATION is supplied and accessible (e.g. operating manual kept on crane)
-- Must ensure DESIGN, LOAD CHART, MAINTENANCE RECORDS and INSPECTION REPORTS available before deployment
-- Must ensure MAINTENANCE, INSPECTION AND TESTING carried out by a COMPETENT PERSON
-
-PCBU MUST NOT:
-- Direct or allow a worker to carry out HIGH RISK WORK (tower crane operation) without seeing WRITTEN EVIDENCE of the relevant HIGH RISK WORK LICENCE
-
-VISUAL INDICATORS:
-- Tower crane operating without operator holding a valid high risk work licence = serious non-compliance
-- No maintenance records, inspection records or load chart available on site = non-compliance
-- Crane hired without documented transfer of WHS duties and safety information between owner and hirer = flag
-
----
-
-CHUNK 3: Risk Management — Managing Risks Associated with Tower Cranes
-Section: CoP s1.2; WHS Regulation s35
-Topic: Systematic risk management process for tower crane operations; hazard identification, risk assessment, controls, and review
-
-TOWER CRANE RISK SOURCES:
-- STRUCTURAL FAILURE
-- COLLAPSE
-- CONTACT OR COLLISION with other plant and structures
-- ARCING OR FLASHOVER when crane boom comes close to an energised electric line
-- FALLING OBJECTS
-- FALLING FROM A HEIGHT (refer also to Managing the risk of falls at workplaces Code of Practice 2011)
-- NOISE (refer also to Managing noise and preventing hearing loss at work Code of Practice 2011)
-- FATIGUE
-
-RISK MANAGEMENT STEPS (WHS Regulation s35):
-1. IDENTIFY HAZARDS — observe workplace; ask crane operator, crew and others; review inspection, test, maintenance records, logbooks and incident records including near misses
-2. ASSESS RISKS — identify who is most at risk; determine what action to take and urgency
-3. CONTROL RISKS — eliminate or minimise using hierarchy (in order):
-   - SUBSTITUTION (e.g. replace restricted-vision cabin with clear-vision or remote pendant)
-   - ISOLATION (e.g. concrete barriers creating exclusion zones separating crane from workers and mobile plant)
-   - ENGINEERING CONTROLS (e.g. FOPS — falling objects protective structure on operator)
-   - ADMINISTRATIVE CONTROLS (e.g. scheduling crane operations to reduce pedestrian/vehicle interaction)
-   - PPE (e.g. gloves, hard hats, high visibility vests, ear plugs/muffs, eye protection)
-4. REVIEW — regularly review control measures to ensure they remain effective
-
-CONSULTATION REQUIREMENTS (WHS Act s47–s48):
-- PCBU must consult workers who are or are likely to be DIRECTLY AFFECTED by matters relating to WHS
-- If workers are represented by a HEALTH AND SAFETY REPRESENTATIVE, consultation must involve that representative
-- Consultation = sharing information + giving workers reasonable opportunity to express views + taking those views into account
-
-MULTIPLE DUTY HOLDERS (WHS Act s46):
-- Where more than one PCBU has a duty for the same matter, each must CONSULT, COOPERATE AND COORDINATE with all others
-
-VISUAL INDICATORS:
-- No documented risk assessment for tower crane operations, lifting plans, or SWMS = non-compliance
-- Control measures not reviewed after incidents, near misses, or changes = non-compliance
-- No evidence of worker consultation in relation to crane operations or safety planning = flag
-
----
-
-CHUNK 4: Safe Work Method Statements — Tower Crane High Risk Construction Work
-Section: CoP s1.3; WHS Regulation s299, s291
-Topic: SWMS obligations for high risk construction work involving tower cranes
-
-SWMS OBLIGATION (WHS Regulation s299):
-- A SWMS must be PREPARED OR ALREADY PREPARED before HIGH RISK CONSTRUCTION WORK starts
-- PCBU must ensure a SWMS is available for all high risk work activities on site
-
-HIGH RISK CONSTRUCTION WORK RELEVANT TO TOWER CRANES includes work:
-- Involving a RISK OF A PERSON FALLING MORE THAN 2 METRES
-- Involving DEMOLITION of a load-bearing element of a structure
-- Carried out on or near ENERGISED ELECTRICAL INSTALLATIONS OR SERVICES
-- At a workplace with MOVEMENT OF POWERED MOBILE PLANT
-- Carried out on, in or adjacent to a ROAD, RAILWAY, SHIPPING LANE OR OTHER TRAFFIC CORRIDOR in use by traffic other than pedestrians
-- Involving STRUCTURAL ALTERATIONS OR REPAIRS requiring temporary support
-- Carried out in or near a SHAFT OR TRENCH with excavated depth GREATER THAN 1.5 METRES, or a TUNNEL
-- Involving USE OF EXPLOSIVES
-- Carried out on or near CHEMICAL, FUEL OR REFRIGERANT LINES
-- Carried out in an area that may have a CONTAMINATED OR FLAMMABLE ATMOSPHERE
-- Involving TILT-UP OR PRECAST CONCRETE
-- Carried out in or near WATER involving a RISK OF DROWNING
-
-SWMS MUST:
-- Identify the TYPE OF HIGH RISK CONSTRUCTION WORK being done
-- Specify the HEALTH AND SAFETY HAZARDS AND RISKS arising from the work
-- Describe HOW THE RISKS WILL BE CONTROLLED
-- Describe HOW CONTROL MEASURES WILL BE IMPLEMENTED, MONITORED AND REVIEWED
-
-SWMS DEVELOPMENT:
-- Must be developed in CONSULTATION WITH WORKERS and their representatives who will carry out the high risk work
-
-VISUAL INDICATORS:
-- High risk construction work involving tower crane operations commencing without a prepared SWMS = serious non-compliance
-- SWMS not developed in consultation with workers = non-compliance
-- SWMS not reviewed after changes to work process = flag
-
----
-
-CHUNK 5: Information, Training, Instruction and Supervision
-Section: CoP s1.4; WHS Act s19(3)(f); WHS Regulation s39(2)–(3), s317(1)
-Topic: PCBU obligations for training and supervision of all persons involved in tower crane operations
-
-PCBU OBLIGATIONS (WHS Act s19; WHS Regulation s39):
-- Must ensure provision of information, training, instruction or supervision NECESSARY TO PROTECT ALL PERSONS from risks arising from tower crane work
-- Information, training and instruction must be SUITABLE AND ADEQUATE having regard to:
-  - NATURE OF THE WORK carried out by the worker
-  - NATURE OF THE RISKS at the time of training
-  - CONTROL MEASURES implemented
-- Must ensure information, training and instruction are READILY UNDERSTANDABLE to the recipient
-
-CONSTRUCTION INDUCTION REQUIREMENT (WHS Regulation s317(1)):
-- PCBU must NOT direct or allow a worker to carry out CONSTRUCTION WORK unless the worker has:
-  - Successfully completed GENERAL CONSTRUCTION INDUCTION TRAINING, AND
-  - If training completed MORE THAN 2 YEARS PREVIOUSLY — has carried out construction work in the PRECEDING 2 YEARS
-
-ALL PERSONS EXPOSED TO TOWER CRANE RISKS SHOULD BE PROVIDED WITH INFORMATION ABOUT:
-- Work health and safety legislation
-- Organisation's WHS policy or program
-- Risk management processes
-- Control measures in place to minimise exposure to workplace hazards
-- Safe work procedures
-- How to use and maintain equipment
-- Any SPECIAL SAFETY INFORMATION needs
-
-TRAINING CONSIDERATIONS:
-- Formal training required in some cases; on-the-job training may be appropriate in others
-- Must take into account: LITERACY LEVELS, WORK EXPERIENCE, and SPECIFIC SKILLS required
-- Section 9 of the Code provides specific advice on training for tower crane operations
-
-VISUAL INDICATORS:
-- Workers carrying out construction work without evidence of general construction induction training = serious non-compliance
-- No training records for crane crew (operators, doggers, riggers) = non-compliance
-- Workers unclear on emergency procedures or risk control measures relevant to the crane = flag
-
----
-
-CHUNK 6: Safe Design of Tower Cranes
-Section: CoP s2; WHS Act s22
-Topic: Designer obligations; safe design principles for tower cranes throughout lifecycle
-
-DESIGNER OBLIGATIONS (WHS Act s22):
-- Designer must ensure, so far as reasonably practicable, the tower crane is DESIGNED TO BE WITHOUT RISKS to health and safety for:
-  - Persons who USE the plant at a workplace for its designed purpose
-  - Persons who STORE the plant
-  - Persons who CONSTRUCT the structure
-  - Persons carrying out any REASONABLY FORESEEABLE ACTIVITY (manufacture, assembly, use, storage, decommissioning, dismantling, disposal)
-  - Persons AT OR IN VICINITY of the workplace exposed to the plant
-
-DESIGNER MUST:
-- Carry out or arrange CALCULATIONS, ANALYSIS, TESTING OR EXAMINATION to ensure design is without risks
-- Give ADEQUATE INFORMATION to each person provided with the design
-- On request, provide CURRENT RELEVANT INFORMATION to persons using the plant
-
-SCOPE OF DESIGN CONSIDERATIONS:
-- Designers must identify potential hazards and design solutions across the tower crane's FULL LIFECYCLE:
-  manufactured → transported → installed → commissioned → used → maintained → repaired → decommissioned → dismantled → disposed of / recycled
-
-VISUAL INDICATORS:
-- Tower crane design lacking required safety devices (rated capacity limiters, motion limiting devices, anemometer) = non-compliance
-- Design documentation not available on site for reference = flag
-- Crane used beyond its engineered design capacity = serious non-compliance
-
----
-
-CHUNK 7: Design Registration of Tower Cranes and Tower Crane Bases
-Section: CoP s2.1, s2.1.1; WHS Regulation s243–s245
-Topic: Design registration requirements for tower cranes and bases; what triggers new or continued registration
-
-DESIGN REGISTRATION — MANDATORY PLANT (WHS Regulation s243; Schedule 5 Part 1):
-- TOWER CRANES (including self-erecting tower cranes) MUST have their design registered
-- Altered designs must also be registered IF the alteration may affect health or safety (WHS Regulation s244)
-- Exception: relocated crane where only the SUPPORTING STRUCTURE OR FOUNDATIONS design is altered in accordance with a site-specific design — does NOT require new registration
-
-DESIGN REGISTRATION APPLICATION REQUIRES:
-- A DESIGN VERIFICATION STATEMENT (written and signed by an eligible design verifier)
-- REPRESENTATIONAL DRAWINGS of the crane
-- APPROPRIATE FEE
-
-DESIGN VERIFICATION STATEMENT MUST:
-- State the design was produced in accordance with RELEVANT TECHNICAL STANDARDS or ENGINEERING PRINCIPLES
-- Include the name, business address and qualifications of the design verifier
-
-ELIGIBILITY OF DESIGN VERIFIER:
-- Must NOT be a person involved in PRODUCTION OF THE DESIGN
-- Must NOT be a person engaged by the PCBU that produced the design at the time of production
-
-WHEN A CERTIFICATE OF REGISTRABLE PLANT DESIGN STOPS HAVING EFFECT:
-- When design is CHANGED IN A WAY THAT REQUIRES NEW RISK CONTROL MEASURES
-- Example triggering new registration: boom EXTENDED beyond original submission = increased stress = certificate stops
-- Example NOT triggering new registration: boom SHORTENED with same basic construction and material type = certificate continues
+BOOM MODIFICATIONS:
+- Boom extended beyond original registered configuration = NEW DESIGN REGISTRATION REQUIRED (WHS Regulation s244)
+- Boom shortened with same basic construction = certificate continues; no new registration
 
 TOWER CRANE BASE REGISTRATION:
-- A TOWER CRANE BASE forms part of the crane and MUST ALSO BE DESIGN REGISTERED when a new base is designed
-- An ENGINEER must design all tower crane bases
-- Base design considerations: tower height, wind speed, terrain type, GROUND TYPE AND BEARING CAPACITY, boom length and crane lifting capacity
-- DETAILED DRAWINGS showing crane base plus OPERATING CONFIGURATION of the crane form part of the design registration application
-- If static base (relies on dead weight for stability — not structurally bolted/embedded): design for static base should be submitted with original design registration; engineering design input for support system still required each time
+- Tower crane base = part of crane; MUST BE DESIGN REGISTERED when new base designed
+- Base design must be by an ENGINEER
+- Detailed drawings showing crane base plus operating configuration required
 
 VISUAL INDICATORS:
-- Tower crane on site without accessible design registration number = serious non-compliance
-- Crane base design altered (including site-specific foundations) without engineering sign-off = non-compliance
-- Boom extended beyond original registered configuration without new design registration = serious non-compliance
+- No design registration number accessible on crane = serious non-compliance
+- Boom extended beyond original registered length without new registration = serious non-compliance
+- Crane base altered without engineering sign-off = non-compliance
+- No manufacturer's plate or plate illegible = non-compliance
 
 ---
 
-CHUNK 8: Crane Stability — Moments, Footings, Ties and Wind
-Section: CoP s2.2–s2.2.4; WHS Regulation (general duty)
-Topic: Stability requirements for tower cranes including counterweights, foundations, crane ties and wind speeds
-
-STABILITY FACTORS:
-Tower crane stability depends on:
-- STABILISING MOMENT of the crane (counterweight generally provides the primary stabilising moment)
-- OVERTURNING MOMENT applied by the suspended load and wind
-- FOOTINGS AND FOUNDATIONS designed for the specific crane installation
-- DESIGN, NUMBER AND LOCATION of crane ties
-- WIND CONDITIONS — stability varies with size and shape of suspended load and crane boom
+CHUNK 2: Crane Stability — Counterweights, Footings, Ties and Wind Limits
+Section: CoP s2.2–s2.2.4; WHS Regulation
+Topic: Stability requirements including counterweight securing, foundation design, crane ties and operational wind speeds
 
 LOAD CHARTS:
-- Load charts (rated capacity charts) identify what the crane can safely lift
-- Specified by CRANE MANUFACTURER; verified by DESIGN VERIFIER during design registration
-- Must be WRITTEN IN ENGLISH and use METRIC UNITS
-- Must be FIXED IN THE OPERATOR'S CABIN in a CLEARLY VISIBLE LOCATION
-- Must be available to crane operator to verify no overloading
-- Lifting capacities MUST NEVER BE EXCEEDED — except during TESTING by a competent person under controlled conditions, or in EMERGENCY SITUATIONS
+- Must be FIXED IN OPERATOR'S CABIN in CLEARLY VISIBLE LOCATION
+- Written in ENGLISH, METRIC UNITS
+- Lifting capacities MUST NEVER BE EXCEEDED except during testing by competent person or emergency
 
 COUNTERWEIGHTS:
-- CRITICAL for ensuring crane stability
-- Counterweight TOO LIGHT for load/boom configuration = risk of crane overturning TOWARDS SUSPENDED LOAD
-- Counterweight TOO HEAVY for load/boom configuration = risk of crane FALLING OVER BACKWARDS
-- Counterweights must be SECURED TO THE CRANE as specified by the CRANE MANUFACTURER
+- Must be SECURED TO CRANE per manufacturer's instructions
+- Counterweight too light = risk of overturning toward load
+- Counterweight too heavy = risk of falling over backwards
 
 FOOTINGS AND FOUNDATIONS (CoP s2.2.2):
-- Must be designed by an ENGINEER in accordance with ENGINEERING PRINCIPLES or RELEVANT TECHNICAL STANDARDS
-- Design must consider RESULTS OF GEO-TECHNICAL INSPECTIONS specific to the location
+- Must be designed by ENGINEER per engineering principles or relevant technical standards
+- Design must consider GEO-TECHNICAL INSPECTIONS specific to location
 
 CRANE TIES (CoP s2.2.3):
-- Crane ties must be SECURED TO THE SUPPORTING STRUCTURE at SET INTERVALS per the CRANE MANUFACTURER'S instructions and DESIGNER OF THE CRANE INSTALLATION
-- Design and detail of crane ties must be VERIFIED BY AN ENGINEER taking into account STRUCTURAL ADEQUACY and any potential MOVEMENT OR DEFORMATION of the supporting structure
+- Must be secured to supporting structure at SET INTERVALS per manufacturer's instructions and designer of crane installation
+- Design and detail VERIFIED BY ENGINEER
+- Must account for structural adequacy and movement/deformation of supporting structure
 
-WIND CONDITIONS — OPERATIONAL LIMITS (CoP s2.2.4):
-- Traditional maximum permissible operational wind speed (Queensland): 54 KM/HOUR (15 METRES/SECOND)
-- Some installations designed for up to 72 KM/HOUR (20 METRES/SECOND) per AS 1418.4 — however operators must not operate if they consider conditions unsafe
-- ANEMOMETER (wind gauge) must be fitted on each tower crane in an appropriate location:
-  - LUFFING tower cranes: anemometer on TOP OF THE A-FRAME
-  - NON-LUFFING tower cranes: on A-FRAME or MACHINE DECK HAND-RAIL
-- Anemometer placement must NOT be shielded from the wind
+WIND SPEED LIMITS — OPERATIONS (CoP s2.2.4):
+- Traditional maximum operational wind speed (QLD): 54 KM/HOUR (15 m/s)
+- Some installations designed for 72 KM/HOUR (20 m/s) per AS 1418.4
+- ANEMOMETER (wind gauge) MANDATORY on each tower crane:
+  - LUFFING cranes: on TOP OF A-FRAME
+  - NON-LUFFING cranes: on A-FRAME or MACHINE DECK HAND-RAIL
+- Anemometer must NOT be shielded from wind
 
-CLIMBING OPERATIONS — WIND LIMIT:
-- Climbing operations should NOT PROCEED where wind speed EXCEEDS 36 KM/HOUR (10 METRES/SECOND)
-- This is a MAXIMUM; rigging crew may cease at lesser speed at their discretion
-- Climbing operations should NOT COMMENCE if either the recommended maximum OR the actual wind speed is UNKNOWN
+WIND SPEED LIMITS — CLIMBING:
+- Climbing operations must NOT PROCEED where wind speed EXCEEDS 36 KM/HOUR (10 m/s)
+- Must not commence if wind speed UNKNOWN
 
-OPERATING IN WIND SPEEDS GREATER THAN 54 KM/HOUR:
-- A DOCUMENTED RISK ASSESSMENT must be carried out to determine:
-  - Types of loads that can be lifted under these conditions
-  - Control measures to be applied
-- Risk assessment must involve CONSULTATIVE PROCESS between principal contractor, crane owner and operator, and other crane crew
-- Matters for consideration: load surface area; size-to-weight ratio (density); boom length and surface area; ability of slew motors and brakes; ability of doggers to control load movement; operator visibility; effect of wind on crane movement (e.g. rope bunching on drum)
-- Only cranes DESIGNED TO OPERATE in wind speeds greater than 54 KM/HOUR may be used under these conditions
+OPERATING ABOVE 54 KM/HOUR:
+- DOCUMENTED RISK ASSESSMENT required
+- Only cranes DESIGNED TO OPERATE above 54 km/hr may be used
+- Risk assessment must involve consultation between principal contractor, crane owner, operator and crew
 
 VISUAL INDICATORS:
-- No anemometer fitted to tower crane = non-compliance
-- Anemometer positioned where it is shielded from wind = non-compliance
-- Crane operating in wind speeds exceeding 54 km/hr without documented risk assessment = serious non-compliance
-- Climbing operations continuing at wind speeds exceeding 36 km/hr = serious non-compliance
+- No anemometer fitted = non-compliance
+- Anemometer shielded from wind = non-compliance
+- Crane operating above 54 km/hr without documented risk assessment = serious non-compliance
+- Climbing operations at wind speeds exceeding 36 km/hr = serious non-compliance
 - Load chart not fixed in operator's cabin = non-compliance
 - Counterweights not secured per manufacturer's instructions = serious non-compliance
 - No geo-technical inspection for footing design = non-compliance
 
 ---
 
-CHUNK 9: Limiting and Indicating Devices
-Section: CoP s2.3–s2.3.5; AS 1418.4
-Topic: Required devices on tower cranes; reliability standards; rated capacity limiters, motion limiters, radius indicators and dual brakes
-
-REQUIREMENT:
-- Limiting and indicating devices MUST be fitted to tower cranes as required by AS 1418.4 or other relevant technical standards
-- PURPOSE: stop specific crane motion before moving out of safe limits (limiters); or warn operator that limits are approaching (indicators)
-- Devices may be used INDIVIDUALLY OR TOGETHER for specific crane motions
-- Devices are an AID to crane operators — must NOT be relied upon to REPLACE the use of load charts and operating instructions
-
-RELIABILITY STANDARDS (CoP s2.3.1):
-Safety circuits for limiting and indicating devices should meet either:
-- RELIABILITY LEVEL OF CATEGORY 4 under AS 4024: Safety of machinery, OR
-- SAFETY INTEGRITY LEVEL OF 3 under AS 62061: Safety of machinery – Functional safety of safety-related electrical, electronic and programmable electronic control systems
-- These categories relate to the concept of FAIL-SAFE
+CHUNK 3: Rated Capacity Limiters and Motion Limiting Devices
+Section: CoP s2.3.2–s2.3.3; AS 1418.4
+Topic: Required limiting devices on tower cranes; rated capacity limiter specifications; motion limiters
 
 RATED CAPACITY LIMITERS (CoP s2.3.2):
-- Must be provided on ALL TOWER CRANES regardless of the age of the crane
-- Prevents overloading by STOPPING ALL RELEVANT CRANE FUNCTIONS when overload is detected
-- Limiter should prevent:
-  - Hoisting a load EXCEEDING 110% OF THE MAXIMUM RATED CAPACITY
-  - Radius being INCREASED when load exceeds 100% at the particular radius
-- All tower cranes to be fitted with BOTH LOAD INDICATORS AND RATED CAPACITY LIMITERS
+- MUST be provided on ALL TOWER CRANES regardless of age
+- Prevents overloading by STOPPING ALL RELEVANT CRANE FUNCTIONS when overload detected
+- Must prevent:
+  - Hoisting load EXCEEDING 110% OF MAXIMUM RATED CAPACITY
+  - Radius increase when load exceeds 100% at particular radius
+- All tower cranes must have BOTH LOAD INDICATORS AND RATED CAPACITY LIMITERS
+
+RELIABILITY STANDARDS (CoP s2.3.1):
+- Safety circuits must meet CATEGORY 4 under AS 4024, OR
+- SAFETY INTEGRITY LEVEL 3 under AS 62061
 
 MOTION LIMITING DEVICES (CoP s2.3.3):
-Must be fitted to prevent motion out of service limits; cause braking and stopping at:
-- HIGHEST POSITION OF THE HOOK
-- LOWEST POSITION OF THE HOOK (when persons are lowered in a workbox into a shaft)
-- EXTREME PERMISSIBLE OPERATING POSITIONS OF THE JIB (luff limiter — where luffing motion is part of normal working)
-- END POSITIONS OF THE TROLLEY TRACK on the jib
+Must be fitted to prevent motion out of service limits; cause braking/stopping at:
+- HIGHEST POSITION OF HOOK
+- LOWEST POSITION OF HOOK (when persons lowered in workbox into shaft)
+- EXTREME PERMISSIBLE OPERATING POSITIONS OF JIB (luff limiter on luffing cranes)
+- END POSITIONS OF TROLLEY TRACK on jib
 - END POSITIONS of horizontally telescoping or movable jibs
 - END POSITIONS OF TRACKS for rail-mounted travelling tower cranes
 
-WORKING RADIUS INDICATOR (CoP s2.3.4):
-- A RADIUS INDICATOR must be fitted on ALL TOWER CRANES
-- Displays the radius of the suspended load (generally measured from centre of slew ring)
-- Must be displayed in METRES and be accurate to +10% and -3% of actual radius
-- Where crane is remote-controlled and jib is horizontal and fully visible to operator: indicator may consist of ONE METRE GRADUATIONS marked on the jib with numbers at appropriate intervals (e.g. every 5 metres)
-
 DUAL BRAKING SYSTEMS (CoP s2.3.5):
-- Dual braking systems must be provided on the LUFF FUNCTION of all ROPE LUFFING TOWER CRANES
-- Also on any other function specified by the crane manufacturer
-- Must comply with AS 1418.1 or other relevant technical design standards
+- Required on LUFF FUNCTION of all ROPE LUFFING TOWER CRANES
+- Also on any other function specified by manufacturer
+- Must comply with AS 1418.1 or other relevant technical standards
 
 VISUAL INDICATORS:
 - Rated capacity limiter absent or visibly disabled = serious non-compliance (applies regardless of crane age)
 - No load indicator fitted = non-compliance
 - Motion limiting devices (hook height limiters, trolley end stops) absent or disabled = serious non-compliance
-- No working radius indicator on tower crane = non-compliance
 - Dual braking system absent on rope luffing tower crane = serious non-compliance
 
 ---
 
-CHUNK 10: Signs on Tower Cranes
+CHUNK 4: Working Radius Indicator
+Section: CoP s2.3.4
+Topic: Mandatory radius indicator specifications and accuracy requirements
+
+MANDATORY:
+- RADIUS INDICATOR must be fitted on ALL TOWER CRANES
+- Displays radius of suspended load (measured from centre of slew ring)
+- Must be displayed in METRES
+- Accuracy: +10% and -3% of actual radius
+
+REMOTE-CONTROLLED CRANES WITH HORIZONTAL JIB:
+- Where crane is remote-controlled AND jib is horizontal AND fully visible to operator:
+- Indicator may consist of ONE METRE GRADUATIONS marked on jib
+- Numbers at appropriate intervals (e.g. every 5 metres)
+
+VISUAL INDICATORS:
+- No working radius indicator on tower crane = non-compliance
+- Radius indicator not displaying in metres = non-compliance
+- Graduations on jib exceeding 1 metre spacing = non-compliance
+
+---
+
+CHUNK 5: Signs on Tower Cranes — Restrictions and Requirements
 Section: CoP s2.4
-Topic: Requirements and restrictions for signage on tower crane booms and machine decks
+Topic: Prohibited and permitted signage locations; engineering certification requirements
 
 GENERAL RULE:
-- Signs should NOT be attached to tower crane BOOMS due to:
-  - Affecting SLEW SPEED (slower slewing against wind; faster with wind)
-  - Making application of SLEW BRAKE more hazardous
-  - Risk of SIGNS DETACHING during crane operations causing injury to persons in the vicinity
+- Signs must NOT be attached to tower crane BOOMS
+- Reasons: affects slew speed; makes slew brake application hazardous; risk of signs detaching
 
-PERMITTED SIGNS:
+PERMITTED SIGNS — MACHINE DECK ONLY:
 - Signs may be used on MACHINE (REAR) DECKS only
-- Must be CERTIFIED BY AN ENGINEER prior to installation
-- Engineer certification must state design of sign and attachments is FIT FOR PURPOSE
-- Includes ensuring MAINTENANCE ON THE SIGN WILL NOT BE REQUIRED for as long as the crane is on site
+- Must be CERTIFIED BY ENGINEER prior to installation
+- Engineer must certify design and attachments are FIT FOR PURPOSE
+- Must ensure MAINTENANCE ON SIGN NOT REQUIRED for crane installation life
 
-FLEXIBLE SIGNS REQUIREMENTS:
-- Made of ULTRAVIOLET (UV) RESISTANT MATERIAL that will not deteriorate over the crane installation life
-- SECURELY ATTACHED using an appropriate tying system that will WITHSTAND POTENTIAL WIND LOADINGS
+FLEXIBLE SIGNS:
+- Made of UV RESISTANT MATERIAL
+- SECURELY ATTACHED using tying system that WITHSTANDS POTENTIAL WIND LOADINGS
 
-SOLID SIGNS REQUIREMENTS:
-- Must be attached by BOLTED CONNECTIONS
-- APPROPRIATE MEANS OF LOCKING NUTS on bolts must be used
-- MUST NOT:
-  - Drill holes into the crane structure
-  - Weld joints onto the crane structure
-  - Use strapping and cable ties
+SOLID SIGNS:
+- Attached by BOLTED CONNECTIONS
+- APPROPRIATE LOCKING NUTS on bolts required
+- PROHIBITED: drilling holes into crane structure; welding joints onto crane structure; strapping and cable ties
 
 WIND SAILS:
-- May be mandated by manufacturers (e.g. when short boom fitted to hammerhead tower crane) to counteract wind effects on machine deck
-- Where required, signs may be attached to wind sails
-- The design engineer for the installation must be aware of any wind sail requirement and make ALLOWANCES FOR SIZE AND WEIGHT OF SAIL in the crane base drawing
+- May be mandated by manufacturers (e.g. short boom on hammerhead)
+- Design engineer must make ALLOWANCES FOR SIZE AND WEIGHT OF SAIL in crane base drawing
 
 VISUAL INDICATORS:
 - Signs attached to tower crane boom = non-compliance
 - Signs on machine deck without engineer certification = non-compliance
 - Flexible signs attached with strapping or cable ties = non-compliance
 - Solid signs attached by welded or drilled connections = non-compliance
-- Signs showing deterioration or risk of detachment = flag for immediate review
+- Signs showing deterioration or risk of detachment = flag
 
 ---
 
-CHUNK 11: Planning and Coordinating Tower Crane Operations
-Section: CoP s3; AS 2550.4
-Topic: Pre-commencement planning obligations; matters to address before crane operations begin
+CHUNK 6: Overhead Powerlines — Exclusion Zones and Control Measures
+Section: CoP s4.1–s4.1.3; ES Act s30; ES Regulation s68–s69
+Topic: Minimum clearance distances from powerlines; control hierarchy; safety observer requirements
 
-WHEN TO PLAN:
-- Planning for tower crane operations should START AS EARLY AS POSSIBLE in the development of any work or project
-- Must involve CONSULTATION WITH ALL PERSONS ENGAGED IN THE WORK: principal contractor, crane owner, crane supplier, electricity entity, designer, and project manager
+MINIMUM SAFE DISTANCES (ES Regulation s68–s69):
+- AT LEAST 3 METRES from overhead powerlines for voltages UP TO 132kV
+- Greater distances for voltages above 132kV
+- Applies to ANY PART OF CRANE including load being lifted
+- Booms MUST NOT operate OVER THE TOP of energised powerlines
 
-PERSONS PLANNING MUST PROTECT:
-- Persons ERECTING, CLIMBING, COMMISSIONING AND DISMANTLING a tower crane
-- Persons DIRECTLY INVOLVED in the lifting operation (crane operator and dogger)
-- Persons PERFORMING OTHER WORK at the workplace
-- Persons in AREAS ADJACENT TO A TOWER CRANE including PUBLIC AREAS
+CONTROL HIERARCHY (in order of preference):
+1. TURNING OFF POWER (de-energising) or RE-ROUTING electricity supply — must be considered FIRST
+2. Setting up crane OUTSIDE EXCLUSION ZONE
+3. PHYSICAL BARRIER of NON-CONDUCTIVE MATERIALS (may require isolating supply during barrier installation)
+4. ENGINEERING CONTROLS (mechanical stops or constraints preventing crane entering exclusion zone)
+5. ADMINISTRATIVE CONTROLS (warning signs, tiger tails, warning devices) — only when higher order not reasonably practicable
 
-KEY PLANNING MATTERS:
-- Liaise with electricity entities regarding SAFE SUPPLY OF ELECTRICITY and control measures for working around existing power supply
-- Consider PROXIMITY TO OVERHEAD POWERLINES and appropriate control measures (refer to CoP s4.1.2)
-- Determine crane requirements including LOADING BAYS AND SITE ACCESS at the project DESIGN STAGE
-- MINIMISE THE NUMBER OF TOWER CRANES on site to reduce collision likelihood between cranes and other plant
-- Ensure each tower crane can be installed at ACCEPTABLE DISTANCE AWAY FROM other tower cranes and concrete placement booms
-- Ensure AT LEAST A 2 METRE DISTANCE between the HIGHEST EXTREMITY OF THE BUILDING WORKSITE and the BOTTOM OF A SLUNG LOAD, unless not reasonably practicable
-- Ensure tower crane boom remains an APPROPRIATE DISTANCE ABOVE the concrete placement boom
-- Ensure an EMERGENCY PLAN has been prepared for each workplace where the crane will operate (refer to CoP s3.5)
-- Consider ADDITIONAL DOGGERS OR CRANE COORDINATORS depending on the size and complexity of the work
-- Other matters outlined in AS 2550.4
+TIGER TAILS:
+- Tiger tails or line markers are VISUAL AIDS ONLY
+- DO NOT insulate wires
+- Exclusion zone applies regardless
 
-CLEARANCES BETWEEN CRANES AND PLACEMENT BOOMS:
-- Acceptable distance = SUFFICIENT CLEARANCES to minimise risk of contact between parts of cranes, crane loads and booms
-- When cranes operate on ADJACENT SITES sharing the same air space: negotiations must be conducted between worksites to formulate SYSTEMS OF WORK ensuring sufficient clearances
+SAFETY OBSERVER (SPOTTER):
+- Required when crane operates in SAFETY OBSERVER ZONE (where any part of crane or load could enter exclusion zone)
+- Must be TRAINED AND COMPETENT
+- Must NOT carry out OTHER TASKS (such as dogging) while observing
+- Must be CLEARLY IDENTIFIABLE by all workers
+- DOGGER MUST NOT also perform safety observer role near powerlines
 
-MINIMUM SLUNG LOAD CLEARANCE:
-- AT LEAST 2 METRES between the highest extremity of the building worksite and the bottom of a slung load, unless not reasonably practicable
-- Purpose: minimise risk of crane load COLLIDING WITH OR STRIKING the building or persons working in the vicinity
+SAFETY OBSERVER ZONE DOES NOT APPLY WHEN:
+- Powerlines DE-ENERGISED and cannot be inadvertently re-energised (high voltage also EARTHED)
+- LIMITING DEVICES installed preventing crane entering exclusion zone
+- PHYSICAL BARRIERS prevent crane entering exclusion zone
+
+WORKING AT CLOSER DISTANCES:
+- If not reasonably practicable to maintain exclusion zone: RISK ASSESSMENT required
+- Consultation with electricity entity required
+- Persons must be AUTHORISED OR INSTRUCTED PERSON under ES Regulation
+- All conditions specified by electricity entity must be met
 
 VISUAL INDICATORS:
-- No planning documentation for tower crane operations prior to commencement = non-compliance
-- Less than 2 metres clearance between slung load bottom and highest extremity of building worksite without documented justification = non-compliance
-- No emergency plan prepared for crane workplace = non-compliance
+- Any part of crane or load within 3 metres of powerline (up to 132kV) without de-energising or documented risk assessment = serious non-compliance
+- Tiger tails treated as insulation by crane crew = non-compliance
+- No safety observer where crane operates in safety observer zone = serious non-compliance
+- Safety observer also performing dogging duties = non-compliance
+- Safety observer not clearly identifiable = non-compliance
+- No consultation with electricity entity before setup near powerlines = non-compliance
+
+---
+
+CHUNK 7: Collision with Concrete Booms and Adjacent Cranes
+Section: CoP s4.2, s4.2.1
+Topic: Collision prevention procedures; communication requirements; crane coordinator identification
+
+DOCUMENTED PROCEDURE REQUIRED:
+- SWMS or documented procedure must be established EARLY IN PLANNING where tower crane may collide with other plant
+- Must identify PERSON RESPONSIBLE for implementation
+- ALL PERSONS operating tower cranes and other plant must be AWARE OF AND TRAINED IN procedure
+
+PROCEDURE MUST ADDRESS:
+- SITING cranes to minimise other plant operating within crane's operating radius
+- Siting cranes and plant with COUNTERWEIGHTS so they CANNOT COLLIDE during slewing
+- METHOD OF COMMUNICATION between crane crew and other plant operators
+- SCHEDULING OF WORK to minimise time crane and other plant work in same area or height
+- TOWER CRANE CLIMBING PROCEDURE to keep crane as far above structures/plant as practicable
+- FREQUENCY OF REGULAR MEETINGS to monitor and review control measures
+
+AUDIBLE WARNING DEVICE:
+- All tower cranes should be fitted with AUDIBLE WARNING DEVICE
+
+ADJACENT SITES:
+- When cranes share air space from ADJACENT WORKPLACES: principal contractor from EACH WORKPLACE must negotiate DOCUMENTED SYSTEMS OF WORK
+- Must include NAME OF CRANE COORDINATOR from each site
+- EFFECTIVE MEANS OF COMMUNICATION must be provided between crane operators on separate cranes
+
+VISUAL INDICATORS:
+- Concrete placement boom operating within tower crane's radius without documented procedure = non-compliance
+- No audible warning device on tower crane = non-compliance
+- Adjacent site cranes sharing air space without documented agreement and crane coordinator identified = non-compliance
+- Crane counterweights positioned where they could collide during slewing = serious non-compliance
+
+---
+
+CHUNK 8: Minimum Clearance — Slung Loads Above Building Worksite
+Section: CoP s3; AS 2550.4
+Topic: Required clearance between bottom of slung load and highest extremity of building
+
+MINIMUM CLEARANCE:
+- AT LEAST 2 METRES between BOTTOM OF SLUNG LOAD and HIGHEST EXTREMITY OF BUILDING WORKSITE
+- Required unless not reasonably practicable
+- Purpose: minimise risk of crane load colliding with or striking building or persons
+
+CLEARANCES BETWEEN CRANES AND PLACEMENT BOOMS:
+- Sufficient clearances to minimise risk of contact between parts of cranes, crane loads and booms
+- When cranes operate on ADJACENT SITES sharing air space: negotiations must formulate SYSTEMS OF WORK ensuring sufficient clearances
+
+VISUAL INDICATORS:
+- Less than 2 metres clearance between slung load bottom and highest extremity of building without documented justification = non-compliance
 - No coordination procedure where crane booms share air space with adjacent site cranes = non-compliance
 
 ---
 
-CHUNK 12: Selecting the Crane and Crane Crew
-Section: CoP s3.1, s3.2; AS 2550.4
-Topic: Crane selection criteria; crane crew size and risk assessment; visibility and control measures
-
-CRANE SELECTION:
-- Matters to be considered outlined in AS 2550.4: Cranes, hoists and winches – Safe use – Tower cranes
-- Three types in Queensland: LUFFING, HAMMERHEAD (including topless), SELF-ERECTING
-- Best crane type should be selected for the specific job
-
-CRANE CREW SIZE — RISK ASSESSMENT:
-- Number of persons in the crane crew MUST BE DETERMINED BY A RISK ASSESSMENT
-- Risk assessment must address:
-  - COLLISION between cranes and other plant; coordination of multiple cranes
-  - LOADS CONTACTING STRUCTURES (neighbouring property, scaffolding) or obstructing walkways and other workers
-  - OVERHEAD POWERLINES
-  - Crane crew's ability to MAINTAIN VISIBILITY OF THE LOAD, safely load and unload materials, assess work areas
-
-WHEN ADDITIONAL CONTROL MEASURES ARE REQUIRED:
-If risk assessment identifies the crane crew CANNOT MAINTAIN VISIBILITY of the load at any point due to:
-- Positioning of the proposed crane crew
-- Size or complexity of the site or structure
-- Proximity of collision hazards
-- The lift process or procedure
-Then ADDITIONAL CONTROL MEASURES may be required, which may include:
-- RE-DESIGN of the proposed lift or alternative crane
-- ISOLATION OF AREA during the lift
-- ANTI-COLLISION DEVICES AND SYSTEMS
-- FLAGGING AND INSULATED COVERS on suspended powerlines
-- SAFETY OBSERVER or 'SPOTTER'
-- ADDITIONAL DOGGER
-- CAMERAS fitted to the crane, crane hook or structure
-
-IMPORTANT RESTRICTIONS:
-- Crane operator MUST NOT undertake their own dogging work (i.e. on a remote control tower crane) = separate roles required
-- Crane operator MUST NOT supervise a trainee dogger — even if the operator is also a licensed dogger
-
-CONSULTATION FOR ADDITIONAL MEASURES:
-- Any re-design, use of additional personnel, or inclusion of new technology should be undertaken in CONSULTATION between principal contractor (or person in control of the workplace), the relevant PCBU, and the crane crew
-
-VISUAL INDICATORS:
-- No risk assessment documenting crane crew size determination = non-compliance
-- Crane operator undertaking own dogging duties on a remote control tower crane = non-compliance
-- Crane operator attempting to supervise trainee dogger = non-compliance
-- Crane operating without adequate crew for site complexity = flag for review
-
----
-
-CHUNK 13: Crane Siting — Standing, Collision Hazards and Access
+CHUNK 9: Crane Siting — Aircraft Warning Lights and Access Areas
 Section: CoP s3.3–s3.3.3
-Topic: Requirements for siting tower cranes; crane standing capacity; collision and access considerations
+Topic: Requirements for cranes near aerodromes; aircraft warning lights; access area considerations
 
-CRANE STANDING REQUIREMENTS (CoP s3.3.1):
-- Crane standing must CONFORM TO CRANE MANUFACTURER'S INSTRUCTIONS
-- Must be CAPABLE OF WITHSTANDING all forces likely to be imposed:
-  - DEAD WEIGHT OF THE CRANE
-  - DEAD WEIGHT OF THE LOAD and lifting attachments
-  - DYNAMIC FORCES caused by crane movements
-  - WIND LOADINGS
-  - OTHER LOADS as required by the designer of the crane standing
-- When crane supported on or tied to a permanent or temporary structure: structure design must be capable of withstanding forces likely to be imposed by the crane
-- Adequate precautions must be taken when crane sited near UNDERGROUND SERVICES, EXCAVATIONS OR EMBANKMENTS
-- A COMPETENT PERSON should verify the design of the structure
+AERODROMES AND AIRCRAFT FLIGHT PATHS:
+- Where tower cranes set up in flight paths: AERODROME OPERATOR must be contacted to ensure CASA requirements met (www.casa.gov.au)
+- Where necessary: AIRCRAFT WARNING LIGHTS must be fitted to HIGHEST PART OF CRANE
 
-COLLISION HAZARDS TO CONSIDER IN SITING (CoP s3.3.2):
-- OVERHEAD POWERLINES
-- NEARBY STRUCTURES
-- OTHER CRANES OR CONCRETE PLACEMENT BOOMS (including those on adjacent sites)
-- VICINITY OF AERODROMES AND AIRCRAFT FLIGHT PATHS
-- Where tower cranes set up in flight paths: AERODROME OPERATOR must be contacted to ensure CASA requirements are met (www.casa.gov.au)
-- Where necessary: AIRCRAFT WARNING LIGHTS must be fitted to the HIGHEST PART OF THE CRANE
-
-ACCESS AREA LOCATION (CoP s3.3.3):
-Consider location of:
-- COMMON ACCESS AREAS for workers and other persons at the workplace
-- PUBLIC ACCESS AREAS — footpaths, roadways, railways in the vicinity of the crane
+ACCESS AREA CONSIDERATIONS:
+- Location of COMMON ACCESS AREAS for workers and other persons
+- Location of PUBLIC ACCESS AREAS (footpaths, roadways, railways) in vicinity of crane
 
 VISUAL INDICATORS:
-- Tower crane sited near aerodrome or aircraft flight path without aircraft warning lights on highest part = non-compliance
-- Tower crane sited over underground services without precautions = serious non-compliance
-- Crane standing design not verified by competent person = non-compliance
-- Crane siting that does not account for collision hazards (powerlines, adjacent cranes) without documented plan = non-compliance
+- Tower crane near aerodrome or aircraft flight path without aircraft warning lights on highest part = non-compliance
+- Crane siting not accounting for collision hazards without documented plan = non-compliance
 
 ---
 
-CHUNK 14: Communication Requirements for Tower Crane Operations
+CHUNK 10: Communication Systems — Radio and Hand Signals
 Section: CoP s3.4; AS 2550.1
-Topic: Communication systems between crane operator and crane crew; radio use requirements
-
-GENERAL REQUIREMENT:
-- A RELIABLE METHOD OF COMMUNICATION between crane operator and other persons is ESSENTIAL for safe crane operation
-- Failure to implement reliable communication may lead to: DROPPED LOADS; COLLISION WITH PLANT AND STRUCTURES
-
-DOGGER COMMUNICATION RULES:
-- ONLY ONE DOGGER should give visual and audible signals at any one time
-- When more than one dogger involved: each dogger must understand when RESPONSIBILITY FOR THEIR PART OF THE OPERATION is handed over to another dogger
+Topic: Radio communication requirements; safety checks; prohibited use of mobile phones
 
 RADIO COMMUNICATION:
-- Common practice in the tower crane industry
-- A DEDICATED RADIO FREQUENCY should be selected for the duration of crane operations to prevent interference
-- All persons must be aware of RISK OF INTERFERENCE AND SIGNALS from other radio equipment
-- WORK SHOULD STOP IMMEDIATELY if there is a LOSS OF RADIO COMMUNICATION
+- Common practice in tower crane industry
+- DEDICATED RADIO FREQUENCY should be selected for duration of crane operations
+- WORK MUST STOP IMMEDIATELY if LOSS OF RADIO COMMUNICATION
 
 RADIO SAFETY CHECKS:
-- Operator and dogger must perform OPERATING SAFETY CHECKS to ensure radios are:
+- Operator and dogger must perform checks ensuring radios are:
   - DRY
   - HANDLED WITH CARE
   - PERFORMING SATISFACTORILY
   - FULLY CHARGED BATTERY with SPARE AVAILABLE
-- Operators must be familiar with SPECIFIC PROCEDURES for using radio communication for that workplace
-- Adopt CONSTANT TALK METHOD between users so all involved are aware of lifting operations progress
-- Crane operator normally takes radio instructions from ONE PERSON ONLY — unless special circumstances require otherwise
+- Adopt CONSTANT TALK METHOD between users
+- Crane operator normally takes radio instructions from ONE PERSON ONLY
 
 ALTERNATIVE COMMUNICATION:
-- Where radio cannot be used: HAND, WHISTLE, BELL AND BUZZER SIGNALS complying with AS 2550.1 should be used
+- Where radio cannot be used: HAND, WHISTLE, BELL AND BUZZER SIGNALS per AS 2550.1
 
 PROHIBITED:
 - MOBILE PHONES must NOT be used to direct tower crane operations
 
+DOGGER COMMUNICATION:
+- ONLY ONE DOGGER should give visual and audible signals at any time
+- When more than one dogger: each must understand when responsibility is handed over
+
 VISUAL INDICATORS:
 - Mobile phone being used to direct tower crane operations = non-compliance
 - Only one radio available with no spare battery = flag
-- More than one dogger simultaneously giving signals to crane operator = non-compliance
+- More than one dogger simultaneously giving signals = non-compliance
 - Work continuing after loss of radio communication = serious non-compliance
 
 ---
 
-CHUNK 15: Emergency Plans for Tower Crane Workplaces
+CHUNK 11: Emergency Plans and Rescue Equipment
 Section: CoP s3.5; WHS Regulation s43
-Topic: Emergency plan requirements for workplaces where tower cranes operate
+Topic: Emergency plan requirements; rescue equipment accessibility; fire-fighting equipment
 
-OBLIGATION (WHS Regulation s43):
-- PCBU at a workplace must ensure an EMERGENCY PLAN is PREPARED for the workplace
-- Must provide for: EMERGENCY PROCEDURES; TESTING OF PROCEDURES; INFORMATION, TRAINING AND INSTRUCTION to relevant workers
-
-EMERGENCY PLAN MUST INCLUDE:
+EMERGENCY PLAN MUST INCLUDE (WHS Regulation s43):
 - EFFECTIVE RESPONSES AND EVACUATION procedures
 - NOTIFYING EMERGENCY SERVICES
 - MEDICAL TREATMENT
-- Emergency procedure TRAINING must be provided to workers
-- Contact numbers for emergency services must be EASILY SEEN OR FOUND
-- Workers must know what SYSTEMS ARE IN PLACE to contact emergency services and HOW TO USE THEM
+- Emergency procedure TRAINING for workers
+- Contact numbers EASILY SEEN OR FOUND
+- Systems to contact emergency services and HOW TO USE THEM
 
 RESCUE AND EQUIPMENT:
-- RESCUE EQUIPMENT must be available and EASILY ACCESSIBLE so injured worker (including crane operator) can be removed quickly
-- Relevant FIRE-FIGHTING EQUIPMENT (fire extinguishers, fire blankets) must be in place and OPERATIONAL
-- EVACUATION LOCATION SIGNS must be placed where easily seen by workers and others
+- RESCUE EQUIPMENT must be available and EASILY ACCESSIBLE for quick removal of injured worker (including crane operator)
+- FIRE-FIGHTING EQUIPMENT (fire extinguishers, fire blankets) must be in place and OPERATIONAL
+- EVACUATION LOCATION SIGNS placed where easily seen
 
-SCOPE OF PLAN:
-- Must cover persons NEAR THE CRANE as well as persons OPERATING THE CRANE (e.g. evacuation procedures)
+SCOPE:
+- Must cover persons NEAR CRANE and persons OPERATING CRANE
 
 VISUAL INDICATORS:
 - No emergency plan prepared for workplace with tower crane = serious non-compliance
@@ -635,669 +371,485 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 16: Working Near Overhead Powerlines — Electrical Safety and Exclusion Zones
-Section: CoP s4.1–s4.1.3; Electrical Safety Act 2002; Electrical Safety Regulation 2013 s68–s69
-Topic: Exclusion zone distances, risk assessment, control measures, and safety observer requirements for tower cranes near overhead electric lines
+CHUNK 12: Erecting and Dismantling — Collapse Prevention and Wind Limits
+Section: CoP s5.2.1; WHS Regulation s291, s299
+Topic: Control measures to prevent crane collapse during erection and dismantling; wind limits; tower bolt requirements
 
-LEGISLATIVE FRAMEWORK:
-- Electrical Safety Act 2002 (ES Act) — outlines general electrical safety duties
-- Electrical Safety Regulation 2013 (ES Regulation) — states exclusion zones for working near overhead powerlines
-- Electrical Safety Code of Practice 2010 – Working near overhead and underground electric lines
+SWMS REQUIREMENT (WHS Regulation s299):
+- SWMS must be prepared for HIGH RISK CONSTRUCTION WORK of erecting or dismantling tower crane
 
-PCBU OBLIGATION (ES Act s30):
-- PCBU must ensure business is conducted in a way that is ELECTRICALLY SAFE
-- If work involves overhead powerlines: persons performing work must be ELECTRICALLY SAFE — includes potential contact during tower crane operation
+PREVENTING COLLAPSE (CoP s5.2.1):
+- Must NOT erect or dismantle in conditions EXCEEDING MANUFACTURER'S SPECIFICATIONS
+- Must NOT erect or dismantle where wind may make components UNCONTROLLABLE when suspended
+- WIND LOADING must be considered including FUNNELLING EFFECTS between buildings
+- Erecting and dismantling must be SUPERVISED BY COMPETENT PERSON
+- Manufacturer's instructions must be followed for ASSEMBLY IN CORRECT SEQUENCE using CORRECT EQUIPMENT AND TOOLS
 
-EXCLUSION ZONE REQUIREMENT (ES Regulation s68–s69):
-- PCBU must ensure NO PERSON, PLANT OR THING comes within an UNSAFE DISTANCE of an overhead or underground powerline
-- Person or plant comes within an unsafe distance when within the EXCLUSION ZONE for that powerline
-- Any part of the crane AND ITS LOAD must not enter the exclusion zone
+TOWER SECTIONS:
+- Must be CLEARLY AND PERMANENTLY IDENTIFIED with MODEL TYPE AND SERIAL NUMBER
+- Tower sections used must be SAME AS SPECIFIED ON ENGINEER'S CRANE BASE DRAWING
 
-MINIMUM SAFE DISTANCES:
-- AT LEAST 3 METRES away from overhead powerlines for VOLTAGES UP TO 132kV
-- GREATER DISTANCES apply for voltages above 132kV
-- These distances apply to ANY PART OF THE CRANE including the load it is lifting
-
-PLANNING BEFORE SETTING UP NEAR POWERLINES:
-- Conduct INSPECTION to identify overhead powerlines that may pose a risk
-- CONSULT with all relevant parties including the electricity entity
-- Most effective control: TURNING OFF THE POWER (de-energising) or RE-ROUTING the electricity supply — these must be considered FIRST
-- De-energising or re-routing must be arranged with the electricity entity as early as possible (can take time to arrange)
-- Where powerlines have been de-energised: CONFIRMATION must be sought from person in control of the powerline before work commences
-
-IF DE-ENERGISING IS NOT REASONABLY PRACTICABLE — EXCLUSION ZONE CONTROLS:
-- Setting up crane in a position that KEEPS IT OUTSIDE THE EXCLUSION ZONE
-- Erecting a PHYSICAL BARRIER of NON-CONDUCTIVE MATERIALS to prevent any part of the crane or person entering unsafe distance (may require isolating electricity supply while barrier is installed)
-- ENGINEERING CONTROLS such as MECHANICAL STOPS OR CONSTRAINTS to prevent crane entering exclusion zone
-
-LOWER ORDER ADMINISTRATIVE CONTROLS (only when higher order not reasonably practicable):
-- Warning signs indicating location of overhead powerlines
-- Tiger tails or line markers on powerlines as VISUAL AID (NOTE: tiger tails do NOT insulate wires)
-- Warning devices to warn crane operator before boom enters exclusion zone
-
-FACTORS TO CONSIDER WHEN IMPLEMENTING EXCLUSION ZONE:
-- Maximum travel distance of crane boom
-- Size and shape of any load to be lifted
-- Possibility of 'OVERSHOOT' of the load after crane boom comes to rest
-- SWAY OR SAG of the powerlines (sway from wind; sag varies with temperature)
-- Use of SAFETY OBSERVER or 'SPOTTER' who observes crane operation and advises operator
-
-NOTE: Identified minimum clearance distance may need to be GREATER than the prescribed exclusion zone distance (e.g. to account for load swinging after crane stops)
-
-WORKING AT CLOSER DISTANCES:
-- If not reasonably practicable to maintain exclusion zone: a RISK ASSESSMENT must be completed for the proposed work
-- Consultation must occur with relevant parties including the electricity entity
-- Electricity entity may require: powerlines to have visual markers fitted; crane operator to undertake SPECIFIC TRAINING; all work to be carried out under CONTROL OF A SAFETY OBSERVER
-- UNLESS ALL CONDITIONS ARE MET, work cannot be carried out at closer distances
-- Persons operating at closer distances must be an AUTHORISED OR INSTRUCTED PERSON under the ES Regulation
-- Electricity entity may specify a GREATER distance than smaller exclusion zones in Schedule 2 of the ES Regulation if they consider the risk warrants it
-
-VISUAL INDICATORS:
-- Any part of tower crane or its load within 3 metres of overhead powerline (up to 132kV) without de-energising or documented risk assessment = serious non-compliance
-- Tiger tails on powerlines treated as insulation by crane crew = non-compliance
-- No safety observer where crane operates in the safety observer zone = non-compliance
-- No consultation with electricity entity before setting up crane near powerlines = non-compliance
-- Powerlines not de-energised and no engineering or physical barriers in place = serious non-compliance
-
----
-
-CHUNK 17: Safety Observer (Spotter) Requirements Near Overhead Powerlines
-Section: CoP s4.1.3; ES Regulation
-Topic: Role, responsibilities and restrictions of the safety observer when tower cranes operate near overhead electric lines
-
-DEFINITION:
-- A SAFETY OBSERVER or 'SPOTTER' is a person who is TRAINED AND COMPETENT to observe and advise the crane operator if the crane or any part of a load is LIKELY TO COME WITHIN AN EXCLUSION ZONE of an overhead powerline
-
-SAFETY OBSERVER ZONE CONCEPT:
-- Designed to: ENCOURAGE plant to be located away from the possibility of encroaching into the exclusion zone; and when not possible, adopt OTHER SUITABLE PRECAUTIONS to prevent encroachment
-- A crane is operating in the safety observer zone when ANY PART OF THE CRANE OR LOAD COULD enter the exclusion zone
-
-A CRANE IS NOT IN A SAFETY OBSERVER ZONE WHEN:
-- Powerlines have been DE-ENERGISED and steps taken to ensure they CANNOT BE INADVERTENTLY RE-ENERGISED (high voltage powerlines should also be EARTHED)
-- LIMITING DEVICES have been installed to prevent any part of crane, plant or load being moved from entering the exclusion zone
-- Any part of crane, plant or load is prevented from entering exclusion zone by PHYSICAL BARRIERS
-
-SAFETY OBSERVER RESTRICTIONS:
-- Must NOT carry out OTHER TASKS (such as dogging duties) at the time of observing crane operations
-- Must be CLEARLY IDENTIFIABLE by all workers on the worksite to avoid distraction during spotting duties
-- A DOGGER MUST NOT also perform the role of safety observer when crane is operating close to overhead powerlines
-
-VISUAL INDICATORS:
-- Safety observer also performing dogging duties during crane operation near powerlines = non-compliance
-- Safety observer not clearly identifiable (no distinguishing vest or marking) = non-compliance
-- No safety observer present when crane operates in safety observer zone = serious non-compliance
-
----
-
-CHUNK 18: Collision with Other Plant — Concrete Booms and Adjacent Cranes
-Section: CoP s4.2, s4.2.1
-Topic: Risk of tower crane collision with concrete placement booms and other cranes; required procedures and control measures
-
-RISK OF INJURY FROM COLLISION:
-- Collision may cause injury from: DROPPED LOADS; CRANE COLLAPSE; FAILED CRANE COMPONENTS such as boom sections
-- Higher risk exists where:
-  - A CONCRETE PLACEMENT BOOM is working within the tower crane's operating radius
-  - Tower cranes on ADJACENT SITES operating in the SAME AIR SPACE
-  - Crane crew cannot directly communicate with other plant operators
-  - Operators have DIFFERENT TASKS to perform
-
-REQUIRED PROCEDURE:
-- A DOCUMENTED PROCEDURE (e.g. SWMS) must be established EARLY IN THE PLANNING PROCESS where a tower crane may collide with other plant
-- Must identify the PERSON RESPONSIBLE for implementation of the SWMS
-- ALL PERSONS involved in operating tower cranes and other plant must be AWARE OF AND TRAINED IN THE PROCEDURE
-
-PROCEDURE MUST ADDRESS:
-- SITING cranes to minimise need for other plant to operate within the crane's operating radius
-- Siting cranes and other plant with COUNTERWEIGHTS so they CANNOT COLLIDE during slewing
-- METHOD OF COMMUNICATION between crane crew and other plant operators
-- SCHEDULING OF WORK to minimise time crane and other plant are required to work in same area or at same height
-- TOWER CRANE CLIMBING PROCEDURE to ensure crane remains as far above any structure or plant (e.g. jump forms) as practicable
-- FREQUENCY OF REGULAR MEETINGS to monitor and review effectiveness of control measures and who should attend
-
-AUDIBLE WARNING DEVICE:
-- All tower cranes should be fitted with an AUDIBLE WARNING DEVICE
-
-ADJACENT SITES:
-- When separate tower cranes share air space from ADJACENT WORKPLACES: principal contractor from EACH WORKPLACE must negotiate and implement DOCUMENTED SYSTEMS OF WORK (e.g. within construction safety plan) including procedure to ensure sufficient clearances between cranes
-- Procedure must include NAME OF A CRANE COORDINATOR from each site
-- EFFECTIVE MEANS OF COMMUNICATION must be provided to enable crane operators on separate cranes to avoid collision
-
-VISUAL INDICATORS:
-- Concrete placement boom operating within tower crane's operating radius without documented procedure = non-compliance
-- No audible warning device on tower crane = non-compliance
-- Adjacent site cranes sharing air space without documented agreement and crane coordinator identified = non-compliance
-- Crane counterweights positioned where they could collide during slewing = serious non-compliance
-
----
-
-CHUNK 19: Erecting and Dismantling Tower Cranes — Responsibilities and Collapse Prevention
-Section: CoP s5, s5.1, s5.2, s5.2.1; WHS Regulation s291, s299
-Topic: SWMS obligations; responsibilities; control measures to prevent crane collapse during erection and dismantling
-
-SWMS REQUIREMENT:
-- A SWMS must be prepared for the HIGH RISK CONSTRUCTION WORK of erecting or dismantling a tower crane
-- SWMS must consider:
-  - CRANE DESIGNER'S OR MANUFACTURER'S INSTRUCTIONS
-  - Technical standards relevant to ACCESS AND EGRESS
-  - CRANE'S STABILITY
-  - Adverse effects on other plant, structures or work processes
-  - Use of SPECIAL TOOLS, JIGS AND APPLIANCES
-  - Control measures for SECURING CRANE COMPONENTS
-  - Interaction of crane with OTHER PLANT
-  - ENVIRONMENTAL FACTORS (wet or windy conditions)
-  - Compliance of all relevant electrical installations with AS 3000: Electrical installations
-
-PREVENTING CRANE COLLAPSE DURING ERECTION AND DISMANTLING (CoP s5.2.1):
-- Tower crane components should be INSPECTED AND TESTED prior to delivery to the workplace
-- Written instructions about erecting and dismantling must be READILY AVAILABLE ON SITE
-- Must NOT erect or dismantle in conditions EXCEEDING CRANE MANUFACTURER'S SPECIFICATIONS
-- Must NOT erect or dismantle where wind is such that components MAY BECOME UNCONTROLLABLE when suspended
-- WIND LOADING must be considered during all erection/dismantling including FUNNELLING EFFECTS between adjacent buildings and wind effect on large sections
-- Erecting and dismantling must be SUPERVISED BY A COMPETENT PERSON
-- Precautions must be taken to maintain STABILITY OF THE CRANE per AS 1418.4 or other relevant technical standards
-- Crane manufacturer's instructions must be followed for ASSEMBLY OF COMPONENTS IN CORRECT SEQUENCE, using CORRECT EQUIPMENT AND TOOLS
-- Tower sections must be CLEARLY AND PERMANENTLY IDENTIFIED with MODEL TYPE AND SERIAL NUMBER
-- Tower sections used must be the SAME AS THOSE SPECIFIED ON THE ENGINEER'S CRANE BASE DRAWING
-
-TOWER BOLT REQUIREMENTS DURING ERECTION:
-- Use only CORRECT TYPE AND GRADE of tower bolts when connecting tower sections
+TOWER BOLT REQUIREMENTS:
+- Use only CORRECT TYPE AND GRADE of tower bolts
 - Bolts and pins must be COMPATIBLE WITH CRANE COMPONENTS and not defective
-- Tower bolts must be correctly TORQUED — over-tightening can be as potentially dangerous as insufficient tightening
-- Crane ties must be installed per CRANE MANUFACTURER AND DESIGNER OF CRANE INSTALLATION instructions
+- Tower bolts must be correctly TORQUED (over-tightening as dangerous as insufficient tightening)
+- Crane ties installed per MANUFACTURER AND DESIGNER instructions
 
 VISUAL INDICATORS:
-- Erection or dismantling of tower crane without prepared SWMS = serious non-compliance
-- Erection/dismantling proceeding in conditions exceeding manufacturer's wind specifications = serious non-compliance
-- Erection/dismantling not supervised by a competent person = serious non-compliance
+- Erection/dismantling without prepared SWMS = serious non-compliance
+- Erection/dismantling in conditions exceeding manufacturer's wind specifications = serious non-compliance
+- Erection/dismantling not supervised by competent person = serious non-compliance
 - Tower sections without permanent model type and serial number identification = non-compliance
 - Tower bolts not correctly torqued or incorrect grade = serious non-compliance
 
 ---
 
-CHUNK 20: Climbing Tower Cranes — Collapse Prevention During Climbing Operations
+CHUNK 13: Climbing Operations — Exclusion Zones and Collapse Prevention
 Section: CoP s5.2.2
-Topic: Risk controls specific to tower crane climbing operations; exclusion zones; training and wind limits
-
-RISK LEVEL:
-- Risk of SERIOUS OR FATAL INJURY from crane collapse is VERY HIGH during tower crane climbing operations
-- Climbing frame must cope with SIGNIFICANT STATIC AND DYNAMIC FORCES
-
-MINIMISING COLLAPSE RISK DURING CLIMBING:
-- Conduct climbing operations OUTSIDE NORMAL WORK HOURS where practicable to minimise persons at risk
-- EXCLUDE ALL UNNECESSARY PERSONS from the workplace during climbing
-- Maintain EXCLUSION ZONE OF SUFFICIENT SIZE to contain structural failure (minimum radius: AT LEAST 12 METRES where practicable from the base of the crane)
-- PROHIBIT PERSONS from entering area DIRECTLY BEHIND THE TOWER CRANE (under the counterweights) during climbing
-- AVOID SLEW OPERATIONS at ALL TIMES during climbing operations
-- Conduct PHYSICAL INSPECTION of counterweight trolleys (including side plates, bolting and pins, safety gear, ropes and turnbuckles) BEFORE COMMENCING climbing
-
-CLIMBING SEQUENCE REQUIREMENTS:
-- All persons involved must receive THOROUGH TRAINING AND INSTRUCTION in the climbing procedure for the SPECIFIC MODEL AND TYPE of crane
-- Climbing sequence must be carried out in STRICT ACCORDANCE with CRANE MANUFACTURER'S INSTRUCTIONS
-- Climbing operations should NOT be attempted at WIND SPEEDS GREATER THAN 36 KM/HOUR
-- Climbing should NOT COMMENCE if recommended maximum wind speed OR actual wind speed is UNKNOWN
-- Rigging crew may cease work at LESSER WIND SPEED at their discretion
+Topic: Exclusion zone dimensions for climbing; prohibited activities during climbing; counterweight inspection
 
 EXCLUSION ZONE FOR CLIMBING:
-- Minimum radius: AT LEAST 12 METRES from the base of the crane where practicable
+- Minimum radius: AT LEAST 12 METRES from base of crane where practicable
 - Must be in place PRIOR TO INSTALLATION OF CRANE TIES
-- Exclusion zone for crane tie installation may be REDUCED where justified by risk assessment (lower risk than full climbing operations)
+- Exclusion zone for crane tie installation may be REDUCED where justified by risk assessment
+
+PROHIBITED DURING CLIMBING:
+- EXCLUDE ALL UNNECESSARY PERSONS from workplace
+- PROHIBIT PERSONS from area DIRECTLY BEHIND TOWER CRANE (under counterweights)
+- AVOID SLEW OPERATIONS at ALL TIMES during climbing
+
+PRE-CLIMBING INSPECTION:
+- PHYSICAL INSPECTION of counterweight trolleys (side plates, bolting, pins, safety gear, ropes, turnbuckles) BEFORE COMMENCING climbing
+
+CLIMBING SEQUENCE:
+- All persons must receive THOROUGH TRAINING AND INSTRUCTION for SPECIFIC MODEL AND TYPE of crane
+- Sequence carried out in STRICT ACCORDANCE with MANUFACTURER'S INSTRUCTIONS
+- Must NOT attempt at WIND SPEEDS GREATER THAN 36 KM/HOUR
+- Must not commence if wind speed UNKNOWN
+- Rigging crew may cease at lesser wind speed at their discretion
 
 CRANES WITH MOVING COUNTERWEIGHTS ON SLOPED RAILS (e.g. FAVCO 1500, FAVCO STD 1000):
-- Counterweight must be positioned at TOP OF COUNTERWEIGHT RAIL during climbing process
-- Counterweight kept in position by a LATCH that locks onto a lug on the bottom of the rail
-- A SECONDARY MEANS OF SECURING THE LATCH should be provided (e.g. rope or chain connecting latch lever to machine deck) to prevent inadvertent release
+- Counterweight positioned at TOP OF COUNTERWEIGHT RAIL during climbing
+- Kept in position by LATCH locking onto lug on bottom of rail
+- SECONDARY MEANS OF SECURING LATCH should be provided (e.g. rope or chain connecting latch lever to machine deck)
 
 VISUAL INDICATORS:
-- Tower crane climbing occurring without exclusion zone of at least 12 metres = serious non-compliance
-- Slewing operations performed during climbing = serious non-compliance
-- Persons permitted behind tower (under counterweights) during climbing = serious non-compliance
-- Climbing in wind speeds exceeding 36 km/hr = serious non-compliance
-- Persons not trained in specific model/type climbing procedure participating in climbing = serious non-compliance
+- Climbing without exclusion zone of at least 12 metres = serious non-compliance
+- Slewing operations during climbing = serious non-compliance
+- Persons behind tower (under counterweights) during climbing = serious non-compliance
+- Climbing at wind speeds exceeding 36 km/hr = serious non-compliance
+- Persons not trained in specific model/type climbing procedure participating = serious non-compliance
 - Exclusion zone not established before crane tie installation = non-compliance
 
 ---
 
-CHUNK 21: Falling from Heights During Tower Crane Work
-Section: CoP s5.3–s5.3.3; WHS Regulation s291, s299, s306C–s306D, s306E, s306G, s306I
-Topic: Fall prevention and fall arrest requirements for persons working at height on tower cranes
+CHUNK 14: Exclusion Zones — Erection, Dismantling and Falling Objects
+Section: CoP s5.4.1; WHS Regulation s54–s55
+Topic: Exclusion zone dimensions for erection/dismantling; public area closures; falling object controls
 
-HIGH RISK CONSTRUCTION WORK (WHS Regulation s291):
-- Work involving a RISK OF A PERSON FALLING MORE THAN 2 METRES = high risk construction work
-- Requires SWMS before work commences (WHS Regulation s299)
+EXCLUSION ZONE — ERECTION AND DISMANTLING (CoP s5.4.1):
+- Must be established BEFORE WORK STARTS
+- Based on RISK ASSESSMENT; must include where practicable:
+  - RADIUS OF AT LEAST 20 METRES from base of tower crane
+  - FOOTPRINT RELATIVE TO SIZE OF BOOM
+- Must be SUFFICIENT SIZE TO CONTAIN STRUCTURAL FAILURE where practicable
+- Only persons IMMEDIATELY INVOLVED in erecting, climbing or dismantling permitted within zone
 
-FALL RISK THRESHOLDS:
-- Non-housing construction: risk of fall LESS THAN 2 METRES = PCBU must identify, assess hazards and implement control measures
-- Housing construction: risk of fall LESS THAN 3 METRES = same obligations
+PUBLIC FOOTPATHS AND ROADWAYS:
+- Where public footpaths/roadways form part of exclusion zone: PERMISSION TO CLOSE must be obtained from APPROPRIATE LOCAL AUTHORITY
 
-CONTROL MEASURES TO PREVENT FALLS (in order of preference):
-1. EDGE PROTECTION SYSTEMS — preferred where possible
-2. TRAVEL RESTRAINT SYSTEMS
-3. FALL-ARREST HARNESS SYSTEMS — least preferred; must be supplemented with rescue procedure
-
-EDGE PROTECTION (WHS Regulation s306E):
-- Must be erected per MANUFACTURER'S OR SUPPLIER'S INSTRUCTIONS, or by an ENGINEER or COMPETENT PERSON
-- Provides a barrier to prevent falling off platforms, openings in surfaces, fall arresting platforms, or working surfaces
-- Consists of RAILS, MESH, SHEETING OR OTHER MATERIAL designed to withstand forces if a person fell against it
-- Where possible: TOWER CRANE SECTIONS SHOULD BE DESIGNED so edge protection is already in place before installation
-- Where impractical: other fall protection (workboxes, travel restraint) must be used
-
-TRAVEL RESTRAINT SYSTEMS (WHS Regulation s306G):
-- Must be installed by a COMPETENT PERSON
-- Anchorage point must have capacity to withstand any load that could be exerted on it
-- PCBU must ensure at LEAST EVERY 6 MONTHS a competent person INSPECTS the system and provides a WRITTEN RECORD
-- Consists of harness or belt + lanyards attached to static line or anchorage point
-- RESTRICTS TRAVELLING RANGE so person cannot get into a position where they could fall
-- PREFERRED OVER fall-arrest systems
-
-FALL-ARREST HARNESS SYSTEMS (WHS Regulation s306I):
-- Each anchorage point must be DESIGNED BY AN ENGINEER for the purpose, or INSPECTED AND APPROVED BY A COMPETENT PERSON before first use
-- Arrests a fall — does NOT prevent it; therefore LESS PREFERRED than other options
-- Where used: WRITTEN PROCEDURE describing how person can be SAFELY RETRIEVED after a fall must exist
-- FIRST AID BOX suitable for emergency retrieval must be READILY AVAILABLE
+FALLING OBJECT CONTROLS (WHS Regulation s54–s55):
+- Must PREVENT OBJECTS FROM FALLING FREELY so far as reasonably practicable
+- If prevention not reasonably practicable: provide SYSTEM TO ARREST FALL
+- Examples: secure barriers; safe means of raising/lowering objects; exclusion zones
 
 VISUAL INDICATORS:
-- Persons working at height on tower crane without any fall protection = serious non-compliance
-- Edge protection absent on platforms, landings or machine decks = non-compliance
-- Travel restraint system not inspected by competent person within the past 6 months = non-compliance
-- Fall-arrest harness system in use without a documented rescue/retrieval procedure = non-compliance
-- No first aid box on site where fall-arrest harness systems are in use = non-compliance
+- No exclusion zone before erection or dismantling = serious non-compliance
+- Exclusion zone radius less than 20 metres (erection/dismantling) without documented justification = non-compliance
+- Public footpaths/roadways within exclusion zone without local authority approval for closure = serious non-compliance
 
 ---
 
-CHUNK 22: Falling Objects During Erection, Climbing and Dismantling
-Section: CoP s5.4–s5.4.4; WHS Regulation s54–s55
-Topic: Exclusion zones, tool lanyards, scheduling and restraining systems to control falling object risk
-
-PCBU OBLIGATION (WHS Regulation s54–s55):
-- Must MANAGE RISKS to health and safety from falling objects
-- Must MINIMISE THE RISK of an object falling on a person by:
-  - PREVENTING OBJECTS FROM FALLING FREELY, so far as reasonably practicable
-  - Providing a SYSTEM TO ARREST THE FALL of falling objects if prevention is not reasonably practicable
-  - Examples: secure barriers; safe means of raising and lowering objects; exclusion zones
-
-EXCLUSION ZONES — ERECTION AND DISMANTLING (CoP s5.4.1):
-- An EXCLUSION ZONE must be established BEFORE WORK STARTS on erecting or dismantling
-- Based on a RISK ASSESSMENT and must include where practicable:
-  - RADIUS OF AT LEAST 20 METRES from the base of the tower crane
-  - A FOOTPRINT RELATIVE TO THE SIZE OF THE BOOM
-- Exclusion zone must be of SUFFICIENT SIZE TO CONTAIN ANY STRUCTURAL FAILURE where practicable
-- Where PUBLIC FOOTPATHS AND ROADWAYS form part of the exclusion zone: PERMISSION TO CLOSE must be obtained from the APPROPRIATE LOCAL AUTHORITY
-- Only persons IMMEDIATELY INVOLVED in erecting, climbing or dismantling may be permitted within the exclusion zone
-
-NOTE: These exclusion zones are DISTINCT FROM safe approach distances for powerlines (CoP s4.1.3)
+CHUNK 15: Tool Lanyards and Restraining Systems for Components
+Section: CoP s5.4.2, s5.4.4
+Topic: Tool lanyard specifications; restraining systems for crane components during erection/dismantling
 
 TOOL LANYARDS (CoP s5.4.2):
-- A tool lanyard = SHORT ROPE OR WEBBING used to secure tools and equipment to an ANCHORAGE POINT
-- Anchorage may be: the person using the tool, a column or beam
-- Weight of the tool must NOT impose ADDITIONAL RISKS to the person
-- Lanyard material: SYNTHETIC OR NATURAL FIBRE, STEEL ROPE OR WEBBING — must maintain required strength and resistance to abrasion
-- MAXIMUM LANYARD LENGTH attached at the wrist: 300 MILLIMETRES — ensures dropped tool cannot hit a person working below
-- Lanyard length should be KEPT TO A MINIMUM to reduce risk of line snagging
-
-SCHEDULING OF WORK (CoP s5.4.3):
-- Schedule erecting, dismantling and climbing to MINIMISE RISK TO PERSONS including members of the public from falling objects
-- Example: if crane is next to an OFFICE BUILDING — consider doing work OUTSIDE NORMAL WORKING HOURS
-- Example: if crane is next to a RESIDENTIAL BUILDING — consider doing work DURING NORMAL WORKING HOURS
-- Erection, dismantling, climbing and maintenance MUST BE PROGRAMMED into the project's schedule of work
+- SHORT ROPE OR WEBBING securing tools/equipment to ANCHORAGE POINT
+- Anchorage: person using tool, column or beam
+- Weight of tool must NOT impose ADDITIONAL RISKS to person
+- Material: SYNTHETIC OR NATURAL FIBRE, STEEL ROPE OR WEBBING
+- MAXIMUM LANYARD LENGTH attached at wrist: 300 MILLIMETRES (ensures dropped tool cannot hit person below)
+- Lanyard length KEPT TO MINIMUM to reduce snagging risk
 
 RESTRAINING SYSTEMS FOR CRANE COMPONENTS (CoP s5.4.4):
-- While erecting, dismantling and climbing: control measures must be in place to RESTRAIN individual crane components (e.g. packers or shims) from falling
-- Example: SHORT CHAIN attached to both the crane component and the crane structure
+- Control measures must RESTRAIN individual crane components (e.g. packers, shims) from falling during erecting, dismantling, climbing
+- Example: SHORT CHAIN attached to both crane component and crane structure
 
 VISUAL INDICATORS:
-- No exclusion zone established before erection or dismantling of tower crane = serious non-compliance
-- Exclusion zone radius less than 20 metres (for erection/dismantling) without documented justification = non-compliance
-- Exclusion zone for climbing less than 12 metres without documented justification = non-compliance
-- Public footpaths or roadways within exclusion zone without local authority approval for closure = serious non-compliance
-- Tool lanyards wrist-attached with length exceeding 300 mm = non-compliance
+- Tool lanyards wrist-attached exceeding 300 mm length = non-compliance
 - Crane components (packers, shims) not restrained during climbing or dismantling = non-compliance
 
 ---
 
-CHUNK 23: Commissioning Tower Cranes
-Section: CoP s6, s6.1; WHS Regulation s201
-Topic: Obligations for commissioning tower cranes; responsibilities of commissioners; independent third party inspections
+CHUNK 16: Fall Protection — Edge Protection, Travel Restraint and Fall-Arrest
+Section: CoP s5.3–s5.3.3; WHS Regulation s291, s299, s306C–s306E, s306G, s306I
+Topic: Fall prevention hierarchy; edge protection specifications; travel restraint and fall-arrest requirements
 
-COMMISSIONING OBLIGATION (WHS Regulation s201):
-- Person who commissions plant MUST commission having regard to information provided by the designer, manufacturer, importer or supplier, and instructions of a COMPETENT PERSON to the extent they relate to health and safety
-- Commissioning includes: performing necessary ADJUSTMENTS, TESTS AND INSPECTIONS to ensure crane is in full working order to SPECIFIED REQUIREMENTS before use
+HIGH RISK CONSTRUCTION WORK (WHS Regulation s291):
+- Risk of fall MORE THAN 2 METRES = high risk construction work
+- Requires SWMS before work commences (WHS Regulation s299)
 
-RESPONSIBILITIES OF PERSONS WHO COMMISSION:
-- Ensure crane is INSPECTED to confirm erected in accordance with DESIGN SPECIFICATIONS
-- Ensure commissioning methods are in accordance with CRANE MANUFACTURER'S OR SUPPLIER'S SPECIFICATIONS
-- Ensure commissioning sequence developed and implemented per RISK MANAGEMENT PRINCIPLES
-- Develop an ERECTION PLAN covering: sequence of operations; safety procedures during commissioning
-- Carry out TESTS to ensure crane will perform within design specifications (e.g. DUMMY RUNS)
-- Ensure NO STRESSES exceeding design specifications are imposed on the crane
-- NOTIFY CRANE OWNER of commissioning results and provide APPROPRIATE DOCUMENTATION
+CONTROL HIERARCHY (in order of preference):
+1. EDGE PROTECTION SYSTEMS
+2. TRAVEL RESTRAINT SYSTEMS
+3. FALL-ARREST HARNESS SYSTEMS (least preferred; must be supplemented with rescue procedure)
 
-INDEPENDENT THIRD PARTY:
-- An independent third party SHOULD undertake relevant inspections and tests PRIOR TO COMMISSIONING
-- Refer to CoP s10.3 for further information
+EDGE PROTECTION (WHS Regulation s306E):
+- Must consist of RAILS, MESH, SHEETING OR OTHER MATERIAL designed to withstand forces if person fell against it
+- Where possible: TOWER CRANE SECTIONS DESIGNED so edge protection already in place before installation
+- Where impractical: other fall protection (workboxes, travel restraint) must be used
 
-WRITTEN INSTRUCTIONS:
-- Written instructions regarding commissioning must be AVAILABLE TO ALL PCBU PERSONNEL at the workplace
-- Commissioning MUST BE CARRIED OUT in accordance with these written instructions
+TRAVEL RESTRAINT SYSTEMS (WHS Regulation s306G):
+- Must be installed by COMPETENT PERSON
+- Anchorage point must withstand any load exerted on it
+- PCBU must ensure AT LEAST EVERY 6 MONTHS: competent person INSPECTS system and provides WRITTEN RECORD
+- Consists of harness/belt + lanyards attached to static line or anchorage point
+- RESTRICTS TRAVELLING RANGE so person cannot get into position where they could fall
+- PREFERRED OVER fall-arrest systems
 
-BYPASSED DEVICES:
-- If rated capacity limiters, overload cut-outs or motion switches were BYPASSED OR DISCONNECTED during erection: they must be RECONNECTED AND TESTED IN ACCORDANCE WITH A WRITTEN PROCEDURE before the crane is put into operation
-
-COMMISSIONER MUST PROVIDE CRANE OWNER WITH:
-- Any PROBLEMS IDENTIFIED during commissioning indicating the crane is not performing safely
-- CONFIRMATION that the crane will perform the functions for which it has been commissioned
+FALL-ARREST HARNESS SYSTEMS (WHS Regulation s306I):
+- Each anchorage point DESIGNED BY ENGINEER or INSPECTED AND APPROVED BY COMPETENT PERSON before first use
+- Arrests fall — does NOT prevent it; LESS PREFERRED
+- Where used: WRITTEN PROCEDURE describing how person can be SAFELY RETRIEVED after fall must exist
+- FIRST AID BOX suitable for emergency retrieval must be READILY AVAILABLE
 
 VISUAL INDICATORS:
-- Crane put into service without commissioning inspections and tests = serious non-compliance
-- Rated capacity limiters or motion limiting devices still bypassed or disconnected after commissioning = serious non-compliance
-- No written commissioning report provided to crane owner = non-compliance
-- No independent third party inspection conducted before commissioning = flag
+- Persons working at height on tower crane without fall protection = serious non-compliance
+- Edge protection absent on platforms, landings or machine decks = non-compliance
+- Travel restraint system not inspected by competent person within past 6 months = non-compliance
+- Fall-arrest harness system without documented rescue/retrieval procedure = non-compliance
+- No first aid box on site where fall-arrest harness systems in use = non-compliance
 
 ---
 
-CHUNK 24: Roles and Responsibilities — PCBU, Crane Owner, Crane Operator, Dogger
-Section: CoP s7.1–s7.1.4; WHS Act s19, s21; WHS Regulation s85, Schedule 3
-Topic: Specific operational roles and high risk work licence requirements for crane operators and doggers
+CHUNK 17: Machine Deck and A-Frame Guardrails
+Section: CoP s7.3.3, s7.3.4; AS 1657
+Topic: Guardrail specifications for machine deck and A-frame; ladder cage dimensions
 
-PCBU (CoP s7.1.1):
-- Must not direct or allow a worker to carry out HIGH RISK WORK (tower crane operation) without seeing WRITTEN EVIDENCE of the relevant HIGH RISK WORK LICENCE
-- Duties of management or control of plant include ensuring CONSTRUCTION OR COMMISSIONING is completed by a competent person, and MAINTENANCE, INSPECTION AND TESTING is carried out by a competent person
-
-CRANE OWNER (CoP s7.1.2; WHS Act s21):
-- Must take all reasonable steps to ensure SAFETY FEATURES AND WARNING DEVICES are used per relevant instructions and training
-- Should ensure crane operators have UNDERGONE APPROPRIATE TRAINING and obtained the RELEVANT HIGH RISK WORK LICENCE
-- Must ensure all MANUFACTURER'S INFORMATION is supplied and readily available
-- Must ensure DESIGN, LOAD CHART, MAINTENANCE RECORDS and INSPECTION REPORTS are available and signed off before deployment
-- Where crane stored and not used: annual inspection may not be required — but PRE-ERECTION AND COMMISSIONING INSPECTIONS by an independent third party should occur before use
-
-CRANE OPERATOR (CoP s7.1.3):
-- Must hold a HIGH RISK WORK LICENCE as specified under WHS Regulation Schedule 3
-- Must always exercise proper diligence and OPERATE THE CRANE SAFELY
-- If operator believes a lift is DANGEROUS OR UNSAFE: must REFUSE TO PROCEED until concern is reported, risks managed, and safe conditions confirmed
-
-CRANE OPERATOR MUST KNOW:
-- The PARTICULAR MODEL of crane, its characteristics, functions and limitations
-- Information in the CRANE'S OPERATING MANUAL
-- The CRANE'S LOAD CHART, including all notes and warnings, and how to calculate net capacity in every configuration
-- Proper INSPECTION AND MAINTENANCE PROCEDURES per manufacturer and owner guidelines
-- Any SITE CONDITIONS affecting crane operations (powerlines, nearby structures, other cranes, concrete placement booms)
-- Basic SLINGING TECHNIQUES
-
-CRANE OPERATOR PRE-OPERATIONAL CHECKS:
-- Check unauthorised persons are NOT PRESENT on the crane
-- Check each crane motion is SAFE AND WITHOUT RISK
-- Complete the DAILY INSPECTION CHECKLIST including filling out the CRANE LOGBOOK
-
-CRANE OPERATOR MUST NOT leave the cabin or control room while a load is suspended — EXCEPT IN AN EMERGENCY
-
-DOGGER (CoP s7.1.4):
-- Must hold a HIGH RISK WORK LICENCE for dogging work as specified under WHS Regulation Schedule 3
-- PRIMARY ROLE: assist crane operator in safe and efficient crane operation
-- Includes: APPLICATION OF SLINGING TECHNIQUES; SELECTION AND INSPECTION OF LIFTING GEAR; DIRECTING CRANE OPERATOR when load is out of operator's view
-- Dogger must be positioned to SAFELY OBSERVE THE ENTIRE LIFTING OPERATION they are responsible for
-- Dogger MUST NOT also perform the role of safety observer when crane is near overhead powerlines
-- Dogger must have CONTROL OF THE LOAD from the time it is hoisted until it is placed in position
-
-DOGGER MUST ENSURE BEFORE DIRECTING LIFT:
-- Each lifting attachment, sling and shackle has SWL or WLL GREATER THAN OR EQUAL TO that of the load — and is SUITABLE for safely handling the load
-- Hoisting apparatus is CORRECTLY APPLIED to load and crane hook
-- No part of the load is LOOSE
-- Load is PROPERLY BALANCED
-- Load is NOT SNAGGED
-- Load will NOT CONTACT ANY OBJECT or constitute a hazard to any person when lifted
-
-VISUAL INDICATORS:
-- Crane operator operating without a high risk work licence = serious non-compliance
-- Dogger working without a high risk work licence = serious non-compliance
-- Crane operator leaving cabin while load is suspended (non-emergency) = serious non-compliance
-- Dogger also acting as safety observer near powerlines = non-compliance
-- Crane operator not completing daily inspection checklist or crane logbook = non-compliance
-
----
-
-CHUNK 25: Lifting Loads — Lifting Gear Integrity, Crane Overload and Dropped Loads
-Section: CoP s7.2–s7.2.3; WHS Regulation s219, s55, s315L, s315M
-Topic: Control measures for lifting operations; inspection of lifting gear; material box requirements; general lifting rules
-
-LIFTING GEAR INSPECTION REQUIREMENTS (CoP s7.2.1):
-- All lifting gear should be PERIODICALLY INSPECTED by a COMPETENT PERSON
-- Maximum period between inspections: NOT EXCEED 12 MONTHS (for general lifting gear)
-- Synthetic sling inspection interval: AT 3-MONTHLY INTERVALS (per AS 1353.2 and AS 4497.2)
-- All lifting gear must be TAGGED to identify date of LAST INSPECTION
-- DOCUMENTED MAINTENANCE RECORDS for lifting gear must be AVAILABLE ON SITE
-
-BASIC ITEMS TO CHECK ON LIFTING GEAR:
-- Lifting gear is TAGGED with all relevant information (grade, SWL, manufacturer, chain size, Australian Standard marking)
-- Lifting hooks provided with OPERABLE SAFETY LATCHES
-- Shackles PREVENTED FROM UNSCREWING (e.g. mousing or similar)
-- Lifting eyes and inserts are COMPATIBLE AND SAME PROPRIETARY BRAND
-- Lifting slings are NOT DAMAGED (excessive wear, damaged strands, cracks, deformation, severe corrosion)
-- Sling is APPROPRIATE for loads being lifted including adequate capacity and PROTECTION FROM SHARP EDGES
-
-SLINGING TECHNIQUE REQUIREMENTS:
-- Slings placed around a load so the sling is NOT CROSSED OR TWISTED — ensuring load is balanced and stable
-- Point of lift should be located DIRECTLY ABOVE CENTRE OF GRAVITY — prevents toppling or falling during lift
-- Synthetic slings (round/sausage): only for APPROPRIATE LOADS — NOT for sharp-edged loads (may tear sling)
-
-CONTROL MEASURES AGAINST CRANE OVERLOAD (CoP s7.2.2):
-- Crane MUST BE OPERATED WITHIN ITS LOAD CHART at all times
-- Hoist rope must hang VERTICALLY OVER THE LOAD before hoisting
-- Ensure load does NOT SWING once lifted
-- When handling MAXIMUM OR NEAR MAXIMUM LOADS — after load lifted a few centimetres:
-  - TEST THE HOIST BRAKES
-  - CHECK MASS RECORDED ON LOAD INDICATOR
-  - RECHECK THE LOAD CHART
-
-ADJOINING AREA OBLIGATIONS (WHS Regulation s315L–s315M):
-- Principal contractor must ensure before construction work starts: ADJOINING AREAS where loads are being lifted over are CLOSED to extent necessary to prevent falling objects, OR a GANTRY is erected providing adequate protection
-- Must obtain WRITTEN APPROVAL from relevant authority or person who controls the adjoining area before closing
-
-CONTROL MEASURES FOR DROPPED LOADS (CoP s7.2.3; WHS Regulation s55, s219):
-- No loads may be SUSPENDED OR TRAVEL OVER A PERSON unless plant is specifically designed for that purpose (WHS Regulation s219)
-- Where possible: avoid HANDLING LOADS OVER PUBLIC ACCESS AREAS (footpaths, roads, highways, railways, waterways, buildings)
-- Where necessary: control measures must be implemented to prevent or minimise risk of injury from falling objects
-
-MATERIAL BOX REQUIREMENTS:
-- Tare mass and SWL must be CLEARLY MARKED on all material boxes
-- Material boxes must be ENGINEER-DESIGNED AND CERTIFIED and appropriate for the material being lifted
-- FOUR CHAINS (one in each corner) should be attached during lifting
-- Boxes must have ENCLOSED SIDES OR ROBUST MESH with openings LESS THAN THE MINIMUM SIZE of materials being lifted
-- Loads within material boxes must be SECURED AGAINST MOVEMENT
-- Materials must not be STACKED HIGHER THAN THE SIDE unless adequately secured, and must NEVER BECOME TOP HEAVY
-- Material boxes must be INSPECTED AND MAINTAINED with inspection records kept
-
-GENERAL LIFTING RULES:
-- Formwork frames: TIED TOGETHER or slings WRAPPED AROUND the load
-- Loads of joists or bearers: STRAPPED TOGETHER before lifting
-- Timber sheeting: STRAPPED TOGETHER and lifted in a FLAT POSITION
-- Plasterboard: lifted in specifically designed material box (if no material box: lifting system must be engineer certified, specifying minimum/maximum sheet count, location and capacity of lifting slings)
-- All loads should be SUPPORTED WITH DUNNAGE where possible, uniformly distributed
-- BASKET HITCHES must not be used where persons may be near a lifted load unless sling is positively restrained from sliding along the load
-- HIGH/LOW LOADS (multiple loads simultaneously) should be AVOIDED due to difficulty ensuring dogger is not underneath loads
-- TAG LINES should be used as required to control loads
-
-VISUAL INDICATORS:
-- Lifting gear without inspection tags or with tags exceeding 12-month (general) or 3-month (synthetic slings) interval = non-compliance
-- Slings crossed, twisted or not appropriate for the load type = non-compliance
-- Material box without marked SWL and tare mass = non-compliance
-- Load suspended over workers = serious non-compliance (WHS Regulation s219)
-- Crane operating at or near maximum load without testing hoist brakes and rechecking load chart = non-compliance
-- Materials stacked above top of material box without securing = non-compliance
-
----
-
-CHUNK 26: Safe Access on Tower Cranes — Ladders, Guardrails and Platforms
-Section: CoP s7.3–s7.3.6; AS 1418.4; AS 1657
-Topic: Tower ladder requirements; internal guardrails; guardrails on machine deck; A-frame requirements; jib access
-
-TOWER LADDERS (CoP s7.3.1):
-- Landings with changes in direction of ladder should be provided where space permits — to minimise injury from falls and allow rest breaks
-- Preferred: vertical distance between landings SHOULD NOT EXCEED 6 METRES
-- Where manufacturer has designed otherwise: LOWEST LADDER in the tower may be up to 12.5 METRES; SUBSEQUENT LADDERS may be up to 10 METRES per AS 1418.4
-
-CONTINUOUS VERTICAL LADDERS (where impractical to do otherwise):
-- Use of continuous vertical ladders for total tower length is NOT RECOMMENDED
-- Where unavoidable: a FALL-ARREST SYSTEM that does NOT require the person to CONSTANTLY HOOK ON AND OFF must be provided
-- System may incorporate a VERTICAL RAIL OR ROPE with LOCKING CAM DEVICE
-- MAXIMUM LANYARD LENGTH between person and vertical rail or rope: 300 MILLIMETRES — to reduce potential fall distance
-- Any ladder fall-arrest system must comply with 'TYPE 1' FALL-ARREST DEVICES in AS/NZS 1891 Series
-- Vertical ropes must be manufactured from material NOT PRONE TO UV DEGRADATION OR CORROSION (e.g. suitable grade stainless steel)
-- FOLD-DOWN TYPE REST PLATFORMS are NOT recommended (can hinder rescue, increase fall-down-ladder risk)
-
-INTERNAL GUARDRAIL ON TOWER LANDINGS (CoP s7.3.2):
-- Minimises risk of person FALLING INTERNALLY DOWN or off the tower
-- Examples: guardrail on internal side of access hole, or rail extending around back of access hole
-- May be IMPRACTICAL on top tower landing due to slewing causing ladder bottom to strike guardrail; or entrapment risk
-
-GUARDRAILS ON MACHINE DECK AND A-FRAME PLATFORM (CoP s7.3.3):
-- All tower cranes should be provided with PERIMETER EDGE PROTECTION around the machine deck
+GUARDRAILS ON MACHINE DECK (CoP s7.3.3):
+- All tower cranes should have PERIMETER EDGE PROTECTION around machine deck
 - Must consist of:
   - TOP RAIL between 900 MM and 1100 MM HIGH
   - MID-RAIL
   - TOEBOARD AT LEAST 100 MM HIGH
-- Must comply with AS 1657: Fixed platforms, walkways, stairways and ladders
+- Must comply with AS 1657
 
 A-FRAME LADDER CAGE (CoP s7.3.4):
-- Must be provided on the A-frame to confine a falling person to land on the machine deck rather than fall off the crane
-- LOWEST PART of the ladder cage must be between 2 METRES AND 2.2 METRES above the lower deck
-- HORIZONTAL SPACING between vertical bars on the ladder cage must NOT EXCEED 150 MM
+- Must be provided on A-frame to confine falling person to land on machine deck
+- LOWEST PART of ladder cage: between 2 METRES AND 2.2 METRES above lower deck
+- HORIZONTAL SPACING between vertical bars: NOT EXCEED 150 MM
 - MESH INFILL may be used instead of vertical bars
 
-CANTILEVERED AND HANGING PLATFORMS (CoP s7.3.5):
-- Must provide SAFE ACCESS — workers must NOT be required to climb over handrails to access
-- Must provide: TOP RAIL, MID-RAIL AND TOEBOARD
-- Example safe access options: TRAPDOOR IN MACHINE DECK or LADDER CAGE ON PLATFORM LADDER
+VISUAL INDICATORS:
+- Machine deck guardrail with top rail below 900 mm or above 1100 mm = non-compliance
+- Machine deck missing mid-rail or toeboard (minimum 100 mm) = non-compliance
+- A-frame ladder cage lowest bar less than 2 metres above lower deck = non-compliance
+- A-frame ladder cage bar spacing exceeding 150 mm = non-compliance
 
-JIB ACCESS — NON-SELF-ERECTING TYPES (CoP s7.3.6):
-- Tower cranes requiring access to jibs during erecting, inspecting and maintaining must be fitted with:
-  - A RIGGER'S RUN and STATIC LINES extending the COMPLETE LENGTH OF THE JIB
-  - Persons must use static line and APPROPRIATE FALL ARREST LANYARDS to ensure attached to crane AT ALL TIMES
-- Non-luffing tower cranes with TROLLEY PLATFORMS: platforms to remain on the crane
+---
+
+CHUNK 18: Tower Ladders and Fall-Arrest Systems
+Section: CoP s7.3.1; AS 1418.4; AS 1657
+Topic: Tower ladder landing intervals; continuous vertical ladder fall-arrest requirements
+
+TOWER LADDERS (CoP s7.3.1):
+- Landings with changes in ladder direction should be provided where space permits
+- Preferred: vertical distance between landings SHOULD NOT EXCEED 6 METRES
+- Where manufacturer designed otherwise:
+  - LOWEST LADDER in tower may be up to 12.5 METRES
+  - SUBSEQUENT LADDERS may be up to 10 METRES per AS 1418.4
+
+CONTINUOUS VERTICAL LADDERS:
+- Use for total tower length NOT RECOMMENDED
+- Where unavoidable: FALL-ARREST SYSTEM that does NOT require person to CONSTANTLY HOOK ON AND OFF must be provided
+- System may incorporate VERTICAL RAIL OR ROPE with LOCKING CAM DEVICE
+- MAXIMUM LANYARD LENGTH between person and vertical rail/rope: 300 MILLIMETRES (reduces potential fall distance)
+- Any ladder fall-arrest system must comply with TYPE 1 FALL-ARREST DEVICES in AS/NZS 1891 Series
+- Vertical ropes: material NOT PRONE TO UV DEGRADATION OR CORROSION (e.g. suitable grade stainless steel)
+- FOLD-DOWN TYPE REST PLATFORMS NOT recommended (hinder rescue, increase fall-down-ladder risk)
 
 VISUAL INDICATORS:
 - No fall-arrest system on continuous vertical tower ladder = serious non-compliance
 - Fall-arrest lanyard on vertical rail exceeding 300 mm length = non-compliance
-- Machine deck guardrail with top rail below 900 mm = non-compliance
-- Machine deck missing mid-rail or toeboard (minimum 100 mm) = non-compliance
-- A-frame ladder cage lowest bar less than 2 metres above lower deck = non-compliance
-- A-frame ladder cage bar spacing exceeding 150 mm = non-compliance
+- Fold-down rest platforms on continuous vertical ladder = flag
+
+---
+
+CHUNK 19: Jib Access — Rigger's Run and Static Lines
+Section: CoP s7.3.6
+Topic: Required access systems on jibs for non-self-erecting tower cranes
+
+JIB ACCESS — NON-SELF-ERECTING TYPES (CoP s7.3.6):
+- Tower cranes requiring access to jibs during erecting, inspecting, maintaining must be fitted with:
+  - RIGGER'S RUN extending COMPLETE LENGTH OF JIB
+  - STATIC LINES extending COMPLETE LENGTH OF JIB
+- Persons must use static line and APPROPRIATE FALL ARREST LANYARDS to ensure attached to crane AT ALL TIMES
+
+NON-LUFFING TOWER CRANES WITH TROLLEY PLATFORMS:
+- Platforms to remain on crane
+
+VISUAL INDICATORS:
 - No rigger's run or static lines on jib of non-self-erecting tower crane = serious non-compliance
 - Workers on jib not attached to static line and fall arrest lanyard = serious non-compliance
 
 ---
 
-CHUNK 27: Leaving Tower Cranes Unattended
+CHUNK 20: Leaving Cranes Unattended — Weathervaning and Tethering
 Section: CoP s7.4; WHS Regulation s207
-Topic: Requirements for securing a tower crane when left unattended; weathervaning and tethering
+Topic: Requirements for securing tower crane when unattended; weathervaning and tethering procedures
 
-OBLIGATION (WHS Regulation s207):
-- Person with management or control of plant must ensure, so far as reasonably practicable, that plant NOT IN USE is left in a state that DOES NOT CREATE A RISK to the health or safety of any person
-
-BEFORE LEAVING CRANE UNATTENDED:
-- All LOADS REMOVED from the hook
-- Hook RAISED to a position where it is safely CLEAR OF OTHER OPERATIONS
+BEFORE LEAVING CRANE UNATTENDED (WHS Regulation s207):
+- All LOADS REMOVED from hook
+- Hook RAISED to position safely CLEAR OF OTHER OPERATIONS
 - All POWERED MOTIONS DISABLED
-- KEYS REMOVED from the crane
-- ADEQUATE SYSTEMS IN PLACE to prevent UNAUTHORISED ACCESS to the tower crane base
+- KEYS REMOVED from crane
+- ADEQUATE SYSTEMS to prevent UNAUTHORISED ACCESS to tower crane base
 
 WEATHERVANING:
-- Where no risk of boom contacting other structures: crane SHOULD BE LEFT TO WEATHERVANE when unattended per CRANE MANUFACTURER'S INSTRUCTIONS
-- For tower cranes with a LUFFING BOOM: manufacturer's instructions should specify the CORRECT BOOM ANGLE
+- Where no risk of boom contacting other structures: crane SHOULD BE LEFT TO WEATHERVANE per MANUFACTURER'S INSTRUCTIONS
+- For LUFFING BOOM cranes: manufacturer's instructions should specify CORRECT BOOM ANGLE
 
 TETHERING (RESTRICTING BOOM MOVEMENT):
-- Where it is necessary to RESTRICT MOVEMENT of the boom: tethering method must COMPLY WITH CRANE MANUFACTURER'S INSTRUCTIONS
-- STRENGTH OF THE TETHERING SYSTEM including its anchorages must be CHECKED AND CERTIFIED BY AN ENGINEER
+- Where necessary to RESTRICT MOVEMENT of boom: tethering method must COMPLY WITH MANUFACTURER'S INSTRUCTIONS
+- STRENGTH OF TETHERING SYSTEM including anchorages must be CHECKED AND CERTIFIED BY ENGINEER
 
 VISUAL INDICATORS:
-- Load left on crane hook when crane is unattended = serious non-compliance
+- Load left on crane hook when unattended = serious non-compliance
 - Keys not removed from unattended tower crane = serious non-compliance
 - No access restriction at tower crane base = non-compliance
 - Boom tethered by means not specified or certified by engineer = non-compliance
 
 ---
 
-CHUNK 28: Work Boxes — Features and Use
-Section: CoP s7.5.1, s7.5.3; AS 1418.17; AS 2550.1
-Topic: Criteria for crane-lifted work boxes; when they may be used; features of the crane when using work boxes
+CHUNK 21: High Risk Work Licences — Operators and Doggers
+Section: CoP s7.1.3, s7.1.4; WHS Regulation s85, Schedule 3
+Topic: Licence requirements for crane operators and doggers; operator and dogger restrictions
 
-WORK BOX DEFINITION:
-- A PERSONNEL CARRYING DEVICE designed to be suspended from a crane to provide a working area for a person elevated by and working from the device
+CRANE OPERATOR (CoP s7.1.3):
+- Must hold HIGH RISK WORK LICENCE as specified under WHS Regulation Schedule 3
+- If operator believes lift is DANGEROUS OR UNSAFE: must REFUSE TO PROCEED until concern reported, risks managed, safe conditions confirmed
+
+CRANE OPERATOR MUST NOT:
+- Leave cabin or control room while load is suspended — EXCEPT IN EMERGENCY
+
+DOGGER (CoP s7.1.4):
+- Must hold HIGH RISK WORK LICENCE for dogging work per WHS Regulation Schedule 3
+- PRIMARY ROLE: assist crane operator in safe and efficient crane operation
+- Includes: slinging techniques; selection and inspection of lifting gear; directing crane operator when load out of view
+- Must be positioned to SAFELY OBSERVE ENTIRE LIFTING OPERATION they are responsible for
+- MUST NOT also perform role of safety observer when crane near overhead powerlines
+- Must have CONTROL OF LOAD from time hoisted until placed in position
+
+PROHIBITED:
+- Crane operator MUST NOT undertake own dogging work (on remote control tower crane)
+- Crane operator MUST NOT supervise trainee dogger (even if operator is also licensed dogger)
+
+VISUAL INDICATORS:
+- Crane operator operating without high risk work licence = serious non-compliance
+- Dogger working without high risk work licence = serious non-compliance
+- Crane operator leaving cabin while load suspended (non-emergency) = serious non-compliance
+- Dogger also acting as safety observer near powerlines = non-compliance
+- Crane operator undertaking own dogging duties on remote control crane = non-compliance
+- Crane operator supervising trainee dogger = non-compliance
+
+---
+
+CHUNK 22: Pre-Operational Inspection and Crane Logbook
+Section: CoP s10.4
+Topic: Daily pre-operational checks by crane operator; logbook recording requirements
+
+PRE-OPERATIONAL INSPECTION (CoP s10.4):
+- Must be carried out by CRANE OPERATOR before commencement of EACH WORK SHIFT
+- Consists of VISUAL INSPECTION AND FUNCTION TEST
+
+Items to inspect and test:
+- All relevant items in OPERATIONS MANUAL
+- OPERATING AND EMERGENCY CONTROLS
+- BRAKES
+- SAFETY SWITCHES AND INTERLOCKS including LIMITING AND INDICATING DEVICES
+- VISUAL INSPECTION OF STRUCTURE
+- Wire ropes: ON DRUM and CORRECTLY REEVED ON SHEAVE
+- Wire ropes for OBVIOUS DAMAGE
+
+RECORDING:
+- Results must be ENTERED INTO LOGBOOK and KEPT WITH CRANE
+- All PPE should be inspected
+- All SAFETY-RELATED PROBLEMS must be RECORDED AND RECTIFIED PRIOR TO CRANE USE
+
+VISUAL INDICATORS:
+- No crane logbook on crane or logbook not completed before each shift = non-compliance
+- Safety-related problems identified but crane still in use = serious non-compliance
+
+---
+
+CHUNK 23: Lifting Gear Inspection and Tagging
+Section: CoP s7.2.1; AS 1353.2; AS 4497.2
+Topic: Lifting gear inspection intervals; tagging requirements; basic inspection items
+
+LIFTING GEAR INSPECTION INTERVALS:
+- All lifting gear: PERIODICALLY INSPECTED by COMPETENT PERSON
+- Maximum period: NOT EXCEED 12 MONTHS (general lifting gear)
+- Synthetic sling inspection: AT 3-MONTHLY INTERVALS (per AS 1353.2 and AS 4497.2)
+- All lifting gear must be TAGGED identifying date of LAST INSPECTION
+- DOCUMENTED MAINTENANCE RECORDS must be AVAILABLE ON SITE
+
+BASIC ITEMS TO CHECK:
+- Lifting gear TAGGED with all relevant information (grade, SWL, manufacturer, chain size, Australian Standard marking)
+- Lifting hooks provided with OPERABLE SAFETY LATCHES
+- Shackles PREVENTED FROM UNSCREWING (e.g. mousing or similar)
+- Lifting eyes and inserts COMPATIBLE AND SAME PROPRIETARY BRAND
+- Lifting slings NOT DAMAGED (excessive wear, damaged strands, cracks, deformation, severe corrosion)
+- Sling APPROPRIATE for loads including adequate capacity and PROTECTION FROM SHARP EDGES
+
+SLINGING TECHNIQUE:
+- Slings placed so NOT CROSSED OR TWISTED — ensuring load balanced and stable
+- Point of lift DIRECTLY ABOVE CENTRE OF GRAVITY (prevents toppling or falling)
+- Synthetic slings (round/sausage): only for APPROPRIATE LOADS — NOT for sharp-edged loads
+
+VISUAL INDICATORS:
+- Lifting gear without inspection tags or tags exceeding 12-month (general) or 3-month (synthetic slings) interval = non-compliance
+- Slings crossed, twisted or not appropriate for load type = non-compliance
+- Lifting hooks without operable safety latches = non-compliance
+- Shackles not prevented from unscrewing = non-compliance
+
+---
+
+CHUNK 24: Load Chart Compliance and Overload Prevention
+Section: CoP s7.2.2; WHS Regulation s219
+Topic: Load chart compliance; hoist brake testing; load indicator checking; suspended load restrictions
+
+LOAD CHART COMPLIANCE:
+- Crane MUST BE OPERATED WITHIN LOAD CHART at all times
+- Hoist rope must hang VERTICALLY OVER LOAD before hoisting
+- Ensure load does NOT SWING once lifted
+
+MAXIMUM OR NEAR MAXIMUM LOADS:
+After load lifted a few centimetres:
+- TEST HOIST BRAKES
+- CHECK MASS RECORDED ON LOAD INDICATOR
+- RECHECK LOAD CHART
+
+SUSPENDED LOADS (WHS Regulation s219):
+- No loads may be SUSPENDED OR TRAVEL OVER A PERSON unless plant specifically designed for that purpose
+- Where possible: avoid HANDLING LOADS OVER PUBLIC ACCESS AREAS (footpaths, roads, highways, railways, waterways, buildings)
+- Where necessary: control measures must prevent or minimise risk of injury from falling objects
+
+VISUAL INDICATORS:
+- Crane operating at or near maximum load without testing hoist brakes and rechecking load chart = non-compliance
+- Load suspended over workers = serious non-compliance (WHS Regulation s219)
+- Hoist rope not vertical over load before hoisting = non-compliance
+
+---
+
+CHUNK 25: Material Box Requirements
+Section: CoP s7.2.3
+Topic: Material box design, marking, construction and loading specifications
+
+MATERIAL BOX REQUIREMENTS:
+- Tare mass and SWL CLEARLY MARKED on all material boxes
+- Must be ENGINEER-DESIGNED AND CERTIFIED and appropriate for material being lifted
+- FOUR CHAINS (one in each corner) attached during lifting
+- Must have ENCLOSED SIDES OR ROBUST MESH with openings LESS THAN MINIMUM SIZE of materials being lifted
+- Loads within boxes SECURED AGAINST MOVEMENT
+- Materials must NOT be STACKED HIGHER THAN SIDE unless adequately secured; must NEVER BECOME TOP HEAVY
+- Must be INSPECTED AND MAINTAINED with inspection records kept
+
+VISUAL INDICATORS:
+- Material box without marked SWL and tare mass = non-compliance
+- Material box without four chains (one per corner) = non-compliance
+- Mesh openings larger than minimum size of materials being lifted = non-compliance
+- Materials stacked above top of material box without securing = non-compliance
+- No inspection records for material boxes = non-compliance
+
+---
+
+CHUNK 26: Work Boxes — Design Registration and Features
+Section: CoP s7.5.1, s7.5.3; AS 1418.17; AS 2550.1
+Topic: Work box criteria; when to use; design registration; fall-arrest requirements; crane features
 
 WHEN TO USE WORK BOXES:
-- Crane-lifted workboxes may be used by workers to gain access to ELEVATED WORK AREAS that are OTHERWISE DIFFICULT TO REACH to perform MINOR WORK OF SHORT DURATION
-- Generally, crane-lifted workboxes do NOT provide a level of safety EQUIVALENT TO PROPERLY ERECTED SCAFFOLDING, EWPs or other access systems
-- A crane-lifted workbox CAN provide a higher level of safety than a fall-arrest harness system
-- Before selecting a workbox: a RISK ASSESSMENT must be undertaken and RECORDED demonstrating use of other means of access (scaffolding, EWP) is IMPRACTICAL
+- May be used to gain access to ELEVATED WORK AREAS OTHERWISE DIFFICULT TO REACH for MINOR WORK OF SHORT DURATION
+- Before selecting: RISK ASSESSMENT must be undertaken and RECORDED demonstrating scaffolding/EWP is IMPRACTICAL
 
 WORK BOX CRITERIA:
 - DESIGN REGISTERED
-- CORRECTLY TAGGED LIFTING SLINGS supplied with work box, attached to lifting points by HAMMERLOCKS OR MOUSED SHACKLES
+- CORRECTLY TAGGED LIFTING SLINGS supplied; attached by HAMMERLOCKS OR MOUSED SHACKLES
 - Factor of safety for each suspension sling: AT LEAST 8 FOR CHAINS and 10 FOR WIRE ROPE
-- FALL-ARREST ANCHORAGE POINTS must be present
-- SWL, TARE MASS AND DESIGN REGISTRATION NUMBER must be clearly marked (e.g. on a data plate)
-- Door (if provided): INWARD OPENING ONLY, SELF-CLOSING, with LATCH to prevent accidental opening
+- FALL-ARREST ANCHORAGE POINTS present
+- SWL, TARE MASS AND DESIGN REGISTRATION NUMBER clearly marked (e.g. data plate)
+- Door (if provided): INWARD OPENING ONLY, SELF-CLOSING, with LATCH preventing accidental opening
 - SIDES AT LEAST 1 METRE HIGH
-- HANDRAIL running around the INSIDE OF THE BOX PERIMETER (helps prevent crush injuries if box contacts obstructions)
-- All persons in the work box must wear FULL BODY FALL-ARREST HARNESSES at all times, attached to FALL-ARREST ANCHORAGE POINTS in the work box or to the MAIN SLING RING above workers' heads
-- ENERGY ABSORBERS must be provided on the lanyards
-- AT LEAST ONE PERSON in the work box must hold a DOGGER'S LICENCE CLASS or equivalent
+- HANDRAIL running around INSIDE OF BOX PERIMETER (prevents crush injuries if box contacts obstructions)
+- All persons must wear FULL BODY FALL-ARREST HARNESSES at all times, attached to FALL-ARREST ANCHORAGE POINTS in box or MAIN SLING RING above workers' heads
+- ENERGY ABSORBERS on lanyards
+- AT LEAST ONE PERSON in work box must hold DOGGER'S LICENCE CLASS or equivalent
 
-FEATURES OF CRANE WHEN USING WORK BOXES (CoP s7.5.3):
+CRANE FEATURES WHEN USING WORK BOXES (CoP s7.5.3):
 - Where reasonably practicable: SECONDARY BACK-UP SYSTEM to prevent load falling if primary lifting device fails
-- Minimum SWL: AT LEAST TWICE THE TOTAL LOAD of the workbox and contents, at the maximum radius for the task, and NOT LESS THAN 1000 KILOGRAMS
-- Must be fitted with UPPER HOIST LIMIT that stops operation of hoist and luff functions
-- Crane levers and foot pedals must be fitted with CONSTANT PRESSURE SYSTEM that stops motions when operator removes pressure
+- Minimum SWL: AT LEAST TWICE TOTAL LOAD of workbox and contents at maximum radius, and NOT LESS THAN 1000 KILOGRAMS
+- Must be fitted with UPPER HOIST LIMIT stopping hoist and luff functions
+- Crane levers and foot pedals: CONSTANT PRESSURE SYSTEM stopping motions when operator removes pressure
 - Crane must NOT BE CAPABLE OF FREE FALL
 
 VISUAL INDICATORS:
-- Work box used without prior risk assessment demonstrating impracticability of scaffolding or EWP = non-compliance
+- Work box used without prior risk assessment demonstrating impracticability of scaffolding/EWP = non-compliance
 - Work box not design registered or no design registration number visible = serious non-compliance
 - Persons in work box not wearing full body fall-arrest harnesses = serious non-compliance
-- Work box door opening outward rather than inward = non-compliance
+- Work box door opening outward = non-compliance
 - Work box sides less than 1 metre high = non-compliance
-- No person in work box holding a dogger's licence = serious non-compliance
+- No person in work box holding dogger's licence = serious non-compliance
 - Crane SWL for work box lift less than twice total load or less than 1000 kg = serious non-compliance
 - Crane capable of free fall when used with work box = serious non-compliance
 
 ---
 
-CHUNK 29: First Aid Boxes — Features and Use
+CHUNK 27: First Aid Boxes — Dimensions and Wind Restrictions
 Section: CoP s7.5.2, s7.5.3; commenced 1 January 2018
-Topic: Criteria for crane-lifted first aid boxes; dimensions; when to use; wind speed restrictions
+Topic: First aid box specifications; dimensions; wind speed restrictions; emergency retrieval
 
-FIRST AID BOX DEFINITION AND PURPOSE:
-- A TYPE OF CRANE-LIFTED WORK BOX
-- Must ONLY be used for the RETRIEVAL OF INJURED PERSONS
-- Should be READILY ACCESSIBLE on the site to enable effective emergency response
+FIRST AID BOX PURPOSE:
+- Must ONLY be used for RETRIEVAL OF INJURED PERSONS
+- Should be READILY ACCESSIBLE on site for effective emergency response
 
 FIRST AID BOX CRITERIA:
 - DESIGN REGISTERED
 - Clearly IDENTIFIED AND MARKED as first aid boxes
-- Provided with SIDES AND A ROOF — except that a horizontal gap may be provided around all sides
-- Sides at least 1 METRE HIGH, up to a horizontal gap which must NOT EXCEED 250 MM in vertical distance
+- Provided with SIDES AND ROOF (horizontal gap may be provided around all sides)
+- Sides at least 1 METRE HIGH, up to horizontal gap NOT EXCEEDING 250 MM in vertical distance
 - MINIMUM INTERNAL HEIGHT: 2.2 METRES
 - MINIMUM INTERNAL WIDTH: 1.2 METRES
 - MINIMUM INTERNAL LENGTH: 2.8 METRES
-- Maximum MESH SIZE: NOT EXCEED 50 MM x 50 MM (i.e. openings not exceeding 0.0025 m²)
-- GRAB RAIL to be provided along the sides of the box and RECESSED to minimise crush injury risk
+- Maximum MESH SIZE: NOT EXCEED 50 MM x 50 MM (openings not exceeding 0.0025 m²)
+- GRAB RAIL along sides RECESSED to minimise crush injury risk
 - Door (if provided): may be OUTWARD OPENING but must be LOCKABLE to prevent inadvertent opening
-- Persons in the first aid box are NOT REQUIRED to use fall arrest harnesses (box is enclosed)
-- CORRECTLY TAGGED LIFTING SLINGS supplied and attached to lifting points by HAMMERLOCKS OR MOUSED SHACKLES
-- Factor of safety for each suspension sling: AT LEAST 8 FOR CHAINS and 10 FOR WIRE ROPE
-- SWL, TARE MASS AND DESIGN REGISTRATION NUMBER marked on the first aid box
-- AT LEAST ONE PERSON in the first aid box must hold a DOGGER'S LICENCE CLASS or equivalent
-- EMERGENCY RETRIEVAL ARRANGEMENTS must be put in place BEFORE THE LIFT so workers can safely exit if crane fails
+- Persons in first aid box NOT REQUIRED to use fall arrest harnesses (box is enclosed)
+- CORRECTLY TAGGED LIFTING SLINGS attached by HAMMERLOCKS OR MOUSED SHACKLES
+- Factor of safety: AT LEAST 8 FOR CHAINS and 10 FOR WIRE ROPE
+- SWL, TARE MASS AND DESIGN REGISTRATION NUMBER marked on box
+- AT LEAST ONE PERSON must hold DOGGER'S LICENCE CLASS or equivalent
+- EMERGENCY RETRIEVAL ARRANGEMENTS in place BEFORE LIFT so workers can safely exit if crane fails
 
-WIND SPEED RESTRICTIONS — FIRST AID BOXES:
+WIND SPEED RESTRICTIONS:
 - First aid boxes should NOT be used when wind speeds EXCEED 54 KM/HR
-- Should not be used in ADVERSE WEATHER CONDITIONS such as ELECTRICAL STORMS
-- More suitable in LOCATIONS LESS SUSCEPTIBLE TO WIND (e.g. side of building structure not exposed to high winds)
-- First aid boxes should be lifted AWAY FROM STRUCTURES to avoid collision
+- Should not be used in ADVERSE WEATHER CONDITIONS (e.g. ELECTRICAL STORMS)
+- More suitable in LOCATIONS LESS SUSCEPTIBLE TO WIND
+- Should be lifted AWAY FROM STRUCTURES to avoid collision
 - When wind speeds EXCEED 54 KM/HR: ALTERNATIVE EMERGENCY RETRIEVAL MEANS should be used (e.g. HOISTS)
 
-FEATURES OF CRANE WHEN USING FIRST AID BOXES (CoP s7.5.3):
-- Same crane requirements as for work boxes apply (see Chunk 28)
-- Minimum SWL: AT LEAST TWICE THE TOTAL LOAD at maximum radius and NOT LESS THAN 1000 KILOGRAMS
-- Must be fitted with UPPER HOIST LIMIT stopping hoist and luff functions
+CRANE FEATURES (same as work boxes):
+- Minimum SWL: AT LEAST TWICE TOTAL LOAD at maximum radius and NOT LESS THAN 1000 KILOGRAMS
+- UPPER HOIST LIMIT stopping hoist and luff functions
 - CONSTANT PRESSURE SYSTEM on levers and foot pedals
 - Crane must NOT BE CAPABLE OF FREE FALL
 
@@ -1308,628 +860,49 @@ VISUAL INDICATORS:
 - First aid box used in wind speeds exceeding 54 km/hr without documented exceptional justification = serious non-compliance
 - First aid box without design registration = serious non-compliance
 - No emergency retrieval arrangements documented before lift = non-compliance
-- No person in first aid box holding a dogger's licence = serious non-compliance
+- No person in first aid box holding dogger's licence = serious non-compliance
 
 ---
 
-CHUNK 30: Self-Erecting Tower Cranes — Additional Requirements
+CHUNK 28: Self-Erecting Tower Cranes — Remote Control and Barricades
 Section: CoP s8–s8.1.2; WHS Regulation
-Topic: Operation, remote control, and barricade requirements specific to self-erecting tower cranes
-
-OVERVIEW:
-- Self-erecting tower cranes do NOT require fixing to a crane base — rely on dead weight for stability
-- Footings and foundations must be DESIGNED PER ENGINEERING PRINCIPLES or RELEVANT TECHNICAL STANDARDS
-- Design must consider GEO-TECHNICAL INSPECTIONS specific to the location
-- Operated by REMOTE CONTROL (rarely provided with a cabin)
-- Counterweight located at the BASE OF THE CRANE
+Topic: Remote control requirements; operator restrictions; barricade specifications for self-erecting cranes
 
 OPERATION FROM DESIGNATED AREA:
-- Must be operated from a DESIGNATED AREA
+- Must be operated from DESIGNATED AREA
 - Operator must at all times during lifting:
-  - REMAIN IN CLOSE PROXIMITY to the crane
-  - MAINTAIN GOOD VISIBILITY OF THE LOAD
-- Where operator cannot keep load in sight: DOGGER must report to operator on POSITION OF THE LOAD
+  - REMAIN IN CLOSE PROXIMITY to crane
+  - MAINTAIN GOOD VISIBILITY OF LOAD
+- Where operator cannot keep load in sight: DOGGER must report on POSITION OF LOAD
 
 OPERATOR RESTRICTIONS:
-- Crane operator must NOT undertake their own DOGGING WORK (even if also a licensed dogger)
-- Crane operator must NOT SUPERVISE A TRAINEE DOGGER
+- Crane operator must NOT undertake own DOGGING WORK (even if also licensed dogger)
+- Crane operator must NOT SUPERVISE TRAINEE DOGGER
 
 REMOTE OPERATION (CoP s8.1.1):
-- Reliability of remote control circuits must be SAME AS THAT ACHIEVED BY CONTROLS IN A CABIN
-- WIRELESS REMOTES must be UNIQUELY CODED to avoid signal corruption and interference from other devices
-- A DEDICATED OPERATOR must be available to operate the crane
-- A number of DOGGERS must be available for MULTIPLE DROP-OFF AND PICK-UP POINTS out of sight of the operator
-- Crane operator must FOLLOW DIRECTION OF DOGGER at all times when load is out of sight
-- Operator must REMAIN STATIONARY when load is in motion
-- If operator must move to different location: crane must NOT BE OPERATED WHILE MOVING; travel path must be FREE FROM OBSTACLES, PENETRATIONS AND HAZARDS
-- Crane operators must NOT undertake their own dogging work
-- If crane operator undertakes other tasks: REMOTE CONTROL must be TURNED OFF AND SECURED to prevent unintended activation or use by others
-- EFFECTIVE COMMUNICATIONS must be maintained between crane operator and other personnel at all times
-
-UNAUTHORISED OPERATION:
-- When self-erecting tower crane is NOT IN USE: appropriate control measures must be in place to PREVENT UNAUTHORISED OPERATION
+- Reliability of remote control circuits: SAME AS CONTROLS IN CABIN
+- WIRELESS REMOTES must be UNIQUELY CODED to avoid signal corruption and interference
+- DEDICATED OPERATOR must be available
+- Number of DOGGERS for MULTIPLE DROP-OFF AND PICK-UP POINTS out of sight of operator
+- Operator must FOLLOW DIRECTION OF DOGGER when load out of sight
+- Operator must REMAIN STATIONARY when load in motion
+- If operator must move to different location: crane must NOT BE OPERATED WHILE MOVING; travel path FREE FROM OBSTACLES, PENETRATIONS AND HAZARDS
+- If operator undertakes other tasks: REMOTE CONTROL TURNED OFF AND SECURED to prevent unintended activation
+- EFFECTIVE COMMUNICATIONS maintained between operator and other personnel at all times
 
 BARRICADE REQUIREMENT (CoP s8.1.2):
-- Counterweights at base of self-erecting tower crane present risk to persons entering the SLEWING ARC
-- An 1800 MM HIGH BARRICADE (e.g. mesh fence) must be erected around the BASE of self-erecting tower cranes
-- Purpose: prevent people from entering the slewing arc and being hit by counterweights
-- Barricade must be positioned to provide ENOUGH ROOM TO AVOID ENTRAPMENT between the barricade and the counterweights
+- 1800 MM HIGH BARRICADE (e.g. mesh fence) must be erected around BASE of self-erecting tower cranes
+- Purpose: prevent people entering slewing arc and being hit by counterweights
+- Barricade positioned to provide ENOUGH ROOM TO AVOID ENTRAPMENT between barricade and counterweights
 
 VISUAL INDICATORS:
 - Self-erecting tower crane remote control not uniquely coded = non-compliance
 - Operator performing dogging work on remote control tower crane = non-compliance
 - No 1800 mm high barricade around base of self-erecting tower crane = serious non-compliance
-- Operator moving to new location while crane is in operation = serious non-compliance
+- Operator moving to new location while crane in operation = serious non-compliance
 - Remote control left unsecured when operator undertakes other tasks = non-compliance
-- Self-erecting tower crane not operated from a designated area = non-compliance
+- Self-erecting tower crane not operated from designated area = non-compliance
 
 ---
 
-CHUNK 31: Training and Supervision — Familiarisation and Refresher Training
-Section: CoP s9–s9.3.2; WHS Regulation s85, Schedule 3 and 4
-Topic: Familiarisation training requirements; refresher training frequency; records obligations
-
-TRAINING COVERAGE FOR TOWER CRANE OPERATIONS:
-- SWMS for safe operation of tower crane activities
-- Method for INSPECTION AND MAINTENANCE of tower cranes
-- CRANE MANUFACTURER'S OPERATION AND SERVICE MANUALS
-- Correct use, care and storage of PPE
-- Correct use, care and storage of tools and equipment
-- Observance of ELECTRICAL SAFETY PRACTICE
-- Procedures in the event of ACCIDENT OR INJURY
-
-SUPERVISION REQUIREMENTS:
-- Only workers who have received instruction and training must be authorised to carry out work
-- Must include SUFFICIENT MONITORING to ensure AGREED SAFE WORK PRACTICES are adhered to, including safety procedures, systems and PPE
-
-FAMILIARISATION TRAINING (CoP s9.2):
-- Must be provided to crane operators BEFORE COMMENCING WORK for a new PCBU or BEFORE WORKING WITH A NEWLY ACQUIRED CRANE
-- PCBU must either: ASSESS the person's knowledge and understanding; SEEK FURTHER EVIDENCE OF COMPETENCE; or PROVIDE ADDITIONAL TRAINING before allowing the person to work
-- May require presence of a REPRESENTATIVE FROM THE TOWER CRANE SUPPLIER OR MANUFACTURER — particularly for new cranes
-- Representative must have DETAILED KNOWLEDGE of operational and safety features of the crane and must be ENDORSED BY SUPPLIER OR MANUFACTURER as competent to provide training
-
-FAMILIARISATION TRAINING RECORDS:
-- A RECORD must be made and KEPT BY THE PCBU of the crane operator
-- A COPY must also be given to and kept by THE CRANE OPERATOR
-- Both the CRANE OPERATOR and the PCBU (or representative) must SIGN the record
-- Record should take format of a CHECKLIST — crane operators must DEMONSTRATE they can safely operate the crane
-- Refer to Appendix 3 for familiarisation training checklists for electric and diesel hydraulic tower cranes
-
-REFRESHER TRAINING (CoP s9.3):
-- PCBUs MUST ensure crane crew (operators, doggers, riggers) receive refresher training
-- May be provided by: the PCBU; an INDEPENDENT CONSULTANT; or a THIRD PARTY (e.g. RTO)
-- FREQUENCY: interval between refresher training courses MUST NOT EXCEED 3 YEARS
-- Must occur between 2.5 AND 3 YEARS after initial licence issue OR after most recent refresher training — whichever is shorter
-
-REFRESHER TRAINING SHOULD ADDRESS:
-- Application of NEW TECHNOLOGY (particularly for those licensed on more basic cranes)
-- Information in THIS CODE
-- Relevant changes to WHS LEGISLATION AND AUSTRALIAN STANDARDS
-- SAFE CRANE OPERATION
-
-REFRESHER TRAINING RECORDS (CoP s9.3.2):
-- Crane operators, doggers and riggers MUST KEEP DOCUMENTED RECORDS in a LOGBOOK containing:
-  - Name, address and signature
-  - Relevant classes of HIGH RISK WORK LICENCE and licence numbers
-  - Name and signature of PERSON CONDUCTING THE TRAINING
-  - DATES AND TIMES of training
-  - Details including TYPE OF EQUIPMENT USED and OUTCOMES ACHIEVED
-- Each record must be VERIFIED AND SIGNED BY THE PCBU or representative
-- PCBU must also keep a COPY of the training record
-
-VISUAL INDICATORS:
-- Crane operator with no familiarisation training record for the specific crane type being operated = non-compliance
-- No record signed by both crane operator and PCBU of familiarisation training = non-compliance
-- Refresher training interval exceeding 3 years = non-compliance
-- No logbook records of refresher training for crane operators, doggers or riggers = non-compliance
-
----
-
-CHUNK 32: Inspection and Testing Regime — Overview and Competent Person
-Section: CoP s10–s10.1.3; WHS Regulation s213
-Topic: Inspection regime stages; definition of competent person for different inspection types; NDT accreditation
-
-INSPECTION REGIME STAGES:
-1. PRE-ERECTION INSPECTION AND TESTS (before delivery to workplace)
-2. COMMISSIONING INSPECTION AND TESTS (after erection, before first use)
-3. PRE-OPERATIONAL INSPECTION (before each work shift)
-4. ROUTINE INSPECTION AND MAINTENANCE (ongoing per manufacturer's instructions)
-5. ANNUAL INSPECTION (when crane has been in place 12 months or longer)
-6. MAJOR INSPECTION (at end of design life, or per manufacturer, or every 10 years)
-
-PURPOSE OF INSPECTION AND TESTING:
-- Ensure parts subject to DETERIORATION THROUGH CORROSION, DAMAGE, WEAR AND ABRASION are REPLACED before becoming unserviceable
-- Maintain crane in SAFE AND SERVICEABLE CONDITION
-
-COMPETENT PERSON — GENERAL DEFINITION (for all references in the Code except major inspections):
-- A person who has acquired through TRAINING, QUALIFICATION OR EXPERIENCE the knowledge and skills to carry out the task
-
-COMPETENT PERSON — FOR MAJOR INSPECTIONS:
-- Must either:
-  (a) Have acquired knowledge and skills to carry out a major inspection through TRAINING, QUALIFICATION OR EXPERIENCE, AND be REGISTERED UNDER A LAW THAT PROVIDES FOR REGISTRATION OF PROFESSIONAL ENGINEERS, OR
-  (b) Be DETERMINED BY THE REGULATOR to be a competent person
-- May use advice of other competent persons involved in inspection who are not engineers
-
-COMPETENT PERSON — FOR SPECIFIC CRANE PARTS:
-- Welding: knowledge and experience in INSPECTION AND TESTING OF WELDS including NDT methods and AS/NZS 1554
-- Hydraulic systems: knowledge and experience in INSPECTION AND TESTING OF HYDRAULIC SYSTEMS
-- Electrical systems (voltage >50V AC or >115V DC): work must be done by a QUALIFIED AND LICENSED ELECTRICAL WORKER
-- NDT: must be ACCREDITED BY NATA (National Association of Testing Authorities)
-
-COMPETENT PERSON CANNOT:
-- Simply be 'the person inspecting a specific part' and make statements about the COMPLETE CRANE being safe — they may only state that THEIR SPECIFIC AREA complies
-
-CRANE OWNER CAN BE:
-- The owner of the crane themselves (if they have the requisite knowledge and skills)
-- A person employed by the owner
-- An independent consultant or third party
-
-VISUAL INDICATORS:
-- NDT carried out by person without NATA accreditation = serious non-compliance
-- Major inspection certified by person who is not a registered professional engineer (and not determined by regulator) = serious non-compliance
-- Electrical work on crane by person not a qualified and licensed electrical worker = serious non-compliance
-- Inspection records not available on site = non-compliance
-
----
-
-CHUNK 33: Non-Destructive Testing (NDT) Requirements and Frequencies
-Section: CoP s10.2–s10.2.3; Table 1
-Topic: NDT mandatory components, frequencies, methods, and testing standards for tower cranes
-
-NDT DEFINITION:
-- Testing of materials to detect INTERNAL, SURFACE AND CONCEALED DEFECTS or discontinuities using methods that DO NOT DAMAGE OR DESTROY the material under test
-
-GENERAL NDT REQUIREMENTS:
-- All NDT must be carried out by a COMPETENT PERSON ACCREDITED BY NATA
-- NDT results must be AVAILABLE AT THE WORKPLACE where the crane is erected
-- When using NDT for crack detection in metals: PAINT MUST BE REMOVED from the metal surface
-
-NDT FREQUENCY TABLE (Table 1 — Tower Crane CoP 2017):
-
-Component                           | NDT Description                                        | Frequency
-------------------------------------|--------------------------------------------------------|---------------------------
-Band brake welds (where applicable) | Crack test                                             | Pre-erection
-Slew ring bolts (slew ring splits   | Comply with crane manufacturer's instructions          | Pre-erection
-  at disassembly)                   |   (may require 100% bolts); otherwise crack test      |
-                                    |   minimum 10%*                                         |
-Tower bolts                         | Crack test minimum 10%*                                | Pre-erection
-Aluminium sheaves                   | Crack test                                             | Pre-erection
-Slew ring bolts (all slew rings)    | Crack test ALL bolts                                   | Every 5 years
-Boom chord thickness                | Material thickness testing                             | Every 10 years
-Slew ring                           | Crack test                                             | Every 10 years
-Boom lacing welds                   | Crack test minimum 10%                                 | Every 10 years
-A-frame (all connector welds on     | Crack test                                             | Every 10 years
-  primary chords)                   |                                                        |
-A-frame lacing welds                | Crack test minimum 10%                                 | Every 10 years
-Hook                                | Crack test                                             | Every 10 years
-Welds on hook trolley               | Crack test                                             | Every 10 years
-
-*NOTE: Where ANY DEFECTIVE BOLTS are found, ALL REMAINING BOLTS must be crack tested
-
-SLEW RING BOLTS — DETAILS (CoP s10.2.1):
-- Bolts may be DAMAGED if under or over-torqued
-- Cranes where slew ring must be split each time crane is moved (e.g. FAVCO 1500): minimum 10% of slew ring bolts must undergo NDT
-- ALL slew ring bolts on ALL tower cranes (including self-erecting): must undergo NDT AT LEAST EVERY 5 YEARS
-- Preferred testing method: COMPLETELY REMOVE BOLTS and examine by MAGNETIC PARTICLE TESTING
-
-TOWER BOLTS — DETAILS (CoP s10.2.2):
-- All are HIGH TENSILE BOLTS — some from EXTREMELY HIGH GRADE STEEL more susceptible to cracking
-- Minimum 10% of tower bolts must be crack tested BEFORE EACH CRANE ERECTION
-- If any cracks found: ALL TOWER BOLTS must be crack tested
-- System that tests ALL BOLTS OVER TIME is preferred; random testing also acceptable
-- Tested bolts should be IDENTIFIED BY A METHOD THAT DOES NOT DAMAGE THE BOLT
-
-CHORD THICKNESS TESTING — DETAILS (CoP s10.2.3):
-- All main chord sections on tower crane booms must undergo THICKNESS TESTING at intervals NOT EXCEEDING 10 YEARS
-- ULTRASONIC THICKNESS TESTING is one acceptable method
-- Chord sections must be reviewed for STRUCTURAL ADEQUACY when thickness is found to be 90% OR LESS than the original thickness
-
-VISUAL INDICATORS:
-- NDT not carried out by NATA-accredited person = serious non-compliance
-- Slew ring bolts not crack tested every 5 years = non-compliance
-- Boom chord thickness testing interval exceeding 10 years = non-compliance
-- Tower bolts not crack tested (minimum 10%) before each erection = non-compliance
-- Defective bolts found but not all remaining bolts tested = serious non-compliance
-- Paint not removed from metal surfaces before crack testing = non-compliance
-
----
-
-CHUNK 34: Independent Third Party Inspections at Commissioning
-Section: CoP s10.3–s10.3.3
-Topic: Definition of independent third party; pre-erection inspections; commissioning inspection and test requirements
-
-INDEPENDENT THIRD PARTY DEFINITION:
-- A person who:
-  - Has acquired through TRAINING, QUALIFICATION OR EXPERIENCE the knowledge and skills to carry out the task
-  - Is NOT ASSOCIATED WITH THE ONGOING GENERAL REPAIR AND MAINTENANCE of a particular crane (whether directly or indirectly or through an associated company, including companies who hire or lease a crane)
-
-WHEN INDEPENDENT THIRD PARTY INSPECTIONS ARE REQUIRED:
-- An independent third party SHOULD carry out inspections and tests PRIOR TO COMMISSIONING and before the crane is put into service
-- Also ADVISABLE before crane is delivered to the workplace (pre-erection)
-
-PRE-ERECTION INSPECTIONS AND TESTS (CoP s10.3.2):
-Should include:
-- NDT of TOWER BOLTS
-- NDT of SLEW RING BOLTS
-- NDT of ALUMINIUM SHEAVES
-- Condition of POWER SUPPLY CABLE where used
-- Condition of MOTOR BRAKES
-- Condition of SLEW RING GEAR AND PINIONS
-- AIR CONTROLS AND ASSOCIATED VALVES
-- Condition of ROPES AND SHEAVES (erection, hoisting, counterweight, trolley) and correct rope tracking
-- Condition of LIMIT SWITCHES AND LIMITING DEVICES
-- Condition of COUNTERWEIGHTS
-- Condition and fitment of MACHINERY GUARDING
-- BRAKE SYSTEMS:
-  - DRY BRAKES: dismantled and inspected PRIOR TO EACH ERECTION or more frequently if directed by manufacturer
-  - WET BRAKES: prior to each erection, AFTER 5,000 HOURS OF CRANE OPERATION, or as directed by manufacturer
-- All normal SERVICE ITEMS (temperature control units, adequate seating) maintained per manufacturer's instructions
-- Other tests specified by the MANUFACTURER
-
-AFTER DELIVERY TO WORKPLACE:
-- Inspect components for DAMAGE AND WEAR DURING TRANSPORT
-- Also inspect: CRANE BASE DESIGN AND ENGINEER'S REPORT; CRANE TIES AND SUPPORTING STRUCTURE; POWER SUPPLY AND EARTHING
-
-PRE-ERECTION INSPECTION AND TEST REPORT:
-- Must satisfy requirements of this Code and relevant Australian Standards
-- Must reflect SPECIFIC TYPE AND MODEL of crane and reference all relevant DESIGN DRAWINGS AND TEST CERTIFICATES
-
-COMMISSIONING INSPECTIONS AND TESTS (CoP s10.3.3):
-- Carried out ONCE A CRANE HAS BEEN ERECTED but BEFORE IT IS PUT INTO SERVICE
-- Must occur EACH TIME A CRANE IS ERECTED regardless of when an annual inspection has taken place
-Should include:
-- Crane ELECTRICITY SUPPLY where used
-- Crane BASE WEIGHTS OR BALLAST where used
-- TOWER SECTION IDENTIFICATION AND ACCESS
-- Tower bolts CORRECTLY TORQUED (by checking documentation)
-- CLIMBING FRAME AND CONNECTION
-- JIB CONNECTION PINS AND RETAINERS
-- A-FRAME CONNECTIONS AND RETAINERS
-- JIB AND DECK PENDANT PINS AND RETAINERS where used
-- MACHINERY GUARDING
-- Leakage in lines, tanks, valves, pumps and other parts of AIR OR HYDRAULIC SYSTEMS
-- No significant accumulation of OIL, GREASE, LITTER OR OTHER COMBUSTIBLES in machine deck and cabin
-- Condition of ROPES AND SHEAVES and correct rope tracking
-- ISOLATING SWITCHES
-- Condition and phase of POWER SUPPLY CABLE
-- Verification crane wiring complies with AS/NZS 3000: Electrical installations
-- Effective operation of CONTROLS INCLUDING INTERLOCKS
-- Effective operation of INDICATING DEVICES
-- Effective operation of TRAVEL DECELERATION SWITCHES
-- Effective operation of HOIST UPPER AND LOWER (where required) WORKING LIMIT SWITCHES
-- Effective operation of WARNING DEVICES
-- Effective operation of HOIST AND TRAVEL BRAKES when crane is laden to MAXIMUM RATED CAPACITY
-- Effective operation of RESCUE CONTROLLED DESCENT DEVICE
-- Verification of installation and wiring of ELECTRIC SIGNS (builder's logos)
-- Effective operation of SLEW BRAKE to allow for weathervaning
-- Other tests specified by CRANE MANUFACTURER
-
-COMMISSIONING REPORT:
-- Must satisfy requirements of this Code and relevant Australian Standards
-- Must reflect specific type and model of crane and reference all relevant design drawings and test certificates
-
-VISUAL INDICATORS:
-- No independent third party commissioning inspection conducted = non-compliance
-- Commissioning inspection not carried out for a crane re-erected at a new site = non-compliance
-- Wet brakes not inspected before erection AND since 5,000 hours of operation = non-compliance
-- Commissioning report absent or not referencing design drawings and test certificates = flag
-
----
-
-CHUNK 35: Pre-Operational, Routine, and Annual Inspections
-Section: CoP s10.4, s10.5, s10.6
-Topic: Daily pre-operational checks; routine inspection and maintenance; annual inspection requirements
-
-PRE-OPERATIONAL INSPECTION (CoP s10.4):
-- Must be carried out by the CRANE OPERATOR before the commencement of EACH WORK SHIFT
-- Consists of VISUAL INSPECTION AND FUNCTION TEST
-
-Items to inspect and test:
-- All relevant items indicated in the OPERATIONS MANUAL
-- OPERATING AND EMERGENCY CONTROLS
-- BRAKES
-- SAFETY SWITCHES AND INTERLOCKS, including LIMITING AND INDICATING DEVICES
-- VISUAL INSPECTION OF THE STRUCTURE
-- Wire ropes to ensure they are ON THE DRUM and CORRECTLY REEVED ON THE SHEAVE
-- Wire ropes for OBVIOUS DAMAGE
-
-RECORDING:
-- Results of inspection must be ENTERED INTO A LOGBOOK and KEPT WITH THE CRANE
-- All PPE should be inspected
-- All SAFETY-RELATED PROBLEMS must be RECORDED AND RECTIFIED PRIOR TO CRANE USE
-
-ROUTINE INSPECTION AND MAINTENANCE (CoP s10.5):
-- Must be carried out by a COMPETENT PERSON per CRANE MANUFACTURER'S INSTRUCTIONS
-- Should include:
-  - All functions and controls for SPEED, SMOOTHNESS OF OPERATION AND LIMITS OF MOTION
-  - All EMERGENCY AND SAFETY SWITCHES AND INTERLOCKS including limiting and indicating devices
-  - LUBRICATION of all moving parts; inspection of filter elements and fluid levels
-  - Visual inspection and measurements of STRUCTURAL MEMBERS and other critical components (brakes, gears, fasteners, pins, shafts, wire ropes, sheaves, locking devices, electrical contactors)
-  - SIGNAGE including warning signs and control markings
-  - WEAR ON WHEELS AND RAILS
-  - Additional items nominated in MANUFACTURER'S INSTRUCTIONS
-- All replacement parts and components must be IDENTICAL OR EQUIVALENT to originals
-- A WRITTEN REPORT must be provided upon completion
-
-ANNUAL INSPECTION (CoP s10.6):
-- Required when crane is erected and HAS BEEN IN PLACE FOR 12 MONTHS OR LONGER
-- Must be carried out by a COMPETENT PERSON
-- On-site annual inspection should include all items specified by manufacturer for annual inspections plus relevant routine maintenance items
-
-ANNUAL INSPECTION INCLUDES:
-- All relevant items in the PRE-ERECTION INSPECTION AND TESTS that can be safely completed while crane is erected
-- EFFECTIVE FUNCTIONING AND CALIBRATION of all limiting and indicating devices
-- DETAILED VISUAL INSPECTION AND TOLERANCE CHECKING of all critical structural and wear components
-- Checking TOLERANCES FOR WEAR LIMIT
-- DETAILED VISUAL CHECK FOR CORROSION
-- DETAILED VISUAL EXAMINATION OF CRITICAL AREAS for evidence of cracking
-- A WRITTEN REPORT must be provided upon completion
-- An example 'ANNUAL CRANE SAFETY CERTIFICATE' is provided in Appendix 4
-
-VISUAL INDICATORS:
-- No crane logbook on crane or logbook not completed before each shift = non-compliance
-- Safety-related problems identified in pre-operational check but crane still in use = serious non-compliance
-- No routine inspection records available = non-compliance
-- Crane in place for more than 12 months without annual inspection = serious non-compliance
-- Annual inspection not covering calibration of limiting and indicating devices = non-compliance
-
----
-
-CHUNK 36: Major Inspection of Tower Cranes
-Section: CoP s10.7–s10.7.2; WHS Regulation s235
-Topic: Major inspection triggers; key inspection items; NDT requirements during major inspection; post-inspection obligations
-
-MAJOR INSPECTION OBLIGATION (WHS Regulation s235):
-Person with management or control of a registered tower crane must ensure a major inspection is carried out:
-(a) AT THE END OF THE DESIGN LIFE recommended by the manufacturer, OR
-(b) If no manufacturer's recommendations — per RECOMMENDATIONS OF A COMPETENT PERSON, OR
-(c) If neither (a) nor (b) reasonably practicable — EVERY 10 YEARS from the date crane was first commissioned or first registered (whichever occurred first)
-
-A MAJOR INSPECTION CONDUCTED UNDER AN EQUIVALENT PROVISION OF A CORRESPONDING WHS LAW is taken to be a major inspection.
-
-SCOPE OF MAJOR INSPECTION:
-- Examination of ALL CRITICAL COMPONENTS of the crane
-- May require STRIPPING DOWN and removal of PAINT, GREASE AND CORROSION for thorough examination
-- Checking EFFECTIVE AND SAFE OPERATION of the crane
-- Must be CERTIFIED BY AN ENGINEER with EXPERIENCE, TRAINING AND QUALIFICATION IN INSPECTION OF TOWER CRANES
-- Engineer may use advice of OTHER COMPETENT PERSONS when preparing the inspection report
-
-MAJOR INSPECTION — SPECIAL ATTENTION AREAS:
-- STRUCTURAL, MECHANICAL, ELECTRICAL, INSTRUMENTATION, CONTROL AND OPERATIONAL ANOMALIES
-- NON-DESTRUCTIVE TESTING to an appropriate standard
-- CONTROLS AND EMERGENCY STOP
-- BRAKING SYSTEMS
-- MANUFACTURER'S SAFETY UPGRADES
-- ADEQUACY OF SAFETY INSTRUCTIONS AND MANUALS
-- CAPACITY AND VIABILITY OF UPGRADING CRANE to latest relevant technical standard
-
-KEY INSPECTION ITEMS (CoP s10.7.1) — all must be included where applicable:
-- Slew ring | Hydraulic motors | Hydraulic pumps | Valve blocks (bodies)
-- Hoist and luff drums | Braking systems | Rope sheaves | Hydraulic luffing cylinder
-- Gear boxes and drive shafts | Boom | A-frame | Pins with moving parts (e.g. boom heel pins, ram pins)
-- Static pins | Steel wire ropes | Electrical systems | Control systems
-- Electric motors | Hook trolley (non-luffing cranes) | Hook assembly
-- Alignment of drive shaft between motor and gear box (where applicable)
-
-ITEMS WHERE DOCUMENTED EVIDENCE MAY SUBSTITUTE FOR STRIP-DOWN:
-Where documented evidence shows appropriate inspecting and testing carried out within a reasonable preceding period, the following items need NOT be stripped down — but competent person must still inspect safe operation:
-- Slew ring | Hydraulic motors | Hydraulic pumps | Valve blocks | Hoist and luff drums | Pins with moving parts
-
-KEY SPECIFIC REQUIREMENTS DURING MAJOR INSPECTION:
-- SLEW RING: remove bolts, split ring, measure wear, replace worn bearings/spacers, NDT of bearing race, check backlash, NDT or replacement of all slew ring bolts
-- BOOM: NDT of all components per pre-erection requirements; ultrasonic chord thickness; minimum 10% of lacing welds crack tested per section (if cracks found: all lacing welds on that section)
-- A-FRAME: remove all pins; NDT of all connector welds on primary chords; minimum 10% of lacing welds crack tested
-- STEEL WIRE ROPES: inspect per AS 2759 discard criteria; if rope likely to require replacement within 3 months = REPLACE NOW; replace only with type specified by crane manufacturer unless professional engineer specifies otherwise
-- BRAKING SYSTEMS: NDT of all welds; check pin, spring, bush tolerances; replace rubber seals; inspect wear limits on brake linings
-- ELECTRICAL SYSTEMS (HAZARDOUS VOLTAGE): qualified and licensed electrician to inspect per AS 60204.1 and AS 3000; sign-off by electrician required
-
-WIRE ROPE DISCARD CRITERIA:
-- Must inspect per AS 2759: Steel wire rope – Use, operation and maintenance
-- If rope will require replacing within 3 months after inspection: REPLACE DURING MAJOR INSPECTION
-
-POST-MAJOR INSPECTION OBLIGATIONS (CoP s10.7.2):
-- Crane must be UPGRADED TO COMPLY WITH:
-  - Current version of AS 1418.4: Cranes, hoists and winches – Tower cranes, OR
-  - Recommendations of competent person to achieve EQUIVALENT LEVEL OF SAFETY to AS 1418.4
-- A WRITTEN REPORT detailing results of the major inspection must be provided to the CRANE OWNER
-- Example certificate provided in Appendix 5
-
-VISUAL INDICATORS:
-- Tower crane in operation beyond 10 years since commissioning or first registration without evidence of major inspection = serious non-compliance
-- Major inspection not certified by a registered professional engineer = serious non-compliance
-- Wire ropes at or near discard criteria after major inspection but not replaced = serious non-compliance
-- No written major inspection report provided to crane owner = non-compliance
-- Crane not upgraded to current AS 1418.4 or equivalent standard after major inspection = non-compliance
-
----
-
-CHUNK 37: Records, Maintenance and Repair of Tower Cranes
-Section: CoP s10.8–s10.11; WHS Regulation s237
-Topic: Record-keeping obligations; maintenance programs; repair standards; second-hand imported tower cranes
-
-RECORDS OF INSPECTIONS AND MAINTENANCE (CoP s10.8):
-- A CRANE SERVICE RECORD (e.g. maintenance logbook) of significant events concerning SAFETY AND OPERATION must be KEPT AND READILY AVAILABLE
-- Records must be EASILY UNDERSTOOD and WRITTEN IN PLAIN ENGLISH
-- May be kept in any suitable format
-- MUST BE TRANSFERRED WITH OWNERSHIP OF THE CRANE
-
-LOGBOOK ENTRY REQUIREMENTS (all entries must):
-- CLEARLY DESCRIBE the work undertaken and parts replaced
-- Be DATED
-- Note the NAME OF THE PERSON carrying out the work
-- Be SIGNED by the person carrying out the work
-
-DOCUMENTATION REQUIREMENTS:
-- Statement that crane has been inspected by a competent person and is in a SAFE AND SATISFACTORY CONDITION should be READILY AVAILABLE
-- All ROUTINE, ANNUAL AND MAJOR INSPECTION REPORTS must be maintained and made available for examination
-
-TOWER CRANE MAINTENANCE (CoP s10.9):
-- Preventative maintenance program should be established based on WORKING ENVIRONMENT, FREQUENCY AND SEVERITY OF USE
-- Replacement parts must be IDENTICAL OR EQUIVALENT to original equipment
-- SPECIFIC RECTIFICATION PROGRAM should be carried out where past experience shows particular problems
-- All SAFETY-RELATED MALFUNCTIONS AND PROBLEMS must be CORRECTED BEFORE THE CRANE IS RETURNED TO SERVICE
-
-CRANE OWNER MAINTENANCE OBLIGATIONS:
-- Provide and maintain NECESSARY FACILITIES AND SYSTEMS to minimise risks to persons maintaining, inspecting, repairing or cleaning the crane
-- Carry out inspections, maintenance and cleaning per PROCEDURES RECOMMENDED BY DESIGNER AND MANUFACTURER, or relevant Australian Standard, or as developed by COMPETENT PERSON
-- Ensure REPAIR, INSPECTION AND TESTING carried out by a COMPETENT PERSON
-- Maintain and test all SAFETY FEATURES AND WARNING DEVICES
-- When crane is DAMAGED to extent its function or condition is impaired: have a COMPETENT PERSON assess and advise on the nature of damage, repairability and required repairs
-- Ensure repairs retain crane WITHIN ITS DESIGN LIMITS
-- Keep ANNUAL MAINTENANCE, REPAIR AND INSPECTION RECORDS
-
-TOWER CRANE REPAIR (CoP s10.10):
-- All worn or damaged parts that CONSTITUTE A HAZARD, impair operation, or may constitute a hazard before next routine inspection must be REPAIRED OR REPLACED
-- All repaired or new parts must comply with CRANE MANUFACTURER'S RECOMMENDATIONS OR SPECIFICATIONS
-- Where manufacturer's recommendations not available: repaired/new parts must comply with recommendations of a COMPETENT PERSON taking into account AS 1418.4 requirements
-
-SECOND-HAND IMPORTED TOWER CRANES (CoP s10.11):
-- Before a second-hand imported tower crane can be operated for the FIRST TIME:
-  - Owner must ensure crane is subject to INDEPENDENT THIRD PARTY INSPECTION (refer to CoP s10.3), OR
-  - A MAJOR INSPECTION if crane is AT LEAST 10 YEARS OLD, OR if there is NO DOCUMENTED EVIDENCE of history of use or maintenance records
-- Where safety cannot be verified by documentation: MAJOR INSPECTION OVERSEEN BY AN ENGINEER is required
-
-VISUAL INDICATORS:
-- Crane service logbook absent, not on site, or entries not signed/dated = non-compliance
-- Maintenance records not transferred when crane ownership changes = non-compliance
-- Crane returned to service after safety-related malfunction without documented rectification = serious non-compliance
-- Repaired parts not complying with manufacturer's specifications or equivalent standard = non-compliance
-- Second-hand imported tower crane operated without independent third party inspection or major inspection as applicable = serious non-compliance
-
----
-
-CHUNK 38: Referenced Legislation, Australian Standards and Other Codes
-Section: CoP Appendix 1 (Dictionary), Appendix 2 (Technical Standards); CoP throughout
-Topic: Key definitions, legislation, technical standards and other codes of practice referenced by this Code
-
-KEY DEFINITIONS (Appendix 1):
-- ANEMOMETER: instrument for measuring wind speed
-- COMPETENT PERSON (for major inspections): registered professional engineer with knowledge and skills to carry out a major inspection, OR person determined by the regulator
-- COMPETENT PERSON (all other references): person who has acquired through training, qualification or experience the knowledge and skills to carry out the task
-- ENGINEER: registered professional engineer under the Professional Engineers Act 2002 (Qld), competent to perform the task
-- ENGINEERING PRINCIPLES: principles stated in engineering, mathematical or scientific text, relevant to safe plant design, commonly used in professional engineering practice
-- FAIL-SAFE: when partial or total failure of plant occurs, the plant fails in a manner that leaves it in a SAFE CONDITION and does not introduce any additional unsafe condition
-- INDEPENDENT THIRD PARTY: person with required knowledge and skills who is NOT ASSOCIATED with the ongoing general repair and maintenance of the particular crane
-- LOAD CHART: notice supplied by crane manufacturer specifying rated capacities; fitted on the crane
-- STABILISING MOMENT: moment that tends to keep the crane upright; OVERTURNING MOMENT: moment that tends to tip the crane over; when overturning moment exceeds stabilising moment, crane will overturn
-
-PRIMARY LEGISLATION:
-- Work Health and Safety Act 2011 (Qld)
-- Work Health and Safety Regulation 2011 (Qld)
-- Electrical Safety Act 2002 (Qld)
-- Electrical Safety Regulation 2013 (Qld)
-- Professional Engineers Act 2002 (Qld)
-
-RELEVANT TECHNICAL STANDARDS (Appendix 2):
-- AS 1353.2 — Flat synthetic-webbing slings – Care and use
-- AS 1418.1 — Cranes, hoists and winches – General requirements
-- AS 1418.4 — Cranes, hoists and winches – Tower cranes [PRIMARY STANDARD]
-- AS 1418.17 — Cranes (including hoists and winches) – Design and construction of workboxes
-- AS/NZS 1554 (Series) — Structural steel welding
-- AS 1657 — Fixed platforms, walkways, stairways and ladders – Design, construction and installation
-- AS/NZS 1891 (Series) — Industrial fall-arrest systems and devices
-- AS 2550.1 — Cranes, hoists and winches – Safe use – General requirements
-- AS 2550.4 — Cranes, hoists and winches – Safe use – Tower cranes [KEY OPERATIONAL STANDARD]
-- AS 2550.20 — Cranes, hoists and winches – Safe use – Self-erecting tower cranes
-- AS 2759 — Steel wire rope – Use, operation and maintenance
-- AS/NZS 3000 — Electrical installations (Australian/New Zealand Wiring Rules)
-- AS 3775.2 — Chain slings for lifting purposes – Grade T(80) and V(100) – Care and use
-- AS/NZS 4024 (Series) — Safety of machinery
-- AS 4497.2 — Round slings – Synthetic fibre – Care and use
-- AS 4991 — Lifting devices
-- AS 60204.1 — Safety of machinery – Electrical equipment of machines – General requirements
-- AS 62061 — Safety of machinery – Functional safety of safety-related electrical, electronic and programmable electronic control systems
-
-OTHER CODES OF PRACTICE REFERENCED:
-- Managing the risk of falls at workplaces Code of Practice 2011
-- Managing noise and preventing hearing loss at work Code of Practice 2011
-- How to Manage Work Health and Safety Risks Code of Practice
-- Work Health and Safety Consultation, Cooperation and Coordination Code of Practice
-- Managing risks of plant in the workplace Code of Practice
-- Electrical Safety Code of Practice 2010 – Working near overhead and underground electric lines
-
-KEY WEBSITES:
-- worksafe.qld.gov.au | 1300 362 128
-- www.casa.gov.au (CASA — for cranes near aerodromes)
-- Board of Professional Engineers of Queensland (for engineer registration)
-- National Association of Testing Authorities (NATA) (for NDT accreditation)
-
----
-
-CHUNK 39: Quick Reference — Critical Measurements and Thresholds
-Section: CoP throughout
-Topic: Consolidated list of all specific measurements, distances, percentages, and thresholds in the Tower Crane Code of Practice 2017 for quick compliance checking
-
-WIND SPEED THRESHOLDS:
-- 54 KM/HR (15 m/s) — traditional maximum operational wind speed for tower crane operations (QLD)
-- 72 KM/HR (20 m/s) — maximum operational wind speed per AS 1418.4 (where crane installation designed for this)
-- 36 KM/HR (10 m/s) — maximum wind speed for climbing operations
-- 54 KM/HR — do not use first aid boxes when wind speed exceeds this; use alternative retrieval means
-- If operating above 54 km/hr: DOCUMENTED RISK ASSESSMENT REQUIRED; crane must be DESIGNED for that speed
-
-EXCLUSION ZONES:
-- AT LEAST 20 METRES radius from base — erection and dismantling operations
-- AT LEAST 12 METRES radius from base — climbing operations (before crane tie installation)
-- AT LEAST 3 METRES from overhead powerlines — for voltages UP TO 132kV (greater distances for higher voltages)
-- 2 METRES — minimum distance between bottom of slung load and highest extremity of building worksite
-
-LOAD AND LIFTING THRESHOLDS:
-- 110% OF MAXIMUM RATED CAPACITY — maximum load rated capacity limiter may allow before triggering (hoisting)
-- 100% AT THE PARTICULAR RADIUS — threshold where limiter must prevent radius increase
-- TWICE THE TOTAL LOAD (minimum) of work box/first aid box contents = minimum crane SWL for work box or first aid box lifts
-- NOT LESS THAN 1000 KG — minimum crane SWL when using work boxes or first aid boxes
-- Factor of safety AT LEAST 8 FOR CHAINS — work box/first aid box suspension slings
-- Factor of safety AT LEAST 10 FOR WIRE ROPE — work box/first aid box suspension slings
-
-WORK BOX DIMENSIONS:
-- SIDES AT LEAST 1 METRE HIGH (work box)
-- SIDES AT LEAST 1 METRE HIGH + HORIZONTAL GAP NOT EXCEEDING 250 MM (first aid box)
-- MINIMUM INTERNAL HEIGHT: 2.2 METRES (first aid box)
-- MINIMUM INTERNAL WIDTH: 1.2 METRES (first aid box)
-- MINIMUM INTERNAL LENGTH: 2.8 METRES (first aid box)
-- MAXIMUM MESH SIZE: 50 MM x 50 MM (first aid box)
-
-GUARDRAIL DIMENSIONS — MACHINE DECK AND A-FRAME:
-- TOP RAIL: between 900 MM and 1100 MM high
-- MID-RAIL: required
-- TOEBOARD: AT LEAST 100 MM high
-- Compliant with AS 1657
-
-A-FRAME LADDER CAGE:
-- LOWEST PART: between 2 METRES and 2.2 METRES above lower deck
-- HORIZONTAL SPACING between vertical bars: NOT EXCEED 150 MM (or mesh infill)
-
-LADDER AND FALL-ARREST:
-- Vertical distance between tower landings: SHOULD NOT EXCEED 6 METRES (preferred)
-- Lowest ladder in tower: may be up to 12.5 METRES (where manufacturer designed otherwise)
-- Subsequent ladders: may be up to 10 METRES
-- Maximum lanyard length (fall-arrest on vertical rail): 300 MM
-- Maximum tool lanyard length (wrist-attached): 300 MM
-
-BARRICADE — SELF-ERECTING TOWER CRANES:
-- 1800 MM HIGH barricade around base of self-erecting tower crane
-
-INSPECTION INTERVALS:
-- SLEW RING BOLTS: NDT every 5 YEARS (all bolts); pre-erection minimum 10% (or 100% per manufacturer)
-- TOWER BOLTS: NDT minimum 10% BEFORE EACH ERECTION
-- BOOM CHORD THICKNESS: material thickness testing every 10 YEARS
-- SLEW RING, HOOK, A-FRAME, BOOM LACING, HOOK TROLLEY WELDS: crack test every 10 YEARS
-- SYNTHETIC SLINGS: inspection every 3 MONTHS
-- GENERAL LIFTING GEAR: inspection NOT EXCEEDING 12 MONTHS
-- TRAVEL RESTRAINT SYSTEM: inspection by competent person AT LEAST EVERY 6 MONTHS (written record)
-- MAJOR INSPECTION: at end of design life OR per competent person OR every 10 YEARS
-- ANNUAL INSPECTION: when crane in place 12 MONTHS OR LONGER
-- WET BRAKES: inspect before each erection AND after 5,000 HOURS of crane operation
-- DRY BRAKES: inspect BEFORE EACH ERECTION
-- REFRESHER TRAINING: interval must NOT EXCEED 3 YEARS; must occur between 2.5 AND 3 YEARS after initial licence or prior refresher
-
-REGISTRATION AND DESIGN:
-- Tower crane: requires BOTH DESIGN REGISTRATION AND ITEM REGISTRATION (Schedule 5 Parts 1 and 2)
-- Chord section at 90% OR LESS of original thickness = review for structural adequacy required
-
-RATED CAPACITY LIMITER:
-- Required on ALL TOWER CRANES regardless of age
-- Reliability: CATEGORY 4 under AS 4024, or SIL 3 under AS 62061
-
-CONSTRUCTION INDUCTION:
-- Must not direct worker to construction work unless they hold general construction induction training AND have worked in construction in the PRECEDING 2 YEARS (if training completed more than 2 years ago)
+CHUNK 29:

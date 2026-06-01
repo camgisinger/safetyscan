@@ -12,313 +12,106 @@ APPROVED UNDER: Work Health and Safety Act 2011 (Qld) s274; Electrical Safety Ac
 
 ---
 
-CHUNK 1: Definition and Scope — What is a Mobile Crane?
-Section: CoP s1.1; WHS Regulation s219
-Topic: Legal definitions of mobile crane types, vehicle-loading cranes and other mobile plant used as cranes
-
-MOBILE CRANE means a crane capable of travelling over a supporting surface without the need for fixed runways, relying only on gravity for stability.
-
-FOUR GENERAL TYPES of mobile crane in Australia:
-1. HYDRAULIC SLEWING CRANES — boom/jib can slew; most common type
-2. LATTICE BOOM CRANES (including crawler cranes)
-3. NON-SLEWING (PICK-AND-CARRY) CRANES — boom/jib cannot slew; includes articulated and locomotive cranes
-4. VEHICLE-LOADING CRANES — crane mounted on a vehicle for loading/unloading
-
-SLEWING MOBILE CRANE — incorporates a boom or jib that can slew; does NOT include earthmoving equipment (front-end loaders, backhoes, excavators in crane mode).
-
-NON-SLEWING MOBILE CRANE (pick-and-carry) — includes:
-- Articulated mobile cranes
-- Locomotive cranes
-NOTE: A vehicle tow truck is NOT a non-slewing mobile crane.
-
-VEHICLE-LOADING CRANE — a crane mounted on a vehicle for the purpose of loading and unloading that vehicle.
-
-OTHER MOBILE PLANT — machines primarily used for activities other than lifting/lowering freely suspended loads; includes backhoes, excavators, front-end loaders, and telescopic handlers.
-
-SCOPE: This CoP covers mobile cranes, vehicle-loading cranes, and other mobile plant used as mobile cranes to raise or lower a freely suspended load.
-
-VISUAL INDICATORS:
-- Any crane travelling over the ground without fixed runways = mobile crane subject to this CoP
-- Excavator or backhoe with suspended load attached = other mobile plant used as crane; additional requirements apply
-- Non-slewing crane operating with a suspended load while moving = pick-and-carry mode; specific stability rules apply
-- Vehicle with crane mounted for loading/unloading = vehicle-loading crane; specific requirements in Section 14
-
----
-
-CHUNK 2: Duty Holders — Who Has Health and Safety Responsibilities?
-Section: CoP s1.2; WHS Act s19, s22–s29, s46, s47; WHS Regulation s34–s38, s219, s243–s245
-Topic: Legal duties of PCBUs, principal contractors, crane owners, operators, doggers, officers, workers and others
-
-PRIMARY DUTY — PCBU (WHS Act s19):
-- Must ELIMINATE health and safety risks from mobile crane operations
-- If elimination not reasonably practicable: MINIMISE risks so far as is reasonably practicable
-- Must ensure provision and maintenance of safe plant (including mobile cranes)
-- Must ensure safe use, handling, storage and transport of plant
-
-CRANE OWNER as PCBU — management or control of plant:
-- If you own a mobile crane, you are the person with management or control of that plant
-- Crane owner hiring/leasing plant to others has duties as both supplier and person with management or control
-- Must ensure plant is safe to use and properly maintained
-- Must provide specific information about how to operate the plant safely
-
-HIRING ARRANGEMENTS:
-- Both the person hiring AND the person supplying the plant must ensure the plant is safe, so far as reasonably practicable
-- During hire, the hirer has control over how the plant is used
-- For extended hire: parties may develop arrangements for inspection and maintenance; hirer should provide all maintenance records to crane owner at end of hire
-
-DESIGNERS, MANUFACTURERS, IMPORTERS, SUPPLIERS (WHS Act s22–s26):
-- Must ensure plant is without risks to health and safety
-- Must carry out analysis, testing or examination and provide specific information
-- Information must pass from designer through to end user
-- Suppliers must provide design registration number when supplying a crane requiring plant design registration
-
-OFFICERS (WHS Act s27):
-- Must exercise DUE DILIGENCE
-- Must take reasonable steps to ensure business has appropriate resources and processes to eliminate or minimise plant risks
-
-WORKERS AND OTHER PERSONS (WHS Act s28):
-- Must take reasonable care for own health and safety
-- Must co-operate with reasonable policies, procedures and instructions
-- Must not adversely affect other people's health and safety
-
-VISUAL INDICATORS:
-- Crane owner cannot demonstrate inspection and maintenance records = flag
-- Plant in use without documented handover of safety information from supplier = non-compliance
-- No design registration number available for crane with >10t rated capacity = non-compliance
-- Workers operating without instruction on crane-specific hazards = flag
-
----
-
-CHUNK 3: Risk Management — Identifying and Controlling Mobile Crane Risks
-Section: CoP s1.3; WHS Regulation s34, s35, s36, s37, s38
-Topic: Four-step risk management process; hazard identification; hierarchy of controls
-
-RISK MANAGEMENT PROCESS — four steps:
-1. IDENTIFY HAZARDS — observe workplace, ask crane operator/crew, review inspection and maintenance records including logbooks, incident and injury records (including near misses)
-2. ASSESS RISKS — understand nature of harm, severity, and likelihood
-3. IMPLEMENT CONTROL MEASURES — using hierarchy of controls
-4. MONITOR AND REVIEW — regularly review effectiveness; consider changes, nature and duration of work
-
-KEY HAZARDS IN MOBILE CRANE OPERATIONS:
-- Structural failure (boom, jib, hydraulic rams, wire rope)
-- Crane overturning
-- Contact or collision of crane or load with people, plant or structures
-- Falling objects
-
-HIERARCHY OF CONTROL MEASURES (WHS Regulation s36) — from highest to lowest protection:
-1. ELIMINATION — remove the hazard
-2. SUBSTITUTION — replace hazard with lesser risk
-3. ISOLATION — separate hazard from person (e.g. exclusion zones)
-4. ENGINEERING CONTROLS — physical measures (e.g. rated capacity limiters, motion limiting devices)
-5. ADMINISTRATIVE CONTROLS — procedures, SWMS, documented lifting procedures
-6. PPE — last resort; must not be sole control
-
-CONSULTATION REQUIREMENTS (WHS Act s47):
-- Must consult workers who are, or are likely to be, directly affected by a matter relating to WHS
-- If workers are represented by a health and safety representative, consultation must involve that representative
-
-COORDINATION (WHS Act s46):
-- Where more than one person has a duty regarding the same matter, each must consult, co-operate and co-ordinate with all others
-
-VISUAL INDICATORS:
-- No documented risk assessment or SWMS for complex or high-risk lifts = non-compliance
-- PPE used as sole control without higher-order controls = non-compliant approach
-- No review of control measures after near miss or changed conditions = flag
-- No evidence of worker consultation in planning of crane operations = flag
-
----
-
-CHUNK 4: Safe Work Method Statements (SWMS) — When Required for Crane Operations
-Section: CoP s1.4; WHS Regulation s299, s300
-Topic: SWMS requirements for high risk construction work involving mobile cranes
-
-SWMS REQUIRED for HIGH RISK CONSTRUCTION WORK — must be prepared BEFORE work starts.
-
-HIGH RISK CONSTRUCTION WORK relevant to mobile crane operations includes:
-- Work involving risk of a person falling more than 2 METRES
-- Demolition of an element that is load-bearing or related to physical integrity of a structure
-- Work involving or likely to involve disturbance of ASBESTOS
-- Structural alterations or repairs requiring temporary support to prevent collapse
-- Work in or near a CONFINED SPACE
-- Work in or near a shaft or trench with EXCAVATED DEPTH GREATER THAN 1.5 METRES or a tunnel
-- Work on or near ENERGISED ELECTRICAL INSTALLATIONS
-- Work in areas with contaminated or flammable atmosphere
-- Work involving TILT-UP OR PRECAST CONCRETE
-- Work on, in or adjacent to a ROAD, RAILWAY, SHIPPING LANE or other traffic corridor in use by traffic or pedestrians
-- Work at a workplace with MOVEMENT OF POWERED MOBILE PLANT
-- Work near or above WATER (drowning risk)
-
-COMPLEX LIFT TYPES ALWAYS REQUIRING COMPREHENSIVE SITE-SPECIFIC SWMS:
-- Tilt-up and pre-cast concrete panel lifts
-- Multiple crane lifts
-- Lifting of workboxes with personnel
-- Installation of bridge beams
-- Working near live overhead powerlines
-- Lifting large pressure vessels or tanks
-- Cranes used on barges
-- Mobile plant retrieval following an incident
-- Erection of tower cranes
-- Heavy lifts: bridge beams (10 TONNES OR MORE) or loads of 50 TONNES OR MORE
-
-SWMS CONTENT — must:
-- Identify the type of high-risk construction work being done
-- Specify health and safety hazards and risks
-- Describe how risks will be controlled
-- Describe how control measures will be implemented, monitored and reviewed
-
-SWMS DEVELOPMENT:
-- Must be developed in CONSULTATION WITH WORKERS and their representatives
-- May be incorporated into documented lifting procedures (and vice versa) to reduce duplication
-- Generic SWMS may be used for same or very similar circumstances to past work
-- Site-specific SWMS must be prepared for unique or complex lifts
-
-VISUAL INDICATORS:
-- Complex or high-risk crane lift underway without SWMS available on site = serious non-compliance
-- SWMS not reviewed after deviation, incident or near miss = non-compliance
-- No evidence of worker consultation in SWMS development = flag
-- Generic SWMS used for unique or complex lift type = flag
-
----
-
-CHUNK 5: Design Registration and Plant Registration of Mobile Cranes
+CHUNK 1: Registration Plate and Compliance Marking
 Section: CoP s2; WHS Regulation s243, s244, s245
-Topic: Design registration requirements; when registration applies; what triggers re-registration
+Topic: Design registration requirements for mobile cranes and altered designs
 
-DESIGN REGISTRATION REQUIRED for mobile cranes with RATED CAPACITY GREATER THAN 10 TONNES (WHS Regulation s243, Schedule 5 Part 1).
+MANDATORY DESIGN REGISTRATION:
+- Mobile cranes with RATED CAPACITY GREATER THAN 10 TONNES must have registered design (WHS Regulation s243)
+- Design registration number must be accessible on site
+- Certificate of registrable plant design stops having effect if design is changed in a way that may affect health or safety
 
-ALTERED DESIGNS must be registered if the alteration MAY AFFECT HEALTH OR SAFETY (WHS Regulation s244).
-
-Registration NOT required if design is already registered under a corresponding WHS law (WHS Regulation s245).
-
-APPLICATION FOR DESIGN REGISTRATION must include:
-- Statement signed by designer confirming compliance with WHS Act s22 and listing technical standards used
-- Design verification statement
-- Representational drawings of the crane
-- Relevant fee
-
-DESIGN VERIFIER — must NOT have been involved in designing the plant being verified.
-
-CERTIFICATE OF REGISTRABLE PLANT DESIGN stops having effect if design is changed in a way that may affect health or safety of operators or nearby workers.
-
-EXAMPLES of changes affecting certificate:
-- Increasing number of counterweights to increase rated capacity = CERTIFICATE STOPS (may increase structural failure or overturn risk)
-- Replacing hoist rope with different construction rope where manufacturer specifies suitability = CERTIFICATE CONTINUES (no safety impact)
-
-MOBILE CRANES MUST be designed in accordance with acceptable engineering principles or relevant technical standards to ensure they are without risk to health and safety.
+ALTERED DESIGNS requiring re-registration:
+- Increasing number of counterweights to increase rated capacity = certificate stops; re-registration required
+- Replacing hoist rope with different construction where manufacturer specifies suitability = certificate continues
 
 VISUAL INDICATORS:
-- Mobile crane with rated capacity >10t on site without visible or accessible design registration documentation = flag
-- Crane with altered design (e.g. additional counterweights) without documented re-registration = serious non-compliance
+- Mobile crane with rated capacity >10t without accessible design registration documentation = flag
+- Crane with altered design (e.g. additional counterweights, modified boom) without documented re-registration = serious non-compliance
 - Design verification statement signed by person involved in the design = non-compliance
 
 ---
 
-CHUNK 6: Limiting and Indicating Devices — Technical Requirements
+CHUNK 2: Limiting and Indicating Devices — Mandatory Equipment
 Section: CoP s4; AS 1418.5
-Topic: Rated capacity limiters, motion limiting devices, load indicators, working radius indicators, free fall lock-out
+Topic: Rated capacity limiters, motion limiting devices, load indicators, anemometers (KEY MEASUREMENTS)
 
-LIMITING DEVICES — stop a specific crane motion before the crane moves into an unsafe situation.
-INDICATING DEVICES — visually or audibly warn the crane operator of approaching limits or unsafe situations.
-
-RATED CAPACITY LIMITERS:
+RATED CAPACITY LIMITERS (RCL):
 - CRANES MANUFACTURED 2002–2013: required on all mobile cranes with MAXIMUM SWL MORE THAN 3 TONNES
 - CRANES MANUFACTURED SINCE 2013: required on cranes with MAXIMUM RATED CAPACITY OF 1,000 KG OR 40,000 NM OR GREATER
+- Must prevent hoisting load GREATER THAN 110% of rated capacity
+- Must prevent radius being increased GREATER THAN 110% at the particular radius
 
-Rated capacity limiter must prevent:
-- Hoisting of a load GREATER THAN 110% of rated capacity
-- Radius being increased GREATER THAN 110% at the particular radius
-
-MOTION LIMITING DEVICES — must be fitted to prevent:
-- Highest position of hook ("anti-two block")
+MOTION LIMITING DEVICES — must prevent:
+- Highest position of hook (anti-two block)
 - Extreme permissible operating positions of jib (luff limiter)
 - End positions of horizontally telescoping or movable jibs
 
-WORKING RADIUS INDICATOR:
-- Should be fitted on all mobile cranes originally designed with this feature
-- Displays radius of suspended load from centre of slew ring (or centre of front axle for pick-and-carry cranes)
-
 LOAD INDICATORS:
-- Must be fitted on all mobile cranes with MAXIMUM RATED CAPACITY OF 1,000 KG OR 40,000 NM OR GREATER
-- Must be capable of displaying mass of suspended load AT ALL TIMES
+- Required on all mobile cranes with MAXIMUM RATED CAPACITY OF 1,000 KG OR 40,000 NM OR GREATER
+- Must display mass of suspended load AT ALL TIMES
 
 ANEMOMETERS (wind speed measuring devices):
-- Must be provided on all SLEWING MOBILE CRANES with MAXIMUM RATED CAPACITY OF 45 TONNES OR MORE
-- Wind speed measuring device should be at TIP OF MAIN BOOM (unless crane manufacturer specifies otherwise)
-- MANDATORY DEADLINE: Anemometers must be fitted on all cranes by 2 SEPTEMBER 2025
-
-FREE FALL LOCK-OUT:
-- Crane owners SHOULD DE-ACTIVATE free fall facility permanently unless no alternatives exist
-- De-activation must include: removal of free fall switches AND a certificate from crane manufacturer or competent person (preferably professional engineer) confirming permanent removal
-- Where switches cannot be removed: free fall function must be POSITIVELY LOCKED OUT with written certificate from competent person
-- If free fall is used: documented risk assessment required; do not use same crane for general lifting without safety inspection between activities
-
-CALIBRATION:
-- Calibration of limiting and indicating devices should be checked at PERIODIC INTERVALS by qualified person per crane manufacturer's instructions
+- MANDATORY on all SLEWING MOBILE CRANES with MAXIMUM RATED CAPACITY OF 45 TONNES OR MORE
+- Must be fitted by 2 SEPTEMBER 2025
+- Should be at TIP OF MAIN BOOM unless crane manufacturer specifies otherwise
 
 VISUAL INDICATORS:
-- Mobile crane in operation without load indicator = non-compliance (cranes ≥1,000 kg / 40,000 Nm)
-- Rated capacity limiter absent on crane with SWL >3t (manufactured 2002–2013) = non-compliance
+- Mobile crane in operation without load indicator (cranes ≥1,000 kg / 40,000 Nm) = non-compliance
+- RCL absent on crane with SWL >3t (manufactured 2002–2013) = non-compliance
 - No anti-two block device fitted = non-compliance
-- Slewing crane ≥45t without anemometer (after 2 September 2025) = non-compliance
-- Free fall feature operational on crane without documented risk assessment or lock-out certificate = flag
+- Slewing crane ≥45t without anemometer after 2 September 2025 = non-compliance
 - Calibration certificates not current = flag
 
 ---
 
-CHUNK 7: Ergonomic Issues — Safe Access, Seating, and Visibility
+CHUNK 3: Crane Access, Seating and Visibility
 Section: CoP s5
-Topic: Safe means of access to crane, operator seating requirements, cabin visibility
+Topic: Safe access provisions, operator seating, window condition
 
 SAFE MEANS OF ACCESS:
-- Mobile cranes should be fitted with safe means of access to the crane cabin and other frequently accessed areas
-- Must include (as appropriate): ladders, footholds, steps, grab rails
-- Access provisions provided by the crane manufacturer must NOT be removed or modified unless a qualified person (e.g. ergonomist) specifies otherwise
-- Where risk of slips, trips and falls exists: may need to modify walking surfaces with anti-slip product (e.g. treads, paint)
+- Cranes must be fitted with safe means of access to cabin and frequently accessed areas
+- Must include: ladders, footholds, steps, grab rails
+- Manufacturer-provided access provisions MUST NOT be removed or modified unless qualified person specifies otherwise
 
 SEATING:
-- Design of seating should account for extensive periods of time in the seat
-- Seating must be: comfortable, with adequate back support, and height adjustable
+- Must be comfortable with adequate back support
+- Must be height adjustable
 
 WINDOWS AND WINDSCREENS:
-- Clear vision must be provided in operator's cabin at all times
-- Access must be provided for regular cleaning
-- CRACKED GLASS must be replaced (windows and windscreens)
+- Clear vision must be provided at all times
+- CRACKED GLASS must be replaced
 
 VISUAL INDICATORS:
-- Missing or damaged access ladders, steps or grab rails on crane = flag
+- Missing or damaged access ladders, steps or grab rails = flag
 - Operator cabin with cracked or obscured windscreen = non-compliance
 - Anti-slip surfaces absent on access areas with slip risk = flag
 
 ---
 
-CHUNK 8: Crane Documentation and Markings
+CHUNK 4: Load Charts and Operator's Manual
 Section: CoP s6; AS 1418.5
-Topic: Load charts, operator's manual, crane markings requirements
+Topic: Load chart requirements, deductions, operator's manual availability (KEY MEASUREMENTS)
 
 LOAD CHARTS (Rated Capacity Charts):
-- Must be provided with the crane
 - Must be written in ENGLISH with values in METRIC (SI) UNITS
-- Must include information specified in AS 1418.5: Cranes, hoists and winches – Mobile cranes
-- Must include a note of what deductions apply (e.g. hook block, fly jib, lifting gear mass)
-- Where crane has ONE MAIN LOAD CHART: must be fixed in operator's cabin in a clearly VISIBLE LOCATION
-- Where crane has NUMEROUS LOAD CHARTS (different boom/fly jib configurations): hard copy or digital format of relevant configuration charts must be kept in operator's cabin
-- LIFTING MUST NOT TAKE PLACE unless operator has access to a load chart (hard copy or electronic)
+- ONE MAIN LOAD CHART: must be fixed in operator's cabin in CLEARLY VISIBLE LOCATION
+- NUMEROUS LOAD CHARTS (different configurations): hard copy or digital format of relevant configuration charts must be kept in operator's cabin
+- LIFTING MUST NOT TAKE PLACE unless operator has access to load chart
 
-KEY LOAD CHART DEDUCTIONS TO CHECK:
-1. Mass of hook block, lifting slings and other lifting gear must be SUBTRACTED from crane capacity at that radius (e.g. if crane can lift 20t and hook/gear = 1t, maximum load = 19t)
-2. Mass of fly jib must be SUBTRACTED from main hook capacity when lifting from main hook with fly jib attached to boom head — unless the load chart specifically allows otherwise
+KEY DEDUCTIONS:
+- Mass of hook block, lifting slings and other lifting gear must be SUBTRACTED from crane capacity at that radius
+- Mass of fly jib must be SUBTRACTED from main hook capacity when lifting from main hook with fly jib attached to boom head — unless load chart specifically allows otherwise
 
-LIFTING CAPACITIES specified on load chart MUST NEVER BE EXCEEDED — except during testing by a competent person under controlled conditions, or as documented and approved by the crane manufacturer.
+LIFTING CAPACITIES on load chart MUST NEVER BE EXCEEDED — except during testing by competent person under controlled conditions, or as documented and approved by crane manufacturer.
 
 CRANE OPERATOR'S MANUAL:
-- Must be supplied with the mobile crane
 - Must be written in ENGLISH
 - Must be kept on the crane at ALL TIMES — hard copy or digital format
 
 CRANE MARKINGS:
-- Crane and lifting components must be marked PERMANENTLY AND LEGIBLY in accordance with AS 1418.5
-- Markings must be in ENGLISH with values in SI UNITS
-- All operator controls must be suitably marked to indicate function and operation — in English or international code
+- Crane and lifting components must be marked PERMANENTLY AND LEGIBLY in ENGLISH with values in SI UNITS
+- All operator controls must be suitably marked to indicate function and operation
 
 VISUAL INDICATORS:
 - No load chart in operator cabin = serious non-compliance; lifting must cease
@@ -329,67 +122,9 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 9: Planning and Coordinating Mobile Crane Operations
-Section: CoP s7; AS 2550.5
-Topic: Pre-lift planning requirements, crane selection, crane crew, crane siting, communication, documented lifting procedures
-
-PLANNING — must start as early as possible; involves consultation with all engaged in the work including: principal contractor/crane hirer, crane supplier, electricity entity, engineer, PCBU, crane operator.
-
-KEY PLANNING ISSUES:
-- Determining appropriate crane for the work
-- Ensuring adequate workplace access
-- Identifying appropriate crane location relative to buildings, structures and plant
-- Liaising with electricity entities for overhead powerline control measures
-- Confirming ground conditions are adequate (including location of underground services: power, water, gas, sewers, phone/data)
-- Ensuring appropriate number of personnel for safe operations
-
-CRANE SELECTION — assess against criteria:
-- Weight, dimensions and lift radii of heaviest/largest loads
-- Maximum lift height and radius, and weight of loads at those points
-- Number and frequency of lifts
-- Duration crane is required on site
-- Type of lifting (e.g. precise placement)
-- Type of carrier (depends on ground conditions and machine capacity in operating quadrants)
-- Whether loads need to be walked or carried
-- Gradient of supporting surface
-- Whether loads will be suspended for lengthy periods
-- Workplace conditions: ground, access roads/ramps, space for erection, obstacles
-
-CRANE CREW — NUMBER determined by risk assessment addressing:
-- Collision between cranes and other plant; coordination of multiple cranes
-- Loads contacting structures (including scaffolding) or obstructing walkways
-- Overhead powerlines
-- Crane crew visibility of load; ability to safely load/unload materials and assess work areas
-
-ADDITIONAL CONTROL MEASURES FOR POOR VISIBILITY situations:
-- Redesign of lift or alternative crane
-- Isolation of area during lift
-- Anti-collision devices and systems
-- Flagging and insulated covers on suspended powerlines
-- Safety observer or 'spotter'
-- Additional dogger (e.g. where single dogger could lose sight of suspended load)
-- Cameras fitted to crane, hook or structure
-
-IMPORTANT RULE: A crane operator must NOT undertake their own dogging work or supervise a trainee dogger — even if the operator holds a dogging licence.
-
-VISUAL INDICATORS:
-- No evidence of pre-lift planning consultation = flag
-- Crane crew size not supported by risk assessment = flag
-- Crane operator also acting as dogger = serious non-compliance
-- Crane sited near overhead powerlines without planning consultation with electricity entity = flag
-
----
-
-CHUNK 10: Crane Siting — Collision Hazards and Exclusion Requirements
+CHUNK 5: Outrigger Hazard Striping
 Section: CoP s7.3; WHS Regulation
-Topic: Hazards to consider when siting a mobile crane; collision prevention; proximity to aerodromes
-
-COLLISION HAZARDS TO CONSIDER when siting:
-- Overhead powerlines and other services
-- Nearby structures
-- Other cranes or high obstructions (including on adjacent workplaces, e.g. concrete placement booms)
-- Other mobile equipment moving within the crane working area
-- Proximity to AERODROMES AND AIRCRAFT FLIGHT PATHS for 'high' cranes
+Topic: Hazard striping specifications for outriggers and stabilisers (KEY MEASUREMENTS)
 
 HAZARD STRIPING (ZEBRA STRIPING) on outriggers and stabilisers:
 - Should be permanently marked on outrigger beams or hydraulic cylinders
@@ -398,133 +133,51 @@ HAZARD STRIPING (ZEBRA STRIPING) on outriggers and stabilisers:
 - Two contrasting colours, one of which is RED, YELLOW OR WHITE
 - NOTE: If inadequate room, dimensions may be decreased for vehicle-loading cranes and small mobile cranes
 
-PROXIMITY TO AERODROMES:
-- Local aerodrome operator must be contacted to ensure CASA requirements are met
-- Where necessary, AIRCRAFT WARNING LIGHTS should be fitted to the HIGHEST PART of the crane
-- Reference: www.casa.gov.au
-
-CRANES ON PUBLIC ROADS:
-- Traffic control procedures of the road controlling authority MUST be complied with
-
 VISUAL INDICATORS:
 - Outriggers or stabilisers without hazard striping = flag (reduced visibility risk)
 - Hazard striping colour does not include red, yellow or white = non-compliance
 - Hazard striping angle outside 30–60 degrees or width less than 40mm = non-compliance
-- No aircraft warning lights on crane operating in designated flight path area = non-compliance
-- No traffic management plan for crane set up on public road = non-compliance
 
 ---
 
-CHUNK 11: Communication During Crane Operations
+CHUNK 6: Communication During Crane Operations
 Section: CoP s7.4; AS 2550.1
-Topic: Communication requirements between crane operators and doggers; radio use; hand signals
+Topic: Radio communication requirements, hand signals, mobile phone prohibition
 
-RELIABLE COMMUNICATION METHOD between crane operator and dogger (and all parties in multiple crane lifts) is ESSENTIAL.
-
-EFFECTIVE COMMUNICATION IS ESPECIALLY IMPORTANT when:
-- Crane operator cannot see the load
-- Crane operator cannot see the load's landing area
-- Crane operator cannot see the path of travel
-- Crane operator cannot see the dogger
-- Crane operator cannot judge distance accurately
-- Crane is near overhead powerlines
+RELIABLE COMMUNICATION METHOD between crane operator and dogger is ESSENTIAL.
 
 RADIO COMMUNICATION:
-- ANALOG RADIOS recommended over digital radios (digital risk of delay causing cut-off/misinterpretation)
-- Fixed channel radio frequency should be selected for the duration of crane operations
+- ANALOG RADIOS recommended over digital radios
+- Fixed channel radio frequency should be selected for duration of crane operations
 - Pre-lift safety check: confirm radios performing satisfactorily; fully charged battery AND spare available
-- Operators must be familiar with workplace-specific radio procedures
 - CONSTANT TALK METHOD: all involved aware of progress at all times
-- Crane operator normally takes instructions from ONE PERSON ONLY (exceptions for specific arrangements)
+- Crane operator normally takes instructions from ONE PERSON ONLY
 - WORK MUST STOP IMMEDIATELY if there is a loss of radio communication
 
-ALTERNATIVE COMMUNICATION (when radio cannot be used):
-- Hand signals, verbal communication or whistle signals
-- Must comply with AS 2550.1: Cranes, hoists and winches – Safe use – General requirements
+ALTERNATIVE COMMUNICATION:
+- Hand signals, verbal communication or whistle signals must comply with AS 2550.1
 
-MOBILE PHONES — MUST NOT be used for directing mobile crane operations (distraction risk: incoming calls, notifications).
+MOBILE PHONES — MUST NOT be used for directing mobile crane operations.
 
 VISUAL INDICATORS:
 - Crane operator receiving directions via mobile phone = non-compliance
 - No pre-lift radio check performed = flag
-- Digital radios used without documented risk assessment for delay risk = flag
-- No established communication protocol for multiple crane lift = non-compliance
 - Work continuing after loss of radio communication = serious non-compliance
 
 ---
 
-CHUNK 12: Documented Lifting Procedures — Requirements and Contents
-Section: CoP s7.5; WHS Regulation s299
-Topic: When documented lifting procedures are required; contents for comprehensive procedures
-
-DOCUMENTED LIFTING PROCEDURES should be prepared for ALL mobile crane lifting operations.
-- GENERIC procedures acceptable for straightforward, previously-undertaken lifts with similar circumstances
-- COMPREHENSIVE SITE-SPECIFIC procedures required for complex and higher-risk lifts
-
-SITUATIONS REQUIRING COMPREHENSIVE DOCUMENTED LIFTING PROCEDURES:
-- Tilt-up or spin-up panel jobs
-- Plant recovery (e.g. overturned plant)
-- Multiple crane lifts (more than one crane lifting a load simultaneously)
-- Lifting of workboxes with people
-- Installation of bridge beams
-- Working near live overhead powerlines
-- Lifting large pressure vessels or tanks
-- Using a crane for demolition
-- Complex rigging arrangements (e.g. chain blocks attached to allow load rotation while suspended)
-- Mobile cranes on barges
-- Erection of tower cranes
-- Heavy lifts: LOAD OF 50 TONNES OR MORE
-
-CONTENTS OF COMPREHENSIVE LIFTING PROCEDURES — should include:
-- Maximum load radius for each crane
-- Spotter duties: what the duty is and who is responsible
-- Position of load to be lifted and final position (diagram with plan view recommended)
-- MAXIMUM WIND SPEED where load has large surface area
-- Verification of MAXIMUM ALLOWABLE GROUND BEARING PRESSURE (for heavy lifts)
-- Proximity hazards including underground services, retaining walls, embankments, crane clearance to structures and powerlines (best shown in plan or elevation drawings)
-- Allowance for any factors requiring increased crane capacity (e.g. multiple crane lifts, demolition products)
-- Rigging requirements
-- May be a LIVE DOCUMENT allowing changes before and during the lift
-
-NOTE: SWMS information may be incorporated into lifting procedures (or vice versa) to avoid duplication.
-
-VISUAL INDICATORS:
-- Complex or high-risk lift proceeding with only a generic lifting procedure = flag
-- No lifting procedure at all for any crane operation = non-compliance
-- Lifting procedure does not include ground bearing pressure verification for heavy lifts = flag
-- No spotter duties documented for operations near powerlines = non-compliance
-
----
-
-CHUNK 13: Crane Stability — Overview and Stabilising/Overturning Moments
-Section: CoP s8, s8.1; AS 1418.5
-Topic: Stability as a critical safety issue; stabilising vs overturning moments; load chart stability function; counterweights
-
-STABILITY is one of the MOST IMPORTANT SAFETY ISSUES relating to mobile cranes. Failure to maintain stability is a KEY FACTOR in serious crane incidents.
-
-MAIN STABILITY FACTORS:
-- Stabilising moment — primarily provided by crane counterweight
-- Overturning moment — applied by suspended load, boom outside tipping point, and wind
-- Ground conditions and means of supporting outrigger pads or crane tyres
-- Slope of ground (side slope and slope in direction of travel — especially for pick-and-carry cranes)
-- Wind conditions — varies with size/shape of suspended load and crane boom
-
-LOAD CHART STABILITY FACTORS (AS 1418.5):
-- Stability factors in load charts allow for: dynamic factors from crane motion and load (e.g. boom movement, brake application, load swaying) and wind effects
-- IMPORTANT: Some overseas standards (e.g. USA) specify LESS CONSERVATIVE stability factors than AS 1418.5 — if a crane is unknowingly set up to overseas standard, overturn risk is increased
-- All mobile cranes must comply with AS 1418.5 stability factors; load charts must be marked as complying with this standard
+CHUNK 7: Counterweights — Identification and Configuration
+Section: CoP s8.1; AS 1418.5
+Topic: Counterweight marking requirements, configuration matching, RCL data input
 
 COUNTERWEIGHTS:
 - Counterweight too LIGHT: crane overturns toward suspended load
-- Counterweight too HEAVY or wrong configuration may cause crane to fall BACKWARDS in situations such as:
-  - Travelling up slope with boom luffed up
-  - Inadequate timbers under outrigger pads below counterweight
-  - Outriggers not extended or lowered into position
+- Counterweight too HEAVY or wrong configuration may cause crane to fall BACKWARDS
 
 WHERE COUNTERWEIGHTS ARE REMOVABLE:
 - Each counterweight must be clearly and permanently identified with: crane manufacturer's name or trademark AND mass of counterweight (preferably in tonnes)
 - Correct type and number of counterweights must be attached for each lift
-- Must be secured in the manner specified by the crane manufacturer
+- Must be secured in the manner specified by crane manufacturer
 
 RATED CAPACITY LIMITER DATA INPUT:
 - Data input must be correct for the COUNTERWEIGHT CONFIGURATION actually on the crane
@@ -541,29 +194,22 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 14: Ground Conditions — Ground Factors, Geotechnical Reports, and Proximity to Excavations
+CHUNK 8: Ground Conditions and Proximity to Excavations
 Section: CoP s8.2.1, s8.2.2, s8.2.3; WHS Regulation
-Topic: Ground factors affecting crane stability; geotechnical reports; proximity rules for excavations and trenches
+Topic: Ground factors, geotechnical reports, excavation proximity rules (KEY MEASUREMENTS)
 
-GROUND FACTORS THAT AFFECT STABILITY:
-- Presence of water (mixed with soil as mud, or underground springs/streams)
+GROUND FACTORS AFFECTING STABILITY:
+- Presence of water (mud, underground springs/streams)
 - Type of ground (clay, sand, rock or mixture)
 - BACKFILLED GROUND that was previously an excavation or trench
 - Cavities or penetrations in ground covered but still existing
-- Continued crane operation causing progressive sinking of outrigger pads
-
-SURFACE CRUST WARNING:
-- Ground with a firm surface crust may be SOFTER UNDERNEATH
-- If outrigger punctures the crust: softer ground exposed = crane may overturn
+- Surface crust may be SOFTER UNDERNEATH
 
 GEOTECHNICAL REPORT:
-- Where a geotechnical report is prepared for a building activity, it SHOULD BE PROVIDED to the crane supplier and crane operator
-- Report should only be relied upon if it applies to the area where the crane will actually set up or travel
 - For HEAVY LIFTS (bridge beams ≥10t and other lifts ≥50t): a SPECIFIC GEOTECHNICAL REPORT for the lifting activity must be prepared
-- The PRINCIPAL CONTRACTOR or PCBU in control of site is responsible for engaging the geotechnical engineer
-- NOTE: After rain or ground disturbance (e.g. trenching), the geotechnical report may NO LONGER BE RELEVANT
+- After rain or ground disturbance, geotechnical report may NO LONGER BE RELEVANT
 
-CRANE PROXIMITY TO EXCAVATIONS — general principles:
+CRANE PROXIMITY TO EXCAVATIONS:
 
 COMPACT AND NON-FRIABLE GROUND (not crumbling):
 - Minimum horizontal distance from crane support timbers to excavation = DEPTH OF EXCAVATION (1H:1V rule)
@@ -572,11 +218,6 @@ COMPACT AND NON-FRIABLE GROUND (not crumbling):
 LOOSE OR BACKFILLED (CRUMBLING) GROUND:
 - Minimum horizontal distance from crane support timbers to excavation = AT LEAST TWICE THE DEPTH of excavation (2H:1V rule)
 - Example: 3m deep excavation in backfilled ground = outrigger timbers must be AT LEAST 6M from excavation wall
-
-RISK FACTORS THAT INCREASE COLLAPSE RISK near excavations:
-- Softer ground and groundwater presence
-- Vertical cuts in excavation wall (more dangerous than battered walls)
-- 'Slippery back' (naturally occurring slip plane/fracture in ground)
 
 VISUAL INDICATORS:
 - Crane outriggers set up on or near backfilled ground without geotechnical assessment = flag
@@ -587,32 +228,18 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 15: Outrigger Timbers, Pads and Bog Mats
+CHUNK 9: Outrigger Timbers, Pads and Bog Mats
 Section: CoP s8.2.4; AS 1418.5
-Topic: Materials for distributing crane load to ground; minimum dimensions; placement requirements
-
-TYPES OF SUPPORT MATERIALS:
-- TIMBERS (rectangular cross section) — most common under outrigger feet
-- TIMBER AND PLASTIC PADS — provided for some cranes
-- BOG MATS (usually steel plate) — used for heavier lifts; may be used under crawler crane tracks
+Topic: Support material specifications and placement requirements (KEY MEASUREMENTS)
 
 MINIMUM REQUIREMENTS for timbers, pads, steel plates and bog mats:
 - Minimum width: 200 MM
 - Minimum thickness: 75 MM
 - Timbers laid TOGETHER so width of timber pad is WIDER than the outrigger foot
 - GAP BETWEEN TIMBERS: not to exceed 25 MM (bottom and top layers); 100 MM (intermediate layers)
-- Risk of outrigger feet sliding off plastic pads or steel must be identified and controlled (e.g. on sloping road where level pad cannot be created)
-
-TIMBERS MUST match specifications from:
-- Crane manufacturer, OR
-- A competent person (e.g. engineer) if manufacturer has not provided this information
-
-CRAWLER CRANES vs OUTRIGGER CRANES:
-- Crawler cranes generally apply LESS POINT LOAD than cranes on outriggers (large track contact area vs small outrigger contact area)
-- However, for heavy lifts or poor ground bearing capacity, bog mats or other supporting materials may still be required for crawler cranes
 
 VISUAL INDICATORS:
-- Timber width less than 200mm or thickness less than 75mm = non-compliance with minimum dimensions
+- Timber width less than 200mm or thickness less than 75mm = non-compliance
 - Timber pad narrower than outrigger foot = non-compliance
 - Gaps between timbers exceeding 25mm (bottom/top) or 100mm (intermediate) = non-compliance
 - Timber dimensions not specified by manufacturer or competent person = flag
@@ -620,20 +247,18 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 16: Performing Heavy Lifts — Ground Bearing Requirements
+CHUNK 10: Heavy Lifts — Ground Bearing Capacity
 Section: CoP s8.2.5; AS 1418.5
-Topic: Additional requirements for heavy lifts; geotechnical certification; calculating ground bearing pressure
+Topic: Heavy lift requirements, ground bearing pressure calculations (KEY MEASUREMENTS)
 
-HEAVY LIFTS requiring additional risk controls:
+HEAVY LIFTS requiring additional controls:
 - BRIDGE BEAMS: 10 TONNES OR MORE
 - TILT-UP PANELS (any weight)
 - OTHER HEAVY LIFTS: 50 TONNES OR MORE
 
-ADDITIONAL REQUIREMENTS for heavy lifts:
+ADDITIONAL REQUIREMENTS:
 - CERTIFICATION of ground bearing capacity must be obtained from a GEOTECHNICAL ENGINEER before the lift
-- Crane operator must COMPARE ground bearing capacity with maximum pressure the crane will apply to the ground
 - GROUND BEARING CAPACITY MUST BE GREATER THAN MAXIMUM PRESSURE applied by crane
-- Control measures such as BOG MATS may be used to distribute load and reduce ground pressure
 
 MAXIMUM PERMISSIBLE GROUND PRESSURES (Table 1):
 - Hard rock: 200 TONNES/M²
@@ -646,33 +271,11 @@ MAXIMUM PERMISSIBLE GROUND PRESSURES (Table 1):
 - Loose sand: 10 TONNES/M²
 - Wet clay: LESS THAN 10 TONNES/M²
 
-GREATEST FORCE APPLIED by any outrigger occurs:
-- At point of tipping (crane about to overturn)
-- High boom angle with maximum counterweight and empty hook
-- When crane boom is located directly above an outrigger pad
-
-OUTRIGGER PRESSURE CALCULATION — Option 1 (force unknown):
+OUTRIGGER PRESSURE CALCULATION (force unknown):
 Pout = 0.65 × (total crane mass + lifted load) ÷ individual outrigger area
 
 Minimum area required:
 area = 0.65 × (CM + L) ÷ PMAX
-
-To find square timber dimensions: square root of area.
-
-WORKED EXAMPLE 1:
-- Crane mass: 40t, lifted load: 20t, timber area: 0.8m × 0.8m = 0.64m²
-- Pout = 0.65 × 60 ÷ 0.64 = 60.9 tonnes/m²
-
-WORKED EXAMPLE 2:
-- Crane mass: 25t, lifted load: 10t, compacted gravel (PMAX = 40 t/m²)
-- area = 0.65 × 35 ÷ 40 = 0.569m²; dimensions = √0.569 = 0.754m → 755mm × 755mm minimum
-
-OUTRIGGER PRESSURE CALCULATION — Option 2 (outrigger force known):
-- Pout = Force ÷ Area
-- Minimum Area = Force ÷ PMAX
-
-EXAMPLE 2 (Option 2): Crane with max outrigger load 25t on compacted gravel (PMAX = 40 t/m²)
-- Area = 25 ÷ 40 = 0.625m²; dimensions = √0.625 = 0.79m → 790mm × 790mm minimum
 
 VISUAL INDICATORS:
 - Heavy lift (bridge beams ≥10t, tilt-up panels, loads ≥50t) proceeding without geotechnical certification = serious non-compliance
@@ -682,30 +285,19 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 17: Outriggers and Short-Legging
+CHUNK 11: Outriggers and Short-Legging
 Section: CoP s8.2.6; AS 1418.5
-Topic: Outrigger extension requirements; short-legging rules; partial extension
-
-OUTRIGGERS vs STABILISERS:
-- OUTRIGGERS: structural members that, when deployed, lift the crane's wheels off the ground
-- STABILISERS: structural members that, when deployed, do NOT lift the crane's wheels off the ground
+Topic: Outrigger extension requirements, short-legging rules (KEY MEASUREMENTS)
 
 GENERAL RULES:
-- Timbers or other load-distributing material MUST ALWAYS be placed under outriggers — irrespective of ground conditions
-- Outriggers must be set according to manufacturer's operating instructions for the specific crane type
+- Timbers or other load-distributing material MUST ALWAYS be placed under outriggers
 - Outriggers must be used to LEVEL the crane
-- Where manufacturer specifies LOCKING PINS to secure extended outrigger: PINS MUST BE USED (especially important for two-stage outriggers)
+- Where manufacturer specifies LOCKING PINS to secure extended outrigger: PINS MUST BE USED
 
-CRANES NOT DESIGNED FOR LIFTING WITH PARTIALLY EXTENDED OUTRIGGERS:
-- If one or more outriggers not fully extended: crane may become unstable
-- SHORT-LEGGING ONLY PERMITTED where load charts are provided for partial outrigger extension
-- Outriggers must be PERMANENTLY MARKED so that extension amount is clearly visible and corresponds to the relevant load chart
+SHORT-LEGGING:
+- ONLY PERMITTED where load charts are provided for partial outrigger extension
+- Outriggers must be PERMANENTLY MARKED so extension amount is clearly visible and corresponds to relevant load chart
 - Even if only one outrigger is partially extended: crane capacity for FULL 360 DEGREES of slew must not exceed the PARTIAL OUTRIGGER EXTENSION load chart capacity
-
-CRANES WITH SLEW AND OUTRIGGER SENSING DEVICE:
-- These cranes automatically limit lifting capacity based on outrigger configuration
-- Different rated capacities can be applied through 360-degree rating, even with short-legged outriggers
-- Information describing this operating feature must be KEPT ON THE CRANE AT ALL TIMES
 
 VISUAL INDICATORS:
 - Crane operating with one or more outriggers not fully extended without corresponding short-leg load chart = serious non-compliance
@@ -715,139 +307,48 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 18: Wind Effects on Mobile Crane Operations
+CHUNK 12: Wind Effects on Crane Operations
 Section: CoP s8.4; AS 1418.5; EN 13000
-Topic: Maximum allowable wind speeds; wind direction effects; anemometers; engineering requirements for high-surface-area loads
-
-GENERAL PRINCIPLE:
-- Wind risk increases with: load radius, boom extension, boom height, and frontal area of load
-- Loads that are LIGHT BUT HAVE A LARGE SURFACE AREA are most adversely affected by wind
-- When wind speed DOUBLES: applied wind load INCREASES BY A FACTOR OF FOUR
+Topic: Maximum allowable wind speeds, wind direction effects, anemometer requirements (KEY MEASUREMENTS)
 
 MAXIMUM ALLOWABLE WIND SPEED:
-- A maximum permissible wind speed of 10 M/SECOND (36 KM/HOUR) is specified by many manufacturers for some loads
-- The maximum allowable wind speed stated by manufacturer is usually based on MAXIMUM WIND SPEED GUSTS not average wind speed
+- Maximum permissible wind speed of 10 M/SECOND (36 KM/HOUR) specified by many manufacturers for some loads
+- Maximum allowable wind speed stated by manufacturer is usually based on MAXIMUM WIND SPEED GUSTS not average wind speed
 - Per EN 13000 standard: wind speed listed in capacity tables is the "3-SECOND WIND GUST" measured at the HIGHEST POINT OF THE BOOM
-- The actual maximum allowable wind speed may be CONSIDERABLY LESS depending on load characteristics and lift configuration
 
 WIND DIRECTION EFFECTS:
-1. WIND FROM FRONT — pushes against boom; load indicator on LMS reads LIGHTER than actual load; safety cut-off functions may not engage correctly; load may damage crane
-2. WIND FROM SIDE — does not change LMS reading but causes SIDE LOADING on boom/hoisting system; may push load outside stability limit
-3. WIND FROM REAR — pushes against back of boom; load indicator reads GREATER than actual load; wind pushes load to INCREASE RADIUS, reducing crane capacity
+1. WIND FROM FRONT — load indicator reads LIGHTER than actual load; safety cut-off functions may not engage correctly
+2. WIND FROM SIDE — causes SIDE LOADING on boom/hoisting system; may push load outside stability limit
+3. WIND FROM REAR — load indicator reads GREATER than actual load; wind pushes load to INCREASE RADIUS, reducing crane capacity
 
-ENGINEERING ASSESSMENT for reduced wind speed:
-Required when load has large surface area or high drag coefficient. Engineer considers:
-- Crane manufacturer's information for specific model
-- Crane configuration for the lift
-- Wind surface area of the load
-- Shape and drag coefficient of load (flat surface perpendicular to wind = higher drag than cylindrical load)
-- Maximum radius at which crane will operate
-- Margin of crane capacity above actual load (greater margin = can withstand higher wind)
-
-PROFESSIONAL ENGINEER REQUIREMENT:
-- In Queensland, persons carrying out an engineering service must be registered as a professional engineer under the Professional Engineers Act 2002
-- Crane operator is NOT EXPECTED to calculate reduced wind speed for large surface area loads — this must be done by an engineer
-
-METEOROLOGICAL DATA:
-- Bureau of Meteorology weather forecast should be assessed prior to critical lifts where wind is a key safety factor
-- BoM data is normally at 10m above sea level — may not directly apply to crane lift height; allow safety margin
+ENGINEERING ASSESSMENT:
+- Required when load has large surface area or high drag coefficient
+- Professional engineer must be registered under Professional Engineers Act 2002
 
 VISUAL INDICATORS:
 - Large surface area loads (e.g. fibreglass pool shells, panels, tanks) lifted without wind speed assessment = flag
 - Crane operating after wind speed exceeds manufacturer's maximum or engineer's reduced limit = serious non-compliance
-- No anemometer fitted to slewing crane ≥45t (after 2 September 2025) = non-compliance
+- No anemometer fitted to slewing crane ≥45t after 2 September 2025 = non-compliance
 - Load indicator reading not corresponding to actual load due to wind from front = dangerous condition; flag
 
 ---
 
-CHUNK 19: Roles and Responsibilities — Crane Stability
-Section: CoP s8.5
-Topic: Specific stability responsibilities of crane operator, manufacturer/supplier, principal contractor/PCBU, crane owner, and dogger
-
-CRANE OPERATOR — stability responsibilities:
-- Operate within crane capabilities to ensure no overturn
-- Operator MUST have final say on whether a lift should proceed
-- Confirm: crane adequately supported, level within manufacturer's tolerance; materials under outrigger feet/tracks meet manufacturer's or owner's specifications; suspended load within rated capacity; functions operating properly including all motions, brakes, load moment systems and indicators; wind not excessive for load being lifted (especially large surface area loads at height)
-- Regularly inspect ground to ensure continuous crane operation has not compressed ground unsafely
-- Must not operate pick-and-carry crane on gradients exceeding those specified by manufacturer
-- Operator is NOT expected to calculate reduced wind speed for large surface area loads — that is an engineering task
-
-CRANE MANUFACTURER AND SUPPLIER:
-- Must ensure crane complies with strength and stability requirements of the design standard
-- Must carry out testing demonstrating stability based on AS 1418.5
-- Must provide information on maximum load applied by outrigger feet to ground (range of loads for various configurations)
-- For crawler cranes: must provide maximum load applied across tracks to ground
-- Pick-and-carry cranes: must provide clear information on maximum SIDE SLOPE for safe operation and amount of de-rating for slopes up to 5 DEGREES
-- Must provide documented information on maximum pressure applied by crane tyres or tracks to supporting surface
-
-PRINCIPAL CONTRACTOR or PCBU:
-- Must supply ALL INFORMATION to crane crew about: location of trenches, backfilled excavations, covered penetrations, and underground essential services
-- Must make available documented ground bearing capacity information
-- For heavy lifts (bridge beams ≥10t; tilt-up panels; loads ≥50t): MUST obtain documented geotechnical information from a geotechnical engineer
-- Should NOT attempt to influence crane crew to perform a lift the crew considers unsafe
-
-CRANE OWNER (PCBU):
-- Must ensure timbers or pads supplied with crane will adequately support it
-- Where ground bearing capacity is LESS THAN 10 TONNES/M²: crane owner must clearly state minimum ground bearing capacity required
-- Must be given ground bearing capacity information from principal contractor/PCBU before supplying crane for heavy lifts
-
-DOGGER — stability responsibilities:
-- Communicate weight of load to crane operator (where known)
-- Calculate working load limit of all ropes, slings, chains and accessories
-- Take adequate precautions directing pick-and-carry crane across rough surfaces; check area for hazards
-- Provide clear and accurate directions to crane operator
-
-VISUAL INDICATORS:
-- Principal contractor unable to provide underground services information to crane crew = non-compliance
-- Crane operator forced by principal contractor to proceed with unsafe lift = serious non-compliance
-- Crane owner supplying crane for heavy lift without verifying ground bearing capacity = non-compliance
-- Dogger not communicating load weight to crane operator = flag
-
----
-
-CHUNK 20: Working Near Overhead Powerlines — Exclusion Zones
+CHUNK 13: Working Near Overhead Powerlines — Exclusion Zones
 Section: CoP s9.1; ES Act s30; ES Regulation s68, s69
-Topic: Planning requirements; exclusion zones; spotters; devices for powerline safety
-
-LEGAL REQUIREMENT (ES Regulation s68):
-- PCBU must ensure, so far as is reasonably practicable, that no person, plant or thing at the workplace comes within an UNSAFE DISTANCE of an overhead electric line
-
-HIERARCHY OF CONTROLS for overhead powerlines:
-1. DE-ENERGISE or RE-ROUTE the powerline (most effective — must be considered first)
-2. If not reasonably practicable: establish EXCLUSION ZONES
-
-DE-ENERGISATION/RE-ROUTING:
-- Arrange with relevant electricity entity as early as possible (takes time to arrange)
-- PCBU, principal contractor, and crane owner must all be consulted about this option
-- Written confirmation required from person in control of the powerline before undertaking any work where powerlines have been de-energised
+Topic: Exclusion zone distances, spotter requirements, devices (KEY MEASUREMENTS)
 
 EXCLUSION ZONES:
 - Workers, crane and load must stay AT LEAST 3 METRES AWAY from overhead powerlines for voltages UP TO 132 KV
 - GREATER DISTANCES apply for voltages above 132 kV (per ES Regulation Schedule 2)
-- Electricity entities may specify GREATER distances than ES Regulation minimums
 - Exclusion zone must NOT be breached regardless of safety devices fitted
-- The identified minimum clearance distance may need to be GREATER than the prescribed zone (to account for load swing after crane stops)
-
-FACTORS TO CONSIDER when implementing exclusion zone:
-- Maximum travel distance of crane boom
-- Size and shape of any load to be lifted
-- Possibility of load swing after boom comes to rest
-- Sway or sag of powerlines (sway from wind; sag varies with line temperature)
+- Identified minimum clearance distance may need to be GREATER than prescribed zone (to account for load swing after crane stops)
 
 SAFETY OBSERVER ('SPOTTER') — required where crane operates near powerlines:
-- Must observe operations and advise operator if crane or load may enter the exclusion zone
+- Must observe operations and advise operator if crane or load may enter exclusion zone
 - Must NOT carry out other tasks (e.g. dogging duties) concurrently while acting as spotter
-- Must have knowledge of: working safely around moving plant; escape routes; maintaining visibility; relevant traffic management guidelines; exclusion zones; how mobile cranes operate and their movement limits
-- Training appropriate for spotters includes:
-  - RIIRTM203E – Work as a safety observer/spotter
-  - T0911 Introduction to Electrical Network Infrastructure for Authorised Persons
-  - UETDREL006 – Work safely in the vicinity of live electrical apparatus as a non-electrical worker
 
-DEVICES and ADMINISTRATIVE CONTROLS (lower order — only when higher controls not practicable):
-- Warning signs indicating location of overhead powerlines
+DEVICES (lower order controls):
 - Tiger tails or line markers (VISUAL AID ONLY — NOT insulation; only low voltage lines <1,000 V can be continuously covered)
-- Warning devices alerting operator before boom enters exclusion zone
-- Limiting devices must be designed to 'FAIL-SAFE'
 
 VISUAL INDICATORS:
 - Any part of crane boom, jib or load within 3m of powerlines up to 132kV = serious non-compliance
@@ -858,64 +359,21 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 21: Working Near Other Plant and Structures
-Section: CoP s9.2; WHS Regulation
-Topic: Collision prevention between cranes and other plant, structures or buildings
-
-COLLISION RISKS between mobile crane and other plant/structures can result in:
-- Dropped loads
-- Overturning cranes
-- Broken crane components (e.g. boom sections)
-
-WHERE TWO OR MORE CRANES or other mobile plant work within a workplace or share airspace:
-- A DOCUMENTED PROCEDURE (e.g. SWMS for construction work) MUST be established to ensure sufficient clearances
-- Each work area should nominate a person responsible for implementing the collision control system
-
-SYSTEMS OF WORK for adjacent cranes:
-- Negotiated between persons in control from each work area
-- Must ensure sufficient clearances between cranes, loads and mobile plant
-
-VISUAL INDICATORS:
-- Multiple cranes sharing airspace without documented collision prevention procedure = serious non-compliance
-- No nominated person responsible for collision prevention between cranes = flag
-- Cranes operating near scaffolding, concrete placement booms or other structures without clearance confirmation = flag
-
----
-
-CHUNK 22: Erecting and Dismantling Mobile Cranes
+CHUNK 14: Erecting and Dismantling Mobile Cranes
 Section: CoP s10; WHS Regulation s54, s55
-Topic: Responsibilities for erecting and dismantling; minimising collapse and falling object risks
+Topic: Fall protection, barricades, component assembly requirements
 
-LEGAL REQUIREMENT: Plant must NOT be commissioned or dismantled unless the person with management or control believes, so far as is reasonably practicable, it is without risks to health and safety.
-
-PERSON WITH MANAGEMENT OR CONTROL must:
-- Manage risks to health and safety during erecting/dismantling
-- Ensure the person erecting or dismantling is a COMPETENT PERSON (e.g. a rigger)
-- Provide all available information for eliminating or minimising risks
-
-DOCUMENTED WORK PROCEDURE required that follows crane manufacturer's specifications for erecting and dismantling, ensuring:
-- Crane erected/dismantled in accordance with designer's/manufacturer's instructions
-- Access and egress comply with relevant technical standards
-- Crane is stable during erecting and dismantling
-- Method will not adversely affect other plant and structures
-- Approved special tools, jigs and appliances are used
-- Interaction of crane with other plant is considered
-- Environmental factors (wet, windy conditions) are considered
-- Workers are provided with suitable FALL PROTECTION when working at height
+MANDATORY:
+- Person erecting or dismantling must be a COMPETENT PERSON (e.g. a rigger)
+- Workers must be provided with suitable FALL PROTECTION when working at height
 
 CRANE COLLAPSE PREVENTION:
-- Only parts/components meeting manufacturer's or competent person's specifications may be used
-- Components must be assembled in CORRECT SEQUENCE using appropriate tools per prescribed procedures
 - When changing boom sections on LATTICE BOOM CRANES: adequate support must be provided under each section BEFORE REMOVING JOINT PINS or bolts
 - When joint pins/bolts are replaced: must be provided with properly fitted SPLIT PINS or LOCKING DEVICE
 - Counterweight must be attached BEFORE boom/jib is fitted or removed (per manufacturer's requirements)
 
-FALLING OBJECTS (WHS Regulation s54, s55):
-- Must prevent objects from falling freely so far as reasonably practicable, OR
-- Where not reasonably practicable: provide a system to ARREST the fall
-- Control measures:
-  - Erect and maintain EFFECTIVE BARRICADES at appropriate distance around crane; only persons directly involved to be inside
-  - Schedule erecting/dismantling when movement of other persons and plant is at MINIMUM
+FALLING OBJECTS:
+- Erect and maintain EFFECTIVE BARRICADES at appropriate distance around crane; only persons directly involved to be inside
 
 VISUAL INDICATORS:
 - Crane being erected or dismantled by person without rigger's or equivalent licence = non-compliance
@@ -926,111 +384,47 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 23: Roles and Responsibilities — Operational Issues
+CHUNK 15: Crane Operator Restrictions
 Section: CoP s11.1; WHS Regulation
-Topic: Specific operational duties of crane owner, principal contractor, crane operator and dogger
+Topic: Prohibited activities for crane operators during operation
 
-CRANE OWNER — operational duties:
-- Ensure only persons with APPROPRIATE MOBILE CRANE LICENCE CLASS operate the crane
-- Ensure operators, riggers and doggers have undergone FAMILIARISATION AND REFRESHER TRAINING
-- Keep crane manufacturer's operating manual ON THE CRANE
-- Maintain all other crane manufacturer's manuals and instructions
-- Define roles and responsibilities for all persons involved with crane operation
-- Ensure thorough equipment maintenance and inspection program is in place
-- MUST NOT allow a person in charge of and/or operating a crane to also undertake their own dogging work or supervise a trainee dogger — even if the operator holds a dogging licence
+CRANE OPERATOR MUST NOT (while operating):
+- Supervise/direct a trainee dogger
+- Leave controls while load is suspended (except emergency)
+- Leave crane to sling own load
+- Undertake their own dogging work — even if the operator holds a dogging licence
 
-PRINCIPAL CONTRACTOR — operational duties:
-- Ensure overall coordination of lifting operations on construction site
-- Ensure workplace is adequately prepared for incoming mobile crane (including ground conditions)
-- Consult with crane operator on arrival at workplace
-- Ensure all persons have site-specific induction before commencing work
-- Sight general induction evidence for all PCBUs and workers before construction work starts
-- Ensure crane operators and doggers hold appropriate HIGH RISK WORK LICENCES
-- Be aware of location of powerlines and whether they have been de-energised before work commences
-- Must NOT attempt to influence crane crew to perform a lift the crew considers unsafe
-- For lifts using steel reinforcement cages: ensure there are ENGINEERED LIFTING POINTS
-
-CRANE OPERATOR — operational duties:
-- Primary role: safe operation of the crane at all times
-- Must NOT proceed with a lift believed to be dangerous or unsafe until concern is reported and safe conditions confirmed
-- Must know: specific model's characteristics, functions and limitations; load chart (including notes and warnings); how to calculate net capacity for the required configuration; adjustment of load limiting settings; inspection and maintenance procedures; workplace conditions affecting crane operation; whistle, hand and radio signals; basic slinging techniques
-- Before and during operation: set up crane per manufacturer's instructions; complete daily inspection checklist and logbook; check no unauthorised persons on crane; inspect area including ground condition; monitor ground during repetitive lifts; have clear understanding of lift procedure; check each motion is safe
-- MUST NOT (while operating): supervise/direct a trainee dogger; leave controls while load is suspended (except emergency); leave crane to sling own load
-- These restrictions apply regardless of whether the operator also holds a dogging licence
-
-DOGGER — operational duties:
-- Must hold HIGH RISK WORK LICENCE for dogging work (WHS Regulation Schedule 3)
-- Primary role: assist crane operator in safe and efficient crane operation — applying slinging techniques, selecting and inspecting lifting gear, directing crane operator when load is out of view
-- Must be positioned to SAFELY OBSERVE the entire lifting operation they are responsible for
-- A dogger MUST NOT concurrently perform the role of 'spotter' when crane is operating near overhead powerlines
-- Must be in control of load from time it is slung until securely placed in final position
-- If more than one dogger controls a load: each must know which part of the lift they are responsible for
-- Before signalling operator to raise load: must confirm all attachments have appropriate WLL; lifting gear correctly applied; load secured and balanced; load free and not snagged; load will not contact any object when lifted
-- Doggers must remain OUTSIDE THE CRUSH ZONE while load is being lifted
+These restrictions apply regardless of whether the operator also holds a dogging licence.
 
 VISUAL INDICATORS:
 - Crane operator acting as own dogger or supervising trainee dogger = serious non-compliance
-- Dogger without valid high risk work dogging licence = non-compliance
-- Dogger and spotter duties performed by same person near powerlines = non-compliance
 - Crane operator leaving controls while load is suspended = non-compliance
-- Dogger inside crush zone during lifting = serious safety risk
 
 ---
 
-CHUNK 24: Integrity of Lifting Gear — Inspection and Use
+CHUNK 16: Lifting Gear — Inspection and Tagging
 Section: CoP s11.2.1; AS 2759, AS 3775.2, AS 2321, AS 4497, AS 1353.2, AS 4991, AS 2741
-Topic: Types of lifting gear; inspection requirements; correct and incorrect slinging techniques
+Topic: Lifting gear tagging, inspection intervals, chain sling deration factors (KEY MEASUREMENTS)
 
-REFERENCED STANDARDS for lifting gear:
-- AS 2759: Steel wire rope – Use, operation and guidance
-- AS 3775.2: Chain slings – Grade T – Care and use
-- AS 2321: Short-link chain for lifting purposes
-- AS 4497: Round slings – Synthetic fibre
-- AS 1353.2: Flat synthetic-webbing slings – Care and use
-- AS 4991: Lifting devices
-- AS 2741: Shackles
-
-BASIC ITEMS TO CHECK on lifting gear:
-- Lifting gear is TAGGED with all relevant information (e.g. chain sling: grade, WLL, manufacturer, chain size, AS marking)
+BASIC ITEMS TO CHECK:
+- Lifting gear is TAGGED with all relevant information (chain sling: grade, WLL, manufacturer, chain size, AS marking)
 - Lifting hooks have OPERABLE SAFETY LATCHES
-- PERMANENTLY FIXED SHACKLES are prevented from unscrewing (e.g. mousing or similar)
+- PERMANENTLY FIXED SHACKLES are prevented from unscrewing (e.g. mousing)
 - Lifting eyes and inserts are COMPATIBLE and SAME PROPRIETARY BRAND
-- Slings are NOT DAMAGED (no excessive wear, damaged strands, cracks, deformation or severe corrosion)
-- Sling is APPROPRIATE for the load (adequate capacity and protection from sharp edges)
-- Load reduction factors applied where radius (R) of load corner is less than twice the link diameter (d) of lifting chain
+- Slings are NOT DAMAGED
 
 CHAIN SLING LOAD DERATION FACTORS (Figure 13):
 - R > 2d (larger than twice link diameter): Load Factor = 1 (full WLL applies)
 - R > d but ≤ 2d: Load Factor = 0.7 (WLL = 70% of reeved WLL)
 - R < d (smaller than link diameter): Load Factor = 0.5 (WLL = 50% of reeved WLL)
 
-EXAMPLE CHAIN SLING DERATIONS:
-- 13mm chain, reeved WLL = 4.0t: at R < d → WLL = 0.5 × 4.0 = 2.0t
-- 19mm chain, reeved WLL = 8.4t: at R > d ≤ 2d → WLL = 0.7 × 8.4 = 5.88t
-- 26mm chain, reeved WLL = 15.9t: at R < d → WLL = 0.5 × 15.9 = 7.95t
-
-SLING PLACEMENT PRINCIPLES:
-- Slings must NOT be crossed or twisted
-- Lift point should be located DIRECTLY ABOVE CENTRE OF GRAVITY of load
-- Protective sleeves and corner pieces per manufacturer's requirements
-
 SYNTHETIC SLING USE:
-- Round (sausage) slings should only be used for ROUND LOADS or other shapes with protective sleeves
-- Sharp-edged loads may damage or tear round slings
-- Rigid sling protection corner radius: at least 3 TIMES the COMPRESSED THICKNESS of the sling, or per sling manufacturer's recommendations (AS 4497)
+- Rigid sling protection corner radius: at least 3 TIMES the COMPRESSED THICKNESS of the sling
 
 INSPECTION FREQUENCY:
-- All lifting gear (slings, hooks, material boxes): inspect periodically for damage and wear by a competent person — NOT EXCEEDING 12 MONTHS between inspections
-- SYNTHETIC SLINGS: inspect at THREE-MONTHLY INTERVALS (AS 1353.2; AS 4497)
-- ALL LIFTING GEAR must be tagged to identify date of last inspection (colour coding commonly used)
-- Documented maintenance records for lifting gear must be available at workplace
-- BEFORE EACH LIFT: dogger must inspect lifting gear for any damage or wear
-
-INCORRECT SLINGING TECHNIQUES — NOT PERMITTED:
-- Slings bearing against sharp edges of metal sheet or I-beam (may cut sling)
-- Single wrap choke with greater than 90-degree inclusion angle on steel pipe (does not prevent slippage)
-- Sling hook inserted into pipe
-- Chain sling with chain bearing against latch
+- All lifting gear: inspect periodically for damage and wear by competent person — NOT EXCEEDING 12 MONTHS between inspections
+- SYNTHETIC SLINGS: inspect at THREE-MONTHLY INTERVALS
+- ALL LIFTING GEAR must be tagged to identify date of last inspection
 
 VISUAL INDICATORS:
 - Lifting gear without visible tags showing WLL and inspection date = non-compliance
@@ -1042,72 +436,27 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 25: Crane Overload — Control Measures
-Section: CoP s11.2.2; AS 1418.5
-Topic: Preventing crane overload; pre-lift checks; operator procedures for maximum loads
-
-FUNDAMENTAL RULE: A mobile crane must be operated WITHIN ITS RATED CAPACITY.
-
-BEFORE HOISTING:
-- Dogger must ensure hoist rope HANGS VERTICALLY over the load before hoisting
-- Care must be taken to ensure load does not swing once lifted
-
-WHEN HANDLING MAXIMUM OR NEAR-MAXIMUM LOADS — after load has been lifted a few centimetres:
-1. SMOOTHLY STOP raising the load
-2. CHECK mass recorded on the LOAD INDICATOR
-3. RECHECK the LOAD CHART
-
-CRANE OPERATOR MUST NOT (except in an emergency): leave the cabin or control room while a load is suspended from the crane.
-
-VISUAL INDICATORS:
-- Hoist rope not vertical over load at time of lift = overload/swing risk; flag
-- Crane operator leaving cabin while load is suspended = non-compliance
-- No load indicator check performed after lifting maximum or near-maximum load = flag
-
----
-
-CHUNK 26: Unsecured and Dropped Loads — Control Measures
+CHUNK 17: Exclusion Zones and Load Securing
 Section: CoP s11.2.3; WHS Regulation s55, s219, s315L, s315M
-Topic: Exclusion zones; load securing requirements for various materials; reinforcement cages; bulker bags
+Topic: Exclusion zone requirements, material box specifications, load securing (KEY MEASUREMENTS)
 
 LEGAL REQUIREMENTS:
-- WHS Regulation s219: Person with management or control of plant must ensure, so far as reasonably practicable, that NO LOADS ARE SUSPENDED OR TRAVEL OVER A PERSON unless plant is specifically designed for that purpose
-- WHS Regulation s315L: Principal contractor must ensure, before construction work starts, that adjoining areas where loads are lifted over are CLOSED, or a GANTRY is erected providing adequate protection
-
-EXCLUSION ZONES:
-- Must be established around mobile cranes and adjoining areas to prevent persons entering the area
-- Size of exclusion zone must be based on a WRITTEN RISK ASSESSMENT
-- Closure of public footpath or roadway: APPROVAL required from relevant authority; pedestrians must be directed to alternative footpath
-- Lane closures and barricades must comply with Dept of Transport and Main Roads, local government and relevant building/local Act requirements
+- NO LOADS ARE SUSPENDED OR TRAVEL OVER A PERSON unless plant is specifically designed for that purpose (WHS Regulation s219)
+- Principal contractor must ensure adjoining areas where loads are lifted over are CLOSED, or a GANTRY is erected providing adequate protection (WHS Regulation s315L)
 
 MATERIAL BOXES:
-- Tare mass and SWL must be clearly marked on all material boxes (with distinct identification number cross-referenceable to design drawing or certificate)
+- Tare mass and SWL must be clearly marked on all material boxes
 - Must be ENGINEER-DESIGNED AND CERTIFIED
 - FOUR CHAINS (one in each corner) must be attached to material boxes during lifting
-- Must use specifically designed material boxes for smaller components with enclosed sides or robust mesh; openings less than minimum size of materials being lifted
-- Must be inspected, maintained, with inspection records kept
 - Loads within boxes must be SECURED AGAINST MOVEMENT
-- Materials must NOT be stacked higher than the side of the box unless adequately secured; box must NEVER be top-heavy
-
-GENERAL LIFTING — load securing:
-- Formwork frames: tied together OR lifting slings wrapped around load
-- Loads of joists or bearers: STRAPPED TOGETHER before lifting
-- Timber sheeting: STRAPPED TOGETHER and lifted in a FLAT POSITION
-- Plasterboard sheets: lift in specifically designed material box, OR engineer-certified system specifying minimum/maximum sheets, number and locations of slings, and sling capacity
-- Tag lines must be used as required to control loads
-- All loads should be SUPPORTED WITH DUNNAGE where possible
-- BASKET HITCHES MUST NOT be used near persons unless sling is positively restrained from sliding along the load
-- HIGH/LOW LOADS (multiple loads at the same time): AVOID — difficulty ensuring dogger is not underneath loads
+- Materials must NOT be stacked higher than the side of the box unless adequately secured
 
 REINFORCEMENT CAGES:
-- Where risk of workers being struck by falling reinforcement cage: design of cage and lifting method must be CERTIFIED BY AN ENGINEER
-- Engineer must consider: lifting loads over full range of motion and orientation; loads on lifting points, connections, tie wire, localised stress in bars; overall stability of cage or mat
-- Lifting points, number of slings and method must be shown on a DRAWING supplied to site
+- Where risk of workers being struck: design of cage and lifting method must be CERTIFIED BY AN ENGINEER
 - Lifting points must be CLEARLY MARKED on the cage
 
-BULKER BAGS (flexible intermediate bulk containers):
-- Per AS3668: PERSONNEL MUST NOT be underneath bulker bags
-- Slings on bags should only be used for lifting when EXCLUSION ZONE is in use with no possibility of any person being underneath
+BULKER BAGS:
+- PERSONNEL MUST NOT be underneath bulker bags (AS3668)
 - For lifts other than ground-level transfers where exclusion zone is not in place: bulker bags must be lifted in BRICK CAGES or MATERIAL BOXES
 
 VISUAL INDICATORS:
@@ -1115,54 +464,31 @@ VISUAL INDICATORS:
 - No exclusion zone around crane during lifting operations = non-compliance
 - Material boxes without SWL and tare mass markings = non-compliance
 - Material boxes with fewer than four chains during lifting = non-compliance
-- Basket hitches used near personnel without positive restraint = non-compliance
 - Bulker bags lifted without exclusion zone or protective cage/box = serious non-compliance
 - Steel reinforcement cages lifted without engineering certification = serious non-compliance
 - Loads stacked higher than sides of material box without securing = non-compliance
 
 ---
 
-CHUNK 27: Multiple Crane Lifts — Planning and Safety Requirements
+CHUNK 18: Multiple Crane Lifts — Capacity Margins
 Section: CoP s11.3; AS 1418.5
-Topic: When multiple crane lifts occur; safety measures; calculated share of load; minimum capacity margins
+Topic: Multiple crane lift planning, minimum capacity margins, load spiking (KEY MEASUREMENTS)
 
 MULTIPLE CRANE LIFT — any lift where two or more cranes lift a load simultaneously.
-- Higher risk than single crane lift due to relative motion between cranes creating additional loadings
-- A LIFT PLAN (documented lifting procedure and SWMS where applicable) must be developed
 
-SAFETY MEASURES before multiple crane lift:
+SAFETY MEASURES:
 - DOCUMENTED LIFTING PROCEDURE prepared, preferably with DIAGRAMS showing crane and load positions
 - Person DIRECTLY SUPERVISING the lift must hold HRWL in INTERMEDIATE OR ADVANCED RIGGING
-- Accurate assessment of: share of load for each crane; how load share will be maintained
-- Instructions to each crane operator must be CLEAR; responsibilities understood by each person
-- Select cranes of SIMILAR CAPACITY AND CHARACTERISTICS where practicable
-- Ensure all cranes have CORRECTLY CALIBRATED LOAD INDICATORS
 
 MINIMUM CRANE CAPACITY REQUIREMENTS (calculated share of load):
 - TWO cranes: each crane capacity must be AT LEAST 20% GREATER than calculated share
 - THREE cranes: each crane capacity must be AT LEAST 33% GREATER than calculated share
 - FOUR OR MORE cranes: each crane capacity must be AT LEAST 50% GREATER than calculated share
-- If not practicable to comply: an ENGINEER must CHECK AND CERTIFY the lifting procedure; must be documented
+- If not practicable to comply: an ENGINEER must CHECK AND CERTIFY the lifting procedure
 
-LOAD SPIKING — a risk when lowering:
-- If one end of load contacts ground before the other end: momentary load on the crane suspending the opposite end can be 33% HIGHER than calculated share
+LOAD SPIKING — risk when lowering:
+- If one end of load contacts ground before the other end: momentary load on crane suspending opposite end can be 33% HIGHER than calculated share
 - Both ends/corners of load must be lowered SIMULTANEOUSLY
-
-DUAL LIFT (pick-and-carry) — specific safety principles:
-- Position cranes SIDE BY SIDE or IN LINE where no obstructions restrict paths
-- Choose travel path where SHARP TURNS ARE AVOIDED
-- Keep load as CLOSE TO GROUND AS POSSIBLE while remaining clear of ground
-- Drive both cranes at SAME SLOW TRAVEL SPEED; avoid rapid brake application
-- When one crane behind the other: LEAD CRANE controls pace; following crane adjusts speed to keep hoist ropes vertical
-- Avoid two-blocking hooks; allow adequate hoist rope length so operator can see if rope is not hanging close to vertical
-- When moving around a corner (one crane in front, one behind): front crane must NOT PULL second crane over (greater hazard with articulated crane)
-
-FACTORS TO CONSIDER in multiple crane lift planning:
-- Mass of the load and position of centre of gravity
-- Mass of lifting gear
-- Working load limit of lifting gear
-- Synchronisation of crane motions (always some variation in practice — perform at LOW SPEEDS)
-- Communication method (two-way radios required if crane operator not visible during lift)
 
 VISUAL INDICATORS:
 - Multiple crane lift without documented lifting procedure and diagrams = serious non-compliance
@@ -1173,50 +499,31 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 28: Leaving Crane Unattended and Road Travel
+CHUNK 19: Leaving Crane Unattended and Road Travel
 Section: CoP s11.4, s11.5; Transport Operations (Road Use Management) Act 1995
-Topic: Securing unattended cranes; road travel preparation; licensing requirements for driving mobile cranes
+Topic: Securing unattended cranes, road travel preparation, driver licensing
 
-SECURING UNATTENDED CRANE — before leaving crane unattended:
+SECURING UNATTENDED CRANE:
 - All loads removed from hook
 - Hook raised to position safely clear of other operations
 - All powered motions DISABLED
 - KEYS REMOVED from crane
 - CABIN LOCKED
-- For longer periods: configure crane in OUT-OF-SERVICE condition per manufacturer's instructions
 
 ROAD TRAVEL PREPARATION:
-- Outriggers (hydraulic and manual): secured with locking device specified by manufacturer; stowed in TRAVELLING POSITION (no lateral movement)
-- Loose components: stored in appropriate storage areas per manufacturer's instructions
+- Outriggers: secured with locking device; stowed in TRAVELLING POSITION (no lateral movement)
 - All drives to hydraulic pumps, booms and outriggers: DISENGAGED; controls in OFF position
 - Boom: restrained per manufacturer's instructions (no unintended movement)
 - Hook block: restrained per manufacturer's instructions
-- For cranes requiring dollies: slew brake disengaged; dolly securely fastened to crane connection points; luff cylinder energised/de-energised per manufacturer's instructions
-- Fluid levels and tyre pressures checked
-- For hydraulic suspension: maximum suspension system pressures per manufacturer must be understood
 
-ROAD TRAVEL — DRIVER COMPETENCIES required:
-- Start, steer, manoeuvre, position and stop in accordance with traffic regulations and vehicle handling procedures
-- Manage braking system efficiently for greater stopping distances (size, weight and forward boom projection)
-- Identify and control driving hazards (defensive driving)
-- Park, shut down and secure per traffic regulations
-- Maintain crash avoidance space
-- Drive to conditions (rain, winding roads, unsealed)
-
-ARTICULATED STEERING CRANES — additional requirements:
-- Must be able to TEST emergency steering system
-- Aware of need for slower speeds on winding or poor condition roads
-- Know how to avoid losing control and what action to take if steering malfunctions
-- Allow for INCREASED BOOM OVERHANG at front when stopping at intersections
-
-DRIVER LICENSING REQUIREMENTS (Transport Operations (Road Use Management) Act 1995):
+DRIVER LICENSING REQUIREMENTS (Transport Operations Act 1995):
 - Mobile crane ≤8t GVM (with or without trailer ≤9t GVM): CLASS LR
 - Mobile crane >8t GVM with maximum 2 axles (with or without trailer ≤9t GVM): CLASS MR
 - Mobile crane >8t GVM with more than 2 axles (with or without trailer ≤9t GVM): CLASS HR
 - Mobile crane >8t GVM with more than 2 axles with a trailer (no GVM restriction): CLASS HC
 - All mobile cranes with or without trailers: CLASS MC
 
-NOTE: HRWL to operate a mobile crane DOES NOT authorise driving on a road — appropriate heavy vehicle CLASS DRIVER LICENCE is also required.
+NOTE: HRWL to operate a mobile crane DOES NOT authorise driving on a road.
 
 VISUAL INDICATORS:
 - Crane left unattended with load on hook or cabin unlocked = non-compliance
@@ -1226,47 +533,34 @@ VISUAL INDICATORS:
 
 ---
 
-CHUNK 29: Workboxes and First Aid Boxes
+CHUNK 20: Workboxes and First Aid Boxes
 Section: CoP s11.6; AS 1418.17; AS 2550.1
-Topic: Features and use of crane-lifted workboxes and first aid boxes; crane requirements for workbox use
-
-WORKBOXES — crane-lifted personnel carrying devices:
-- MUST be used only after risk assessment demonstrating other means (scaffolding, elevating work platforms) are impractical
-- GENERALLY do not provide same level of safety as properly erected scaffolding or EWPs
+Topic: Workbox and first aid box specifications, crane requirements (KEY MEASUREMENTS)
 
 WORKBOX REQUIREMENTS:
 - Must be DESIGN REGISTERED
-- Correctly tagged lifting slings supplied and attached to lifting points via HAMMERLOCKS or MOUSED SHACKLES
+- Correctly tagged lifting slings attached via HAMMERLOCKS or MOUSED SHACKLES
 - Factor of safety for each suspension sling: AT LEAST 8 FOR CHAINS; AT LEAST 10 FOR WIRE ROPE
 - Must have FALL-ARREST ANCHORAGE POINTS
-- SWL, tare mass and design registration number clearly marked (e.g. on data plate)
-- Doors (if provided): INWARD OPENING ONLY; self-closing; latched to prevent accidental opening
+- SWL, tare mass and design registration number clearly marked
+- Doors (if provided): INWARD OPENING ONLY; self-closing; latched
 - Sides: AT LEAST 1 METRE HIGH
 - Handrail provided running around inside of box perimeter
-- If fall risk exists: FALL-ARREST HARNESS must be provided and worn; harnesses attached to fall-arrest anchorage points in box or to main sling ring above workers' heads; energy absorbers required on lanyards (AS/NZS 1891 Series)
 - At least ONE person in workbox must hold DOGGER or RIGGER LICENCE CLASS
 
-FIRST AID BOX REQUIREMENTS (crane-lifted, for retrieval of injured persons):
+FIRST AID BOX REQUIREMENTS:
 - Must be DESIGN REGISTERED
-- Clearly identified and marked as first aid boxes
-- Provided with sides and a roof (horizontal gap permitted around all sides)
 - Sides: AT LEAST 1 METRE HIGH to a horizontal gap; horizontal gap MUST NOT EXCEED 250 MM vertical distance
 - Minimum internal HEIGHT: 2.2 METRES
-- Minimum internal WIDTH: 1.2 METRES (face to face, not including grab rail)
+- Minimum internal WIDTH: 1.2 METRES
 - Minimum internal LENGTH: 2.8 METRES
-- Maximum mesh size: 50 MM × 50 MM (openings not to exceed 0.0025 m²)
-- Grab rail along longer sides, fitted internally
-- Doors (if provided): may be outward opening but MUST BE LOCKABLE
-- Persons in first aid box NOT required to use fall-arrest harnesses (box is enclosed)
-- Slings attached via hammerlocks or moused shackles; factor of safety: AT LEAST 8 (chains) or AT LEAST 10 (wire rope)
-- SWL, tare mass and design registration number must be marked
+- Maximum mesh size: 50 MM × 50 MM
 - At least ONE person in first aid box must hold DOGGER or RIGGER LICENCE CLASS
-- Do NOT use when wind speeds exceed manufacturer's specification or in adverse weather (electrical storms)
 
 CRANE REQUIREMENTS when using workboxes or first aid boxes:
 - Rated capacity AT LEAST TWICE the total load of workbox and contents; minimum NOT LESS THAN 1,000 KG at maximum radius
 - Must be fitted with UPPER HOIST LIMIT stopping operation of hoist and luff functions
-- Levers and foot pedals fitted with CONSTANT PRESSURE SYSTEM (crane stops when operator removes pressure from controls)
+- Levers and foot pedals fitted with CONSTANT PRESSURE SYSTEM
 - Crane must NOT be capable of FREE FALL
 
 VISUAL INDICATORS:
@@ -1277,127 +571,46 @@ VISUAL INDICATORS:
 - Crane capacity less than twice total workbox load = serious non-compliance
 - Crane with free fall capability used with workbox = serious non-compliance
 - First aid box internal dimensions below minimums (height < 2.2m, width < 1.2m, length < 2.8m) = non-compliance
-- First aid box used in high wind or electrical storm = flag
 
 ---
 
-CHUNK 30: Fatigue Management
-Section: CoP s11.7; WHS Act s19
-Topic: Managing fatigue risks for crane crews; control measures; signs of fatigue
-
-PCBU OBLIGATION: Must ensure workers are not exposed to health and safety risks, including RISK OF FATIGUE.
-
-FACTORS INCREASING FATIGUE RISK:
-- Early shift starts
-- Late finishes
-- Short breaks between shifts
-- Long hours
-- Work requiring continued physical effort
-- Environmental conditions (hot climates)
-
-SIGNS AND SYMPTOMS of fatigue:
-- Excessive yawning or falling asleep at work
-- Short term memory problems; inability to concentrate
-- Reduced capacity for effective interpersonal communication
-- Impaired decision-making and judgment
-- Reduced hand-eye coordination or slow reflexes
-- Behaviour changes (e.g. repeatedly arriving late)
-- Increased rates of unplanned absence
-
-CONTROL MEASURES for fatigue:
-- Working-hours policy including: maximum daily hours; maximum average weekly hours; maximum hours over selected period; policies for on-call work and work-related travel
-- Procedures to manage and limit excessive hours (minimum breaks, especially during long shifts)
-- Avoid work arrangements providing incentives for excessive hours
-- Consider whether night work is necessary; reschedule non-essential work away from night
-- Encourage workers to report fatigue concerns
-- Contingency plans for situations where workers unexpectedly work longer hours
-- Avoid work during extreme temperatures; use job rotation to minimise exposure
-- Fatigue policy for ALL workers including managers and supervisors
-
-VISUAL INDICATORS:
-- Crane operator visibly fatigued (yawning, slow responses, inattention) = immediate risk; work must stop
-- No documented working-hours policy on site = flag
-- Workers without adequate break between shifts = flag
-- Night crane operations without fatigue risk assessment or controls = flag
-
----
-
-CHUNK 31: Mobile Cranes in Specific Applications — Demolition, Tree Lopping, Bridge Beams, Barges
+CHUNK 21: Mobile Cranes for Demolition
 Section: CoP s12; WHS Regulation s299
-Topic: Special requirements for cranes used in demolition, tree lopping, bridge beam installation, and on barges
+Topic: Demolition-specific requirements, capacity margins (KEY MEASUREMENTS)
 
 MOBILE CRANES FOR DEMOLITION:
 - SWMS must be prepared before work commences
-- Demolition with WRECKING BALL attached to mobile crane: MUST NOT be undertaken (high risk of damage)
-- Additional safety factors in demolition:
-  - Unknown exact mass of parts to be removed
-  - Additional shock loading when structure disconnected (unbolted or cut with oxy torch)
-  - Load may not be balanced (unusual shape)
-  - Load may become stuck despite apparent removal of all restraint
-- Due to these factors: mobile cranes for demolition must have RATED CAPACITY NOT LESS THAN 1.5 TIMES THE ASSESSED LOAD
-  - EXAMPLE: 4t assessed load → rated capacity required = 6t MINIMUM (plus hook block and rigging)
-- Traffic management must be implemented to prevent collision with pedestrians or other plant
+- Demolition with WRECKING BALL attached to mobile crane: MUST NOT be undertaken
 
-MOBILE CRANES FOR TREE LOPPING:
-- RECOMMENDED THAT MOBILE CRANES NOT BE USED for tree lopping
-- If used, ALL of the following must be ensured:
-  - Crane operator does not perform role of dogger
-  - A dogger is present during all lifting activities
-  - Arborist, crane operator and dogger consult with each other
-  - Side loading will NOT be applied to crane boom
-  - Any loading to the crane is LESS THAN 50% OF THE CRANE'S RATED CAPACITY
-  - Crane will NOT be shock-loaded
-  - Wind will not adversely affect safe crane use
-  - Only vertical loads applied to hoist rope and crane hook
-  - At completion of saw cut, radius of load will NOT increase
-- If conditions can be ensured: work procedure must be documented with hazard control measures listed
-- Arborist and crane operator must participate in and be satisfied with the documented procedure
-
-VESSEL-MOUNTED (BARGE) CRANES:
-- Vessel must be ANCHORED during crane operation (or anchored to craft alongside if not possible)
-- Maximum list under rated capacity: MUST NOT EXCEED ±5 DEGREES with one half of freeboard remaining
-- Manufacturer's rated capacities on vessels are frequently NOT GREATER THAN 70% OF LAND-BASED RATED CAPACITY
-- Crane and vessel combination must be CERTIFIED BY A MARINE SURVEYOR per AMSA requirements
-- Where crane can move along deck: lifting must only take place when crane is SECURED TO THE DECK (e.g. by chains of adequate strength)
-
-MOBILE CRANES ON SUSPENDED STRUCTURES (floors/slabs):
-- Prior to accessing: WRITTEN DOCUMENTATION must demonstrate design floor loading is not exceeded for point and distributed loads
-- Where floor requires strengthening (e.g. propping): an ENGINEER must provide written instructions specifying dimensions, locations and other specifications of propping
-- If crane can only be used in particular areas: access to other areas must be PREVENTED by barricades or barriers
-
-LIFTING AND LANDING PRE-CAST BRIDGE BEAMS:
-- Comprehensive lifting and installation procedures required
-- Dual crane lift: INTERMEDIATE RIGGER (minimum) required to oversee
-- Asymmetrical beams: position of lifting inserts and slings must be calculated so beams hang for easy installation
-- Asymmetrical beams can become unstable when load is taken off crane hook: PCBU must supply method of securing beam to prevent rotation or falling
-- Temporary securing method must be DOCUMENTED AND APPROVED BY AN ENGINEER experienced in rigging practices for bridge construction
+CAPACITY REQUIREMENT:
+- Mobile cranes for demolition must have RATED CAPACITY NOT LESS THAN 1.5 TIMES THE ASSESSED LOAD
+- EXAMPLE: 4t assessed load → rated capacity required = 6t MINIMUM (plus hook block and rigging)
 
 VISUAL INDICATORS:
 - Crane used for demolition with rated capacity less than 1.5× assessed load = serious non-compliance
-- Crane used for tree lopping with load exceeding 50% of rated capacity = non-compliance
-- Crane on barge without marine surveyor certification = non-compliance
-- Crane on barge with vessel list exceeding 5 degrees = serious non-compliance
-- Crane operating on suspended floor without written engineering documentation = serious non-compliance
-- Pre-cast bridge beams lifted by dual crane without intermediate rigger supervision = non-compliance
-- Asymmetrical bridge beams without temporary securing method certified by engineer = non-compliance
 
 ---
 
-CHUNK 32: Use of Earthmoving Plant as a Mobile Crane
+CHUNK 22: Vessel-Mounted (Barge) Cranes
+Section: CoP s12
+Topic: Barge crane requirements, list limits, certification (KEY MEASUREMENTS)
+
+VESSEL-MOUNTED (BARGE) CRANES:
+- Vessel must be ANCHORED during crane operation
+- Maximum list under rated capacity: MUST NOT EXCEED ±5 DEGREES with one half of freeboard remaining
+- Manufacturer's rated capacities on vessels are frequently NOT GREATER THAN 70% OF LAND-BASED RATED CAPACITY
+- Crane and vessel combination must be CERTIFIED BY A MARINE SURVEYOR per AMSA requirements
+- Where crane can move along deck: lifting must only take place when crane is SECURED TO THE DECK
+
+VISUAL INDICATORS:
+- Crane on barge without marine surveyor certification = non-compliance
+- Crane on barge with vessel list exceeding 5 degrees = serious non-compliance
+
+---
+
+CHUNK 23: Earthmoving Plant as Mobile Crane — Capacity and Lifting Points
 Section: CoP s13; WHS Regulation s219; AS 1418.8
-Topic: When earthmoving plant may be used as a crane; rated capacity; load charts; lifting points; quick hitches; burst protection
-
-LEGAL REQUIREMENT (WHS Regulation s219):
-- Person with management or control of plant must ensure plant used is SPECIFICALLY DESIGNED TO LIFT or suspend the load
-- If not reasonably practicable: must ensure alternative plant does NOT cause GREATER RISK than specifically designed plant
-
-EARTHMOVING PLANT USED AS CRANE includes: backhoes, front-end loaders, excavators, telescopic handlers.
-
-WHEN EARTHMOVING PLANT IS NOT APPROPRIATE for lifting:
-- When lifted objects become larger and taller and are not inherently stable when placed on level ground
-- When workers are required to be in close proximity during the lift
-- BACKHOES: NOT SUITABLE to move a suspended load in pick-and-carry mode (excessive load swing, exacerbated by wheels on rough ground)
-- Earthmoving plant must NOT be used to lift personnel unless specifically designed to do so
+Topic: Stability criteria, load charts, lifting point specifications (KEY MEASUREMENTS)
 
 STABILITY CRITERIA when used in crane mode (AS 1418.8):
 - Maximum rated capacity must NOT exceed:
@@ -1407,108 +620,72 @@ STABILITY CRITERIA when used in crane mode (AS 1418.8):
 
 LOAD CHART REQUIREMENTS:
 - Load chart must be FIXED INSIDE OPERATOR'S CAB
-- Must show: manufacturer's name and model; boom and dipper arm identification and length; track width (if variable); deductions for attachments (e.g. quick-hitch, bucket) so net allowable load can be determined; rated load at least stable position or means to determine load position; reduction in capacity for out-of-level operation or pick-and-carry mode
 
 LIFTING POINTS:
-- Supplied by plant manufacturer or, if not, designed by A SUITABLY QUALIFIED ENGINEER
 - Must form a CLOSED EYE to which a load-rated shackle may be attached
-- HOOKS MUST NOT be used on dipper arm or attachments (load may disengage as arm rotates — even with latch, which may be damaged)
-- Welded lifting lugs: material specifications must be compatible for welding; appropriate welding procedures must be followed
+- HOOKS MUST NOT be used on dipper arm or attachments
 - LIFTING LUGS MUST NOT be attached to BUCKETS
-- Static strength test at 200% OF RATED CAPACITY must be carried out at each lift point; no permanent deformation permitted after testing
-
-QUICK HITCHES:
-- Must comply with AS 4772 or ISO 13031 (or be fitted with manual locking pin)
-- Must be compatible with the mobile plant (pin size, rating etc.)
-- Where quick hitch has a lifting lug: lifting point must be in form of CLOSED EYE with identification plate stating maximum rated lifting capacity
-- Lifting point: a SWIVEL must be provided between the lifting hook and shackle on lifting lug
-- Manual locking pin: head must be painted RED with lynch pin at opposite end
-- Inspection: in accordance with manufacturer's instructions by competent person; includes tolerance checking of all critical components
-- Where supplier claims compliance with AS 4772 or ISO 13031: CERTIFICATION DOCUMENT must be provided on request
-
-BURST PROTECTION:
-- Must be fitted on all earthmoving plant used as crane WHERE RATED CAPACITY EXCEEDS 1 TONNE
-- Must be fitted to BOTH BOOM AND DIPPER ARM
-- Must comply with ISO 8643 performance requirements for excavators and backhoe loaders
-- Single rated capacity: rated capacity marked on boom or dipper arm; must be strictly observed at all times
-- Variable rated capacities: manufacturer's load chart must be fixed in operator's cab; capacity at MINIMUM RADIUS used to decide if burst protection is required
-- Where possible: burst protection device should NOT have an operator switch (risk of forgetting to switch on)
-- Where rated capacity ≤1 TONNE and decision not to fit burst protection: plant must NOT be used to lift loads presenting risk to workers
-
-EARTHMOVING PLANT SAFETY INSPECTIONS:
-- Must be serviced and inspected per manufacturer's instructions
-- Safety inspection at intervals NOT EXCEEDING 12 MONTHS regardless of working environment
-- When used in crane mode: PRE-START INSPECTION must take place
-- Inspections include: manufacturer-specified items; hydraulic fluid leaks; function testing; inspection of welds, pins, linkages on boom, dipper arm and hydraulic cylinder mounts for cracking, deformation and excessive play; pin retainers and locking systems; where applicable, quick-hitch function and tolerance checking
-- Cracking found: replacement or repair certified by professional engineer or plant manufacturer
+- Static strength test at 200% OF RATED CAPACITY must be carried out at each lift point
 
 VISUAL INDICATORS:
 - Excavator or backhoe with load suspended without burst protection (>1t capacity) = non-compliance
 - Lifting lug or hook attached to bucket = non-compliance
 - Hook used on dipper arm instead of closed eye lifting point = non-compliance
-- Quick hitch without manual locking pin and not compliant with AS 4772/ISO 13031 = non-compliance
 - Rated capacity of earthmoving plant in crane mode exceeding 75% of tipping load (stationary) or 66% (pick-and-carry) = non-compliance
 - No load chart in operator's cab for earthmoving plant used as crane = non-compliance
 - Backhoe moving a suspended load in pick-and-carry mode = non-compliance
 
 ---
 
-CHUNK 33: Vehicle-Loading Cranes — Requirements
+CHUNK 24: Earthmoving Plant — Quick Hitches and Burst Protection
+Section: CoP s13; AS 4772; ISO 13031; ISO 8643
+Topic: Quick hitch requirements, burst protection specifications (KEY MEASUREMENTS)
+
+QUICK HITCHES:
+- Must comply with AS 4772 or ISO 13031 (or be fitted with manual locking pin)
+- Where quick hitch has a lifting lug: lifting point must be in form of CLOSED EYE with identification plate stating maximum rated lifting capacity
+- Lifting point: a SWIVEL must be provided between the lifting hook and shackle on lifting lug
+- Manual locking pin: head must be painted RED with lynch pin at opposite end
+
+BURST PROTECTION:
+- Must be fitted on all earthmoving plant used as crane WHERE RATED CAPACITY EXCEEDS 1 TONNE
+- Must be fitted to BOTH BOOM AND DIPPER ARM
+- Must comply with ISO 8643 performance requirements
+- Where rated capacity ≤1 TONNE and decision not to fit burst protection: plant must NOT be used to lift loads presenting risk to workers
+
+VISUAL INDICATORS:
+- Quick hitch without manual locking pin and not compliant with AS 4772/ISO 13031 = non-compliance
+- Manual locking pin head not painted red = non-compliance
+- Earthmoving plant >1t capacity used as crane without burst protection = non-compliance
+
+---
+
+CHUNK 25: Vehicle-Loading Cranes — Controls and Stabilisers
 Section: CoP s14; AS 1418.11
-Topic: VLC general use; crane and vehicle suitability; controls; rated capacity limiters; stabiliser locking; operational requirements
-
-VEHICLE-LOADING CRANE (VLC) — crane mounted on a vehicle for loading/unloading; also used for traditional crane operations.
-
-CRANE AND VEHICLE SUITABILITY:
-- VLCs should only be mounted on vehicle types and models SPECIFIED BY THE CRANE MANUFACTURER
-- Welding crane to vehicle chassis is GENERALLY UNACCEPTABLE (can damage chassis; risk of fatigue failure)
-- Mounting method must be in accordance with crane manufacturer's specifications or recommendations of a competent person
-- Second-hand imported VLCs introduced to Queensland: crane and vehicle combination must have COMPLIANCE PLATE attached by authorised person per Dept of Transport and Main Roads requirements
+Topic: VLC control requirements, stabiliser locking, operational restrictions (KEY MEASUREMENTS)
 
 CONTROLS:
 - Must be CONSTANT PRESSURE (DEADMAN) type
-- Permanently marked with clearly visible symbols per AS 1418.11
-- Position and layout designed to MINIMISE CRUSH RISK from inadvertent operation
-- EMERGENCY STOPPING DEVICE at EVERY CONTROL STATION:
-  - Removes energy supply and brings crane to complete stop when activated
-  - Readily visible and coloured RED
-  - Located for easy access without exposing operator to other hazards
-  - Locks in 'stop' position when activated
+- EMERGENCY STOPPING DEVICE at EVERY CONTROL STATION: readily visible and coloured RED
 
 RATED CAPACITY LIMITERS (VLCs):
 - Required on all VLCs with MAXIMUM RATED CAPACITY OF 1 TONNE OR GREATER, OR GROSS LIFTING MOMENT OF 40 kNm OR GREATER
-- Purpose: prevent movements increasing load moment in excess of rated capacity; prevent increase of load radius or permissible structural stresses
-- Where smaller VLCs not fitted with RCL: RELIEF VALVES and fittings used for overload protection
 
 RATED CAPACITY INDICATORS:
 - All VLCs manufactured after 2003 must be fitted with a RATED CAPACITY INDICATOR
 - Must warn crane operator when load exceeds 90% OF RATED CAPACITY
-- Must give SEPARATE WARNING to operator and persons nearby if rated capacity is being exceeded
-- Both approach and exceed warnings must be CONTINUOUS and CLEARLY DISTINGUISHABLE from each other
 
 STABILISER LOCKING:
-- Stabilisers on VLCs are typically manually operated
-- Locking mechanism for manually extended stabilisers must include TWO SEPARATE LATCHING DEVICES per stabiliser; AT LEAST ONE must be AUTOMATICALLY OPERATED (e.g. manually operated securing pin + automatic spring latch)
-- If VLC does not have a WARNING SYSTEM for unlocked stabilisers in transport position: owners should RETROFIT a warning system
+- Locking mechanism for manually extended stabilisers must include TWO SEPARATE LATCHING DEVICES per stabiliser; AT LEAST ONE must be AUTOMATICALLY OPERATED
 - AS 1418.11 requires: indicator visible and audible to driver in truck cabin (warning light + buzzer)
-- Feasibility of upgrading warning/indicating system on older VLCs should be addressed during annual inspection
-- Workers driving/operating vehicles must receive appropriate instruction, training and supervision for the specific make and model — DOCUMENTED
 
-OPERATIONAL ISSUES for VLCs:
+OPERATIONAL ISSUES:
 - Operators of VLCs with maximum load moment capacity of 10 METRE TONNES OR MORE must hold HRWL class CV to operate
-- Person operating VLC under 10 metre tonnes MAY sling loads without dogging HRWL only when: no judgment required for slinging or inspection/selection of lifting gear; weight of load, slings and slinging technique are predetermined by a licensed dogger, rigger or qualified engineer; PCBU provides comprehensive documented training
-- If load is out of operator's view: load movement must be directed by a QUALIFIED DOGGER OR RIGGER
-- For PRECISION PLACEMENT of load: a dogger must be used
 - Crane may ONLY be used with ALL STABILISERS EXTENDED per manufacturer's instructions
 - Crane should only be used LEVEL per manufacturer's specifications (usually NOT EXCEEDING 1 DEGREE OR LESS)
 - TIMBERS or pads specified by manufacturer must be provided under stabiliser feet
-- Hooks must have SPRING-LOADED SAFETY LATCHES; adequately maintained
-- WHERE SIDE LOAD POSSIBLE on crane hook: hook must have an APPROPRIATE SWIVEL
 - Crane must NEVER be used in PICK-AND-CARRY MODE
-- Where VLCs used to lift persons: must comply with AS 1418.10
-- Spring lock-outs on vehicle must be activated during crane operation (where provided)
-- Crane only to be used with load suspended VERTICALLY from hook; must NOT drag loads across supporting surface
-- Stabiliser legs must be clearly marked with ZEBRA STRIPING (see Section 7.3.1 for dimensions)
+- Stabiliser legs must be clearly marked with ZEBRA STRIPING
 
 VISUAL INDICATORS:
 - VLC stabilisers not fully extended during crane operation = non-compliance
@@ -1518,90 +695,14 @@ VISUAL INDICATORS:
 - Rated capacity indicator absent on VLC manufactured after 2003 = non-compliance
 - No two separate latching devices on VLC stabilisers = non-compliance
 - No in-cab warning system for unlocked stabilisers = flag
-- Load out of operator's view with no dogger or rigger directing = non-compliance
 - VLC with load moment ≥10mt operated without CV class HRWL = non-compliance
 - Stabiliser legs without zebra striping = flag
 
 ---
 
-CHUNK 34: Training — Familiarisation and Refresher Training
-Section: CoP s15; WHS Act s19(3)(f); WHS Regulation s39, s317
-Topic: Responsibilities for training; familiarisation training requirements; refresher training frequency and records
-
-INFORMATION, TRAINING AND INSTRUCTION must cover at least:
-- Documented work procedures for setting up and safe operation of mobile crane activities
-- Method for inspection and maintenance of mobile cranes
-- Knowledge of crane manufacturer's operation and service manuals
-- Correct use, care and storage of PPE
-- Correct use, care and storage of tools and equipment
-- Electrical safety practices
-- Procedures in event of incident or injury
-- Driving techniques for articulated mobile crane
-
-FAMILIARISATION TRAINING:
-- Required BEFORE a person is allowed to work as a crane operator at a new PCBU, or operating a newly acquired crane
-- PCBU should either: assess the person's knowledge/understanding; seek evidence of competence; or provide additional training
-- Representative from mobile crane supplier or manufacturer should be present when crane is new; must have detailed knowledge of operational and safety features; must be endorsed by supplier or manufacturer as competent to provide training
-- A RECORD must be made and kept by PCBU AND crane operator
-- Record signed by both the crane operator AND the PCBU or representative
-- Record must be in the FORMAT OF A CHECKLIST
-
-REFRESHER TRAINING:
-- Required for ALL crane crew: crane operators, doggers and riggers
-- Purpose: maintain competencies and keep up to date with current industry practices
-- Especially relevant for persons who have NOT CONTINUOUSLY PERFORMED high risk work
-- Person providing refresher training must be ENDORSED BY THE CRANE COMPANY as competent to provide it
-- FREQUENCY: interval must NOT EXCEED 3 YEARS; training should occur BETWEEN 2.5 AND 3 YEARS after initial licence or most recent refresher (whichever is shorter)
-
-REFRESHER TRAINING RECORD — must include:
-- Person's full name and signature
-- Relevant classes of HRWL held and licence numbers
-- Name and signature of person conducting training
-- Dates and times of training
-- Details of training including type of equipment used/operated and outcomes achieved
-- Verified and signed by PCBU or representative; PCBU keeps a copy
-
-CONSTRUCTION INDUCTION (WHS Regulation s317):
-- Workers must have successfully completed GENERAL CONSTRUCTION INDUCTION TRAINING before carrying out construction work
-- If training completed more than 2 YEARS PREVIOUSLY: worker must have carried out construction work in the preceding 2 years
-
-VISUAL INDICATORS:
-- Crane operator starting work on unfamiliar crane type without documented familiarisation training = non-compliance
-- No familiarisation training checklist on file for the specific crane model = flag
-- Crane operator, dogger or rigger without refresher training within 3 years = non-compliance
-- No evidence of construction induction (white card) for workers on construction site = non-compliance
-- Refresher training record missing HRWL numbers or PCBU signature = incomplete records flag
-
----
-
-CHUNK 35: Inspecting, Testing and Maintenance — Overview and Pre-Operational Inspection
+CHUNK 26: Pre-Operational Inspection
 Section: CoP s16; WHS Regulation s235
-Topic: Competent person for inspections; pre-operational inspection checklist; routine maintenance
-
-FAILURE TO MAINTAIN appropriate inspection and maintenance programs may lead to structural or mechanical failure and collapse.
-
-LEVELS OF INSPECTION:
-1. PRE-OPERATIONAL INSPECTION — before each work shift
-2. ROUTINE INSPECTION AND MAINTENANCE — weekly, monthly, quarterly or by hours of operation
-3. ANNUAL INSPECTIONS
-4. MAJOR INSPECTIONS
-
-COMPETENT PERSON — defined as:
-- For MAJOR INSPECTIONS: person who has acquired knowledge/skills through training/qualification/experience to carry out major inspection AND is registered under a law providing for registration of professional engineers; OR is determined by regulator to be competent
-- For OTHER CASES: person who has acquired knowledge and skills through training, qualification or experience to carry out the task
-
-INSPECTING SPECIFIC PARTS:
-- WELDS: competent person must have knowledge and experience in inspection and testing of welds; knowledge of NDT methods and AS/NZS 1554
-- HYDRAULIC SYSTEMS: competent person must have knowledge and experience in inspection/testing of hydraulic systems
-- ELECTRICAL SYSTEMS: must have knowledge and experience including ability to read circuit diagrams; must be QUALIFIED AND LICENSED ELECTRICIAN where voltage >50 VOLTS AC or >115 VOLTS DC
-- NON-DESTRUCTIVE TESTING: competent person must be NATA ACCREDITED; technicians performing NDT independently must be AiNDT Cert II (or AiNDT Cert I with competent person providing procedure); NDT results must be available at crane yard
-
-CRANE ALTERATIONS (WHS Regulation s244, s282):
-- Altered design must be registered if alteration may affect health or safety
-- Registration holders must notify WHS Regulator of changes requiring new control measures
-- Proposed alterations must be assessed in relation to the WHOLE DEVICE; not in isolation
-- Before alterations: consult designer and manufacturer; if unavailable: alterations by or under supervision of a REGISTERED PROFESSIONAL ENGINEER
-- Before returning altered crane to service: implement control measures; inspect and test per altered design specifications
+Topic: Daily inspection requirements, logbook entries
 
 PRE-OPERATIONAL INSPECTION — before each work shift, crane operator must carry out visual inspection and functional test of:
 - All relevant items in operator's manual
@@ -1616,42 +717,23 @@ PRE-OPERATIONAL INSPECTION — before each work shift, crane operator must carry
 VISUAL INDICATORS:
 - No logbook entries for pre-operational inspection before shift = non-compliance
 - Crane in use with known safety-related problems not corrected = serious non-compliance
-- NDT carried out by person without NATA accreditation = non-compliance
-- Electrical systems inspection carried out by non-licensed electrician (voltage >50V AC) = non-compliance
-- Crane alterations made without registered professional engineer supervision = non-compliance
 
 ---
 
-CHUNK 36: Annual Inspections and Major Inspections
-Section: CoP s16.5, s16.6; WHS Regulation s235
-Topic: Annual inspection contents; major inspection trigger, scope, and key items; records requirements
-
-ANNUAL INSPECTIONS — must include:
-- All items specified by crane manufacturer for annual inspection
-- All items from routine inspection and maintenance program
-- Effective functioning and CALIBRATION of all limiting and indicating devices
-- Detailed visual inspection and tolerance checking of all structural and wear components
-- Checking tolerances for wear limits
-- Detailed check for CORROSION
-- Detailed examination of critical areas for evidence of CRACKING
-
-ANNUAL INSPECTION CERTIFICATE: An example Annual Crane Safety Certificate is in Appendix 6 — may be used as evidence that the crane has received annual safety inspection by a competent person.
+CHUNK 27: Major Inspections — Slew Ring and Bolts
+Section: CoP s16.6; WHS Regulation s235
+Topic: Major inspection trigger, slew ring inspection requirements (KEY MEASUREMENTS)
 
 MAJOR INSPECTION — MANDATORY for registered mobile cranes (>10t):
 Trigger — AT THE END OF THE CRANE'S DESIGN LIFE, or:
 - If no manufacturer recommendations: per recommendations of a competent person
-- If not reasonably practicable: at least EVERY 10 YEARS from date crane was first commissioned or first registered (whichever occurred first)
+- If not reasonably practicable: at least EVERY 10 YEARS from date crane was first commissioned or first registered
 
-NON-REGISTRABLE cranes (≤10t): major inspection NOT mandatory but SHOULD be completed for continued safe operation.
-
-MAJOR INSPECTION must be carried out by or under supervision of a REGISTERED PROFESSIONAL ENGINEER (or person determined by regulator to be competent).
-
-KEY ITEMS REQUIRING MAJOR INSPECTION — at minimum:
+MAJOR INSPECTION must be carried out by or under supervision of a REGISTERED PROFESSIONAL ENGINEER.
 
 SLEW RING:
 - Clearance measured QUANTITATIVELY at MINIMUM OF 4 LOCATIONS around slew ring
 - If clearance exceeds manufacturer's specification: slew ring must be SPLIT and all components examined
-- Backlash and teeth width in pinion drives and ring drive: must be within manufacturer's specification
 
 SLEW RING BOLTS — one of the following:
 a. Remove all bolts and REPLACE WITH NEW BOLTS per manufacturer's specification and torque sequence
@@ -1659,16 +741,16 @@ b. RE-TORQUE to manufacturer's specification (where manufacturer states this is 
 c. Remove all bolts and NON-DESTRUCTIVELY TEST for cracking; reinstall undamaged bolts
 d. Remove a PERCENTAGE of bolts per manufacturer's instructions; NDT removed bolts; if damage found, all bolts tested or replaced
 
-DRIVE SYSTEMS (hydraulic motors, gearboxes, drive shafts):
-- Where catastrophic failure can cause uncontrolled load or boom drop: REMOVE AND STRIP DOWN all parts; check all components within manufacturer's tolerance; replace worn components; NDT parts prone to cracking; hydraulic motors and valves: PRESSURE AND PERFORMANCE TESTED before re-entering service
-- Where failure will NOT cause uncontrolled drop: inspect for vibration, fluid leakage and correct operation; repair/replace where damage or malfunction observed
+VISUAL INDICATORS:
+- Major inspection overdue (crane >10t and 10+ years without major inspection) = serious non-compliance
+- Major inspection carried out by person other than registered professional engineer = non-compliance
+- Slew ring clearance not measured at minimum 4 locations = flag
 
-BRAKING SYSTEMS:
-- Hoist and luff brakes: REMOVED AND DISMANTLED; pins, springs, valves and bearings checked for tolerance; rubber seals replaced; pistons checked
-- Welds in braking systems (including band brake weld terminations): CRACK TESTED BY NDT
-- Hydraulic systems: checked for leaks before reattachment
-- Brake linings: checked for wear limits
-- After reinstallation: brakes ADJUSTED AND ACTUATED MULTIPLE TIMES to ensure correct operation
+---
+
+CHUNK 28: Major Inspections — Hydraulic Cylinders and Booms
+Section: CoP s16.6
+Topic: Hydraulic cylinder inspection, boom creep test, wear pad clearance
 
 HYDRAULIC CYLINDERS (ALL cylinders including outrigger cylinders):
 - Checked for external leakage and creep; if leakage or creep exceeds specifications: REMOVED AND STRIPPED DOWN
@@ -1678,74 +760,71 @@ HYDRAULIC CYLINDERS (ALL cylinders including outrigger cylinders):
 
 BOOMS (HYDRAULIC CRANES):
 - CREEP TEST on telescopic function with boom at maximum extended and raised position; if creep exceeds specifications: disassemble and remove/repair/replace telescoping cylinder
-- Check boom straightness in both planes to manufacturer's specifications; if exceeds tolerance: remove, dismantle, repair or replace
+- Check boom straightness in both planes to manufacturer's specifications
 - Check wear pad clearance and replace worn pads
 - Check for corrosion and damage; NDT accessible welds on boom sections and slew ring upper
-- Pin type locks: inspect effective operation of locking mechanism
 
 BOOMS (LATTICE BOOM CRANES):
 - NDT for cracks on: all welds connecting male and female clevises (all boom sections); welds on boom butt section; welds on boom head; MINIMUM 10% OF LACING WELDS (all if cracks found)
 - Chord thickness testing (ultrasonics) on all chords of boom sections
-- Thickness testing of plate on butt section (near water drain holes)
 - Check boom for straightness, damage and corrosion
 
-RATED CAPACITY LIMITERS AND LOAD INDICATORS:
-- Must be CHECKED AND CALIBRATED for correct operation
-- Accuracy must be within tolerance per crane manufacturer or AS 1418.5
-- CALIBRATION CERTIFICATE to be completed by competent person
-- NOTE: RCLs and load indicators must be calibrated at MORE FREQUENT INTERVALS than the 10-year major inspection
+VISUAL INDICATORS:
+- Hydraulic cylinders with visible leakage or creep not removed and stripped down = flag
+- Boom creep test not performed at major inspection = flag
+- Worn wear pads not replaced = flag
+
+---
+
+CHUNK 29: Major Inspections — Wire Ropes and Sheaves
+Section: CoP s16.6; AS 2759
+Topic: Wire rope inspection criteria, rope replacement timing, sheave inspection
 
 STEEL WIRE ROPES:
 - All hoist, luff, pendant, trolley and counterweight ropes: inspected for wear per discard criteria in AS 2759
 - If rope likely to require replacement within 3 MONTHS: must be replaced immediately with rope passing AS 2759 inspection criteria
 - Ropes must only be replaced with type SPECIFIED BY CRANE MANUFACTURER unless professional engineer specifies otherwise
-- Pins and terminations on pendant ropes must also be inspected
 
 ROPE SHEAVES:
 - At major inspection: ALL ROPE SHEAVES removed from crane and closely inspected for condition and operation
 - All sheaves must freely rotate without excessive end play
 - Damaged and worn sheaves must be REPLACED
 - SHEAVES MUST NOT BE PAINTED
-- Information on identifying worn/degraded plastic rope sheaves should be requested from crane manufacturer
+
+VISUAL INDICATORS:
+- Rope sheaves painted = non-compliance
+- Wire rope requiring replacement within 3 months not replaced = non-compliance
+- Damaged or worn sheaves not replaced = flag
+
+---
+
+CHUNK 30: Maintenance Records
+Section: CoP s16.6
+Topic: Maintenance logbook requirements, record transfer with ownership
 
 RECORDS OF INSPECTIONS AND MAINTENANCE:
 - Crane service record (maintenance logbook) must be KEPT AND READILY AVAILABLE
 - Must be easily understood; written in PLAIN ENGLISH
-- Records may be in any suitable format; must be TRANSFERRED WITH OWNERSHIP OF CRANE
+- Records must be TRANSFERRED WITH OWNERSHIP OF CRANE
 - Each entry must: clearly describe work and parts replaced; be dated; state name of person; be signed by person
 - All complete routine, annual and major inspection reports must be maintained and available for examination
 
 VISUAL INDICATORS:
-- No annual inspection certificate available for crane = non-compliance
-- Major inspection overdue (crane >10t and 10+ years without major inspection) = serious non-compliance
-- Major inspection carried out by person other than registered professional engineer = non-compliance
-- Slew ring clearance not measured at minimum 4 locations = flag
-- Rope sheaves painted = non-compliance
-- Wire rope requiring replacement within 3 months not replaced = non-compliance
 - No maintenance logbook readily available with the crane = non-compliance
 - Maintenance records not signed by person carrying out work = incomplete records flag
 
 ---
 
-CHUNK 37: Licencing — High Risk Work Licence Classes for Crane Operations
-Section: CoP s11.1, s14.7, s15; WHS Regulation Schedule 3; Transport Operations (Road Use Management—Driver Licensing) Regulation 2021
-Topic: Required HRWL classes for crane operators, doggers and riggers; driver licence requirements
+CHUNK 31: High Risk Work Licences — Required Classes
+Section: CoP s11.1, s14.7, s15; WHS Regulation Schedule 3
+Topic: HRWL requirements for crane operators, doggers, riggers, VLC operators
 
 HIGH RISK WORK LICENCES — required for crane operations:
 - CRANE OPERATOR: must hold appropriate MOBILE CRANE LICENCE CLASS
-- DOGGER: must hold HRWL for dogging work (WHS Regulation Schedule 3)
+- DOGGER: must hold HRWL for dogging work
 - VEHICLE-LOADING CRANE (≥10 metre tonnes load moment): must hold HRWL CLASS CV
 - MULTIPLE CRANE LIFT SUPERVISOR: must hold HRWL in INTERMEDIATE or ADVANCED RIGGING
 - DUAL CRANE LIFT BRIDGE BEAMS: INTERMEDIATE RIGGER minimum required to oversee
-
-DRIVER LICENSING — required classes based on GVM (Transport Operations (Road Use Management—Driver Licensing) Regulation 2021):
-- Mobile crane ≤8t GVM: CLASS LR (with or without trailer ≤9t GVM)
-- Mobile crane >8t GVM, max 2 axles: CLASS MR (with or without trailer ≤9t GVM)
-- Mobile crane >8t GVM, more than 2 axles: CLASS HR (with or without trailer ≤9t GVM)
-- Mobile crane >8t GVM, more than 2 axles with trailer (no GVM restriction): CLASS HC
-- All mobile cranes: CLASS MC (supersedes all lower classes)
-
-IMPORTANT: Holding HRWL to operate a mobile crane does NOT authorise driving on a road. Both HRWL and heavy vehicle DRIVER LICENCE are required.
 
 GENERAL CONSTRUCTION INDUCTION:
 - All workers on construction sites must have completed general construction induction training (white card)
@@ -1756,56 +835,36 @@ VISUAL INDICATORS:
 - Dogger without valid dogging HRWL on site = serious non-compliance
 - VLC operator with load moment ≥10mt without CV class HRWL = serious non-compliance
 - Person supervising multiple crane lift without intermediate or advanced rigging HRWL = non-compliance
-- Mobile crane driven on public road by person without appropriate heavy vehicle driver licence class = non-compliance
 - Workers on construction site without evidence of general construction induction (white card) = non-compliance
 
 ---
 
-CHUNK 38: Key Referenced Standards — Mobile Crane Code of Practice 2024
-Section: CoP Appendix 2
-Topic: Technical standards referenced in the Mobile Crane CoP 2024
+CHUNK 32: Familiarisation and Refresher Training
+Section: CoP s15; WHS Act s19(3)(f); WHS Regulation s39, s317
+Topic: Familiarisation training requirements, refresher training frequency (KEY MEASUREMENTS)
 
-AUSTRALIAN STANDARDS referenced in this Code:
-- AS 1353.2: Flat synthetic-webbing slings – Care and use
-- AS 1418.1: Cranes, hoists and winches – General requirements
-- AS 1418.5: Cranes, hoists and winches – Mobile cranes (PRIMARY STANDARD for mobile cranes)
-- AS 1418.8: Cranes, hoists and winches – Special purpose appliances (earthmoving plant as crane)
-- AS 1418.10: Cranes, hoists and winches – Mobile Elevating Work Platforms
-- AS 1418.11: Cranes, hoists and winches – Vehicle-loading cranes
-- AS 1418.17: Cranes (including hoists and winches) – Design and construction of workboxes
-- AS/NZS 1554 (Series): Structural steel welding
-- AS 1657: Fixed platforms, walkways, stairways and ladders – Design, construction and installation
-- AS 1891 (Series): Industrial fall-arrest systems and devices
-- AS 2550.1: Cranes, hoists and winches – Safe use – General requirements
-- AS 2550.5: Cranes, hoists and winches – Safe use – Mobile cranes
-- AS 2550.11: Cranes, hoists and winches – Safe use – Vehicle-loading cranes
-- AS 2759: Steel wire rope – Use, operation and maintenance
-- AS/NZS 3000: Electrical installations (Australian/New Zealand Wiring Rules)
-- AS 3775.2: Chain slings – Grade T – Care and use
-- AS 4024 (Series): Safety of machinery
-- AS 4497: Round slings – Synthetic fibre
-- AS 4772: Earthmoving machinery – Quickhitches for excavators and backhoe loaders
-- AS 4991: Lifting devices
-- AS 61508 (Series): Functional safety of electrical/electronic/programmable electronic safety-related systems
-- ISO 8643: Earthmoving machinery – Hydraulic excavator and backhoe loader boom-lowering control device
-- ISO 13031: Earthmoving machinery – Quick Couplers used on earth-moving machinery
-- EN 13000: (European crane design standard referenced for wind speed definition — 3-second wind gust at highest point of boom)
+FAMILIARISATION TRAINING:
+- Required BEFORE a person is allowed to work as a crane operator at a new PCBU, or operating a newly acquired crane
+- A RECORD must be made and kept by PCBU AND crane operator
+- Record signed by both the crane operator AND the PCBU or representative
+- Record must be in the FORMAT OF A CHECKLIST
 
-OTHER CODES OF PRACTICE referenced:
-- How to Manage Work Health and Safety Risks Code of Practice
-- Work Health and Safety Consultation, Coordination and Cooperation Code of Practice
-- Demolition Work Code of Practice (referenced re: mobile cranes for demolition)
-- Electrical Safety Code of Practice – Working near overhead and underground electric lines
-- Managing Risks of Plant in the Workplace Code of Practice
-- Guide for tree trimming and removal work – crane access method
-- Tilt-up and pre-cast construction Code of Practice
-- Steel construction Code of Practice
+REFRESHER TRAINING:
+- Required for ALL crane crew: crane operators, doggers and riggers
+- FREQUENCY: interval must NOT EXCEED 3 YEARS; training should occur BETWEEN 2.5 AND 3 YEARS after initial licence or most recent refresher
 
-PROFESSIONAL LICENSING:
-- Persons carrying out an engineering service in Queensland must be registered under the Professional Engineers Act 2002
+REFRESHER TRAINING RECORD — must include:
+- Person's full name and signature
+- Relevant classes of HRWL held and licence numbers
+- Name and signature of person conducting training
+- Dates and times of training
+- Details of training including type of equipment used/operated and outcomes achieved
+- Verified and signed by PCBU or representative
 
-ELECTRICAL SAFETY:
-- Work near overhead powerlines: further information at https://www.worksafe.qld.gov.au/electricalsafety
-- Schedule 2 of the Electrical Safety Regulation 2013 (ES Regulation): specifies exclusion zones for voltages above 132kV
+VISUAL INDICATORS:
+- Crane operator starting work on unfamiliar crane type without documented familiarisation training = non-compliance
+- No familiarisation training checklist on file for the specific crane model = flag
+- Crane operator, dogger or rigger without refresher training within 3 years = non-compliance
+- Refresher training record missing HRWL numbers or PCBU signature = incomplete records flag
 
 ---
