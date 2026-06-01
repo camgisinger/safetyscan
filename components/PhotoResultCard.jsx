@@ -79,7 +79,6 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
   "work_types": ["e.g. Scaffolding", "Traffic Management"],
   "work_type": "combined display label e.g. Scaffolding + Traffic Management",
   "status": "pass|fail|uncertain|not_applicable",
-  "confidence": "high|medium|low",
   "legislation": [
     {
       "code": "e.g. WHS Regulation 2011 (Qld)",

@@ -350,75 +350,51 @@ export default function ScanDetail({ id }: { id: string }) {
         )}
         <div style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--mut)', paddingTop: 4, paddingBottom: 14 }}>{meta}</div>
 
-        {/* Photo carousel */}
-        {photoUrls.length > 0 && (
+        {/* Photos — compact thumbnail strip */}
+        {(photoUrls.length > 0 || continuePhotos.length > 0) && (
           <div style={{ marginBottom: 14 }}>
-            <div style={{ position: 'relative', height: 216, borderRadius: 6, overflow: 'hidden', border: '1.5px solid var(--line)', cursor: 'pointer', backgroundColor: 'var(--surf)', backgroundImage: 'repeating-linear-gradient(135deg, var(--div) 0 1.5px, transparent 1.5px 13px)' }}
-              onClick={() => setPhotoEnlarged(activePhoto)}>
-              <img src={photoUrls[activePhoto]} alt={`Photo ${activePhoto + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}/>
-              {photoUrls.length > 1 && (
-                <div style={{ position: 'absolute', top: 12, right: 12, padding: '4px 10px', borderRadius: 999, background: 'rgba(0,0,0,0.5)', color: '#fff', fontFamily: 'var(--ff-mono)', fontSize: 10, letterSpacing: '0.08em' }}>
-                  {activePhoto + 1} / {photoUrls.length}
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+              {/* Pending new photos (amber border, shown first) */}
+              {continuePhotos.map((p, i) => (
+                <div key={`pending-${i}`} style={{ position: 'relative' }}>
+                  <img src={p.dataUrl} alt="" onClick={() => {}} style={{ width: 72, height: 72, borderRadius: 4, objectFit: 'cover', border: '1.5px dashed var(--amber)', display: 'block', cursor: 'default' }}/>
+                  <button onClick={() => setContinuePhotos(prev => prev.filter((_, idx) => idx !== i))}
+                    style={{ position: 'absolute', top: -5, right: -5, width: 18, height: 18, borderRadius: '50%', background: '#D63A26', border: '2px solid var(--bg)', color: '#fff', fontSize: 10, cursor: 'pointer', display: 'grid', placeItems: 'center', padding: 0 }}>✕</button>
+                  <div style={{ position: 'absolute', bottom: 3, left: 4, fontWeight: 600, fontSize: 8, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', background: 'rgba(0,0,0,0.6)', borderRadius: 2, padding: '1px 4px' }}>New</div>
                 </div>
-              )}
-              {photoUrls.length > 1 && activePhoto > 0 && (
-                <button onClick={e => { e.stopPropagation(); setActivePhoto(activePhoto - 1) }}
-                  style={{ position: 'absolute', left: 8, top: '50%', transform: 'translateY(-50%)', width: 32, height: 32, borderRadius: '50%', background: 'rgba(0,0,0,0.5)', border: 'none', color: '#fff', fontSize: 18, cursor: 'pointer', display: 'grid', placeItems: 'center' }}>‹</button>
-              )}
-              {photoUrls.length > 1 && activePhoto < photoUrls.length - 1 && (
-                <button onClick={e => { e.stopPropagation(); setActivePhoto(activePhoto + 1) }}
-                  style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', width: 32, height: 32, borderRadius: '50%', background: 'rgba(0,0,0,0.5)', border: 'none', color: '#fff', fontSize: 18, cursor: 'pointer', display: 'grid', placeItems: 'center' }}>›</button>
-              )}
-              {photoUrls.length > 1 && (
-                <div style={{ position: 'absolute', bottom: 12, left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: 5 }}>
-                  {photoUrls.map((_: string, i: number) => (
-                    <button key={i} onClick={e => { e.stopPropagation(); setActivePhoto(i) }}
-                      style={{ width: i === activePhoto ? 18 : 6, height: 6, borderRadius: 999, background: i === activePhoto ? '#fff' : 'rgba(255,255,255,0.5)', border: 'none', cursor: 'pointer', padding: 0, transition: 'all 0.2s' }}/>
-                  ))}
+              ))}
+              {/* Saved photos */}
+              {photoUrls.map((url: string, i: number) => (
+                <div key={`photo-${i}`} onClick={() => setPhotoEnlarged(i)}
+                  style={{ width: 72, height: 72, borderRadius: 4, overflow: 'hidden', border: '1.5px solid var(--line)', cursor: 'pointer', flexShrink: 0 }}>
+                  <img src={url} alt={`Photo ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}/>
                 </div>
-              )}
+              ))}
             </div>
-            {/* Pending re-analyse photos strip */}
-            {continuePhotos.length > 0 && (
-              <div style={{ marginTop: 10 }}>
-                <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 9, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: 6 }}>
-                  Adding {continuePhotos.length} new photo{continuePhotos.length !== 1 ? 's' : ''}
-                </div>
-                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                  {continuePhotos.map((p, i) => (
-                    <div key={i} style={{ position: 'relative' }}>
-                      <img src={p.dataUrl} alt="" style={{ width: 60, height: 60, borderRadius: 10, objectFit: 'cover', border: '1.5px dashed var(--amber)', opacity: 0.9 }}/>
-                      <button onClick={() => setContinuePhotos(prev => prev.filter((_, idx) => idx !== i))}
-                        style={{ position: 'absolute', top: -5, right: -5, width: 18, height: 18, borderRadius: '50%', background: 'var(--status-red)', border: '2px solid var(--bg)', color: '#fff', fontSize: 10, cursor: 'pointer', display: 'grid', placeItems: 'center', padding: 0 }}>✕</button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {photoEnlarged !== false && (
-              <div onClick={() => setPhotoEnlarged(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, cursor: 'pointer' }}>
-                <img src={photoUrls[photoEnlarged]} alt="Enlarged" style={{ maxWidth: '95vw', maxHeight: '95vh', objectFit: 'contain', borderRadius: 12 }}/>
-              </div>
-            )}
+            {/* Label */}
+            <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--mut)', marginTop: 8 }}>
+              {photoUrls.length} photo{photoUrls.length !== 1 ? 's' : ''} analysed
+              {continuePhotos.length > 0 && <span style={{ color: 'var(--amber)', marginLeft: 8 }}>+ {continuePhotos.length} pending</span>}
+            </div>
           </div>
         )}
 
-        {/* Status + confidence row */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ width: 9, height: 9, borderRadius: 2, background: statusBarColor, flexShrink: 0 }}/>
-            <span style={{ fontWeight: 600, fontSize: 13, color: statusColor }}>{statusLbl}</span>
+        {photoEnlarged !== false && (
+          <div onClick={() => setPhotoEnlarged(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, cursor: 'pointer' }}>
+            <img src={photoUrls[photoEnlarged]} alt="Enlarged" style={{ maxWidth: '95vw', maxHeight: '95vh', objectFit: 'contain', borderRadius: 6 }}/>
           </div>
-          <span style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--mut)', opacity: 0.7 }}>
-            AI · {scan.confidence?.toUpperCase() || 'LOW'} CONFIDENCE
-          </span>
+        )}
+
+        {/* Status row */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+          <span style={{ width: 9, height: 9, borderRadius: 2, background: statusBarColor, flexShrink: 0 }}/>
+          <span style={{ fontWeight: 600, fontSize: 13, color: statusColor }}>{statusLbl}</span>
         </div>
 
         {/* AI Analysis */}
         {scan.summary && (
           <>
-            {secHead('AI Analysis')}
+            {secHead('Summary')}
             <div style={{ ...card, padding: '14px 15px', fontSize: 13, fontWeight: 500, lineHeight: 1.55, color: 'var(--text)', marginBottom: 4 }}>
               {scan.summary}
             </div>
