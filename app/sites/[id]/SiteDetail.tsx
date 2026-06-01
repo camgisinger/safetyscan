@@ -83,7 +83,20 @@ export default function SiteDetail({ id }: { id: string }) {
   const uncertainCount = scans.filter(s => s.status === 'uncertain').length
   const complianceRate = totalScans > 0 ? Math.round((compliantCount / totalScans) * 100) : 100
   const scoreColor     = complianceRate >= 90 ? 'var(--text)' : complianceRate >= 70 ? 'var(--amber)' : '#D63A26'
-  const bars = [18,22,32,28,36,30,38,36,40,28,34,38,30,36,42,40,36,30,38,42,36,38,28,34,40,38,42,30,32,38]
+  // Checklist accumulation across all scans on this site
+  let totalChecklistItems = 0
+  let totalCompleted = 0
+  for (const scan of scans) {
+    const cl = (scan as any).checklist
+    const state = (scan as any).checklist_state || {}
+    if (!Array.isArray(cl) || cl.length === 0) continue
+    for (let i = 0; i < cl.length; i++) {
+      if (!state[`d_${i}`]) {          // not deleted
+        totalChecklistItems++
+        if (state[`c_${i}`]) totalCompleted++  // checked
+      }
+    }
+  }
 
   return (
     <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)', paddingBottom: 48 }}>
@@ -133,11 +146,29 @@ export default function SiteDetail({ id }: { id: string }) {
                 ))}
               </div>
             </div>
-            {/* Histogram */}
-            <div style={{ display: 'flex', gap: '2px', alignItems: 'flex-end', height: 44, marginTop: 16 }}>
-              {bars.map((h, i) => (
-                <div key={i} style={{ flex: 1, height: h, borderRadius: 2, background: i === 22 ? '#D63A26' : i % 7 === 3 ? 'var(--amber)' : 'var(--div)' }}/>
-              ))}
+          </div>
+        )}
+
+        {/* Checklist accumulator */}
+        {totalChecklistItems > 0 && (
+          <div style={{ background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 4, padding: 16, marginBottom: 4 }}>
+            <div style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 12 }}>Checklist</div>
+            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
+                  <span style={{ fontSize: 36, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1, color: totalCompleted === totalChecklistItems ? 'var(--clear-tx)' : 'var(--text)' }}>{totalCompleted}</span>
+                  <span style={{ fontSize: 18, fontWeight: 600, color: 'var(--mut)' }}>/ {totalChecklistItems}</span>
+                </div>
+                <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--mut)', marginTop: 8 }}>Items completed</div>
+              </div>
+              {totalCompleted === totalChecklistItems && (
+                <div style={{ fontWeight: 600, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--clear-tx)', background: 'var(--clear-bg)', border: '1.5px solid var(--clear)', borderRadius: 4, padding: '5px 10px' }}>
+                  All done ✓
+                </div>
+              )}
+            </div>
+            <div style={{ height: 6, background: 'var(--div)', borderRadius: 999, overflow: 'hidden', marginTop: 14 }}>
+              <div style={{ height: '100%', width: `${(totalCompleted / totalChecklistItems) * 100}%`, background: totalCompleted === totalChecklistItems ? 'var(--clear-tx)' : 'var(--amber)', borderRadius: 999, transition: 'width 0.4s ease' }}/>
             </div>
           </div>
         )}
