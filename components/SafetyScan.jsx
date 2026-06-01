@@ -35,9 +35,7 @@ async function analysePhotos(photoList, context) {
         max_tokens: 2000,
         // system prompt is now injected server-side with RAG context
         messages: [{ role: "user", content: userContent }],
-        searchQuery: context
-          ? `Queensland construction site compliance: ${context}`
-          : "construction site safety compliance Queensland WHS",
+        searchQuery: [workType, context].filter(Boolean).join(" ") || "construction site safety compliance Queensland WHS",
       }),
     });
   } catch (fetchErr) {
@@ -87,6 +85,7 @@ export default function SafetyScan() {
   const [showTips, setShowTips] = useState(false);
   const [exiting, setExiting] = useState(false);
   const [dragOver, setDragOver] = useState(false);
+  const [workType, setWorkType] = useState("");
   const [currentUser, setCurrentUser] = useState(null);
   const [sites, setSites] = useState([]);
   const [siteDropdownValue, setSiteDropdownValue] = useState("none");
@@ -384,6 +383,40 @@ export default function SafetyScan() {
                       style={{ marginTop: 8, display: "block", width: "100%", height: 46, padding: "0 14px", border: "1.5px solid var(--amber)", background: "var(--bg)", fontSize: 14, color: "var(--text)", borderRadius: 4, fontFamily: "inherit", boxSizing: "border-box" }}/>
                   )}
                 </div>
+                {/* Work type selector */}
+                <div style={{ marginBottom: 14 }}>
+                  <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--mut)", marginBottom: 10 }}>
+                    Work type <span style={{ opacity: 0.5 }}>(optional — improves accuracy)</span>
+                  </div>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {[
+                      "Scaffolding", "Traffic Management", "Excavation",
+                      "Working at Heights", "Crane & Rigging", "Electrical",
+                      "Confined Spaces", "Demolition", "Formwork",
+                      "Concrete Pumping", "Plant & Equipment", "Hot Works",
+                      "Asbestos", "PPE Check",
+                    ].map(type => {
+                      const selected = workType === type;
+                      return (
+                        <button key={type}
+                          onClick={() => setWorkType(selected ? "" : type)}
+                          style={{
+                            padding: "6px 12px",
+                            border: `1.5px solid ${selected ? "var(--amber)" : "var(--line)"}`,
+                            borderRadius: 4,
+                            background: selected ? "rgba(238,128,26,0.1)" : "var(--bg)",
+                            color: selected ? "var(--amber)" : "var(--mut)",
+                            fontSize: 12, fontWeight: 600,
+                            cursor: "pointer", fontFamily: "inherit",
+                            transition: "all 0.12s",
+                          }}>
+                          {type}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
                 <button onClick={runAll}
                   style={{ display: "block", width: "100%", height: 46, background: "var(--amber)", border: "1.5px solid var(--line)", borderRadius: 6, color: "#1B1A12", fontSize: 13.5, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}>
                   Analyse {photos.length} photo{photos.length > 1 ? "s" : ""} for compliance →
