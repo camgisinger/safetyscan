@@ -328,6 +328,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const btn = (amber?: boolean): React.CSSProperties => ({ height: 46, borderRadius: 8, border: '1.5px solid var(--line)', fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: amber ? 'var(--amber)' : 'var(--surf)', color: amber ? '#1B1A12' : 'var(--text)' })
 
   return (
+    <>
     <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}} textarea,input{outline:none;box-sizing:border-box}`}</style>
       <AppHeader variant="detail" title="Scan" rightAction="share" onBack={() => router.push('/dashboard')}/>
@@ -379,11 +380,7 @@ export default function ScanDetail({ id }: { id: string }) {
           </div>
         )}
 
-        {photoEnlarged !== false && (
-          <div onClick={() => setPhotoEnlarged(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, cursor: 'pointer' }}>
-            <img src={photoUrls[photoEnlarged]} alt="Enlarged" style={{ maxWidth: '95vw', maxHeight: '95vh', objectFit: 'contain', borderRadius: 6 }}/>
-          </div>
-        )}
+        {/* photo enlarged modal moved outside animated wrapper — see below */}
 
         {/* Status row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
@@ -633,19 +630,45 @@ export default function ScanDetail({ id }: { id: string }) {
         </button>
       </main>
 
-      {/* Delete confirm modal */}
-      {showDeleteConfirm && (
-        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20 }}>
-          <div style={{ ...card, padding: 24, maxWidth: 320, width: '100%' }}>
-            <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--text)', marginBottom: 8 }}>Delete this scan?</div>
-            <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 20 }}>This will permanently delete the scan and all associated photos.</div>
-            <div style={{ display: 'flex', gap: 8 }}>
-              <button onClick={() => setShowDeleteConfirm(false)} style={{ ...btn(), flex: 1 }}>Cancel</button>
-              <button onClick={handleDelete} style={{ flex: 1, height: 46, background: '#D63A26', border: '1.5px solid var(--issue)', borderRadius: 8, fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', color: '#fff' }}>Delete</button>
-            </div>
+    </div>
+
+    {/* Photo enlarge modal — outside animated wrapper so position:fixed works correctly */}
+    {photoEnlarged !== false && (
+      <div onClick={() => setPhotoEnlarged(false)}
+        style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.92)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, cursor: 'pointer' }}>
+        {/* Prev arrow */}
+        {photoUrls.length > 1 && photoEnlarged > 0 && (
+          <button onClick={e => { e.stopPropagation(); setPhotoEnlarged((photoEnlarged as number) - 1) }}
+            style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', width: 44, height: 44, borderRadius: 6, background: 'rgba(255,255,255,0.12)', border: '1.5px solid rgba(255,255,255,0.2)', color: '#fff', fontSize: 22, cursor: 'pointer', display: 'grid', placeItems: 'center', zIndex: 1 }}>‹</button>
+        )}
+        {/* Next arrow */}
+        {photoUrls.length > 1 && (photoEnlarged as number) < photoUrls.length - 1 && (
+          <button onClick={e => { e.stopPropagation(); setPhotoEnlarged((photoEnlarged as number) + 1) }}
+            style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', width: 44, height: 44, borderRadius: 6, background: 'rgba(255,255,255,0.12)', border: '1.5px solid rgba(255,255,255,0.2)', color: '#fff', fontSize: 22, cursor: 'pointer', display: 'grid', placeItems: 'center', zIndex: 1 }}>›</button>
+        )}
+        <img src={photoUrls[photoEnlarged as number]} alt="Enlarged"
+          style={{ maxWidth: photoUrls.length > 1 ? 'calc(95vw - 120px)' : '95vw', maxHeight: '90vh', objectFit: 'contain', borderRadius: 6 }}/>
+        {photoUrls.length > 1 && (
+          <div style={{ position: 'absolute', bottom: 24, left: '50%', transform: 'translateX(-50%)', fontWeight: 600, fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', background: 'rgba(0,0,0,0.5)', padding: '5px 12px', borderRadius: 4 }}>
+            {(photoEnlarged as number) + 1} / {photoUrls.length}
+          </div>
+        )}
+      </div>
+    )}
+
+    {/* Delete confirm modal — also outside animated wrapper */}
+    {showDeleteConfirm && (
+      <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20 }}>
+        <div style={{ ...card, padding: 24, maxWidth: 320, width: '100%' }}>
+          <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--text)', marginBottom: 8 }}>Delete this scan?</div>
+          <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 20 }}>This will permanently delete the scan and all associated photos.</div>
+          <div style={{ display: 'flex', gap: 8 }}>
+            <button onClick={() => setShowDeleteConfirm(false)} style={{ ...btn(), flex: 1 }}>Cancel</button>
+            <button onClick={handleDelete} style={{ flex: 1, height: 46, background: '#D63A26', border: '1.5px solid var(--issue)', borderRadius: 8, fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', color: '#fff' }}>Delete</button>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    )}
+    </>
   )
 }
