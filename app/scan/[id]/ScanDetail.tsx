@@ -289,7 +289,7 @@ export default function ScanDetail({ id }: { id: string }) {
 
   if (error) return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)' }}>
-      <AppHeader variant="detail" title="Scan" onBack={() => router.push('/dashboard')}/>
+      <AppHeader variant="detail" title="Scan detail" onBack={() => router.push('/dashboard')}/>
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '0 18px 48px' }}>
         <div style={{ background: 'var(--status-red-bg)', border: '0.5px solid var(--status-red)', borderRadius: 16, padding: '16px 18px' }}>
           <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--status-red)', marginBottom: 6 }}>Could not load scan</div>
@@ -331,7 +331,31 @@ export default function ScanDetail({ id }: { id: string }) {
     <>
     <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}} textarea,input{outline:none;box-sizing:border-box}`}</style>
-      <AppHeader variant="detail" title="Scan" rightAction="share" onBack={() => router.push('/dashboard')}/>
+      <AppHeader variant="detail" title="Scan detail" onBack={() => router.push('/dashboard')} rightContent={
+        <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+          {/* Share */}
+          <button onClick={handleShare} title="Share scan"
+            style={{ width: 38, height: 38, borderRadius: 8, border: '1.5px solid var(--line)', background: 'var(--surf)', color: 'var(--text)', display: 'grid', placeItems: 'center', cursor: 'pointer', flexShrink: 0 }}>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/>
+            </svg>
+          </button>
+          {/* Export PDF */}
+          <button onClick={handleExportPDF} disabled={exportingPDF} title="Export PDF"
+            style={{ width: 38, height: 38, borderRadius: 8, border: '1.5px solid var(--line)', background: 'var(--surf)', color: 'var(--text)', display: 'grid', placeItems: 'center', cursor: exportingPDF ? 'not-allowed' : 'pointer', opacity: exportingPDF ? 0.5 : 1, flexShrink: 0 }}>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </button>
+          {/* Delete */}
+          <button onClick={() => setShowDeleteConfirm(true)} title="Delete scan"
+            style={{ width: 38, height: 38, borderRadius: 8, border: '1.5px solid var(--issue)', background: 'var(--issue-bg)', color: 'var(--issue-tx-theme)', display: 'grid', placeItems: 'center', cursor: 'pointer', flexShrink: 0 }}>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+            </svg>
+          </button>
+        </div>
+      }/>
 
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '0 18px 48px' }}>
 
@@ -623,11 +647,6 @@ export default function ScanDetail({ id }: { id: string }) {
           )}
         </div>
 
-        {/* Delete */}
-        <button onClick={() => setShowDeleteConfirm(true)}
-          style={{ width: '100%', height: 44, background: 'transparent', border: '1.5px solid var(--issue)', borderRadius: 6, color: 'var(--issue-tx-theme)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', marginTop: 14 }}>
-          Delete scan
-        </button>
       </main>
 
     </div>
