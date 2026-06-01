@@ -144,7 +144,7 @@ export default function ScansPage() {
   )
 
   return (
-    <div className="page-fade-in" style={{ minHeight: '100vh', background: 'var(--bg)', paddingBottom: 96 }}>
+    <div className="page-fade-in" style={{ minHeight: '100vh', background: 'var(--bg)', paddingBottom: editMode && selected.size > 0 ? 160 : 96 }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}} select{outline:none}`}</style>
       <AppHeader />
       <div style={{ padding: '0 18px' }}>
