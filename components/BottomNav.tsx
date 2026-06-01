@@ -35,12 +35,13 @@ const tabs = [
 ] as const
 
 const MAIN_ROUTES = ['/dashboard', '/scans', '/sites', '/profile']
+const HIDE_ROUTES = ['/profile/setup', '/profile/edit']
 
 export default function BottomNav() {
   const router = useRouter()
   const pathname = usePathname()
 
-  if (!MAIN_ROUTES.includes(pathname)) return null
+  if (!MAIN_ROUTES.includes(pathname) || HIDE_ROUTES.includes(pathname)) return null
 
   const activeId = pathname === '/dashboard' ? 'home'
     : pathname.startsWith('/scans')   ? 'scans'

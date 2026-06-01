@@ -19,9 +19,11 @@ export default function LoginPage() {
     setError(''); setLoading(true)
     try {
       if (tab === 'signin') {
-        const { error } = await supabase.auth.signInWithPassword({ email, password })
+        const { data, error } = await supabase.auth.signInWithPassword({ email, password })
         if (error) throw error
-        router.push('/dashboard')
+        // First-time login without profile → setup screen
+        const needsSetup = !data.user?.user_metadata?.full_name
+        router.push(needsSetup ? '/profile/setup' : '/dashboard')
       } else {
         const { error } = await supabase.auth.signUp({ email, password })
         if (error) throw error
