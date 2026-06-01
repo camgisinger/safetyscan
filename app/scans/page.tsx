@@ -9,7 +9,7 @@ type Filter = 'all' | 'issues' | 'clear' | 'pending'
 function statusBar(s: string)   { return s === 'pass' ? '#3E8E5A' : s === 'fail' ? '#D63A26' : 'var(--amber)' }
 function statusColor(s: string) { return s === 'pass' ? 'var(--clear-tx)' : s === 'fail' ? 'var(--issue-tx-theme)' : 'var(--amber)' }
 function statusLabel(s: string, n?: number) {
-  if (s === 'pass') return 'Clear'
+  if (s === 'pass') return 'Compliant'
   if (s === 'fail') return n ? `${n} issue${n !== 1 ? 's' : ''}` : 'Issues'
   return 'Pending'
 }

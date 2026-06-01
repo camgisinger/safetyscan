@@ -6,7 +6,7 @@ import AppHeader from '../../../components/AppHeader'
 
 function statusBar(s: string)   { return s === 'pass' ? '#3E8E5A' : s === 'fail' ? '#D63A26' : 'var(--amber)' }
 function statusColor(s: string) { return s === 'pass' ? 'var(--clear-tx)' : s === 'fail' ? 'var(--issue-tx-theme)' : 'var(--amber)' }
-function statusLabel(s: string) { return s === 'pass' ? 'Clear' : s === 'fail' ? 'Issues' : 'Pending' }
+function statusLabel(s: string) { return s === 'pass' ? 'Compliant' : s === 'fail' ? 'Issues' : 'Pending' }
 
 function Thumb({ url }: { url?: string | null }) {
   if (url) return <img src={url} alt="" style={{ width: 46, alignSelf: 'stretch', objectFit: 'cover', display: 'block', borderRight: '1.5px solid var(--line)', flexShrink: 0 }}/>

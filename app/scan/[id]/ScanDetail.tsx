@@ -314,7 +314,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const issueCount = issueFindings.length
   const statusBarColor = scan.status === 'pass' ? '#3E8E5A' : scan.status === 'fail' ? '#D63A26' : 'var(--amber)'
   const statusColor    = scan.status === 'pass' ? 'var(--clear-tx)' : scan.status === 'fail' ? 'var(--issue-tx-theme)' : 'var(--amber)'
-  const statusLbl      = scan.status === 'pass' ? 'Clear' : scan.status === 'fail' ? `${issueCount} issue${issueCount !== 1 ? 's' : ''} found` : 'Pending review'
+  const statusLbl      = scan.status === 'pass' ? 'Compliant' : scan.status === 'fail' ? `${issueCount} issue${issueCount !== 1 ? 's' : ''} found` : 'Pending review'
 
   const inp: React.CSSProperties = { display: 'block', width: '100%', border: '1.5px solid var(--line)', background: 'var(--surf)', fontSize: 14, color: 'var(--text)', boxSizing: 'border-box', outline: 'none' }
   const secHead = (label: string) => (

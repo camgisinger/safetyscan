@@ -40,8 +40,7 @@ export default function LoginPage() {
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', flexDirection: 'column' }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}} input::placeholder{color:var(--mut)}`}</style>
-      {/* Hazard stripe at top */}
-      <div style={{ height: 7, background: 'repeating-linear-gradient(-45deg, var(--line) 0 10px, var(--amber) 10px 20px)', flexShrink: 0 }} />
+      <div style={{ height: 7, background: 'var(--hazard-bg)', flexShrink: 0 }} />
 
       <div style={{ flex: 1, maxWidth: 420, width: '100%', margin: '0 auto', padding: '32px 26px 32px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
         {signedUp ? (

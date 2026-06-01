@@ -9,7 +9,7 @@ function statusBar(status: string) {
   return status === 'pass' ? '#3E8E5A' : status === 'fail' ? '#D63A26' : 'var(--amber)'
 }
 function statusLabel(status: string, count?: number) {
-  if (status === 'pass') return 'Clear'
+  if (status === 'pass') return 'Compliant'
   if (status === 'fail') return count ? `${count} issue${count !== 1 ? 's' : ''}` : 'Issues'
   return 'Pending'
 }

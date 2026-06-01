@@ -44,8 +44,7 @@ export default function SharedScan({ token }: { token: string }) {
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
-      {/* Hazard stripe */}
-      <div style={{ height: 7, background: isDark ? 'repeating-linear-gradient(-45deg, #000 0 10px, var(--amber) 10px 20px)' : 'repeating-linear-gradient(-45deg, var(--line) 0 10px, var(--amber) 10px 20px)' }} />
+      <div style={{ height: 7, background: 'var(--hazard-bg)', flexShrink: 0 }} />
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '11px 18px 12px', background: 'var(--bg)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>

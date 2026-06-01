@@ -43,6 +43,9 @@
   /* ---- Shadows ---- */
   --shadow-fab: 0 10px 24px -8px rgba(238,128,26,0.55), 0 4px 10px -4px rgba(0,0,0,0.30);
 
+  /* ---- Hazard stripe (CSS-only, no JS needed) ---- */
+  --hazard-bg: repeating-linear-gradient(-45deg, #000 0 10px, var(--amber) 10px 20px);
+
   /* ---- Legacy --ss-* aliases ---- */
   --ss-bg:           var(--bg);
   --ss-surface:      var(--surf);
@@ -63,7 +66,8 @@
    LIGHT THEME
    ========================================================= */
 [data-theme="light"] {
-  --amber:    #EE801A;
+  --amber:       #EE801A;
+  --hazard-bg: repeating-linear-gradient(-45deg, var(--line) 0 10px, var(--amber) 10px 20px);
   --bg:    #E2DED5;
   --surf:  #FAF8F2;
   --line:  #1B1A12;

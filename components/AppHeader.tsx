@@ -3,17 +3,9 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../lib/supabase'
 
-// Hazard stripe: 7px diagonal black/amber bands
-function HazardStripe({ isDark }: { isDark: boolean }) {
-  return (
-    <div style={{
-      height: 7,
-      background: isDark
-        ? 'repeating-linear-gradient(-45deg, #000 0 10px, var(--amber) 10px 20px)'
-        : 'repeating-linear-gradient(-45deg, var(--line) 0 10px, var(--amber) 10px 20px)',
-      flexShrink: 0,
-    }} />
-  )
+// Hazard stripe: 7px diagonal black/amber bands — uses CSS var, no JS state needed
+function HazardStripe() {
+  return <div style={{ height: 7, background: 'var(--hazard-bg)', flexShrink: 0 }} />
 }
 
 interface AppHeaderProps {
@@ -100,7 +92,7 @@ export default function AppHeader({
 
   return (
     <>
-      <HazardStripe isDark={isDark} />
+      <HazardStripe />
       <header style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         padding: '11px 18px 12px',
@@ -179,13 +171,6 @@ export default function AppHeader({
                 Safety<b style={{ color: 'var(--amber)' }}>Scan</b>
               </span>
             </div>
-            {/* Theme toggle */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1.5px solid var(--div)', marginBottom: 8 }}>
-              <span style={{ fontSize: 14, color: 'var(--text)' }}>Dark mode</span>
-              <button onClick={toggleTheme} style={{ width: 44, height: 24, borderRadius: 999, background: isDark ? 'var(--amber)' : 'var(--div)', border: 'none', cursor: 'pointer', position: 'relative', transition: 'background 0.2s' }}>
-                <span style={{ position: 'absolute', top: 2, left: isDark ? 22 : 2, width: 20, height: 20, borderRadius: '50%', background: '#fff', transition: 'left 0.2s' }}/>
-              </button>
-            </div>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: 0, marginBottom: 'auto' }}>
               {[{ label: 'Home', href: '/dashboard' }, { label: 'Scans', href: '/scans' }, { label: 'Sites', href: '/sites' }, { label: 'Profile', href: '/profile' }, { label: 'Guide', href: '/guide' }].map(item => (
                 <button key={item.href} onClick={() => { router.push(item.href); closeMenu() }}
@@ -195,6 +180,13 @@ export default function AppHeader({
               ))}
             </nav>
             <div style={{ borderTop: '1.5px solid var(--div)', paddingTop: 16, marginTop: 16 }}>
+              {/* Theme toggle */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
+                <span style={{ fontSize: 14, fontWeight: 500, color: 'var(--text)' }}>Dark mode</span>
+                <button onClick={toggleTheme} style={{ width: 44, height: 24, borderRadius: 999, background: isDark ? 'var(--amber)' : 'var(--div)', border: 'none', cursor: 'pointer', position: 'relative', transition: 'background 0.2s', flexShrink: 0 }}>
+                  <span style={{ position: 'absolute', top: 2, left: isDark ? 22 : 2, width: 20, height: 20, borderRadius: '50%', background: '#fff', transition: 'left 0.2s' }}/>
+                </button>
+              </div>
               {userEmail && (
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
                   <div style={{ width: 36, height: 36, borderRadius: 8, background: 'var(--amber)', display: 'grid', placeItems: 'center', fontSize: 13, fontWeight: 600, color: '#1B1A12', flexShrink: 0 }}>
