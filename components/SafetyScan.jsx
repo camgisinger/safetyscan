@@ -227,11 +227,11 @@ export default function SafetyScan() {
       const searchQuery = [...workTypes, context].filter(Boolean).join(" ")
       const parsed = await analysePhotos(photos, context, searchQuery);
 
-      const workTypes = parsed.work_types || (parsed.work_type ? [parsed.work_type] : ["Unknown work type"]);
-      const workTypeLabel = parsed.work_type || workTypes.join(" + ") || "Unknown work type";
+      const parsedWorkTypes = parsed.work_types || (parsed.work_type ? [parsed.work_type] : ["Unknown work type"]);
+      const workTypeLabel = parsed.work_type || parsedWorkTypes.join(" + ") || "Unknown work type";
 
       const safeResult = {
-        work_types: workTypes,
+        work_types: parsedWorkTypes,
         work_type: workTypeLabel,
         status: parsed.status || "uncertain",
         confidence: parsed.confidence || "low",
