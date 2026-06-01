@@ -88,11 +88,7 @@ export default function ProfileSetupPage() {
           {/* Job title */}
           <div>
             <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>Your role</div>
-            <select value={jobTitle} onChange={e => setJobTitle(e.target.value)}
-              style={{ ...inp, cursor: 'pointer', appearance: 'none' as const, background: 'var(--surf)' }}>
-              <option value="">Select a role…</option>
-              {JOB_TITLES.map(t => <option key={t} value={t}>{t}</option>)}
-            </select>
+            <input value={jobTitle} onChange={e => setJobTitle(e.target.value)} placeholder="e.g. Site Supervisor, Foreman…" style={{ ...inp, background: 'var(--surf)' }}/>
           </div>
 
           {/* Company */}
