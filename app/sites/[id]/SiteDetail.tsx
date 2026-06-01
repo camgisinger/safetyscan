@@ -67,7 +67,7 @@ export default function SiteDetail({ id }: { id: string }) {
 
   if (error || !site) return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
-      <AppHeader variant="detail" title="Site" onBack={() => router.push('/sites')}/>
+      <AppHeader variant="detail" title="Sites" onBack={() => router.push('/sites')}/>
       <div style={{ padding: '0 18px' }}>
         <div style={{ background: 'var(--issue-bg)', border: '1.5px solid var(--issue)', borderRadius: 4, padding: '16px 18px' }}>
           <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--issue-tx-theme)', marginBottom: 6 }}>Could not load site</div>
@@ -88,7 +88,7 @@ export default function SiteDetail({ id }: { id: string }) {
   return (
     <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)', paddingBottom: 48 }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
-      <AppHeader variant="detail" title="Site" onBack={() => router.push('/sites')}/>
+      <AppHeader variant="detail" title="Sites" onBack={() => router.push('/sites')}/>
       <div style={{ padding: '0 18px' }}>
 
         {/* Page title */}

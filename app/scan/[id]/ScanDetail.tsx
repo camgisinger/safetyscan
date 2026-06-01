@@ -289,7 +289,7 @@ export default function ScanDetail({ id }: { id: string }) {
 
   if (error) return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', fontFamily: 'var(--ff-sans)' }}>
-      <AppHeader variant="detail" title="Scan detail" onBack={() => router.push('/dashboard')}/>
+      <AppHeader variant="detail" title="Dashboard" onBack={() => router.push('/dashboard')}/>
       <main style={{ maxWidth: 600, margin: '0 auto', padding: '0 18px 48px' }}>
         <div style={{ background: 'var(--status-red-bg)', border: '0.5px solid var(--status-red)', borderRadius: 16, padding: '16px 18px' }}>
           <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--status-red)', marginBottom: 6 }}>Could not load scan</div>
@@ -331,7 +331,7 @@ export default function ScanDetail({ id }: { id: string }) {
     <>
     <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}} textarea,input{outline:none;box-sizing:border-box}`}</style>
-      <AppHeader variant="detail" title="Scan detail" onBack={() => router.push('/dashboard')} rightContent={
+      <AppHeader variant="detail" title="Dashboard" onBack={() => router.push('/dashboard')} rightContent={
         <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
           {/* Share */}
           <button onClick={handleShare} title="Share scan"
