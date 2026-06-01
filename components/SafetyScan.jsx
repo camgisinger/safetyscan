@@ -16,7 +16,7 @@ if (typeof window !== 'undefined') {
 
 const MAX_PHOTOS = 5;
 
-async function analysePhotos(photoList, context) {
+async function analysePhotos(photoList, context, searchQuery) {
   const userContent = [
     ...photoList.map(p => ({ type: "image", source: { type: "base64", media_type: "image/jpeg", data: p.base64 } })),
     {
@@ -35,7 +35,7 @@ async function analysePhotos(photoList, context) {
         max_tokens: 2000,
         // system prompt is now injected server-side with RAG context
         messages: [{ role: "user", content: userContent }],
-        searchQuery: [...workTypes, context].filter(Boolean).join(" ") || "construction site safety compliance Queensland WHS",
+        searchQuery: searchQuery || "construction site safety compliance Queensland WHS",
       }),
     });
   } catch (fetchErr) {
@@ -224,7 +224,8 @@ export default function SafetyScan() {
     }
 
     try {
-      const parsed = await analysePhotos(photos, context);
+      const searchQuery = [...workTypes, context].filter(Boolean).join(" ")
+      const parsed = await analysePhotos(photos, context, searchQuery);
 
       const workTypes = parsed.work_types || (parsed.work_type ? [parsed.work_type] : ["Unknown work type"]);
       const workTypeLabel = parsed.work_type || workTypes.join(" + ") || "Unknown work type";
