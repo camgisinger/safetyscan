@@ -5,7 +5,6 @@ import { supabase, Scan } from '../../lib/supabase'
 import AppHeader from '../../components/AppHeader'
 
 type StatusFilter = 'all' | 'issues' | 'compliant' | 'pending'
-type DateFilter   = 'newest' | 'oldest' | 'today' | 'this_week' | 'this_month'
 
 function statusBarColor(s: string) { return s === 'pass' ? '#3E8E5A' : s === 'fail' ? '#D63A26' : 'var(--amber)' }
 function statusTextColor(s: string) { return s === 'pass' ? 'var(--clear-tx)' : s === 'fail' ? 'var(--issue-tx-theme)' : 'var(--amber)' }
@@ -44,8 +43,10 @@ export default function ScansPage() {
   const [scans, setScans]   = useState<Scan[]>([])
   const [sites, setSites]   = useState<{ id: string; name: string }[]>([])
   const [loading, setLoading] = useState(true)
-  const [status, setStatus] = useState<StatusFilter>('all')
-  const [dateFilter, setDateFilter] = useState<DateFilter>('newest')
+  const [status, setStatus]   = useState<StatusFilter>('all')
+  const [dateFrom, setDateFrom] = useState('')
+  const [dateTo, setDateTo]     = useState('')
+  const [sortDir, setSortDir]   = useState<'newest' | 'oldest'>('newest')
   const router = useRouter()
 
   useEffect(() => {
@@ -64,9 +65,6 @@ export default function ScansPage() {
   }, [router])
 
   const filtered = useMemo(() => {
-    const now = new Date()
-
-    // Status filter
     let result = scans.filter(s => {
       if (status === 'issues')    return s.status === 'fail'
       if (status === 'compliant') return s.status === 'pass'
@@ -74,28 +72,23 @@ export default function ScansPage() {
       return true
     })
 
-    // Date filter (before sorting)
-    if (dateFilter === 'today') {
-      const start = new Date(now.getFullYear(), now.getMonth(), now.getDate())
-      result = result.filter(s => new Date(s.created_at) >= start)
-    } else if (dateFilter === 'this_week') {
-      const day = now.getDay()
-      const start = new Date(now)
-      start.setDate(now.getDate() - day)
-      start.setHours(0, 0, 0, 0)
-      result = result.filter(s => new Date(s.created_at) >= start)
-    } else if (dateFilter === 'this_month') {
-      const start = new Date(now.getFullYear(), now.getMonth(), 1)
-      result = result.filter(s => new Date(s.created_at) >= start)
+    if (dateFrom) {
+      const from = new Date(dateFrom)
+      from.setHours(0, 0, 0, 0)
+      result = result.filter(s => new Date(s.created_at) >= from)
+    }
+    if (dateTo) {
+      const to = new Date(dateTo)
+      to.setHours(23, 59, 59, 999)
+      result = result.filter(s => new Date(s.created_at) <= to)
     }
 
-    // Sort
-    if (dateFilter === 'oldest') {
+    if (sortDir === 'oldest') {
       result = [...result].sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime())
     }
 
     return result
-  }, [scans, status, dateFilter])
+  }, [scans, status, dateFrom, dateTo, sortDir])
 
   const activeCount = {
     issues:    scans.filter(s => s.status === 'fail').length,
@@ -117,32 +110,47 @@ export default function ScansPage() {
       <div style={{ padding: '0 18px' }}>
 
         {/* Filter bar */}
-        <div style={{ display: 'flex', gap: 8, marginBottom: 14 }}>
-          {/* Status filter */}
-          <div style={{ position: 'relative', flex: 1 }}>
+        <style>{`input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(0.6);cursor:pointer}`}</style>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 12 }}>
+          {/* Row 1: status + sort */}
+          <div style={{ display: 'flex', gap: 8 }}>
             <select value={status} onChange={e => setStatus(e.target.value as StatusFilter)} style={selectStyle}>
               <option value="all">All scans</option>
               <option value="issues">Issues ({activeCount.issues})</option>
               <option value="compliant">Compliant ({activeCount.compliant})</option>
               <option value="pending">Pending ({activeCount.pending})</option>
             </select>
-          </div>
-          {/* Date filter */}
-          <div style={{ position: 'relative', flex: 1 }}>
-            <select value={dateFilter} onChange={e => setDateFilter(e.target.value as DateFilter)} style={selectStyle}>
+            <select value={sortDir} onChange={e => setSortDir(e.target.value as 'newest' | 'oldest')} style={{ ...selectStyle, flex: '0 0 auto', width: 140 }}>
               <option value="newest">Newest first</option>
               <option value="oldest">Oldest first</option>
-              <option value="today">Today</option>
-              <option value="this_week">This week</option>
-              <option value="this_month">This month</option>
             </select>
+          </div>
+          {/* Row 2: date range */}
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+            <div style={{ position: 'relative', flex: 1 }}>
+              <div style={{ fontWeight: 600, fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 4 }}>From</div>
+              <input type="date" value={dateFrom} onChange={e => setDateFrom(e.target.value)}
+                style={{ ...selectStyle, flex: 1, width: '100%', backgroundImage: 'none', paddingRight: 10, color: dateFrom ? 'var(--text)' : 'var(--mut)' }}/>
+            </div>
+            <div style={{ width: 10, height: 1.5, background: 'var(--line)', flexShrink: 0, marginTop: 18 }}/>
+            <div style={{ position: 'relative', flex: 1 }}>
+              <div style={{ fontWeight: 600, fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 4 }}>To</div>
+              <input type="date" value={dateTo} onChange={e => setDateTo(e.target.value)}
+                style={{ ...selectStyle, flex: 1, width: '100%', backgroundImage: 'none', paddingRight: 10, color: dateTo ? 'var(--text)' : 'var(--mut)' }}/>
+            </div>
+            {(dateFrom || dateTo) && (
+              <button onClick={() => { setDateFrom(''); setDateTo('') }}
+                style={{ marginTop: 18, height: 38, padding: '0 10px', border: '1.5px solid var(--line)', borderRadius: 4, background: 'var(--surf)', color: 'var(--mut)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', flexShrink: 0 }}>
+                Clear
+              </button>
+            )}
           </div>
         </div>
 
         {/* Results count */}
         <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)', paddingBottom: 10, paddingLeft: 2 }}>
           {filtered.length} scan{filtered.length !== 1 ? 's' : ''}
-          {status !== 'all' || dateFilter !== 'newest' ? ' · filtered' : ''}
+          {(status !== 'all' || dateFrom || dateTo) ? ' · filtered' : ''}
         </div>
 
         {filtered.length === 0 ? (
