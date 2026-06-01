@@ -289,8 +289,7 @@ export default function SafetyScan() {
                 <circle style={{ animation: "ping 1.8s ease-out infinite", transformOrigin: "50% 50%" }} cx="120" cy="120" r="60" fill="none" stroke="#F39410" strokeWidth="3" opacity="0.5"/>
               </svg>
             </div>
-            <div style={{ marginTop: 28, fontWeight: 600, fontSize: 22, letterSpacing: "-0.01em", color: "#ECE7DD" }}>Reading your site</div>
-            <div style={{ fontSize: 13, marginTop: 8, opacity: 0.65, color: "#ECE7DD", maxWidth: 260, margin: "8px auto 0" }}>Cross-checking against QLD MUTCD &amp; WHS regs</div>
+            <div style={{ marginTop: 28, fontWeight: 600, fontSize: 22, letterSpacing: "-0.01em", color: "#ECE7DD" }}>{LOADING_MESSAGES[msgIdx]}</div>
             <div style={{ width: "100%", marginTop: 28, maxWidth: 360, margin: "28px auto 0" }}>
               {/* Step cards */}
               {[
