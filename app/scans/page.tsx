@@ -240,15 +240,15 @@ export default function ScansPage() {
         })}
       </div>
 
-      {/* Bulk delete bar */}
+      {/* Bulk delete bar — sits above the 76px bottom nav */}
       {editMode && selected.size > 0 && (
-        <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, padding: '12px 18px 32px', background: 'var(--surf)', borderTop: '1.5px solid var(--line)', display: 'flex', gap: 10, zIndex: 20 }}>
+        <div style={{ position: 'fixed', bottom: 76, left: 0, right: 0, zIndex: 20, padding: '10px 18px', background: 'var(--surf)', borderTop: '1.5px solid var(--line)', borderBottom: '1.5px solid var(--line)', display: 'flex', gap: 10, alignItems: 'center' }}>
           <button onClick={() => setShowDeleteConfirm(true)}
             style={{ flex: 1, height: 46, background: '#D63A26', border: '1.5px solid var(--issue)', borderRadius: 6, color: '#fff', fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
             Delete {selected.size} scan{selected.size !== 1 ? 's' : ''}
           </button>
           <button onClick={() => { setEditMode(false); setSelected(new Set()) }}
-            style={{ height: 46, padding: '0 20px', background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 6, color: 'var(--mut)', fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', flexShrink: 0 }}>
+            style={{ height: 46, padding: '0 18px', background: 'transparent', border: '1.5px solid var(--line)', borderRadius: 6, color: 'var(--mut)', fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', flexShrink: 0 }}>
             Cancel
           </button>
         </div>
