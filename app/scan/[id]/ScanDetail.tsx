@@ -402,7 +402,7 @@ export default function ScanDetail({ id }: { id: string }) {
                   return (
                     <div key={i} style={{ marginBottom: 8 }}>
                       <button onClick={() => setOpenLeg(isOpen ? null : i)}
-                        style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontWeight: 600, fontSize: 9.5, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 10px', borderRadius: 4, border: '1.5px solid var(--line)', cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.15s', background: isOpen ? 'var(--line)' : 'var(--surf)', color: isOpen ? 'var(--surf)' : 'var(--mut)' }}>
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontWeight: 600, fontSize: 9.5, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 10px', borderRadius: 4, border: `1.5px solid ${isOpen ? 'var(--amber)' : 'var(--line)'}`, cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.15s', background: 'var(--surf)', color: isOpen ? 'var(--amber)' : 'var(--mut)' }}>
                         {l.code} <span style={{ fontSize: 9, opacity: 0.6 }}>{isOpen ? '▲' : '▼'}</span>
                       </button>
                       {isOpen && (
