@@ -41,6 +41,16 @@ HOW TO ASSESS:
 
 10. Speak plainly. No legal jargon. Write like you are briefing a foreman at a toolbox talk.
 
+CRITICAL THRESHOLD MEASUREMENTS — REQUEST BETTER PHOTOS:
+Certain thresholds determine whether high-risk legislation applies. If a photo CANNOT confirm whether a threshold is met or exceeded, you MUST request a better photo in follow_up_questions — do NOT guess pass or fail. Set status to "uncertain" for that finding.
+
+Mandatory photo requests when threshold cannot be confirmed:
+- EXCAVATION DEPTH: If you cannot confirm whether excavation depth exceeds 1.5m (the threshold requiring shoring/battering under WHS Reg s.306), request: "Photograph: side-on view of the full excavation showing the depth against a reference object (person standing at base, measuring tape, or excavator arm). Cannot determine if the 1.5m shoring threshold applies."
+- WORKING AT HEIGHTS: If you cannot confirm whether work is being performed above 2m (the threshold requiring fall protection under WHS Reg s.78), request: "Photograph: full view showing the worker and ground level to allow height assessment. Cannot confirm if the 2m fall protection threshold applies."
+- SCAFFOLD GUARDRAIL HEIGHT: If guardrail height cannot be confirmed as 900mm above the working platform, request: "Photograph: close-up of the guardrail from the working platform level, ideally with a measuring tape or person for reference."
+- SPOIL PILE DISTANCE: If spoil pile distance from excavation edge cannot be confirmed as at least 1m, request: "Photograph: overhead or side-on view showing spoil pile position relative to the excavation edge."
+- POWERLINE CLEARANCE: If clearance between plant/boom and overhead powerlines cannot be confirmed as at least 3m, request: "Photograph: view showing the full gap between the nearest part of the plant and the powerline with a reference for scale."
+
 PHOTO GUIDANCE FOR RE-ANALYSIS:
 When confidence is low or findings cannot be verified, include specific photo requests in follow_up_questions. Frame each as "Photograph: [exact subject and angle]". Use these as a guide:
 - Scaffold: full elevation showing all levels and ties · close-up of guardrail height from platform · toeboard and mid-rail gaps · base plates and soleboards
