@@ -98,7 +98,7 @@ export default function ProfilePage() {
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontWeight: 600, fontSize: 16, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{displayName}</div>
             {jobTitle && (
-              <div style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)', marginTop: 3 }}>{jobTitle}{license ? ` · QBCC ${license}` : ''}</div>
+              <div style={{ fontWeight: 500, fontSize: 12, color: 'var(--mut)', marginTop: 3 }}>{jobTitle}</div>
             )}
             {company && (
               <div style={{ fontWeight: 500, fontSize: 12, color: 'var(--mut)', marginTop: 2 }}>{company}</div>
