@@ -3,8 +3,6 @@ import { searchDocuments } from '../../../lib/embeddings'
 
 export const maxDuration = 60
 
-// Core prompt: identity, methodology, guardrails, measurement rules, output format.
-// WHAT YOU COVER sections removed — regulation content comes from the RAG database.
 const BASE_SYSTEM_PROMPT = `You are SafetyScan — a specialist Queensland construction compliance tool built for site supervisors and foremen with real on-site experience. You understand how construction sites actually operate, not just what the textbook says.
 
 Your job is to look at site photos and give an honest, practical compliance assessment against Queensland legislation and Australian Standards. You speak like an experienced site supervisor — direct, practical, and no-nonsense.
@@ -98,19 +96,106 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
 
 Max 8 findings across all photos. Max 4 legislation items. Max 3 clauses per legislation item. Omit "photo_ref" when there is only one photo.`
 
+const HAIKU_CLASSIFIER_PROMPT = `You are a Queensland construction site classifier. Look at this photo and identify every work type and legislation area that is clearly visible. Be comprehensive — do not miss anything visible. Return ONLY a JSON object, no other text:
+{
+  "work_types": ["list every visible work type e.g. scaffolding, excavation, crane_operation, traffic_management, electrical, formwork, asbestos, confined_space, working_at_heights, hot_works, plant_equipment, demolition, PPE, manual_handling, fire_safety, housekeeping"],
+  "search_query": "a specific plain English description of exactly what is visible in this photo for use as a vector search query"
+}
+Only include work types that are clearly visible. Do not guess or infer.`
+
+function matchCountForWorkTypes(count: number): number {
+  if (count >= 4) return 10
+  if (count === 3) return 7
+  if (count === 2) return 5
+  return 3
+}
+
+function extractImageBlocks(messages: any[]): any[] {
+  const imageBlocks: any[] = []
+  for (const msg of messages) {
+    if (Array.isArray(msg.content)) {
+      for (const block of msg.content) {
+        if (block.type === 'image') imageBlocks.push(block)
+      }
+    }
+  }
+  return imageBlocks
+}
+
+interface Classification {
+  work_types: string[]
+  search_query: string
+}
+
+async function classifyImage(imageBlocks: any[]): Promise<Classification | null> {
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': process.env.ANTHROPIC_API_KEY || '',
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 256,
+        temperature: 0,
+        system: HAIKU_CLASSIFIER_PROMPT,
+        messages: [{ role: 'user', content: imageBlocks }],
+      }),
+    })
+
+    if (!response.ok) {
+      console.warn('[Stage1] Haiku classifier returned', response.status)
+      return null
+    }
+
+    const data = await response.json()
+    const text: string = data.content?.[0]?.text ?? ''
+    const parsed = JSON.parse(text)
+
+    if (!Array.isArray(parsed.work_types) || !parsed.search_query) return null
+    if (parsed.work_types.length === 0) return null
+
+    return { work_types: parsed.work_types, search_query: parsed.search_query }
+  } catch (err) {
+    console.warn('[Stage1] classification failed, will use fallback:', err)
+    return null
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    // Extract our fields; ignore any 'system' key from the client
     const { searchQuery, messages, model } = body
 
-    // ── RAG: retrieve relevant legislation chunks ─────────────────────────
+    // ── Stage 1: Fast image classification ───────────────────────────────
+    const imageBlocks = extractImageBlocks(messages)
+    let classification: Classification | null = null
+
+    if (imageBlocks.length > 0) {
+      classification = await classifyImage(imageBlocks)
+      if (classification) {
+        console.log('[Stage1] work_types:', classification.work_types)
+      } else {
+        console.log('[Stage1] classification failed or returned no work types — using fallback')
+      }
+    }
+
+    // ── Stage 2: RAG retrieval ────────────────────────────────────────────
     let systemPrompt = BASE_SYSTEM_PROMPT
     try {
-      const query = (searchQuery as string | undefined)?.trim()
-        || 'construction site safety compliance Queensland WHS'
+      const query = classification
+        ? classification.search_query
+        : ((searchQuery as string | undefined)?.trim() || 'construction site safety compliance Queensland WHS')
 
-      const chunks = await searchDocuments(query)
+      const matchCount = classification
+        ? matchCountForWorkTypes(classification.work_types.length)
+        : 8
+
+      const workTypes = classification ? classification.work_types : []
+
+      const chunks = await searchDocuments(query, 'QLD', workTypes, matchCount)
 
       if (chunks.length > 0) {
         const ragSection = chunks
@@ -123,11 +208,26 @@ export async function POST(request: NextRequest) {
         console.log('[RAG] no chunks returned, using base prompt')
       }
     } catch (ragErr) {
-      // Non-fatal: log and fall back to base prompt
       console.error('[RAG] search failed, falling back to base prompt:', ragErr)
     }
 
-    // ── Forward to Anthropic ──────────────────────────────────────────────
+    // ── Stage 3: Full analysis ────────────────────────────────────────────
+    // Append work_types context to the last user message when Stage 1 succeeded
+    let finalMessages = messages
+    if (classification) {
+      const workTypesNote = `\n\nIdentified work types from initial classification: ${classification.work_types.join(', ')}`
+      finalMessages = messages.map((msg: any, idx: number) => {
+        if (idx !== messages.length - 1 || msg.role !== 'user') return msg
+        if (Array.isArray(msg.content)) {
+          return { ...msg, content: [...msg.content, { type: 'text', text: workTypesNote }] }
+        }
+        if (typeof msg.content === 'string') {
+          return { ...msg, content: msg.content + workTypesNote }
+        }
+        return msg
+      })
+    }
+
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -136,11 +236,11 @@ export async function POST(request: NextRequest) {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: model || 'claude-sonnet-4-5',
+        model: model || 'claude-sonnet-4-6',
         max_tokens: 4096,
         temperature: 0.1,
         system: systemPrompt,
-        messages,
+        messages: finalMessages,
       }),
     })
 
