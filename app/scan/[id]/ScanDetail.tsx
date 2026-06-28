@@ -246,7 +246,7 @@ export default function ScanDetail({ id }: { id: string }) {
         ...extraPhotos.map(p => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: p.base64 } })),
         { type: 'text', text: contextText },
       ]
-      const searchQuery = [scan.work_type, scan.site_name, additionalInfo].filter(Boolean).join(' ')
+      const searchQuery = [scan.work_type, additionalInfo].filter(Boolean).join(' ')
       const res = await fetch('/api/analyse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ max_tokens: 2000, messages: [{ role: 'user', content: userContent }], searchQuery }) })
       const data = JSON.parse(await res.text())
       if (!res.ok || data.error) throw new Error(data.error?.message || 'Analysis failed')
