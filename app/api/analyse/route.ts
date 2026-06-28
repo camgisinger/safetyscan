@@ -215,18 +215,22 @@ export async function POST(request: NextRequest) {
       } else {
         console.log('[Stage1] classification failed or returned no work types — using fallback')
       }
+    } else {
+      console.log('[Stage1] no images in request — skipping classifier')
     }
 
     // ── Stage 2: RAG retrieval ────────────────────────────────────────────
     let systemPrompt = BASE_SYSTEM_PROMPT
     try {
+      const hasImages = imageBlocks.length > 0
+
       const query = classification
         ? classification.search_query
         : ((searchQuery as string | undefined)?.trim() || 'construction site safety compliance Queensland WHS')
 
       const matchCount = classification
         ? matchCountForWorkTypes(classification.work_types.length)
-        : 8
+        : hasImages ? 8 : 3
 
       const workTypes = classification ? classification.work_types : []
 

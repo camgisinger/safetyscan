@@ -242,8 +242,10 @@ export default function ScanDetail({ id }: { id: string }) {
     setContinueLoading(true); setContinueError(null)
     try {
       const contextText = `Analyse these construction site photos for Queensland compliance, building on a previous assessment.\n\nPrevious assessment:\nWork type: ${scan.work_type}\nStatus: ${scan.status} (${scan.confidence} confidence)\nSummary: ${scan.summary}\nFindings: ${(scan.findings || []).map((f: any) => f.text || f.title || '').filter(Boolean).join(', ')}\nLegislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${additionalInfo ? `\n\nAdditional context: ${additionalInfo}` : ''}`
-      const originalPhotoContent: any[] = (scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])).map((url: string) => ({ type: 'image', source: { type: 'url', url } }))
-      const userContent: any[] = [...originalPhotoContent, ...extraPhotos.map(p => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: p.base64 } })), { type: 'text', text: contextText }]
+      const userContent: any[] = [
+        ...extraPhotos.map(p => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: p.base64 } })),
+        { type: 'text', text: contextText },
+      ]
       const searchQuery = [scan.work_type, scan.site_name, additionalInfo].filter(Boolean).join(' ')
       const res = await fetch('/api/analyse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ max_tokens: 2000, messages: [{ role: 'user', content: userContent }], searchQuery }) })
       const data = JSON.parse(await res.text())
