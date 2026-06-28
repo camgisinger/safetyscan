@@ -2,7 +2,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "../lib/supabase";
-import { convertToJpeg, SYSTEM_PROMPT } from "./PhotoResultCard";
+import { convertToJpeg } from "./PhotoResultCard";
 import AppHeader from "./AppHeader";
 
 if (typeof window !== 'undefined') {
@@ -31,9 +31,7 @@ async function analysePhotos(photoList, context, searchQuery) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "claude-sonnet-4-5",
-        max_tokens: 2000,
-        // system prompt is now injected server-side with RAG context
+        // model and max_tokens are set server-side in app/api/analyse/route.ts
         messages: [{ role: "user", content: userContent }],
         searchQuery: searchQuery || "construction site safety compliance Queensland WHS",
       }),
