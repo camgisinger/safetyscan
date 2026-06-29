@@ -316,7 +316,7 @@ export default function HelpContent() {
               <div>
                 <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--clear-tx)', marginBottom: 4 }}>Message sent</div>
                 <div style={{ fontSize: 14, color: 'var(--text)', lineHeight: 1.6 }}>
-                  Your message has been sent. We will respond within 2 business days.
+                  Your message has been sent.
                 </div>
               </div>
             </div>
