@@ -159,10 +159,10 @@ function Hero() {
       <div className="wrap hero__grid">
         <div className="hero__copy">
           <span className="eyebrow">AI Construction Compliance · Queensland</span>
-          <h1>The AI Construction Compliance Scanner Built for <span className="amber">Queensland Sites</span></h1>
+          <h1>The Construction Compliance Scanner Built for <span className="amber">Queensland Sites</span></h1>
           <p className="hero__sub">
-            Snap a photo and SafetyScan checks your site against Queensland WHS legislation and Australian Standards in seconds.
-            It&apos;s the construction safety inspection app that catches the gap before the regulator does.
+            Powered by AI, SafetyScan checks your site against Queensland WHS legislation and Australian Standards in seconds.
+            The construction safety inspection app that catches the gap before the regulator does.
           </p>
           <div className="hero__actions">
             <a className="btn btn--amber" href="#demo">Request a Demo {Icons.arrow}</a>
@@ -178,33 +178,6 @@ function Hero() {
         </div>
       </div>
     </header>
-  )
-}
-
-// ---------- Social proof ----------
-const PROOF = [
-  { name: 'Riverline Constructions', icon: Icons.building },
-  { name: 'Northgate Civil',         icon: Icons.hardhat },
-  { name: 'Westgate Group',          icon: Icons.grid },
-  { name: 'Kelvin Bros Builders',    icon: Icons.shield },
-  { name: 'Brisbane Scaffold Co',    icon: Icons.users },
-]
-
-function Social() {
-  return (
-    <section className="social">
-      <div className="wrap">
-        <div className="social__label">Trusted by site supervisors across Queensland</div>
-        <div className="social__row">
-          {PROOF.map(p => (
-            <span className="social__logo" key={p.name}>
-              <span className="glyph">{p.icon}</span>
-              {p.name}
-            </span>
-          ))}
-        </div>
-      </div>
-    </section>
   )
 }
 
@@ -611,7 +584,6 @@ export default function LandingPage() {
     <div className="lp">
       <Nav isLoggedIn={isLoggedIn} />
       <Hero />
-      <Social />
       <HowItWorks />
       <Features />
       <ScanExample />
