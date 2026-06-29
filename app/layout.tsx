@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, Geist_Mono } from "next/font/google";
+import { Schibsted_Grotesk, Geist_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import "./styles/tokens.css";
 import FloatingActionButton from "../components/FloatingActionButton";
@@ -16,6 +16,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+});
+
+const geist = Geist({
+  variable: "--font-geist",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -49,7 +55,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="dark" className={`${schibsted.variable} ${geistMono.variable} h-full`}>
+    <html lang="en" data-theme="dark" className={`${schibsted.variable} ${geistMono.variable} ${geist.variable} h-full`}>
       <body className="min-h-full flex flex-col">
         {children}
         <BottomNav />

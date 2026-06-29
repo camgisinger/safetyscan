@@ -41,9 +41,9 @@
   --status-green-bg:   rgba(79, 176, 122, 0.14);
   --status-amber-bg:   rgba(243, 148, 16, 0.14);
 
-  /* Type */
-  --lp-ff-sans: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --lp-ff-mono: 'Geist Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  /* Type — var(--font-geist) and var(--font-geist-mono) are injected by next/font */
+  --lp-ff-sans: var(--font-geist), 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --lp-ff-mono: var(--font-geist-mono), ui-monospace, Menlo, monospace;
 
   /* Radius */
   --r-card:    16px;
