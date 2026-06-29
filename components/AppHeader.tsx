@@ -172,7 +172,7 @@ export default function AppHeader({
               </span>
             </div>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: 0, marginBottom: 'auto' }}>
-              {[{ label: 'Home', href: '/dashboard' }, { label: 'Scans', href: '/scans' }, { label: 'Sites', href: '/sites' }, { label: 'Profile', href: '/profile' }, { label: 'Guide', href: '/guide' }].map(item => (
+              {[{ label: 'Home', href: '/dashboard' }, { label: 'Scans', href: '/scans' }, { label: 'Sites', href: '/sites' }, { label: 'Profile', href: '/profile' }, { label: 'Guide', href: '/guide' }, { label: 'Privacy', href: '/privacy' }, { label: 'Terms', href: '/terms' }].map(item => (
                 <button key={item.href} onClick={() => { router.push(item.href); closeMenu() }}
                   style={{ background: 'transparent', border: 'none', color: 'var(--text)', fontSize: 16, fontWeight: 500, cursor: 'pointer', textAlign: 'left', padding: '13px 0', borderBottom: '1.5px solid var(--div)', fontFamily: 'inherit' }}>
                   {item.label}

@@ -149,6 +149,18 @@ export default function ProfilePage() {
             <div style={{ flex: 1, fontSize: 14, fontWeight: 500, color: 'var(--text)' }}>Privacy & data</div>
             <span style={{ opacity: 0.4 }}>›</span>
           </button>
+          {/* Privacy policy */}
+          <button onClick={() => router.push('/privacy')} style={{ ...rowStyle, ...divStyle, width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
+            <div style={iconChip}><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1.5" stroke="currentColor" strokeWidth="1.4"/><path d="M5.5 5h5M5.5 7.5h5M5.5 10h3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg></div>
+            <div style={{ flex: 1, fontSize: 14, fontWeight: 500, color: 'var(--text)' }}>Privacy policy</div>
+            <span style={{ opacity: 0.4 }}>›</span>
+          </button>
+          {/* Terms */}
+          <button onClick={() => router.push('/terms')} style={{ ...rowStyle, ...divStyle, width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
+            <div style={iconChip}><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1.5" stroke="currentColor" strokeWidth="1.4"/><path d="M5.5 5h5M5.5 7.5h4M5.5 10h2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg></div>
+            <div style={{ flex: 1, fontSize: 14, fontWeight: 500, color: 'var(--text)' }}>Terms & conditions</div>
+            <span style={{ opacity: 0.4 }}>›</span>
+          </button>
           {/* Help */}
           <button style={{ ...rowStyle, ...divStyle, width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
             <div style={iconChip}><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.4"/><path d="M6.5 6.5a1.5 1.5 0 1 1 2.5 1.2c-.6.4-1 .7-1 1.3M8 11v.3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg></div>
