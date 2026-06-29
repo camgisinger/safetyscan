@@ -161,7 +161,7 @@ function Hero() {
           <span className="eyebrow">AI Construction Compliance · Queensland</span>
           <h1>The AI Construction Compliance Scanner Built for <span className="amber">Queensland Sites</span></h1>
           <p className="hero__sub">
-            Snap a photo and SafetyScan checks your site against Queensland WHS legislation in seconds.
+            Snap a photo and SafetyScan checks your site against Queensland WHS legislation and Australian Standards in seconds.
             It&apos;s the construction safety inspection app that catches the gap before the regulator does.
           </p>
           <div className="hero__actions">
@@ -211,8 +211,8 @@ function Social() {
 // ---------- How It Works ----------
 const STEPS = [
   { icon: Icons.camera, title: 'Take a photo of your site',       desc: 'Point your phone at the work area — scaffolding, an excavation, a traffic setup — and capture it. No forms, no checklists to dig through.' },
-  { icon: Icons.cpu,    title: 'AI analyses it instantly',         desc: 'SafetyScan reads the scene against the Queensland WHS Act, WHS Regulation 2011 and the relevant Codes of Practice in seconds.' },
-  { icon: Icons.report, title: 'Get a detailed compliance report', desc: 'Receive specific findings with exact clause references — what\'s compliant, what\'s a risk, and the regulation number behind every call.' },
+  { icon: Icons.cpu,    title: 'AI analyses it instantly',         desc: 'SafetyScan reads the scene against the Queensland WHS Act, WHS Regulation 2011, relevant Codes of Practice and the Australian Standards they reference — in seconds.' },
+  { icon: Icons.report, title: 'Get a detailed compliance report', desc: 'Receive specific findings with exact clause and standard references — what\'s compliant, what\'s a risk, and the regulation or standard behind every call.' },
 ]
 
 function HowItWorks() {
@@ -243,8 +243,8 @@ function HowItWorks() {
 // ---------- Features ----------
 const FEATURES = [
   { icon: Icons.bolt,     title: 'Instant AI analysis',               desc: 'Results in seconds, not hours. The AI safety scanner reviews each photo on the spot so you can fix issues while you\'re still standing on site.' },
-  { icon: Icons.scales,   title: 'Queensland legislation built in',    desc: 'WHS Act 2011, the WHS Regulation and every relevant Code of Practice are baked into the OHS compliance checker — no manual lookups.' },
-  { icon: Icons.clause,   title: 'Specific clause references',         desc: 'Not vague advice. Each finding cites the exact regulation number so you know precisely what applies and where to act.' },
+  { icon: Icons.scales,   title: 'Legislation & standards built in',   desc: 'WHS Act 2011, the WHS Regulation, every relevant Code of Practice and the Australian Standards they reference are baked in — no manual lookups.' },
+  { icon: Icons.clause,   title: 'Specific clause references',         desc: 'Not vague advice. Each finding cites the exact regulation clause or Australian Standard so you know precisely what applies and where to act.' },
   { icon: Icons.devices,  title: 'Works on any device',                desc: 'Phone, tablet or desktop. Run a safety scan of a construction site from the field or review reports back in the site office.' },
   { icon: Icons.grid,     title: 'Multiple work types',                desc: 'Scaffolding, excavation, traffic management, cranes, electrical, asbestos and more — covering the high-risk work you actually do.' },
   { icon: Icons.database, title: 'RAG-powered accuracy',               desc: 'Analysis is grounded in real regulatory documents through retrieval, not just AI training data — so findings reflect current law.' },
@@ -282,7 +282,7 @@ function ScanExample() {
         <div className="section-head-c">
           <span className="eyebrow eyebrow--center eyebrow--ink">Real scan example</span>
           <h2 className="sec-title">See exactly what a SafetyScan result looks like</h2>
-          <p className="sec-lead">One photo of a scaffold bay, analysed against Queensland WHS legislation. Here&apos;s the kind of report your crew gets back.</p>
+          <p className="sec-lead">One photo of a scaffold bay, analysed against Queensland WHS legislation and Australian Standards. Here&apos;s the kind of report your crew gets back.</p>
         </div>
         <div className="example__grid">
           <div className="example__photo">
@@ -318,7 +318,7 @@ function ScanExample() {
               clause="WHS Regulation 2011 s.44" />
             <div className="example__panel-foot">
               {Icons.shield}
-              Every finding links back to the regulation it&apos;s based on.
+              Every finding links back to the regulation or standard it&apos;s based on.
             </div>
           </div>
         </div>
@@ -367,7 +367,7 @@ const TIERS: { name: string; tag: string; price: string; soon: boolean; note: st
     cta: 'Start Free Trial', ctaCls: 'btn--ghost',
     feats: [
       'AI compliance scanning',
-      'Queensland WHS legislation built in',
+      'Queensland WHS legislation & Australian Standards built in',
       <span key="scans"><b>Up to 20 scans</b> per month</span>,
       'Scan history',
       'Share reports',
@@ -472,7 +472,7 @@ function Demo() {
 
   const DEMO_POINTS = [
     'Currently in limited beta — demos available now',
-    'See a live scan against Queensland WHS legislation',
+    'See a live scan against Queensland WHS legislation and Australian Standards',
     'No obligation, no credit card',
   ]
 
