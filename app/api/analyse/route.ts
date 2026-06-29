@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
     const { searchQuery, messages, model } = body
 
     // ── RAG: retrieve relevant legislation chunks ─────────────────────────
-    let systemPrompt = BASE_SYSTEM_PROMPT
+    let ragSection = ''
     try {
       const query = (searchQuery as string | undefined)?.trim()
         || 'construction site safety compliance Queensland WHS'
@@ -145,17 +145,31 @@ export async function POST(request: NextRequest) {
       const chunks = await searchDocuments(query)
 
       if (chunks.length > 0) {
-        const ragSection = chunks
+        ragSection = chunks
           .map(c => `## ${c.title}\nSource: ${c.source || 'Queensland legislation'}\n\n${c.content}`)
           .join('\n\n---\n\n')
-        systemPrompt = BASE_SYSTEM_PROMPT
-          + '\n\nRELEVANT QUEENSLAND LEGISLATION FROM DATABASE:\n\n'
-          + ragSection
       } else {
         console.log('[RAG] no chunks returned, using base prompt')
       }
     } catch (ragErr) {
       console.error('[RAG] search failed, falling back to base prompt:', ragErr)
+    }
+
+    // ── Build system blocks (prompt caching) ─────────────────────────────
+    // Block 1 is stable every request → cached by Anthropic.
+    // Block 2 contains RAG chunks which change per scan → not cached.
+    const systemBlocks: object[] = [
+      {
+        type: 'text',
+        text: BASE_SYSTEM_PROMPT,
+        cache_control: { type: 'ephemeral' },
+      },
+    ]
+    if (ragSection) {
+      systemBlocks.push({
+        type: 'text',
+        text: `\n\nRELEVANT QUEENSLAND LEGISLATION FROM DATABASE:\n\n${ragSection}`,
+      })
     }
 
     // ── Forward to Anthropic ──────────────────────────────────────────────
@@ -165,12 +179,13 @@ export async function POST(request: NextRequest) {
         'Content-Type': 'application/json',
         'x-api-key': process.env.ANTHROPIC_API_KEY || '',
         'anthropic-version': '2023-06-01',
+        'anthropic-beta': 'prompt-caching-2024-07-31',
       },
       body: JSON.stringify({
         model: model || 'claude-sonnet-4-6',
         max_tokens: 4096,
         temperature: 0.1,
-        system: systemPrompt,
+        system: systemBlocks,
         messages,
       }),
     })
