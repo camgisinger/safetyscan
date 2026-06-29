@@ -600,15 +600,10 @@ function Footer() {
 // ---------- Root ----------
 export default function LandingPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const router = useRouter()
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) {
-        router.push('/dashboard')
-      } else {
-        setIsLoggedIn(false)
-      }
+      setIsLoggedIn(!!session)
     })
   }, [])
 
