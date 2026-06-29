@@ -10,6 +10,13 @@ export async function GET(request: NextRequest) {
   const auth = request.headers.get('authorization') || ''
   const secret = process.env.ADMIN_SECRET
 
+  console.log('[admin/usage] ADMIN_SECRET present:', !!secret)
+  console.log('[admin/usage] ADMIN_SECRET length:', secret?.length ?? 0)
+  console.log('[admin/usage] Auth header received:', !!request.headers.get('authorization'))
+  console.log('[admin/usage] Auth header length:', auth.length)
+  console.log('[admin/usage] Auth header starts with "Bearer ":', auth.startsWith('Bearer '))
+  console.log('[admin/usage] Match:', !!secret && auth === `Bearer ${secret}`)
+
   if (!secret || auth !== `Bearer ${secret}`) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
