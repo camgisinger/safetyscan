@@ -6,47 +6,71 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 )
 
+function extractSecret(request: NextRequest): string {
+  const header = request.headers.get('authorization') || ''
+  if (header.startsWith('Bearer ')) return header.slice(7).trim()
+  return (request.nextUrl.searchParams.get('secret') || '').trim()
+}
+
 export async function GET(request: NextRequest) {
-  const auth = request.headers.get('authorization') || ''
-  const secret = process.env.ADMIN_SECRET
+  const provided = extractSecret(request)
+  const secret = process.env.ADMIN_SECRET?.trim()
 
-  console.log('[admin/usage] ADMIN_SECRET present:', !!secret)
-  console.log('[admin/usage] ADMIN_SECRET length:', secret?.length ?? 0)
-  console.log('[admin/usage] Auth header received:', !!request.headers.get('authorization'))
-  console.log('[admin/usage] Auth header length:', auth.length)
-  console.log('[admin/usage] Auth header starts with "Bearer ":', auth.startsWith('Bearer '))
-  console.log('[admin/usage] Match:', !!secret && auth === `Bearer ${secret}`)
-
-  if (!secret || auth !== `Bearer ${secret}`) {
+  if (!secret || !provided || provided !== secret) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   try {
-    const { data, error } = await supabase.rpc('admin_scan_counts_this_month')
+    // NOTE: listUsers() paginates at 50 users by default. When user count grows
+    // past 50, implement pagination using data.aq_pagination.nextCursor to
+    // loop through all pages before building the email map.
+    const { data: authData, error: authError } = await supabase.auth.admin.listUsers()
+    if (authError) throw new Error(`listUsers failed: ${authError.message}`)
 
-    if (error) {
-      // Fallback: raw query if the RPC doesn't exist yet
-      const { data: rows, error: qErr } = await supabase
-        .from('scans')
-        .select('user_id, created_at')
-        .gte('created_at', new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString())
-
-      if (qErr) throw new Error(qErr.message)
-
-      const counts: Record<string, number> = {}
-      for (const row of rows || []) {
-        counts[row.user_id] = (counts[row.user_id] || 0) + 1
-      }
-
-      const month = new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString()
-      const result = Object.entries(counts)
-        .map(([user_id, scan_count]) => ({ user_id, scan_count, month }))
-        .sort((a, b) => b.scan_count - a.scan_count)
-
-      return NextResponse.json(result)
+    const emailMap: Record<string, string> = {}
+    for (const user of authData.users) {
+      emailMap[user.id] = user.email || user.id
     }
 
-    return NextResponse.json(data)
+    const now = new Date()
+    const monthStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1)).toISOString()
+    const todayStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate())).toISOString()
+
+    const { data: scans, error: scansError } = await supabase
+      .from('scans')
+      .select('user_id, created_at')
+      .gte('created_at', monthStart)
+
+    if (scansError) throw new Error(`scans query failed: ${scansError.message}`)
+
+    const monthCounts: Record<string, number> = {}
+    let scansToday = 0
+
+    for (const scan of scans || []) {
+      monthCounts[scan.user_id] = (monthCounts[scan.user_id] || 0) + 1
+      if (scan.created_at >= todayStart) scansToday++
+    }
+
+    const totalScansThisMonth = (scans || []).length
+    const totalUsers = Object.keys(monthCounts).length
+    const averageScansPerUser =
+      totalUsers > 0 ? Math.round((totalScansThisMonth / totalUsers) * 10) / 10 : 0
+
+    const users = Object.entries(monthCounts)
+      .map(([user_id, scan_count]) => ({
+        user_id,
+        email: emailMap[user_id] || user_id,
+        scan_count,
+      }))
+      .sort((a, b) => b.scan_count - a.scan_count)
+
+    return NextResponse.json({
+      total_scans_this_month: totalScansThisMonth,
+      total_users: totalUsers,
+      scans_today: scansToday,
+      average_scans_per_user: averageScansPerUser,
+      users,
+    })
   } catch (err: any) {
     console.error('[admin/usage]', err)
     return NextResponse.json({ error: err.message || 'Query failed' }, { status: 500 })

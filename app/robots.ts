@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: ['/', '/guide', '/shared/'],
-        disallow: ['/dashboard', '/scan/', '/sites/'],
+        disallow: ['/dashboard', '/scan/', '/sites/', '/ssinternal'],
       },
     ],
     sitemap: 'https://safetyscan.com.au/sitemap.xml',
