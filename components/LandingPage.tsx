@@ -16,6 +16,9 @@ const Icons = {
   devices:  <svg viewBox="0 0 24 24" {...S}><rect x="2.5" y="5" width="13" height="10" rx="1.4"/><path d="M2.5 18h13"/><rect x="16.5" y="9" width="5" height="11" rx="1.2"/></svg>,
   grid:     <svg viewBox="0 0 24 24" {...S}><rect x="3.5" y="3.5" width="7" height="7" rx="1.3"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.3"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.3"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.3"/></svg>,
   database: <svg viewBox="0 0 24 24" {...S}><ellipse cx="12" cy="5.5" rx="7" ry="2.6"/><path d="M5 5.5v6c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-6"/><path d="M5 11.5v6c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-6"/></svg>,
+  sites:    <svg viewBox="0 0 24 24" {...S}><rect x="3" y="3" width="7" height="7" rx="1.3"/><rect x="3" y="14" width="7" height="7" rx="1.3"/><path d="M13.5 5.5h7M13.5 8.5h4.5M13.5 16.5h7M13.5 19.5h4.5"/></svg>,
+  checklist:<svg viewBox="0 0 24 24" {...S}><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6l1.2 1.2L8 4M4.5 12l1.2 1.2L8 10M4.5 18l1.2 1.2L8 16"/></svg>,
+  export:   <svg viewBox="0 0 24 24" {...S}><path d="M14 3h5a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-5"/><path d="M14 3v5h5"/><path d="M3 12h9M8.5 7.5 3 12l5.5 4.5"/></svg>,
   hardhat:  <svg viewBox="0 0 24 24" {...S}><path d="M3 16a9 9 0 0 1 18 0"/><path d="M2 16h20v2.4a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M9.5 8.2V5.5A1.5 1.5 0 0 1 11 4h2a1.5 1.5 0 0 1 1.5 1.5v2.7"/></svg>,
   shield:   <svg viewBox="0 0 24 24" {...S}><path d="M12 3 5 5.6v5.2c0 4.4 3 7.6 7 9.2 4-1.6 7-4.8 7-9.2V5.6z"/><path d="M9 12l2 2 4-4.2"/></svg>,
   building: <svg viewBox="0 0 24 24" {...S}><path d="M4 21V5.5L13 3v18M13 21h7V9l-7-2.2"/><path d="M7 8.5h2.5M7 12h2.5M7 15.5h2.5M16 12h1.5M16 15.5h1.5"/></svg>,
@@ -158,7 +161,6 @@ function Hero() {
       <div className="hero__bg" />
       <div className="wrap hero__grid">
         <div className="hero__copy">
-          <span className="eyebrow">AI Construction Compliance · Queensland</span>
           <h1>The Construction Compliance Scanner Built for <span className="amber">Queensland Sites</span></h1>
           <p className="hero__sub">
             Powered by AI, SafetyScan checks your site against Queensland WHS legislation and Australian Standards in seconds.
@@ -219,8 +221,11 @@ const FEATURES = [
   { icon: Icons.scales,   title: 'Legislation & standards built in',   desc: 'WHS Act 2011, the WHS Regulation, every relevant Code of Practice and the Australian Standards they reference are baked in — no manual lookups.' },
   { icon: Icons.clause,   title: 'Specific clause references',         desc: 'Not vague advice. Each finding cites the exact regulation clause or Australian Standard so you know precisely what applies and where to act.' },
   { icon: Icons.devices,  title: 'Works on any device',                desc: 'Phone, tablet or desktop. Run a safety scan of a construction site from the field or review reports back in the site office.' },
-  { icon: Icons.grid,     title: 'Multiple work types',                desc: 'Scaffolding, excavation, traffic management, cranes, electrical, asbestos and more — covering the high-risk work you actually do.' },
-  { icon: Icons.database, title: 'RAG-powered accuracy',               desc: 'Analysis is grounded in real regulatory documents through retrieval, not just AI training data — so findings reflect current law.' },
+  { icon: Icons.grid,      title: 'Multiple work types',                desc: 'Scaffolding, excavation, traffic management, cranes, electrical, asbestos and more — covering the high-risk work you actually do.' },
+  { icon: Icons.database,  title: 'RAG-powered accuracy',               desc: 'Analysis is grounded in real regulatory documents through retrieval, not just AI training data — so findings reflect current law.' },
+  { icon: Icons.sites,     title: 'Site management',                    desc: 'See every site at a glance with a full history of scans for each one — so nothing slips through and your paper trail is always there.' },
+  { icon: Icons.checklist, title: 'Checklist creation',                 desc: 'Turn scan findings into a ready-to-use site checklist in one tap. Hand it to the crew or file it as documented evidence of your pre-start.' },
+  { icon: Icons.export,    title: 'PDF export & shareable links',       desc: 'Export any scan result as a formatted PDF or share a link directly with subcontractors, principal contractors, or your safety team.' },
 ]
 
 function Features() {
