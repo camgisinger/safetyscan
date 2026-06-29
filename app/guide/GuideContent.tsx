@@ -18,7 +18,7 @@ export default function GuideContent() {
 
   const navigateBack = () => {
     setExiting(true)
-    setTimeout(() => router.push('/dashboard'), 280)
+    setTimeout(() => router.back(), 280)
   }
 
   return (

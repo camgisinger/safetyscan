@@ -69,7 +69,7 @@ export default function EditProfilePage() {
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', paddingBottom: 48 }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}} input,select{outline:none}`}</style>
-      <AppHeader variant="detail" title="Edit profile" onBack={() => router.push('/profile')}/>
+      <AppHeader variant="detail" title="Edit profile" onBack={() => router.back()}/>
 
       <main style={{ maxWidth: 480, margin: '0 auto', padding: '8px 18px 48px' }}>
         <form onSubmit={handleSave} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
