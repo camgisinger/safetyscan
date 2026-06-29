@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       console.error('[contact] Resend error:', error)
-      return NextResponse.json({ error: 'Failed to send message. Please try again.' }, { status: 500 })
+      return NextResponse.json({ error: error.message || 'Failed to send message. Please try again.' }, { status: 500 })
     }
 
     return NextResponse.json({ success: true })
