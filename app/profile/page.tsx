@@ -156,7 +156,7 @@ export default function ProfilePage() {
             <span style={{ opacity: 0.4 }}>›</span>
           </button>
           {/* Help */}
-          <button style={{ ...rowStyle, ...divStyle, width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
+          <button onClick={() => router.push('/help')} style={{ ...rowStyle, ...divStyle, width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
             <div style={iconChip}><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.4"/><path d="M6.5 6.5a1.5 1.5 0 1 1 2.5 1.2c-.6.4-1 .7-1 1.3M8 11v.3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg></div>
             <div style={{ flex: 1, fontSize: 14, fontWeight: 500, color: 'var(--text)' }}>Help & support</div>
             <span style={{ opacity: 0.4 }}>›</span>

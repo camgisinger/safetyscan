@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: 'https://safetyscan.com.au/help',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
       url: 'https://safetyscan.com.au/privacy',
       lastModified: new Date(),
       changeFrequency: 'yearly',
