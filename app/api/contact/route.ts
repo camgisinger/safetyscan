@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { error } = await resend.emails.send({
-      from: 'noreply@send.safetyscan.com.au',
+      from: 'noreply@safetyscan.com.au',
       to: 'support@safetyscan.com.au',
       replyTo: email.trim(),
       subject: `[SafetyScan Support] ${subject} — from ${name.trim()}`,
