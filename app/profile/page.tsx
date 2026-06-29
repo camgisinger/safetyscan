@@ -143,12 +143,6 @@ export default function ProfilePage() {
             <div style={{ flex: 1, fontSize: 14, fontWeight: 500, color: 'var(--text)' }}>Appearance</div>
             <span style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.08em', color: 'var(--mut)' }}>{isDark ? 'DARK' : 'LIGHT'} ›</span>
           </button>
-          {/* Privacy */}
-          <button style={{ ...rowStyle, ...divStyle, width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
-            <div style={iconChip}><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l5.5 2v4.2C13.5 11 11 13.5 8 14.5 5 13.5 2.5 11 2.5 7.7V3.5L8 1.5z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/></svg></div>
-            <div style={{ flex: 1, fontSize: 14, fontWeight: 500, color: 'var(--text)' }}>Privacy & data</div>
-            <span style={{ opacity: 0.4 }}>›</span>
-          </button>
           {/* Privacy policy */}
           <button onClick={() => router.push('/privacy')} style={{ ...rowStyle, ...divStyle, width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
             <div style={iconChip}><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1.5" stroke="currentColor" strokeWidth="1.4"/><path d="M5.5 5h5M5.5 7.5h5M5.5 10h3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg></div>
