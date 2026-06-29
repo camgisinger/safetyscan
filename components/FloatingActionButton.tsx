@@ -2,7 +2,7 @@
 import { useRouter, usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
-const HIDE_ON = ['/', '/login', '/profile', '/guide']
+const HIDE_ON = ['/', '/login', '/profile', '/guide', '/scan/new']
 const DRAWER_WIDTH = 280
 
 export default function FloatingActionButton() {
@@ -31,7 +31,7 @@ export default function FloatingActionButton() {
     <button
       onClick={() => {
         if (sidebarOpen) window.dispatchEvent(new CustomEvent('sidebar-close'))
-        router.push('/')
+        router.push('/scan/new')
       }}
       style={{
         position: 'fixed',

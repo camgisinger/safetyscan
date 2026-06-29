@@ -1,45 +1,36 @@
-'use client'
-import { useEffect, useState, Suspense } from 'react'
-import { useRouter } from 'next/navigation'
-import { supabase } from '../lib/supabase'
-import SafetyScan from '../components/SafetyScan'
+import type { Metadata } from 'next'
+import LandingPage from '../components/LandingPage'
 
-function AuthGate() {
-  const [loading, setLoading] = useState(true)
-  const [authed, setAuthed] = useState(false)
-  const router = useRouter()
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (!session) {
-        router.push('/login')
-      } else {
-        setAuthed(true)
-        setLoading(false)
-      }
-    })
-  }, [])
-
-  if (loading) return (
-    <div style={{ minHeight: "100vh", background: "#EFEAE0", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <div style={{ width: 32, height: 32, border: "3px solid #E0DDD6", borderTopColor: "#F39410", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
-      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-    </div>
-  )
-
-  if (!authed) return null
-  return <SafetyScan />
+export const metadata: Metadata = {
+  title: 'SafetyScan — AI Construction Compliance Scanner for Queensland Sites',
+  description: 'Instant AI-powered WHS compliance scanning for Queensland construction sites. Upload a photo, get a detailed compliance report with specific clause references in seconds.',
+  keywords: [
+    'AI construction compliance',
+    'WHS compliance scanner Queensland',
+    'construction safety inspection app',
+    'OHS compliance checker',
+    'safety scan construction site',
+    'AI safety scanner',
+    'Queensland WHS compliance',
+    'construction site safety requirements Queensland',
+    'WHS Regulation 2011',
+    'site supervisor compliance tool',
+    'construction compliance app Australia',
+  ],
+  openGraph: {
+    title: 'SafetyScan — AI Construction Compliance Scanner for Queensland Sites',
+    description: 'Snap a photo and SafetyScan checks your site against Queensland WHS legislation in seconds.',
+    url: 'https://safetyscan.com.au',
+    siteName: 'SafetyScan',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SafetyScan — AI Construction Compliance Scanner',
+    description: 'Snap a photo and SafetyScan checks your site against Queensland WHS legislation in seconds.',
+  },
 }
 
 export default function Page() {
-  return (
-    <Suspense fallback={
-      <div style={{ minHeight: "100vh", background: "#EFEAE0", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ width: 32, height: 32, border: "3px solid #E0DDD6", borderTopColor: "#F39410", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
-        <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-      </div>
-    }>
-      <AuthGate />
-    </Suspense>
-  )
+  return <LandingPage />
 }
