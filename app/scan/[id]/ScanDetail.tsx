@@ -20,44 +20,241 @@ async function imageUrlToDataUrl(url: string): Promise<string | null> {
 async function exportScanPDF(scan: Scan, siteName: string | null, checklist: any[], checklistState: Record<string, any>, notes: string) {
   const { jsPDF } = await import('jspdf')
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
-  const pw = 210, ph = 297, ml = 20, mr = 20, cw = pw - ml - mr
+
+  const pw = 210, ph = 297, ml = 18, mr = 18, cw = pw - ml - mr
   let y = 0
-  doc.setFillColor(22, 24, 28); doc.rect(0, 0, pw, 20, 'F')
-  doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(239, 234, 224)
-  doc.text('Safety', ml, 13); doc.setTextColor(243, 148, 16); doc.text('Scan', ml + doc.getTextWidth('Safety') + 1, 13)
-  doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(180, 180, 180)
-  doc.text('Queensland Construction Compliance', pw - mr, 13, { align: 'right' }); y = 30
-  doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(22, 24, 28)
+
+  // ── Design tokens ────────────────────────────────────────────────────────────
+  type RGB = [number, number, number]
+  const NAVY:    RGB = [22,  24,  28]
+  const AMBER:   RGB = [243, 148, 16]
+  const CREAM:   RGB = [241, 239, 232]
+  const TEXT:    RGB = [22,  24,  28]
+  const MUT:     RGB = [120, 120, 120]
+  const LINE:    RGB = [220, 218, 210]
+  const WHITE:   RGB = [255, 255, 255]
+  const GREEN:   RGB = [26,  122, 69]
+  const RED:     RGB = [225, 75,  61]
+  const WARN:    RGB = [163, 98,  0]
+  const GREY:    RGB = [74,  77,  82]
+  const CARDBG:  RGB = [248, 247, 244]
+  const HDIM:    RGB = [180, 180, 180]
+  const CBXLINE: RGB = [160, 160, 160]
+
+  const fill   = (c: RGB) => doc.setFillColor(c[0], c[1], c[2])
+  const stroke = (c: RGB) => doc.setDrawColor(c[0], c[1], c[2])
+  const color  = (c: RGB) => doc.setTextColor(c[0], c[1], c[2])
+
+  // ── Header bar ───────────────────────────────────────────────────────────────
+  fill(NAVY); doc.rect(0, 0, pw, 22, 'F')
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(15); color(WHITE)
+  doc.text('Safety', ml, 14.5)
+  color(AMBER); doc.text('Scan', ml + doc.getTextWidth('Safety') + 0.8, 14.5)
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(8); color(HDIM)
+  const hDate = new Date(scan.created_at).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
+  doc.text(siteName ? `${siteName}  ·  ${hDate}` : hDate, pw - mr, 14.5, { align: 'right' })
+  y = 32
+
+  // ── Title ────────────────────────────────────────────────────────────────────
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(18); color(TEXT)
   const titleLines = doc.splitTextToSize(scan.work_type || 'Compliance Scan', cw)
-  doc.text(titleLines, ml, y); y += titleLines.length * 7 + 3
-  doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(120, 120, 120)
-  doc.text(`Date: ${new Date(scan.created_at).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })}${siteName ? `  ·  Site: ${siteName}` : ''}`, ml, y); y += 8
-  const statusCfg: Record<string, { r: number; g: number; b: number; label: string }> = { pass: { r: 26, g: 122, b: 69, label: 'Compliant' }, fail: { r: 225, g: 75, b: 61, label: 'Issues Found' }, uncertain: { r: 163, g: 98, b: 0, label: 'Uncertain' }, not_applicable: { r: 74, g: 77, b: 82, label: 'N/A' } }
-  const sc = statusCfg[scan.status] || statusCfg.uncertain
-  doc.setFillColor(sc.r, sc.g, sc.b); doc.roundedRect(ml, y, 36, 7, 2, 2, 'F')
-  doc.setFont('helvetica', 'bold'); doc.setFontSize(8); doc.setTextColor(255, 255, 255)
-  doc.text(sc.label, ml + 18, y + 4.5, { align: 'center' })
-  doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(120, 120, 120)
-  doc.text(`Confidence: ${scan.confidence || 'low'}`, ml + 40, y + 4.5); y += 14
+  doc.text(titleLines, ml, y); y += titleLines.length * 8 + 3
+
+  // ── Status badge ─────────────────────────────────────────────────────────────
+  const STATUS: Record<string, { c: RGB; label: string }> = {
+    pass:           { c: GREEN, label: 'Compliant' },
+    fail:           { c: RED,   label: 'Issues Found' },
+    uncertain:      { c: WARN,  label: 'Uncertain' },
+    not_applicable: { c: GREY,  label: 'N/A' },
+  }
+  const sc = STATUS[scan.status] || STATUS.uncertain
+  fill(sc.c); doc.roundedRect(ml, y, 40, 7.5, 2, 2, 'F')
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(8); color(WHITE)
+  doc.text(sc.label, ml + 20, y + 5, { align: 'center' })
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); color(MUT)
+  doc.text(`Confidence: ${scan.confidence || 'low'}`, ml + 44, y + 5)
+  y += 14
+
+  // ── Photos ───────────────────────────────────────────────────────────────────
   const allPhotoUrls = scan.photo_urls?.length ? scan.photo_urls : scan.photo_url ? [scan.photo_url] : []
-  if (allPhotoUrls.length > 0) { const photos = (await Promise.all(allPhotoUrls.map(async u => { const d = await imageUrlToDataUrl(u); if (!d) return null; const dims = await new Promise<{w:number;h:number}>(res => { const img = new window.Image(); img.onload = () => res({w:img.naturalWidth,h:img.naturalHeight}); img.onerror = () => res({w:4,h:3}); img.src = d }); return {d,dims} }))).filter(Boolean) as {d:string;dims:{w:number;h:number}}[]; if (photos.length > 0) { const cols = photos.length === 1 ? 1 : 2; const gap = 3; const cellW = (cw - (cols-1)*gap) / cols; const maxH = photos.length === 1 ? 85 : 52; for (let i = 0; i < photos.length; i += cols) { const row = photos.slice(i,i+cols); let rowH = 0; const pos = row.map((p,j) => { const r = p.dims.w/p.dims.h; const w = cellW; const h = Math.min(maxH, w/r); rowH = Math.max(rowH,h); return {x:ml+j*(cellW+gap),w,h} }); row.forEach((p,j) => { try { doc.addImage(p.d,'JPEG',pos[j].x,y,pos[j].w,pos[j].h) } catch(_){} }); y += rowH+3 }; y += 3 } }
-  const section = (title: string) => { if (y > ph - 40) { doc.addPage(); y = 20 }; doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(100, 100, 100); doc.text(title.toUpperCase(), ml, y); doc.setDrawColor(220, 220, 220); doc.line(ml, y + 2, ml + cw, y + 2); y += 8 }
-  const bodyText = (text: string, color = [40, 40, 40]) => { if (y > ph - 30) { doc.addPage(); y = 20 }; doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(color[0], color[1], color[2]); const lines = doc.splitTextToSize(text, cw); doc.text(lines, ml, y); y += lines.length * 5 + 2 }
+  if (allPhotoUrls.length > 0) {
+    const photos = (await Promise.all(
+      allPhotoUrls.map(async u => {
+        const d = await imageUrlToDataUrl(u)
+        if (!d) return null
+        const dims = await new Promise<{ w: number; h: number }>(res => {
+          const img = new window.Image()
+          img.onload  = () => res({ w: img.naturalWidth, h: img.naturalHeight })
+          img.onerror = () => res({ w: 4, h: 3 })
+          img.src = d
+        })
+        return { d, dims }
+      })
+    )).filter(Boolean) as { d: string; dims: { w: number; h: number } }[]
+
+    if (photos.length > 0) {
+      const n     = photos.length
+      const cols  = n === 1 ? 1 : 2
+      const gap   = 3
+      const cellW = (cw - (cols - 1) * gap) / cols
+      const rowH  = n === 1 ? 80 : 52
+
+      for (let i = 0; i < n; i += cols) {
+        const row = photos.slice(i, i + cols)
+        row.forEach((p, j) => {
+          const cellX = ml + j * (cellW + gap)
+          const r = p.dims.w / p.dims.h
+          // contain-fit: scale to fill cellW×rowH while preserving aspect ratio
+          let imgW: number, imgH: number, offX = 0, offY = 0
+          if (r > cellW / rowH) {
+            imgW = cellW; imgH = cellW / r; offY = (rowH - imgH) / 2
+          } else {
+            imgH = rowH; imgW = rowH * r; offX = (cellW - imgW) / 2
+          }
+          try { doc.addImage(p.d, 'JPEG', cellX + offX, y + offY, imgW, imgH) } catch (_) {}
+        })
+        y += rowH + 3
+      }
+      y += 4
+    }
+  }
+
+  // ── Helpers ──────────────────────────────────────────────────────────────────
+  const section = (title: string, subtitle?: string) => {
+    if (y > ph - 40) { doc.addPage(); y = 22 }
+    fill(CREAM); doc.rect(ml - 2, y - 3, cw + 4, 8.5, 'F')
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7.5); color(AMBER)
+    doc.text(title.toUpperCase(), ml, y + 2.5)
+    if (subtitle) {
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8); color(MUT)
+      doc.text(subtitle, pw - mr, y + 2.5, { align: 'right' })
+    }
+    stroke(LINE); doc.line(ml - 2, y + 5.5, ml + cw + 2, y + 5.5)
+    y += 12
+  }
+
+  const bodyText = (text: string, c: RGB = TEXT) => {
+    if (y > ph - 30) { doc.addPage(); y = 22 }
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); color(c)
+    const lines = doc.splitTextToSize(text, cw)
+    doc.text(lines, ml, y); y += lines.length * 5 + 2
+  }
+
+  // ── Summary ──────────────────────────────────────────────────────────────────
   if (scan.summary) { section('Summary'); bodyText(scan.summary); y += 4 }
+
+  // ── Legislation ──────────────────────────────────────────────────────────────
   const legislation = scan.legislation || []
-  if (legislation.length > 0) { section('Applicable Queensland Legislation'); for (const leg of legislation) { if (y > ph - 30) { doc.addPage(); y = 20 }; doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(22, 24, 28); const legTitle = doc.splitTextToSize(`${leg.code || ''}: ${leg.description || leg.name || ''}`, cw); doc.text(legTitle, ml, y); y += legTitle.length * 5; if (leg.clauses?.length > 0) { doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(100, 100, 100); const clauseText = doc.splitTextToSize(leg.clauses.map((c: any) => c.ref || '').filter(Boolean).join('  ·  '), cw - 4); doc.text(clauseText, ml + 4, y); y += clauseText.length * 4.5 }; y += 2 }; y += 2 }
+  if (legislation.length > 0) {
+    section('Applicable Queensland Legislation')
+    for (const leg of legislation) {
+      if (y > ph - 30) { doc.addPage(); y = 22 }
+
+      // Legislation name
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9); color(TEXT)
+      const legTitle = doc.splitTextToSize(`${leg.code || ''}: ${leg.description || leg.name || ''}`, cw)
+      doc.text(legTitle, ml, y); y += legTitle.length * 5 + 2
+
+      if (leg.clauses?.length > 0) {
+        const clauses = leg.clauses as { ref?: string; summary?: string }[]
+
+        // Row of clause ref pills (navy bg, amber text)
+        const pillH = 4.5, pillPadX = 2, pillFs = 7
+        let px = ml + 2
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(pillFs)
+        for (const clause of clauses) {
+          if (!clause.ref) continue
+          const pillW = doc.getTextWidth(clause.ref) + pillPadX * 2 + 1
+          if (px + pillW > ml + cw) { px = ml + 2; y += pillH + 2 }
+          fill(NAVY); doc.roundedRect(px, y, pillW, pillH, 1, 1, 'F')
+          color(AMBER); doc.text(clause.ref, px + pillPadX + 0.5, y + 3.3)
+          px += pillW + 2
+        }
+        y += pillH + 3
+
+        // Clause summaries
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); color(MUT)
+        for (const clause of clauses) {
+          if (!clause.summary) continue
+          const sl = doc.splitTextToSize(`${clause.ref ? clause.ref + ' — ' : ''}${clause.summary}`, cw - 4)
+          doc.text(sl, ml + 4, y); y += sl.length * 4 + 1
+        }
+      }
+      y += 4
+    }
+    y += 2
+  }
+
+  // ── Findings ─────────────────────────────────────────────────────────────────
   const findings = scan.findings || []
-  if (findings.length > 0) { section('Findings'); const fc: Record<string, { r: number; g: number; b: number }> = { ok: { r: 26, g: 122, b: 69 }, warning: { r: 163, g: 98, b: 0 }, critical: { r: 225, g: 75, b: 61 } }; for (const f of findings) { if (y > ph - 30) { doc.addPage(); y = 20 }; const c = fc[f.type] || fc.warning; doc.setFillColor(c.r, c.g, c.b); doc.rect(ml, y - 1, 3, 10, 'F'); doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(22, 24, 28); const tl = doc.splitTextToSize(f.title || f.text || '', cw - 8); doc.text(tl, ml + 6, y + 3); y += tl.length * 5 + 1; if (f.detail) { doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(80, 80, 80); const dl = doc.splitTextToSize(f.detail, cw - 8); doc.text(dl, ml + 6, y + 1); y += dl.length * 4.5 + 1 }; y += 4 } }
-  const visibleChecklist = checklist.filter((_, i) => !checklistState[`d_${i}`])
-  if (visibleChecklist.length > 0) { section('Checklist'); for (let i = 0; i < checklist.length; i++) { if (checklistState[`d_${i}`]) continue; if (y > ph - 20) { doc.addPage(); y = 20 }; const checked = !!checklistState[`c_${i}`]; doc.setDrawColor(150, 150, 150); doc.setFillColor(checked ? 26 : 255, checked ? 122 : 255, checked ? 69 : 255); doc.roundedRect(ml, y - 1, 4, 4, 0.5, 0.5, checked ? 'F' : 'S'); if (checked) { doc.setFont('helvetica', 'bold'); doc.setFontSize(6); doc.setTextColor(255, 255, 255); doc.text('✓', ml + 0.7, y + 2.3) }; doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(checked ? 150 : 40, checked ? 150 : 40, checked ? 150 : 40); const il = doc.splitTextToSize(checklist[i].item || '', cw - 8); doc.text(il, ml + 7, y + 2.5); y += il.length * 5 + 2 }; y += 4 }
+  if (findings.length > 0) {
+    section('Findings')
+    const FC: Record<string, RGB> = { ok: GREEN, warning: WARN, critical: RED }
+    for (const f of findings) {
+      if (y > ph - 30) { doc.addPage(); y = 22 }
+      const c = FC[f.type] || FC.warning
+      // Pre-measure to size the card correctly before drawing it
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9)
+      const tl = doc.splitTextToSize(f.title || f.text || '', cw - 10)
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8)
+      const dl = f.detail ? doc.splitTextToSize(f.detail, cw - 10) : []
+      const cardH = 4 + tl.length * 4.5 + (dl.length > 0 ? 2 + dl.length * 4 : 0) + 5
+      // Card background
+      fill(CARDBG); doc.roundedRect(ml, y, cw, cardH, 1.5, 1.5, 'F')
+      // Coloured left border (plain rect squares off the right edge of the pill)
+      fill(c)
+      doc.roundedRect(ml, y, 3.5, cardH, 1, 1, 'F')
+      doc.rect(ml + 2, y, 1.5, cardH, 'F')
+      // Title
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9); color(TEXT)
+      doc.text(tl, ml + 7, y + 5)
+      let iy = y + 5 + tl.length * 4.5 + 1
+      // Detail
+      if (dl.length > 0) {
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); color(MUT)
+        doc.text(dl, ml + 7, iy + 1)
+      }
+      y += cardH + 3
+    }
+    y += 2
+  }
+
+  // ── Checklist ────────────────────────────────────────────────────────────────
+  const visibleIndices = checklist.map((_, i) => i).filter(i => !checklistState[`d_${i}`])
+  if (visibleIndices.length > 0) {
+    const totalVisible  = visibleIndices.length
+    const checkedCount  = visibleIndices.filter(i => !!checklistState[`c_${i}`]).length
+    section('Checklist', `${checkedCount} of ${totalVisible} items checked`)
+    for (const i of visibleIndices) {
+      if (y > ph - 20) { doc.addPage(); y = 22 }
+      const checked = !!checklistState[`c_${i}`]
+      stroke(CBXLINE)
+      fill(checked ? GREEN : WHITE)
+      doc.roundedRect(ml, y - 0.5, 4, 4, 0.8, 0.8, checked ? 'FD' : 'S')
+      if (checked) {
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(5.5); color(WHITE)
+        doc.text('✓', ml + 0.7, y + 2.7)
+      }
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9)
+      color(checked ? MUT : TEXT)
+      const il = doc.splitTextToSize(checklist[i].item || '', cw - 8)
+      doc.text(il, ml + 7, y + 3); y += il.length * 5 + 2
+    }
+    y += 4
+  }
+
+  // ── Notes ────────────────────────────────────────────────────────────────────
   if (notes.trim()) { section('Notes'); bodyText(notes); y += 4 }
-  if (y > ph - 40) { doc.addPage(); y = 20 }
-  doc.setDrawColor(220, 220, 220); doc.line(ml, y, ml + cw, y); y += 6
-  doc.setFont('helvetica', 'italic'); doc.setFontSize(7.5); doc.setTextColor(140, 140, 140)
-  const disclaimerLines = doc.splitTextToSize('This report was generated by SafetyScan AI. Results are indicative only and should be verified by a qualified professional before sign-off.', cw)
-  doc.text(disclaimerLines, ml, y); y += disclaimerLines.length * 4.5 + 4
-  doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(160, 160, 160)
-  doc.text(`SafetyScan · safetyscan.com.au · Generated ${new Date().toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })}`, ml, y)
+
+  // ── Footer ───────────────────────────────────────────────────────────────────
+  y += 6
+  stroke(LINE); doc.line(ml, y, ml + cw, y); y += 5
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); color(MUT)
+  const disclaimer = doc.splitTextToSize('This report is generated by SafetyScan AI and is indicative only. Verify findings with a qualified WHS professional before sign-off.', cw)
+  doc.text(disclaimer, ml, y); y += disclaimer.length * 4 + 3
+  color(HDIM)
+  doc.text(`Generated by SafetyScan  ·  safetyscan.com.au  ·  ${new Date().toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })}`, ml, y)
+
   doc.save(`SafetyScan-${(scan.work_type || 'scan').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-${new Date(scan.created_at).toISOString().slice(0, 10)}.pdf`)
 }
 
