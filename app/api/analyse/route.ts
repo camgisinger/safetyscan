@@ -130,6 +130,8 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
 
 Max 8 findings across all photos. Max 4 legislation items. Max 3 clauses per legislation item. Omit "photo_ref" when there is only one photo.`
 
+const GENERIC_FALLBACK = 'construction site safety compliance Queensland WHS'
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -139,8 +141,62 @@ export async function POST(request: NextRequest) {
     // ── RAG: retrieve relevant legislation chunks ─────────────────────────
     let ragSection = ''
     try {
-      const query = (searchQuery as string | undefined)?.trim()
-        || 'construction site safety compliance Queensland WHS'
+      const rawQuery = (searchQuery as string | undefined)?.trim() ?? ''
+      const hasUserQuery = rawQuery.length > 0 && rawQuery !== GENERIC_FALLBACK
+
+      // Collect image blocks from all messages (Anthropic format, ready to forward)
+      const imageBlocks = (messages ?? [])
+        .flatMap((m: any) => Array.isArray(m.content) ? m.content : [])
+        .filter((block: any) => block.type === 'image')
+      const hasImages = imageBlocks.length > 0
+
+      let query: string
+      let usedClassifier = false
+
+      if (hasUserQuery) {
+        // Path A — user selected work types or typed context: use directly, no extra cost
+        query = rawQuery
+      } else if (hasImages) {
+        // Path B — no user input but images present: classify with Haiku to get a
+        // meaningful RAG query rather than the generic fallback
+        try {
+          const classifierRes = await fetch('https://api.anthropic.com/v1/messages', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-api-key': process.env.ANTHROPIC_API_KEY || '',
+              'anthropic-version': '2023-06-01',
+            },
+            body: JSON.stringify({
+              model: 'claude-haiku-4-5-20251001',
+              max_tokens: 100,
+              temperature: 0,
+              system: 'You are a construction site classifier. Look at this photo and list every work type and hazard category clearly visible. Be comprehensive but only include what is visibly present — do not guess. Respond with ONLY a comma-separated list of short work type terms, nothing else. Example: "asbestos removal, PPE, waste disposal"',
+              messages: [{ role: 'user', content: imageBlocks }],
+            }),
+          })
+          if (classifierRes.ok) {
+            const classifierData = await classifierRes.json()
+            const classified = classifierData.content?.[0]?.text?.trim()
+            if (classified) {
+              query = classified
+              usedClassifier = true
+            } else {
+              query = GENERIC_FALLBACK
+            }
+          } else {
+            query = GENERIC_FALLBACK
+          }
+        } catch {
+          // Classifier failed — silent fallback, never block the scan
+          query = GENERIC_FALLBACK
+        }
+      } else {
+        // Path C — no images, no user query (e.g. text-only re-analysis): generic fallback
+        query = GENERIC_FALLBACK
+      }
+
+      console.log('[RAG QUERY SOURCE]', usedClassifier ? 'haiku-classified' : hasUserQuery ? 'user-provided' : 'generic-fallback')
 
       const chunks = await searchDocuments(query)
 
