@@ -144,6 +144,12 @@ export async function POST(request: NextRequest) {
 
       const chunks = await searchDocuments(query)
 
+      console.log('[RAG DEBUG] Query:', query)
+      console.log('[RAG DEBUG] Chunks retrieved:', chunks.length)
+      chunks.forEach((c, i) => {
+        console.log(`[RAG DEBUG] Chunk ${i+1}: "${c.title}" (similarity: ${c.similarity?.toFixed(3) || 'n/a'})`)
+      })
+
       if (chunks.length > 0) {
         ragSection = chunks
           .map(c => `## ${c.title}\nSource: ${c.source || 'Queensland legislation'}\n\n${c.content}`)
