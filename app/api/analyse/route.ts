@@ -302,8 +302,6 @@ export async function POST(request: NextRequest) {
         // d. Parse Claude's JSON response
         const anthropicData = await anthropicRes.json()
         const rawText: string = anthropicData.content?.[0]?.text ?? ''
-        console.log(`[PARSE DEBUG] module=${module} raw response:`, rawText)
-
         // Strip markdown fences — Claude wraps its response in ```json ... ``` despite instructions
         const stripped = rawText
           .replace(/^```json\s*/m, '')
