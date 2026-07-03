@@ -302,6 +302,7 @@ export async function POST(request: NextRequest) {
         // d. Parse Claude's JSON response
         const anthropicData = await anthropicRes.json()
         const rawText: string = anthropicData.content?.[0]?.text ?? ''
+        console.log(`[PARSE DEBUG] module=${module} raw response:`, rawText)
         let parsed: any
         try {
           parsed = JSON.parse(rawText)
