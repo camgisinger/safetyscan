@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import { searchDocuments } from '../../../lib/embeddings'
 import { getServerUser } from '../../../lib/supabase-server'
 
-export const maxDuration = 60
+export const maxDuration = 300
 
 const serviceRole = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -240,122 +240,127 @@ export async function POST(request: NextRequest) {
       scanId = newScan.id
     }
 
-    // ── 5. Per-module loop ────────────────────────────────────────────────────
+    // ── 5. Per-module loop — parallelised ────────────────────────────────────
+    // Each module runs concurrently. Failure isolation is preserved: errors are
+    // caught inside each task so the task always fulfills, never rejects.
+    // Promise.allSettled provides a safety net if an uncaught error escapes.
     const results: Record<string, any> = {}
 
-    for (const module of moduleList) {
-      try {
-        // a. RAG for this module
-        const chunks = await searchDocuments(query, 'QLD', workTypes, 4, module)
-
-        console.log('[RAG DEBUG] Query:', query)
-        console.log('[RAG DEBUG] Module:', module, '| Chunks:', chunks.length)
-        chunks.forEach((c, i) => {
-          console.log(`[RAG DEBUG] Chunk ${i + 1}: "${c.title}" (similarity: ${c.similarity?.toFixed(3) || 'n/a'})`)
-        })
-
-        // b. Build system blocks (prompt-caching structure preserved)
-        let ragSection = ''
-        if (chunks.length > 0) {
-          ragSection = chunks
-            .map(c => `## ${c.title}\nSource: ${c.source || 'Queensland legislation'}\n\n${c.content}`)
-            .join('\n\n---\n\n')
-        }
-
-        const systemBlocks: object[] = [
-          {
-            type: 'text',
-            text: BASE_SYSTEM_PROMPT,
-            cache_control: { type: 'ephemeral' },
-          },
-        ]
-        if (ragSection) {
-          systemBlocks.push({
-            type: 'text',
-            text: `\n\nRELEVANT QUEENSLAND LEGISLATION FROM DATABASE:\n\n${ragSection}`,
-          })
-        }
-
-        // c. POST to Anthropic
-        const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'x-api-key': process.env.ANTHROPIC_API_KEY || '',
-            'anthropic-version': '2023-06-01',
-            'anthropic-beta': 'prompt-caching-2024-07-31',
-          },
-          body: JSON.stringify({
-            model: model || 'claude-sonnet-4-6',
-            max_tokens: 4096,
-            temperature: 0.1,
-            system: systemBlocks,
-            messages,
-          }),
-        })
-
-        if (!anthropicRes.ok) {
-          const errText = await anthropicRes.text()
-          throw new Error(`Anthropic error ${anthropicRes.status}: ${errText.slice(0, 200)}`)
-        }
-
-        // d. Parse Claude's JSON response
-        const anthropicData = await anthropicRes.json()
-        const rawText: string = anthropicData.content?.[0]?.text ?? ''
-        // Strip markdown fences — Claude wraps its response in ```json ... ``` despite instructions
-        const stripped = rawText
-          .replace(/^```json\s*/m, '')
-          .replace(/^```\s*/m, '')
-          .replace(/```\s*$/m, '')
-          .trim()
-
-        let parsed: any
-        // Attempt 1: direct parse of stripped text
-        try { parsed = JSON.parse(stripped) } catch (_) {}
-        // Attempt 2: extract first {...} block (handles any preamble or trailing text)
-        if (!parsed) {
-          const match = stripped.match(/\{[\s\S]*\}/)
-          if (match) { try { parsed = JSON.parse(match[0]) } catch (_) {} }
-        }
-        // Attempt 3: brace scan — slice from first { to last }
-        if (!parsed) {
-          const f = stripped.indexOf('{'), l = stripped.lastIndexOf('}')
-          if (f !== -1 && l !== -1) { try { parsed = JSON.parse(stripped.slice(f, l + 1)) } catch (_) {} }
-        }
-        if (!parsed) {
-          throw new Error(`Failed to parse Claude JSON for module "${module}"`)
-        }
-
-        // e. Upsert scan_modules
-        await serviceRole.from('scan_modules').upsert(
-          {
-            scan_id: scanId,
-            module,
-            status: parsed.status ?? 'uncertain',
-            confidence: null,
-            legislation: parsed.legislation ?? null,
-            findings: parsed.findings ?? null,
-            summary: parsed.summary ?? null,
-            checklist: null,
-            checklist_state: null,
-            follow_up_questions: parsed.follow_up_questions ?? null,
-          },
-          { onConflict: 'scan_id,module' }
-        )
-
-        results[module] = { ...parsed }
-      } catch (moduleErr: any) {
-        console.error(`[analyse] module "${module}" failed:`, moduleErr?.message)
+    await Promise.allSettled(
+      moduleList.map(async (module) => {
         try {
+          // a. RAG for this module
+          const chunks = await searchDocuments(query, 'QLD', workTypes, 4, module)
+
+          console.log('[RAG DEBUG] Query:', query)
+          console.log('[RAG DEBUG] Module:', module, '| Chunks:', chunks.length)
+          chunks.forEach((c, i) => {
+            console.log(`[RAG DEBUG] Chunk ${i + 1}: "${c.title}" (similarity: ${c.similarity?.toFixed(3) || 'n/a'})`)
+          })
+
+          // b. Build system blocks (prompt-caching structure preserved)
+          let ragSection = ''
+          if (chunks.length > 0) {
+            ragSection = chunks
+              .map(c => `## ${c.title}\nSource: ${c.source || 'Queensland legislation'}\n\n${c.content}`)
+              .join('\n\n---\n\n')
+          }
+
+          const systemBlocks: object[] = [
+            {
+              type: 'text',
+              text: BASE_SYSTEM_PROMPT,
+              cache_control: { type: 'ephemeral' },
+            },
+          ]
+          if (ragSection) {
+            systemBlocks.push({
+              type: 'text',
+              text: `\n\nRELEVANT QUEENSLAND LEGISLATION FROM DATABASE:\n\n${ragSection}`,
+            })
+          }
+
+          // c. POST to Anthropic
+          const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-api-key': process.env.ANTHROPIC_API_KEY || '',
+              'anthropic-version': '2023-06-01',
+              'anthropic-beta': 'prompt-caching-2024-07-31',
+            },
+            body: JSON.stringify({
+              model: model || 'claude-sonnet-4-6',
+              max_tokens: 4096,
+              temperature: 0.1,
+              system: systemBlocks,
+              messages,
+            }),
+          })
+
+          if (!anthropicRes.ok) {
+            const errText = await anthropicRes.text()
+            throw new Error(`Anthropic error ${anthropicRes.status}: ${errText.slice(0, 200)}`)
+          }
+
+          // d. Parse Claude's JSON response
+          const anthropicData = await anthropicRes.json()
+          const rawText: string = anthropicData.content?.[0]?.text ?? ''
+          // Strip markdown fences — Claude wraps its response in ```json ... ``` despite instructions
+          const stripped = rawText
+            .replace(/^```json\s*/m, '')
+            .replace(/^```\s*/m, '')
+            .replace(/```\s*$/m, '')
+            .trim()
+
+          let parsed: any
+          // Attempt 1: direct parse of stripped text
+          try { parsed = JSON.parse(stripped) } catch (_) {}
+          // Attempt 2: extract first {...} block (handles any preamble or trailing text)
+          if (!parsed) {
+            const match = stripped.match(/\{[\s\S]*\}/)
+            if (match) { try { parsed = JSON.parse(match[0]) } catch (_) {} }
+          }
+          // Attempt 3: brace scan — slice from first { to last }
+          if (!parsed) {
+            const f = stripped.indexOf('{'), l = stripped.lastIndexOf('}')
+            if (f !== -1 && l !== -1) { try { parsed = JSON.parse(stripped.slice(f, l + 1)) } catch (_) {} }
+          }
+          if (!parsed) {
+            throw new Error(`Failed to parse Claude JSON for module "${module}"`)
+          }
+
+          // e. Upsert scan_modules
           await serviceRole.from('scan_modules').upsert(
-            { scan_id: scanId, module, status: 'error' },
+            {
+              scan_id: scanId,
+              module,
+              status: parsed.status ?? 'uncertain',
+              confidence: null,
+              legislation: parsed.legislation ?? null,
+              findings: parsed.findings ?? null,
+              summary: parsed.summary ?? null,
+              checklist: null,
+              checklist_state: null,
+              follow_up_questions: parsed.follow_up_questions ?? null,
+            },
             { onConflict: 'scan_id,module' }
           )
-        } catch {}
-        results[module] = { status: 'error' }
-        // Continue — one module failing must not abort others
-      }
-    }
+
+          results[module] = { ...parsed }
+        } catch (moduleErr: any) {
+          console.error(`[analyse] module "${module}" failed:`, moduleErr?.message)
+          try {
+            await serviceRole.from('scan_modules').upsert(
+              { scan_id: scanId, module, status: 'error' },
+              { onConflict: 'scan_id,module' }
+            )
+          } catch {}
+          results[module] = { status: 'error' }
+          // Caught here — task fulfills so other modules are unaffected
+        }
+      })
+    )
 
     // ── 6. Update scans row — unconditional ──────────────────────────────────
     // Always runs after the loop. If every module errored, scan is marked 'error'
