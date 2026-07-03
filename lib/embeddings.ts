@@ -35,7 +35,8 @@ export async function searchDocuments(
   query: string,
   region: string = 'QLD',
   workTypes: string[] = [],
-  matchCount: number = 4
+  matchCount: number = 4,
+  module: string | null = null
 ): Promise<Array<{ title: string; content: string; source: string; similarity: number }>> {
   const embedding = await generateEmbedding(query)
 
@@ -44,6 +45,7 @@ export async function searchDocuments(
     match_count: matchCount,
     match_region: region,
     match_work_types: workTypes.length > 0 ? workTypes : null,
+    match_module: module,
   })
 
   if (error) throw new Error(`match_documents RPC failed: ${error.message}`)

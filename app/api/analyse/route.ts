@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { createClient } from '@supabase/supabase-js'
 import { searchDocuments } from '../../../lib/embeddings'
+import { getServerUser } from '../../../lib/supabase-server'
 
 export const maxDuration = 60
+
+const serviceRole = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+)
 
 const BASE_SYSTEM_PROMPT = `You are SafetyScan — a specialist Queensland construction compliance tool built for site supervisors and foremen with real on-site experience. You understand how construction sites actually operate, not just what the textbook says.
 
@@ -134,31 +141,31 @@ const GENERIC_FALLBACK = 'construction site safety compliance Queensland WHS'
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
-    // Extract our fields; ignore any 'system' key from the client
-    const { searchQuery, messages, model } = body
+    // ── 1. Auth ───────────────────────────────────────────────────────────────
+    const user = await getServerUser()
+    if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-    // ── RAG: retrieve relevant legislation chunks ─────────────────────────
-    let ragSection = ''
+    // ── 2. Parse body ─────────────────────────────────────────────────────────
+    const body = await request.json()
+    const { messages, model, modules, scan_id, photo_urls, site_id, work_types, searchQuery } = body
+    const moduleList: string[] = Array.isArray(modules) && modules.length > 0 ? modules : ['safety']
+    const workTypes: string[] = Array.isArray(work_types) ? work_types : []
+
+    // ── 3. RAG query resolution — ONCE ────────────────────────────────────────
+    let query = GENERIC_FALLBACK
+    let usedClassifier = false
     try {
       const rawQuery = (searchQuery as string | undefined)?.trim() ?? ''
       const hasUserQuery = rawQuery.length > 0 && rawQuery !== GENERIC_FALLBACK
 
-      // Collect image blocks from all messages (Anthropic format, ready to forward)
       const imageBlocks = (messages ?? [])
         .flatMap((m: any) => Array.isArray(m.content) ? m.content : [])
         .filter((block: any) => block.type === 'image')
       const hasImages = imageBlocks.length > 0
 
-      let query: string
-      let usedClassifier = false
-
       if (hasUserQuery) {
-        // Path A — user selected work types or typed context: use directly, no extra cost
         query = rawQuery
       } else if (hasImages) {
-        // Path B — no user input but images present: classify with Haiku to get a
-        // meaningful RAG query rather than the generic fallback
         try {
           const classifierRes = await fetch('https://api.anthropic.com/v1/messages', {
             method: 'POST',
@@ -181,87 +188,170 @@ export async function POST(request: NextRequest) {
             if (classified) {
               query = classified
               usedClassifier = true
-            } else {
-              query = GENERIC_FALLBACK
             }
-          } else {
-            query = GENERIC_FALLBACK
           }
         } catch {
           // Classifier failed — silent fallback, never block the scan
-          query = GENERIC_FALLBACK
         }
-      } else {
-        // Path C — no images, no user query (e.g. text-only re-analysis): generic fallback
-        query = GENERIC_FALLBACK
       }
 
       console.log('[RAG QUERY SOURCE]', usedClassifier ? 'haiku-classified' : hasUserQuery ? 'user-provided' : 'generic-fallback')
-
-      const chunks = await searchDocuments(query)
-
-      console.log('[RAG DEBUG] Query:', query)
-      console.log('[RAG DEBUG] Chunks retrieved:', chunks.length)
-      chunks.forEach((c, i) => {
-        console.log(`[RAG DEBUG] Chunk ${i+1}: "${c.title}" (similarity: ${c.similarity?.toFixed(3) || 'n/a'})`)
-      })
-
-      if (chunks.length > 0) {
-        ragSection = chunks
-          .map(c => `## ${c.title}\nSource: ${c.source || 'Queensland legislation'}\n\n${c.content}`)
-          .join('\n\n---\n\n')
-      } else {
-        console.log('[RAG] no chunks returned, using base prompt')
-      }
-    } catch (ragErr) {
-      console.error('[RAG] search failed, falling back to base prompt:', ragErr)
-    }
-
-    // ── Build system blocks (prompt caching) ─────────────────────────────
-    // Block 1 is stable every request → cached by Anthropic.
-    // Block 2 contains RAG chunks which change per scan → not cached.
-    const systemBlocks: object[] = [
-      {
-        type: 'text',
-        text: BASE_SYSTEM_PROMPT,
-        cache_control: { type: 'ephemeral' },
-      },
-    ]
-    if (ragSection) {
-      systemBlocks.push({
-        type: 'text',
-        text: `\n\nRELEVANT QUEENSLAND LEGISLATION FROM DATABASE:\n\n${ragSection}`,
-      })
-    }
-
-    // ── Forward to Anthropic ──────────────────────────────────────────────
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY || '',
-        'anthropic-version': '2023-06-01',
-        'anthropic-beta': 'prompt-caching-2024-07-31',
-      },
-      body: JSON.stringify({
-        model: model || 'claude-sonnet-4-6',
-        max_tokens: 4096,
-        temperature: 0.1,
-        system: systemBlocks,
-        messages,
-      }),
-    })
-
-    const text = await response.text()
-    try {
-      const data = JSON.parse(text)
-      return NextResponse.json(data, { status: response.status })
     } catch {
-      return NextResponse.json(
-        { error: `Parse failed. Status: ${response.status}. Body: ${text.substring(0, 500)}` },
-        { status: 500 }
-      )
+      // Keep query = GENERIC_FALLBACK
     }
+
+    // ── 4. Scan row ───────────────────────────────────────────────────────────
+    let scanId: string
+
+    if (scan_id) {
+      // Re-analysis: verify ownership before proceeding
+      const { data: existing, error: fetchErr } = await serviceRole
+        .from('scans')
+        .select('id, user_id')
+        .eq('id', scan_id)
+        .single()
+
+      if (fetchErr || !existing) {
+        return NextResponse.json({ error: 'Scan not found' }, { status: 404 })
+      }
+      if (existing.user_id !== user.id) {
+        return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+      }
+      scanId = scan_id
+    } else {
+      // New scan — create with verified user.id
+      const { data: newScan, error: insertErr } = await serviceRole
+        .from('scans')
+        .insert({
+          user_id: user.id,
+          photo_url: Array.isArray(photo_urls) ? (photo_urls[0] ?? null) : null,
+          photo_urls: photo_urls ?? null,
+          site_id: site_id ?? null,
+          work_types: workTypes.length > 0 ? workTypes : null,
+          work_type: '',
+          status: 'processing',
+        })
+        .select('id')
+        .single()
+
+      if (insertErr || !newScan) {
+        return NextResponse.json({ error: 'Failed to create scan' }, { status: 500 })
+      }
+      scanId = newScan.id
+    }
+
+    // ── 5. Per-module loop ────────────────────────────────────────────────────
+    const results: Record<string, any> = {}
+
+    for (const module of moduleList) {
+      try {
+        // a. RAG for this module
+        const chunks = await searchDocuments(query, 'QLD', workTypes, 4, module)
+
+        console.log('[RAG DEBUG] Query:', query)
+        console.log('[RAG DEBUG] Module:', module, '| Chunks:', chunks.length)
+        chunks.forEach((c, i) => {
+          console.log(`[RAG DEBUG] Chunk ${i + 1}: "${c.title}" (similarity: ${c.similarity?.toFixed(3) || 'n/a'})`)
+        })
+
+        // b. Build system blocks (prompt-caching structure preserved)
+        let ragSection = ''
+        if (chunks.length > 0) {
+          ragSection = chunks
+            .map(c => `## ${c.title}\nSource: ${c.source || 'Queensland legislation'}\n\n${c.content}`)
+            .join('\n\n---\n\n')
+        }
+
+        const systemBlocks: object[] = [
+          {
+            type: 'text',
+            text: BASE_SYSTEM_PROMPT,
+            cache_control: { type: 'ephemeral' },
+          },
+        ]
+        if (ragSection) {
+          systemBlocks.push({
+            type: 'text',
+            text: `\n\nRELEVANT QUEENSLAND LEGISLATION FROM DATABASE:\n\n${ragSection}`,
+          })
+        }
+
+        // c. POST to Anthropic
+        const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': process.env.ANTHROPIC_API_KEY || '',
+            'anthropic-version': '2023-06-01',
+            'anthropic-beta': 'prompt-caching-2024-07-31',
+          },
+          body: JSON.stringify({
+            model: model || 'claude-sonnet-4-6',
+            max_tokens: 4096,
+            temperature: 0.1,
+            system: systemBlocks,
+            messages,
+          }),
+        })
+
+        if (!anthropicRes.ok) {
+          const errText = await anthropicRes.text()
+          throw new Error(`Anthropic error ${anthropicRes.status}: ${errText.slice(0, 200)}`)
+        }
+
+        // d. Parse Claude's JSON response
+        const anthropicData = await anthropicRes.json()
+        const rawText: string = anthropicData.content?.[0]?.text ?? ''
+        let parsed: any
+        try {
+          parsed = JSON.parse(rawText)
+        } catch {
+          throw new Error(`Failed to parse Claude JSON for module "${module}"`)
+        }
+
+        // e. Upsert scan_modules
+        await serviceRole.from('scan_modules').upsert(
+          {
+            scan_id: scanId,
+            module,
+            status: parsed.status ?? 'uncertain',
+            confidence: null,
+            legislation: parsed.legislation ?? null,
+            findings: parsed.findings ?? null,
+            summary: parsed.summary ?? null,
+            checklist: null,
+            checklist_state: null,
+            follow_up_questions: parsed.follow_up_questions ?? null,
+          },
+          { onConflict: 'scan_id,module' }
+        )
+
+        results[module] = { ...parsed }
+      } catch (moduleErr: any) {
+        console.error(`[analyse] module "${module}" failed:`, moduleErr?.message)
+        try {
+          await serviceRole.from('scan_modules').upsert(
+            { scan_id: scanId, module, status: 'error' },
+            { onConflict: 'scan_id,module' }
+          )
+        } catch {}
+        results[module] = { status: 'error' }
+        // Continue — one module failing must not abort others
+      }
+    }
+
+    // ── 6. Update scans row — unconditional ──────────────────────────────────
+    // Always runs after the loop. If every module errored, scan is marked 'error'
+    // and never left stuck on 'processing'.
+    const firstSuccess = Object.values(results).find(r => r.status !== 'error')
+    await serviceRole.from('scans').update({
+      work_type: firstSuccess?.work_type ?? '',
+      work_types: firstSuccess?.work_types ?? null,
+      status: firstSuccess?.status ?? 'error',
+    }).eq('id', scanId)
+
+    // ── 7. Return ─────────────────────────────────────────────────────────────
+    return NextResponse.json({ scanId, results })
   } catch (error: any) {
     return NextResponse.json({ error: error.message || 'Request failed' }, { status: 500 })
   }
