@@ -294,6 +294,8 @@ export default function ScanDetail({ id }: { id: string }) {
   const [reanalysing, setReanalysing] = useState(false)
   const [reanalyseExpanded, setReanalyseExpanded] = useState(false)
   const [openLeg, setOpenLeg] = useState<number | null>(null)
+  const [scanModules, setScanModules] = useState<any[]>([])
+  const [activeModule, setActiveModule] = useState<string>('')
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
 
@@ -301,9 +303,10 @@ export default function ScanDetail({ id }: { id: string }) {
     const init = async () => {
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) { router.push('/login'); return }
-      const [scanRes, sitesRes] = await Promise.all([
+      const [scanRes, sitesRes, modulesRes] = await Promise.all([
         supabase.from('scans').select('*').eq('id', id).single(),
         supabase.from('sites').select('*').eq('archived', false).order('name', { ascending: true }),
+        supabase.from('scan_modules').select('*').eq('scan_id', id),
       ])
       if (scanRes.error) { setError(`Could not load scan: ${scanRes.error.message}`); setLoading(false); return }
       if (!scanRes.data) { setError('Scan not found.'); setLoading(false); return }
@@ -318,6 +321,12 @@ export default function ScanDetail({ id }: { id: string }) {
       setShareEnabled(s.share_enabled || false)
       if (s.checklist && Array.isArray(s.checklist) && s.checklist.length > 0) setChecklist(s.checklist)
       setSites(sitesRes.data || [])
+      const modOrder = ['safety', 'quality', 'environmental']
+      const sorted = (modulesRes.data || []).sort(
+        (a: any, b: any) => modOrder.indexOf(a.module) - modOrder.indexOf(b.module)
+      )
+      setScanModules(sorted)
+      if (sorted.length > 0) setActiveModule(sorted[0].module)
       setLoading(false)
     }
     init()
@@ -434,7 +443,7 @@ export default function ScanDetail({ id }: { id: string }) {
     try { await exportScanPDF(scan, siteName, checklist, checklistState, notes) } catch (e) { console.error('[PDF]', e) } finally { setExportingPDF(false) }
   }
 
-  const reanalyseWithContext = async (additionalInfo: string, extraPhotos: { dataUrl: string; base64: string }[]) => {
+  const reanalyseWithContext = async (additionalInfo: string, extraPhotos: { dataUrl: string; base64: string }[], module: string) => {
     if (!scan) return
     setContinueLoading(true); setContinueError(null)
     try {
@@ -468,8 +477,7 @@ export default function ScanDetail({ id }: { id: string }) {
         credentials: 'include',
         body: JSON.stringify({
           scan_id: id,
-          // TODO 3b: re-analyse the active module tab, not hardcoded safety
-          modules: ['safety'],
+          modules: [module],
           messages: [{ role: 'user', content: userContent }],
           searchQuery,
         }),
@@ -478,19 +486,14 @@ export default function ScanDetail({ id }: { id: string }) {
       const data = await res.json()
       if (!res.ok || data.error) throw new Error(data.error || 'Analysis failed')
 
-      // Extract module result for local display — Phase 3b will read scan_modules instead
-      const moduleResult: any = data.results?.safety ?? Object.values(data.results ?? {})[0] ?? {}
-      setScan(prev => prev ? {
-        ...prev,
-        status: moduleResult.status || prev.status,
-        work_type: moduleResult.work_type || prev.work_type,
-        work_types: moduleResult.work_types || prev.work_types,
-        legislation: moduleResult.legislation || prev.legislation,
-        findings: moduleResult.findings || prev.findings,
-        summary: moduleResult.summary || prev.summary,
-        follow_up_questions: moduleResult.follow_up_questions || prev.follow_up_questions,
-        photo_urls: updatedUrls,
-      } : prev)
+      // Refresh scan_modules from DB so tab data is current
+      const { data: freshModules } = await supabase.from('scan_modules').select('*').eq('scan_id', id)
+      if (freshModules) {
+        const modOrder = ['safety', 'quality', 'environmental']
+        const sorted = freshModules.sort((a: any, b: any) => modOrder.indexOf(a.module) - modOrder.indexOf(b.module))
+        setScanModules(sorted)
+      }
+      if (updatedUrls !== photoUrls) setPhotoUrls(updatedUrls)
       setContinueContext(''); setContinuePhotos([])
     } catch (e: any) { setContinueError(e.message || 'Analysis failed') }
     finally { setContinueLoading(false) }
@@ -499,7 +502,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const handleReanalyse = async () => {
     if (reanalysing) return
     setReanalysing(true)
-    await reanalyseWithContext(continueContext, continuePhotos)
+    await reanalyseWithContext(continueContext, continuePhotos, activeModule || 'safety')
     setReanalysing(false)
   }
 
@@ -526,20 +529,26 @@ export default function ScanDetail({ id }: { id: string }) {
 
   if (!scan) return null
 
-  const findings: any[] = scan.findings || []
-  const legislation: any[] = scan.legislation || []
-  const hasFollowUp = (scan.follow_up_questions || []).length > 0
   const shareLink = shareToken ? `https://safetyscan.com.au/shared/${shareToken}` : null
   const visibleCount = checklist.filter((_, i) => !checklistState[`d_${i}`]).length
   const d = new Date(scan.created_at)
   const siteName = scan.site_id ? sites.find(s => s.id === scan.site_id)?.name : null
   const meta = [siteName?.toUpperCase(), d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase(), d.toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit', hour12: true }).toUpperCase().replace(' ', '')].filter(Boolean).join(' · ')
 
-  const issueFindings = findings.filter(f => f.type === 'critical' || f.type === 'warning')
+  const isLegacy = scanModules.length === 0
+  const activeModuleData = isLegacy ? null : scanModules.find((m: any) => m.module === activeModule) ?? null
+  const isErrorTab = !isLegacy && activeModuleData?.status === 'error'
+
+  const displayFindings: any[] = isLegacy ? (scan.findings || []) : (activeModuleData?.findings || [])
+  const displayLegislation: any[] = isLegacy ? (scan.legislation || []) : (activeModuleData?.legislation || [])
+  const displaySummary: string = isLegacy ? (scan.summary || '') : (activeModuleData?.summary || '')
+  const displayStatus: string = isLegacy ? scan.status : (activeModuleData?.status || 'uncertain')
+
+  const issueFindings = displayFindings.filter((f: any) => f.type === 'critical' || f.type === 'warning')
   const issueCount = issueFindings.length
-  const statusBarColor = scan.status === 'pass' ? '#3E8E5A' : scan.status === 'fail' ? '#D63A26' : 'var(--amber)'
-  const statusColor    = scan.status === 'pass' ? 'var(--clear-tx)' : scan.status === 'fail' ? 'var(--issue-tx-theme)' : 'var(--amber)'
-  const statusLbl      = scan.status === 'pass' ? 'Compliant' : scan.status === 'fail' ? `${issueCount} issue${issueCount !== 1 ? 's' : ''} found` : 'Pending review'
+  const statusBarColor = displayStatus === 'pass' ? '#3E8E5A' : displayStatus === 'fail' ? '#D63A26' : 'var(--amber)'
+  const statusColor    = displayStatus === 'pass' ? 'var(--clear-tx)' : displayStatus === 'fail' ? 'var(--issue-tx-theme)' : 'var(--amber)'
+  const statusLbl      = displayStatus === 'pass' ? 'Compliant' : displayStatus === 'fail' ? `${issueCount} issue${issueCount !== 1 ? 's' : ''} found` : 'Pending review'
 
   const inp: React.CSSProperties = { display: 'block', width: '100%', border: '1.5px solid var(--line)', background: 'var(--surf)', fontSize: 14, color: 'var(--text)', boxSizing: 'border-box', outline: 'none' }
   const secHead = (label: string) => (
@@ -631,22 +640,53 @@ export default function ScanDetail({ id }: { id: string }) {
 
         {/* photo enlarged modal moved outside animated wrapper — see below */}
 
+        {/* Module tabs — only for multi-module scans */}
+        {!isLegacy && (
+          <div style={{ display: 'flex', gap: 6, marginBottom: 14 }}>
+            {scanModules.map((m: any) => {
+              const isActive = m.module === activeModule
+              const tabStatusColor = m.status === 'pass' ? '#3E8E5A' : m.status === 'fail' ? '#D63A26' : m.status === 'error' ? '#D63A26' : 'var(--amber)'
+              const label = m.module === 'safety' ? 'Safety' : m.module === 'quality' ? 'Quality' : 'Environmental'
+              return (
+                <button key={m.module} onClick={() => setActiveModule(m.module)}
+                  style={{ display: 'flex', alignItems: 'center', gap: 6, height: 36, padding: '0 14px', borderRadius: 6, border: `1.5px solid ${isActive ? 'var(--amber)' : 'var(--line)'}`, background: isActive ? 'var(--amber)' : 'var(--surf)', color: isActive ? '#1B1A12' : 'var(--text)', fontWeight: 600, fontSize: 12.5, cursor: 'pointer', fontFamily: 'inherit', flexShrink: 0 }}>
+                  <span style={{ width: 7, height: 7, borderRadius: 2, background: isActive ? '#1B1A12' : tabStatusColor, flexShrink: 0 }}/>
+                  {label}
+                </button>
+              )
+            })}
+          </div>
+        )}
+
         {/* Status row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
           <span style={{ width: 9, height: 9, borderRadius: 2, background: statusBarColor, flexShrink: 0 }}/>
-          <span style={{ fontWeight: 600, fontSize: 13, color: statusColor }}>{statusLbl}</span>
+          <span style={{ fontWeight: 600, fontSize: 13, color: statusColor }}>{isErrorTab ? 'Analysis failed for this module' : statusLbl}</span>
         </div>
 
+        {/* Error tab state */}
+        {isErrorTab && (
+          <div style={{ ...card, padding: '14px 15px', marginBottom: 4 }}>
+            <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--issue-tx-theme)', marginBottom: 6 }}>Analysis failed for this module</div>
+            <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 14 }}>An error occurred while processing this module. You can re-run it below.</div>
+            <button onClick={() => { reanalyseWithContext(continueContext, continuePhotos, activeModule); }}
+              disabled={reanalysing}
+              style={{ ...btn(true), padding: '0 18px', flex: 'none', opacity: reanalysing ? 0.6 : 1 }}>
+              {reanalysing ? 'Re-analysing…' : `Re-analyse ${activeModule} →`}
+            </button>
+          </div>
+        )}
+
         {/* AI Analysis */}
-        {scan.summary && (
+        {!isErrorTab && displaySummary && (
           <>
             {secHead('Summary')}
             <div style={{ ...card, padding: '14px 15px', fontSize: 13, fontWeight: 500, lineHeight: 1.55, color: 'var(--text)', marginBottom: 4 }}>
-              {scan.summary}
+              {displaySummary}
             </div>
-            {legislation.length > 0 && (
+            {displayLegislation.length > 0 && (
               <div style={{ paddingTop: 10 }}>
-                {legislation.map((l: any, i: number) => {
+                {displayLegislation.map((l: any, i: number) => {
                   const isOpen = openLeg === i
                   return (
                     <div key={i} style={{ marginBottom: 8 }}>
@@ -683,7 +723,7 @@ export default function ScanDetail({ id }: { id: string }) {
         )}
 
         {/* Issues */}
-        {issueFindings.length > 0 && (
+        {!isErrorTab && issueFindings.length > 0 && (
           <>
             {secHead('Issues')}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -702,9 +742,9 @@ export default function ScanDetail({ id }: { id: string }) {
         )}
 
         {/* OK findings */}
-        {findings.filter(f => f.type === 'ok').length > 0 && (
+        {!isErrorTab && displayFindings.filter((f: any) => f.type === 'ok').length > 0 && (
           <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {findings.filter(f => f.type === 'ok').map((f: any, i: number) => (
+            {displayFindings.filter((f: any) => f.type === 'ok').map((f: any, i: number) => (
               <div key={i} style={{ display: 'flex', alignItems: 'stretch', ...card, overflow: 'hidden' }}>
                 <div style={{ width: 5, flexShrink: 0, background: '#3E8E5A' }} />
                 <div style={{ flex: 1, padding: '11px 14px', fontSize: 13, fontWeight: 500, color: 'var(--text)' }}>{f.text || f.title}</div>
@@ -716,53 +756,61 @@ export default function ScanDetail({ id }: { id: string }) {
         {/* Checklist */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '18px 2px 11px' }}>
           <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }}/>
-          <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)' }}>Checklist{checklist.length > 0 ? ` (${visibleCount})` : ''}</span>
-          {checklist.length > 0 && !generatingChecklist && (
+          <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)' }}>Checklist{isLegacy && checklist.length > 0 ? ` (${visibleCount})` : ''}</span>
+          {isLegacy && checklist.length > 0 && !generatingChecklist && (
             <button onClick={() => setConfirmRegenerate(true)} style={{ marginLeft: 'auto', fontWeight: 600, fontSize: 10.5, letterSpacing: '0.06em', padding: '4px 10px', border: '1.5px solid var(--line)', borderRadius: 4, color: 'var(--mut)', background: 'var(--surf)', cursor: 'pointer', fontFamily: 'inherit' }}>Regenerate</button>
           )}
         </div>
 
-        {confirmRegenerate && (
-          <div style={{ marginBottom: 10, ...card, padding: '12px 14px', fontSize: 13, fontWeight: 500, color: 'var(--text)' }}>
-            This will reset your checklist progress. Are you sure?
-            <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
-              <button onClick={handleGenerateChecklist} style={{ ...btn(true), height: 36, padding: '0 14px', flex: 'none' }}>Yes, regenerate</button>
-              <button onClick={() => setConfirmRegenerate(false)} style={{ ...btn(), height: 36, padding: '0 14px', flex: 'none' }}>Cancel</button>
-            </div>
-          </div>
-        )}
-
-        {generatingChecklist ? (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 0' }}>
-            <div style={{ width: 20, height: 20, border: '2px solid var(--line)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.85s linear infinite' }}/>
-            <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)' }}>Generating checklist…</span>
-          </div>
-        ) : checklist.length === 0 ? (
-          <div style={{ ...card, padding: 16 }}>
-            <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 14 }}>Generate a custom checklist based on this scan's findings and applicable legislation.</div>
-            {checklistError && <div style={{ marginBottom: 12, padding: '8px 12px', border: '1.5px solid var(--issue)', borderRadius: 4, fontSize: 12, fontWeight: 500, color: 'var(--issue-tx-theme)' }}>{checklistError}</div>}
-            <button onClick={handleGenerateChecklist} style={{ ...btn(true), padding: '0 18px', flex: 'none' }}>Generate checklist →</button>
+        {!isLegacy ? (
+          <div style={{ ...card, padding: '12px 15px', fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5 }}>
+            Checklist is not available for multi-module scans yet.
           </div>
         ) : (
-          <div style={{ ...card, overflow: 'hidden' }}>
-            {checklist.map((item: any, i: number) => {
-              if (checklistState[`d_${i}`]) return null
-              const checked = !!checklistState[`c_${i}`]
-              const isLast = checklist.slice(i + 1).every((_: any, j: number) => checklistState[`d_${i + 1 + j}`])
-              return (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderBottom: isLast ? 'none' : '1.5px solid var(--div)' }}>
-                  <div onClick={() => toggleCheck(i)} style={{ width: 20, height: 20, borderRadius: 6, display: 'grid', placeItems: 'center', flexShrink: 0, cursor: 'pointer', border: `1.5px solid ${checked ? 'var(--amber)' : 'var(--line)'}`, background: checked ? 'var(--amber)' : 'transparent' }}>
-                    {checked && <span style={{ display: 'block', width: 10, height: 6, borderLeft: '1.8px solid #1B1A12', borderBottom: '1.8px solid #1B1A12', transform: 'rotate(-45deg) translate(1px,-1px)' }}/>}
-                  </div>
-                  <div style={{ flex: 1, cursor: 'pointer' }} onClick={() => toggleCheck(i)}>
-                    <div style={{ fontSize: 13.5, fontWeight: 500, color: checked ? 'var(--mut)' : 'var(--text)', textDecoration: checked ? 'line-through' : 'none', opacity: checked ? 0.55 : 1 }}>{item.item}</div>
-                    {item.category && <div style={{ fontWeight: 600, fontSize: 9.5, color: 'var(--mut)', marginTop: 2, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{item.category}</div>}
-                  </div>
-                  <button onClick={() => deleteItem(i)} style={{ background: 'none', border: 'none', color: 'var(--mut)', fontSize: 18, cursor: 'pointer', padding: '0 2px', lineHeight: 1 }}>×</button>
+          <>
+            {confirmRegenerate && (
+              <div style={{ marginBottom: 10, ...card, padding: '12px 14px', fontSize: 13, fontWeight: 500, color: 'var(--text)' }}>
+                This will reset your checklist progress. Are you sure?
+                <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
+                  <button onClick={handleGenerateChecklist} style={{ ...btn(true), height: 36, padding: '0 14px', flex: 'none' }}>Yes, regenerate</button>
+                  <button onClick={() => setConfirmRegenerate(false)} style={{ ...btn(), height: 36, padding: '0 14px', flex: 'none' }}>Cancel</button>
                 </div>
-              )
-            })}
-          </div>
+              </div>
+            )}
+
+            {generatingChecklist ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 0' }}>
+                <div style={{ width: 20, height: 20, border: '2px solid var(--line)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.85s linear infinite' }}/>
+                <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)' }}>Generating checklist…</span>
+              </div>
+            ) : checklist.length === 0 ? (
+              <div style={{ ...card, padding: 16 }}>
+                <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 14 }}>Generate a custom checklist based on this scan's findings and applicable legislation.</div>
+                {checklistError && <div style={{ marginBottom: 12, padding: '8px 12px', border: '1.5px solid var(--issue)', borderRadius: 4, fontSize: 12, fontWeight: 500, color: 'var(--issue-tx-theme)' }}>{checklistError}</div>}
+                <button onClick={handleGenerateChecklist} style={{ ...btn(true), padding: '0 18px', flex: 'none' }}>Generate checklist →</button>
+              </div>
+            ) : (
+              <div style={{ ...card, overflow: 'hidden' }}>
+                {checklist.map((item: any, i: number) => {
+                  if (checklistState[`d_${i}`]) return null
+                  const checked = !!checklistState[`c_${i}`]
+                  const isLast = checklist.slice(i + 1).every((_: any, j: number) => checklistState[`d_${i + 1 + j}`])
+                  return (
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderBottom: isLast ? 'none' : '1.5px solid var(--div)' }}>
+                      <div onClick={() => toggleCheck(i)} style={{ width: 20, height: 20, borderRadius: 6, display: 'grid', placeItems: 'center', flexShrink: 0, cursor: 'pointer', border: `1.5px solid ${checked ? 'var(--amber)' : 'var(--line)'}`, background: checked ? 'var(--amber)' : 'transparent' }}>
+                        {checked && <span style={{ display: 'block', width: 10, height: 6, borderLeft: '1.8px solid #1B1A12', borderBottom: '1.8px solid #1B1A12', transform: 'rotate(-45deg) translate(1px,-1px)' }}/>}
+                      </div>
+                      <div style={{ flex: 1, cursor: 'pointer' }} onClick={() => toggleCheck(i)}>
+                        <div style={{ fontSize: 13.5, fontWeight: 500, color: checked ? 'var(--mut)' : 'var(--text)', textDecoration: checked ? 'line-through' : 'none', opacity: checked ? 0.55 : 1 }}>{item.item}</div>
+                        {item.category && <div style={{ fontWeight: 600, fontSize: 9.5, color: 'var(--mut)', marginTop: 2, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{item.category}</div>}
+                      </div>
+                      <button onClick={() => deleteItem(i)} style={{ background: 'none', border: 'none', color: 'var(--mut)', fontSize: 18, cursor: 'pointer', padding: '0 2px', lineHeight: 1 }}>×</button>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </>
         )}
 
         {/* Re-analyse + Export PDF */}
@@ -771,7 +819,7 @@ export default function ScanDetail({ id }: { id: string }) {
             style={{ ...btn(reanalyseExpanded), flex: 1, opacity: reanalysing ? 0.6 : 1, cursor: reanalysing ? 'not-allowed' : 'pointer' }}>
             {reanalysing
               ? <><span style={{ width: 14, height: 14, border: '2px solid var(--div)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>Re-analysing…</>
-              : <><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7a4 4 0 0 1 8 0M11 7a4 4 0 0 1-8 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 4v3h-3M3 10V7h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>Re-analyse {reanalyseExpanded ? '▲' : '▼'}</>}
+              : <><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7a4 4 0 0 1 8 0M11 7a4 4 0 0 1-8 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 4v3h-3M3 10V7h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{!isLegacy && activeModule ? `Re-analyse ${activeModule}` : 'Re-analyse'} {reanalyseExpanded ? '▲' : '▼'}</>}
           </button>
           <button onClick={handleExportPDF} disabled={exportingPDF} style={{ ...btn(true), flex: 1, opacity: exportingPDF ? 0.6 : 1, cursor: exportingPDF ? 'not-allowed' : 'pointer' }}>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 9v2h8V9M7 2v7m0 0L4 6m3 3 3-3" stroke="#1B1A12" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -800,7 +848,7 @@ export default function ScanDetail({ id }: { id: string }) {
             </div>
             {continueError && <div style={{ marginTop: 10, padding: '8px 12px', border: '1.5px solid var(--issue)', borderRadius: 4, fontSize: 12, fontWeight: 500, color: 'var(--issue-tx-theme)' }}>{continueError}</div>}
             <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
-              <button onClick={() => { handleReanalyse(); setReanalyseExpanded(false) }}
+              <button onClick={async () => { setReanalyseExpanded(false); await reanalyseWithContext(continueContext, continuePhotos, activeModule || 'safety') }}
                 disabled={reanalysing || (continuePhotos.length === 0 && !continueContext.trim())}
                 style={{ ...btn(true), flex: 1, opacity: (reanalysing || (!continuePhotos.length && !continueContext.trim())) ? 0.4 : 1, cursor: (reanalysing || (!continuePhotos.length && !continueContext.trim())) ? 'not-allowed' : 'pointer' }}>
                 {reanalysing ? <><span style={{ width: 14, height: 14, border: '2px solid rgba(27,26,18,0.3)', borderTopColor: '#1B1A12', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>Re-analysing…</> : 'Re-analyse →'}
