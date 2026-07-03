@@ -303,10 +303,28 @@ export async function POST(request: NextRequest) {
         const anthropicData = await anthropicRes.json()
         const rawText: string = anthropicData.content?.[0]?.text ?? ''
         console.log(`[PARSE DEBUG] module=${module} raw response:`, rawText)
+
+        // Strip markdown fences — Claude wraps its response in ```json ... ``` despite instructions
+        const stripped = rawText
+          .replace(/^```json\s*/m, '')
+          .replace(/^```\s*/m, '')
+          .replace(/```\s*$/m, '')
+          .trim()
+
         let parsed: any
-        try {
-          parsed = JSON.parse(rawText)
-        } catch {
+        // Attempt 1: direct parse of stripped text
+        try { parsed = JSON.parse(stripped) } catch (_) {}
+        // Attempt 2: extract first {...} block (handles any preamble or trailing text)
+        if (!parsed) {
+          const match = stripped.match(/\{[\s\S]*\}/)
+          if (match) { try { parsed = JSON.parse(match[0]) } catch (_) {} }
+        }
+        // Attempt 3: brace scan — slice from first { to last }
+        if (!parsed) {
+          const f = stripped.indexOf('{'), l = stripped.lastIndexOf('}')
+          if (f !== -1 && l !== -1) { try { parsed = JSON.parse(stripped.slice(f, l + 1)) } catch (_) {} }
+        }
+        if (!parsed) {
           throw new Error(`Failed to parse Claude JSON for module "${module}"`)
         }
 
