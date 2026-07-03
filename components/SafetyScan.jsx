@@ -16,52 +16,6 @@ if (typeof window !== 'undefined') {
 
 const MAX_PHOTOS = 5;
 
-async function analysePhotos(photoList, context, searchQuery) {
-  const userContent = [
-    ...photoList.map(p => ({ type: "image", source: { type: "base64", media_type: "image/jpeg", data: p.base64 } })),
-    {
-      type: "text",
-      text: `Analyse these ${photoList.length} site photo${photoList.length > 1 ? "s" : ""} together as a single inspection. Identify all work types present across all photos and return one organised compliance report covering everything you can see.${context ? `\n\nContext: ${context}` : ""}`
-    }
-  ];
-
-  let res, data;
-  try {
-    res = await fetch("/api/analyse", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        // model and max_tokens are set server-side in app/api/analyse/route.ts
-        messages: [{ role: "user", content: userContent }],
-        searchQuery: searchQuery || "construction site safety compliance Queensland WHS",
-      }),
-    });
-  } catch (fetchErr) {
-    throw new Error(`Network error: ${fetchErr.message}`);
-  }
-
-  let rawText = "";
-  try { rawText = await res.text(); } catch (e) { throw new Error(`Could not read response: ${e.message}`); }
-
-  try { data = JSON.parse(rawText); } catch (e) { throw new Error(`Response not JSON (status ${res.status}): ${rawText.substring(0, 200)}`); }
-
-  if (!res.ok || data.error) {
-    throw new Error(`API ${res.status}: ${data.error?.message || data.message || JSON.stringify(data).substring(0, 200)}`);
-  }
-
-  const raw = (data.content || []).filter(b => b.type === "text").map(b => b.text || "").join("").trim();
-  if (!raw) throw new Error(`Empty response. Stop: ${data.stop_reason}`);
-
-  const stripped = raw.replace(/^```json\s*/m, "").replace(/^```\s*/m, "").replace(/```\s*$/m, "").trim();
-
-  try { return JSON.parse(stripped); } catch (_) {}
-  const match = stripped.match(/\{[\s\S]*\}/);
-  if (match) { try { return JSON.parse(match[0]); } catch (_) {} }
-  const f = stripped.indexOf("{"), l = stripped.lastIndexOf("}");
-  if (f !== -1 && l !== -1) { try { return JSON.parse(stripped.slice(f, l + 1)); } catch (_) {} }
-  throw new Error(`Parse failed: ${stripped.substring(0, 200)}`);
-}
-
 
 const LOADING_MESSAGES = [
   "Identifying work types...",
@@ -84,6 +38,7 @@ export default function SafetyScan() {
   const [exiting, setExiting] = useState(false);
   const [dragOver, setDragOver] = useState(false);
   const [workTypes, setWorkTypes] = useState([]);
+  const [selectedModules, setSelectedModules] = useState(["safety"]);
   const [currentUser, setCurrentUser] = useState(null);
   const [sites, setSites] = useState([]);
   const [siteDropdownValue, setSiteDropdownValue] = useState("none");
@@ -117,63 +72,33 @@ export default function SafetyScan() {
     if (urlSiteId) setSiteDropdownValue(urlSiteId);
   }, [searchParams]);
 
-  const saveScan = async (result, photoList, siteId = null) => {
-    if (!currentUser) return null;
-    try {
-      // Upload all photos to storage
-      const photoUrls = [];
-      for (let i = 0; i < photoList.length; i++) {
-        const photo = photoList[i];
-        try {
-          const base64 = photo.dataUrl.split(',')[1];
-          if (!base64) continue;
-          const byteCharacters = atob(base64);
-          const byteArray = new Uint8Array(byteCharacters.length);
-          for (let j = 0; j < byteCharacters.length; j++) byteArray[j] = byteCharacters.charCodeAt(j);
-          const blob = new Blob([byteArray], { type: 'image/jpeg' });
-          const fileName = `${currentUser.id}/${Date.now()}-${i}.jpg`;
-          console.log('[saveScan] uploading photo', i + 1, 'size:', blob.size);
-          const { error: uploadError } = await supabase.storage
-            .from('scan-photos')
-            .upload(fileName, blob, { contentType: 'image/jpeg', upsert: false });
-          if (uploadError) {
-            console.error('[saveScan] upload failed:', uploadError.message);
-          } else {
-            const { data: urlData } = supabase.storage.from('scan-photos').getPublicUrl(fileName);
-            photoUrls.push(urlData.publicUrl);
-            console.log('[saveScan] uploaded photo', i + 1, '->', urlData.publicUrl);
-          }
-        } catch (photoErr) {
-          console.error('[saveScan] photo processing error:', photoErr);
+  const uploadPhotos = async (photoList) => {
+    if (!currentUser) return [];
+    const photoUrls = [];
+    for (let i = 0; i < photoList.length; i++) {
+      const photo = photoList[i];
+      try {
+        const base64 = photo.dataUrl.split(',')[1];
+        if (!base64) continue;
+        const byteCharacters = atob(base64);
+        const byteArray = new Uint8Array(byteCharacters.length);
+        for (let j = 0; j < byteCharacters.length; j++) byteArray[j] = byteCharacters.charCodeAt(j);
+        const blob = new Blob([byteArray], { type: 'image/jpeg' });
+        const fileName = `${currentUser.id}/${Date.now()}-${i}.jpg`;
+        const { error: uploadError } = await supabase.storage
+          .from('scan-photos')
+          .upload(fileName, blob, { contentType: 'image/jpeg', upsert: false });
+        if (uploadError) {
+          console.error('[uploadPhotos] upload failed:', uploadError.message);
+        } else {
+          const { data: urlData } = supabase.storage.from('scan-photos').getPublicUrl(fileName);
+          photoUrls.push(urlData.publicUrl);
         }
+      } catch (photoErr) {
+        console.error('[uploadPhotos] photo processing error:', photoErr);
       }
-
-      console.log('[saveScan] photo_urls:', photoUrls, 'work_types:', result.work_types);
-
-      const { data, error: insertError } = await supabase.from('scans').insert({
-        user_id: currentUser.id,
-        site_id: siteId || null,
-        work_type: result.work_type,
-        work_types: result.work_types || null,
-        status: result.status,
-        confidence: result.confidence,
-        legislation: result.legislation,
-        findings: result.findings,
-        summary: result.summary,
-        follow_up_questions: result.follow_up_questions,
-        photo_url: photoUrls[0] || null,
-        photo_urls: photoUrls.length > 0 ? photoUrls : null,
-      }).select('id').single();
-
-      if (insertError) {
-        console.error('[saveScan] insert error:', insertError);
-        return null;
-      }
-      return data?.id || null;
-    } catch (err) {
-      console.error('[saveScan] error:', err);
-      return null;
     }
+    return photoUrls;
   };
 
   const addFiles = useCallback(async (files) => {
@@ -222,33 +147,44 @@ export default function SafetyScan() {
     }
 
     try {
-      const searchQuery = [...workTypes, context].filter(Boolean).join(" ")
-      const parsed = await analysePhotos(photos, context, searchQuery);
+      // Upload photos first so URLs are available for the scan row
+      const photoUrls = await uploadPhotos(photos);
 
-      const parsedWorkTypes = parsed.work_types || (parsed.work_type ? [parsed.work_type] : ["Unknown work type"]);
-      const workTypeLabel = parsed.work_type || parsedWorkTypes.join(" + ") || "Unknown work type";
+      const userContent = [
+        ...photos.map(p => ({ type: "image", source: { type: "base64", media_type: "image/jpeg", data: p.base64 } })),
+        {
+          type: "text",
+          text: `Analyse these ${photos.length} site photo${photos.length > 1 ? "s" : ""} together as a single inspection. Identify all work types present across all photos and return one organised compliance report covering everything you can see.${context ? `\n\nContext: ${context}` : ""}`
+        }
+      ];
+      const searchQuery = [...workTypes, context].filter(Boolean).join(" ");
 
-      const safeResult = {
-        work_types: parsedWorkTypes,
-        work_type: workTypeLabel,
-        status: parsed.status || "uncertain",
-        confidence: parsed.confidence || "low",
-        legislation: (parsed.legislation || []).map(l => ({ ...l, clauses: l.clauses || [] })),
-        findings: parsed.findings || [],
-        summary: parsed.summary || "",
-        follow_up_questions: parsed.follow_up_questions || [],
-        photo_quality: parsed.photo_quality || "good",
-      };
+      const res = await fetch("/api/analyse", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({
+          messages: [{ role: "user", content: userContent }],
+          model: "claude-sonnet-4-6",
+          modules: selectedModules,
+          photo_urls: photoUrls,
+          site_id: resolvedSiteId,
+          work_types: workTypes,
+          searchQuery: searchQuery || "construction site safety compliance Queensland WHS",
+        }),
+      });
 
-      const scanId = await saveScan(safeResult, photos, resolvedSiteId);
-      if (scanId) {
-        setScanLoaderState("complete");
-        await new Promise(resolve => setTimeout(resolve, 1200));
-        router.push(`/scan/${scanId}`);
-      } else {
-        setGlobalError("Analysis complete but failed to save. Please try again.");
-        setAnalysing(false);
+      const data = await res.json();
+      if (!res.ok || data.error) {
+        throw new Error(data.error || `Analysis failed (${res.status})`);
       }
+
+      const { scanId } = data;
+      if (!scanId) throw new Error("No scan ID returned from server");
+
+      setScanLoaderState("complete");
+      await new Promise(resolve => setTimeout(resolve, 1200));
+      router.push(`/scan/${scanId}`);
     } catch (e) {
       setGlobalError(e.message || "Analysis failed");
       setAnalysing(false);
@@ -421,6 +357,39 @@ export default function SafetyScan() {
                             transition: "all 0.12s",
                           }}>
                           {type}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Module selector */}
+                <div style={{ marginBottom: 14 }}>
+                  <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--mut)", marginBottom: 6 }}>Analysis modules</div>
+                  <div style={{ display: "flex", gap: 6 }}>
+                    {[
+                      { key: "safety", label: "Safety" },
+                      { key: "quality", label: "Quality" },
+                      { key: "environmental", label: "Environmental" },
+                    ].map(({ key, label }) => {
+                      const selected = selectedModules.includes(key);
+                      return (
+                        <button key={key}
+                          onClick={() => setSelectedModules(prev => {
+                            if (prev.includes(key) && prev.length === 1) return prev;
+                            return prev.includes(key) ? prev.filter(m => m !== key) : [...prev, key];
+                          })}
+                          style={{
+                            padding: "6px 12px",
+                            border: `1.5px solid ${selected ? "var(--amber)" : "var(--line)"}`,
+                            borderRadius: 4,
+                            background: selected ? "rgba(238,128,26,0.1)" : "var(--bg)",
+                            color: selected ? "var(--amber)" : "var(--mut)",
+                            fontSize: 12, fontWeight: 600,
+                            cursor: "pointer", fontFamily: "inherit",
+                            transition: "all 0.12s",
+                          }}>
+                          {label}
                         </button>
                       );
                     })}

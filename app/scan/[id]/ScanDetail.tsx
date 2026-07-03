@@ -438,20 +438,7 @@ export default function ScanDetail({ id }: { id: string }) {
     if (!scan) return
     setContinueLoading(true); setContinueError(null)
     try {
-      const contextText = `Analyse these construction site photos for Queensland compliance, building on a previous assessment.\n\nPrevious assessment:\nWork type: ${scan.work_type}\nStatus: ${scan.status} (${scan.confidence} confidence)\nSummary: ${scan.summary}\nFindings: ${(scan.findings || []).map((f: any) => f.text || f.title || '').filter(Boolean).join(', ')}\nLegislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${additionalInfo ? `\n\nAdditional context: ${additionalInfo}` : ''}`
-      const userContent: any[] = [
-        ...extraPhotos.map(p => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: p.base64 } })),
-        { type: 'text', text: contextText },
-      ]
-      const searchQuery = [scan.work_type, additionalInfo].filter(Boolean).join(' ')
-      const res = await fetch('/api/analyse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ max_tokens: 2000, messages: [{ role: 'user', content: userContent }], searchQuery }) })
-      const data = JSON.parse(await res.text())
-      if (!res.ok || data.error) throw new Error(data.error?.message || 'Analysis failed')
-      const raw = (data.content || []).filter((b: any) => b.type === 'text').map((b: any) => b.text || '').join('').trim()
-      const stripped = raw.replace(/^```json\s*/m, '').replace(/^```\s*/m, '').replace(/```\s*$/m, '').trim()
-      let parsed: any
-      try { parsed = JSON.parse(stripped) } catch (_) { const match = stripped.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); else throw new Error('Could not parse response') }
-      const updated = { status: parsed.status || 'uncertain', confidence: parsed.confidence || 'low', work_type: parsed.work_type || scan.work_type, legislation: (parsed.legislation || []).map((l: any) => ({ ...l, clauses: l.clauses || [] })), findings: parsed.findings || [], summary: parsed.summary || '', follow_up_questions: parsed.follow_up_questions || [] }
+      // Upload any new photos client-side first — route doesn't update photo_urls on re-analysis path
       const { data: { user } } = await supabase.auth.getUser()
       const newUrls: string[] = []
       if (user && extraPhotos.length > 0) {
@@ -463,8 +450,47 @@ export default function ScanDetail({ id }: { id: string }) {
         }
       }
       const updatedUrls = newUrls.length > 0 ? [...photoUrls, ...newUrls] : photoUrls
-      if (newUrls.length > 0) { await supabase.from('scans').update({ ...updated, photo_urls: updatedUrls }).eq('id', id); setPhotoUrls(updatedUrls) } else { await supabase.from('scans').update(updated).eq('id', id) }
-      setScan(prev => prev ? { ...prev, ...updated, photo_urls: updatedUrls } : prev)
+      if (newUrls.length > 0) {
+        await supabase.from('scans').update({ photo_urls: updatedUrls }).eq('id', id)
+        setPhotoUrls(updatedUrls)
+      }
+
+      const contextText = `Analyse these construction site photos for Queensland compliance, building on a previous assessment.\n\nPrevious assessment:\nWork type: ${scan.work_type}\nStatus: ${scan.status} (${scan.confidence} confidence)\nSummary: ${scan.summary}\nFindings: ${(scan.findings || []).map((f: any) => f.text || f.title || '').filter(Boolean).join(', ')}\nLegislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${additionalInfo ? `\n\nAdditional context: ${additionalInfo}` : ''}`
+      const userContent: any[] = [
+        ...extraPhotos.map(p => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: p.base64 } })),
+        { type: 'text', text: contextText },
+      ]
+      const searchQuery = [scan.work_type, additionalInfo].filter(Boolean).join(' ')
+
+      const res = await fetch('/api/analyse', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          scan_id: id,
+          // TODO 3b: re-analyse the active module tab, not hardcoded safety
+          modules: ['safety'],
+          messages: [{ role: 'user', content: userContent }],
+          searchQuery,
+        }),
+      })
+
+      const data = await res.json()
+      if (!res.ok || data.error) throw new Error(data.error || 'Analysis failed')
+
+      // Extract module result for local display — Phase 3b will read scan_modules instead
+      const moduleResult: any = data.results?.safety ?? Object.values(data.results ?? {})[0] ?? {}
+      setScan(prev => prev ? {
+        ...prev,
+        status: moduleResult.status || prev.status,
+        work_type: moduleResult.work_type || prev.work_type,
+        work_types: moduleResult.work_types || prev.work_types,
+        legislation: moduleResult.legislation || prev.legislation,
+        findings: moduleResult.findings || prev.findings,
+        summary: moduleResult.summary || prev.summary,
+        follow_up_questions: moduleResult.follow_up_questions || prev.follow_up_questions,
+        photo_urls: updatedUrls,
+      } : prev)
       setContinueContext(''); setContinuePhotos([])
     } catch (e: any) { setContinueError(e.message || 'Analysis failed') }
     finally { setContinueLoading(false) }
