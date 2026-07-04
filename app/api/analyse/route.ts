@@ -324,7 +324,18 @@ export async function POST(request: NextRequest) {
             })
           }
 
-          // c. POST to Anthropic
+          // c. Temporary token-cost breakdown logging
+          const msgChars = JSON.stringify(messages ?? []).length
+          const est = (chars: number) => Math.round(chars / 4)
+          console.log(
+            `[TOKEN BREAKDOWN] module=${module}` +
+            ` base=${est(BASE_SYSTEM_PROMPT.length)}` +
+            ` moduleBlock=${est((MODULE_PROMPTS[module] ?? '').length)}` +
+            ` rag=${est(ragSection.length)}` +
+            ` userMsg=${est(msgChars)}`
+          )
+
+          // d. POST to Anthropic
           const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
             method: 'POST',
             headers: {
