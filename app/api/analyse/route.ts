@@ -137,6 +137,46 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
 
 Max 8 findings across all photos. Max 4 legislation items. Max 3 clauses per legislation item. Omit "photo_ref" when there is only one photo.`
 
+const MODULE_PROMPTS: Record<string, string> = {
+  safety: `You are currently assessing this site against the SAFETY compliance module ONLY.
+
+Assess against Queensland work health and safety law: the Work Health and Safety Act 2011 (Qld), the Work Health and Safety Regulation 2011 (Qld), and relevant WHS Codes of Practice.
+
+Focus on: hazards to worker health and safety — falls and working at heights, PPE, exclusion zones, high-risk work licensing, SWMS, plant and equipment, excavation and trenching, electrical safety, asbestos worker exposure and removal licensing, hazardous materials handling.
+
+The "legislation" field must cite ONLY WHS instruments (WHS Act, WHS Regulation, WHS Codes of Practice). Do NOT cite environmental (EP Act/Regulation) or building-quality (QBCC) instruments.
+
+Do NOT raise environmental-harm findings (erosion, sediment, waste disposal to environment, contamination) or building-quality/workmanship findings (tolerances, defects, finishes) — those belong to other modules.
+
+If the photo shows no significant safety issues, say so plainly. Do NOT manufacture or pad findings to fill the report.`,
+
+  environmental: `You are currently assessing this site against the ENVIRONMENTAL compliance module ONLY.
+
+Assess against Queensland environmental law: the Environmental Protection Act 1994 (Qld), the Environmental Protection Regulation 2019 (Qld), and the IECA erosion and sediment control model code of practice.
+
+Focus on: risk of environmental harm and its controls — erosion and sediment control (sediment fences, stabilised site entries/exits, stockpile protection, drainage), stormwater and waterway contamination, dust and air, spill/fuel/chemical storage and management, regulated and general waste classification, containment and disposal to licensed facilities, land rehabilitation and the waste hierarchy.
+
+Regulated waste note: materials such as asbestos are REGULATED WASTE under the EP Regulation. When such materials are present, assess the ENVIRONMENTAL dimension — proper containment, prevention of soil/water/site contamination, and disposal to an appropriately licensed facility — NOT worker exposure or PPE (that is the safety module's concern).
+
+The "legislation" field must cite ONLY environmental instruments (EP Act 1994, EP Regulation 2019, IECA code). Do NOT cite WHS or QBCC instruments.
+
+Do NOT raise worker-safety findings (PPE, harnesses, exclusion zones for worker protection, removal licensing) or building-quality findings — those belong to other modules.
+
+If the photo shows no significant environmental issues, say so plainly (e.g. "No significant environmental compliance issues are visible in this photo"). Do NOT manufacture or pad findings.`,
+
+  quality: `You are currently assessing this site against the QUALITY compliance module ONLY.
+
+Assess against the QBCC Standards and Tolerances Guide (Queensland Building and Construction Commission).
+
+Focus on: building workmanship, defects, and dimensional tolerances — structural and framing tolerances (timber/steel), surface flatness and level, wall plumb, cracking in concrete/masonry/finishes, waterproofing of wet areas, decks and balconies, tiling and finishes, and other measurable standards-and-tolerances compliance.
+
+The "legislation"/reference field must cite ONLY the QBCC Standards and Tolerances Guide (with the relevant section). Do NOT cite WHS or environmental instruments.
+
+Do NOT raise worker-safety findings or environmental-harm findings — those belong to other modules.
+
+If the photo shows no significant quality/workmanship issues, say so plainly. Do NOT manufacture or pad findings.`,
+}
+
 const GENERIC_FALLBACK = 'construction site safety compliance Queensland WHS'
 
 export async function POST(request: NextRequest) {
@@ -271,6 +311,10 @@ export async function POST(request: NextRequest) {
               type: 'text',
               text: BASE_SYSTEM_PROMPT,
               cache_control: { type: 'ephemeral' },
+            },
+            {
+              type: 'text',
+              text: MODULE_PROMPTS[module] ?? MODULE_PROMPTS.safety,
             },
           ]
           if (ragSection) {
