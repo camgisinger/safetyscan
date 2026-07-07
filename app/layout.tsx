@@ -34,10 +34,10 @@ export const metadata: Metadata = {
   authors: [{ name: 'Mono Compliance' }],
   creator: 'Mono Compliance',
   publisher: 'Mono Compliance',
-  metadataBase: new URL('https://safetyscan.com.au'),
+  metadataBase: new URL('https://sitespotter.com.au'),
   alternates: { canonical: '/' },
   openGraph: {
-    type: 'website', locale: 'en_AU', url: 'https://safetyscan.com.au', siteName: 'SiteSpotter',
+    type: 'website', locale: 'en_AU', url: 'https://sitespotter.com.au', siteName: 'SiteSpotter',
     title: 'SiteSpotter — Queensland Construction Compliance',
     description: 'AI-powered Queensland construction compliance checks.',
     images: [{ url: '/brand/og-image.png', width: 1200, height: 630, alt: 'SiteSpotter' }],

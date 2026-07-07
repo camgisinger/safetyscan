@@ -119,7 +119,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'How do I delete my data?',
-        a: 'You can delete individual scans from within the app. To delete your account and all associated data, contact us at support@safetyscan.com.au and we will action your request within 30 days.',
+        a: 'You can delete individual scans from within the app. To delete your account and all associated data, contact us at support@sitespotter.com.au and we will action your request within 30 days.',
       },
       {
         q: 'Are my photos used to train AI?',
@@ -140,7 +140,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'What do I do if a scan fails or returns an error?',
-        a: 'First check your internet connection. If the problem persists, try re-uploading the photos. If you continue to experience issues, contact us at support@safetyscan.com.au with a description of the problem and we will investigate.',
+        a: 'First check your internet connection. If the problem persists, try re-uploading the photos. If you continue to experience issues, contact us at support@sitespotter.com.au with a description of the problem and we will investigate.',
       },
       {
         q: 'Is SiteSpotter available offline?',
@@ -416,8 +416,8 @@ export default function HelpContent() {
           }}>
             <p style={{ fontSize: 13, color: 'var(--mut)', margin: 0 }}>
               SiteSpotter · Queensland, Australia ·{' '}
-              <a href="mailto:support@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>
-                support@safetyscan.com.au
+              <a href="mailto:support@sitespotter.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>
+                support@sitespotter.com.au
               </a>
             </p>
             <p style={{ fontSize: 13, color: 'var(--mut)', margin: 0 }}>

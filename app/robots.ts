@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/dashboard', '/scan/', '/sites/', '/ssinternal'],
       },
     ],
-    sitemap: 'https://safetyscan.com.au/sitemap.xml',
+    sitemap: 'https://sitespotter.com.au/sitemap.xml',
   }
 }

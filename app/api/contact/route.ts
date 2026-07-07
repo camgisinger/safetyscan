@@ -15,13 +15,13 @@ export async function POST(request: NextRequest) {
     }
 
     const { error } = await resend.emails.send({
-      from: 'noreply@safetyscan.com.au',
-      to: 'support@safetyscan.com.au',
+      from: 'noreply@sitespotter.com.au',
+      to: 'support@sitespotter.com.au',
       replyTo: email.trim(),
-      subject: `[SafetyScan Support] ${subject} — from ${name.trim()}`,
+      subject: `[SiteSpotter Support] ${subject} — from ${name.trim()}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; color: #1a1a1a;">
-          <h2 style="margin-top: 0;">SafetyScan Support Request</h2>
+          <h2 style="margin-top: 0;">SiteSpotter Support Request</h2>
           <table style="border-collapse: collapse; width: 100%; margin-bottom: 24px;">
             <tr>
               <td style="padding: 8px 12px; background: #f5f5f5; font-weight: 600; width: 120px; border: 1px solid #e0e0e0;">Name</td>

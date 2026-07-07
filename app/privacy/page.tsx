@@ -48,8 +48,8 @@ export default function PrivacyPage() {
           </p>
           <p style={{ fontSize: 14, color: 'var(--mut)', margin: '0 0 32px', lineHeight: 1.6 }}>
             Contact:{' '}
-            <a href="mailto:privacy@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>
-              privacy@safetyscan.com.au
+            <a href="mailto:privacy@sitespotter.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>
+              privacy@sitespotter.com.au
             </a>
           </p>
 
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
               SiteSpotter ("we", "us", "our") is committed to protecting your personal information in accordance with the Australian Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              This Privacy Policy explains how we collect, use, store, and disclose your personal information when you use SiteSpotter ("the Service") at safetyscan.com.au.
+              This Privacy Policy explains how we collect, use, store, and disclose your personal information when you use SiteSpotter ("the Service") at sitespotter.com.au.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
               By using the Service, you agree to the collection and use of information in accordance with this policy.
@@ -104,9 +104,9 @@ export default function PrivacyPage() {
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 4px', color: 'var(--text)' }}>ABN: 78 350 866 147</p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 4px', color: 'var(--text)' }}>
               Contact:{' '}
-              <a href="mailto:support@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>support@safetyscan.com.au</a>
+              <a href="mailto:support@sitespotter.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>support@sitespotter.com.au</a>
             </p>
-            <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>Website: safetyscan.com.au</p>
+            <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>Website: sitespotter.com.au</p>
           </section>
 
           <Divider />
@@ -317,7 +317,7 @@ export default function PrivacyPage() {
             </ul>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
               To exercise any of these rights, contact us at{' '}
-              <a href="mailto:privacy@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>privacy@safetyscan.com.au</a>.
+              <a href="mailto:privacy@sitespotter.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>privacy@sitespotter.com.au</a>.
               {' '}We will respond within 30 days.
             </p>
           </section>
@@ -343,7 +343,7 @@ export default function PrivacyPage() {
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
               The Service is not intended for use by persons under the age of 18. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us at{' '}
-              <a href="mailto:privacy@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>privacy@safetyscan.com.au</a>.
+              <a href="mailto:privacy@sitespotter.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>privacy@sitespotter.com.au</a>.
             </p>
           </section>
 
@@ -368,7 +368,7 @@ export default function PrivacyPage() {
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
               If you believe we have breached the Australian Privacy Principles, you may lodge a complaint with us at{' '}
-              <a href="mailto:privacy@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>privacy@safetyscan.com.au</a>.
+              <a href="mailto:privacy@sitespotter.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>privacy@sitespotter.com.au</a>.
               {' '}We will respond within 30 days.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>

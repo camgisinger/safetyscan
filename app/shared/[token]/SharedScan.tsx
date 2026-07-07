@@ -169,7 +169,7 @@ export default function SharedScan({ token }: { token: string }) {
           Open in SiteSpotter
         </Link>
         <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--mut)', textAlign: 'center', marginTop: 12 }}>
-          safetyscan.com.au/shared/{token}
+          sitespotter.com.au/shared/{token}
         </div>
 
       </main>

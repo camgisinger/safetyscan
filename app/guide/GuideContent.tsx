@@ -132,7 +132,7 @@ export default function GuideContent() {
                 </div>
                 {/* Link */}
                 <div style={{ padding: '10px 14px', background: 'var(--bg)', border: '1.5px solid var(--line)', borderRadius: 4, fontFamily: 'var(--ff-mono)', fontSize: 10.5, letterSpacing: '0.06em', color: 'var(--mut)', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
-                  safetyscan.com.au/shared/8K2J-VQ4M
+                  sitespotter.com.au/shared/8K2J-VQ4M
                 </div>
                 {/* CTA */}
                 <div style={{ height: 44, background: 'var(--amber)', border: '1.5px solid var(--line)', borderRadius: 8, display: 'grid', placeItems: 'center', fontWeight: 600, fontSize: 13.5, color: '#1B1A12' }}>

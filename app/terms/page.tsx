@@ -52,8 +52,8 @@ export default function TermsPage() {
           </p>
           <p style={{ fontSize: 14, color: 'var(--mut)', margin: '0 0 32px', lineHeight: 1.6 }}>
             Contact:{' '}
-            <a href="mailto:support@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>
-              support@safetyscan.com.au
+            <a href="mailto:support@sitespotter.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>
+              support@sitespotter.com.au
             </a>
           </p>
 
@@ -85,7 +85,7 @@ export default function TermsPage() {
               1. Agreement to Terms
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              By accessing or using SiteSpotter ("the Service") at safetyscan.com.au, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, do not use the Service.
+              By accessing or using SiteSpotter ("the Service") at sitespotter.com.au, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, do not use the Service.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
               These Terms constitute a legally binding agreement between you and Cameron Jesse Gisinger (ABN 78 350 866 147), operating as SiteSpotter.
@@ -206,7 +206,7 @@ export default function TermsPage() {
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
               5.3 You must notify us immediately at{' '}
-              <a href="mailto:support@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>support@safetyscan.com.au</a>
+              <a href="mailto:support@sitespotter.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>support@sitespotter.com.au</a>
               {' '}if you become aware of any unauthorised use of your account.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
@@ -266,7 +266,7 @@ export default function TermsPage() {
             </h2>
             <h3 style={{ fontSize: 15, fontWeight: 600, margin: '0 0 8px', color: 'var(--text)' }}>8.1 Current pricing</h3>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 18px', color: 'var(--text)' }}>
-              The Service is currently available on a subscription basis. Pricing details are displayed at safetyscan.com.au/pricing.
+              The Service is currently available on a subscription basis. Pricing details are displayed at sitespotter.com.au/pricing.
             </p>
             <h3 style={{ fontSize: 15, fontWeight: 600, margin: '0 0 8px', color: 'var(--text)' }}>8.2 Subscription billing</h3>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 18px', color: 'var(--text)' }}>
@@ -360,7 +360,7 @@ export default function TermsPage() {
               12. Privacy
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              Your use of the Service is also governed by our Privacy Policy, available at safetyscan.com.au/privacy. By using the Service, you agree to the collection and use of your information as described in the Privacy Policy.
+              Your use of the Service is also governed by our Privacy Policy, available at sitespotter.com.au/privacy. By using the Service, you agree to the collection and use of your information as described in the Privacy Policy.
             </p>
           </section>
 
@@ -415,10 +415,10 @@ export default function TermsPage() {
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 4px', color: 'var(--text)' }}>
               Email:{' '}
-              <a href="mailto:support@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>support@safetyscan.com.au</a>
+              <a href="mailto:support@sitespotter.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>support@sitespotter.com.au</a>
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 16px', color: 'var(--text)' }}>
-              Website: safetyscan.com.au
+              Website: sitespotter.com.au
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 4px', color: 'var(--text)' }}>Cameron Jesse Gisinger</p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 4px', color: 'var(--text)' }}>ABN 78 350 866 147</p>

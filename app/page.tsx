@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SiteSpotter — AI Construction Compliance Scanner for Queensland Sites',
     description: 'Snap a photo and SiteSpotter checks your site against Queensland WHS legislation in seconds.',
-    url: 'https://safetyscan.com.au',
+    url: 'https://sitespotter.com.au',
     siteName: 'SiteSpotter',
     type: 'website',
   },
