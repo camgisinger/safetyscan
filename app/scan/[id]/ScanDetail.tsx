@@ -873,7 +873,7 @@ export default function ScanDetail({ id }: { id: string }) {
           </div>
         )}
 
-        </>}
+        </>)}
 
         {/* Notes */}
         {secHead('Notes')}
