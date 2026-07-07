@@ -294,6 +294,8 @@ export default function ScanDetail({ id }: { id: string }) {
   const [openLeg, setOpenLeg] = useState<number | null>(null)
   const [scanModules, setScanModules] = useState<any[]>([])
   const [activeModule, setActiveModule] = useState<string>('')
+  const [view, setView] = useState<'detail' | 'overview'>('detail')
+  const [openOverviewChecklist, setOpenOverviewChecklist] = useState<string | null>(null)
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
 
@@ -330,18 +332,19 @@ export default function ScanDetail({ id }: { id: string }) {
     init()
   }, [id, router])
 
-  const handleChecklistChange = async (newState: Record<string, any>) => {
+  const handleChecklistChange = async (newState: Record<string, any>, module?: string) => {
+    const targetModule = module ?? activeModule
     if (scanModules.length === 0) {
       // Legacy: persist to scans table
       setChecklistState(newState)
       await supabase.from('scans').update({ checklist_state: newState }).eq('id', id)
     } else {
-      // Multi-module: persist to scan_modules for the active module; derive-in-render picks it up
+      // Multi-module: persist to scan_modules for the target module; derive-in-render picks it up
       setScanModules(prev => prev.map((m: any) =>
-        m.module === activeModule ? { ...m, checklist_state: newState } : m
+        m.module === targetModule ? { ...m, checklist_state: newState } : m
       ))
       await supabase.from('scan_modules').update({ checklist_state: newState })
-        .eq('scan_id', id).eq('module', activeModule)
+        .eq('scan_id', id).eq('module', targetModule)
     }
   }
 
@@ -624,6 +627,93 @@ export default function ScanDetail({ id }: { id: string }) {
 
         {/* photo enlarged modal moved outside animated wrapper — see below */}
 
+        {/* Overview / Detail toggle — only for multi-module scans */}
+        {!isLegacy && (
+          <div style={{ display: 'flex', gap: 4, marginBottom: 12, padding: 3, background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 8, width: 'fit-content' }}>
+            <button onClick={() => setView('detail')} style={{ height: 32, padding: '0 16px', borderRadius: 6, border: 'none', background: view === 'detail' ? 'var(--amber)' : 'transparent', color: view === 'detail' ? '#1B1A12' : 'var(--mut)', fontWeight: 600, fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.15s' }}>Detail</button>
+            <button onClick={() => setView('overview')} style={{ height: 32, padding: '0 16px', borderRadius: 6, border: 'none', background: view === 'overview' ? 'var(--amber)' : 'transparent', color: view === 'overview' ? '#1B1A12' : 'var(--mut)', fontWeight: 600, fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.15s' }}>Overview</button>
+          </div>
+        )}
+
+        {/* Overview block — per-module summary cards */}
+        {!isLegacy && view === 'overview' && (
+          <div>
+            {scanModules.map((m: any) => {
+              const modIssues = (m.findings || []).filter((f: any) => f.type === 'critical' || f.type === 'warning').length
+              const modStatusColor = m.status === 'pass' ? '#3E8E5A' : m.status === 'fail' ? '#D63A26' : 'var(--amber)'
+              const modLabel = m.module === 'safety' ? 'Safety' : m.module === 'quality' ? 'Quality' : 'Environmental'
+              const modChecklist: any[] = m.checklist || []
+              const modChecklistState: Record<string, any> = m.checklist_state || {}
+              const modVisibleCount = modChecklist.filter((_: any, i: number) => !modChecklistState[`d_${i}`]).length
+              const isChecklistOpen = openOverviewChecklist === m.module
+              return (
+                <div key={m.module} style={{ ...card, marginBottom: 10, overflow: 'hidden' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 14px', borderBottom: '1.5px solid var(--div)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <span style={{ width: 8, height: 8, borderRadius: 2, background: modStatusColor, flexShrink: 0 }}/>
+                      <span style={{ fontWeight: 700, fontSize: 12.5, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: 'var(--text)' }}>{modLabel}</span>
+                    </div>
+                    <span style={{ fontWeight: 600, fontSize: 12, color: m.status === 'pass' ? 'var(--clear-tx)' : m.status === 'fail' ? 'var(--issue-tx-theme)' : 'var(--mut)' }}>
+                      {m.status === 'pass' ? 'Compliant' : m.status === 'fail' ? `${modIssues} issue${modIssues !== 1 ? 's' : ''}` : m.status === 'error' ? 'Error' : 'Pending'}
+                    </span>
+                  </div>
+                  {m.summary && (
+                    <div style={{ padding: '12px 14px', fontSize: 13, fontWeight: 500, lineHeight: 1.55, color: 'var(--mut)', borderBottom: modChecklist.length > 0 ? '1.5px solid var(--div)' : 'none' }}>
+                      {m.summary}
+                    </div>
+                  )}
+                  {modChecklist.length > 0 && (
+                    <div>
+                      <button onClick={() => setOpenOverviewChecklist(isChecklistOpen ? null : m.module)}
+                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '10px 14px', background: 'none', border: 'none', borderBottom: isChecklistOpen ? '1.5px solid var(--div)' : 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
+                        <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--mut)' }}>Checklist ({modVisibleCount})</span>
+                        <span style={{ fontSize: 10, color: 'var(--mut)' }}>{isChecklistOpen ? '▲' : '▼'}</span>
+                      </button>
+                      {isChecklistOpen && (
+                        <div>
+                          {modChecklist.map((item: any, i: number) => {
+                            if (modChecklistState[`d_${i}`]) return null
+                            const checked = !!modChecklistState[`c_${i}`]
+                            const isLast = modChecklist.slice(i + 1).every((_: any, j: number) => modChecklistState[`d_${i + 1 + j}`])
+                            return (
+                              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 14px', borderBottom: isLast ? 'none' : '1.5px solid var(--div)' }}>
+                                <div onClick={() => handleChecklistChange({ ...modChecklistState, [`c_${i}`]: !modChecklistState[`c_${i}`] }, m.module)}
+                                  style={{ width: 20, height: 20, borderRadius: 6, display: 'grid', placeItems: 'center', flexShrink: 0, cursor: 'pointer', border: `1.5px solid ${checked ? 'var(--amber)' : 'var(--line)'}`, background: checked ? 'var(--amber)' : 'transparent' }}>
+                                  {checked && <span style={{ display: 'block', width: 10, height: 6, borderLeft: '1.8px solid #1B1A12', borderBottom: '1.8px solid #1B1A12', transform: 'rotate(-45deg) translate(1px,-1px)' }}/>}
+                                </div>
+                                <div style={{ flex: 1, cursor: 'pointer' }} onClick={() => handleChecklistChange({ ...modChecklistState, [`c_${i}`]: !modChecklistState[`c_${i}`] }, m.module)}>
+                                  <div style={{ fontSize: 13, fontWeight: 500, color: checked ? 'var(--mut)' : 'var(--text)', textDecoration: checked ? 'line-through' : 'none', opacity: checked ? 0.55 : 1 }}>{item.item}</div>
+                                  {item.category && <div style={{ fontWeight: 600, fontSize: 9.5, color: 'var(--mut)', marginTop: 2, letterSpacing: '0.08em', textTransform: 'uppercase' as const }}>{item.category}</div>}
+                                </div>
+                                <button onClick={() => handleChecklistChange({ ...modChecklistState, [`d_${i}`]: true, [`c_${i}`]: false }, m.module)}
+                                  style={{ background: 'none', border: 'none', color: 'var(--mut)', fontSize: 18, cursor: 'pointer', padding: '0 2px', lineHeight: 1 }}>×</button>
+                              </div>
+                            )
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+            <div style={{ display: 'flex', gap: 8, marginTop: 8 }}>
+              <button onClick={() => { setView('detail'); setReanalyseExpanded(true) }}
+                style={{ ...btn(), flex: 1 }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7a4 4 0 0 1 8 0M11 7a4 4 0 0 1-8 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 4v3h-3M3 10V7h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                Re-analyse
+              </button>
+              <button onClick={handleExportPDF} disabled={exportingPDF} style={{ ...btn(true), flex: 1, opacity: exportingPDF ? 0.6 : 1, cursor: exportingPDF ? 'not-allowed' : 'pointer' }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 9v2h8V9M7 2v7m0 0L4 6m3 3 3-3" stroke="#1B1A12" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                {exportingPDF ? 'Exporting…' : 'Export PDF'}
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Detail view */}
+        {(isLegacy || view === 'detail') && (<>
+
         {/* Module tabs — only for multi-module scans */}
         {!isLegacy && (
           <div style={{ display: 'flex', gap: 6, marginBottom: 14 }}>
@@ -782,6 +872,8 @@ export default function ScanDetail({ id }: { id: string }) {
             </div>
           </div>
         )}
+
+        </>}
 
         {/* Notes */}
         {secHead('Notes')}
