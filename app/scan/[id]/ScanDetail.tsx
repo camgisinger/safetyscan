@@ -653,12 +653,12 @@ export default function ScanDetail({ id }: { id: string }) {
                       <span style={{ width: 8, height: 8, borderRadius: 2, background: modStatusColor, flexShrink: 0 }}/>
                       <span style={{ fontWeight: 700, fontSize: 12.5, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: 'var(--text)' }}>{modLabel}</span>
                     </div>
-                    <span style={{ fontWeight: 600, fontSize: 12, color: m.status === 'pass' ? 'var(--clear-tx)' : m.status === 'fail' ? 'var(--issue-tx-theme)' : 'var(--mut)' }}>
-                      {m.status === 'pass' ? 'Compliant' : m.status === 'fail' ? `${modIssues} issue${modIssues !== 1 ? 's' : ''}` : m.status === 'error' ? 'Error' : 'Pending'}
+                    <span style={{ fontWeight: 600, fontSize: 12, color: modIssues > 0 ? 'var(--issue-tx-theme)' : m.status === 'pass' ? 'var(--clear-tx)' : m.status === 'error' ? 'var(--issue-tx-theme)' : 'var(--mut)' }}>
+                      {m.status === 'error' ? 'Error' : modIssues > 0 ? `${modIssues} issue${modIssues !== 1 ? 's' : ''}` : 'No issues'}
                     </span>
                   </div>
                   {m.summary && (
-                    <div style={{ padding: '12px 14px', fontSize: 13, fontWeight: 500, lineHeight: 1.55, color: 'var(--mut)', borderBottom: modChecklist.length > 0 ? '1.5px solid var(--div)' : 'none' }}>
+                    <div style={{ padding: '12px 14px', fontSize: 13, fontWeight: 500, lineHeight: 1.55, color: 'var(--mut)', borderBottom: modChecklist.length > 0 ? '1.5px solid var(--div)' : 'none', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
                       {m.summary}
                     </div>
                   )}
