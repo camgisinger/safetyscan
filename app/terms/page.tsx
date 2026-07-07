@@ -3,8 +3,8 @@ import Link from 'next/link'
 import LegalPageHeader from '../../components/LegalPageHeader'
 
 export const metadata: Metadata = {
-  title: 'Terms and Conditions | SafetyScan',
-  description: 'SafetyScan terms and conditions of use — your agreement with Cameron Jesse Gisinger (ABN 78 350 866 147) governing use of the SafetyScan compliance assistance service.',
+  title: 'Terms and Conditions | SiteSpotter',
+  description: 'SiteSpotter terms and conditions of use — your agreement with Cameron Jesse Gisinger (ABN 78 350 866 147) governing use of the SiteSpotter compliance assistance service.',
 }
 
 const toc = [
@@ -45,7 +45,7 @@ export default function TermsPage() {
             Terms and Conditions
           </h1>
           <p style={{ fontSize: 14, color: 'var(--mut)', margin: '0 0 4px', lineHeight: 1.6 }}>
-            SafetyScan · Operated by Cameron Jesse Gisinger (ABN 78 350 866 147)
+            SiteSpotter · Operated by Cameron Jesse Gisinger (ABN 78 350 866 147)
           </p>
           <p style={{ fontSize: 14, color: 'var(--mut)', margin: '0 0 4px', lineHeight: 1.6 }}>
             Effective date: 1 July 2026
@@ -85,10 +85,10 @@ export default function TermsPage() {
               1. Agreement to Terms
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              By accessing or using SafetyScan ("the Service") at safetyscan.com.au, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, do not use the Service.
+              By accessing or using SiteSpotter ("the Service") at safetyscan.com.au, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, do not use the Service.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              These Terms constitute a legally binding agreement between you and Cameron Jesse Gisinger (ABN 78 350 866 147), operating as SafetyScan.
+              These Terms constitute a legally binding agreement between you and Cameron Jesse Gisinger (ABN 78 350 866 147), operating as SiteSpotter.
             </p>
           </section>
 
@@ -100,7 +100,7 @@ export default function TermsPage() {
               2. Description of Service
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              SafetyScan is an AI-powered construction site compliance assistance tool that analyses site photographs and provides guidance against Queensland work health and safety legislation and codes of practice.
+              SiteSpotter is an AI-powered construction site compliance assistance tool that analyses site photographs and provides guidance against Queensland work health and safety legislation and codes of practice.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
               The Service is designed to assist site supervisors, foremen, safety officers, and principal contractors in identifying potential compliance matters. It is not a substitute for professional WHS advice.
@@ -130,7 +130,7 @@ export default function TermsPage() {
 
             <h3 style={{ fontSize: 15, fontWeight: 600, margin: '0 0 8px', color: 'var(--text)' }}>3.1 Compliance guidance only</h3>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 10px', color: 'var(--text)' }}>
-              SafetyScan is a compliance assistance and guidance tool. It is NOT:
+              SiteSpotter is a compliance assistance and guidance tool. It is NOT:
             </p>
             <ul style={{ paddingLeft: 22, margin: '0 0 18px' }}>
               {[
@@ -294,7 +294,7 @@ export default function TermsPage() {
               9. Limitation of Liability
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              9.1 To the maximum extent permitted by Australian law, Cameron Jesse Gisinger, operating as SafetyScan, shall not be liable for any:
+              9.1 To the maximum extent permitted by Australian law, Cameron Jesse Gisinger, operating as SiteSpotter, shall not be liable for any:
             </p>
             <ul style={{ paddingLeft: 22, margin: '0 0 12px' }}>
               {[
@@ -338,7 +338,7 @@ export default function TermsPage() {
               11. Indemnification
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              You agree to indemnify and hold harmless Cameron Jesse Gisinger, operating as SafetyScan, from and against any claims, damages, losses, and expenses (including legal fees) arising from:
+              You agree to indemnify and hold harmless Cameron Jesse Gisinger, operating as SiteSpotter, from and against any claims, damages, losses, and expenses (including legal fees) arising from:
             </p>
             <ul style={{ paddingLeft: 22, margin: '0 0 12px' }}>
               {[
@@ -447,7 +447,7 @@ export default function TermsPage() {
             gap: 8,
           }}>
             <p style={{ fontSize: 13, color: 'var(--mut)', margin: 0 }}>
-              SafetyScan · Cameron Jesse Gisinger (ABN 78 350 866 147) · Queensland, Australia
+              SiteSpotter · Cameron Jesse Gisinger (ABN 78 350 866 147) · Queensland, Australia
             </p>
             <p style={{ fontSize: 13, color: 'var(--mut)', margin: 0 }}>
               Also see our{' '}

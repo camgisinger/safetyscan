@@ -46,7 +46,7 @@ export default function SharedScan({ token }: { token: string }) {
         <div style={{ fontSize: 48, marginBottom: 16 }}>🔒</div>
         <div style={{ fontSize: 20, fontWeight: 600, color: 'var(--text)', marginBottom: 8 }}>Scan not available</div>
         <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', marginBottom: 24 }}>This link is no longer active.</div>
-        <Link href="/login" style={{ height: 46, padding: '0 24px', background: 'var(--amber)', border: '1.5px solid var(--line)', borderRadius: 8, color: '#1B1A12', fontSize: 13.5, fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>Try SafetyScan</Link>
+        <Link href="/login" style={{ height: 46, padding: '0 24px', background: 'var(--amber)', border: '1.5px solid var(--line)', borderRadius: 8, color: '#1B1A12', fontSize: 13.5, fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>Try SiteSpotter</Link>
       </div>
     </div>
   )
@@ -166,7 +166,7 @@ export default function SharedScan({ token }: { token: string }) {
 
         <Link href="/login"
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 46, marginTop: 24, background: 'var(--amber)', border: '1.5px solid var(--line)', borderRadius: 8, color: '#1B1A12', fontSize: 13.5, fontWeight: 600, textDecoration: 'none' }}>
-          Open in SafetyScan
+          Open in SiteSpotter
         </Link>
         <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--mut)', textAlign: 'center', marginTop: 12 }}>
           safetyscan.com.au/shared/{token}

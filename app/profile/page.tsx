@@ -84,7 +84,7 @@ export default function ProfilePage() {
             <span style={{ fontSize: 18, flexShrink: 0 }}>👤</span>
             <div style={{ flex: 1 }}>
               <div style={{ fontWeight: 600, fontSize: 13.5, color: 'var(--amber)', marginBottom: 2 }}>Complete your profile</div>
-              <div style={{ fontWeight: 500, fontSize: 12, color: 'var(--mut)' }}>Add your name and role to personalise SafetyScan</div>
+              <div style={{ fontWeight: 500, fontSize: 12, color: 'var(--mut)' }}>Add your name and role to personalise SiteSpotter</div>
             </div>
             <span style={{ color: 'var(--amber)', fontSize: 16 }}>›</span>
           </div>
@@ -172,7 +172,7 @@ export default function ProfilePage() {
 
         {/* App version */}
         <div style={{ fontWeight: 600, fontSize: 9.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)', textAlign: 'center', marginTop: 24, opacity: 0.5 }}>
-          SafetyScan v0.1 · Queensland
+          SiteSpotter v0.1 · Queensland
         </div>
       </div>
     </div>

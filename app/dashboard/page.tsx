@@ -114,7 +114,7 @@ export default function DashboardPage() {
           <div style={{ width: 34, height: 34, borderRadius: 4, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
             <img src="/brand/mark-ink.svg" alt="" style={{ width: 24, height: 24 }}/>
           </div>
-          <div style={{ flex: 1, fontWeight: 600, fontSize: 15.5, letterSpacing: '-0.02em', color: 'var(--text)' }}>SafetyScan Guide</div>
+          <div style={{ flex: 1, fontWeight: 600, fontSize: 15.5, letterSpacing: '-0.02em', color: 'var(--text)' }}>SiteSpotter Guide</div>
           <span style={{ color: 'var(--mut)', fontSize: 17 }}>›</span>
         </div>
 

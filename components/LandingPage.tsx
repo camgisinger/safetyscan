@@ -33,7 +33,7 @@ const Icons = {
 function Mark({ size = 26, variant = 'duo' }: { size?: number; variant?: 'duo' | 'amber' }) {
   if (variant === 'amber') {
     return (
-      <svg width={size} height={size} viewBox="0 0 240 240" aria-label="SafetyScan">
+      <svg width={size} height={size} viewBox="0 0 240 240" aria-label="SiteSpotter">
         <g fill="none" strokeLinecap="butt" strokeWidth="14" stroke="#F39410">
           <g opacity="0.3">
             <path d="M 210 120 A 90 90 0 0 1 48 174" />
@@ -48,7 +48,7 @@ function Mark({ size = 26, variant = 'duo' }: { size?: number; variant?: 'duo' |
     )
   }
   return (
-    <svg width={size} height={size} viewBox="0 0 240 240" aria-label="SafetyScan">
+    <svg width={size} height={size} viewBox="0 0 240 240" aria-label="SiteSpotter">
       <g fill="none" strokeLinecap="butt" strokeWidth="14">
         <g stroke="#1B1A12">
           <path d="M 210 120 A 90 90 0 0 1 48 174" />
@@ -129,7 +129,7 @@ function Nav({ isLoggedIn }: { isLoggedIn: boolean }) {
   return (
     <nav className={`nav${stuck ? ' is-stuck' : ''}`}>
       <div className="nav__inner">
-        <a className="brand" href="#top" aria-label="SafetyScan home">
+        <a className="brand" href="#top" aria-label="SiteSpotter home">
           <span className="brand__mk"><Mark size={26} variant="duo" /></span>
           <span className="brand__word">Safety<b>Scan</b></span>
         </a>
@@ -163,7 +163,7 @@ function Hero() {
         <div className="hero__copy">
           <h1>The Construction Compliance Scanner Built for <span className="amber">Queensland Sites</span></h1>
           <p className="hero__sub">
-            Powered by AI, SafetyScan checks your site against Queensland WHS legislation and Australian Standards in seconds.
+            Powered by AI, SiteSpotter checks your site against Queensland WHS legislation and Australian Standards in seconds.
             The construction safety inspection app that catches the gap before the regulator does.
           </p>
           <div className="hero__actions">
@@ -186,7 +186,7 @@ function Hero() {
 // ---------- How It Works ----------
 const STEPS = [
   { icon: Icons.camera, title: 'Take a photo of your site',       desc: 'Point your phone at the work area — scaffolding, an excavation, a traffic setup — and capture it. No forms, no checklists to dig through.' },
-  { icon: Icons.cpu,    title: 'AI analyses it instantly',         desc: 'SafetyScan reads the scene against the Queensland WHS Act, WHS Regulation 2011, relevant Codes of Practice and the Australian Standards they reference — in seconds.' },
+  { icon: Icons.cpu,    title: 'AI analyses it instantly',         desc: 'SiteSpotter reads the scene against the Queensland WHS Act, WHS Regulation 2011, relevant Codes of Practice and the Australian Standards they reference — in seconds.' },
   { icon: Icons.report, title: 'Get a detailed compliance report', desc: 'Receive specific findings with exact clause and standard references — what\'s compliant, what\'s a risk, and the regulation or standard behind every call.' },
 ]
 
@@ -197,7 +197,7 @@ function HowItWorks() {
         <div className="section-head-c">
           <span className="eyebrow eyebrow--center">How it works</span>
           <h2 className="sec-title">From photo to compliance report in three steps</h2>
-          <p className="sec-lead">SafetyScan turns a quick site walk into a documented WHS compliance check — no safety degree required.</p>
+          <p className="sec-lead">SiteSpotter turns a quick site walk into a documented WHS compliance check — no safety degree required.</p>
         </div>
         <div className="steps">
           {STEPS.map((s, i) => (
@@ -259,7 +259,7 @@ function ScanExample() {
       <div className="wrap">
         <div className="section-head-c">
           <span className="eyebrow eyebrow--center eyebrow--ink">Real scan example</span>
-          <h2 className="sec-title">See exactly what a SafetyScan result looks like</h2>
+          <h2 className="sec-title">See exactly what a SiteSpotter result looks like</h2>
           <p className="sec-lead">One photo of a scaffold bay, analysed against Queensland WHS legislation and Australian Standards. Here&apos;s the kind of report your crew gets back.</p>
         </div>
         <div className="example__grid">
@@ -320,7 +320,7 @@ function WhoFor() {
         <div className="section-head-c">
           <span className="eyebrow eyebrow--center">Who it&apos;s for</span>
           <h2 className="sec-title">Built for the people running the site</h2>
-          <p className="sec-lead">From the foreman on the tools to the company managing twenty projects — SafetyScan fits the way you already work.</p>
+          <p className="sec-lead">From the foreman on the tools to the company managing twenty projects — SiteSpotter fits the way you already work.</p>
         </div>
         <div className="who">
           {PERSONAS.map((p, i) => (
@@ -385,7 +385,7 @@ function Pricing() {
         <div className="section-head-c">
           <span className="eyebrow eyebrow--center">Pricing</span>
           <h2 className="sec-title">Simple plans for every crew</h2>
-          <p className="sec-lead">Start free and scale up as you bring more sites and people onto SafetyScan.</p>
+          <p className="sec-lead">Start free and scale up as you bring more sites and people onto SiteSpotter.</p>
         </div>
         <div className="tiers">
           {TIERS.map((t, i) => (
@@ -460,9 +460,9 @@ function Demo() {
       <div className="wrap demo__grid">
         <div>
           <span className="eyebrow eyebrow--ink">Request a demo</span>
-          <h2 className="sec-title">See SafetyScan in action</h2>
+          <h2 className="sec-title">See SiteSpotter in action</h2>
           <p className="demo__lead">
-            SafetyScan is currently in limited beta with demos available for Queensland construction teams.
+            SiteSpotter is currently in limited beta with demos available for Queensland construction teams.
             Book a walk-through and we&apos;ll show you a real compliance scan on your kind of site.
           </p>
           <ul className="demo__points">
@@ -528,7 +528,7 @@ function Demo() {
               <button className="btn btn--amber btn--block form__submit" type="submit" disabled={status === 'submitting'}>
                 {status === 'submitting' ? 'Sending…' : <>Request Your Demo {Icons.arrow}</>}
               </button>
-              <p className="form__fineprint">We&apos;ll only use your details to arrange your SafetyScan demo.</p>
+              <p className="form__fineprint">We&apos;ll only use your details to arrange your SiteSpotter demo.</p>
             </>
           )}
         </form>
@@ -544,7 +544,7 @@ function Footer() {
       <div className="wrap">
         <div className="footer__top">
           <div className="footer__brand-block">
-            <a className="brand" href="#top" aria-label="SafetyScan home">
+            <a className="brand" href="#top" aria-label="SiteSpotter home">
               <span className="brand__mk"><Mark size={26} variant="duo" /></span>
               <span className="brand__word">Safety<b>Scan</b></span>
             </a>
@@ -565,9 +565,9 @@ function Footer() {
           </div>
         </div>
         <div className="footer__bottom">
-          <div className="footer__copy">© 2026 SafetyScan. All rights reserved.</div>
+          <div className="footer__copy">© 2026 SiteSpotter. All rights reserved.</div>
           <div className="footer__disclaimer">
-            SafetyScan is a compliance assistance tool. Always consult a qualified WHS professional for definitive compliance advice.
+            SiteSpotter is a compliance assistance tool. Always consult a qualified WHS professional for definitive compliance advice.
           </div>
         </div>
       </div>

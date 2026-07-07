@@ -1,5 +1,5 @@
 /**
- * SafetyScan — Scan Beam Loader (Trail variant)
+ * SiteSpotter — Scan Beam Loader (Trail variant)
  *
  * Drop-in React component. Drive it with the `state` prop:
  *   <ScanLoader state="idle" | "scanning" | "complete" />

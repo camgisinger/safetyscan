@@ -26,7 +26,7 @@ const LOADING_MESSAGES = [
   "Saving scan...",
 ];
 
-export default function SafetyScan() {
+export default function SiteSpotter() {
   const [photos, setPhotos] = useState([]);
   const [context, setContext] = useState("");
   const [analysing, setAnalysing] = useState(false);

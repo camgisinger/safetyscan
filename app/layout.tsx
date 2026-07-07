@@ -26,23 +26,23 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: 'SafetyScan — Queensland Construction Compliance',
-    template: '%s | SafetyScan',
+    default: 'SiteSpotter — Queensland Construction Compliance',
+    template: '%s | SiteSpotter',
   },
   description: 'AI-powered Queensland construction compliance checks. Upload a site photo and instantly identify WHS compliance issues, applicable legislation, and generate site checklists.',
-  keywords: ['Queensland construction compliance', 'WHS compliance', 'construction safety', 'scaffolding compliance Queensland', 'SafetyScan', 'site compliance check', 'AS 1742', 'WHS Act 2011 Queensland'],
+  keywords: ['Queensland construction compliance', 'WHS compliance', 'construction safety', 'scaffolding compliance Queensland', 'SiteSpotter', 'site compliance check', 'AS 1742', 'WHS Act 2011 Queensland'],
   authors: [{ name: 'Mono Compliance' }],
   creator: 'Mono Compliance',
   publisher: 'Mono Compliance',
   metadataBase: new URL('https://safetyscan.com.au'),
   alternates: { canonical: '/' },
   openGraph: {
-    type: 'website', locale: 'en_AU', url: 'https://safetyscan.com.au', siteName: 'SafetyScan',
-    title: 'SafetyScan — Queensland Construction Compliance',
+    type: 'website', locale: 'en_AU', url: 'https://safetyscan.com.au', siteName: 'SiteSpotter',
+    title: 'SiteSpotter — Queensland Construction Compliance',
     description: 'AI-powered Queensland construction compliance checks.',
-    images: [{ url: '/brand/og-image.png', width: 1200, height: 630, alt: 'SafetyScan' }],
+    images: [{ url: '/brand/og-image.png', width: 1200, height: 630, alt: 'SiteSpotter' }],
   },
-  twitter: { card: 'summary_large_image', title: 'SafetyScan', description: 'AI-powered Queensland construction compliance checks.', images: ['/brand/og-image.png'] },
+  twitter: { card: 'summary_large_image', title: 'SiteSpotter', description: 'AI-powered Queensland construction compliance checks.', images: ['/brand/og-image.png'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   icons: {
     icon: [

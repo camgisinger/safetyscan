@@ -200,7 +200,7 @@ export default function AppHeader({
                 Sign out
               </button>
             </div>
-            <div style={{ fontSize: 10, color: 'var(--mut)', textAlign: 'center', marginTop: 16, fontFamily: 'var(--ff-mono)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>SafetyScan · Queensland</div>
+            <div style={{ fontSize: 10, color: 'var(--mut)', textAlign: 'center', marginTop: 16, fontFamily: 'var(--ff-mono)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>SiteSpotter · Queensland</div>
           </div>
         </>
       )}

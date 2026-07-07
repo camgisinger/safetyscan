@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../../lib/supabase'
-import SafetyScan from '../../../components/SafetyScan.jsx'
+import SiteSpotter from '../../../components/SiteSpotter.jsx'
 
 function AuthGate() {
   const [loading, setLoading] = useState(true)
@@ -28,7 +28,7 @@ function AuthGate() {
   )
 
   if (!authed) return null
-  return <SafetyScan />
+  return <SiteSpotter />
 }
 
 export default function NewScanPage() {

@@ -74,7 +74,7 @@ export default function ProfileSetupPage() {
           Set up your profile.
         </div>
         <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 32 }}>
-          This helps SafetyScan tailor results for your role on site.
+          This helps SiteSpotter tailor results for your role on site.
         </div>
 
         <form onSubmit={handleSave} style={{ display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}>

@@ -3,7 +3,7 @@ import SharedScan from './SharedScan'
 
 export const metadata: Metadata = {
   title: 'Shared Compliance Scan',
-  description: 'View a SafetyScan construction compliance report.',
+  description: 'View a SiteSpotter construction compliance report.',
 }
 
 export default async function SharedScanPage({ params }: { params: Promise<{ token: string }> }) {

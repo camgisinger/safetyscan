@@ -3,8 +3,8 @@ import Link from 'next/link'
 import LegalPageHeader from '../../components/LegalPageHeader'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | SafetyScan',
-  description: 'SafetyScan privacy policy — how we collect, store, and use your personal information in accordance with the Australian Privacy Act 1988.',
+  title: 'Privacy Policy | SiteSpotter',
+  description: 'SiteSpotter privacy policy — how we collect, store, and use your personal information in accordance with the Australian Privacy Act 1988.',
 }
 
 const toc = [
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p style={{ fontSize: 14, color: 'var(--mut)', margin: '0 0 4px', lineHeight: 1.6 }}>
-            SafetyScan · Operated by Cameron Jesse Gisinger (ABN 78 350 866 147)
+            SiteSpotter · Operated by Cameron Jesse Gisinger (ABN 78 350 866 147)
           </p>
           <p style={{ fontSize: 14, color: 'var(--mut)', margin: '0 0 4px', lineHeight: 1.6 }}>
             Effective date: 1 July 2026
@@ -81,10 +81,10 @@ export default function PrivacyPage() {
               1. Introduction
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              SafetyScan ("we", "us", "our") is committed to protecting your personal information in accordance with the Australian Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).
+              SiteSpotter ("we", "us", "our") is committed to protecting your personal information in accordance with the Australian Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              This Privacy Policy explains how we collect, use, store, and disclose your personal information when you use SafetyScan ("the Service") at safetyscan.com.au.
+              This Privacy Policy explains how we collect, use, store, and disclose your personal information when you use SiteSpotter ("the Service") at safetyscan.com.au.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
               By using the Service, you agree to the collection and use of information in accordance with this policy.
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
               2. Who We Are
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              SafetyScan is operated by Cameron Jesse Gisinger, an individual/sole trader registered in Queensland, Australia.
+              SiteSpotter is operated by Cameron Jesse Gisinger, an individual/sole trader registered in Queensland, Australia.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 4px', color: 'var(--text)' }}>ABN: 78 350 866 147</p>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 4px', color: 'var(--text)' }}>
@@ -330,7 +330,7 @@ export default function PrivacyPage() {
               10. Cookies and Tracking
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, margin: '0 0 12px', color: 'var(--text)' }}>
-              SafetyScan uses session cookies to maintain your login state. We do not use third-party advertising cookies or tracking pixels.
+              SiteSpotter uses session cookies to maintain your login state. We do not use third-party advertising cookies or tracking pixels.
             </p>
           </section>
 
@@ -386,7 +386,7 @@ export default function PrivacyPage() {
             gap: 8,
           }}>
             <p style={{ fontSize: 13, color: 'var(--mut)', margin: 0 }}>
-              SafetyScan · Cameron Jesse Gisinger (ABN 78 350 866 147) · Queensland, Australia
+              SiteSpotter · Cameron Jesse Gisinger (ABN 78 350 866 147) · Queensland, Australia
             </p>
             <p style={{ fontSize: 13, color: 'var(--mut)', margin: 0 }}>
               Also see our{' '}

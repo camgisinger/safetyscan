@@ -136,7 +136,7 @@ export default function GuideContent() {
                 </div>
                 {/* CTA */}
                 <div style={{ height: 44, background: 'var(--amber)', border: '1.5px solid var(--line)', borderRadius: 8, display: 'grid', placeItems: 'center', fontWeight: 600, fontSize: 13.5, color: '#1B1A12' }}>
-                  Open in SafetyScan
+                  Open in SiteSpotter
                 </div>
               </div>
             )}

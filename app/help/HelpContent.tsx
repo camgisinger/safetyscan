@@ -10,15 +10,15 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'How do I perform a scan?',
-        a: 'Tap the amber + button on the home screen or the Scans tab. Upload one or more photos of your construction site — you can select up to 5 photos at once. Add any additional context about the work being done if needed, then tap Analyse. SafetyScan will assess your photos against Queensland WHS legislation and return a compliance report within seconds.',
+        a: 'Tap the amber + button on the home screen or the Scans tab. Upload one or more photos of your construction site — you can select up to 5 photos at once. Add any additional context about the work being done if needed, then tap Analyse. SiteSpotter will assess your photos against Queensland WHS legislation and return a compliance report within seconds.',
       },
       {
-        q: 'What types of construction work can SafetyScan assess?',
-        a: 'SafetyScan covers a wide range of construction work types including scaffolding, excavation, working at heights, traffic management, crane and rigging operations, electrical safety, formwork, confined spaces, asbestos management, demolition, plant and equipment, hot works, PPE compliance, fire safety, and general site housekeeping.',
+        q: 'What types of construction work can SiteSpotter assess?',
+        a: 'SiteSpotter covers a wide range of construction work types including scaffolding, excavation, working at heights, traffic management, crane and rigging operations, electrical safety, formwork, confined spaces, asbestos management, demolition, plant and equipment, hot works, PPE compliance, fire safety, and general site housekeeping.',
       },
       {
-        q: 'Do I need to be on site to use SafetyScan?',
-        a: 'No — SafetyScan analyses photos, so you can review site photos taken by others. However, the more recent and site-specific the photos, the more useful the analysis will be.',
+        q: 'Do I need to be on site to use SiteSpotter?',
+        a: 'No — SiteSpotter analyses photos, so you can review site photos taken by others. However, the more recent and site-specific the photos, the more useful the analysis will be.',
       },
     ],
   },
@@ -26,20 +26,20 @@ const FAQ_CATEGORIES = [
     category: 'How the Scan Works',
     questions: [
       {
-        q: 'What legislation does SafetyScan reference?',
-        a: 'SafetyScan references Queensland-specific legislation including the Work Health and Safety Act 2011 (Qld), the Work Health and Safety Regulation 2011 (Qld), all relevant Queensland Codes of Practice, and the Queensland Manual of Uniform Traffic Control Devices (MUTCD). The legislation database is regularly updated.',
+        q: 'What legislation does SiteSpotter reference?',
+        a: 'SiteSpotter references Queensland-specific legislation including the Work Health and Safety Act 2011 (Qld), the Work Health and Safety Regulation 2011 (Qld), all relevant Queensland Codes of Practice, and the Queensland Manual of Uniform Traffic Control Devices (MUTCD). The legislation database is regularly updated.',
       },
       {
         q: 'How accurate is the AI analysis?',
-        a: 'SafetyScan is designed to flag clearly visible compliance issues and prompt you to verify items that cannot be confirmed from a photo alone. It performs best on clear, well-lit photos taken from appropriate angles. It will not flag things it cannot see, and it will not guess at compliance where the photo does not provide enough information. For definitive compliance advice, always consult a qualified WHS professional.',
+        a: 'SiteSpotter is designed to flag clearly visible compliance issues and prompt you to verify items that cannot be confirmed from a photo alone. It performs best on clear, well-lit photos taken from appropriate angles. It will not flag things it cannot see, and it will not guess at compliance where the photo does not provide enough information. For definitive compliance advice, always consult a qualified WHS professional.',
       },
       {
         q: 'What is a Guide Prompt?',
-        a: 'A Guide Prompt is a finding that SafetyScan cannot confirm as compliant or non-compliant from the photo alone. Instead of flagging it as a warning, SafetyScan gives you a specific action to confirm on site — for example, "Confirm excavation depth — if exceeding 1.5m, shoring or battering is required under WHS Regulation 2011 s.306." Guide Prompts are designed to direct your attention to the right things without making assumptions the photo cannot support.',
+        a: 'A Guide Prompt is a finding that SiteSpotter cannot confirm as compliant or non-compliant from the photo alone. Instead of flagging it as a warning, SiteSpotter gives you a specific action to confirm on site — for example, "Confirm excavation depth — if exceeding 1.5m, shoring or battering is required under WHS Regulation 2011 s.306." Guide Prompts are designed to direct your attention to the right things without making assumptions the photo cannot support.',
       },
       {
-        q: 'What AI model does SafetyScan use?',
-        a: 'SafetyScan uses Claude by Anthropic, one of the leading AI models for visual analysis and reasoning. Your photos are processed securely and are not used to train AI models.',
+        q: 'What AI model does SiteSpotter use?',
+        a: 'SiteSpotter uses Claude by Anthropic, one of the leading AI models for visual analysis and reasoning. Your photos are processed securely and are not used to train AI models.',
       },
     ],
   },
@@ -48,7 +48,7 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'What do the different finding types mean?',
-        a: 'SafetyScan uses three finding types. A Critical finding (red) means a clear, unambiguous compliance violation is visible in the photo — this requires immediate attention. A Guide Prompt (amber) means something needs to be verified on site but cannot be confirmed from the photo. A Pass finding (green) means something is clearly visible and compliant.',
+        a: 'SiteSpotter uses three finding types. A Critical finding (red) means a clear, unambiguous compliance violation is visible in the photo — this requires immediate attention. A Guide Prompt (amber) means something needs to be verified on site but cannot be confirmed from the photo. A Pass finding (green) means something is clearly visible and compliant.',
       },
       {
         q: 'What does the overall status mean?',
@@ -59,8 +59,8 @@ const FAQ_CATEGORIES = [
         a: 'Yes — on any scan result, tap Re-analyse. You can add additional context in text, or attach new photos of specific areas. If you are confirming that an issue has been rectified, just type that in — you do not need to re-upload the original photos.',
       },
       {
-        q: 'Why does SafetyScan say it cannot verify something?',
-        a: 'SafetyScan only flags what it can clearly see. If something cannot be confirmed from the photo — for example, whether an excavation is deeper than 1.5m — it will ask you to confirm on site rather than guessing. This is intentional. A compliance tool that guesses is more dangerous than one that asks.',
+        q: 'Why does SiteSpotter say it cannot verify something?',
+        a: 'SiteSpotter only flags what it can clearly see. If something cannot be confirmed from the photo — for example, whether an excavation is deeper than 1.5m — it will ask you to confirm on site rather than guessing. This is intentional. A compliance tool that guesses is more dangerous than one that asks.',
       },
     ],
   },
@@ -69,15 +69,15 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'What makes a good scan photo?',
-        a: 'Good scan photos are clear, well-lit, and taken from an angle that shows the relevant work area. For scaffolding, a full elevation shot showing all levels works best. For excavations, a side-on view showing the full depth is most useful. For traffic management, a shot from the driver\'s approach showing the full signage sequence is ideal. SafetyScan will ask for specific follow-up photos if it needs more information.',
+        a: 'Good scan photos are clear, well-lit, and taken from an angle that shows the relevant work area. For scaffolding, a full elevation shot showing all levels works best. For excavations, a side-on view showing the full depth is most useful. For traffic management, a shot from the driver\'s approach showing the full signage sequence is ideal. SiteSpotter will ask for specific follow-up photos if it needs more information.',
       },
       {
         q: 'How many photos can I upload per scan?',
-        a: 'You can upload up to 5 photos per scan. When multiple photos are uploaded, SafetyScan treats them as a single site inspection and produces one unified report covering all photos.',
+        a: 'You can upload up to 5 photos per scan. When multiple photos are uploaded, SiteSpotter treats them as a single site inspection and produces one unified report covering all photos.',
       },
       {
         q: 'What file types are supported?',
-        a: 'SafetyScan accepts JPG, PNG, HEIC, and WEBP files. Photos are automatically resized and optimised before analysis — you do not need to resize them manually.',
+        a: 'SiteSpotter accepts JPG, PNG, HEIC, and WEBP files. Photos are automatically resized and optimised before analysis — you do not need to resize them manually.',
       },
       {
         q: 'Can I upload photos taken by someone else?',
@@ -98,11 +98,11 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'How do I share a scan result?',
-        a: 'On any scan result, tap the Share button. This generates a unique link that anyone can view without needing a SafetyScan account — useful for sharing results with a principal contractor or safety officer.',
+        a: 'On any scan result, tap the Share button. This generates a unique link that anyone can view without needing a SiteSpotter account — useful for sharing results with a principal contractor or safety officer.',
       },
       {
         q: 'Can I generate a checklist from a scan?',
-        a: 'Yes — on any scan result, tap the Checklist tab. SafetyScan generates a site-specific compliance checklist based on the work types identified in your scan.',
+        a: 'Yes — on any scan result, tap the Checklist tab. SiteSpotter generates a site-specific compliance checklist based on the work types identified in your scan.',
       },
     ],
   },
@@ -131,20 +131,20 @@ const FAQ_CATEGORIES = [
     category: 'Technical',
     questions: [
       {
-        q: 'What devices and browsers does SafetyScan support?',
-        a: 'SafetyScan works on any modern browser on desktop, tablet, or mobile. For the best experience on mobile, use Chrome or Safari. The app is designed mobile-first and works best on a smartphone on site.',
+        q: 'What devices and browsers does SiteSpotter support?',
+        a: 'SiteSpotter works on any modern browser on desktop, tablet, or mobile. For the best experience on mobile, use Chrome or Safari. The app is designed mobile-first and works best on a smartphone on site.',
       },
       {
         q: 'Do I need to install an app?',
-        a: 'No — SafetyScan runs in your browser. No download or installation is required. You can add it to your home screen from your browser for quick access.',
+        a: 'No — SiteSpotter runs in your browser. No download or installation is required. You can add it to your home screen from your browser for quick access.',
       },
       {
         q: 'What do I do if a scan fails or returns an error?',
         a: 'First check your internet connection. If the problem persists, try re-uploading the photos. If you continue to experience issues, contact us at support@safetyscan.com.au with a description of the problem and we will investigate.',
       },
       {
-        q: 'Is SafetyScan available offline?',
-        a: 'No — SafetyScan requires an internet connection to perform analysis. If you are in an area with poor coverage, take photos and upload them when you return to coverage.',
+        q: 'Is SiteSpotter available offline?',
+        a: 'No — SiteSpotter requires an internet connection to perform analysis. If you are in an area with poor coverage, take photos and upload them when you return to coverage.',
       },
     ],
   },
@@ -232,7 +232,7 @@ export default function HelpContent() {
             Help & Support
           </h1>
           <p style={{ fontSize: 14, color: 'var(--mut)', margin: '0 0 8px' }}>
-            SafetyScan · Queensland construction compliance
+            SiteSpotter · Queensland construction compliance
           </p>
 
           {/* ── FAQ ── */}
@@ -415,7 +415,7 @@ export default function HelpContent() {
             display: 'flex', flexDirection: 'column', gap: 8,
           }}>
             <p style={{ fontSize: 13, color: 'var(--mut)', margin: 0 }}>
-              SafetyScan · Queensland, Australia ·{' '}
+              SiteSpotter · Queensland, Australia ·{' '}
               <a href="mailto:support@safetyscan.com.au" style={{ color: 'var(--amber)', textDecoration: 'none' }}>
                 support@safetyscan.com.au
               </a>
