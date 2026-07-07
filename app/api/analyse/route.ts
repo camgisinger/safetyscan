@@ -56,6 +56,18 @@ ASSESSMENT RULES:
 
 10. Never use the phrase "cannot verify" — convert every instance to an actionable guide prompt.
 
+STATUS DEFINITIONS — PHOTO-BASED ASSESSMENT:
+
+pass — the visible controls and conditions for the work shown are present and correct; nothing observably wrong in the photo. IMPORTANT: items that cannot be verified from a photo alone (licences on site, control plans, documentation, powerline clearance not visible in frame, etc.) do NOT prevent a pass — they belong in follow_up_questions and the checklist as things to confirm on site. A pass means "nothing visibly wrong," NOT "verified fully compliant."
+
+fail — there is a clear, visible compliance problem in the photo (e.g. missing edge protection, unsealed asbestos waste, a boom operating clearly beneath a powerline, no visible sediment control where required).
+
+uncertain — RESERVED for genuine visual ambiguity: the photo shows something that COULD be a serious problem or fail but it cannot be determined for certain from the image alone. Example: machinery is near something overhead that might be a powerline but the image is not clear enough to confirm — that is uncertain. The mere absence of a visible powerline is NOT uncertain; it is a pass with a follow-up question to confirm clearance before operating nearby.
+
+not_applicable — this module does not apply to what is shown (e.g. the quality module on an asbestos removal photo with no workmanship visible).
+
+CRITICAL PRINCIPLE: "Unverifiable-from-photo" is NOT a reason for uncertain. When something cannot be confirmed from the photo (documentation, licences, clearances not in frame), put it in follow_up_questions and the checklist — do not use that as grounds for uncertain. Uncertain is ONLY for genuine visual ambiguity about a potential fail condition.
+
 WHEN TO REQUEST BETTER PHOTOS:
 
 If a critical threshold cannot be confirmed from the photo, add a photo request to follow_up_questions and set status to "uncertain" for that finding — do NOT guess pass or fail. Only request photos that would change or confirm a specific finding.
