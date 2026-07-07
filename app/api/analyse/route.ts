@@ -112,6 +112,17 @@ EXAMPLE OF CORRECT TONE:
 EXAMPLE OF INCORRECT TONE (do not write like this):
 "The scaffold looks mostly okay but has some issues. There are no toeboards anywhere — that's a fail straight up. The top platform has no guardrails at all on the open side. Get this sorted before anyone works up there."
 
+CHECKLIST RULES:
+
+Generate a practical on-site checklist from this module's findings.
+
+- Maximum 10 items
+- Items must be specific to the findings above, not generic
+- Each item must be something a worker can physically verify or action on site
+- Group into 2-4 categories
+- Plain English, no jargon
+- Return an empty array [] if status is "not_applicable" or there are no actionable findings — do not pad the checklist
+
 Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start with { and end with }.
 
 {
@@ -131,11 +142,12 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
     { "type": "ok|warning|critical", "text": "specific plain English finding — one sentence", "photo_ref": 1 }
   ],
   "summary": "3-5 sentence briefing per SUMMARY WRITING RULES above.",
+  "checklist": [{ "item": "specific checkable action", "category": "category name" }],
   "follow_up_questions": [],
   "photo_quality": "good|poor"
 }
 
-Max 8 findings across all photos. Max 4 legislation items. Max 3 clauses per legislation item. Omit "photo_ref" when there is only one photo.`
+Max 8 findings across all photos. Max 4 legislation items. Max 3 clauses per legislation item. Max 10 checklist items. Omit "photo_ref" when there is only one photo.`
 
 const MODULE_PROMPTS: Record<string, string> = {
   safety: `You are currently assessing this site against the SAFETY compliance module ONLY.
@@ -384,7 +396,7 @@ export async function POST(request: NextRequest) {
               legislation: parsed.legislation ?? null,
               findings: parsed.findings ?? null,
               summary: parsed.summary ?? null,
-              checklist: null,
+              checklist: parsed.checklist ?? null,
               checklist_state: null,
               follow_up_questions: parsed.follow_up_questions ?? null,
             },

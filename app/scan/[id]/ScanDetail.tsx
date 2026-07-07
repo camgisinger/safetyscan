@@ -273,9 +273,6 @@ export default function ScanDetail({ id }: { id: string }) {
   const [creatingNewSite, setCreatingNewSite] = useState(false)
   const [newSiteName, setNewSiteName] = useState('')
   const [savingSite, setSavingSite] = useState(false)
-  const [generatingChecklist, setGeneratingChecklist] = useState(false)
-  const [confirmRegenerate, setConfirmRegenerate] = useState(false)
-  const [checklistError, setChecklistError] = useState<string | null>(null)
   const [continueContext, setContinueContext] = useState('')
   const [continuePhotos, setContinuePhotos] = useState<{ dataUrl: string; base64: string }[]>([])
   const [continueLoading, setContinueLoading] = useState(false)
@@ -333,35 +330,19 @@ export default function ScanDetail({ id }: { id: string }) {
     init()
   }, [id, router])
 
-  const handleChecklistChange = useCallback(async (newState: Record<string, any>) => {
-    setChecklistState(newState)
-    await supabase.from('scans').update({ checklist_state: newState }).eq('id', id)
-  }, [id])
-
-  const toggleCheck = useCallback((idx: number) => {
-    handleChecklistChange({ ...checklistState, [`c_${idx}`]: !checklistState[`c_${idx}`] })
-  }, [checklistState, handleChecklistChange])
-
-  const deleteItem = useCallback((idx: number) => {
-    handleChecklistChange({ ...checklistState, [`d_${idx}`]: true, [`c_${idx}`]: false })
-  }, [checklistState, handleChecklistChange])
-
-  const handleGenerateChecklist = async () => {
-    if (!scan) return
-    setGeneratingChecklist(true); setChecklistError(null); setConfirmRegenerate(false)
-    try {
-      const res = await fetch('/api/checklist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ work_type: scan.work_type, findings: scan.findings, legislation: scan.legislation, summary: scan.summary }) })
-      const data = await res.json()
-      if (data.error) throw new Error(data.error)
-      const generated = data.checklist
-      if (!generated || !Array.isArray(generated)) throw new Error('No checklist returned')
-      const newState = {}
-      const { error: saveErr } = await supabase.from('scans').update({ checklist: generated, checklist_state: newState }).eq('id', id)
-      if (saveErr) throw new Error('Failed to save checklist')
-      setChecklist(generated); setChecklistState(newState)
-      setScan(prev => prev ? { ...prev, checklist: generated, checklist_state: newState } : prev)
-    } catch (e: any) { setChecklistError(e.message || 'Failed to generate checklist') }
-    finally { setGeneratingChecklist(false) }
+  const handleChecklistChange = async (newState: Record<string, any>) => {
+    if (scanModules.length === 0) {
+      // Legacy: persist to scans table
+      setChecklistState(newState)
+      await supabase.from('scans').update({ checklist_state: newState }).eq('id', id)
+    } else {
+      // Multi-module: persist to scan_modules for the active module; derive-in-render picks it up
+      setScanModules(prev => prev.map((m: any) =>
+        m.module === activeModule ? { ...m, checklist_state: newState } : m
+      ))
+      await supabase.from('scan_modules').update({ checklist_state: newState })
+        .eq('scan_id', id).eq('module', activeModule)
+    }
   }
 
   const saveNotes = async (value: string) => {
@@ -531,7 +512,6 @@ export default function ScanDetail({ id }: { id: string }) {
   if (!scan) return null
 
   const shareLink = shareToken ? `https://safetyscan.com.au/shared/${shareToken}` : null
-  const visibleCount = checklist.filter((_, i) => !checklistState[`d_${i}`]).length
   const d = new Date(scan.created_at)
   const siteName = scan.site_id ? sites.find(s => s.id === scan.site_id)?.name : null
   const meta = [siteName?.toUpperCase(), d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase(), d.toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit', hour12: true }).toUpperCase().replace(' ', '')].filter(Boolean).join(' · ')
@@ -544,6 +524,9 @@ export default function ScanDetail({ id }: { id: string }) {
   const displayLegislation: any[] = isLegacy ? (scan.legislation || []) : (activeModuleData?.legislation || [])
   const displaySummary: string = isLegacy ? (scan.summary || '') : (activeModuleData?.summary || '')
   const displayStatus: string = isLegacy ? scan.status : (activeModuleData?.status || 'uncertain')
+  const displayChecklist: any[] = isLegacy ? checklist : (activeModuleData?.checklist || [])
+  const displayChecklistState: Record<string, any> = isLegacy ? checklistState : (activeModuleData?.checklist_state || {})
+  const visibleCount = displayChecklist.filter((_: any, i: number) => !displayChecklistState[`d_${i}`]).length
 
   const issueFindings = displayFindings.filter((f: any) => f.type === 'critical' || f.type === 'warning')
   const issueCount = issueFindings.length
@@ -723,61 +706,35 @@ export default function ScanDetail({ id }: { id: string }) {
         {/* Checklist */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '18px 2px 11px' }}>
           <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }}/>
-          <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)' }}>Checklist{isLegacy && checklist.length > 0 ? ` (${visibleCount})` : ''}</span>
-          {isLegacy && checklist.length > 0 && !generatingChecklist && (
-            <button onClick={() => setConfirmRegenerate(true)} style={{ marginLeft: 'auto', fontWeight: 600, fontSize: 10.5, letterSpacing: '0.06em', padding: '4px 10px', border: '1.5px solid var(--line)', borderRadius: 4, color: 'var(--mut)', background: 'var(--surf)', cursor: 'pointer', fontFamily: 'inherit' }}>Regenerate</button>
-          )}
+          <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)' }}>Checklist{displayChecklist.length > 0 ? ` (${visibleCount})` : ''}</span>
         </div>
 
-        {!isLegacy ? (
+        {displayChecklist.length === 0 ? (
           <div style={{ ...card, padding: '12px 15px', fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5 }}>
-            Checklist is not available for multi-module scans yet.
+            Checklist will be included in the next re-analysis.
           </div>
         ) : (
-          <>
-            {confirmRegenerate && (
-              <div style={{ marginBottom: 10, ...card, padding: '12px 14px', fontSize: 13, fontWeight: 500, color: 'var(--text)' }}>
-                This will reset your checklist progress. Are you sure?
-                <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
-                  <button onClick={handleGenerateChecklist} style={{ ...btn(true), height: 36, padding: '0 14px', flex: 'none' }}>Yes, regenerate</button>
-                  <button onClick={() => setConfirmRegenerate(false)} style={{ ...btn(), height: 36, padding: '0 14px', flex: 'none' }}>Cancel</button>
+          <div style={{ ...card, overflow: 'hidden' }}>
+            {displayChecklist.map((item: any, i: number) => {
+              if (displayChecklistState[`d_${i}`]) return null
+              const checked = !!displayChecklistState[`c_${i}`]
+              const isLast = displayChecklist.slice(i + 1).every((_: any, j: number) => displayChecklistState[`d_${i + 1 + j}`])
+              return (
+                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderBottom: isLast ? 'none' : '1.5px solid var(--div)' }}>
+                  <div onClick={() => handleChecklistChange({ ...displayChecklistState, [`c_${i}`]: !displayChecklistState[`c_${i}`] })}
+                    style={{ width: 20, height: 20, borderRadius: 6, display: 'grid', placeItems: 'center', flexShrink: 0, cursor: 'pointer', border: `1.5px solid ${checked ? 'var(--amber)' : 'var(--line)'}`, background: checked ? 'var(--amber)' : 'transparent' }}>
+                    {checked && <span style={{ display: 'block', width: 10, height: 6, borderLeft: '1.8px solid #1B1A12', borderBottom: '1.8px solid #1B1A12', transform: 'rotate(-45deg) translate(1px,-1px)' }}/>}
+                  </div>
+                  <div style={{ flex: 1, cursor: 'pointer' }} onClick={() => handleChecklistChange({ ...displayChecklistState, [`c_${i}`]: !displayChecklistState[`c_${i}`] })}>
+                    <div style={{ fontSize: 13.5, fontWeight: 500, color: checked ? 'var(--mut)' : 'var(--text)', textDecoration: checked ? 'line-through' : 'none', opacity: checked ? 0.55 : 1 }}>{item.item}</div>
+                    {item.category && <div style={{ fontWeight: 600, fontSize: 9.5, color: 'var(--mut)', marginTop: 2, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{item.category}</div>}
+                  </div>
+                  <button onClick={() => handleChecklistChange({ ...displayChecklistState, [`d_${i}`]: true, [`c_${i}`]: false })}
+                    style={{ background: 'none', border: 'none', color: 'var(--mut)', fontSize: 18, cursor: 'pointer', padding: '0 2px', lineHeight: 1 }}>×</button>
                 </div>
-              </div>
-            )}
-
-            {generatingChecklist ? (
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 0' }}>
-                <div style={{ width: 20, height: 20, border: '2px solid var(--line)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.85s linear infinite' }}/>
-                <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)' }}>Generating checklist…</span>
-              </div>
-            ) : checklist.length === 0 ? (
-              <div style={{ ...card, padding: 16 }}>
-                <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 14 }}>Generate a custom checklist based on this scan's findings and applicable legislation.</div>
-                {checklistError && <div style={{ marginBottom: 12, padding: '8px 12px', border: '1.5px solid var(--issue)', borderRadius: 4, fontSize: 12, fontWeight: 500, color: 'var(--issue-tx-theme)' }}>{checklistError}</div>}
-                <button onClick={handleGenerateChecklist} style={{ ...btn(true), padding: '0 18px', flex: 'none' }}>Generate checklist →</button>
-              </div>
-            ) : (
-              <div style={{ ...card, overflow: 'hidden' }}>
-                {checklist.map((item: any, i: number) => {
-                  if (checklistState[`d_${i}`]) return null
-                  const checked = !!checklistState[`c_${i}`]
-                  const isLast = checklist.slice(i + 1).every((_: any, j: number) => checklistState[`d_${i + 1 + j}`])
-                  return (
-                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderBottom: isLast ? 'none' : '1.5px solid var(--div)' }}>
-                      <div onClick={() => toggleCheck(i)} style={{ width: 20, height: 20, borderRadius: 6, display: 'grid', placeItems: 'center', flexShrink: 0, cursor: 'pointer', border: `1.5px solid ${checked ? 'var(--amber)' : 'var(--line)'}`, background: checked ? 'var(--amber)' : 'transparent' }}>
-                        {checked && <span style={{ display: 'block', width: 10, height: 6, borderLeft: '1.8px solid #1B1A12', borderBottom: '1.8px solid #1B1A12', transform: 'rotate(-45deg) translate(1px,-1px)' }}/>}
-                      </div>
-                      <div style={{ flex: 1, cursor: 'pointer' }} onClick={() => toggleCheck(i)}>
-                        <div style={{ fontSize: 13.5, fontWeight: 500, color: checked ? 'var(--mut)' : 'var(--text)', textDecoration: checked ? 'line-through' : 'none', opacity: checked ? 0.55 : 1 }}>{item.item}</div>
-                        {item.category && <div style={{ fontWeight: 600, fontSize: 9.5, color: 'var(--mut)', marginTop: 2, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{item.category}</div>}
-                      </div>
-                      <button onClick={() => deleteItem(i)} style={{ background: 'none', border: 'none', color: 'var(--mut)', fontSize: 18, cursor: 'pointer', padding: '0 2px', lineHeight: 1 }}>×</button>
-                    </div>
-                  )
-                })}
-              </div>
-            )}
-          </>
+              )
+            })}
+          </div>
         )}
 
         {/* Re-analyse + Export PDF */}
