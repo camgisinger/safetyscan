@@ -324,20 +324,7 @@ export async function POST(request: NextRequest) {
             })
           }
 
-          // c. Temporary token-cost breakdown logging
-          const est = (chars: number) => Math.round(chars / 4)
-          const allBlocks = (messages ?? []).flatMap((m: any) => Array.isArray(m.content) ? m.content : [])
-          const textChars = allBlocks.filter((b: any) => b.type === 'text').reduce((n: number, b: any) => n + (b.text?.length ?? 0), 0)
-          const imageCount = allBlocks.filter((b: any) => b.type === 'image').length
-          console.log(
-            `[TOKEN BREAKDOWN] module=${module}` +
-            ` base=${est(BASE_SYSTEM_PROMPT.length)}` +
-            ` moduleBlock=${est((MODULE_PROMPTS[module] ?? '').length)}` +
-            ` rag=${est(ragSection.length)}` +
-            ` userText=${est(textChars)} imageCount=${imageCount}`
-          )
-
-          // d. POST to Anthropic
+          // c. POST to Anthropic
           const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
             method: 'POST',
             headers: {
@@ -362,13 +349,6 @@ export async function POST(request: NextRequest) {
 
           // d. Parse Claude's JSON response
           const anthropicData = await anthropicRes.json()
-          console.log(
-            `[REAL USAGE] module=${module}` +
-            ` input=${anthropicData.usage?.input_tokens}` +
-            ` output=${anthropicData.usage?.output_tokens}` +
-            ` cache_read=${anthropicData.usage?.cache_read_input_tokens ?? 0}` +
-            ` cache_creation=${anthropicData.usage?.cache_creation_input_tokens ?? 0}`
-          )
           const rawText: string = anthropicData.content?.[0]?.text ?? ''
           // Strip markdown fences — Claude wraps its response in ```json ... ``` despite instructions
           const stripped = rawText
