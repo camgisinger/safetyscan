@@ -138,6 +138,8 @@ Generate a practical on-site checklist from this module's findings.
 
 FINDING IDS: Assign each finding a sequential string id — "f1", "f2", … starting at "f1", no gaps, no reuse within a module.
 
+TENTATIVE FLAG: Set "tentative": true on a finding when you observe something that could be a real compliance issue but cannot determine with confidence whether it is one from the image alone — genuine visual ambiguity about a potential violation. Do NOT set tentative for: findings you are confident about at any severity (ok/warning/critical); or items unverifiable-from-photo (licences, documentation, clearances not in frame) — those belong in follow_up_questions. Default is false.
+
 Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start with { and end with }.
 
 {
@@ -154,7 +156,7 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
     }
   ],
   "findings": [
-    { "id": "f1", "type": "ok|warning|critical", "text": "specific plain English finding — one sentence", "photo_ref": 1 }
+    { "id": "f1", "type": "ok|warning|critical", "text": "specific plain English finding — one sentence", "tentative": false, "photo_ref": 1 }
   ],
   "summary": "3-5 sentence briefing per SUMMARY WRITING RULES above.",
   "checklist": [{ "item": "specific checkable action", "category": "category name", "finding_ids": ["f1"] }],
@@ -449,7 +451,6 @@ export async function POST(request: NextRequest) {
               findings: parsed.findings ?? null,
               summary: parsed.summary ?? null,
               checklist: parsed.checklist ?? null,
-              checklist_state: null,
               follow_up_questions: parsed.follow_up_questions ?? null,
             },
             { onConflict: 'scan_id,module' }
