@@ -130,10 +130,13 @@ Generate a practical on-site checklist from this module's findings.
 
 - Maximum 10 items
 - Items must be specific to the findings above, not generic
+- Each item must include a "finding_ids" array listing the id(s) of the finding(s) it addresses — use the exact ids from the findings array above. Use [] only if the item genuinely addresses no specific finding.
 - Each item must be something a worker can physically verify or action on site
 - Group into 2-4 categories
 - Plain English, no jargon
 - Return an empty array [] if status is "not_applicable" or there are no actionable findings — do not pad the checklist
+
+FINDING IDS: Assign each finding a sequential string id — "f1", "f2", … starting at "f1", no gaps, no reuse within a module.
 
 Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start with { and end with }.
 
@@ -151,10 +154,10 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
     }
   ],
   "findings": [
-    { "type": "ok|warning|critical", "text": "specific plain English finding — one sentence", "photo_ref": 1 }
+    { "id": "f1", "type": "ok|warning|critical", "text": "specific plain English finding — one sentence", "photo_ref": 1 }
   ],
   "summary": "3-5 sentence briefing per SUMMARY WRITING RULES above.",
-  "checklist": [{ "item": "specific checkable action", "category": "category name" }],
+  "checklist": [{ "item": "specific checkable action", "category": "category name", "finding_ids": ["f1"] }],
   "follow_up_questions": [],
   "photo_quality": "good|poor"
 }
@@ -400,6 +403,40 @@ export async function POST(request: NextRequest) {
           }
           if (!parsed) {
             throw new Error(`Failed to parse Claude JSON for module "${module}"`)
+          }
+
+          // f. Normalise finding IDs and remap checklist references atomically.
+          // Always reassigns positional ids f1, f2, … regardless of what the model
+          // emitted — insurance against collisions, gaps, or malformed formats.
+          // Builds original→normalised map first, then rewrites both arrays in a
+          // single pass so links are never broken. Dangling checklist refs (model
+          // hallucinated an id that matches no finding) are silently dropped.
+          if (Array.isArray(parsed.findings)) {
+            const idMap: Record<string, string> = {}
+
+            parsed.findings = parsed.findings.map((f: any, i: number) => {
+              const normalised = `f${i + 1}`
+              const original = f.id != null ? String(f.id).trim() : ''
+              // First occurrence of each original id wins the map slot
+              if (original && !(original in idMap)) idMap[original] = normalised
+              // Self-map so refs already using the correct normalised form pass through
+              if (!(normalised in idMap)) idMap[normalised] = normalised
+              return { ...f, id: normalised }
+            })
+
+            const validIds = new Set(parsed.findings.map((f: any) => f.id as string))
+
+            if (Array.isArray(parsed.checklist)) {
+              parsed.checklist = parsed.checklist.map((item: any) => {
+                const rawIds: string[] = Array.isArray(item.finding_ids) ? item.finding_ids : []
+                const remapped = [...new Set(
+                  rawIds
+                    .map((id: any) => idMap[String(id)] ?? null)
+                    .filter((id): id is string => id !== null && validIds.has(id))
+                )]
+                return { ...item, finding_ids: remapped }
+              })
+            }
           }
 
           // e. Upsert scan_modules
