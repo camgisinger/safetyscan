@@ -445,7 +445,6 @@ export async function POST(request: NextRequest) {
               scan_id: scanId,
               module,
               status: parsed.status ?? 'uncertain',
-              confidence: null,
               legislation: parsed.legislation ?? null,
               findings: parsed.findings ?? null,
               summary: parsed.summary ?? null,
