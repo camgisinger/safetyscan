@@ -451,6 +451,7 @@ export async function POST(request: NextRequest) {
               findings: parsed.findings ?? null,
               summary: parsed.summary ?? null,
               checklist: parsed.checklist ?? null,
+              checklist_state: null,
               follow_up_questions: parsed.follow_up_questions ?? null,
             },
             { onConflict: 'scan_id,module' }
