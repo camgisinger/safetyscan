@@ -23,7 +23,6 @@ export type Scan = {
   work_type: string
   work_types: string[] | null
   status: string
-  confidence: string
   legislation: any
   findings: any
   summary: string
