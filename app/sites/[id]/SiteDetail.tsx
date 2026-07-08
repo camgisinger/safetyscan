@@ -29,7 +29,7 @@ export default function SiteDetail({ id }: { id: string }) {
       if (!user) { router.push('/login'); return }
       const [siteRes, scansRes] = await Promise.all([
         supabase.from('sites').select('*').eq('id', id).single(),
-        supabase.from('scans').select('id, work_type, status, confidence, created_at, checklist, checklist_state, photo_urls, photo_url').eq('site_id', id).order('created_at', { ascending: false }),
+        supabase.from('scans').select('id, work_type, status, created_at, checklist, checklist_state, photo_urls, photo_url').eq('site_id', id).order('created_at', { ascending: false }),
       ])
       if (siteRes.error) { setError(`Could not load site: ${siteRes.error.message}`); setLoading(false); return }
       setSite(siteRes.data); setScans((scansRes.data || []) as Scan[]); setLoading(false)

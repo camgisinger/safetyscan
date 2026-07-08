@@ -72,8 +72,6 @@ async function exportScanPDF(scan: Scan, siteName: string | null, checklist: any
   fill(sc.c); doc.roundedRect(ml, y, 40, 7.5, 2, 2, 'F')
   doc.setFont('helvetica', 'bold'); doc.setFontSize(8); color(WHITE)
   doc.text(sc.label, ml + 20, y + 5, { align: 'center' })
-  doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); color(MUT)
-  doc.text(`Confidence: ${scan.confidence || 'low'}`, ml + 44, y + 5)
   y += 14
 
   // ── Photos ───────────────────────────────────────────────────────────────────
@@ -449,7 +447,7 @@ export default function ScanDetail({ id }: { id: string }) {
         setPhotoUrls(updatedUrls)
       }
 
-      const contextText = `Analyse these construction site photos for Queensland compliance, building on a previous assessment.\n\nPrevious assessment:\nWork type: ${scan.work_type}\nStatus: ${scan.status} (${scan.confidence} confidence)\nSummary: ${scan.summary}\nFindings: ${(scan.findings || []).map((f: any) => f.text || f.title || '').filter(Boolean).join(', ')}\nLegislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${additionalInfo ? `\n\nAdditional context: ${additionalInfo}` : ''}`
+      const contextText = `Analyse these construction site photos for Queensland compliance, building on a previous assessment.\n\nPrevious assessment:\nWork type: ${scan.work_type}\nStatus: ${scan.status}\nSummary: ${scan.summary}\nFindings: ${(scan.findings || []).map((f: any) => f.text || f.title || '').filter(Boolean).join(', ')}\nLegislation: ${(scan.legislation || []).map((l: any) => l.code).join(', ')}${additionalInfo ? `\n\nAdditional context: ${additionalInfo}` : ''}`
       const userContent: any[] = [
         ...extraPhotos.map(p => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: p.base64 } })),
         { type: 'text', text: contextText },

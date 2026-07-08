@@ -48,7 +48,7 @@ function CompliantPhotoSlot({ workType }) {
   );
 }
 
-function StatusBadge({ status, confidence }) {
+function StatusBadge({ status }) {
   const cfg = {
     pass: { bg: "rgba(61,211,122,0.12)", border: "rgba(61,211,122,0.3)", color: PASS_GREEN, label: "Likely compliant", icon: "✓" },
     fail: { bg: "rgba(225,75,61,0.12)", border: "rgba(225,75,61,0.3)", color: FAIL_RED, label: "Issues found", icon: "✕" },
@@ -56,14 +56,10 @@ function StatusBadge({ status, confidence }) {
     not_applicable: { bg: "rgba(0,0,0,0.05)", border: "rgba(0,0,0,0.1)", color: "#4A4D52", label: "Not applicable", icon: "–" },
   };
   const c = cfg[status] || cfg.uncertain;
-  const conf = { high: "High confidence", medium: "Medium confidence", low: "Low confidence" }[confidence] || "";
   return (
     <div style={{ background: c.bg, border: `1.5px solid ${c.border}`, borderRadius: 10, padding: "12px 14px", display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
       <div style={{ width: 32, height: 32, borderRadius: "50%", background: c.color, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 16, fontWeight: 700, flexShrink: 0 }}>{c.icon}</div>
-      <div>
-        <div style={{ fontWeight: 700, color: c.color, fontSize: 15 }}>{c.label}</div>
-        <div style={{ fontSize: 11, color: c.color, opacity: 0.75, marginTop: 1 }}>{conf}</div>
-      </div>
+      <div style={{ fontWeight: 700, color: c.color, fontSize: 15 }}>{c.label}</div>
     </div>
   );
 }
@@ -176,7 +172,7 @@ export default function PhotoResultCard({ photo, index, total, onReanalyse, chec
       </div>
 
       <div style={{ padding: "14px 16px" }}>
-        <StatusBadge status={r.status} confidence={r.confidence} />
+        <StatusBadge status={r.status} />
 
         {r.legislation?.length > 0 && (
           <div style={{ marginBottom: 14 }}>

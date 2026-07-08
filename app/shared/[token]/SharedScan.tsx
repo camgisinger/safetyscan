@@ -127,7 +127,7 @@ export default function SharedScan({ token }: { token: string }) {
             <span style={{ fontWeight: 600, fontSize: 13, color: statusColor }}>{statusLabel}</span>
           </div>
           <span style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--mut)', opacity: 0.7 }}>
-            AI · {scan.confidence?.toUpperCase() || 'LOW'} CONFIDENCE
+            AI ANALYSIS
           </span>
         </div>
 
