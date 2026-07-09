@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
 import { supabase } from '../../lib/supabase'
+import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
 import { Shield, Ruler, Leaf, Check, X, ChevronRight, TriangleAlert } from 'lucide-react'
 
@@ -189,6 +190,7 @@ function IssuesContent() {
   const [loading, setLoading] = useState(true)
   const router = useRouter()
   const searchParams = useSearchParams()
+  const { user, loading: userLoading } = useUser()
 
   useEffect(() => {
     const tabParam = searchParams.get('tab') as Tab | null
@@ -196,19 +198,53 @@ function IssuesContent() {
   }, [searchParams])
 
   useEffect(() => {
+    if (userLoading) return
+    if (!user) { router.push('/login'); return }
+
     const init = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/login'); return }
-      const res = await fetch('/api/issues')
-      if (res.ok) {
-        const data = await res.json()
-        setOutstanding(data.outstanding || [])
-        setPending(data.pending || [])
+      const { data: modules } = await supabase
+        .from('scan_modules')
+        .select('id, scan_id, module, findings, findings_state, scans!inner(id, work_type, created_at, site_id, sites(name))')
+
+      const outArr: Finding[] = []
+      const pendArr: Finding[] = []
+
+      for (const mod of (modules || [])) {
+        const scan = (mod as any).scans
+        if (!scan) continue
+        const findings: any[] = (mod as any).findings || []
+        const state: Record<string, string> = (mod as any).findings_state || {}
+
+        for (const f of findings) {
+          const fState = state[f.id]
+          if (fState === 'done' || fState === 'dismissed') continue
+
+          const item: Finding = {
+            finding_id: f.id,
+            text: f.text || f.title || '',
+            type: f.type,
+            module: (mod as any).module,
+            scan_id: (mod as any).scan_id,
+            module_id: (mod as any).id,
+            scan_name: scan.work_type || 'Unnamed scan',
+            site_name: scan.sites?.name ?? null,
+            created_at: scan.created_at,
+          }
+
+          if (f.tentative) {
+            pendArr.push(item)
+          } else if (f.type === 'critical' || f.type === 'warning') {
+            outArr.push(item)
+          }
+        }
       }
+
+      setOutstanding(outArr)
+      setPending(pendArr)
       setLoading(false)
     }
     init()
-  }, [router])
+  }, [user, userLoading, router])
 
   const removeOutstanding = useCallback((scanId: string, module: string, findingId: string) => {
     setOutstanding(prev => prev.filter(f => !(f.scan_id === scanId && f.module === module && f.finding_id === findingId)))
