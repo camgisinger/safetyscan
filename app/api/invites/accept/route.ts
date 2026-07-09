@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
 
     const { data: invite } = await serviceRole
       .from('invites')
-      .select('status, expires_at, role, org_id')
+      .select('status, expires_at, role, org_id, created_by')
       .eq('token', token)
       .single()
 
@@ -30,11 +30,18 @@ export async function GET(request: NextRequest) {
       .eq('id', invite.org_id)
       .single()
 
+    let inviter_name: string | null = null
+    if (invite.created_by) {
+      const { data: { user: inviter } } = await serviceRole.auth.admin.getUserById(invite.created_by)
+      inviter_name = inviter?.user_metadata?.full_name ?? inviter?.email ?? null
+    }
+
     return NextResponse.json({
       org_name: org?.name ?? null,
       role: invite.role,
       status: invite.status,
       expires_at: invite.expires_at,
+      inviter_name,
     })
   } catch (error: any) {
     return NextResponse.json({ error: error.message || 'Request failed' }, { status: 500 })

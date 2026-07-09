@@ -1,94 +1,217 @@
 /* =========================================================
-   SiteSpotter — Design Tokens v2
-   Concrete · Schibsted Grotesk · Worklog-Ticket · Amber
+   SiteSpotter — Design Tokens v3
+   Geist · New brand orange · Expanded token set
    ========================================================= */
 
 :root {
+  /* ---- Font ---- */
+  --ff:      var(--font-geist, 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  --ff-mono: var(--font-geist-mono, 'Geist Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace);
+
   /* ---- Brand ---- */
-  --amber:      #F58A22;    /* dark theme amber (default) */
-  --amber-light: #EE801A;   /* light theme amber */
-  --amber-glow: rgba(238, 128, 26, 0.50);
+  --amber:         #FF6A1A;
+  --amber-light:   #FF7A34;
+  --amber-glow:    rgba(255, 106, 26, 0.40);
+  --brand:         #FF6A1A;
+  --brand-hover:   #FF7A34;
+  --brand-pressed: #FF7A34;
+  --brand-deep:    #FF7A34;
+  --brand-tint:    rgba(255, 106, 26, 0.12);
 
-  /* ---- Status ---- */
-  --issue:    #D63A26;
-  --issue-tx: #C5341F;
-  --issue-bg: rgba(214, 58, 38, 0.12);
-  --clear:    #3E8E5A;
-  --clear-bg: rgba(62, 142, 90, 0.12);
-  --pend-bg:  rgba(238, 128, 26, 0.14);
+  /* ---- Backgrounds (dark defaults) ---- */
+  --bg:            #1C1D1F;
+  --surf:          #26282B;
+  --surf-sidebar:  #34373B;
+  --surf-sheet:    #34373B;
+  --surf-toggle:   #3A3D41;
+  --surf-inset:    #212325;
+  --surf-recessed: #212325;
 
-  /* ---- Dark (Ink) — root defaults ---- */
-  --bg:    #16150F;
-  --surf:  #221F19;
-  --line:  #100E09;
-  --div:   rgba(241, 239, 230, 0.10);
-  --text:  #F1EFE6;
-  --mut:   #948E80;
-  --clear-tx: #67B083;
-  --issue-tx-theme: #E8705C;
+  /* ---- Borders / dividers ---- */
+  --div:           #34373B;
+  --line:          #000000;
+  --border-subtle: #34373B;
+  --border-card:   #34373B;
+  --border-strong: #000000;
 
-  /* ---- Type ---- */
-  --ff:      var(--font-schibsted, 'Schibsted Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif);
-  --ff-mono: var(--font-geist-mono, 'JetBrains Mono', ui-monospace, Menlo, monospace);
+  /* ---- Text ---- */
+  --text:             #F2F0EC;
+  --mut:              #9A9C9F;
+  --text-primary:     #F2F0EC;
+  --text-secondary:   #9A9C9F;
+  --text-muted:       #86888C;
+  --text-label:       #C6C4BF;
+  --text-placeholder: #86888C;
+  --text-faint:       #86888C;
+
+  /* ---- Pass / green ---- */
+  --clear:       #35C46B;
+  --clear-tx:    #6FAE84;
+  --clear-bg:    rgba(53, 196, 107, 0.12);
+  --pass:        #35C46B;
+  --pass-text:   #6FAE84;
+  --pass-deep:   #6FAE84;
+  --pass-tint:   rgba(53, 196, 107, 0.12);
+  --pass-border: #2E5A3E;
+
+  /* ---- Fail / red ---- */
+  --issue:          #FF5A54;
+  --issue-tx:       #FF5A54;
+  --issue-tx-theme: #FF5A54;
+  --issue-bg:       rgba(255, 90, 84, 0.12);
+  --fail:           #FF5A54;
+  --fail-text:      #FF5A54;
+  --fail-tint:      rgba(255, 90, 84, 0.12);
+
+  /* ---- Warning / amber ---- */
+  --warning:   #E0A94A;
+  --warn-tint: rgba(224, 133, 11, 0.12);
+
+  /* ---- Pending confirmation ---- */
+  --pend-bg:              rgba(224, 133, 11, 0.10);
+  --pending-text:         #E0A94A;
+  --pending-card-bg:      rgba(224, 133, 11, 0.10);
+  --pending-card-border:  #4A3620;
+  --pending-tag-bg:       #3A2E1A;
+  --pending-tag-text:     #E0A94A;
+
+  /* ---- Utility ---- */
+  --spinner:          #FF7A34;
+  --accent-analysing: #FF7A34;
+  --scrim:            rgba(28, 29, 31, 0.45);
+  --fab-ring:         var(--bg);
+  --nav-height:       72px;
 
   /* ---- Radius ---- */
-  --r-card:    4px;
-  --r-control: 8px;
-  --r-pill:    999px;
+  --r-card:         14px;
+  --r-card-feature: 16px;
+  --r-card-hero:    18px;
+  --r-control:      15px;
+  --r-control-sm:   12px;
+  --r-input:        13px;
+  --r-tile:         10px;
+  --r-sheet:        26px;
+  --r-pill:         999px;
+  --r-avatar:       50%;
 
   /* ---- Spacing ---- */
   --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
   --s-5: 20px; --s-6: 24px; --s-7: 32px; --s-8: 40px;
 
   /* ---- Shadows ---- */
-  --shadow-fab: 0 10px 24px -8px rgba(238,128,26,0.55), 0 4px 10px -4px rgba(0,0,0,0.30);
+  --shadow-btn:      0 6px 16px rgba(255, 106, 26, 0.30);
+  --shadow-btn-hero: 0 10px 26px rgba(255, 106, 26, 0.30);
+  --shadow-hero:     0 10px 26px rgba(255, 106, 26, 0.30);
+  --shadow-fab:      0 6px 16px rgba(255, 106, 26, 0.40);
+  --shadow-sheet:    0 -12px 40px rgba(0, 0, 0, 0.25);
+  --shadow-toggle:   0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-window:   0 18px 50px rgba(28, 29, 31, 0.16);
 
-  /* ---- Hazard stripe (CSS-only, no JS needed) ---- */
+  /* ---- Hazard stripe ---- */
   --hazard-bg: repeating-linear-gradient(-45deg, #000 0 10px, var(--amber) 10px 20px);
 
-  /* ---- Legacy --ss-* aliases ---- */
-  --ss-bg:           var(--bg);
-  --ss-surface:      var(--surf);
-  --ss-surface-2:    var(--surf);
-  --ss-text:         var(--text);
-  --ss-text-mute:    var(--mut);
-  --ss-border:       var(--div);
+  /* ---- Legacy aliases (keep until pages rebuilt) ---- */
+  --ss-bg:            var(--bg);
+  --ss-surface:       var(--surf);
+  --ss-surface-2:     var(--surf);
+  --ss-text:          var(--text);
+  --ss-text-mute:     var(--mut);
+  --ss-border:        var(--div);
   --ss-border-strong: var(--line);
-  --ss-amber:        var(--amber);
-
-  /* ---- Loader ---- */
-  --ss-cycle:  2.8s;
-  --ss-base:   #F1EFE6;
-  --ss-accent: var(--amber);
+  --ss-amber:         var(--amber);
+  --ss-cycle:         2.8s;
+  --ss-base:          #F2F0EC;
+  --ss-accent:        var(--amber);
 }
 
 /* =========================================================
    LIGHT THEME
    ========================================================= */
 [data-theme="light"] {
-  --amber:       #EE801A;
-  --hazard-bg: repeating-linear-gradient(-45deg, var(--line) 0 10px, var(--amber) 10px 20px);
-  --bg:    #E2DED5;
-  --surf:  #FAF8F2;
-  --line:  #1B1A12;
-  --div:   rgba(27, 26, 18, 0.12);
-  --text:  #1B1A12;
-  --mut:   #6F6A5C;
-  --clear-tx: #3E8E5A;
-  --issue-tx-theme: #C5341F;
-  --issue-bg: rgba(214, 58, 38, 0.12);
-  --clear-bg: rgba(62, 142, 90, 0.14);
-  --pend-bg:  rgba(238, 128, 26, 0.14);
+  /* ---- Brand ---- */
+  --amber:         #FF6A1A;
+  --amber-light:   #C2591A;
+  --amber-glow:    rgba(255, 106, 26, 0.35);
+  --brand:         #FF6A1A;
+  --brand-hover:   #E85D0F;
+  --brand-pressed: #C2591A;
+  --brand-deep:    #C2591A;
+  --brand-tint:    #FFF1E9;
 
-  --ss-bg:           var(--bg);
-  --ss-surface:      var(--surf);
-  --ss-surface-2:    var(--surf);
-  --ss-text:         var(--text);
-  --ss-text-mute:    var(--mut);
-  --ss-border:       var(--div);
+  /* ---- Backgrounds ---- */
+  --bg:            #F2F0EC;
+  --surf:          #FFFFFF;
+  --surf-sidebar:  #FFFFFF;
+  --surf-sheet:    #F7F5F1;
+  --surf-toggle:   #FFFFFF;
+  --surf-inset:    #FBFAF8;
+  --surf-recessed: #F7F5F1;
+
+  /* ---- Borders / dividers ---- */
+  --div:           #F0EDE7;
+  --line:          #D9D5CD;
+  --border-subtle: #F0EDE7;
+  --border-card:   #E4E1DB;
+  --border-strong: #D9D5CD;
+
+  /* ---- Text ---- */
+  --text:             #1C1D1F;
+  --mut:              #6B6B66;
+  --text-primary:     #1C1D1F;
+  --text-secondary:   #6B6B66;
+  --text-muted:       #8A8A84;
+  --text-label:       #55565A;
+  --text-placeholder: #9A9A94;
+  --text-faint:       #C4C1BA;
+
+  /* ---- Pass / green ---- */
+  --clear:       #1E9E4A;
+  --clear-tx:    #157A38;
+  --clear-bg:    rgba(30, 158, 74, 0.12);
+  --pass:        #1E9E4A;
+  --pass-text:   #157A38;
+  --pass-deep:   #157A38;
+  --pass-tint:   #E4F5E9;
+  --pass-border: #CDE9D6;
+
+  /* ---- Fail / red ---- */
+  --issue:          #DA2B26;
+  --issue-tx:       #DA2B26;
+  --issue-tx-theme: #DA2B26;
+  --issue-bg:       rgba(218, 43, 38, 0.12);
+  --fail:           #DA2B26;
+  --fail-text:      #DA2B26;
+  --fail-tint:      #FBE9E8;
+
+  /* ---- Warning / amber ---- */
+  --warning:   #E0850B;
+  --warn-tint: #FBF0DF;
+
+  /* ---- Pending confirmation ---- */
+  --pend-bg:             #FCF6EC;
+  --pending-text:        #E0850B;
+  --pending-card-bg:     #FCF6EC;
+  --pending-card-border: #EBD9B8;
+  --pending-tag-bg:      #F6E9CF;
+  --pending-tag-text:    #9A6A12;
+
+  /* ---- Utility ---- */
+  --fab-ring: var(--surf);
+  --spinner:  #FF7A34;
+
+  /* ---- Hazard stripe ---- */
+  --hazard-bg: repeating-linear-gradient(-45deg, var(--border-strong) 0 10px, var(--amber) 10px 20px);
+
+  /* ---- Legacy aliases ---- */
+  --ss-bg:            var(--bg);
+  --ss-surface:       var(--surf);
+  --ss-surface-2:     var(--surf);
+  --ss-text:          var(--text);
+  --ss-text-mute:     var(--mut);
+  --ss-border:        var(--div);
   --ss-border-strong: var(--line);
-  --ss-base:         #1B1A12;
-  --shadow-fab: 0 10px 24px -8px rgba(238,128,26,0.55), 0 4px 10px -4px rgba(0,0,0,0.30);
+  --ss-base:          #1C1D1F;
+  --shadow-fab:       0 6px 16px rgba(255, 106, 26, 0.35);
 }
 
 /* =========================================================
@@ -124,10 +247,10 @@
    ========================================================= */
 .scan-loader { display: inline-block; line-height: 0; color: var(--ss-accent, var(--amber)); }
 .scan-loader svg { width: 100%; height: 100%; display: block; overflow: visible; }
-.scan-loader.on-amber { --ss-base: #1B1A12; --ss-accent: #1B1A12; }
-.scan-loader .ss-shield { fill: none; stroke: var(--ss-base, #F1EFE6); stroke-width: 8; stroke-linejoin: miter; }
+.scan-loader.on-amber { --ss-base: #1C1D1F; --ss-accent: #1C1D1F; }
+.scan-loader .ss-shield { fill: none; stroke: var(--ss-base, #F2F0EC); stroke-width: 8; stroke-linejoin: miter; }
 .scan-loader.complete .ss-shield { stroke: var(--ss-accent, var(--amber)); }
-.scan-loader .ss-brackets { fill: var(--ss-base, #F1EFE6); opacity: 1; }
+.scan-loader .ss-brackets { fill: var(--ss-base, #F2F0EC); opacity: 1; }
 .scan-loader.scanning .ss-brackets { opacity: .7; }
 .scan-loader .ss-beam-bar { fill: var(--ss-accent, var(--amber)); }
 .scan-loader .ss-beam-bar.faint { opacity: .4; }

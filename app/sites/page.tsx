@@ -1,18 +1,28 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { supabase, Site } from '../../lib/supabase'
+import { supabase, Site, Scan } from '../../lib/supabase'
 import { useOrg } from '../../lib/useOrg'
 import AppHeader from '../../components/AppHeader'
+import { MapPin, ChevronRight, FolderPlus, X, Archive } from 'lucide-react'
+
+function siteCompliance(scans: Scan[]) {
+  const active = scans.filter(s => !(s as any).archived)
+  if (active.length === 0) return { rate: null, color: 'var(--text-muted)' }
+  const passed = active.filter(s => s.status === 'pass').length
+  const rate = Math.round((passed / active.length) * 100)
+  const color = rate >= 80 ? 'var(--pass)' : rate >= 50 ? 'var(--warning)' : 'var(--issue)'
+  return { rate, color }
+}
 
 export default function SitesPage() {
   const [sites, setSites] = useState<Site[]>([])
-  const [scanMeta, setScanMeta] = useState<{ site_id: string | null; status: string; created_at: string }[]>([])
+  const [scans, setScans] = useState<Scan[]>([])
   const [loading, setLoading] = useState(true)
-  const [showNewForm, setShowNewForm] = useState(false)
+  const [showNewSheet, setShowNewSheet] = useState(false)
   const [newName, setNewName] = useState('')
   const [newLocation, setNewLocation] = useState('')
-  const [saving, setSaving] = useState(false)
+  const [creating, setCreating] = useState(false)
   const [showArchived, setShowArchived] = useState(false)
   const { orgId } = useOrg()
   const router = useRouter()
@@ -22,130 +32,245 @@ export default function SitesPage() {
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) { router.push('/login'); return }
       const [sitesRes, scansRes] = await Promise.all([
-        supabase.from('sites').select('*').order('name', { ascending: true }),
-        supabase.from('scans').select('id, site_id, status, created_at').order('created_at', { ascending: false }),
+        supabase.from('sites').select('*').order('name'),
+        supabase.from('scans').select('id, site_id, status, created_at'),
       ])
       setSites(sitesRes.data || [])
-      setScanMeta(scansRes.data || [])
+      setScans((scansRes.data || []) as Scan[])
       setLoading(false)
     }
     init()
   }, [router])
 
-  const createSite = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleCreate = async () => {
     if (!newName.trim()) return
-    setSaving(true)
+    setCreating(true)
     const { data: { user } } = await supabase.auth.getUser()
-    const { data } = await supabase.from('sites').insert({ created_by: user?.id, org_id: orgId, name: newName.trim(), location: newLocation.trim() || null, archived: false }).select().single()
-    if (data) setSites(prev => [...prev, data].sort((a, b) => a.name.localeCompare(b.name)))
-    setNewName(''); setNewLocation(''); setShowNewForm(false); setSaving(false)
+    const { data: site, error } = await supabase.from('sites').insert({
+      name: newName.trim(),
+      location: newLocation.trim() || null,
+      created_by: user?.id,
+      org_id: orgId,
+      archived: false,
+    }).select().single()
+    if (!error && site) {
+      setSites(prev => [...prev, site].sort((a, b) => a.name.localeCompare(b.name)))
+    }
+    setCreating(false)
+    setNewName(''); setNewLocation(''); setShowNewSheet(false)
   }
 
-  const toggleArchive = async (site: Site) => {
-    const newVal = !site.archived
-    await supabase.from('sites').update({ archived: newVal }).eq('id', site.id)
-    setSites(prev => prev.map(s => s.id === site.id ? { ...s, archived: newVal } : s))
-  }
+  const visibleSites = sites.filter(s => showArchived ? s.archived : !s.archived)
+  const archivedCount = sites.filter(s => s.archived).length
 
   if (loading) return (
-    <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
-      <div style={{ width: 32, height: 32, border: '2px solid var(--line)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>
+    <div style={{ minHeight: '100svh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ width: 32, height: 32, border: '2px solid var(--border-card)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
     </div>
   )
 
-  const now = new Date()
-  const monthStart = new Date(now.getFullYear(), now.getMonth(), 1)
-  const activeSites = sites.filter(s => !s.archived)
-  const archivedSites = sites.filter(s => s.archived)
-  const displaySites = showArchived ? sites : activeSites
-  const monthScans = scanMeta.filter(s => new Date(s.created_at) >= monthStart)
-
-  const inputStyle: React.CSSProperties = { display: 'block', width: '100%', height: 50, padding: '0 14px', borderRadius: 8, border: '1.5px solid var(--line)', background: 'var(--surf)', fontSize: 14, color: 'var(--text)', boxSizing: 'border-box' }
-
   return (
-    <div className="page-slide-right-in" style={{ minHeight: '100vh', background: 'var(--bg)', paddingBottom: 96 }}>
-      <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
-      <AppHeader />
-      <div style={{ padding: '0 18px' }}>
-        {/* Subhead */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: 12, paddingLeft: 2 }}>
-          <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)' }}>{activeSites.length} active site{activeSites.length !== 1 ? 's' : ''} · {monthScans.length} scans this month</span>
-          <button onClick={() => setShowNewForm(v => !v)} style={{ fontWeight: 500, fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--amber)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>+ New site</button>
-        </div>
+    <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
+      <AppHeader title="Sites" rightContent={
+        <button onClick={() => setShowNewSheet(true)} style={{
+          height: 34, padding: '0 14px', borderRadius: 'var(--r-control-sm)',
+          background: 'var(--amber)', border: 'none',
+          color: '#1B1A12', fontSize: 13, fontWeight: 700,
+          cursor: 'pointer', fontFamily: 'inherit',
+          display: 'flex', alignItems: 'center', gap: 6,
+          boxShadow: 'var(--shadow-btn)',
+        }}>
+          <FolderPlus size={14} strokeWidth={2.2} />
+          New site
+        </button>
+      } />
 
-        {showNewForm && (
-          <form onSubmit={createSite} style={{ background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 4, padding: 16, marginBottom: 12 }}>
-            <div style={{ fontWeight: 600, fontSize: 14, color: 'var(--text)', marginBottom: 14 }}>New site</div>
-            <div style={{ marginBottom: 10 }}>
-              <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>Site name</div>
-              <input value={newName} onChange={e => setNewName(e.target.value)} required placeholder="e.g. Newstead Plaza" style={inputStyle}/>
-            </div>
-            <div style={{ marginBottom: 14 }}>
-              <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>Location <span style={{ opacity: 0.6 }}>(optional)</span></div>
-              <input value={newLocation} onChange={e => setNewLocation(e.target.value)} placeholder="e.g. Brisbane, QLD" style={inputStyle}/>
-            </div>
-            <div style={{ display: 'flex', gap: 8 }}>
-              <button type="submit" disabled={saving} style={{ flex: 1, height: 46, background: 'var(--amber)', border: '1.5px solid var(--line)', borderRadius: 8, color: '#1B1A12', fontSize: 13.5, fontWeight: 600, cursor: saving ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: saving ? 0.6 : 1 }}>
-                {saving ? 'Saving…' : 'Create site'}
-              </button>
-              <button type="button" onClick={() => { setShowNewForm(false); setNewName(''); setNewLocation('') }}
-                style={{ height: 46, padding: '0 18px', background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 8, fontSize: 13.5, color: 'var(--mut)', cursor: 'pointer', fontFamily: 'inherit' }}>
-                Cancel
-              </button>
-            </div>
-          </form>
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '12px 18px 0' }}>
+
+        {/* Archive toggle */}
+        {archivedCount > 0 && (
+          <div style={{ display: 'flex', gap: 6, marginBottom: 12 }}>
+            <button onClick={() => setShowArchived(false)} style={{
+              height: 32, padding: '0 14px', borderRadius: 'var(--r-pill)',
+              background: !showArchived ? 'var(--amber)' : 'var(--surf)',
+              border: `1.5px solid ${!showArchived ? 'transparent' : 'var(--border-card)'}`,
+              color: !showArchived ? '#1B1A12' : 'var(--text-secondary)',
+              fontSize: 13, fontWeight: !showArchived ? 700 : 500,
+              cursor: 'pointer', fontFamily: 'inherit',
+            }}>Active</button>
+            <button onClick={() => setShowArchived(true)} style={{
+              height: 32, padding: '0 14px', borderRadius: 'var(--r-pill)',
+              display: 'flex', alignItems: 'center', gap: 6,
+              background: showArchived ? 'var(--surf-toggle)' : 'var(--surf)',
+              border: '1.5px solid var(--border-card)',
+              color: 'var(--text-muted)',
+              fontSize: 13, fontWeight: showArchived ? 600 : 500,
+              cursor: 'pointer', fontFamily: 'inherit',
+            }}>
+              <Archive size={12} strokeWidth={1.75} />
+              Archived ({archivedCount})
+            </button>
+          </div>
         )}
 
-        {displaySites.length === 0 && !showNewForm ? (
-          <div style={{ textAlign: 'center', padding: '48px 20px', color: 'var(--mut)', fontSize: 13, fontWeight: 500 }}>No sites yet</div>
-        ) : displaySites.map(site => {
-          const siteScans = scanMeta.filter(s => s.site_id === site.id)
-          const monthSiteScans = siteScans.filter(s => new Date(s.created_at) >= monthStart)
-          const compliant = siteScans.filter(s => s.status === 'pass').length
-          const pending   = siteScans.filter(s => s.status === 'uncertain').length
-          const issues    = siteScans.filter(s => s.status === 'fail').length
-          const total     = siteScans.length
-          const score     = total > 0 ? Math.round((compliant / total) * 100) : 100
-          const scoreCls  = score >= 90 ? 'var(--text)' : score >= 70 ? 'var(--amber)' : '#D63A26'
-          const gPct = total > 0 ? (compliant / total) * 100 : 100
-          const aPct = total > 0 ? (pending   / total) * 100 : 0
-          const rPct = total > 0 ? (issues    / total) * 100 : 0
-          return (
-            <div key={site.id} onClick={() => router.push(`/sites/${site.id}`)}
-              style={{ padding: '14px 16px', background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 4, marginBottom: 8, cursor: 'pointer' }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontWeight: 600, fontSize: 14.5, letterSpacing: '-0.02em', color: 'var(--text)', display: 'flex', alignItems: 'center', gap: 6 }}>
-                    {site.name}
-                    {site.archived && <span style={{ fontSize: 9.5, padding: '2px 6px', border: '1.5px solid var(--line)', borderRadius: 4, color: 'var(--mut)', fontWeight: 600, letterSpacing: '0.06em' }}>ARCHIVED</span>}
-                  </div>
-                  <div style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--mut)', marginTop: 3 }}>
-                    {[site.location, `${monthSiteScans.length} scan${monthSiteScans.length !== 1 ? 's' : ''} this month`].filter(Boolean).join(' · ')}
-                  </div>
+        {visibleSites.length === 0 ? (
+          <div style={{
+            padding: '48px 24px', textAlign: 'center',
+            background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+            borderRadius: 'var(--r-card)',
+          }}>
+            <div style={{
+              width: 56, height: 56, borderRadius: 16, background: 'var(--brand-tint)',
+              display: 'grid', placeItems: 'center', margin: '0 auto 16px',
+            }}>
+              <MapPin size={26} strokeWidth={1.75} color="var(--amber)" />
+            </div>
+            <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--text)', marginBottom: 8 }}>
+              {showArchived ? 'No archived sites' : 'No sites yet'}
+            </div>
+            {!showArchived && (
+              <>
+                <div style={{ fontSize: 13.5, fontWeight: 500, color: 'var(--text-muted)', lineHeight: 1.6, maxWidth: 260, margin: '0 auto 24px' }}>
+                  Create a site to group scans and track compliance over time.
                 </div>
-                <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                  <div style={{ fontSize: 22, fontWeight: 600, letterSpacing: '-0.02em', color: scoreCls }}>{score}%</div>
-                  <div style={{ fontWeight: 600, fontSize: 9.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--mut)', marginTop: 2 }}>Compliance</div>
+                <button onClick={() => setShowNewSheet(true)} style={{
+                  height: 46, padding: '0 24px',
+                  background: 'var(--amber)', border: 'none',
+                  borderRadius: 'var(--r-control)', fontFamily: 'inherit',
+                  fontSize: 14, fontWeight: 700, color: '#1B1A12',
+                  cursor: 'pointer', boxShadow: 'var(--shadow-btn)',
+                }}>
+                  New site
+                </button>
+              </>
+            )}
+          </div>
+        ) : visibleSites.map(site => {
+          const siteScans = scans.filter(s => s.site_id === site.id)
+          const outstanding = siteScans.filter(s => s.status === 'fail').length
+          const { rate, color } = siteCompliance(siteScans)
+
+          return (
+            <div key={site.id} onClick={() => router.push(`/sites/${site.id}`)} style={{
+              display: 'flex', alignItems: 'stretch',
+              background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+              borderRadius: 'var(--r-card)', overflow: 'hidden',
+              cursor: 'pointer', marginBottom: 10,
+            }}>
+              <div style={{ flex: 1, padding: '14px 16px', minWidth: 0 }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8, marginBottom: 3 }}>
+                  <div style={{ fontWeight: 700, fontSize: 16, letterSpacing: '-0.02em', color: 'var(--text)', lineHeight: 1.2 }}>
+                    {site.name}
+                  </div>
+                  {site.archived && (
+                    <span style={{ fontSize: 10, fontWeight: 600, padding: '2px 7px', borderRadius: 'var(--r-pill)', background: 'var(--surf-inset)', color: 'var(--text-muted)', flexShrink: 0, marginTop: 2 }}>
+                      Archived
+                    </span>
+                  )}
+                </div>
+                {site.location && (
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginBottom: 12 }}>
+                    <MapPin size={11} strokeWidth={1.75} />
+                    {site.location}
+                  </div>
+                )}
+                {/* Stat tiles */}
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <div style={{
+                    flex: 1, padding: '9px 12px',
+                    background: 'var(--surf-inset)', borderRadius: 'var(--r-tile)',
+                    border: '1.5px solid var(--border-subtle)',
+                  }}>
+                    <div style={{ fontSize: 18, fontWeight: 800, color: outstanding > 0 ? 'var(--issue)' : 'var(--text)', letterSpacing: '-0.03em' }}>{outstanding}</div>
+                    <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 1 }}>Outstanding</div>
+                  </div>
+                  <div style={{
+                    flex: 1, padding: '9px 12px',
+                    background: 'var(--surf-inset)', borderRadius: 'var(--r-tile)',
+                    border: '1.5px solid var(--border-subtle)',
+                  }}>
+                    <div style={{ fontSize: 18, fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.03em' }}>{siteScans.length}</div>
+                    <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 1 }}>Scans</div>
+                  </div>
+                  {rate !== null && (
+                    <div style={{
+                      flex: 1, padding: '9px 12px',
+                      background: 'var(--surf-inset)', borderRadius: 'var(--r-tile)',
+                      border: '1.5px solid var(--border-subtle)',
+                    }}>
+                      <div style={{ fontSize: 18, fontWeight: 800, color, letterSpacing: '-0.03em' }}>{rate}%</div>
+                      <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 1 }}>Compliance</div>
+                    </div>
+                  )}
                 </div>
               </div>
-              <div style={{ marginTop: 12, height: 8, borderRadius: 999, overflow: 'hidden', display: 'flex', background: 'var(--bg)' }}>
-                <div style={{ height: '100%', width: `${gPct}%`, background: '#3E8E5A' }}/>
-                <div style={{ height: '100%', width: `${aPct}%`, background: 'var(--amber)' }}/>
-                <div style={{ height: '100%', width: `${rPct}%`, background: '#D63A26' }}/>
+              <div style={{ display: 'grid', placeItems: 'center', paddingRight: 14, flexShrink: 0 }}>
+                <ChevronRight size={18} strokeWidth={1.75} color="var(--text-muted)" />
               </div>
             </div>
           )
         })}
-
-        {archivedSites.length > 0 && (
-          <button onClick={() => setShowArchived(v => !v)}
-            style={{ marginTop: 8, fontSize: 12, color: 'var(--mut)', background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'inherit', padding: '4px 0' }}>
-            {showArchived ? 'Hide archived' : `Show archived (${archivedSites.length})`}
-          </button>
-        )}
       </div>
+
+      {/* New site bottom sheet */}
+      {showNewSheet && (
+        <>
+          <div onClick={() => setShowNewSheet(false)} style={{ position: 'fixed', inset: 0, background: 'var(--scrim)', zIndex: 40 }} />
+          <div style={{
+            position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 50,
+            background: 'var(--surf-sheet)', borderRadius: 'var(--r-sheet) var(--r-sheet) 0 0',
+            boxShadow: 'var(--shadow-sheet)',
+            padding: '0 20px 40px',
+            animation: 'slideUpIn 0.28s cubic-bezier(0.2,0.7,0.3,1) forwards',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 0 16px' }}>
+              <div style={{ fontSize: 17, fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.02em' }}>New site</div>
+              <button onClick={() => setShowNewSheet(false)} style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: 4 }}>
+                <X size={20} strokeWidth={2} />
+              </button>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <div>
+                <label style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: 6 }}>Site name</label>
+                <input autoFocus value={newName} onChange={e => setNewName(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleCreate()}
+                  placeholder="e.g. Ipswich Motorway Upgrade"
+                  style={{
+                    width: '100%', height: 46, padding: '0 14px',
+                    border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-input)',
+                    background: 'var(--surf-inset)', color: 'var(--text)',
+                    fontSize: 14, fontWeight: 500, fontFamily: 'inherit',
+                    boxSizing: 'border-box',
+                  }} />
+              </div>
+              <div>
+                <label style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: 6 }}>
+                  Location <span style={{ fontWeight: 400, textTransform: 'none', letterSpacing: 0 }}>(optional)</span>
+                </label>
+                <input value={newLocation} onChange={e => setNewLocation(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleCreate()}
+                  placeholder="e.g. Ipswich, QLD"
+                  style={{
+                    width: '100%', height: 46, padding: '0 14px',
+                    border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-input)',
+                    background: 'var(--surf-inset)', color: 'var(--text)',
+                    fontSize: 14, fontWeight: 500, fontFamily: 'inherit',
+                    boxSizing: 'border-box',
+                  }} />
+              </div>
+              <button onClick={handleCreate} disabled={!newName.trim() || creating} style={{
+                width: '100%', height: 50, marginTop: 4,
+                background: 'var(--amber)', border: 'none',
+                borderRadius: 'var(--r-control)', fontFamily: 'inherit',
+                fontSize: 15, fontWeight: 700, color: '#1B1A12',
+                cursor: !newName.trim() || creating ? 'not-allowed' : 'pointer',
+                opacity: !newName.trim() || creating ? 0.5 : 1,
+                boxShadow: 'var(--shadow-btn)',
+              }}>
+                {creating ? 'Creating…' : 'Create site'}
+              </button>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   )
 }

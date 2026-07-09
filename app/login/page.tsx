@@ -1,11 +1,11 @@
 'use client'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, Suspense } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
 
 type Tab = 'signin' | 'signup'
 
-export default function LoginPage() {
+function LoginContent() {
   const [tab, setTab]           = useState<Tab>('signin')
   const [email, setEmail]       = useState('')
   const [password, setPassword] = useState('')
@@ -13,6 +13,8 @@ export default function LoginPage() {
   const [loading, setLoading]   = useState(false)
   const [signedUp, setSignedUp] = useState(false)
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const redirectTo = searchParams.get('redirectTo') ?? '/dashboard'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -23,7 +25,7 @@ export default function LoginPage() {
         if (error) throw error
         // First-time login without profile → setup screen
         const needsSetup = !data.user?.user_metadata?.full_name
-        router.push(needsSetup ? '/profile/setup' : '/dashboard')
+        router.push(needsSetup ? '/profile/setup' : redirectTo)
       } else {
         const { error } = await supabase.auth.signUp({ email, password })
         if (error) throw error
@@ -139,4 +141,8 @@ export default function LoginPage() {
       </div>
     </div>
   )
+}
+
+export default function LoginPage() {
+  return <Suspense><LoginContent /></Suspense>
 }

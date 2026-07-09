@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, Geist_Mono, Geist } from "next/font/google";
+import { Geist_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import "./styles/tokens.css";
-import FloatingActionButton from "../components/FloatingActionButton";
 import BottomNav from "../components/BottomNav";
+import DesktopSidebar from "../components/DesktopSidebar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
-const schibsted = Schibsted_Grotesk({
-  variable: "--font-schibsted",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -55,11 +49,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="dark" className={`${schibsted.variable} ${geistMono.variable} ${geist.variable} h-full`}>
-      <body className="min-h-full flex flex-col">
-        {children}
+    <html lang="en" data-theme="dark" className={`${geistMono.variable} ${geist.variable}`}>
+      <body style={{ minHeight: '100svh', background: 'var(--bg)' }}>
+        <div style={{ display: 'flex', minHeight: '100svh' }}>
+          <DesktopSidebar />
+          <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+            {children}
+          </div>
+        </div>
         <BottomNav />
-        <FloatingActionButton />
         <SpeedInsights />
       </body>
     </html>

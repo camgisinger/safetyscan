@@ -1,0 +1,157 @@
+'use client'
+import { useEffect, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import { House, Layers, Folder, TriangleAlert, Camera } from 'lucide-react'
+
+type NavId = 'home' | 'scans' | 'sites' | 'issues'
+
+const NAV: { id: NavId; label: string; href: string; Icon: any }[] = [
+  { id: 'home',   label: 'Home',   href: '/dashboard', Icon: House },
+  { id: 'scans',  label: 'Scans',  href: '/scans',     Icon: Layers },
+  { id: 'sites',  label: 'Sites',  href: '/sites',     Icon: Folder },
+  { id: 'issues', label: 'Issues', href: '/issues',    Icon: TriangleAlert },
+]
+
+type Ctx = {
+  org_name: string | null
+  outstanding_count: number
+  full_name: string | null
+  email: string | null
+}
+
+function toInitials(name: string | null, email: string | null) {
+  if (name) return name.trim().split(/\s+/).map(n => n[0]).join('').slice(0, 2).toUpperCase()
+  return email ? email[0].toUpperCase() : 'U'
+}
+
+function toDisplayName(name: string | null, email: string | null) {
+  if (name) {
+    const parts = name.trim().split(/\s+/)
+    return parts.length > 1 ? `${parts[0]} ${parts[parts.length - 1][0]}.` : parts[0]
+  }
+  return email ?? ''
+}
+
+function activeId(pathname: string): NavId | null {
+  if (pathname === '/dashboard')         return 'home'
+  if (pathname.startsWith('/scans'))     return 'scans'
+  if (pathname.startsWith('/sites'))     return 'sites'
+  if (pathname.startsWith('/issues'))    return 'issues'
+  return null
+}
+
+export default function DesktopSidebar() {
+  const pathname = usePathname()
+  const router   = useRouter()
+  const [ctx, setCtx] = useState<Ctx | null>(null)
+
+  useEffect(() => {
+    fetch('/api/user/context')
+      .then(r => r.ok ? r.json() : null)
+      .then(d => d && setCtx(d))
+      .catch(() => null)
+  }, [])
+
+  const active = activeId(pathname)
+
+  return (
+    <aside
+      className="desktop-sidebar"
+      style={{
+        width: 244, flexShrink: 0,
+        background: 'var(--surf-sidebar)',
+        borderRight: '1.5px solid var(--div)',
+        flexDirection: 'column',
+        height: '100vh', position: 'sticky', top: 0,
+        overflowY: 'auto',
+      }}
+    >
+      {/* Logo */}
+      <div style={{ padding: '24px 20px 16px' }}>
+        <button onClick={() => router.push('/dashboard')}
+          style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, padding: 0 }}>
+          <div style={{ width: 30, height: 30, borderRadius: 8, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
+            <img src="/brand/mark-ink.svg" alt="" style={{ width: 20, height: 20 }} />
+          </div>
+          <span style={{ fontWeight: 700, fontSize: 16, letterSpacing: '-0.02em', color: 'var(--text)' }}>SiteSpotter</span>
+        </button>
+      </div>
+
+      {/* New scan */}
+      <div style={{ padding: '0 12px 16px' }}>
+        <button onClick={() => router.push('/scan/new')} style={{
+          width: '100%', height: 40, borderRadius: 'var(--r-control)',
+          background: 'var(--amber)', border: 'none', cursor: 'pointer',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+          color: '#1B1A12', fontWeight: 700, fontSize: 13.5, fontFamily: 'inherit',
+          boxShadow: 'var(--shadow-btn)',
+        }}>
+          <Camera size={15} strokeWidth={2.2} />
+          New scan
+        </button>
+      </div>
+
+      {/* Nav */}
+      <nav style={{ padding: '0 8px', display: 'flex', flexDirection: 'column', gap: 2 }}>
+        {NAV.map(({ id, label, href, Icon }) => {
+          const on    = active === id
+          const badge = id === 'issues' && ctx ? ctx.outstanding_count : 0
+          return (
+            <button key={id} onClick={() => router.push(href)} style={{
+              width: '100%', height: 38, borderRadius: 10,
+              display: 'flex', alignItems: 'center', gap: 10,
+              padding: '0 12px',
+              background: on ? 'var(--brand-tint)' : 'transparent',
+              border: 'none', cursor: 'pointer', fontFamily: 'inherit',
+              color: on ? 'var(--amber)' : 'var(--text-secondary)',
+              fontWeight: on ? 700 : 500, fontSize: 14,
+            }}>
+              <Icon size={16} strokeWidth={on ? 2.2 : 1.75} />
+              <span style={{ flex: 1, textAlign: 'left' }}>{label}</span>
+              {badge > 0 && (
+                <span style={{
+                  minWidth: 18, height: 18, borderRadius: 999,
+                  background: 'var(--issue)', color: '#fff',
+                  fontSize: 10.5, fontWeight: 700,
+                  display: 'grid', placeItems: 'center', padding: '0 4px',
+                }}>
+                  {badge > 99 ? '99+' : badge}
+                </span>
+              )}
+            </button>
+          )
+        })}
+      </nav>
+
+      <div style={{ flex: 1 }} />
+
+      {/* Account row */}
+      <div style={{ borderTop: '1.5px solid var(--div)', padding: '10px 8px 16px' }}>
+        <button onClick={() => router.push('/more')} style={{
+          width: '100%', padding: '8px 12px', borderRadius: 10,
+          display: 'flex', alignItems: 'center', gap: 10,
+          background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
+        }}>
+          <div style={{
+            width: 30, height: 30, borderRadius: '50%',
+            background: 'var(--amber)', flexShrink: 0,
+            display: 'grid', placeItems: 'center',
+            fontSize: 11.5, fontWeight: 700, color: '#1B1A12',
+          }}>
+            {toInitials(ctx?.full_name ?? null, ctx?.email ?? null)}
+          </div>
+          <div style={{ flex: 1, minWidth: 0, textAlign: 'left' }}>
+            <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+              {toDisplayName(ctx?.full_name ?? null, ctx?.email ?? null)}
+            </div>
+            {ctx?.org_name && (
+              <div style={{ fontSize: 11, fontWeight: 500, color: 'var(--mut)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 1 }}>
+                {ctx.org_name}
+              </div>
+            )}
+          </div>
+        </button>
+      </div>
+    </aside>
+  )
+}

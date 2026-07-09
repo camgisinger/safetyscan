@@ -1,87 +1,108 @@
 'use client'
-import { useRouter, usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import { House, Layers, Camera, Folder, Menu } from 'lucide-react'
 
-const NAV_ICONS = {
-  home: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-      <path d="M4 11.5L12 4.5l8 7V20a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1v-8.5z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-    </svg>
-  ),
-  scans: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-      <path d="M5 8V6a2 2 0 0 1 2-2h2M19 8V6a2 2 0 0 0-2-2h-2M5 16v2a2 2 0 0 0 2 2h2M19 16v2a2 2 0 0 1-2 2h-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      <path d="M4 12h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    </svg>
-  ),
-  sites: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-      <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-      <circle cx="12" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.5"/>
-    </svg>
-  ),
-  profile: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="8" r="3.5" stroke="currentColor" strokeWidth="1.5"/>
-      <path d="M5 20c1-3.5 4-5.5 7-5.5s6 2 7 5.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    </svg>
-  ),
+type TabId = 'home' | 'scans' | 'sites' | 'more'
+
+const TABS: { id: TabId; label: string; href: string; Icon: any }[] = [
+  { id: 'home',  label: 'Home',  href: '/dashboard', Icon: House },
+  { id: 'scans', label: 'Scans', href: '/scans',     Icon: Layers },
+  { id: 'sites', label: 'Sites', href: '/sites',     Icon: Folder },
+  { id: 'more',  label: 'More',  href: '/more',      Icon: Menu },
+]
+
+// Show nav on these paths (prefix match)
+const NAV_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues']
+// Show FAB on these (subset of NAV_ROOTS)
+const FAB_ROOTS = ['/dashboard', '/scans', '/sites', '/more']
+
+function matches(path: string, roots: string[]) {
+  return roots.some(r => path === r || path.startsWith(r + '/'))
 }
 
-const tabs = [
-  { id: 'home',    label: 'HOME',    href: '/dashboard' },
-  { id: 'scans',   label: 'SCANS',   href: '/scans' },
-  { id: 'sites',   label: 'SITES',   href: '/sites' },
-  { id: 'profile', label: 'PROFILE', href: '/profile' },
-] as const
-
-const MAIN_ROUTES = ['/dashboard', '/scans', '/sites', '/profile']
-const HIDE_ROUTES = ['/profile/setup', '/profile/edit']
+function activeTab(pathname: string): TabId | null {
+  if (pathname === '/dashboard') return 'home'
+  if (pathname.startsWith('/scans')) return 'scans'
+  if (pathname.startsWith('/sites')) return 'sites'
+  if (pathname.startsWith('/more') || pathname.startsWith('/issues')) return 'more'
+  return null
+}
 
 export default function BottomNav() {
-  const router = useRouter()
   const pathname = usePathname()
+  const router   = useRouter()
 
-  if (!MAIN_ROUTES.includes(pathname) || HIDE_ROUTES.includes(pathname)) return null
+  if (!matches(pathname, NAV_ROOTS)) return null
 
-  const activeId = pathname === '/dashboard' ? 'home'
-    : pathname.startsWith('/scans')   ? 'scans'
-    : pathname.startsWith('/sites')   ? 'sites'
-    : pathname.startsWith('/profile') ? 'profile'
-    : null
-
-  if (!activeId) return null
+  const active  = activeTab(pathname)
+  const showFab = matches(pathname, FAB_ROOTS)
 
   return (
-    <nav style={{
-      position: 'fixed', left: 0, right: 0, bottom: 0,
-      display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
-      alignItems: 'center',
-      padding: '10px 10px 22px',
-      background: 'var(--surf)',
-      borderTop: '1.5px solid var(--line)',
-      zIndex: 8,
-    }}>
-      {tabs.map(tab => {
-        const isActive = activeId === tab.id
+    <nav
+      className="bottom-nav"
+      style={{
+        position: 'fixed', bottom: 0, left: 0, right: 0,
+        alignItems: 'flex-end',
+        background: 'var(--surf)',
+        borderTop: '1.5px solid var(--div)',
+        padding: '8px 16px',
+        paddingBottom: 'max(24px, env(safe-area-inset-bottom, 24px))',
+        zIndex: 50,
+        overflow: 'visible',
+      }}
+    >
+      {/* Left: Home, Scans */}
+      {TABS.slice(0, 2).map(({ id, label, href, Icon }) => {
+        const on = active === id
         return (
-          <button key={tab.id} onClick={() => router.push(tab.href)}
+          <button key={id} onClick={() => router.push(href)}
             style={{
-              display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 5,
-              fontFamily: 'var(--ff)', fontSize: 9.5, fontWeight: 500,
-              letterSpacing: '0.1em', textTransform: 'uppercase',
-              position: 'relative', paddingTop: 9,
-              background: 'none', border: 'none', cursor: 'pointer',
-              color: isActive ? 'var(--amber)' : 'var(--mut)',
-              transition: 'color 0.18s ease-out',
+              flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4,
+              background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+              color: on ? 'var(--amber)' : 'var(--text-placeholder)',
+              fontFamily: 'var(--ff)',
+              WebkitTapHighlightColor: 'transparent',
             }}>
-            {isActive && (
-              <span style={{
-                position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
-                width: 22, height: 3, borderRadius: 2, background: 'var(--amber)',
-              }} />
-            )}
-            {NAV_ICONS[tab.id]}
-            <span>{tab.label}</span>
+            <Icon size={23} strokeWidth={on ? 2.2 : 1.75} />
+            <span style={{ fontSize: 10.5, fontWeight: on ? 600 : 500, lineHeight: 1 }}>{label}</span>
+          </button>
+        )
+      })}
+
+      {/* Centre: FAB */}
+      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'flex-end', overflow: 'visible' }}>
+        {showFab && (
+          <button
+            onClick={() => router.push('/scan/new')}
+            aria-label="New scan"
+            style={{
+              width: 58, height: 58, borderRadius: '50%',
+              background: 'var(--amber)', border: 'none', cursor: 'pointer',
+              display: 'grid', placeItems: 'center',
+              color: '#fff', flexShrink: 0,
+              marginTop: '-30px', marginBottom: 6,
+              boxShadow: '0 0 0 4px var(--fab-ring), var(--shadow-fab)',
+              WebkitTapHighlightColor: 'transparent',
+            }}>
+            <Camera size={26} strokeWidth={2} />
+          </button>
+        )}
+      </div>
+
+      {/* Right: Sites, More */}
+      {TABS.slice(2).map(({ id, label, href, Icon }) => {
+        const on = active === id
+        return (
+          <button key={id} onClick={() => router.push(href)}
+            style={{
+              flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4,
+              background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+              color: on ? 'var(--amber)' : 'var(--text-placeholder)',
+              fontFamily: 'var(--ff)',
+              WebkitTapHighlightColor: 'transparent',
+            }}>
+            <Icon size={23} strokeWidth={on ? 2.2 : 1.75} />
+            <span style={{ fontSize: 10.5, fontWeight: on ? 600 : 500, lineHeight: 1 }}>{label}</span>
           </button>
         )
       })}

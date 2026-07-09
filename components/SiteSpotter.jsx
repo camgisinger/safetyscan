@@ -5,6 +5,7 @@ import { supabase } from "../lib/supabase";
 import { useOrg } from "../lib/useOrg";
 import { convertToJpeg } from "./PhotoResultCard";
 import AppHeader from "./AppHeader";
+import { Camera, ChevronRight } from "lucide-react";
 
 if (typeof window !== 'undefined') {
   window.onerror = function(msg, src, line, col, error) {
@@ -17,7 +18,6 @@ if (typeof window !== 'undefined') {
 
 const MAX_PHOTOS = 5;
 
-
 const LOADING_MESSAGES = [
   "Identifying work types...",
   "Checking Queensland legislation...",
@@ -28,14 +28,12 @@ const LOADING_MESSAGES = [
 ];
 
 export default function SiteSpotter() {
+  const [mode, setMode] = useState("quick"); // 'quick' | 'advanced'
   const [photos, setPhotos] = useState([]);
   const [context, setContext] = useState("");
   const [analysing, setAnalysing] = useState(false);
-  const [scanLoaderState, setScanLoaderState] = useState("idle");
   const [msgIdx, setMsgIdx] = useState(0);
-  const [progress, setProgress] = useState(0);
   const [globalError, setGlobalError] = useState(null);
-  const [showTips, setShowTips] = useState(false);
   const [exiting, setExiting] = useState(false);
   const [dragOver, setDragOver] = useState(false);
   const [workTypes, setWorkTypes] = useState([]);
@@ -52,14 +50,10 @@ export default function SiteSpotter() {
   useEffect(() => {
     if (!analysing) return;
     setMsgIdx(0);
-    setProgress(0);
     const msgTimer = setInterval(() => {
       setMsgIdx(prev => prev >= LOADING_MESSAGES.length - 1 ? prev : prev + 1);
     }, 2200);
-    const progTimer = setInterval(() => {
-      setProgress(prev => prev >= 92 ? 92 : prev + Math.random() * 8);
-    }, 800);
-    return () => { clearInterval(msgTimer); clearInterval(progTimer); };
+    return () => clearInterval(msgTimer);
   }, [analysing]);
 
   useEffect(() => {
@@ -90,9 +84,7 @@ export default function SiteSpotter() {
         const { error: uploadError } = await supabase.storage
           .from('scan-photos')
           .upload(fileName, blob, { contentType: 'image/jpeg', upsert: false });
-        if (uploadError) {
-          console.error('[uploadPhotos] upload failed:', uploadError.message);
-        } else {
+        if (!uploadError) {
           const { data: urlData } = supabase.storage.from('scan-photos').getPublicUrl(fileName);
           photoUrls.push(urlData.publicUrl);
         }
@@ -130,8 +122,9 @@ export default function SiteSpotter() {
   const runAll = async () => {
     if (!photos.length) return;
     setAnalysing(true);
-    setScanLoaderState("scanning");
     setGlobalError(null);
+
+    const modules = mode === "quick" ? ["safety"] : selectedModules;
 
     // Resolve site
     let resolvedSiteId = siteDropdownValue === "none" ? null : siteDropdownValue === "new" ? null : siteDropdownValue;
@@ -150,7 +143,6 @@ export default function SiteSpotter() {
     }
 
     try {
-      // Upload photos first so URLs are available for the scan row
       const photoUrls = await uploadPhotos(photos);
 
       const userContent = [
@@ -160,7 +152,7 @@ export default function SiteSpotter() {
           text: `Analyse these ${photos.length} site photo${photos.length > 1 ? "s" : ""} together as a single inspection. Identify all work types present across all photos and return one organised compliance report covering everything you can see.${context ? `\n\nContext: ${context}` : ""}`
         }
       ];
-      const searchQuery = [...workTypes, context].filter(Boolean).join(" ");
+      const searchQuery = [...(mode === "quick" ? [] : workTypes), context].filter(Boolean).join(" ");
 
       const res = await fetch("/api/analyse", {
         method: "POST",
@@ -169,24 +161,20 @@ export default function SiteSpotter() {
         body: JSON.stringify({
           messages: [{ role: "user", content: userContent }],
           model: "claude-sonnet-4-6",
-          modules: selectedModules,
+          modules,
           photo_urls: photoUrls,
           site_id: resolvedSiteId,
-          work_types: workTypes,
+          work_types: mode === "quick" ? [] : workTypes,
           searchQuery: searchQuery || "construction site safety compliance Queensland WHS",
           org_id: orgId,
         }),
       });
 
       const data = await res.json();
-      if (!res.ok || data.error) {
-        throw new Error(data.error || `Analysis failed (${res.status})`);
-      }
-
+      if (!res.ok || data.error) throw new Error(data.error || `Analysis failed (${res.status})`);
       const { scanId } = data;
       if (!scanId) throw new Error("No scan ID returned from server");
 
-      setScanLoaderState("complete");
       await new Promise(resolve => setTimeout(resolve, 1200));
       router.push(`/scan/${scanId}`);
     } catch (e) {
@@ -195,24 +183,31 @@ export default function SiteSpotter() {
     }
   };
 
+  const inp = {
+    display: "block", width: "100%", height: 46, padding: "0 14px",
+    border: "1.5px solid var(--border-card)", borderRadius: "var(--r-input)",
+    background: "var(--surf-inset)", color: "var(--text)",
+    fontSize: 14, fontWeight: 500, fontFamily: "inherit", boxSizing: "border-box",
+  };
+
   return (
-    <div className={exiting ? "page-slide-down" : "page-slide-up"} style={{ minHeight: "100vh", background: "var(--bg)", willChange: "transform, opacity" }}>
-      <style>{`@keyframes spin{to{transform:rotate(360deg)}} @keyframes ping{0%{transform:scale(0.5);opacity:0.8}100%{transform:scale(1.4);opacity:0}} textarea,input{outline:none;box-sizing:border-box}`}</style>
+    <div className={exiting ? "page-slide-down" : "page-slide-up"} style={{ minHeight: "100svh", background: "var(--bg)", willChange: "transform, opacity" }}>
+      <style>{`@keyframes spin{to{transform:rotate(360deg)}} @keyframes ping{0%{transform:scale(0.5);opacity:0.8}100%{transform:scale(1.4);opacity:0}} textarea,input{outline:none;box-sizing:border-box} ::-webkit-scrollbar{display:none}`}</style>
 
       <AppHeader onLogoClick={navigateToDashboard} rightContent={
-        <span style={{ fontWeight: 600, fontSize: 9.5, letterSpacing: "0.16em", textTransform: "uppercase", padding: "4px 10px", background: "rgba(238,128,26,0.15)", color: "var(--amber)", borderRadius: 4, border: "1.5px solid var(--line)" }}>QLD</span>
+        <span style={{ fontWeight: 700, fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", padding: "4px 10px", background: "var(--brand-tint)", color: "var(--amber)", borderRadius: 6, border: "1.5px solid var(--border-card)" }}>QLD</span>
       } />
 
       <main style={{ maxWidth: 560, margin: "0 auto", padding: "8px 18px 48px" }}>
 
         {/* Analysing state */}
         {analysing && (
-          <div style={{ background: "var(--ink-bg)", borderRadius: 20, padding: "40px 20px", boxShadow: "inset 0 0 0 1px var(--ink-border)", textAlign: "center" }}>
-            {/* MarkLoader — radar arcs spin + ping ring */}
+          <div style={{ background: "var(--surf)", border: "1.5px solid var(--border-card)", borderRadius: "var(--r-card-hero)", padding: "40px 20px", textAlign: "center" }}>
+            {/* Radar animation */}
             <div style={{ position: "relative", width: 160, height: 160, margin: "0 auto" }}>
               <svg style={{ animation: "spin 3.6s linear infinite", transformOrigin: "50% 50%", position: "absolute", inset: 0 }} viewBox="0 0 240 240" width="160" height="160">
-                <g fill="none" strokeLinecap="butt" strokeWidth="14" stroke="#F39410">
-                  <g opacity=".25">
+                <g fill="none" strokeLinecap="butt" strokeWidth="14" stroke="var(--amber)">
+                  <g opacity=".2">
                     <path d="M 210 120 A 90 90 0 0 1 48 174"/>
                     <path d="M 186 120 A 66 66 0 0 1 66 156"/>
                     <path d="M 162 120 A 42 42 0 0 1 84 138"/>
@@ -223,31 +218,30 @@ export default function SiteSpotter() {
                 </g>
               </svg>
               <svg style={{ position: "absolute", inset: 0 }} viewBox="0 0 240 240" width="160" height="160">
-                <circle cx="120" cy="120" r="10" fill="#F39410"/>
-                <circle style={{ animation: "ping 1.8s ease-out infinite", transformOrigin: "50% 50%" }} cx="120" cy="120" r="60" fill="none" stroke="#F39410" strokeWidth="3" opacity="0.5"/>
+                <circle cx="120" cy="120" r="10" fill="var(--amber)"/>
+                <circle style={{ animation: "ping 1.8s ease-out infinite", transformOrigin: "50% 50%" }} cx="120" cy="120" r="60" fill="none" stroke="var(--amber)" strokeWidth="3" opacity="0.4"/>
               </svg>
             </div>
-            <div style={{ marginTop: 28, fontWeight: 600, fontSize: 22, letterSpacing: "-0.01em", color: "#ECE7DD" }}>{LOADING_MESSAGES[msgIdx]}</div>
-            <div style={{ width: "100%", marginTop: 28, maxWidth: 360, margin: "28px auto 0" }}>
-              {/* Step cards */}
+            <div style={{ marginTop: 28, fontWeight: 700, fontSize: 20, letterSpacing: "-0.02em", color: "var(--text)" }}>{LOADING_MESSAGES[msgIdx]}</div>
+            <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 8 }}>
               {[
                 { label: "Photos uploaded", meta: `${photos.length} / ${photos.length}`, done: true },
                 { label: "Detecting hazards", meta: "DONE", done: msgIdx >= 1 },
                 { label: LOADING_MESSAGES[msgIdx] || "Matching regulations", meta: "NOW", active: msgIdx >= 2 && msgIdx < 5, done: msgIdx >= 5 },
                 { label: "Compiling report", meta: "", dim: msgIdx < 3 },
               ].map((s, i) => (
-                <div key={i} style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", background: "var(--ink-card-2)", borderRadius: 12, marginBottom: i < 3 ? 8 : 0, opacity: s.dim ? 0.5 : 1 }}>
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 12, padding: "11px 14px", background: "var(--surf-inset)", borderRadius: "var(--r-card)", opacity: s.dim ? 0.45 : 1 }}>
                   {s.done ? (
                     <div style={{ width: 20, height: 20, borderRadius: 6, background: "var(--amber)", display: "grid", placeItems: "center", flexShrink: 0 }}>
-                      <span style={{ display: "block", width: 10, height: 6, borderLeft: "1.8px solid #fff", borderBottom: "1.8px solid #fff", transform: "rotate(-45deg) translate(1px,-1px)" }}/>
+                      <svg width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M1 4L4 7L10 1" stroke="#1B1A12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     </div>
                   ) : s.active ? (
                     <div style={{ width: 20, height: 20, borderRadius: "50%", border: "2px solid var(--amber)", borderTopColor: "transparent", animation: "spin 0.9s linear infinite", flexShrink: 0 }}/>
                   ) : (
-                    <div style={{ width: 20, height: 20, borderRadius: 6, boxShadow: "inset 0 0 0 1.5px rgba(255,250,240,0.16)", flexShrink: 0 }}/>
+                    <div style={{ width: 20, height: 20, borderRadius: 6, border: "1.5px solid var(--border-card)", flexShrink: 0 }}/>
                   )}
-                  <span style={{ flex: 1, fontSize: 13, color: "#ECE7DD" }}>{s.label}</span>
-                  {s.meta && <span style={{ fontFamily: "var(--ff-mono)", fontSize: 10, letterSpacing: "0.16em", opacity: s.active ? 1 : 0.55, color: s.active ? "var(--amber)" : "#ECE7DD" }}>{s.meta}</span>}
+                  <span style={{ flex: 1, fontSize: 13.5, fontWeight: 500, color: "var(--text)" }}>{s.label}</span>
+                  {s.meta && <span style={{ fontFamily: "var(--ff-mono)", fontSize: 10, letterSpacing: "0.14em", opacity: s.active ? 1 : 0.5, color: s.active ? "var(--amber)" : "var(--text-muted)" }}>{s.meta}</span>}
                 </div>
               ))}
             </div>
@@ -256,82 +250,119 @@ export default function SiteSpotter() {
 
         {/* Upload form */}
         {!analysing && (
-          <div style={{ background: "var(--surf)", border: "1.5px solid var(--line)", borderRadius: 4 }}>
-            <div style={{ padding: "14px 16px 0" }}>
-            <div style={{ fontSize: 20, fontWeight: 600, letterSpacing: "-0.02em", color: "var(--text)", marginBottom: 4 }}>Compliance check</div>
-            <div style={{ fontSize: 13, fontWeight: 500, color: "var(--mut)", lineHeight: 1.5, marginBottom: 14 }}>Upload up to {MAX_PHOTOS} site photos. All photos are analysed together as a single inspection report.</div>
+          <div>
+            {/* Title */}
+            <div style={{ marginBottom: 16, paddingBottom: 16, borderBottom: "1.5px solid var(--border-card)" }}>
+              <h1 style={{ fontSize: 22, fontWeight: 800, letterSpacing: "-0.03em", color: "var(--text)", margin: "0 0 4px" }}>New scan</h1>
+              <div style={{ fontSize: 13, fontWeight: 500, color: "var(--text-muted)", lineHeight: 1.5 }}>
+                Upload photos for an AI compliance report.
+              </div>
+            </div>
 
-            {/* Photo strip */}
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: photos.length ? 14 : 0 }}>
-              {photos.map((p, i) => (
-                <div key={i} style={{ position: "relative", width: 72, height: 72 }}>
-                  <img src={p.dataUrl} alt={`Photo ${i + 1}`} style={{ width: 72, height: 72, borderRadius: 10, objectFit: "cover" }}/>
-                  <button onClick={() => removePhoto(i)} style={{ position: "absolute", top: -6, right: -6, width: 20, height: 20, borderRadius: "50%", background: "var(--status-red)", border: "2px solid var(--bg)", color: "#fff", fontSize: 11, cursor: "pointer", display: "grid", placeItems: "center", fontWeight: 700, padding: 0 }}>✕</button>
-                  <div style={{ position: "absolute", bottom: 3, left: 3, fontSize: 9, fontWeight: 700, color: "#fff", background: "rgba(0,0,0,0.55)", borderRadius: 3, padding: "1px 4px" }}>{i + 1}</div>
-                </div>
+            {/* Mode toggle */}
+            <div style={{ display: "flex", gap: 3, marginBottom: 18, padding: 3, background: "var(--surf-inset)", border: "1.5px solid var(--border-card)", borderRadius: "var(--r-control)", width: "fit-content" }}>
+              {[["quick", "Quick"], ["advanced", "Advanced"]].map(([key, label]) => (
+                <button key={key} onClick={() => setMode(key)} style={{
+                  height: 32, padding: "0 18px", borderRadius: "calc(var(--r-control) - 4px)", border: "none",
+                  background: mode === key ? "var(--surf)" : "transparent",
+                  color: mode === key ? "var(--text)" : "var(--text-muted)",
+                  fontWeight: mode === key ? 700 : 500, fontSize: 13, cursor: "pointer", fontFamily: "inherit",
+                  boxShadow: mode === key ? "0 1px 4px rgba(0,0,0,0.10)" : "none",
+                }}>
+                  {label}
+                </button>
               ))}
-              {photos.length < MAX_PHOTOS && (
-                <div onClick={() => fileRef.current.click()}
-                  onDragOver={e => { e.preventDefault(); setDragOver(true); }}
-                  onDragLeave={() => setDragOver(false)}
-                  onDrop={e => { e.preventDefault(); setDragOver(false); addFiles(e.dataTransfer.files); }}
-                  style={{ width: photos.length === 0 ? "100%" : 72, height: photos.length === 0 ? 140 : 72, borderRadius: photos.length === 0 ? 4 : 4, border: dragOver ? "2px dashed var(--amber)" : "1.5px dashed var(--line)", background: dragOver ? "rgba(238,128,26,0.08)" : "var(--bg)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", cursor: "pointer", transition: "all 0.15s", gap: 4 }}>
-                  {photos.length === 0 ? (
-                    <>
-                      <div style={{ fontSize: 32 }}>📷</div>
-                      <div style={{ fontWeight: 600, color: "var(--text)", fontSize: 14 }}>Tap to add photos</div>
-                      <div style={{ fontSize: 12, fontWeight: 500, color: "var(--mut)" }}>Up to {MAX_PHOTOS} · JPG, PNG, HEIC</div>
-                    </>
-                  ) : (
-                    <>
-                      <div style={{ fontSize: 20, color: "var(--text-dim)" }}>+</div>
-                      <div style={{ fontSize: 9, color: "var(--text-dim)", fontWeight: 600 }}>{MAX_PHOTOS - photos.length} left</div>
-                    </>
+            </div>
+
+            {/* Photo dropzone */}
+            {photos.length === 0 ? (
+              <div
+                onClick={() => fileRef.current.click()}
+                onDragOver={e => { e.preventDefault(); setDragOver(true); }}
+                onDragLeave={() => setDragOver(false)}
+                onDrop={e => { e.preventDefault(); setDragOver(false); addFiles(e.dataTransfer.files); }}
+                style={{
+                  height: 168, borderRadius: "var(--r-card-hero)",
+                  border: `1.5px dashed ${dragOver ? "var(--amber)" : "var(--border-card)"}`,
+                  background: dragOver ? "var(--brand-tint)" : "var(--surf)",
+                  display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+                  cursor: "pointer", transition: "all 0.15s", gap: 6, marginBottom: 14,
+                }}
+              >
+                <div style={{ width: 48, height: 48, borderRadius: 14, background: dragOver ? "rgba(255,106,26,0.15)" : "var(--surf-inset)", display: "grid", placeItems: "center" }}>
+                  <Camera size={22} strokeWidth={1.75} color={dragOver ? "var(--amber)" : "var(--text-muted)"} />
+                </div>
+                <div style={{ fontWeight: 700, color: "var(--text)", fontSize: 14.5 }}>Tap to add photos</div>
+                <div style={{ fontSize: 12, fontWeight: 500, color: "var(--text-muted)" }}>Up to {MAX_PHOTOS} · JPG, PNG, HEIC</div>
+              </div>
+            ) : (
+              <div style={{ marginBottom: 14 }}>
+                {/* Horizontal scroll strip */}
+                <div style={{ display: "flex", gap: 8, overflowX: "auto", paddingBottom: 4, scrollbarWidth: "none" }}>
+                  {photos.map((p, i) => (
+                    <div key={i} style={{ position: "relative", flexShrink: 0 }}>
+                      <img src={p.dataUrl} alt={`Photo ${i + 1}`} style={{ width: 84, height: 84, borderRadius: "var(--r-card)", objectFit: "cover" }}/>
+                      <button onClick={() => removePhoto(i)} style={{ position: "absolute", top: -5, right: -5, width: 20, height: 20, borderRadius: "50%", background: "var(--issue)", border: "2px solid var(--bg)", color: "#fff", fontSize: 10, cursor: "pointer", display: "grid", placeItems: "center", fontWeight: 700, padding: 0 }}>✕</button>
+                    </div>
+                  ))}
+                  {photos.length < MAX_PHOTOS && (
+                    <div onClick={() => fileRef.current.click()}
+                      onDragOver={e => { e.preventDefault(); setDragOver(true); }}
+                      onDragLeave={() => setDragOver(false)}
+                      onDrop={e => { e.preventDefault(); setDragOver(false); addFiles(e.dataTransfer.files); }}
+                      style={{ width: 84, height: 84, flexShrink: 0, borderRadius: "var(--r-card)", border: `1.5px dashed ${dragOver ? "var(--amber)" : "var(--border-card)"}`, background: "var(--surf)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", cursor: "pointer", gap: 3 }}>
+                      <span style={{ fontSize: 20, lineHeight: 1, color: "var(--text-muted)" }}>+</span>
+                      <span style={{ fontSize: 9.5, fontWeight: 600, color: "var(--text-muted)" }}>{MAX_PHOTOS - photos.length} left</span>
+                    </div>
                   )}
                 </div>
-              )}
-            </div>
+              </div>
+            )}
 
             <input ref={fileRef} type="file" accept="image/*" multiple style={{ display: "none" }}
               onChange={e => { addFiles(e.target.files); e.target.value = ""; }}/>
 
             {globalError && (
-              <div style={{ marginBottom: 12, padding: "10px 14px", background: "var(--status-red-bg)", borderRadius: 10, fontSize: 12, color: "var(--status-red)", fontFamily: "var(--ff-mono)" }}>{globalError}</div>
+              <div style={{ marginBottom: 12, padding: "10px 14px", background: "var(--fail-tint)", borderRadius: "var(--r-card)", fontSize: 12.5, color: "var(--issue)", border: "1.5px solid var(--issue)", fontWeight: 500 }}>{globalError}</div>
             )}
 
-            {photos.length > 0 && (
+            {/* Advanced mode options — only show after photos added */}
+            {mode === "advanced" && photos.length > 0 && (
               <>
                 {/* Context */}
-                <div style={{ marginBottom: 10 }}>
-                  <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--mut)", marginBottom: 6 }}>Context <span style={{ opacity: 0.6 }}>(optional)</span></div>
+                <div style={{ marginBottom: 12 }}>
+                  <label style={{ display: "block", fontWeight: 600, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 6 }}>
+                    Context <span style={{ opacity: 0.5, fontWeight: 400, textTransform: "none", letterSpacing: 0 }}>(optional)</span>
+                  </label>
                   <textarea rows={2} placeholder='e.g. "Scaffold on Ipswich Motorway upgrade, Brisbane"'
                     value={context} onChange={e => setContext(e.target.value)}
-                    style={{ width: "100%", padding: "10px 14px", border: "1.5px solid var(--line)", background: "var(--bg)", fontSize: 13, fontWeight: 500, resize: "none", color: "var(--text)", lineHeight: 1.5, borderRadius: 4 }}/>
+                    style={{ width: "100%", padding: "10px 14px", border: "1.5px solid var(--border-card)", background: "var(--surf-inset)", fontSize: 13.5, fontWeight: 500, resize: "none", color: "var(--text)", lineHeight: 1.5, borderRadius: "var(--r-input)", fontFamily: "inherit" }}/>
                 </div>
+
+                {/* Site */}
                 <div style={{ marginBottom: 12 }}>
-                  <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--mut)", marginBottom: 6 }}>Site <span style={{ opacity: 0.6 }}>(optional)</span></div>
-                  <select value={siteDropdownValue} onChange={e => setSiteDropdownValue(e.target.value)}
-                    style={{ display: "block", width: "100%", height: 46, padding: "0 14px", border: "1.5px solid var(--line)", background: "var(--bg)", fontSize: 14, fontWeight: 500, color: "var(--text)", cursor: "pointer", borderRadius: 4, fontFamily: "inherit", boxSizing: "border-box" }}>
+                  <label style={{ display: "block", fontWeight: 600, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 6 }}>
+                    Site <span style={{ opacity: 0.5, fontWeight: 400, textTransform: "none", letterSpacing: 0 }}>(optional)</span>
+                  </label>
+                  <select value={siteDropdownValue} onChange={e => setSiteDropdownValue(e.target.value)} style={{ ...inp }}>
                     <option value="none">No site</option>
                     {sites.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
                     <option value="new">+ Create new site</option>
                   </select>
                   {siteDropdownValue === "new" && (
                     <input value={newSiteName} onChange={e => setNewSiteName(e.target.value)} placeholder="Site name"
-                      style={{ marginTop: 8, display: "block", width: "100%", height: 46, padding: "0 14px", border: "1.5px solid var(--amber)", background: "var(--bg)", fontSize: 14, color: "var(--text)", borderRadius: 4, fontFamily: "inherit", boxSizing: "border-box" }}/>
+                      style={{ ...inp, marginTop: 8, border: "1.5px solid var(--amber)" }}/>
                   )}
                 </div>
-                {/* Work type selector — multi-select */}
+
+                {/* Work types */}
                 <div style={{ marginBottom: 14 }}>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
-                    <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--mut)" }}>
-                      Work type <span style={{ opacity: 0.5 }}>(optional — skip if unsure)</span>
-                    </div>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                    <label style={{ fontWeight: 600, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)" }}>
+                      Work type <span style={{ opacity: 0.45, fontWeight: 400, textTransform: "none", letterSpacing: 0 }}>(optional)</span>
+                    </label>
                     {workTypes.length > 0 && (
-                      <button onClick={() => setWorkTypes([])}
-                        style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.1em", color: "var(--amber)", background: "none", border: "none", cursor: "pointer", fontFamily: "inherit", padding: 0 }}>
-                        Clear
-                      </button>
+                      <button onClick={() => setWorkTypes([])} style={{ fontSize: 11, fontWeight: 600, color: "var(--amber)", background: "none", border: "none", cursor: "pointer", fontFamily: "inherit", padding: 0 }}>Clear</button>
                     )}
                   </div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -347,16 +378,14 @@ export default function SiteSpotter() {
                       const selected = workTypes.includes(type);
                       return (
                         <button key={type}
-                          onClick={() => setWorkTypes(prev =>
-                            selected ? prev.filter(t => t !== type) : [...prev, type]
-                          )}
+                          onClick={() => setWorkTypes(prev => selected ? prev.filter(t => t !== type) : [...prev, type])}
                           style={{
-                            padding: "6px 12px",
-                            border: `1.5px solid ${selected ? "var(--amber)" : "var(--line)"}`,
-                            borderRadius: 4,
-                            background: selected ? "rgba(238,128,26,0.1)" : "var(--bg)",
-                            color: selected ? "var(--amber)" : "var(--mut)",
-                            fontSize: 12, fontWeight: 600,
+                            padding: "5px 11px",
+                            border: `1.5px solid ${selected ? "var(--amber)" : "var(--border-card)"}`,
+                            borderRadius: "var(--r-pill)",
+                            background: selected ? "var(--brand-tint)" : "var(--surf)",
+                            color: selected ? "var(--amber)" : "var(--text-muted)",
+                            fontSize: 12.5, fontWeight: 600,
                             cursor: "pointer", fontFamily: "inherit",
                             transition: "all 0.12s",
                           }}>
@@ -367,9 +396,9 @@ export default function SiteSpotter() {
                   </div>
                 </div>
 
-                {/* Module selector */}
+                {/* Modules */}
                 <div style={{ marginBottom: 14 }}>
-                  <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--mut)", marginBottom: 6 }}>Analysis modules</div>
+                  <label style={{ display: "block", fontWeight: 600, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 8 }}>Analysis modules</label>
                   <div style={{ display: "flex", gap: 6 }}>
                     {[
                       { key: "safety", label: "Safety" },
@@ -384,14 +413,13 @@ export default function SiteSpotter() {
                             return prev.includes(key) ? prev.filter(m => m !== key) : [...prev, key];
                           })}
                           style={{
-                            padding: "6px 12px",
-                            border: `1.5px solid ${selected ? "var(--amber)" : "var(--line)"}`,
-                            borderRadius: 4,
-                            background: selected ? "rgba(238,128,26,0.1)" : "var(--bg)",
-                            color: selected ? "var(--amber)" : "var(--mut)",
-                            fontSize: 12, fontWeight: 600,
+                            padding: "6px 14px",
+                            border: `1.5px solid ${selected ? "var(--amber)" : "var(--border-card)"}`,
+                            borderRadius: "var(--r-pill)",
+                            background: selected ? "var(--brand-tint)" : "var(--surf)",
+                            color: selected ? "var(--amber)" : "var(--text-muted)",
+                            fontSize: 13, fontWeight: 600,
                             cursor: "pointer", fontFamily: "inherit",
-                            transition: "all 0.12s",
                           }}>
                           {label}
                         </button>
@@ -399,22 +427,32 @@ export default function SiteSpotter() {
                     })}
                   </div>
                 </div>
-
-                <button onClick={runAll}
-                  style={{ display: "block", width: "100%", height: 46, background: "var(--amber)", border: "1.5px solid var(--line)", borderRadius: 6, color: "#1B1A12", fontSize: 13.5, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}>
-                  Analyse {photos.length} photo{photos.length > 1 ? "s" : ""} for compliance →
-                </button>
               </>
             )}
 
-            <div style={{ borderTop: "1.5px solid var(--div)", marginTop: 12 }}>
-              <button onClick={navigateToDashboard}
-                style={{ display: "block", width: "100%", height: 44, background: "transparent", border: "none", fontSize: 13, fontWeight: 600, color: "var(--mut)", cursor: "pointer", fontFamily: "inherit" }}>
-                Back to dashboard
+            {/* Analyse button */}
+            {photos.length > 0 && (
+              <button onClick={runAll}
+                style={{
+                  display: "flex", width: "100%", height: 50, alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "var(--amber)", border: "none",
+                  borderRadius: "var(--r-control)", color: "#1B1A12",
+                  fontSize: 15, fontWeight: 700, cursor: "pointer", fontFamily: "inherit",
+                  boxShadow: "var(--shadow-btn)", marginBottom: 10,
+                }}>
+                {mode === "quick" ? "Quick safety check" : `Analyse ${photos.length} photo${photos.length > 1 ? "s" : ""}`}
+                <ChevronRight size={18} strokeWidth={2.5} />
               </button>
+            )}
+
+            {/* Footer */}
+            <div style={{ borderTop: "1.5px solid var(--border-card)", marginTop: 6, paddingTop: 12, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <button onClick={navigateToDashboard}
+                style={{ height: 40, background: "transparent", border: "none", fontSize: 13, fontWeight: 600, color: "var(--text-muted)", cursor: "pointer", fontFamily: "inherit", padding: 0 }}>
+                ← Back
+              </button>
+              <span style={{ fontWeight: 600, fontSize: 9.5, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)" }}>AI · Queensland law · Not legal advice</span>
             </div>
-            </div>
-            <div style={{ padding: "10px 16px", borderTop: "1.5px solid var(--div)", fontWeight: 600, fontSize: 9.5, color: "var(--mut)", textAlign: "center", letterSpacing: "0.1em", textTransform: "uppercase" }}>AI-assisted · Queensland legislation · Not legal advice</div>
           </div>
         )}
       </main>
