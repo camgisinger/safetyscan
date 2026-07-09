@@ -47,9 +47,9 @@ export default function ScansPage() {
   }, [router])
 
   const counts = useMemo(() => ({
-    issues: scans.filter(s => s.status === 'fail' && !s.archived).length,
-    compliant: scans.filter(s => s.status === 'pass' && !s.archived).length,
-    pending: scans.filter(s => s.status === 'uncertain' && !s.archived).length,
+    issues: scans.filter(s => s.status === 'fail' && !(s as any).archived).length,
+    compliant: scans.filter(s => s.status === 'pass' && !(s as any).archived).length,
+    pending: scans.filter(s => s.status === 'uncertain' && !(s as any).archived).length,
     archived: scans.filter(s => (s as any).archived).length,
   }), [scans])
 
