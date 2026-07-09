@@ -50,7 +50,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="dark" className={`${geistMono.variable} ${geist.variable}`}>
+    <html lang="en" data-theme="light" className={`${geistMono.variable} ${geist.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('ss-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}` }} />
+      </head>
       <body style={{ minHeight: '100svh', background: 'var(--bg)' }}>
         <UserProvider>
           <div style={{ display: 'flex', minHeight: '100svh' }}>

@@ -2,6 +2,7 @@
 import { usePathname, useRouter } from 'next/navigation'
 import { House, Layers, Folder, TriangleAlert, Camera } from 'lucide-react'
 import { useUser } from '../lib/UserContext'
+import ThemeToggle from './ThemeToggle'
 
 type NavId = 'home' | 'scans' | 'sites' | 'issues'
 
@@ -113,6 +114,11 @@ export default function DesktopSidebar() {
       </nav>
 
       <div style={{ flex: 1 }} />
+
+      {/* Theme toggle */}
+      <div style={{ padding: '4px 12px 8px' }}>
+        <ThemeToggle compact />
+      </div>
 
       {/* Account row */}
       <div style={{ borderTop: '1.5px solid var(--div)', padding: '10px 8px 16px' }}>

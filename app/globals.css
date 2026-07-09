@@ -15,8 +15,10 @@ button { font-family: inherit; cursor: pointer; }
 /* Responsive layout shell */
 .bottom-nav      { display: flex; }
 .desktop-sidebar { display: none; flex-direction: column; }
+.desktop-hidden  { display: flex; }
 
 @media (min-width: 1024px) {
   .bottom-nav      { display: none; }
   .desktop-sidebar { display: flex; }
+  .desktop-hidden  { display: none; }
 }

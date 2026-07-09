@@ -1,6 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft, X } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 interface AppHeaderProps {
   variant?: 'main' | 'detail' | 'modal'
@@ -59,11 +60,10 @@ export default function AppHeader({
                 </span>
               </button>
             )}
-            {rightContent && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                {rightContent}
-              </div>
-            )}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }} className="desktop-hidden">
+              {rightContent}
+              <ThemeToggle compact />
+            </div>
           </>
         ) : (
           <>
