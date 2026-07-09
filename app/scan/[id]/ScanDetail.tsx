@@ -181,17 +181,14 @@ function Accordion({ label, count, children, defaultOpen = false }: { label: str
 
 function FindingRow({ f, state, onMark, onConfirm, onUndo, isLegacy }: {
   f: any; state?: 'done' | 'dismissed' | null;
-  onMark?: (id: string, s: 'done' | 'dismissed') => Promise<void>;
-  onConfirm?: (id: string) => Promise<void>;
-  onUndo?: (id: string) => Promise<void>;
+  onMark?: (id: string, s: 'done' | 'dismissed') => void;
+  onConfirm?: (id: string) => void;
+  onUndo?: (id: string) => void;
   isLegacy?: boolean;
 }) {
-  const [acting, setActing] = useState(false)
   const isCritical = f.type === 'critical'
   const isTentative = f.tentative
   const borderColor = state === 'done' ? 'var(--pass)' : state === 'dismissed' ? 'var(--border-card)' : isTentative ? 'var(--warning)' : isCritical ? 'var(--issue)' : f.type === 'ok' ? 'var(--pass)' : 'var(--warning)'
-
-  const wrap = async (fn: () => Promise<void>) => { setActing(true); try { await fn() } finally { setActing(false) } }
 
   return (
     <div style={{ display: 'flex', alignItems: 'stretch', borderBottom: '1.5px solid var(--border-card)' }}>
@@ -217,7 +214,7 @@ function FindingRow({ f, state, onMark, onConfirm, onUndo, isLegacy }: {
         )}
         {!isLegacy && !state && !isTentative && onMark && (
           <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
-            <button onClick={() => wrap(() => onMark(f.id, 'done'))} disabled={acting} style={{
+            <button onClick={() => onMark(f.id, 'done')} style={{
               display: 'flex', alignItems: 'center', gap: 5,
               height: 28, padding: '0 10px', borderRadius: 'var(--r-control-sm)',
               background: 'var(--pass-tint)', border: '1px solid var(--pass-border)',
@@ -225,7 +222,7 @@ function FindingRow({ f, state, onMark, onConfirm, onUndo, isLegacy }: {
             }}>
               <Check size={11} strokeWidth={2.5} /> Done
             </button>
-            <button onClick={() => wrap(() => onMark(f.id, 'dismissed'))} disabled={acting} style={{
+            <button onClick={() => onMark(f.id, 'dismissed')} style={{
               display: 'flex', alignItems: 'center', gap: 5,
               height: 28, padding: '0 10px', borderRadius: 'var(--r-control-sm)',
               background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
@@ -237,7 +234,7 @@ function FindingRow({ f, state, onMark, onConfirm, onUndo, isLegacy }: {
         )}
         {!isLegacy && isTentative && !state && onConfirm && onMark && (
           <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
-            <button onClick={() => wrap(() => onConfirm(f.id))} disabled={acting} style={{
+            <button onClick={() => onConfirm(f.id)} style={{
               display: 'flex', alignItems: 'center', gap: 5,
               height: 28, padding: '0 10px', borderRadius: 'var(--r-control-sm)',
               background: 'var(--issue)', border: 'none',
@@ -245,7 +242,7 @@ function FindingRow({ f, state, onMark, onConfirm, onUndo, isLegacy }: {
             }}>
               <TriangleAlert size={10} strokeWidth={2.5} /> Confirm issue
             </button>
-            <button onClick={() => wrap(() => onMark(f.id, 'dismissed'))} disabled={acting} style={{
+            <button onClick={() => onMark(f.id, 'dismissed')} style={{
               display: 'flex', alignItems: 'center', gap: 5,
               height: 28, padding: '0 10px', borderRadius: 'var(--r-control-sm)',
               background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
@@ -256,7 +253,7 @@ function FindingRow({ f, state, onMark, onConfirm, onUndo, isLegacy }: {
           </div>
         )}
         {!isLegacy && state && onUndo && (
-          <button onClick={() => wrap(() => onUndo(f.id))} disabled={acting} style={{
+          <button onClick={() => onUndo(f.id)} style={{
             display: 'flex', alignItems: 'center', gap: 5,
             height: 26, padding: '0 10px', marginTop: 8, borderRadius: 'var(--r-control-sm)',
             background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
@@ -451,40 +448,41 @@ export default function ScanDetail({ id }: { id: string }) {
     } catch (e: any) { setContinueError(e.message || 'Analysis failed') } finally { setContinueLoading(false) }
   }
 
-  const markFinding = async (findingId: string, state: 'done' | 'dismissed') => {
-    await fetch('/api/finding-state', {
+  const markFinding = (findingId: string, state: 'done' | 'dismissed') => {
+    setScanModules(prev => prev.map((m: any) => {
+      if (m.module !== activeModule) return m
+      return { ...m, findings_state: { ...(m.findings_state || {}), [findingId]: state } }
+    }))
+    fetch('/api/finding-state', {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ scan_id: id, module: activeModule, finding_id: findingId, state }),
     })
-    setScanModules(prev => prev.map((m: any) => {
-      if (m.module !== activeModule) return m
-      const newFs = { ...(m.findings_state || {}), [findingId]: state }
-      return { ...m, findings_state: newFs }
-    }))
   }
 
-  const undoFinding = async (findingId: string) => {
-    await fetch('/api/finding-state', {
-      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ scan_id: id, module: activeModule, finding_id: findingId, state: null }),
-    })
+  const undoFinding = (findingId: string) => {
     setScanModules(prev => prev.map((m: any) => {
       if (m.module !== activeModule) return m
       const newFs = { ...(m.findings_state || {}) }; delete newFs[findingId]
       return { ...m, findings_state: newFs }
     }))
+    fetch('/api/finding-state', {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scan_id: id, module: activeModule, finding_id: findingId, state: null }),
+    })
   }
 
-  const confirmFinding = async (findingId: string) => {
-    await fetch('/api/finding-state', {
+  const confirmFinding = (findingId: string) => {
+    setScanModules(prev => prev.map((m: any) => {
+      if (m.module !== activeModule) return m
+      const updatedFindings = (m.findings || []).map((f: any) =>
+        f.id === findingId ? { ...f, tentative: false } : f
+      )
+      return { ...m, findings: updatedFindings }
+    }))
+    fetch('/api/finding-state', {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ scan_id: id, module: activeModule, finding_id: findingId, state: 'confirm' }),
     })
-    const { data: fresh } = await supabase.from('scan_modules').select('*').eq('scan_id', id)
-    if (fresh) {
-      const modOrder = ['safety', 'quality', 'environmental']
-      setScanModules(fresh.sort((a: any, b: any) => modOrder.indexOf(a.module) - modOrder.indexOf(b.module)))
-    }
   }
 
   const handleStripScroll = () => {

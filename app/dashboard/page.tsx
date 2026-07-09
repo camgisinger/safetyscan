@@ -97,22 +97,22 @@ export default function DashboardPage() {
       setLoading(false)
 
       // Load counts non-blocking after page is shown
-      supabase.rpc('get_outstanding_findings_count', { p_user_id: user.id, p_site_id: null })
-        .then(({ data }) => setOutstandingCount((data as number) ?? 0))
-
       supabase
         .from('scan_modules')
         .select('findings, findings_state, scans!inner(id)')
         .then(({ data: mods }) => {
-          let count = 0
+          let outstanding = 0, pending = 0
           for (const mod of (mods || [])) {
             const findings: any[] = (mod as any).findings || []
             const state: Record<string, string> = (mod as any).findings_state || {}
             for (const f of findings) {
-              if (f.tentative && state[f.id] !== 'done' && state[f.id] !== 'dismissed') count++
+              if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
+              if (f.tentative) pending++
+              else if (f.type === 'critical' || f.type === 'warning') outstanding++
             }
           }
-          setPendingCount(count)
+          setOutstandingCount(outstanding)
+          setPendingCount(pending)
         })
     }
     init()
