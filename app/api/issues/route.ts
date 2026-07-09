@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
-import { getServerUser } from '../../../../lib/supabase-server'
+import { getServerUser } from '../../../lib/supabase-server'
 
 const serviceRole = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
