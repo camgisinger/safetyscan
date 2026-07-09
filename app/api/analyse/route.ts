@@ -30,7 +30,7 @@ SiteSpotter operates as a compliance guide first and a compliance checker second
 
 A CRITICAL finding is only raised when a clear, unambiguous violation is directly visible in the photo beyond reasonable doubt. If you would not be comfortable standing in front of a WHS inspector and pointing to that exact violation in the photo, do not flag it as critical.
 
-A GUIDE PROMPT replaces what was previously a warning. Any item that requires on-site verification — because it cannot be confirmed from the photo alone — must be reworded as an actionable prompt for the supervisor to physically check. Do not write "cannot verify". Write "Confirm on site that...".
+An ACTION finding is used for any compliance requirement that a photo cannot determine — regardless of photo quality or angle. Do not write "cannot verify" — write a specific on-site check in the format: "Confirm [item] — [requirement and clause]". Example: "Confirm a current SWMS is on site covering boom pump operation and that all workers have signed it — WHS Reg 2011 s.54."
 
 A PASS finding is raised when something is clearly visible and compliant. State it with confidence.
 
@@ -40,7 +40,7 @@ ASSESSMENT RULES:
 
 2. Only raise a CRITICAL finding if the violation is unambiguously visible. Not suspected. Not possible. Visible.
 
-3. Reword all verification items as guide prompts using this format: "Confirm [specific item] — [requirement and clause reference]". Example: "Confirm excavation depth — if exceeding 1.5m, shoring or battering is required under WHS Regulation 2011 s.306."
+3. Any item that cannot be assessed from a photo regardless of image quality — licences, documentation, SWMS, operator qualifications, permit records — must be type "action", not "warning". Write it as: "Confirm [specific item] — [requirement and clause reference]".
 
 4. If you cannot see something clearly — do not flag it as non-compliant. Convert it to a follow-up question or guide prompt instead.
 
@@ -124,21 +124,7 @@ EXAMPLE OF CORRECT TONE:
 EXAMPLE OF INCORRECT TONE (do not write like this):
 "The scaffold looks mostly okay but has some issues. There are no toeboards anywhere — that's a fail straight up. The top platform has no guardrails at all on the open side. Get this sorted before anyone works up there."
 
-CHECKLIST RULES:
-
-Generate a practical on-site checklist from this module's findings.
-
-- Maximum 10 items
-- Items must be specific to the findings above, not generic
-- Each item must include a "finding_ids" array listing the id(s) of the finding(s) it addresses — use the exact ids from the findings array above. Use [] only if the item genuinely addresses no specific finding.
-- Each item must be something a worker can physically verify or action on site
-- Group into 2-4 categories
-- Plain English, no jargon
-- Return an empty array [] if status is "not_applicable" or there are no actionable findings — do not pad the checklist
-
 FINDING IDS: Assign each finding a sequential string id — "f1", "f2", … starting at "f1", no gaps, no reuse within a module.
-
-TENTATIVE FLAG: Set "tentative": true on a finding when you observe something that could be a real compliance issue but cannot determine with confidence whether it is one from the image alone — genuine visual ambiguity about a potential violation. Do NOT set tentative for: findings you are confident about at any severity (ok/warning/critical); or items unverifiable-from-photo (licences, documentation, clearances not in frame) — those belong in follow_up_questions. Default is false.
 
 Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start with { and end with }.
 
@@ -156,15 +142,14 @@ Respond ONLY with a valid JSON object. No markdown. No text outside JSON. Start 
     }
   ],
   "findings": [
-    { "id": "f1", "type": "ok|warning|critical", "text": "specific plain English finding — one sentence", "tentative": false, "photo_ref": 1 }
+    { "id": "f1", "type": "ok|warning|critical|action", "text": "specific plain English finding — one sentence", "detail": "optional elaboration or what to look for on site", "legislation": "optional e.g. WHS Reg 2011 s.306", "photo_ref": 1 }
   ],
   "summary": "3-5 sentence briefing per SUMMARY WRITING RULES above.",
-  "checklist": [{ "item": "specific checkable action", "category": "category name", "finding_ids": ["f1"] }],
   "follow_up_questions": [],
   "photo_quality": "good|poor"
 }
 
-Max 8 findings across all photos. Max 4 legislation items. Max 3 clauses per legislation item. Max 10 checklist items. Omit "photo_ref" when there is only one photo.`
+Max 12 findings total (no more than 6 critical/warning/ok combined). Max 4 legislation items. Max 3 clauses per legislation item. Omit "photo_ref" when there is only one photo. Omit "detail" and "legislation" fields on a finding when not applicable.`
 
 const MODULE_PROMPTS: Record<string, string> = {
   safety: `You are currently assessing this site against the SAFETY compliance module ONLY.
@@ -364,6 +349,21 @@ export async function POST(request: NextRequest) {
             })
           }
 
+          // Inject resolved findings context for re-analysis
+          if (scan_id && body.existing_findings && body.findings_state) {
+            const existingFindings: any[] = body.existing_findings
+            const findingsState: Record<string, string> = body.findings_state
+            const resolved = existingFindings
+              .filter((f: any) => findingsState[f.id] === 'done' || findingsState[f.id] === 'dismissed')
+              .map((f: any) => `- "${f.text || f.title}" — ${findingsState[f.id] === 'done' ? 'marked done by supervisor' : 'dismissed by supervisor'}`)
+            if (resolved.length > 0) {
+              systemBlocks.push({
+                type: 'text',
+                text: `\n\nPREVIOUSLY RESOLVED BY SUPERVISOR — do not re-raise these unless new photo evidence directly contradicts:\n${resolved.join('\n')}`,
+              })
+            }
+          }
+
           // c. POST to Anthropic
           const anthropicRes = await fetch('https://api.anthropic.com/v1/messages', {
             method: 'POST',
@@ -457,8 +457,6 @@ export async function POST(request: NextRequest) {
               legislation: parsed.legislation ?? null,
               findings: parsed.findings ?? null,
               summary: parsed.summary ?? null,
-              checklist: parsed.checklist ?? null,
-              checklist_state: null,
               follow_up_questions: parsed.follow_up_questions ?? null,
             },
             { onConflict: 'scan_id,module' }

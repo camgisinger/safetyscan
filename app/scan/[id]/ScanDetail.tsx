@@ -8,7 +8,7 @@ import AppHeader from '../../../components/AppHeader'
 import LegislationList from '../../../components/LegislationList'
 import {
   Share2, Download, Trash2, ArrowLeft, Check, X,
-  TriangleAlert, ChevronDown, RotateCcw, Pencil, Camera, Upload,
+  ChevronDown, RotateCcw, Pencil, Camera, Upload,
 } from 'lucide-react'
 
 async function imageUrlToDataUrl(url: string): Promise<string | null> {
@@ -179,24 +179,23 @@ function Accordion({ label, count, children, defaultOpen = false }: { label: str
 
 // ─── Finding row ─────────────────────────────────────────────────────────────
 
-function FindingRow({ f, state, onMark, onConfirm, onUndo, isLegacy }: {
+function FindingRow({ f, state, onMark, onUndo, isLegacy }: {
   f: any; state?: 'done' | 'dismissed' | null;
   onMark?: (id: string, s: 'done' | 'dismissed') => void;
-  onConfirm?: (id: string) => void;
   onUndo?: (id: string) => void;
   isLegacy?: boolean;
 }) {
   const isCritical = f.type === 'critical'
-  const isTentative = f.tentative
-  const borderColor = state === 'done' ? 'var(--pass)' : state === 'dismissed' ? 'var(--border-card)' : isTentative ? 'var(--warning)' : isCritical ? 'var(--issue)' : f.type === 'ok' ? 'var(--pass)' : 'var(--warning)'
+  const isAction = f.type === 'action'
+  const borderColor = state === 'done' ? 'var(--pass)' : state === 'dismissed' ? 'var(--border-card)' : isCritical ? 'var(--issue)' : f.type === 'ok' ? 'var(--pass)' : isAction ? 'var(--amber)' : 'var(--warning)'
 
   return (
     <div style={{ display: 'flex', alignItems: 'stretch', borderBottom: '1.5px solid var(--border-card)' }}>
       <div style={{ width: 4, flexShrink: 0, background: borderColor }} />
       <div style={{ flex: 1, padding: '11px 14px', minWidth: 0 }}>
-        {isTentative && (
-          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--pending-text)', marginBottom: 4 }}>
-            NEEDS YOUR REVIEW
+        {isAction && !state && (
+          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: 4 }}>
+            CONFIRM ON SITE
           </div>
         )}
         <div style={{
@@ -212,7 +211,7 @@ function FindingRow({ f, state, onMark, onConfirm, onUndo, isLegacy }: {
         {f.legislation && !state && (
           <span style={{ display: 'inline-block', marginTop: 6, fontSize: 9.5, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '2px 8px', borderRadius: 4, border: '1.5px solid var(--border-card)', color: 'var(--text-muted)' }}>{f.legislation}</span>
         )}
-        {!isLegacy && !state && !isTentative && onMark && (
+        {!isLegacy && !state && onMark && (
           <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
             <button onClick={() => onMark(f.id, 'done')} style={{
               display: 'flex', alignItems: 'center', gap: 5,
@@ -229,26 +228,6 @@ function FindingRow({ f, state, onMark, onConfirm, onUndo, isLegacy }: {
               color: 'var(--text-muted)', fontSize: 11, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
             }}>
               Dismiss
-            </button>
-          </div>
-        )}
-        {!isLegacy && isTentative && !state && onConfirm && onMark && (
-          <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
-            <button onClick={() => onConfirm(f.id)} style={{
-              display: 'flex', alignItems: 'center', gap: 5,
-              height: 28, padding: '0 10px', borderRadius: 'var(--r-control-sm)',
-              background: 'var(--issue)', border: 'none',
-              color: '#fff', fontSize: 11, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
-            }}>
-              <TriangleAlert size={10} strokeWidth={2.5} /> Confirm issue
-            </button>
-            <button onClick={() => onMark(f.id, 'dismissed')} style={{
-              display: 'flex', alignItems: 'center', gap: 5,
-              height: 28, padding: '0 10px', borderRadius: 'var(--r-control-sm)',
-              background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
-              color: 'var(--text-muted)', fontSize: 11, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
-            }}>
-              <X size={10} strokeWidth={2.2} /> Not an issue
             </button>
           </div>
         )}
@@ -436,7 +415,8 @@ export default function ScanDetail({ id }: { id: string }) {
       if (newUrls.length > 0) { await supabase.from('scans').update({ photo_urls: updatedUrls }).eq('id', id); setPhotoUrls(updatedUrls) }
       const contextText = `Analyse these construction site photos for Queensland compliance, building on a previous assessment.\n\nPrevious: Work type: ${scan.work_type}, Status: ${scan.status}${additionalInfo ? `\n\nAdditional context: ${additionalInfo}` : ''}`
       const userContent: any[] = [...extraPhotos.map(p => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: p.base64 } })), { type: 'text', text: contextText }]
-      const res = await fetch('/api/analyse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'include', body: JSON.stringify({ scan_id: id, modules: [module], messages: [{ role: 'user', content: userContent }], searchQuery: [scan.work_type, additionalInfo].filter(Boolean).join(' ') }) })
+      const activeModData = scanModules.find((m: any) => m.module === module)
+      const res = await fetch('/api/analyse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'include', body: JSON.stringify({ scan_id: id, modules: [module], messages: [{ role: 'user', content: userContent }], searchQuery: [scan.work_type, additionalInfo].filter(Boolean).join(' '), existing_findings: activeModData?.findings || [], findings_state: activeModData?.findings_state || {} }) })
       const data = await res.json()
       if (!res.ok || data.error) throw new Error(data.error || 'Analysis failed')
       const { data: freshModules } = await supabase.from('scan_modules').select('*').eq('scan_id', id)
@@ -468,20 +448,6 @@ export default function ScanDetail({ id }: { id: string }) {
     fetch('/api/finding-state', {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ scan_id: id, module: activeModule, finding_id: findingId, state: null }),
-    })
-  }
-
-  const confirmFinding = (findingId: string) => {
-    setScanModules(prev => prev.map((m: any) => {
-      if (m.module !== activeModule) return m
-      const updatedFindings = (m.findings || []).map((f: any) =>
-        f.id === findingId ? { ...f, tentative: false } : f
-      )
-      return { ...m, findings: updatedFindings }
-    }))
-    fetch('/api/finding-state', {
-      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ scan_id: id, module: activeModule, finding_id: findingId, state: 'confirm' }),
     })
   }
 
@@ -527,8 +493,8 @@ export default function ScanDetail({ id }: { id: string }) {
   const displayFindingsState: Record<string, string> = isLegacy ? {} : (activeModuleData?.findings_state || {})
   const visibleCount = displayChecklist.filter((_: any, i: number) => !displayChecklistState[`d_${i}`]).length
 
-  const openFindings = displayFindings.filter(f => !f.tentative && (f.type === 'critical' || f.type === 'warning') && !displayFindingsState[f.id])
-  const tentativeFindings = displayFindings.filter(f => f.tentative && !displayFindingsState[f.id])
+  const openFindings = displayFindings.filter(f => (f.type === 'critical' || f.type === 'warning') && !displayFindingsState[f.id])
+  const actionFindings = displayFindings.filter(f => f.type === 'action' && !displayFindingsState[f.id])
   const compliantFindings = displayFindings.filter(f => f.type === 'ok' && !displayFindingsState[f.id])
   const doneFindings = displayFindings.filter(f => displayFindingsState[f.id] === 'done')
   const dismissedFindings = displayFindings.filter(f => displayFindingsState[f.id] === 'dismissed')
@@ -643,7 +609,7 @@ export default function ScanDetail({ id }: { id: string }) {
           {!isLegacy && view === 'overview' && (
             <div>
               {scanModules.map((m: any) => {
-                const modIssues = (m.findings || []).filter((f: any) => (f.type === 'critical' || f.type === 'warning') && !f.tentative && !(m.findings_state || {})[f.id]).length
+                const modIssues = (m.findings || []).filter((f: any) => (f.type === 'critical' || f.type === 'warning') && !(m.findings_state || {})[f.id]).length
                 const modLabel = m.module === 'safety' ? 'Safety' : m.module === 'quality' ? 'Quality' : 'Environmental'
                 const statusColor = m.status === 'pass' ? 'var(--pass-deep)' : m.status === 'fail' ? 'var(--issue)' : m.status === 'error' ? 'var(--issue)' : 'var(--warning)'
                 const modChecklist: any[] = m.checklist || []
@@ -775,18 +741,18 @@ export default function ScanDetail({ id }: { id: string }) {
                 </>
               )}
 
-              {/* Tentative findings */}
-              {!isErrorTab && tentativeFindings.length > 0 && (
+              {/* Action findings */}
+              {!isErrorTab && actionFindings.length > 0 && (
                 <>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '4px 2px 10px' }}>
-                    <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--warning)', flexShrink: 0 }} />
-                    <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--pending-text)' }}>
-                      Pending review ({tentativeFindings.length})
+                    <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }} />
+                    <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+                      Confirm on site ({actionFindings.length})
                     </span>
                   </div>
-                  <div style={{ background: 'var(--pending-card-bg)', border: '1.5px solid var(--pending-card-border)', borderRadius: 'var(--r-card)', overflow: 'hidden', marginBottom: 14 }}>
-                    {tentativeFindings.map((f: any, i: number) => (
-                      <FindingRow key={f.id || i} f={f} onMark={markFinding} onConfirm={confirmFinding} isLegacy={isLegacy} />
+                  <div style={{ background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-card)', overflow: 'hidden', marginBottom: 14 }}>
+                    {actionFindings.map((f: any, i: number) => (
+                      <FindingRow key={f.id || i} f={f} onMark={markFinding} isLegacy={isLegacy} />
                     ))}
                   </div>
                 </>

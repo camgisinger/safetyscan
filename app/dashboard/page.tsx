@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { supabase, Scan } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
-import { Camera, ChevronRight, TriangleAlert, Clock } from 'lucide-react'
+import { Camera, ChevronRight, TriangleAlert } from 'lucide-react'
 
 function greeting() {
   const h = new Date().getHours()
@@ -75,7 +75,6 @@ export default function DashboardPage() {
   const [scans, setScans] = useState<Scan[]>([])
   const [sites, setSites] = useState<{ id: string; name: string }[]>([])
   const [outstandingCount, setOutstandingCount] = useState<number | null>(null)
-  const [pendingCount, setPendingCount] = useState<number | null>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
   const { user, loading: userLoading } = useUser()
@@ -101,18 +100,16 @@ export default function DashboardPage() {
         .from('scan_modules')
         .select('findings, findings_state, scans!inner(id)')
         .then(({ data: mods }) => {
-          let outstanding = 0, pending = 0
+          let outstanding = 0
           for (const mod of (mods || [])) {
             const findings: any[] = (mod as any).findings || []
             const state: Record<string, string> = (mod as any).findings_state || {}
             for (const f of findings) {
               if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
-              if (f.tentative) pending++
-              else if (f.type === 'critical' || f.type === 'warning') outstanding++
+              if (f.type === 'critical' || f.type === 'warning') outstanding++
             }
           }
           setOutstandingCount(outstanding)
-          setPendingCount(pending)
         })
     }
     init()
@@ -125,7 +122,7 @@ export default function DashboardPage() {
   )
 
   const recent = scans.slice(0, 8)
-  const allClear = scans.length > 0 && outstandingCount === 0 && pendingCount === 0
+  const allClear = scans.length > 0 && outstandingCount === 0
   const isEmpty = scans.length === 0
 
   return (
@@ -185,7 +182,7 @@ export default function DashboardPage() {
 
         {/* Stat cards */}
         {!isEmpty && (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 10, marginBottom: 20 }}>
             <button onClick={() => router.push('/issues')} style={{
               padding: '16px', background: 'var(--surf)', border: '1.5px solid var(--border-card)',
               borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
@@ -196,17 +193,6 @@ export default function DashboardPage() {
               </div>
               <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (outstandingCount ?? 0) > 0 ? 'var(--issue)' : 'var(--text)', lineHeight: 1 }}>{outstandingCount ?? '—'}</div>
               <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>Issue{outstandingCount !== 1 ? 's' : ''} to resolve</div>
-            </button>
-            <button onClick={() => router.push('/issues?tab=pending')} style={{
-              padding: '16px', background: 'var(--surf)', border: '1.5px solid var(--border-card)',
-              borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-                <Clock size={13} strokeWidth={2} color="var(--warning)" />
-                <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Pending</span>
-              </div>
-              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (pendingCount ?? 0) > 0 ? 'var(--warning)' : 'var(--text)', lineHeight: 1 }}>{pendingCount ?? '—'}</div>
-              <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>Awaiting confirmation</div>
             </button>
           </div>
         )}
