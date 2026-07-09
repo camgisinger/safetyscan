@@ -220,7 +220,7 @@ export async function POST(request: NextRequest) {
 
     // ── 2. Parse body ─────────────────────────────────────────────────────────
     const body = await request.json()
-    const { messages, model, modules, scan_id, photo_urls, site_id, work_types, searchQuery } = body
+    const { messages, model, modules, scan_id, photo_urls, site_id, work_types, searchQuery, org_id } = body
     const moduleList: string[] = Array.isArray(modules) && modules.length > 0 ? modules : ['safety']
     const workTypes: string[] = Array.isArray(work_types) ? work_types : []
 
@@ -277,17 +277,23 @@ export async function POST(request: NextRequest) {
     let scanId: string
 
     if (scan_id) {
-      // Re-analysis: verify ownership before proceeding
+      // Re-analysis: verify org membership before proceeding
       const { data: existing, error: fetchErr } = await serviceRole
         .from('scans')
-        .select('id, user_id')
+        .select('id, org_id')
         .eq('id', scan_id)
         .single()
 
       if (fetchErr || !existing) {
         return NextResponse.json({ error: 'Scan not found' }, { status: 404 })
       }
-      if (existing.user_id !== user.id) {
+      const { data: membership } = await serviceRole
+        .from('organisation_members')
+        .select('user_id')
+        .eq('org_id', existing.org_id)
+        .eq('user_id', user.id)
+        .single()
+      if (!membership) {
         return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
       }
       scanId = scan_id
@@ -296,7 +302,8 @@ export async function POST(request: NextRequest) {
       const { data: newScan, error: insertErr } = await serviceRole
         .from('scans')
         .insert({
-          user_id: user.id,
+          created_by: user.id,
+          org_id,
           photo_url: Array.isArray(photo_urls) ? (photo_urls[0] ?? null) : null,
           photo_urls: photo_urls ?? null,
           site_id: site_id ?? null,

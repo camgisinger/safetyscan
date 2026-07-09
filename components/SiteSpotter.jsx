@@ -2,6 +2,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "../lib/supabase";
+import { useOrg } from "../lib/useOrg";
 import { convertToJpeg } from "./PhotoResultCard";
 import AppHeader from "./AppHeader";
 
@@ -41,6 +42,7 @@ export default function SiteSpotter() {
   const [selectedModules, setSelectedModules] = useState(["safety"]);
   const [currentUser, setCurrentUser] = useState(null);
   const [sites, setSites] = useState([]);
+  const { orgId } = useOrg();
   const [siteDropdownValue, setSiteDropdownValue] = useState("none");
   const [newSiteName, setNewSiteName] = useState("");
   const fileRef = useRef();
@@ -135,7 +137,8 @@ export default function SiteSpotter() {
     let resolvedSiteId = siteDropdownValue === "none" ? null : siteDropdownValue === "new" ? null : siteDropdownValue;
     if (siteDropdownValue === "new" && newSiteName.trim() && currentUser) {
       const { data } = await supabase.from('sites').insert({
-        user_id: currentUser.id,
+        created_by: currentUser.id,
+        org_id: orgId,
         name: newSiteName.trim(),
         archived: false,
       }).select('id, name').single();
@@ -171,6 +174,7 @@ export default function SiteSpotter() {
           site_id: resolvedSiteId,
           work_types: workTypes,
           searchQuery: searchQuery || "construction site safety compliance Queensland WHS",
+          org_id: orgId,
         }),
       });
 

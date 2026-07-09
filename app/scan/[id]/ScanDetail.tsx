@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Site, Scan } from '../../../lib/supabase'
+import { useOrg } from '../../../lib/useOrg'
 import { convertToJpeg } from '../../../components/PhotoResultCard'
 import AppHeader from '../../../components/AppHeader'
 import LegislationList from '../../../components/LegislationList'
@@ -295,6 +296,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [view, setView] = useState<'detail' | 'overview'>('detail')
   const [openOverviewChecklist, setOpenOverviewChecklist] = useState<string | null>(null)
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const { orgId } = useOrg()
   const router = useRouter()
 
   useEffect(() => {
@@ -379,7 +381,7 @@ export default function ScanDetail({ id }: { id: string }) {
     if (!newSiteName.trim()) return
     setSavingSite(true)
     const { data: { user } } = await supabase.auth.getUser()
-    const { data: newSite, error } = await supabase.from('sites').insert({ name: newSiteName.trim(), user_id: user?.id, archived: false }).select().single()
+    const { data: newSite, error } = await supabase.from('sites').insert({ name: newSiteName.trim(), created_by: user?.id, org_id: orgId, archived: false }).select().single()
     if (!error && newSite) {
       await supabase.from('scans').update({ site_id: newSite.id }).eq('id', id)
       setSites(prev => [...prev, newSite].sort((a, b) => a.name.localeCompare(b.name)))

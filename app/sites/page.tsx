@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Site } from '../../lib/supabase'
+import { useOrg } from '../../lib/useOrg'
 import AppHeader from '../../components/AppHeader'
 
 export default function SitesPage() {
@@ -13,6 +14,7 @@ export default function SitesPage() {
   const [newLocation, setNewLocation] = useState('')
   const [saving, setSaving] = useState(false)
   const [showArchived, setShowArchived] = useState(false)
+  const { orgId } = useOrg()
   const router = useRouter()
 
   useEffect(() => {
@@ -35,7 +37,7 @@ export default function SitesPage() {
     if (!newName.trim()) return
     setSaving(true)
     const { data: { user } } = await supabase.auth.getUser()
-    const { data } = await supabase.from('sites').insert({ user_id: user?.id, name: newName.trim(), location: newLocation.trim() || null, archived: false }).select().single()
+    const { data } = await supabase.from('sites').insert({ created_by: user?.id, org_id: orgId, name: newName.trim(), location: newLocation.trim() || null, archived: false }).select().single()
     if (data) setSites(prev => [...prev, data].sort((a, b) => a.name.localeCompare(b.name)))
     setNewName(''); setNewLocation(''); setShowNewForm(false); setSaving(false)
   }

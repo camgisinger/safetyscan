@@ -18,19 +18,26 @@ export async function PATCH(request: NextRequest) {
     if (!scan_id || !module || !finding_id) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
-    if (state !== null && state !== 'dismissed' && state !== 'confirmed') {
+    if (state !== null && state !== 'dismissed' && state !== 'done') {
       return NextResponse.json({ error: 'Invalid state value' }, { status: 400 })
     }
 
-    // Verify scan ownership before touching any module data
+    // Verify org membership before touching any module data
     const { data: scan, error: scanErr } = await serviceRole
       .from('scans')
-      .select('id, user_id')
+      .select('id, org_id')
       .eq('id', scan_id)
       .single()
 
     if (scanErr || !scan) return NextResponse.json({ error: 'Scan not found' }, { status: 404 })
-    if (scan.user_id !== user.id) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+
+    const { data: membership } = await serviceRole
+      .from('organisation_members')
+      .select('user_id')
+      .eq('org_id', scan.org_id)
+      .eq('user_id', user.id)
+      .single()
+    if (!membership) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
 
     // Read current findings_state
     const { data: moduleRow, error: moduleErr } = await serviceRole

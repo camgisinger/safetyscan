@@ -7,9 +7,24 @@ export const supabase = createBrowserClient(
 
 export const SCAN_PHOTOS_BUCKET = 'scan-photos'
 
+export type Organisation = {
+  id: string
+  name: string
+  created_at: string
+}
+
+export type OrganisationMember = {
+  id: string
+  org_id: string
+  user_id: string
+  role: 'admin' | 'member'
+  created_at: string
+}
+
 export type Site = {
   id: string
-  user_id: string
+  created_by: string
+  org_id: string
   name: string
   location: string | null
   archived: boolean
@@ -18,7 +33,8 @@ export type Site = {
 
 export type Scan = {
   id: string
-  user_id: string
+  created_by: string
+  org_id: string
   site_id: string | null
   work_type: string
   work_types: string[] | null
