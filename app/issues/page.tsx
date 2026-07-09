@@ -36,21 +36,17 @@ function moduleColor(module: string) {
 }
 
 function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string, module: string, findingId: string, state: string) => void; onView: () => void }) {
-  const [marking, setMarking] = useState(false)
   const isCritical = f.type === 'critical'
   const d = new Date(f.created_at)
   const dateStr = d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' })
 
-  const handleMark = async (state: 'done' | 'dismissed') => {
-    setMarking(true)
-    try {
-      await fetch('/api/finding-state', {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ scan_id: f.scan_id, module: f.module, finding_id: f.finding_id, state }),
-      })
-      onMark(f.scan_id, f.module, f.finding_id, state)
-    } catch { setMarking(false) }
+  const handleMark = (state: 'done' | 'dismissed') => {
+    onMark(f.scan_id, f.module, f.finding_id, state)
+    fetch('/api/finding-state', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scan_id: f.scan_id, module: f.module, finding_id: f.finding_id, state }),
+    })
   }
 
   return (
@@ -80,7 +76,7 @@ function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string
           {[f.scan_name, f.site_name].filter(Boolean).join(' · ')}
         </div>
         <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
-          <button onClick={() => handleMark('done')} disabled={marking} style={{
+          <button onClick={() => handleMark('done')} style={{
             display: 'flex', alignItems: 'center', gap: 5,
             height: 30, padding: '0 12px', borderRadius: 'var(--r-control-sm)',
             background: 'var(--pass-tint)', border: '1px solid var(--pass-border)',
@@ -88,7 +84,7 @@ function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string
           }}>
             <Check size={12} strokeWidth={2.5} /> Mark done
           </button>
-          <button onClick={() => handleMark('dismissed')} disabled={marking} style={{
+          <button onClick={() => handleMark('dismissed')} style={{
             display: 'flex', alignItems: 'center', gap: 5,
             height: 30, padding: '0 12px', borderRadius: 'var(--r-control-sm)',
             background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
@@ -111,20 +107,16 @@ function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string
 }
 
 function PendingRow({ f, onAction, onView }: { f: Finding; onAction: (id: string, module: string, findingId: string, state: string) => void; onView: () => void }) {
-  const [acting, setActing] = useState(false)
   const d = new Date(f.created_at)
   const dateStr = d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' })
 
-  const handleAction = async (state: 'confirm' | 'dismissed') => {
-    setActing(true)
-    try {
-      await fetch('/api/finding-state', {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ scan_id: f.scan_id, module: f.module, finding_id: f.finding_id, state }),
-      })
-      onAction(f.scan_id, f.module, f.finding_id, state)
-    } catch { setActing(false) }
+  const handleAction = (state: 'confirm' | 'dismissed') => {
+    onAction(f.scan_id, f.module, f.finding_id, state)
+    fetch('/api/finding-state', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scan_id: f.scan_id, module: f.module, finding_id: f.finding_id, state }),
+    })
   }
 
   return (
@@ -153,7 +145,7 @@ function PendingRow({ f, onAction, onView }: { f: Finding; onAction: (id: string
           {[f.scan_name, f.site_name].filter(Boolean).join(' · ')}
         </div>
         <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
-          <button onClick={() => handleAction('confirm')} disabled={acting} style={{
+          <button onClick={() => handleAction('confirm')} style={{
             display: 'flex', alignItems: 'center', gap: 5,
             height: 30, padding: '0 12px', borderRadius: 'var(--r-control-sm)',
             background: 'var(--issue)', border: 'none',
@@ -161,7 +153,7 @@ function PendingRow({ f, onAction, onView }: { f: Finding; onAction: (id: string
           }}>
             <TriangleAlert size={11} strokeWidth={2.5} /> Confirm issue
           </button>
-          <button onClick={() => handleAction('dismissed')} disabled={acting} style={{
+          <button onClick={() => handleAction('dismissed')} style={{
             display: 'flex', alignItems: 'center', gap: 5,
             height: 30, padding: '0 12px', borderRadius: 'var(--r-control-sm)',
             background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
