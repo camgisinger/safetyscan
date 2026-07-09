@@ -21,31 +21,22 @@ export async function GET() {
 
     if (!mem?.org_id) return NextResponse.json({ outstanding: [], pending: [] })
 
-    const { data: scans } = await serviceRole
-      .from('scans')
-      .select('id, work_type, work_types, created_at, site_id, sites(name)')
-      .eq('org_id', mem.org_id)
-      .order('created_at', { ascending: false })
-
-    if (!scans || scans.length === 0) return NextResponse.json({ outstanding: [], pending: [] })
-
-    const scanIds = scans.map((s: any) => s.id)
-
+    // Single JOIN query instead of two sequential queries
     const { data: modules } = await serviceRole
       .from('scan_modules')
-      .select('id, scan_id, module, findings, findings_state')
-      .in('scan_id', scanIds)
+      .select('id, scan_id, module, findings, findings_state, scans!inner(id, work_type, created_at, site_id, org_id, sites(name))')
+      .eq('scans.org_id', mem.org_id)
 
-    const scanMap = Object.fromEntries(scans.map((s: any) => [s.id, s]))
+    if (!modules || modules.length === 0) return NextResponse.json({ outstanding: [], pending: [] })
 
     const outstanding: any[] = []
     const pending: any[] = []
 
-    for (const mod of modules || []) {
-      const scan = scanMap[mod.scan_id]
+    for (const mod of modules) {
+      const scan = (mod as any).scans
       if (!scan) continue
-      const findings: any[] = mod.findings || []
-      const state: Record<string, string> = mod.findings_state || {}
+      const findings: any[] = (mod as any).findings || []
+      const state: Record<string, string> = (mod as any).findings_state || {}
 
       for (const f of findings) {
         const fState = state[f.id]
@@ -56,11 +47,11 @@ export async function GET() {
             finding_id: f.id,
             text: f.text || f.title || '',
             type: f.type,
-            module: mod.module,
-            scan_id: mod.scan_id,
-            module_id: mod.id,
+            module: (mod as any).module,
+            scan_id: (mod as any).scan_id,
+            module_id: (mod as any).id,
             scan_name: scan.work_type || 'Unnamed scan',
-            site_name: (scan.sites as any)?.name ?? null,
+            site_name: scan.sites?.name ?? null,
             created_at: scan.created_at,
           })
         } else if (f.type === 'critical' || f.type === 'warning') {
@@ -68,11 +59,11 @@ export async function GET() {
             finding_id: f.id,
             text: f.text || f.title || '',
             type: f.type,
-            module: mod.module,
-            scan_id: mod.scan_id,
-            module_id: mod.id,
+            module: (mod as any).module,
+            scan_id: (mod as any).scan_id,
+            module_id: (mod as any).id,
             scan_name: scan.work_type || 'Unnamed scan',
-            site_name: (scan.sites as any)?.name ?? null,
+            site_name: scan.sites?.name ?? null,
             created_at: scan.created_at,
           })
         }

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Scan } from '../../lib/supabase'
+import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
 import { Camera, ChevronRight, TriangleAlert, Clock } from 'lucide-react'
 
@@ -73,38 +74,38 @@ function ScanRow({ scan, siteName, onClick }: { scan: Scan; siteName?: string; o
 export default function DashboardPage() {
   const [scans, setScans] = useState<Scan[]>([])
   const [sites, setSites] = useState<{ id: string; name: string }[]>([])
-  const [userName, setUserName] = useState<string | null>(null)
   const [outstandingCount, setOutstandingCount] = useState(0)
   const [pendingCount, setPendingCount] = useState(0)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
+  const { user, loading: userLoading } = useUser()
+
+  const userName = user?.user_metadata?.full_name?.split(' ')[0] ?? null
 
   useEffect(() => {
+    if (userLoading) return
+    if (!user) { router.push('/login'); return }
+
     const init = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/login'); return }
-
-      setUserName(user.user_metadata?.full_name?.split(' ')[0] ?? null)
-
-      const [scansRes, sitesRes, issuesRes] = await Promise.all([
+      // Load page content immediately
+      const [scansRes, sitesRes] = await Promise.all([
         supabase.from('scans').select('*').order('created_at', { ascending: false }).limit(20),
         supabase.from('sites').select('id, name').order('name'),
-        fetch('/api/issues'),
       ])
-
       setScans(scansRes.data || [])
       setSites((sitesRes.data || []) as { id: string; name: string }[])
-
-      if (issuesRes.ok) {
-        const issues = await issuesRes.json()
-        setOutstandingCount(issues.outstanding?.length ?? 0)
-        setPendingCount(issues.pending?.length ?? 0)
-      }
-
       setLoading(false)
+
+      // Load counts non-blocking after page is shown
+      supabase.rpc('get_outstanding_findings_count', { p_user_id: user.id, p_site_id: null })
+        .then(({ data }) => setOutstandingCount((data as number) ?? 0))
+
+      fetch('/api/issues')
+        .then(r => r.ok ? r.json() : null)
+        .then(d => { if (d) setPendingCount(d.pending?.length ?? 0) })
     }
     init()
-  }, [router])
+  }, [user, userLoading, router])
 
   if (loading) return (
     <div style={{ minHeight: '100svh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
