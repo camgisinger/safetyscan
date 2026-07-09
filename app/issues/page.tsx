@@ -35,6 +35,7 @@ function moduleColor(module: string) {
 
 function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string, module: string, findingId: string, state: string) => void; onView: () => void }) {
   const isCritical = f.type === 'critical'
+  const isAction = f.type === 'action'
   const d = new Date(f.created_at)
   const dateStr = d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' })
 
@@ -47,13 +48,18 @@ function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string
     })
   }
 
+  const borderColor = isCritical ? 'var(--issue)' : isAction ? 'var(--amber)' : 'var(--warning)'
+  const badgeBg = isCritical ? 'var(--fail-tint)' : isAction ? 'var(--brand-tint)' : 'var(--warn-tint)'
+  const badgeColor = isCritical ? 'var(--issue)' : isAction ? 'var(--amber)' : 'var(--warning)'
+  const badgeLabel = isCritical ? 'Critical' : isAction ? 'Confirm on site' : 'Warning'
+
   return (
     <div style={{
       display: 'flex', alignItems: 'stretch',
       background: 'var(--surf)', border: '1.5px solid var(--border-card)',
       borderRadius: 'var(--r-card)', overflow: 'hidden', marginBottom: 8,
     }}>
-      <div style={{ width: 4, flexShrink: 0, background: isCritical ? 'var(--issue)' : 'var(--warning)' }} />
+      <div style={{ width: 4, flexShrink: 0, background: borderColor }} />
       <div style={{ flex: 1, padding: '12px 14px', minWidth: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 5 }}>
           <span style={{ color: moduleColor(f.module), display: 'flex', alignItems: 'center' }}>
@@ -62,10 +68,9 @@ function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string
           <span style={{
             fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
             padding: '2px 7px', borderRadius: 'var(--r-pill)',
-            background: isCritical ? 'var(--fail-tint)' : 'var(--warn-tint)',
-            color: isCritical ? 'var(--issue)' : 'var(--warning)',
+            background: badgeBg, color: badgeColor,
           }}>
-            {isCritical ? 'Critical' : 'Warning'}
+            {badgeLabel}
           </span>
           <span style={{ fontSize: 10, fontWeight: 500, color: 'var(--text-muted)', marginLeft: 'auto' }}>{dateStr}</span>
         </div>
@@ -143,7 +148,7 @@ function IssuesContent() {
             created_at: scan.created_at,
           }
 
-          if (f.type === 'critical' || f.type === 'warning') {
+          if (f.type === 'critical' || f.type === 'warning' || f.type === 'action') {
             outArr.push(item)
           }
         }

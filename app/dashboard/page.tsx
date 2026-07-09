@@ -106,7 +106,7 @@ export default function DashboardPage() {
             const state: Record<string, string> = (mod as any).findings_state || {}
             for (const f of findings) {
               if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
-              if (f.type === 'critical' || f.type === 'warning') outstanding++
+              if (f.type === 'critical' || f.type === 'warning' || f.type === 'action') outstanding++
             }
           }
           setOutstandingCount(outstanding)
