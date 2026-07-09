@@ -74,8 +74,8 @@ function ScanRow({ scan, siteName, onClick }: { scan: Scan; siteName?: string; o
 export default function DashboardPage() {
   const [scans, setScans] = useState<Scan[]>([])
   const [sites, setSites] = useState<{ id: string; name: string }[]>([])
-  const [outstandingCount, setOutstandingCount] = useState(0)
-  const [pendingCount, setPendingCount] = useState(0)
+  const [outstandingCount, setOutstandingCount] = useState<number | null>(null)
+  const [pendingCount, setPendingCount] = useState<number | null>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
   const { user, loading: userLoading } = useUser()
@@ -194,7 +194,7 @@ export default function DashboardPage() {
                 <TriangleAlert size={13} strokeWidth={2} color="var(--issue)" />
                 <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Outstanding</span>
               </div>
-              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: outstandingCount > 0 ? 'var(--issue)' : 'var(--text)', lineHeight: 1 }}>{outstandingCount}</div>
+              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (outstandingCount ?? 0) > 0 ? 'var(--issue)' : 'var(--text)', lineHeight: 1 }}>{outstandingCount ?? '—'}</div>
               <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>Issue{outstandingCount !== 1 ? 's' : ''} to resolve</div>
             </button>
             <button onClick={() => router.push('/issues?tab=pending')} style={{
@@ -205,7 +205,7 @@ export default function DashboardPage() {
                 <Clock size={13} strokeWidth={2} color="var(--warning)" />
                 <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Pending</span>
               </div>
-              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: pendingCount > 0 ? 'var(--warning)' : 'var(--text)', lineHeight: 1 }}>{pendingCount}</div>
+              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (pendingCount ?? 0) > 0 ? 'var(--warning)' : 'var(--text)', lineHeight: 1 }}>{pendingCount ?? '—'}</div>
               <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>Awaiting confirmation</div>
             </button>
           </div>
