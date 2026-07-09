@@ -75,6 +75,7 @@ export default function DashboardPage() {
   const [scans, setScans] = useState<Scan[]>([])
   const [sites, setSites] = useState<{ id: string; name: string }[]>([])
   const [outstandingCount, setOutstandingCount] = useState<number | null>(null)
+  const [scansWithIssues, setScansWithIssues] = useState<number | null>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
   const { user, loading: userLoading } = useUser()
@@ -98,18 +99,26 @@ export default function DashboardPage() {
       // Load counts non-blocking after page is shown
       supabase
         .from('scan_modules')
-        .select('findings, findings_state, scans!inner(id)')
+        .select('findings, findings_state, scan_id, scans!inner(id)')
         .then(({ data: mods }) => {
           let outstanding = 0
+          const scanIdsWithIssues = new Set<string>()
           for (const mod of (mods || [])) {
             const findings: any[] = (mod as any).findings || []
             const state: Record<string, string> = (mod as any).findings_state || {}
+            const scanId: string = (mod as any).scan_id
+            let modHasIssues = false
             for (const f of findings) {
               if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
-              if (f.type === 'critical' || f.type === 'warning' || f.type === 'action') outstanding++
+              if (f.type === 'critical' || f.type === 'warning' || f.type === 'action') {
+                outstanding++
+                modHasIssues = true
+              }
             }
+            if (modHasIssues && scanId) scanIdsWithIssues.add(scanId)
           }
           setOutstandingCount(outstanding)
+          setScansWithIssues(scanIdsWithIssues.size)
         })
     }
     init()
@@ -192,7 +201,11 @@ export default function DashboardPage() {
                 <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Outstanding</span>
               </div>
               <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (outstandingCount ?? 0) > 0 ? 'var(--issue)' : 'var(--text)', lineHeight: 1 }}>{outstandingCount ?? '—'}</div>
-              <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>Issue{outstandingCount !== 1 ? 's' : ''} to resolve</div>
+              <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>
+                {outstandingCount === null ? 'Loading…'
+                  : outstandingCount === 0 ? 'No outstanding issues'
+                  : `Issue${outstandingCount !== 1 ? 's' : ''} across ${scansWithIssues ?? '…'} scan${scansWithIssues !== 1 ? 's' : ''}`}
+              </div>
             </button>
           </div>
         )}

@@ -39,10 +39,10 @@ export async function PATCH(request: NextRequest) {
       .single()
     if (!membership) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
 
-    // Read current findings_state
+    // Read current findings + findings_state for this module
     const { data: moduleRow, error: moduleErr } = await serviceRole
       .from('scan_modules')
-      .select('findings_state')
+      .select('findings, findings_state')
       .eq('scan_id', scan_id)
       .eq('module', module)
       .single()
@@ -56,15 +56,37 @@ export async function PATCH(request: NextRequest) {
       next[finding_id] = state
     }
 
+    // Derive new module status from updated findings_state
+    const findings: any[] = moduleRow.findings ?? []
+    const hasOpenIssues = findings.some(f => {
+      const s = next[f.id]
+      return s !== 'done' && s !== 'dismissed' && (f.type === 'critical' || f.type === 'warning')
+    })
+    const newModuleStatus = hasOpenIssues ? 'fail' : 'pass'
+
     const { error: updateErr } = await serviceRole
       .from('scan_modules')
-      .update({ findings_state: next })
+      .update({ findings_state: next, status: newModuleStatus })
       .eq('scan_id', scan_id)
       .eq('module', module)
 
     if (updateErr) return NextResponse.json({ error: 'Failed to update state' }, { status: 500 })
 
-    return NextResponse.json({ findings_state: next })
+    // Recalculate scan-level status from all modules
+    const { data: allModules } = await serviceRole
+      .from('scan_modules')
+      .select('module, status')
+      .eq('scan_id', scan_id)
+
+    if (allModules) {
+      const statuses = allModules.map(m => m.module === module ? newModuleStatus : m.status)
+      const scanStatus = statuses.some(s => s === 'fail') ? 'fail'
+        : statuses.every(s => s === 'pass' || s === 'not_applicable') ? 'pass'
+        : 'uncertain'
+      await serviceRole.from('scans').update({ status: scanStatus }).eq('id', scan_id)
+    }
+
+    return NextResponse.json({ findings_state: next, module_status: newModuleStatus })
   } catch (error: any) {
     return NextResponse.json({ error: error.message || 'Request failed' }, { status: 500 })
   }

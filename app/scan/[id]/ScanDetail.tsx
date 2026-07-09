@@ -428,10 +428,19 @@ export default function ScanDetail({ id }: { id: string }) {
     } catch (e: any) { setContinueError(e.message || 'Analysis failed') } finally { setContinueLoading(false) }
   }
 
+  const calcModuleStatus = (findings: any[], newFs: Record<string, string>) => {
+    const hasOpenIssues = findings.some(f => {
+      const s = newFs[f.id]
+      return s !== 'done' && s !== 'dismissed' && (f.type === 'critical' || f.type === 'warning')
+    })
+    return hasOpenIssues ? 'fail' : 'pass'
+  }
+
   const markFinding = (findingId: string, state: 'done' | 'dismissed') => {
     setScanModules(prev => prev.map((m: any) => {
       if (m.module !== activeModule) return m
-      return { ...m, findings_state: { ...(m.findings_state || {}), [findingId]: state } }
+      const newFs = { ...(m.findings_state || {}), [findingId]: state }
+      return { ...m, findings_state: newFs, status: calcModuleStatus(m.findings || [], newFs) }
     }))
     fetch('/api/finding-state', {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
@@ -443,7 +452,7 @@ export default function ScanDetail({ id }: { id: string }) {
     setScanModules(prev => prev.map((m: any) => {
       if (m.module !== activeModule) return m
       const newFs = { ...(m.findings_state || {}) }; delete newFs[findingId]
-      return { ...m, findings_state: newFs }
+      return { ...m, findings_state: newFs, status: calcModuleStatus(m.findings || [], newFs) }
     }))
     fetch('/api/finding-state', {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
