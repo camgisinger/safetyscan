@@ -18,7 +18,7 @@ export async function PATCH(request: NextRequest) {
     if (!scan_id || !module || !finding_id) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
-    if (state !== null && state !== 'dismissed' && state !== 'done') {
+    if (state !== null && state !== 'dismissed' && state !== 'done' && state !== 'confirm') {
       return NextResponse.json({ error: 'Invalid state value' }, { status: 400 })
     }
 
@@ -38,6 +38,39 @@ export async function PATCH(request: NextRequest) {
       .eq('user_id', user.id)
       .single()
     if (!membership) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+
+    // Confirm: clear the tentative flag on the finding object (not a findings_state write)
+    if (state === 'confirm') {
+      const { data: confirmRow, error: confirmModErr } = await serviceRole
+        .from('scan_modules')
+        .select('findings')
+        .eq('scan_id', scan_id)
+        .eq('module', module)
+        .single()
+      if (confirmModErr || !confirmRow) {
+        return NextResponse.json({ error: 'Module not found' }, { status: 404 })
+      }
+      const findings: any[] = confirmRow.findings ?? []
+      const target = findings.find((f: any) => f.id === finding_id)
+      if (!target) {
+        return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
+      }
+      if (!target.tentative) {
+        return NextResponse.json({ ok: true }) // already confirmed — idempotent
+      }
+      const updatedFindings = findings.map((f: any) =>
+        f.id === finding_id ? { ...f, tentative: false } : f
+      )
+      const { error: confirmErr } = await serviceRole
+        .from('scan_modules')
+        .update({ findings: updatedFindings })
+        .eq('scan_id', scan_id)
+        .eq('module', module)
+      if (confirmErr) {
+        return NextResponse.json({ error: 'Failed to confirm finding' }, { status: 500 })
+      }
+      return NextResponse.json({ ok: true })
+    }
 
     // Read current findings_state
     const { data: moduleRow, error: moduleErr } = await serviceRole
