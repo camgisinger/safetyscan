@@ -1,7 +1,7 @@
 'use client'
-import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { House, Layers, Folder, TriangleAlert, Camera } from 'lucide-react'
+import { useUser } from '../lib/UserContext'
 
 type NavId = 'home' | 'scans' | 'sites' | 'issues'
 
@@ -11,13 +11,6 @@ const NAV: { id: NavId; label: string; href: string; Icon: any }[] = [
   { id: 'sites',  label: 'Sites',  href: '/sites',     Icon: Folder },
   { id: 'issues', label: 'Issues', href: '/issues',    Icon: TriangleAlert },
 ]
-
-type Ctx = {
-  org_name: string | null
-  outstanding_count: number
-  full_name: string | null
-  email: string | null
-}
 
 function toInitials(name: string | null, email: string | null) {
   if (name) return name.trim().split(/\s+/).map(n => n[0]).join('').slice(0, 2).toUpperCase()
@@ -43,14 +36,10 @@ function activeId(pathname: string): NavId | null {
 export default function DesktopSidebar() {
   const pathname = usePathname()
   const router   = useRouter()
-  const [ctx, setCtx] = useState<Ctx | null>(null)
+  const { user } = useUser()
 
-  useEffect(() => {
-    fetch('/api/user/context')
-      .then(r => r.ok ? r.json() : null)
-      .then(d => d && setCtx(d))
-      .catch(() => null)
-  }, [])
+  const fullName = user?.user_metadata?.full_name ?? null
+  const email    = user?.email ?? null
 
   const active = activeId(pathname)
 
@@ -95,7 +84,7 @@ export default function DesktopSidebar() {
       <nav style={{ padding: '0 8px', display: 'flex', flexDirection: 'column', gap: 2 }}>
         {NAV.map(({ id, label, href, Icon }) => {
           const on    = active === id
-          const badge = id === 'issues' && ctx ? ctx.outstanding_count : 0
+          const badge = 0
           return (
             <button key={id} onClick={() => router.push(href)} style={{
               width: '100%', height: 38, borderRadius: 10,
@@ -138,17 +127,12 @@ export default function DesktopSidebar() {
             display: 'grid', placeItems: 'center',
             fontSize: 11.5, fontWeight: 700, color: '#1B1A12',
           }}>
-            {toInitials(ctx?.full_name ?? null, ctx?.email ?? null)}
+            {toInitials(fullName, email)}
           </div>
           <div style={{ flex: 1, minWidth: 0, textAlign: 'left' }}>
             <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-              {toDisplayName(ctx?.full_name ?? null, ctx?.email ?? null)}
+              {toDisplayName(fullName, email)}
             </div>
-            {ctx?.org_name && (
-              <div style={{ fontSize: 11, fontWeight: 500, color: 'var(--mut)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 1 }}>
-                {ctx.org_name}
-              </div>
-            )}
           </div>
         </button>
       </div>

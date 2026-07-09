@@ -4,6 +4,7 @@ import "./globals.css";
 import "./styles/tokens.css";
 import BottomNav from "../components/BottomNav";
 import DesktopSidebar from "../components/DesktopSidebar";
+import { UserProvider } from "../lib/UserContext";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistMono = Geist_Mono({
@@ -51,13 +52,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" data-theme="dark" className={`${geistMono.variable} ${geist.variable}`}>
       <body style={{ minHeight: '100svh', background: 'var(--bg)' }}>
-        <div style={{ display: 'flex', minHeight: '100svh' }}>
-          <DesktopSidebar />
-          <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
-            {children}
+        <UserProvider>
+          <div style={{ display: 'flex', minHeight: '100svh' }}>
+            <DesktopSidebar />
+            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+              {children}
+            </div>
           </div>
-        </div>
-        <BottomNav />
+          <BottomNav />
+        </UserProvider>
         <SpeedInsights />
       </body>
     </html>
