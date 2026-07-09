@@ -1,0 +1,241 @@
+DOCUMENT: Environmental Protection Act 1994 (Queensland)
+TYPE: Queensland Act — Environmental Legal Duties and Offences
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: environmental_compliance, erosion_sediment_control, waste_management, noise_management, construction, demolition, earthworks, chemical_storage
+SOURCE: Queensland Government — Office of the Queensland Parliamentary Counsel
+CURRENT AS AT: Current as at 2 October 2025 (Act No. 62 of 1994)
+CLAUSE_PREFIX: s
+REFERENCE_STANDARD: Environmental Protection Regulation 2019 (Qld); Waste Reduction and Recycling Act 2011 (Qld) — waste definitions; Vegetation Management Act 1999 (Qld) and Nature Conservation Act 1992 (Qld) — vegetation clearing (NOT covered by this Act, see Chunk 8)
+NOTE: This is the foundational QLD environmental legal duty Act — equivalent role to the WHS Act for the safety module. This Act sets out DUTIES, DEFINITIONS, and PENALTIES but generally does NOT contain physical/technical control specifications (e.g. silt fence dimensions, dust suppression rates) — those come from the Environmental Protection Regulation 2019, Environmental Protection Policies (EPPs), and technical guides such as the IECA Best Practice Erosion and Sediment Control Guide.
+
+---
+
+CHUNK 1: Key Environmental Definitions
+Section: s8, s9, s10, s11, s12, s14, s15, s16, s17
+Topic: Foundational legal definitions used throughout the Act
+
+ENVIRONMENT (s8): Includes ecosystems and their constituent parts (including people and communities), all natural and physical resources, the physical characteristics of locations/areas, and physical surroundings including land, waters, atmosphere, climate, sound, odours, and tastes.
+
+ENVIRONMENTAL VALUE (s9): A quality or physical characteristic of the environment conducive to ecological health, public health, safety, or amenity.
+
+CONTAMINATION (s10): The release of a contaminant into the environment.
+
+CONTAMINANT (s11): Can be a gas, liquid, solid, odour, organism (including viruses), or energy (including noise, heat, radioactivity, and electromagnetic radiation).
+
+NOISE (s12): Includes vibration of any frequency, whether emitted through air or another medium.
+
+ENVIRONMENTAL HARM (s14): Any adverse effect, or potential adverse effect (temporary or permanent, of any magnitude, duration, or frequency) on an environmental value — specifically includes environmental nuisance. May be caused directly, indirectly, or through the combined effects of multiple factors.
+
+ENVIRONMENTAL NUISANCE (s15): Unreasonable interference (or likely interference) with an environmental value caused by aerosols, fumes, light, noise, odour, particles, or smoke; or an unhealthy, offensive, or unsightly condition caused by contamination.
+
+MATERIAL ENVIRONMENTAL HARM (s16): Environmental harm that is not trivial or negligible in nature, extent, or context.
+- FINANCIAL THRESHOLD (FY2023): $10,000 — triggered if loss/damage to property, or cost to prevent/minimise/restore, exceeds this amount (but is below the serious harm threshold)
+
+SERIOUS ENVIRONMENTAL HARM (s17): Harm that is irreversible, high impact, or widespread; caused to areas of high conservation value or special significance (e.g. Great Barrier Reef); or causes loss/damage to property (or restoration costs) exceeding the threshold.
+- FINANCIAL THRESHOLD (FY2023): $100,000
+
+PARTICLES (Schedule 4): Explicitly includes DUST AND ASH.
+
+VISUAL INDICATORS:
+- Visible dust plume, ash, or particulate matter leaving a site boundary = potential "particles" contaminant, may constitute environmental nuisance
+- Any visible discharge, spill, or release affecting land, water, or air adjacent to a site = potential contamination event, assess against material/serious harm thresholds
+- Visible property damage or environmental impact that appears to exceed a rough $10,000-$100,000 value = flag as potential material to serious environmental harm — confirm on site
+
+---
+
+CHUNK 2: General Environmental Duty (GED)
+Section: s319
+Topic: The core environmental legal duty applying to all activities
+
+GENERAL ENVIRONMENTAL DUTY: A person must NOT carry out any activity that causes, or is likely to cause, environmental harm UNLESS the person takes ALL REASONABLY PRACTICABLE MEASURES to prevent or minimise the harm.
+
+MEANING OF "REASONABLY PRACTICABLE" (s319(4)) — regard must be had to:
+- The nature of the harm
+- The sensitivity of the receiving environment
+- The current state of technical knowledge for the activity
+- The likelihood of successful application of different measures
+- The financial implications of those measures
+
+COMPLIANCE INDICATORS FOR GED (s319(5)) — consideration given to whether a person:
+- Fails to install/maintain plant/systems to minimise risk
+- Uses systems to identify and evaluate risk controls
+- Ensures substances are handled/stored/transported safely
+- Ensures adequate instruction/supervision/training is provided
+
+VISUAL INDICATORS:
+- No visible control measures (bunding, containment, dust suppression, sediment control) present for an activity with obvious environmental risk = potential GED breach — duty requires measures to be actively in place, not just theoretically available
+- Chemical or fuel containers stored without visible secondary containment near a drain or waterway = GED compliance concern
+- Visible evidence that a known risk (e.g. bare earth exposed to rain, unsecured chemical storage) has not been addressed with any control = flag for GED assessment
+
+---
+
+CHUNK 3: Duty to Restore and Duty to Notify
+Section: s319C, s320A, s320B, s320C, s320D, s320E
+Topic: Obligations when environmental harm occurs
+
+DUTY TO RESTORE THE ENVIRONMENT (s319C): Applies to a person causing or permitting an incident involving contamination that results in UNLAWFUL environmental harm. The person MUST, as soon as reasonably practicable, take measures to rehabilitate or restore the environment to its condition BEFORE the harm happened.
+
+DUTY TO NOTIFY — TRIGGER (s320A): Triggered when a person carrying out an activity becomes aware (or ought reasonably to have become aware) that an event has happened causing or threatening SERIOUS OR MATERIAL environmental harm.
+
+DUTY OF EMPLOYEES (s320B): An employee must notify their EMPLOYER of the event, its nature, and circumstances WITHIN 24 HOURS. If the employer cannot be contacted, the employee must notify the ADMINISTERING AUTHORITY within the same timeframe.
+
+DUTY OF EMPLOYERS AND OTHER PERSONS (s320C, s320D):
+- Administering Authority: Must be given WRITTEN NOTICE within 24 HOURS of becoming aware
+- Occupiers/Owners of affected land: Written notice must be given AS SOON AS REASONABLY PRACTICABLE (or public notice given to persons on the land)
+
+CONTAMINATION INCIDENT (s360): An incident involving contamination that has caused or is likely to cause serious or material environmental harm, or a change in the condition of contaminated land that may cause other land to become contaminated.
+
+VISUAL INDICATORS:
+- Evidence of a spill or contamination event on site with no visible signage, containment action, or remediation in progress = potential failure of duty to restore
+- No incident notification documentation visible on site following an apparent contamination event = flag — confirm notification occurred within 24-hour window
+- Site records or signage indicating an incident occurred more than 24 hours ago with no evidence of notification = potential non-compliance
+
+---
+
+CHUNK 4: Noise Standards for Building Work
+Section: s440K, s440R, s440S
+Topic: Mandatory time restrictions on construction noise
+
+BUILDING WORK DEFINITION (s440K): Includes building, repairing, altering, underpinning, moving, or demolishing a building; providing drainage, heating, lighting, sewerage, ventilation, or water supply; and INCIDENTAL EXCAVATING, FILLING, OR SCAFFOLDING.
+
+DEFAULT NOISE STANDARD FOR BUILDING WORK (s440R) — a person MUST NOT carry out building work making audible noise at an affected building:
+- Business day or Saturday: BEFORE 6:30am or AFTER 6:30pm
+- Sunday or Public Holiday: AT ANY TIME (i.e. no building work noise permitted at all)
+
+DEFAULT NOISE STANDARD FOR REGULATED DEVICES (s440S) — includes compressors, generators, impacting tools, mulchers, and electrical/mechanical/pneumatic power tools (nail guns, drills, grinders). MUST NOT be operated to make audible noise:
+- Business day or Saturday: BEFORE 7:00am or AFTER 7:00pm
+- Sunday or Public Holiday: BEFORE 8:00am or AFTER 7:00pm
+
+NOTE: These are DEFAULT standards — site-specific conditions in a development approval or environmental authority may set different (often stricter) hours, which take precedence.
+
+VISUAL INDICATORS:
+- Timestamp on a photo (if available) or reported time of active building work outside the 6:30am-6:30pm window (business day/Saturday) = potential noise standard breach
+- Any building work noise on a Sunday or Public Holiday = default non-compliant, confirm no site-specific variation applies
+- Power tools, generators, or compressors in active use before 7am or after 7pm on a weekday/Saturday = potential regulated device noise breach
+- Confirm on site: whether the specific development approval has varied hours from the Act's defaults — this cannot be determined from a photo alone
+
+---
+
+CHUNK 5: Blasting Standards
+Section: s440ZB
+Topic: Exact vibration and overpressure limits for blasting activity
+
+AIRBLAST OVERPRESSURE:
+- Must NOT be more than 115dB Z Peak for 4 out of any 5 consecutive blasts
+- Must NEVER be more than 120dB Z Peak for any single blast
+
+GROUND VIBRATION:
+- Must NOT exceed 25mm per second peak particle velocity for vibrations GREATER THAN 35Hz
+- Must NOT exceed 10mm per second peak particle velocity for vibrations 35Hz OR LESS
+
+VISUAL INDICATORS:
+- Blasting activity in progress near occupied buildings without visible monitoring equipment = flag — confirm compliance monitoring is occurring
+- This is a numerical/instrumented standard that cannot be assessed visually from a photo alone — always requires confirmation of actual monitoring data on site
+
+---
+
+CHUNK 6: Water Contamination and Earthworks
+Section: s440ZE, s440ZG
+Topic: Legal duties around soil, sediment, and earthworks near waterways and drainage
+
+DEFINITION OF DEPOSITING EARTH (s440ZE): A person is legally considered to DEPOSIT EARTH (sand, soil, silt, or mud) at a place if they carry out earthworks or another activity that EXPOSES the earth at that place. This is a broad definition — simply exposing bare earth through earthworks counts as "depositing" for legal purposes, not just physically moving material.
+
+PROHIBITED DEPOSITS (s440ZG): A person must NOT unlawfully deposit a prescribed water contaminant (including earth) in waters, a roadside gutter, or stormwater drainage. This includes placing it where it could reasonably be expected to WASH, BLOW, FALL, or otherwise MOVE into those areas.
+
+SPECIFIC EXAMPLE CITED IN THE ACT: A building site where soil may wash into an adjacent roadside gutter is specifically identified as a NON-COMPLIANT condition.
+
+VISUAL INDICATORS:
+- Bare, exposed earth on a construction site with no visible erosion/sediment control (silt fence, ground cover) near a boundary, gutter, or drainage path = high-risk non-compliance under s440ZG — even without visible sediment having moved yet, exposure alone triggers the "deposit" definition
+- Visible sediment, mud, or soil in a roadside gutter, stormwater drain, or waterway adjacent to a construction site = clear non-compliance, directly matches the Act's own cited example
+- Sediment-laden water visibly flowing from a site toward a drain or gutter = active breach in progress
+- Site with earthworks in progress but no downslope sediment control visible before a drainage path = high risk, confirm control measures on site
+
+---
+
+CHUNK 7: Notifiable Activities — Storage and Waste Thresholds
+Section: Schedule 3
+Topic: Exact quantity thresholds that trigger mandatory registration for construction-relevant activities
+
+CHEMICAL STORAGE (Item 7): Storing MORE THAN 10 TONNES of chemicals (excluding compressed or liquefied gases) that are dangerous goods is a notifiable activity.
+
+PETROLEUM PRODUCT OR OIL STORAGE (Item 29) — thresholds by tank type:
+- Underground tanks: capacity MORE THAN 200L
+- Above ground tanks (Class 3, Group 1 & 2): capacity MORE THAN 2,500L
+- Above ground tanks (Class 3, Group 3): capacity MORE THAN 5,000L
+- Above ground tanks (Combustible liquids C1/C2): capacity MORE THAN 25,000L
+
+WASTE STORAGE/TREATMENT (Item 37): Storing, treating, reprocessing, or disposing of prescribed regulated waste (other than at the place it is generated) is a notifiable activity. Includes operating a sewage treatment plant with design capacity of MORE THAN the equivalent of 50,000 persons.
+
+ABRASIVE BLASTING: Cleaning or disposing of blasting material is a notifiable activity.
+
+ASBESTOS DISPOSAL: Disposing of MORE THAN 5 TONNES of bonded asbestos is a notifiable activity.
+
+ASPHALT OR BITUMEN MANUFACTURE: Manufacturing at sites OTHER THAN temporary mobile plant locations is a notifiable activity.
+
+LANDFILL: Disposing of waste is a notifiable activity, EXCLUDING inert construction and demolition waste.
+
+METAL TREATMENT/COATING: Including spray painting using MORE THAN 5 LITRES of paint per week.
+
+IMPORTANT — NO GENERAL "CONSTRUCTION" ERA: The Act does NOT contain a broad Environmentally Relevant Activity category for general construction. A construction project only triggers ERA/notification requirements if it includes one of the SPECIFIC activities listed above.
+
+VISUAL INDICATORS:
+- Above-ground fuel or chemical storage tanks on site — estimate volume and compare against the thresholds above to determine if the site should have notified as a notifiable activity
+- Underground fuel tank of any substantial size (>200L threshold is very low) = likely triggers notification requirement
+- Spray painting operation on site with an unusually large paint supply/usage rate = confirm against 5L/week threshold
+- Waste being disposed of on-site (not at point of generation) in significant quantity = check against Item 37 threshold and confirm it is not being treated as general/inert waste incorrectly
+
+---
+
+CHUNK 8: Topics NOT Covered by This Act — Cross-Reference Notes
+Section: N/A — scope clarification
+Topic: What this Act does NOT regulate, to prevent incorrect assumptions
+
+DUST SUPPRESSION THRESHOLDS: This Act does NOT specify numerical triggers or thresholds for dust suppression (e.g. mg/m³). Dust is only addressed as a "particle" contaminant capable of causing environmental nuisance (s15, Schedule 4) with a general offence under s443A (max penalty 1,665 penalty units wilful / 600 penalty units otherwise) for causing or allowing a contaminant to be placed where it could cause nuisance. SPECIFIC numerical dust suppression standards are set via Environmental Protection Policies (EPPs) or site-specific environmental authority conditions — NOT in this Act.
+
+WASTE DEFINITION: This Act DEFERS to the Waste Reduction and Recycling Act 2011 (Qld), section 8AA, for the legal definition of "waste."
+
+NATIVE VEGETATION CLEARING: This topic is NOT addressed by the Environmental Protection Act 1994 at all. Regulation of land clearing and protection of native vegetation is managed under the Vegetation Management Act 1999 (Qld) and the Nature Conservation Act 1992 (Qld) — separate Acts entirely.
+
+BEST PRACTICE ENVIRONMENTAL MANAGEMENT (s21): When determining best practice management for an activity (including construction), regard must be had to waste prevention, treatment, and disposal — this is a general principle, not a specific technical standard.
+
+VISUAL INDICATORS:
+- Dust visible on a photo should be flagged as a potential environmental nuisance issue under s15/s443A, but SafetyScan should NOT cite a specific numerical dust threshold from this Act, as none exists here
+- Vegetation clearing visible on a construction site should NOT be assessed against this Act — flag as requiring assessment under the Vegetation Management Act 1999 or Nature Conservation Act 1992 if relevant documents are added to the database in future
+- Waste on site should be assessed generally under s21 best practice principles, not against a specific waste standard from this Act
+
+---
+
+CHUNK 9: Penalties (Maximum Penalty Units)
+Section: s437, s438, s440, s440Q, s440ZG, s319, s319C, s320C, s320D
+Topic: Exact penalty unit values for construction-relevant offences
+
+ENVIRONMENTAL HARM:
+- Serious Environmental Harm (Wilful): 6,250 penalty units OR 5 years imprisonment
+- Serious Environmental Harm (Unlawful): 4,500 penalty units
+- Material Environmental Harm (Wilful): 4,500 penalty units OR 2 years imprisonment
+- Material Environmental Harm (Unlawful): 1,665 penalty units
+
+NUISANCE AND NOISE:
+- Environmental Nuisance (Wilful): 1,665 penalty units
+- Environmental Nuisance (Unlawful): 600 penalty units
+- Noise Standard Contravention (Wilful): 1,665 penalty units
+- Noise Standard Contravention (Unlawful): 600 penalty units
+
+WATER CONTAMINATION:
+- Wilful Deposit/Release: 1,665 penalty units
+- Unlawful Deposit/Release: 600 penalty units
+
+DUTIES AND NOTIFICATION:
+- Contravention of GED (Wilful causing harm): 4,500 penalty units OR 2 years imprisonment
+- Contravention of Duty to Restore (Wilful): 4,500 penalty units OR 2 years imprisonment
+- Failure to Notify Harm (Employer/Other Person): 500 penalty units
+- Failure to Notify Harm (Employee): 100 penalty units
+
+OTHER:
+- Failure to comply with an Environmental Enforcement Order (Wilful): 6,250 penalty units OR 5 years imprisonment
+- Non-compliance with eligibility criteria (Replacement requirement): 4,500 penalty units
+
+VISUAL INDICATORS:
+- Use these penalty figures in findings/summaries to communicate severity to site supervisors — e.g. "unlawful deposit of sediment into a stormwater drain carries a penalty of up to 600 penalty units" gives concrete weight to a compliance finding
+- The wilful vs unlawful distinction matters — wilful (deliberate/reckless) penalties are consistently 2.5-7x higher than unlawful (unintentional) penalties across all categories

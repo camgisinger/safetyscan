@@ -1,0 +1,167 @@
+DOCUMENT: Environmental Protection Regulation 2019 (Queensland)
+TYPE: Queensland Regulation — Environmental Technical Requirements and ERA Thresholds
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: environmental_compliance, erosion_sediment_control, waste_management, noise_management, construction, demolition, earthworks, chemical_storage, dust_management, acid_sulfate_soils
+SOURCE: Queensland Government — Office of the Queensland Parliamentary Counsel
+CURRENT AS AT: Environmental Protection Regulation 2019
+CLAUSE_PREFIX: s
+REFERENCE_STANDARD: AS 1055 (Acoustics — Description and measurement of environmental noise); AS IEC 61672 (Electroacoustics — Sound level meters); Environmental Protection Act 1994 (Qld) — the parent Act this Regulation sits under; Waste Reduction and Recycling Act 2011 (Qld) — waste hierarchy
+RELATED DOCUMENT: Environmental Protection Act 1994 (Qld) — sets the legal duties and penalties; this Regulation sets the technical/operational detail underneath those duties
+NOTE: Confirmed — dust suppression has NO numerical threshold (e.g. mg/m³) in either the Environmental Protection Act 1994 or this Regulation. Dust is managed via general performance outcomes only (prevent/minimise fugitive emissions). A numerical dust standard, if one exists, would need to come from an Environmental Protection Policy (EPP), a specific Environmental Authority condition, or a local council guideline — not this Regulation.
+
+---
+
+CHUNK 1: Dust and Air Contamination — Performance Outcomes
+Section: s31; Schedule 8 Part 3
+Topic: General dust control obligations — confirmed no numerical threshold exists
+
+CONTROL MEASURE EXAMPLE (s31): A fabric filter to collect dust is specifically identified as an example of a physical control measure used to prevent or control contaminant release.
+
+ENVIRONMENTAL OBJECTIVES FOR AIR (Schedule 8, Part 3) — construction activities must be operated to protect air environmental values:
+- PERFORMANCE OUTCOME 2(a): Fugitive emissions of contaminants from the storage, handling, and processing of materials, and the transport of materials within a site, MUST BE PREVENTED OR MINIMISED
+- PERFORMANCE OUTCOME 2(b): Contingency measures MUST be in place to prevent or minimise adverse effects from unplanned emissions, and from shut down/start up emissions
+
+IMPORTANT: This Regulation does NOT specify numerical thresholds (mg/m³ or similar) for dust or visible emission limits. These are outcome-based ("prevent or minimise"), not measured, requirements.
+
+VISUAL INDICATORS:
+- Visible dust plume leaving a site with no suppression method in progress (no water cart, no covered stockpiles, no fabric filtering on dust-generating equipment) = potential failure of Performance Outcome 2(a) — cannot cite a specific numerical breach, but can flag failure to prevent/minimise
+- Material handling, crushing, or screening activity generating visible dust with no visible control measure = flag as a performance outcome concern
+- Dust-generating equipment (crushers, screens) with no visible fabric filter or water suppression = engineering control gap
+- Since no numerical threshold exists, findings should be worded as "confirm dust suppression measures are adequate to prevent/minimise fugitive emissions" rather than citing a specific breached number
+
+---
+
+CHUNK 2: Environmentally Relevant Activities (ERAs) for Construction
+Section: ERA 6, ERA 16, ERA 33, ERA 54, ERA 60
+Topic: Exact tonnage thresholds and Aggregate Environmental Scores (AES) for construction-related activities
+
+ASPHALT MANUFACTURING (ERA 6): Manufacturing MORE THAN 1,000 TONNES of asphalt in a year. AES: 32.
+
+EXTRACTIVE AND SCREENING ACTIVITIES (ERA 16):
+DREDGING (from bed of naturally occurring surface waters, per year):
+- 1,000t to 10,000t: AES 11
+- More than 10,000t to 100,000t: AES 25
+- More than 100,000t to 1,000,000t: AES 44
+- More than 1,000,000t: AES 66
+
+EXTRACTING (other than dredging, per year):
+- 5,000t to 100,000t: AES 22
+- More than 100,000t to 1,000,000t: AES 39
+- More than 1,000,000t: AES 57
+
+SCREENING (per year):
+- 5,000t to 100,000t: AES 13
+- More than 100,000t to 1,000,000t: AES 29
+- More than 1,000,000t: AES 47
+
+ERA 16 EXEMPTIONS — does NOT include:
+- Extracting material from a road if the area is LESS THAN 10,000m²
+- Extracting material for constructing building foundations
+- Reshaping land if no blasting is involved and material is NOT removed from the site
+
+CRUSHING, MILLING, GRINDING OR SCREENING (ERA 33): Processing MORE THAN 5,000 TONNES of material in a year. No AES stated for this category.
+
+MECHANICAL WASTE REPROCESSING (ERA 54):
+- Operating a facility for more than 5,000t of inert, non-putrescible waste (e.g. concrete/brick) in a year: AES 8
+- Reprocessing 5,000t or less of general waste: AES 19
+
+WASTE DISPOSAL (ERA 60) — facility for disposing of ONLY inert waste (bricks, pavers, concrete, steel):
+- Less than 50,000t: AES 28
+- 50,000t to 100,000t: AES 35
+
+VISUAL INDICATORS:
+- Large-scale crushing/screening equipment on site processing material at apparent scale = confirm annual tonnage against ERA 33 (5,000t) threshold
+- Asphalt batching plant on site = confirm annual production against ERA 6 (1,000t) threshold
+- Building foundation excavation, however large = EXEMPT from ERA 16 regardless of quantity — do not flag as an extractive activity ERA concern
+- Road-related extraction under 10,000m² = exempt from ERA 16
+- Concrete/brick recycling or crushing facility on or near a site = confirm scale against ERA 54/60 thresholds
+
+---
+
+CHUNK 3: Erosion, Sediment, and Water Compliance
+Section: Schedule 8 Part 3, Schedule 10
+Topic: Prescribed water contaminants and stormwater/land management obligations
+
+PRESCRIBED WATER CONTAMINANTS (Schedule 10) — explicitly listed as contaminants that MUST NOT be released into waters or stormwater:
+- EARTH-BASED: ashes, clay, gravel, sediment, stones
+- CONSTRUCTION MATERIALS: bitumen, brick, cement, concrete, plaster (including cement wash from exposed aggregate treatments and coloured stencilling powders)
+- CONSTRUCTION WASTE: concrete cuttings and waste water generated by building, construction, or demolition
+
+STORMWATER MANAGEMENT (Schedule 8 Part 3): Activities must be managed so that CONTAMINATED STORMWATER that may cause an adverse effect will NOT LEAVE THE SITE without prior treatment.
+
+ACID SULFATE SOILS: The disturbance of any acid sulfate soil (or POTENTIAL acid sulfate soil) must be managed to prevent or minimise adverse effects.
+
+FLOW REGIMES: Any discharge to a watercourse or wetland must be managed to ensure no adverse effects from altering existing flow regimes.
+
+VISUAL INDICATORS:
+- Concrete washout water, cement wash, or concrete cutting slurry visible entering a drain, gutter, or waterway = direct breach — these are explicitly named prescribed contaminants
+- No designated concrete washout area visible on a site actively pouring or cutting concrete = flag — washout water is a named prescribed contaminant requiring containment
+- Sediment-laden stormwater visibly leaving a site boundary without a visible treatment measure (sediment basin, filter sock, etc.) = stormwater management non-compliance
+- Excavation in coastal or low-lying areas (potential acid sulfate soil zones) without visible management measures = flag for acid sulfate soil risk assessment
+- Site works altering a natural watercourse or wetland without visible erosion/flow controls = flow regime concern
+
+---
+
+CHUNK 4: Noise Measurement Standards
+Section: s56, s58, s59, s60, s61, s62
+Topic: Technical requirements for how construction noise must be measured
+
+PRESCRIBED MEASUREMENT STANDARDS (s56):
+- BACKGROUND LEVEL: must be measured according to AS 1055
+- Z PEAK AND Z PEAK HOLD: must be measured according to AS IEC 61672
+
+MEASUREMENT METHODS (s58-61):
+- TIME INTERVAL: source noise must be measured over AT LEAST 15 MINUTES. If the noise lasts less than 15 minutes, the measurement must cover the ENTIRE DURATION
+- ADJUSTMENTS: measurements must allow for adjustments under AS 1055 for tonal character and impulsiveness
+- ROUNDING: decibel levels must be quoted to the NEAREST WHOLE NUMBER
+
+SIMULTANEOUS NOISES (s62): If two or more noises of the same type occur simultaneously at the same premises (e.g. multiple power tools or generators), they MAY be measured as one single noise of that type.
+
+VISUAL INDICATORS:
+- This is a technical measurement standard, not something visually assessable from a photo — noise compliance requires actual instrumented measurement, not visual estimation
+- Multiple generators or compressors operating simultaneously on a site = confirm whether these are being assessed as combined noise per s62, relevant context if a noise complaint arises
+- Photo evidence of active noisy equipment supports a Guide Prompt to confirm actual dB measurement compliance, not a direct finding
+
+---
+
+CHUNK 5: Waste and Chemical Storage Requirements
+Section: s102, s107, s110; Schedule 8 Part 3
+Topic: Physical storage, containment, and waste handling requirements
+
+GENERAL WASTE STORAGE (s102): Occupiers must ensure waste containers are KEPT CLEAN, IN GOOD REPAIR, and SECURELY COVERED except when adding or removing waste.
+
+INDUSTRIAL WASTE STORAGE (s107): If required by local government, occupiers must supply a specific number of containers to store industrial waste SAFELY, EFFICIENTLY, and WITHOUT CAUSING A NUISANCE.
+
+PROHIBITED WASTE DEPOSITS (s110): The following MUST NOT be deposited at a waste facility without consent:
+- Liquid or semiliquid waste
+- Hot ash
+- Material that is smouldering, aflame, or can spontaneously combust
+
+SECONDARY CONTAINMENT (Schedule 8 Part 3):
+- SPILL PREVENTION: Storage and handling of contaminants must include EFFECTIVE MEANS OF SECONDARY CONTAINMENT (e.g. bunding) to prevent releases from spillage or leaks
+- HAZARDOUS MATERIALS: ALL storage provided for hazardous contaminants MUST include secondary containment
+- FLOOD RISK: Bulk storage areas for environmentally hazardous materials must be located considering the LIKELIHOOD OF FLOODING. Containers for hazardous contaminants must be SECURED to prevent removal from the site by a flood event
+
+VISUAL INDICATORS:
+- Waste containers/skips visibly uncovered, damaged, or overflowing = non-compliant storage under s102
+- Hazardous or chemical storage on site with no visible bunding or secondary containment = direct non-compliance — this is a MANDATORY requirement, not best practice
+- Chemical/fuel storage located in a visibly low-lying or flood-prone area without visible securing (straps, elevated platform) = flood risk non-compliance
+- Liquid waste, hot ash, or smouldering material visible in a general waste skip = prohibited deposit, s110 breach
+
+---
+
+CHUNK 6: Land Rehabilitation and Waste Hierarchy
+Section: Schedule 8 Part 3
+Topic: Site restoration standards and waste management principles
+
+LAND REHABILITATION (Performance Outcome 2(b)): Disturbed areas must be RESTORED TO A SAFE AND STABLE CONDITION that can sustain an appropriate land use.
+
+SITE STABILITY: Rehabilitation must be ENDURING so the site is UNLIKELY TO COLLAPSE, ERODE, OR SUBSIDE.
+
+WASTE HIERARCHY: Waste must be managed in accordance with the hierarchy (REDUCE, REUSE, RECYCLE) under the Waste Reduction and Recycling Act 2011.
+
+VISUAL INDICATORS:
+- Disturbed/cleared land at a site with no visible stabilisation (revegetation, ground cover, engineered stability) after works appear complete = potential rehabilitation non-compliance
+- Visible signs of erosion, slumping, or instability on previously disturbed ground = site stability failure
+- Recyclable or reusable materials (concrete, timber, metal) being sent to general waste/landfill without apparent separation = potential waste hierarchy non-compliance — confirm on-site waste segregation practices

@@ -1,0 +1,592 @@
+DOCUMENT: Erosion and Sediment Control — Model Code of Practice for Building Sites, Site Inspection Checklists, Erosion Hazard Assessment, and Sediment Basin Construction Specification
+TYPE: Technical Guide — Erosion and Sediment Control (ESC) for Construction Sites
+JURISDICTION: AUS (with QLD-relevant application)
+REGION: QLD
+WORK_TYPES: environmental_compliance, erosion_sediment_control, earthworks, construction, demolition, civil_works, drainage, stormwater_management
+SOURCE: IECA (International Erosion Control Association) Australasia — Model Code of Practice for Building Sites, Site Inspection Checklists, Erosion Hazard Assessment Form, Sediment Basin Construction Specification
+CURRENT AS AT: Current published editions
+CLAUSE_PREFIX: Part / Item
+REFERENCE_STANDARD: Complements Environmental Protection Act 1994 (Qld) and Environmental Protection Regulation 2019 (Qld) — this document provides the TECHNICAL/PHYSICAL specifications that the QLD legislation defers to (general performance outcomes only, no numerical ESC detail)
+NOTE: This is the primary technical document for the environment module — it fills the exact numerical gap left by QLD state legislation (which has no specific ESC measurements). The checklist sections (Chunks 8-19) are VERBATIM inspection items already written in "look for X" format — ideal for direct photo-based assessment. Source combines 5 documents: Model Code of Practice (Building Sites), Site Inspection Checklist (Building Site — daily), Site Inspection Checklist (Detailed — comprehensive), Erosion Hazard Assessment Form, and Sediment Basin Construction Specification.
+
+---
+
+CHUNK 1: Site Risk Classification and ESCP Triggers
+Section: Erosion Hazard Assessment Form
+Topic: When a site is classified high-risk and when formal Erosion and Sediment Control Plans (ESCP) are mandatory
+
+BUILDING SITE RISK SCORE (simple assessment):
+- HIGH-RISK THRESHOLD: total point score of 11 OR GREATER = high-risk site
+- AUTOMATIC HIGH-RISK TRIGGER: any site with slope STEEPER THAN 20% = high-risk REGARDLESS of point score
+- LOW-RISK: total score LESS THAN 11 points
+
+SCORING FACTORS:
+- Average Slope: <3% (0 pts) up to ≥15% (5 pts)
+- Soil Type: sandy/gravel (0 pts) up to clay loam/clay (2 pts)
+- Disturbance Extent: <10m² (0 pts), 10-100m² (1 pt), >100m² (2 pts)
+- Duration: <2 weeks (0 pts) up to >6 months (5 pts)
+- Rainfall Risk: Low <45mm/month (0 pts) up to Extreme >1500mm/month (4 pts)
+- Runoff: stormwater entering site NOT diverted = 1 pt
+
+DETAILED ASSESSMENT — PRELIMINARY ESCP MANDATORY IF:
+- Total point score 17 OR GREATER, OR
+- Any individual trigger below is exceeded:
+  - SLOPE TRIGGER: average slope of disturbance GREATER THAN 10%
+  - SOIL TRIGGER: site contains Emerson Class 1 or 2 soils (highly dispersive) — requires CONCEPTUAL ESCP
+  - DURATION TRIGGER: expected disturbance period GREATER THAN 6 MONTHS — requires conceptual ESCP
+  - AREA TRIGGER: soil disturbance EXCEEDING 1 HECTARE — requires conceptual ESCP
+  - WATERWAY TRIGGER: ANY construction within a natural watercourse (natural or modified) — requires conceptual ESCP
+
+VISUAL INDICATORS:
+- Site on visibly steep terrain (estimate >20% grade — a rough guide: rises more than 1m over 5m horizontal distance) = automatically high-risk regardless of other factors, confirm ESC measures match high-risk requirements
+- Large disturbed area (visually >1ha, roughly the size of a rugby field or larger) = confirm conceptual ESCP has been prepared
+- Any excavation or works directly within or adjacent to a creek, stream, or watercourse = mandatory conceptual ESCP trigger regardless of scale
+- Clay-heavy soil visible (typically orange/red, sticky when wet, cracks when dry) combined with steep slope and large disturbance = compounds risk score significantly
+
+---
+
+CHUNK 2: Control Measure Triggers — When Specific Controls Are Required
+Section: Model Code of Practice — Building Sites
+Topic: Thresholds that mandate specific erosion/sediment control infrastructure
+
+UP-SLOPE STORMWATER DIVERSION: Required if the area of land up-slope of the soil disturbance EXCEEDS 1,500m².
+
+BATTER PROTECTION: Flow diversion systems must direct up-slope water away from unprotected earth batters STEEPER THAN 4:1 (H:V) — i.e. any batter steeper than a 1-in-4 slope.
+
+SEDIMENT BASIN REQUIREMENT: A sediment basin is USUALLY REQUIRED if the disturbed area EXCEEDS 0.25 HECTARES (2,500m²) within any sub-catchment.
+
+STOCKPILE COVERING: Long-term stockpiles NOT fully used within FOUR (4) WEEKS MUST be covered with synthetic cover, mulch, or temporary vegetation.
+
+VISUAL INDICATORS:
+- Large up-slope catchment area (visually estimate against a 1500m² reference — roughly a large house block x 4) draining toward a disturbed site with no visible diversion bank/channel = missing mandatory control
+- Earth batter appearing steeper than a gentle slope (roughly steeper than 1 rise per 4 run) without visible flow diversion at the top = non-compliant batter protection
+- Disturbed area appearing larger than roughly half a football field (2500m²) with no visible sediment basin anywhere on site = confirm basin requirement has been addressed
+- Stockpile with no cover, visible weathering/erosion on its surface, sitting in what appears to be a long-term location = confirm against 4-week covering rule
+
+---
+
+CHUNK 3: Erosion Definitions and Acceptable Limits
+Section: Model Code of Practice — Building Sites
+Topic: Exact definitions of what constitutes unacceptable erosion
+
+UNACCEPTABLE SHEET EROSION: Defined as loss of MORE THAN 10mm of soil from an area GREATER THAN 1m².
+
+UNACCEPTABLE RILL EROSION: Defined as visible rilling to a depth GREATER THAN 100mm.
+
+MULCH DISPLACEMENT LIMIT: Displacement of MORE THAN 10% of erosion-control mulch is classified as unacceptable erosion.
+
+REVEGETATION COVERAGE THRESHOLD: Disturbance is considered to EXIST (i.e. not yet resolved) until a MINIMUM 70% COVERAGE (vegetative, organic, or inorganic) is achieved.
+
+HEAVY MULCHING DEPTH: Defined as GREATER THAN 50mm depth.
+
+LIGHT MULCHING: Minimum 70% coverage of soil surface required.
+HEAVY MULCHING: Minimum 100% coverage of soil required, with minimum depth adequate to control weeds.
+
+VISUAL INDICATORS:
+- Visible small channels/grooves (rills) cut into an earth surface deeper than roughly a finger's width (100mm) = unacceptable rill erosion
+- Broad shallow soil loss across a wider area with no distinct channels = potential sheet erosion, estimate against 10mm depth over 1m²
+- Mulch cover appearing patchy, with more than roughly 1 in 10 areas bare = unacceptable mulch displacement
+- Newly seeded/grassed area still showing significant bare earth (less than roughly 70% green coverage) = disturbance still considered "existing," not yet stabilised
+- Mulch layer appearing thin (barely covering the soil, not a substantial visible depth) = does not meet heavy mulching depth if heavy mulching was specified
+
+---
+
+CHUNK 4: Check Dams and Drainage Structures
+Section: Model Code of Practice — Building Sites
+Topic: Construction specifications for check dams and drainage features
+
+SANDBAG CHECK DAMS: Outer wing points must be AT LEAST 200mm ABOVE the crest level.
+
+ROCK CHECK DAMS: To be used in DEEP CHANNELS ONLY — greater than 500mm deep.
+
+SERVICE TRENCH CAPPING: Backfilled trenches must be capped with a layer of TOPSOIL AT LEAST 75mm ABOVE the adjoining ground level.
+
+DISPERSIVE SOIL PROTECTION: Earth batters exposing dispersive soil must be protected with a MINIMUM 100mm LAYER of non-dispersive soil before final stabilisation.
+
+VISUAL INDICATORS:
+- Sandbag check dam where the outer "wings" appear level with or below the centre crest = non-compliant, wings must be visibly higher
+- Rock check dam installed in a shallow channel (visually less than roughly 500mm deep) = incorrect application, rock dams are for deep channels only
+- Backfilled service trench sitting flush with or below surrounding ground (no visible mounded topsoil cap) = non-compliant capping
+- Earth batter with visible pale/grey dispersive-looking soil exposed with no protective covering layer = missing dispersive soil protection
+
+---
+
+CHUNK 5: Site Entry/Exit Points — Construction Specifications
+Section: Model Code of Practice — Building Sites
+Topic: Exact dimensions for stabilised construction entry/exit pads
+
+STABILISED ROCK PAD DIMENSIONS:
+- Depth: TYPICALLY 150mm TO 200mm deep
+- Width: MINIMUM 2.0m wide
+- Length: AT LEAST 10m long
+
+CRUSHED ROCK SIZE: MINIMUM 40mm to MAXIMUM 75mm crushed rock.
+
+PEDESTRIAN SAFETY AGGREGATE: 20mm aggregate should be placed OVER the crushed rock between the property boundary and the road.
+
+VIBRATION GRID LENGTH: Minimum recommended length 3.5m.
+
+FLOW DIVERSION BUND: Minimum 200mm HIGH, placed diagonally across the top of the entry/exit pad.
+
+OFF-SITE SEDIMENT ACCUMULATION LIMIT: UNACCEPTABLE if it results in MORE THAN 500g of soil/sediment within any 1m² area (roughly two 70mm diameter balls of dry sediment — a useful visual reference).
+
+VISUAL INDICATORS:
+- Entry/exit pad appearing narrower than roughly 2m wide or shorter than 10m long = potential dimension non-compliance
+- Rock at the entry pad appearing too fine (like gravel/road base) or too coarse (large boulders) = confirm against 40-75mm crushed rock sizing
+- No visible diversion bund across the top of the entry pad = missing flow diversion, water will wash sediment onto the pad and offsite
+- Visible sediment trail on the road/footpath beyond the site boundary, roughly more than a couple of golf-ball-sized clumps per square metre = exceeds acceptable off-site sediment limit — clear non-compliance
+- No pedestrian-safe aggregate layer visible where the pad meets a footpath = safety/compliance gap
+
+---
+
+CHUNK 6: Sediment Fence — Exact Construction Specifications
+Section: Model Code of Practice — Building Sites
+Topic: Precise material and installation requirements for sediment fences (the most common ESC device)
+
+DIMENSIONS:
+- MAXIMUM HEIGHT: 700mm above ground
+- TRENCH DEPTH: fabric must be buried in a 200mm deep trench
+
+SUPPORT POSTS:
+- MAXIMUM SPACING: 2m without wire tie/mesh backing; 3m WITH backing
+- Hardwood stake size: 1250mm² cross-section
+- Steel stake weight: minimum 1.5kg/m steel star pickets
+
+FABRIC SPECIFICATIONS:
+- Tensile strength: 17 kN/m in BOTH directions
+- Pore size (O95): 110 μm
+- Fabric mass: 225 gsm
+
+VISUAL INDICATORS:
+- Sediment fence appearing taller than knee-to-waist height (roughly 700mm) on a person standing beside it = potentially exceeds maximum height
+- Fabric NOT visibly buried at the base (sitting on top of the ground rather than trenched in) = critical non-compliance — water and sediment will flow underneath, defeating the purpose entirely
+- Support posts spaced visibly wider than roughly 2-3 large steps apart (2-3m) = non-compliant spacing, fence likely to sag or fail
+- Fence fabric appearing torn, sagging significantly between posts, or not standing upright = damaged/failing installation
+- Cross-reference with checklist items in Chunk 10 (Sediment Fences) for full inspection criteria
+
+---
+
+CHUNK 7: Sediment Basin — Construction Requirements
+Section: Sediment Basin Construction Specification
+Topic: Exact engineering specifications for constructed sediment basins
+
+RISER PIPE: Minimum 250mm diameter.
+
+SPILLWAY ROCK:
+- Specific gravity: must be AT LEAST 2.5
+- Sizing: largest rock size no larger than 1.5 TIMES the nominal rock size
+
+SITE PREPARATION:
+- Clearing distance: clear trees/rubbish for a distance NOT EXCEEDING 5 METRES beyond the limits of embankments and borrow pits
+
+CUT-OFF TRENCH:
+- Depth: in no case LESS THAN 600mm deep
+- Width: minimum bottom width 600mm
+- Side slopes: NO STEEPER than 1:1 (H:V)
+
+EMBANKMENT CONSTRUCTION:
+- Lift thickness: fill placed in 150-250mm CONTINUOUS layers
+- Compaction: about 1-2% wet of optimum, to 95% modified or 100% standard compaction
+- Settling allowance: embankment constructed 10% HIGHER than design height
+- Dimension tolerance: finished dimensions (after topsoil) must be within 75mm of specified dimensions
+
+GEOTEXTILE:
+- Overlap: minimum 300mm overlap at edges; anchor pins at 1m spacing
+- Burying: upstream end buried minimum 300mm; fabric must extend 1000mm upstream of spillway crest
+
+OTHER REQUIREMENTS:
+- Marker post: at least 75mm wide, firmly set into basin floor
+- Anti-flotation mass: at least 110% of water mass displaced by the riser pipe system
+- Conduit crossing: minimum 600mm of lightly compacted backfill over conduit BEFORE crossing with construction equipment
+
+VISUAL INDICATORS:
+- Sediment basin riser pipe appearing narrower than roughly a dinner plate diameter (250mm) = potential undersizing
+- No visible marker post inside the basin = missing sediment depth indicator, cannot confirm when cleanout is needed
+- Basin embankment appearing to lack finished topsoil/stabilisation = incomplete construction
+- Spillway rock appearing lightweight, small, or uniform in size without larger anchor rocks = potential non-compliance with rock sizing/specific gravity requirements
+- Visible erosion or scour on the embankment or spillway = construction or maintenance failure
+
+---
+
+CHUNK 8: DAILY CHECKLIST — Site Inspection (Building Site)
+Section: Site Inspection Checklist — Building Site (Daily)
+Topic: Verbatim daily inspection checklist items — direct photo-assessment reference
+
+The following items are VERBATIM from the daily Building Site inspection checklist. Each represents a specific compliance check:
+
+- All tradespeople working on the site have been informed of the erosion and sediment control requirements of the site
+- All required builder identification, safety notices, and pollution (litter and sediment control) management signs are visible
+- The work site and all erosion and sediment control measures do not represent a safety risk to tradespeople or the public
+- Public roadways are clear of sediment
+- Turfing on the footpath area is clear of sediment, sand and mud
+- Entry/exit pads are clear of excessive sediment deposition
+- Entry/exit pads have adequate available void spacing to trap sediment
+- The construction site is clear of litter and unconfined rubbish
+- Long-term (>24 hours) soil/sand stockpiles are protected from wind, rain, and stormwater flow
+- At end of day, all short-term soil/sand stockpiles located outside the sediment control zone have been removed and cleaned
+- No dust problems exist on the site
+- Up-slope "clean" water is being appropriately diverted through the site in a non-erosive manner
+- Drainage lines are free of soil scour and sediment deposition
+- Stormwater flow down exposed earth batters does not cause erosion
+- Appropriate erosion controls of all finished soil disturbances have been discussed with the client
+- Sediment fences have been correctly installed (fabric buried and standing up-slope of stakes) and are free of damage
+- Sediment fences have been installed in a manner that will allow sediment-laden stormwater to temporarily pond and settle behind the fence rather than flow around the fence
+- Appropriate sediment controls have been placed adjacent to, or around, stormwater inlets — as appropriate for the type of inlet
+- All sediment traps are free of excessive sediment deposition
+- Finished service trenches have been appropriately backfilled, compacted and stabilised
+- All reasonable and practicable measures are being taken to control sediment runoff from the site
+- The site is adequately prepared for potential storms
+- Adequate stockpiles exist of ESC materials, such as extra sediment fence fabric
+- Temporary downpipes have been correctly connected to any installed roof gutters
+
+VISUAL INDICATORS:
+- Each item above is directly photo-assessable — treat visible failure of any item as a specific finding, citing the exact checklist item language
+- Sediment visible on public roadway or footpath = direct failure of two specific items above
+- Uncovered/unprotected stockpile visible = direct failure
+- Visible litter or unconfined rubbish on site = direct failure
+- Disconnected or missing temporary downpipe with roof/gutter installed = direct failure
+
+---
+
+CHUNK 9: DETAILED CHECKLIST — Parts A-C (Initial Inspection, Monitoring, Site Establishment)
+Section: Site Inspection Checklist — Detailed, Parts A, B, C
+Topic: Verbatim comprehensive inspection items — establishment and initial conditions
+
+PART A — INITIAL SITE INSPECTION:
+- Has an Erosion and Sediment Control Plan (ESCP) been approved for the site?
+- Have all necessary development approvals been obtained?
+- Are site conditions consistent with those assumed within the approved ESCP?
+- Are environmental values being adequately protected?
+- Are all ESC-related development conditions being satisfied?
+- Was the full perimeter of the work site inspected?
+- Are all reasonable and practicable measures being taken to minimise environmental harm?
+
+PART B — SITE INSPECTION AND MONITORING:
+- Appropriate in-house site inspections of ESC practices are being carried out such that all control measures are being maintained
+- Site inspections and monitoring are being carried out at appropriate times and intervals
+
+PART C — SITE ESTABLISHMENT:
+- Site access is controlled and the number of access points minimised
+- Adequate drainage and sediment controls exist at site entry/exit points
+- Adequate drainage, erosion and sediment controls have been placed around the site compound
+- Office compound area and car park gravelled/stabilised where necessary to control erosion and mud generation
+- Appropriate drainage and sediment controls are installed prior to new areas being cleared or disturbed
+
+VISUAL INDICATORS:
+- No visible ESCP document or reference on site = Part A failure, cannot confirm approval
+- Multiple uncontrolled access points visible around a site perimeter = Part C failure
+- Office/compound area showing bare earth or mud rather than gravel/stabilisation = Part C failure
+- New area cleared with no visible controls in place before disturbance began = critical Part C failure — controls must precede clearing, not follow it
+
+---
+
+CHUNK 10: DETAILED CHECKLIST — Parts D-E (Site/Vegetation Management, Material and Waste Management)
+Section: Site Inspection Checklist — Detailed, Parts D, E
+Topic: Verbatim comprehensive inspection items — ongoing management and waste
+
+PART D — SITE AND VEGETATION MANAGEMENT:
+- Vegetation Management Plan (VMP) and/or landscape plan has been prepared
+- VMP and/or landscape plan is being appropriately implemented
+- Site personnel appear to be aware of ESC requirements and have ready access to the Erosion and Sediment Control Plan
+- ESC measures are being installed in accordance with the approved Installation Sequence
+- Adequate supplies of ESC materials stored on-site: straw bales, wire, stakes, sediment fence fabric, filter cloth, clean aggregate
+- Temporary access roads are stabilised where appropriate
+- Permanent roads are programmed to be sealed as soon as reasonable and practicable
+- Sediment deposition is not observed on external roads
+- Adequate records are being kept on chemical dosing of sediment basins, site inspections and site maintenance
+- The site is adequately prepared for the anticipated weather conditions
+- "Witness Points" and "Hold Points" are being appropriately managed and adhered to
+- Adequate protection provided for non-disturbance areas, buffer zones, protected trees
+- Disturbances removed from the drip line of protected trees
+- Brick-, masonry-, concrete-, and tile-cutting activities not carried out within road reserves (if possible) and all liquid waste is fully contained on-site or behind bunds
+
+PART E — MATERIAL AND WASTE MANAGEMENT:
+- Chemicals and petroleum products appropriately stored on site
+- Emergency spill response plan has been prepared for the site
+- Oil/petroleum spill containment/response kits available on-site where appropriate
+- Adequate litter and waste receptors exist on-site
+- Waste receptors for concrete, paints, acid washing, litter and building waste are being maintained
+- Cement-laden liquid waste and wash-off is prevented from entering waterways and stormwater systems
+- Waste water from construction activities (wash water, de-watering, dust control) is being captured and treated
+- On-site mortar/cement/concrete mixing is carried out behind earth bunds, or other measures employed to fully contain cement-laden waste and spills
+- Appropriate wash-down facilities provided from concrete trucks, mixing and pumping equipment
+
+VISUAL INDICATORS:
+- No sediment fence spares, stakes, or fabric visibly stored on site = Part D materials failure
+- Protected tree with visible disturbance/excavation within its drip line (the ground area under the tree canopy) = direct Part D failure
+- Concrete/tile cutting occurring in a road reserve with visible slurry runoff = Part D failure
+- No visible bunding around mortar/concrete mixing area = Part E failure — cement wash is a named prescribed contaminant (cross-reference EP Regulation Chunk 3)
+- No visible spill kit near chemical/fuel storage = Part E failure
+- Concrete truck washing out directly onto open ground with no containment = direct, clearly visible Part E failure
+
+---
+
+CHUNK 11: DETAILED CHECKLIST — Parts F-G (Soil Management, Drainage Controls)
+Section: Site Inspection Checklist — Detailed, Parts F, G
+Topic: Verbatim comprehensive inspection items — soil handling and drainage infrastructure
+
+PART F — SOIL MANAGEMENT:
+- Topsoil stripped and stockpiled prior to major earthworks
+- Stockpiles located AT LEAST 5m AWAY from top of watercourse banks
+- Long-term soil stockpiles adequately protected against wind and rain
+- Adequate sediment controls placed down-slope of stockpiles
+- Stockpile sediment control (Filter Fence or Sediment Fence) is appropriate for the soil type and site conditions
+- Adequate drainage controls placed up-slope of stockpiles
+- Soil stockpiles do not encroach upon protected vegetation
+- Subsoils adequately scarified prior to topsoil placement
+- Topsoil is being replaced at an adequate depth
+
+PART G — DRAINAGE CONTROLS:
+- Construction Drainage Plans (CDPs) are consistent with actual site conditions (current stage of works)
+- Drainage Control measures are consistent with the ESCP
+- Drainage Control measures are being adequately maintained in proper working order at all times
+- Adequate diversion/management of up-slope stormwater
+- Up-slope "clean" water is being appropriately diverted around/through the site in a non-erosive manner
+- Stormwater runoff diverted away from unstable slopes
+- Flow diversion channels/banks stabilised against erosion
+- Flow not unlawfully discharged onto an adjacent property
+- Spacing of cross drainage (Catch Drains or Flow Diversion Banks) down long slopes is sufficient to prevent "rill" erosion
+- Earth batters are free of "rill" erosion
+- CATCH DRAINS must have: adequate depth/width; adequate flow capacity maintained; stabilised against soil scour; clear of sediment deposition; appropriate grass length maintained; discharge via a stable outlet
+- CHANNEL LININGS (mats) must have: lining well anchored; mats overlap in direction of flow; lining appropriate for flow conditions; no damage from lateral inflows
+- CHECK DAMS must have: flow passing over the dams (not around); not causing excessive channel restriction; rock check dams not used in shallow drains; appropriately spaced down the drain
+- CHUTES (rock) must have: geotextile filter cloth installed under the rock; rock placement has not reduced chute flow capacity; rock size adequate for expected flow velocity; discharge via a stable outlet
+- CHUTES (geotextile) must have: lining well anchored; mats overlap in direction of flow; lining appropriate for flow conditions; discharge through a stable outlet
+- LEVEL SPREADERS must have: outlet weir level and undamaged; no sediment deposition within the spreader; discharges "sheet" flow to a stable, well-grassed outlet
+- SLOPE DRAINS must have: adequate erosion/sediment controls at pipe inlet; pipes well anchored; no obvious water leaks; discharge via a stable outlet
+- STORMWATER OUTLETS must have: energy dissipation appropriate for conditions; rock size GREATER THAN 200mm; soil erosion being controlled
+- TEMPORARY WATERCOURSE CROSSINGS must have: crossing type appropriate for stream conditions; sediment runoff from approach roads controlled; likely damage from overtopping flows considered acceptable
+
+VISUAL INDICATORS:
+- Stockpile visibly closer than roughly 5 large paces (5m) from a watercourse bank = direct Part F non-compliance
+- Stockpile with no visible down-slope sediment control (fence/filter) = Part F failure
+- Catch drain showing scour damage, sediment build-up, or overgrown grass beyond a manageable length = multiple Part G indicators
+- Check dam with water visibly flowing around the sides rather than over the top = Part G failure — dam is not functioning as intended
+- Rock at a stormwater outlet appearing smaller than roughly a clenched fist (200mm) = fails the explicit rock size requirement
+- Visible flow discharging onto a neighbouring property = direct unlawful discharge, serious Part G finding
+
+---
+
+CHUNK 12: DETAILED CHECKLIST — Part H (Erosion Controls)
+Section: Site Inspection Checklist — Detailed, Part H
+Topic: Verbatim comprehensive inspection items — erosion control measures
+
+PART H — EROSION CONTROLS:
+- Erosion control standard is consistent with requirements of regulatory authority
+- Soil erosion is being controlled to a standard consistent with the level of environmental risk
+- Erosion Control measures are consistent with the approved ESCP
+- Disturbance to existing ground cover is being delayed as long as possible
+- Raindrop impact erosion is being adequately controlled
+- Earth batters are free of "rill" erosion
+- Dust problems are being adequately controlled
+- Erosion Control measures are being adequately maintained in proper working order at all times
+- All disturbed areas are adequately stabilised given: erosion hazard risk; degree of downstream sediment control; days since earthworks were finalised; days before any soil disturbance will be re-worked
+
+EROSION CONTROL BLANKETS must have: blankets well anchored; blankets overlap in direction of stormwater flow; blanket strength appropriate for site conditions; synthetic blanket reinforcing will not endanger wildlife; blankets not damaged by lateral inflows; blankets protected against movement by winds
+
+MULCHING (LIGHT) must have: minimum 70% coverage of soil surface; suitable tackifier used on steep slopes; drainage controls preventing mulch displacement
+
+MULCH (HEAVY) must have: minimum 100% coverage of soil; minimum depth adequate to control weeds; drainage controls preventing mulch displacement
+
+SOIL BINDERS must have: no adverse environmental impacts observed; no obvious over-spray; soil binders applied during appropriate weather conditions
+
+VISUAL INDICATORS:
+- Bare earth left exposed for an extended period with no protective measure at all = fails the "delay disturbance" and "adequately stabilised" items directly
+- Erosion control blanket visibly lifted at edges or not anchored down = direct failure
+- Mulch coverage visibly patchy/incomplete (less than an estimated 70%) = light mulching failure
+- Visible dust generation with no suppression evident = direct dust control failure
+- Rill erosion (small channels) visible on an earth batter = direct failure, must cross-reference exact definition in Chunk 3 (>100mm depth)
+
+---
+
+CHUNK 13: DETAILED CHECKLIST — Part I (Sediment Controls) — Part 1: General and Entry Points
+Section: Site Inspection Checklist — Detailed, Part I
+Topic: Verbatim comprehensive inspection items — sediment control general principles and entry point controls (Part I is extensive, split across Chunks 13-15)
+
+GENERAL SEDIMENT CONTROL:
+- Sediment is being controlled to a standard consistent with legislative requirements and the level of environmental risk
+- Sediment Control is consistent with the approved ESCP
+- Sediment Control is appropriate for the soil type
+- No sub-catchment relies solely on "supplementary" sediment control traps
+- Sediment Control measures are being adequately maintained in proper working order at all times
+- Sediment control Buffer Zones are protected from traffic and are free of excessive sediment deposits
+- Straw bales are NOT being used for sediment control, unless justified by exceptional circumstances
+- Neighbouring properties are being adequately protected from sedimentation
+- Collected sediment is being disposed of in an appropriate manner
+
+ENTRY/EXIT POINTS must have: control measures appropriate for site conditions; constructed to appropriate standards; excessive sediment removed from sediment traps; excessive sedimentation not evident on roadway; stormwater drainage controlled such that sediment is not being washed onto the adjacent roadway
+
+FIELD (DROP) INLET CONTROLS must have: inlet controls allow adequate ponding around stormwater inlets to capture sediment; controls do not simply divert sediment-laden water downstream to an uncontrolled inlet; controls will not cause a safety or local flood hazard; traps appropriate for site conditions; excessive sediment deposition removed from all traps
+
+GULLY INLET CONTROLS must have: traps appropriate for type of gully inlet ("sag" or "on-grade"); traps allow adequate ponding to capture sediment; traps do not simply divert sediment-laden water downstream; controls will not cause a safety, traffic or flooding hazard; excessive sediment removed from all traps
+
+VISUAL INDICATORS:
+- Straw bales visible as a sediment control device = flag as non-compliant unless clearly justified — this is explicitly discouraged
+- Sediment visibly ponding and NOT infiltrating/settling around a stormwater inlet, or bypassing the control entirely = inlet control failure
+- Sediment visible on a roadway near a site entry point = direct failure, cross-reference Chunk 5 (entry/exit specs) and Chunk 8 (daily checklist)
+
+---
+
+CHUNK 14: DETAILED CHECKLIST — Part I (Sediment Controls) — Part 2: Fences, Filters, and Structural Traps
+Section: Site Inspection Checklist — Detailed, Part I
+Topic: Verbatim comprehensive inspection items — sediment fences and structural sediment traps
+
+TABLE DRAIN SEDIMENT TRAPS must have: choice of trap appropriate for flow conditions; excessive sediment removed from all traps; spill-through weir set to appropriate elevation; spill-through weir has adequate width; Sediment Fence traps formed in a tight U-shape that adequately prevents water bypassing the traps
+
+SEDIMENT FENCES must have: fabric choice appropriate; bottom of fabric securely buried; fabric appropriately overlapped at joints; fabric appropriately attached to posts; support posts at correct spacing (2m or 3m with backing); fence does not cause flow diversion/bypass; fence has regular returns; lower end(s) of fence returned up the slope; fences free of damage; all fences free of excessive sediment deposition; fences adequately spaced from toe of fill banks
+
+FILTER TUBE SEDIMENT TRAPS must have: geometry and layout matching design details; sediment-laden water cannot bypass the filtration system; filter tubes do not need replacement; filter tubes and embankment free of damage
+
+ROCK FILTER DAMS (SEDIMENT TRAPS) must have: geometry and layout matching design details; excessive sediment removed from up-slope of all traps; filtration system free from sediment blockage; dam and spillway free of damage
+
+SEDIMENT WEIRS must have: geometry and layout matching design details; excessive sediment removed from up-slope of all traps; filtration system free from sediment blockage; weir and splash pad (if any) free of damage
+
+SEDIMENT TRENCH must have: trench geometry and layout matching design details; excessive sediment removed from the trench; outlet structure (if any) free from sediment blockage; open trench does not represent a safety hazard
+
+VISUAL INDICATORS:
+- Sediment fence with visible gaps between fabric and posts, or fabric not properly overlapped at joints = direct failure
+- Fence lower end NOT curving back up the slope (i.e. running straight into open ground) = allows water to bypass around the end — direct failure
+- Sediment fence with fabric appearing to sit on top of soil (not visibly trenched/buried) = critical failure, cross-reference Chunk 6
+- Rock filter dam or weir showing visible sediment blockage or physical damage = maintenance failure
+- Open sediment trench with no barriers/signage near a walkway or work area = safety hazard finding
+
+---
+
+CHUNK 15: DETAILED CHECKLIST — Part I (Sediment Controls) — Part 3: Sediment Basins and Other Traps
+Section: Site Inspection Checklist — Detailed, Part I
+Topic: Verbatim comprehensive inspection items — sediment basins (the most detailed single checklist item set)
+
+SEDIMENT BASIN CHECKLIST (applies to each basin on site) — must have:
+- Basin geometry and layout match design details
+- "As constructed" plans have been prepared
+- The basin does not represent a safety risk
+- De-watering is conducted in accordance with best practice
+- Excessive sediment removed from basin
+- Sediment depth marker is installed and maintained
+- Primary outlet structure is free from sediment blockage
+- Flow conditions are not compromised across the spillway
+- Emergency spillway has adequate scour control
+- Adequate quantities of flocculant (if required) exist on-site
+- Soil erosion is adequately controlled at inlet points
+- The settled sediment layer is clearly visible through ponded water prior to discharge
+
+OTHER SEDIMENT TRAP CHECKLIST (Type 1/2/3 traps) — must have:
+- Choice of trap appropriate for site conditions and environmental risk level
+- Trap allows adequate ponding to capture coarse sediment (Type 2 and Type 3 traps)
+- Trap allows adequate filtration to capture fine sediment (Type 2 traps)
+- Trap does not simply divert sediment-laden water downstream to an uncontrolled outlet
+- Trap does not cause a safety, traffic or local flood hazard
+- Excessive sediment deposition removed from all traps
+
+SEDIMENT CONTROLS FOR NON-STORM RUNOFF must have: choice of trap appropriate for site conditions and environmental risk; all sediment being contained within trap
+
+VISUAL INDICATORS:
+- No visible marker post/board inside a sediment basin = missing sediment depth marker requirement, cross-reference Chunk 7
+- Discharge water from a basin appearing murky/turbid rather than clear = the settled sediment layer is NOT clearly visible, direct non-compliance ("clearly visible through ponded water prior to discharge" test)
+- Basin spillway showing scour damage or erosion = emergency spillway scour control failure
+- Sediment visibly built up close to or blocking a basin's outlet structure = maintenance failure requiring cleanout
+
+---
+
+CHUNK 16: DETAILED CHECKLIST — Parts J-K (Instream Works, Site Stabilisation/Revegetation)
+Section: Site Inspection Checklist — Detailed, Parts J, K
+Topic: Verbatim comprehensive inspection items — watercourse works and final stabilisation
+
+PART J — INSTREAM WORKS:
+- All necessary State and local government approvals have been obtained
+- Temporary Watercourse Crossings reduced to the minimum practical number
+- Instream disturbance limited to the minimum necessary to complete the proposed works
+- Timing and staging of instream works will minimise exposure of the site to storm and/or stream flows
+- Instream works occurring at a time of year that minimises environmental harm: avoiding seasonal high flows; avoiding fish migration periods; avoiding bird migration periods (Ramsar wetlands)
+- Instream structures not located on/adjacent to unstable or highly mobile channel bends
+- Construction works not unnecessarily disturbing instream or riparian vegetation
+- Overbank disturbances limited to only one bank wherever reasonable and practicable
+- Sediment Fences NOT placed in areas of actual or potential concentrated flow
+- Appropriate material (spoil) de-watering procedures adopted
+- Site stabilisation and rehabilitation occurring as soon as practicable
+
+PART K — SITE STABILISATION/REVEGETATION:
+- Site stabilisation/rehabilitation plan has been prepared
+- Site stabilisation/revegetation occurring in accordance with approved plans/programming
+- Exposed areas adequately stabilised given site conditions, environmental risk, and construction schedule
+- Soil surfaces suitably roughened prior to revegetation
+- Excessive soil compaction amended prior to revegetation
+- Newly seeded areas developing appropriate grass cover (not just strike rate), density and grass type
+- No newly seeded areas require reseeding
+- Soil erosion within revegetated areas adequately controlled (mulching) during plant establishment
+- Grass turfing NOT being placed directly on compacted soil
+- Newly established plants being adequately maintained
+- Plants damaged by traffic or wind-rock are adequately supported or replaced
+- Dead or severely damaged plants have been replaced
+
+VISUAL INDICATORS:
+- Sediment fence placed directly across a flowing drainage line/gully = direct Part J failure, fences must not be in concentrated flow paths
+- Works occurring on both banks of a watercourse simultaneously without clear justification = Part J concern
+- Newly seeded area showing patchy, thin, or absent grass growth well after planting = Part K failure
+- Turf visibly laid directly on hard, compacted bare soil = direct Part K failure
+- Damaged or dead plantings left unreplaced = Part K maintenance failure
+
+---
+
+CHUNK 17: DETAILED CHECKLIST — Part L (Action Summary)
+Section: Site Inspection Checklist — Detailed, Part L
+Topic: Verbatim summary/action items — used to conclude an inspection
+
+ACTION SUMMARY ITEMS:
+- Do any existing control measures require modification?
+- Are additional ESC measures required on the site?
+- Are alternative ESC measures required on the site?
+- Is a revised ESCP required for the site?
+- Is further water quality monitoring required?
+- Do any ESC measures need repairs or de-silting?
+- Is additional erosion control (minimum 70% cover) required?
+- Will the underlying cause of any non-compliance need further investigation?
+- Will it be necessary for the site to adopt an alternative Code of Practice better suited to the site conditions or work activities?
+- Will further site inspections be required?
+
+USAGE NOTE: These are summary/closing questions used at the end of a full site inspection, not individual physical checks. Use this chunk to inform the STRUCTURE of a scan summary or follow-up questions section — e.g. if multiple findings from Chunks 8-16 indicate systemic issues, a follow-up question modelled on these items (e.g. "Confirm whether a revised ESCP is required given the extent of findings") is appropriate.
+
+---
+
+CHUNK 18: Stabilisation and Cleanup Timeframes
+Section: Model Code of Practice — Building Sites
+Topic: Exact time-based requirements for stabilisation, cleanup, and reconnection
+
+BULK EARTHWORKS STABILISATION: Disturbed areas outside the base slab footprint should be stabilised IMMEDIATELY following the completion of bulk earthworks.
+
+RAINFALL CONNECTION: Roof water drainage must be connected to an erosion-resistant system IMMEDIATELY after the roof and guttering is laid WHEN monthly rainfall exceeds 45mm.
+
+VEGETATION REPAIRS: Damage to vegetation in road reserves must be repaired AS SOON AS REASONABLE AND PRACTICABLE.
+
+SHORT-TERM STOCKPILES: Must be removed/cleaned IMMEDIATELY if rain/strong winds are imminent, OR by the END OF THE WORKING DAY otherwise.
+
+OFF-SITE DEPOSITS: Removal from sealed roads/gutters must occur IMMEDIATELY if rain is imminent or it's a safety hazard; otherwise BEFORE COMPLETION of the day's work.
+
+TEMPORARY DOWNPIPES: If removed for work, must be reconnected if rain is occurring, or AT THE END OF THE DAY'S WORK.
+
+VISUAL INDICATORS:
+- Bulk earthworks appearing recently completed (fresh cut/fill visible) with no stabilisation measures yet in place = confirm timing — should be immediate, not delayed
+- Roof and guttering installed but downpipes not connected to any erosion control at ground level = non-compliant if in a high rainfall period
+- Sediment or soil visible on a road/gutter at what appears to be end-of-day = should have been cleaned per the timeframe rules, flag for confirmation
+- Short-term stockpile still present and uncovered late in the day with no apparent plan for removal = timing non-compliance
+
+---
+
+CHUNK 19: Sediment Basin Inspection and Maintenance Timeframes
+Section: Sediment Basin Construction Specification
+Topic: Mandatory inspection frequency for constructed sediment basins
+
+POST-RAIN EVENT: Inspect basins AFTER EACH RUNOFF EVENT for damage at entry/exit points.
+
+SEASONAL INSPECTION FREQUENCY:
+- WET SEASON: inspect basins AT LEAST WEEKLY
+- DRY SEASON: inspect basins AT LEAST FORTNIGHTLY
+
+SITE SHUTDOWN: Inspect PRIOR TO, and IMMEDIATELY AFTER, periods of stop work or shutdown.
+
+TRAP CLEANING: Clean out accumulated sediment WHEN IT REACHES THE MARKER BOARD/POST.
+
+VISUAL INDICATORS:
+- Sediment visibly at or above the level of the marker post/board inside a basin = cleanout is overdue, direct non-compliance
+- No visible inspection records or dated signage near a basin = cannot confirm inspection frequency compliance, flag for on-site verification
+- Basin showing damage or accumulated sediment following an apparent recent rain event with no evidence of post-rain inspection = potential inspection frequency failure

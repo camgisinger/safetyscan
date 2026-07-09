@@ -1,0 +1,506 @@
+DOCUMENT: Standards and Tolerances Guide (Queensland Building and Construction Commission)
+TYPE: QBCC Guide — Defect Classification and Building Tolerances
+JURISDICTION: QLD
+REGION: QLD
+WORK_TYPES: quality_assurance, concrete_slabs, footings, masonry, timber_framing, wall_cladding, roofing, plumbing, windows_doors, plastering, internal_fixing, painting, tiling, flooring, waterproofing, wet_areas, pools_spas, termite_management, siteworks, construction
+SOURCE: Queensland Building and Construction Commission (QBCC)
+CURRENT AS AT: December 2023
+CLAUSE_PREFIX: Section
+REFERENCE_STANDARD: National Construction Code (NCC); AS 2870 Residential slabs and footings; AS/NZS 2890.1 Parking facilities; AS/NZS 2311 Guide to the Painting of Buildings; AS 3740 Waterproofing of Domestic Wet Areas; AS 4654 Parts 1 and 2 Waterproofing Membranes for External Above-Ground Use; AS 3660.1 Termite Management — New Building Work; relevant manufacturer installation requirements
+NOTE: This Guide is subordinate to the NCC, Australian Standards, and manufacturer requirements — where a conflict exists, those documents take precedence. This is the primary QLD reference for determining whether a building defect is reportable/rectifiable. This document covers all sections of the Guide (1.0 through 18.0, the final section) — no sections are missing.
+
+---
+
+CHUNK 1: General Principles — Authority, Defect Time Limits, and Measurement Rules
+Section: 1.0
+Topic: Foundational rules for applying every tolerance in this guide
+
+AUTHORITY AND PRECEDENCE: Building standards are primarily described in the National Construction Code (NCC) Series. If there is a contradiction between this Guide and an Act, Regulation, the NCC, Australian Standards, or manufacturer's installation requirements, THOSE DOCUMENTS TAKE PRECEDENCE over this Guide.
+
+DEFECT TIME LIMITS — critical for determining if an issue is still rectifiable:
+- NON-STRUCTURAL building work: standards and tolerances apply for 12 MONTHS from the date of completion
+- STRUCTURAL building work: standards and tolerances apply for 6 YEARS AND 6 MONTHS from the date of completion
+
+MEASUREMENT RULE: Tolerances apply up to and including the length over which the tolerance is stated. They must NOT be interpolated or proportioned for shorter lengths. Example: a 4mm deviation tolerance over 2m remains a 4mm maximum even if only 1m is measured — it does NOT become 2mm.
+
+VIEWING AND INSPECTION DISTANCES — compliance for colour, texture, and finish is determined from a "normal viewing position":
+- Walls, ceilings, floors: viewed from 1.5m OR GREATER
+- Appliances and fixtures: viewed from 600mm
+- Glass: viewed from 3m
+
+LIGHTING CONDITIONS: Surfaces must be illuminated by "non-critical light" — meaning diffused light, NOT glancing or parallel to the surface (glancing light exaggerates minor surface imperfections and is not a valid inspection condition).
+
+RESPONSIBILITY: Contractors are liable to repair damage caused by their building work or consequential damage to the site or adjacent buildings. They are NOT responsible for damage caused by the owner's actions, inactions, or failure to maintain systems (e.g. blocked drains from tree roots, gutters distorted by an owner's ladder).
+
+VISUAL INDICATORS:
+- Photo taken at close range (under 1.5m) used to assess wall/ceiling/floor finish defects = invalid inspection distance — flag for confirmation at correct viewing distance
+- Surface inspected under raking/glancing light (e.g. low sun angle) showing exaggerated texture = non-critical lighting condition not met — re-inspect under diffused light
+- Structural defect identified more than 6.5 years after completion = outside standard defect period
+- Non-structural defect identified more than 12 months after completion = outside standard defect period
+
+---
+
+CHUNK 2: Siteworks — Concrete Paving and Drainage
+Section: 2.0
+Topic: External paving cracking, finish, drainage, and driveway clearance
+
+CRACKING IN CONCRETE PAVING (Table 2.1) — acceptance criteria:
+- Random cracking: crack width must be ≤ 1mm
+- Design profile variation: actual surface vs design profile must be ≤ 15mm
+- Flatness: maximum deviation from a 3m straight edge must be ≤ 15mm
+- Stepping: relative surface level of adjacent paving elements must be ≤ 5mm
+- Subsidence: offset under a 1.5m length of the design profile must be ≤ 5mm
+
+FINISH TO EXTERNAL CONCRETE PAVING: Within 12 months, the finish must be consistent in colour, texture, and general appearance.
+
+SITE DRAINAGE: Surface water must be directed away from the building. Must be shaped to prevent ponding near or against footings. Must comply with AS 2870 and relevant engineering designs.
+
+DRIVEWAY GROUND CLEARANCE: Must comply with AS/NZS 2890.1 Appendix C using the B85 template car for domestic properties.
+
+VISUAL INDICATORS:
+- Crack in concrete paving wider than 1mm = defect (Section 2.1)
+- Visible ponding of water near or against footings after rain = drainage non-compliance
+- Paving surface showing inconsistent colour or texture within 12 months of completion = finish defect
+- Visible stepping between adjacent paving slabs exceeding approximately 5mm = defect — confirm with straightedge
+- Ground clearance under a driveway crossing that appears to scrape a standard vehicle = potential AS/NZS 2890.1 non-compliance
+
+---
+
+CHUNK 3: Footings, Slabs and Set Out — Dimensional Tolerances
+Section: 3.3, 3.4, 3.6, 3.7, 3.8, 3.9
+Topic: Building position, dimensions, floor levels, and levelness tolerances
+
+SETTING OUT THE BUILDING: A set out is defective if it fails to comply with approved drawings, planning approvals, or building regulations. Within 12 months, it is defective if the building is more than 50mm from its correct position AND this adversely affects safe use or amenity.
+
+EXTERNAL BUILDING DIMENSIONS: Within 12 months, departures from documented external dimensions are defects if they exceed L/200 (L = documented overall length) OR 5mm, WHICHEVER IS GREATER.
+
+INTERNAL BUILDING DIMENSIONS — different tolerances by room type:
+- Service rooms (bathrooms, kitchens): must not exceed L/200 or 5mm, whichever is greater
+- Habitable rooms (bedrooms, living areas): must not exceed L/100 or 5mm, whichever is greater
+- External elements (garages, decks): must not exceed L/100 or 5mm, whichever is greater
+
+FINISHED FLOOR LEVELS (FFL): Within 12 months, FFL is defective if it departs from the documented level by MORE THAN 40mm.
+
+LEVELNESS OF CONCRETE FLOORS: Within 12 months, floors are defective if:
+- They differ in level by more than 10mm in any room
+- OR more than 12mm in any 3m length
+- OR the overall deviation across the entire building footprint exceeds 20mm
+
+DIMENSIONS OF BUILDING ELEMENTS (beams/posts): Within 12 months, height or cross-sectional deviations are defects if they exceed L/200 or 5mm, whichever is greater.
+
+TIMBER SHRINKAGE ALLOWANCE: Timber members are NOT defective if the dimensional difference is due to shrinkage not exceeding: 3% for SEASONED timber; 10% for UNSEASONED timber.
+
+VISUAL INDICATORS:
+- Building position appearing significantly offset from site boundaries or approved plans = confirm actual position against approved drawings — 50mm tolerance applies
+- Visible unevenness in a concrete floor surface across a room = confirm with level, defect threshold is 10mm within a room or 12mm over 3m
+- A beam or post appearing undersized relative to documented dimensions = confirm actual measurement, tolerance is L/200 or 5mm
+- Timber members showing gaps or dimensional change = confirm whether within shrinkage allowance (3% seasoned, 10% unseasoned) before flagging as defective
+
+---
+
+CHUNK 4: Concrete Slab Cracking Classification and Termite Slabs
+Section: 3.10, 3.11, 3.14
+Topic: Classifying crack severity in concrete slabs and termite management requirements
+
+CRACKS IN CONCRETE SLABS — CLASSIFICATION OF DAMAGE (Table 3.10):
+- CATEGORY 0 (Negligible): hairline cracks < 0.3mm; movement < 8mm from level
+- CATEGORY 1 (Very Slight): fine cracks < 1.0mm; movement < 10mm
+- CATEGORY 2 (Slight): distinct cracks < 2.0mm; movement < 15mm
+- CATEGORY 3 (Moderate — DEFECTIVE): wide cracks 2mm to 4mm; movement 15mm to 25mm
+- CATEGORY 4 (Severe — DEFECTIVE): gaps in slab 4mm to 10mm; movement > 25mm
+
+KEY THRESHOLD: Categories 0-2 are NOT defective. Category 3 and above ARE defective.
+
+TERMITE MANAGEMENT SLABS: For slabs acting as a termite management system, cracks must NOT EXCEED Category 1 width (< 1.0mm) — a stricter standard than general slab cracking, because wider cracks compromise the termite barrier.
+
+SLAB EDGE DAMPNESS: Slabs are defective if they permit moisture (surface or sub-surface) to enter the building to an extent that compromises health/safety (e.g. mould growth) or damages contents.
+
+VISUAL INDICATORS:
+- Slab crack measured or estimated under 2mm width with movement under 15mm = Category 0-2, NOT defective
+- Slab crack measured or estimated 2mm or wider = Category 3 or above, DEFECTIVE — flag critical
+- Any visible crack on a slab that also functions as a termite barrier exceeding hairline (1mm) = non-compliant termite management, regardless of general slab defect threshold
+- Visible moisture staining, efflorescence, or mould at slab edge = potential slab edge dampness defect
+- Confirm crack width with a reference object (coin, ruler) where possible — visual estimation alone is unreliable at the 1-2mm threshold
+
+---
+
+CHUNK 5: Masonry — Cracking Classification and Articulation Joints
+Section: 4.2, 4.3
+Topic: Classifying masonry wall damage and articulation joint requirements
+
+DAMAGE TO MASONRY WALLS — CLASSIFICATION (Table 4.2):
+- CATEGORY 0 (Negligible): hairline cracks < 0.1mm
+- CATEGORY 1 (Very Slight): fine cracks < 1mm
+- CATEGORY 2 (Slight): cracks < 5mm — DEFECTIVE ONLY IF IDENTIFIED WITHIN 12 MONTHS
+- CATEGORY 3 (Moderate — DEFECTIVE): cracks 5mm to 15mm, OR a group of cracks 3mm+ each
+- CATEGORY 4 (Severe — DEFECTIVE): cracks 15mm to 25mm
+
+NOTE: Masonry crack classification differs from slab classification — Category 2 in masonry (< 5mm) is only defective within the 12-month non-structural window, whereas Category 3+ is always defective within the applicable time period.
+
+ARTICULATION JOINTS IN MASONRY — must be:
+- FREE OF MORTAR
+- VERTICAL (not toothed)
+- Extend the FULL HEIGHT of masonry, UNLESS less than 600mm remains below the damp proof course (DPC)
+- SEALED with a flexible sealant matching the masonry colour
+
+VISUAL INDICATORS:
+- Masonry crack visibly wider than approximately 5mm = Category 3, defective
+- Masonry crack under 5mm identified more than 12 months after completion = not defective (Category 2 time-limited)
+- Articulation joint filled with mortar rather than flexible sealant = non-compliant
+- Articulation joint that appears toothed/stepped rather than a clean vertical line = non-compliant
+- Articulation joint not extending full wall height with no clear justification (>600mm below DPC) = flag for confirmation
+- Sealant colour visibly mismatched to surrounding masonry = non-compliant finish
+
+---
+
+CHUNK 6: Masonry — Structural Tolerances and Shrinkage Gaps
+Section: 4.4, 4.14, 4.16, 4.17, 4.20
+Topic: Exact dimensional tolerances for masonry construction
+
+STRUCTURAL TOLERANCES (Table 4.4):
+- Horizontal position (at base or storey): ± 15mm
+- Vertical alignment between storeys: ± 10mm
+- Plumb within a storey: LESSER OF ± 10mm per 3m height, OR 0.05 × leaf thickness
+- Plumb in total building height: ± 25mm
+- Bow (horizontal/vertical deviation): ± 5mm
+- Bed joint deviation from horizontal: ± 10mm in any 10m length; ± 15mm total
+- Bed joint thickness deviation: ± 3mm
+- Minimum perpend thickness: 5mm
+- Perpend thickness deviation: ± 10mm maximum
+- Cavity width deviation: ± 15mm
+
+VERTICAL ALIGNMENT OF PERPENDS: Within 12 months, a line of perpends must not deviate from vertical by more than 15mm per 2m height.
+
+BASE BED JOINTS: Exposed joints above finished ground level must NOT exceed 20mm thickness. Unexposed joints below ground must NOT exceed 40mm thickness.
+
+OVERHANG: Masonry must NOT project over the edge of a slab or footing by more than 15mm.
+
+SHRINKAGE ALLOWANCE GAPS FOR TIMBER FRAMING (masonry veneer): Gaps must be provided to allow for frame settlement:
+- Window sills: 10mm gap
+- Roof overhangs: 12mm gap
+
+VISUAL INDICATORS:
+- Masonry wall visibly leaning or out of plumb = confirm against ± 25mm total height tolerance
+- Masonry overhanging the edge of a slab visibly = confirm against 15mm maximum overhang
+- Base bed joint (at ground level) appearing unusually thick (>20mm exposed) = flag for confirmation
+- No visible gap at window sill or roof overhang in masonry veneer construction = missing shrinkage allowance, non-compliant
+- Perpend joints appearing inconsistent in thickness along a wall = confirm against ± 10mm deviation tolerance
+
+---
+
+CHUNK 7: Timber and Steel Framing Tolerances
+Section: 5.1, 5.2, 5.3, 5.4, 5.5, 5.10, 5.11
+Topic: Plumbness, straightness, and dimensional tolerances for framing
+
+STUMPS/PILES: Within 12 months, must not deviate from vertical by more than 10mm in the first 1m, or 20mm in total length.
+
+TIMBER FRAMES/POSTS PLUMBNESS: Within 12 months, must not deviate from vertical by more than 4mm in any 2m height.
+
+TIMBER FRAME STRAIGHTNESS: Within 12 months, must not deviate from plane by more than 4mm in any 2m length. For plasterboard fixing specifically: deviation must not exceed 4mm over 90% of the area and 5mm over the remaining area, measured with a 1.8m straight edge.
+
+STEEL WALL FRAMES:
+- Plumbness: must not exceed H/600 (H = wall height) or 3mm, whichever is greater
+- Straightness: must not exceed 5mm over a 3m wall length
+- Gap to slab (loadbearing walls): gaps between bottom plate and slab exceeding 3mm MUST be packed with shims or grout at every stud
+
+PACKING UNDER TIMBER BEARERS: Must be durable, non-compressible (e.g. engineered plastic), and NOT exceed 20mm total thickness.
+
+STAIR TREADS AND RISERS:
+- Adjacent risers or goings must be within 5mm of each other
+- The largest and smallest riser or going within a flight must be within 10mm of each other
+
+BOTTOM PLATES OVERHANGING SLABS:
+- 90mm wide plates: maximum overhang 15mm
+- 70mm wide plates: maximum overhang 10mm
+
+VISUAL INDICATORS:
+- Timber stud or post visibly leaning = confirm against 4mm per 2m height tolerance
+- Visible gap between steel frame bottom plate and slab without shims or grout visible = non-compliant if gap exceeds 3mm
+- Packing under a bearer appearing to exceed 20mm thickness or made from compressible material (e.g. timber offcuts, cardboard) = non-compliant
+- Stair treads appearing visibly uneven in height between steps = confirm against 5mm/10mm riser tolerances — trip hazard as well as quality defect
+- Bottom plate visibly overhanging the slab edge = confirm against 10-15mm maximum depending on plate width
+
+---
+
+CHUNK 8: Wall Cladding
+Section: 6.1, 6.2
+Topic: Leak performance and aesthetic condition of wall cladding systems
+
+LEAKS IN WALL CLADDING: Wall cladding and associated accessories are DEFECTIVE if they leak under weather conditions anticipated by the National Construction Code (NCC).
+
+AESTHETIC AND PHYSICAL CONDITION (within 12 months): Wall cladding is defective if any of the following are visible from a normal viewing position (ground level or upper floor level):
+- Staining
+- Folds
+- Splits
+- Dents
+- Open joints between panels
+- Cracking
+- Other distortions
+
+STRUCTURAL AND SAFETY COMPLIANCE (within 6 years and 6 months): Wall cladding is defective if it:
+- Compromises the structural adequacy of the wall or building
+- Permits water penetration into the building
+- Compromises the health and safety of occupants
+
+VISUAL INDICATORS:
+- Visible staining, streaking, or discolouration on wall cladding = potential defect, confirm cause and timing
+- Open or gapped joints between cladding panels = defect if visible from normal viewing position
+- Dents, splits, or folds in cladding sheets = defect
+- Cladding panel appearing bowed, warped, or detached from the wall = potential structural compliance issue — higher severity than aesthetic defect
+- Water staining on internal surfaces adjacent to external cladding = potential water penetration defect
+
+---
+
+CHUNK 9: Roofing — Flashings, Overhang, and Truss Alignment
+Section: 7.1, 7.6, 7.9, 7.10, 7.11
+Topic: Roofing installation tolerances and truss compliance
+
+FLASHINGS: Parapet cappings must have a MINIMUM FALL of 3 degrees.
+
+ROOFING OVERHANG INTO GUTTER:
+- Tiled roofing: 35mm minimum to 65mm maximum
+- Sheet roofing: 50mm minimum to 65mm maximum
+
+UNDULATING TILED ROOF LINES: Within 12 months, undulations must not exceed 20mm in any 4m length.
+
+ALIGNMENT OF TRUSSES: Trusses that bow more than the LESSER OF L/200 (L = length) or 50mm ARE DEFECTIVE.
+
+PLUMBNESS OF TRUSSES: Trusses with a vertical deviation more than the LESSER OF H/50 (H = height) or 50mm ARE DEFECTIVE.
+
+VISUAL INDICATORS:
+- Roof tile overhang into gutter appearing outside 35-65mm range = confirm measurement, non-compliant if outside range
+- Visible waviness or undulation along a tiled roofline = confirm against 20mm per 4m tolerance
+- Roof truss visibly bowed or leaning = confirm against L/200 or 50mm (whichever lesser) tolerance
+- Parapet capping appearing flat or ponding water = confirm minimum 3-degree fall
+
+---
+
+CHUNK 10: Plumbing — Gutters and Downpipes
+Section: 8.2, 8.3, 8.4, 8.5
+Topic: Stormwater drainage capacity and installation tolerances
+
+DOWNPIPE CAPACITY: Downpipes are DEFECTIVE if they serve more than 12m of gutter length each.
+
+WATER RETENTION: Gutters must NOT retain a depth of more than 10mm of water (i.e. must drain effectively, not pond).
+
+GUTTER JOINTS: Joints must be lapped AT LEAST 25mm in the direction of flow.
+
+GUTTER FIXING: Gutters must be fixed at NO MORE THAN 1.2m centres.
+
+VISUAL INDICATORS:
+- Long gutter run with only one downpipe visible = confirm gutter length served does not exceed 12m per downpipe
+- Visible standing water in a gutter after rain = water retention defect, confirm depth exceeds 10mm
+- Gutter joint appearing butted rather than lapped, or lapped against the direction of water flow = non-compliant
+- Gutter fixing brackets spaced further apart than approximately 1.2m = non-compliant, risk of sagging
+
+---
+
+CHUNK 11: Windows and Doors — Clearances and Safety
+Section: 9.4, 9.5, 9.9
+Topic: Door operation tolerances and mandatory window fall protection
+
+INTERNAL DOOR CLEARANCES: Within 12 months, clearances between leaves and frames must be uniform within 1mm of documented dimensions.
+- Width clearance (leaf to frame): 2mm minimum to 4mm maximum
+- Floor clearance: 15mm maximum after floor finish installation
+
+DISTORTION OF DOORS: Within 12 months, doors must not twist or bend to the extent they cannot close, latch, or lock.
+
+WINDOW SAFETY PROTECTION — MANDATORY requirements:
+- Required in BEDROOMS if the floor is 2m OR MORE above the surface below
+- Required in ANY ROOM if the floor is 4m OR MORE above the surface below
+- Compliance threshold: devices/screens must NOT permit a 125mm sphere to pass, and must resist an outward force of 250 N
+
+VISUAL INDICATORS:
+- Door showing uneven gap around the frame = confirm against 2-4mm width clearance tolerance
+- Door visibly not closing flush or requiring force to latch = potential distortion defect
+- Bedroom window on an upper floor (2m+ above ground/surface below) without visible restrictor, screen, or locking device = critical safety non-compliance
+- Any window 4m or more above the surface below without fall protection = critical safety non-compliance regardless of room type
+- Window restrictor gap appearing wide enough to pass a fist or larger = potential non-compliance with 125mm sphere test
+
+---
+
+CHUNK 12: Plastering, Rendering and Plasterboard
+Section: 10.8, 10.9, 10.13, 10.17
+Topic: Internal wall and ceiling finish tolerances
+
+VERTICALITY OF WALL SURFACES: Must not deviate from vertical by more than 4mm within any 2m height.
+
+STRAIGHTNESS OF WALL SURFACES: Must not deviate from plane (bow) by more than 4mm within any 2m length.
+
+PLASTERBOARD FINISH: A LEVEL 4 finish is the default for gypsum lining. All joints and internal angles must have a MINIMUM OF TWO SEPARATE COATS of jointing compound.
+
+PLASTER CORNICES: Deviation from a straight line must not exceed 4mm over a length of up to 2m.
+
+VISUAL INDICATORS:
+- Wall surface appearing to lean or bow when viewed along its length = confirm against 4mm per 2m tolerance
+- Plasterboard joints visible as raised lines or shadowing under normal lighting = possible insufficient coating (less than 2 coats) — Level 4 finish not achieved
+- Cornice line appearing wavy or uneven = confirm against 4mm over 2m tolerance
+- Joint and angle finishing inspected under raking/glancing light is NOT a valid test condition — must use non-critical (diffused) light per Chunk 1 general principles
+
+---
+
+CHUNK 13: Internal Fixing — Mouldings, Cabinetry, Stone, and Bench Tops
+Section: 11.1, 11.2, 11.3, 11.4, 11.6, 11.7, 11.8, 11.9
+Topic: Joinery, cabinetry, and stone/bench top finishing tolerances (all within 12 months unless stated)
+
+GAPS IN INTERNAL FIXING: Gaps between mouldings, or between mouldings and other fixtures (at mitre/butt joints or junctions with walls/surfaces), are DEFECTIVE if they exceed 1mm in width and are visible from a normal viewing position.
+
+ALIGNMENT OF INTERNAL MOULDINGS: The faces of architraves and skirtings are defective if they are not aligned and flush at mitres and butt joints, and the misalignment is visible from a normal viewing position.
+
+ARCHITRAVE QUIRKS: The width of the quirk (setback from the edge) of each length of architrave is defective if it is inconsistent and the irregularity is visible from a normal viewing position.
+
+CABINET DOORS AND DRAWER FRONTS: Defective if misaligned or without consistent gaps between them.
+
+NATURAL STONE SURFACES: Cracking, displacement, pitting, or similar blemishes in natural stone, marble, or similar materials are defects if caused by the contractor and visible from a normal viewing position.
+
+REPLACEMENT OF NATURAL MATERIALS: Replacement stone or similar material is defective if it does not match the adjacent areas. If a match is not possible, the contractor must replace the WHOLE AREA of stone.
+
+BENCH TOP JOINTS: Bench tops (timber, laminate, natural stone, or similar) are defective if joints are not uniform, close-fitted, aligned, and in the same plane. Joints are also defective if not sealed or flush-filled with a suitable flexible sealant of matching colour.
+
+SEALING AROUND BENCHES AND FIXTURES: Junctions between bench tops and adjoining surfaces are defective if not sealed with a suitable flexible sealant of matching colour. Sealing around items like sinks and hand basins is defective if the joint leaks or is not installed per manufacturer instructions.
+
+VISUAL INDICATORS:
+- Visible gap wider than approximately 1mm at a mitre or butt joint in skirting/architrave = defect
+- Architrave or skirting faces visibly misaligned at a joint (not flush) = defect
+- Cabinet doors/drawers showing inconsistent gaps or visible misalignment = defect
+- Crack, chip, or pitting visible in a stone or marble benchtop/surface = potential defect, confirm contractor caused it
+- Replacement stone patch visibly different in colour/pattern from surrounding stone = non-compliant, may require full area replacement
+- Benchtop joint showing a visible step, gap, or unsealed line = defect
+- Gap around a sink or hand basin cutout showing no sealant or visible water staining = defect
+
+---
+
+CHUNK 14: Painting
+Section: 13.1, 13.2, 13.3, 13.4, 13.5
+Topic: Paint finish, application, durability, and cover-up standards (all within 12 months unless stated)
+
+GENERAL STANDARD: Painting is defective if it fails to comply with manufacturer installation instructions or AS/NZS 2311 — Guide to the Painting of Buildings.
+
+SURFACE FINISH DEFECTS — paintwork is defective if any of the following application defects are visible from a normal viewing position:
+- Paint runs, sags, wrinkling
+- Dust, bare or "starved" areas
+- Colour variations
+- Surface cracks
+- Irregular/coarse brush marks, sanding marks
+- Blistering
+- Non-uniform gloss levels
+
+OVER-PAINTING: Excessive over-painting of fittings, trims, skirtings, architraves, glazing, and other finished edges IS a defect.
+
+FIXINGS IN PAINTED SURFACES: Fixings or unfilled depressions caused by fixings are defects if visible from a normal viewing position.
+
+MECHANICAL AND NATURAL SURFACE DEFECTS: Holes or unfilled depressions in painted/stained timber — including surface defects from mechanical damage, gum pockets, or surface splits — are defects if visible from a normal viewing position.
+
+PAINT DURABILITY THRESHOLD: Coatings are defective if MORE THAN 10% of the painted area fails via lifting, blistering, or flaking, OR if it allows water penetration into the building. NOTE: this durability provision excludes exterior semi-transparent and clear finishes.
+
+VISUAL INDICATORS:
+- Visible paint runs, sags, or drips on a finished surface = defect
+- Visible colour variation or patchiness across a painted wall = defect
+- Paint overspray or over-painting onto glazing, hardware, or trims not meant to be painted = defect
+- Nail or screw heads visible through paint film (not filled/sanded) = defect
+- Blistering, flaking, or lifting paint = confirm extent — defect if affected area exceeds 10% of the painted surface
+- Coarse or visible brush/roller marks under normal (non-critical) lighting = defect
+- Non-uniform sheen/gloss across a single painted surface = defect
+
+---
+
+CHUNK 15: Wet Areas, Decks and Balconies — Waterproofing
+Section: 14.1, 14.3, 14.4, 14.6, 14.7, 14.8
+Topic: Internal and external waterproofing performance standards — CRITICAL high-risk defect category
+
+INTERNAL WET AREA WATERPROOFING: Defective if not installed in accordance with the NCC and AS 3740 Waterproofing of Domestic Wet Areas.
+
+SHOWER RECESS PERFORMANCE: Any shower component that allows a FULLY ENCLOSED shower recess to leak during normal usage IS defective. Within 12 months, components are defective if they crack or fail to perform as intended. Cracks in shower bases, screens, and glass ARE defects if visible from a normal viewing position.
+
+WATERPROOF DECKS AND BALCONIES: Defective if they leak, or if the waterproofing system is not installed per the NCC, AS 4654 Part 1 and Part 2, and manufacturer instructions.
+
+FREEBOARD AND SURGING: Waterproof decks and balconies are defective if they LACK a membrane and drainage system sufficient to withstand wind-driven water and surging anticipated by the NCC and AS 4654.
+
+LEAKING AND PONDING: Decks and balconies are defective if they leak, pond water, or fail to drain to the outer edge or storm water outlet. NOTE: residual water remaining SOLELY due to surface tension is NOT classified as a defect (i.e. a thin film that doesn't pool is acceptable).
+
+CALCIFICATION AND EFFLORESCENCE: Within 12 months, calcification or efflorescence caused by water from a deck/balcony is a defect if it appears on walls below/beside the deck or in the mortar joints of the tiling.
+
+VISUAL INDICATORS — this is a HIGH-VALUE category for photo detection, as waterproofing failures often show visible secondary symptoms:
+- Visible cracking in a shower base, shower screen, or shower glass = defect if visible from normal viewing distance
+- Water staining, discolouration, or damp patches on a ceiling or wall below/adjacent to a wet area = strong indicator of waterproofing failure
+- Visible ponding/standing water on a deck or balcony surface after rain (beyond a thin surface-tension film) = defect
+- Calcification (white/chalky deposits) or efflorescence on walls below or beside a deck, or in tile mortar joints = defect, confirm source is deck/balcony water
+- Deck or balcony surface not sloped toward an outlet or edge (water appears to sit rather than drain) = potential defect
+- Membrane visible during construction (pre-tile stage) that appears torn, punctured, or with unsealed penetrations (pipes, drains) = critical hold-point item — must be confirmed before tiling/cover-up proceeds
+- CONFIRM ON SITE: for any pre-tile wet area photo, whether the membrane has been tested (flood test) and signed off before cover-up — this cannot be verified after tiling is complete
+
+---
+
+CHUNK 16: Termite Management Systems
+Section: 17.2, 17.3
+Topic: Installation and inspection zone requirements for termite management
+
+INSTALLATION REQUIREMENTS: Building work is DEFECTIVE if a required termite management system is not installed in accordance with the NCC or AS 3660.1 Termite Management — New Building Work.
+
+PERIMETER INSPECTION ZONE: Most systems require a 75mm VISUAL PERIMETER INSPECTION ZONE to allow termite activity/tunnels to be identified.
+
+COMPLIANCE OF INSPECTION ZONES: Work is defective if the inspection zone is not provided in accordance with the NCC, AS 3660.1, or manufacturer instructions.
+
+VISUAL INDICATORS:
+- No visible clear perimeter strip (approximately 75mm) around the building's external ground line = potential non-compliant inspection zone — garden beds, mulch, paving, or structures built hard up against the slab edge would breach this
+- Soil, mulch, garden beds, or paving covering the slab edge with no visible inspection gap = non-compliant, obstructs termite detection
+- Visible termite shielding/collars around plumbing penetrations through a termite-managed slab = positive compliance indicator
+- Combined with Chunk 4 (termite management slabs) — confirm crack width on any termite-management slab is under 1.0mm
+
+---
+
+CHUNK 17: Floor and Wall Tiling
+Section: 12.7, 12.8
+Topic: Tile flatness, lippage, and mandatory movement joints
+
+UNEVEN TILING:
+- Flatness: surfaces must be flat within ± 4mm in 2m
+- Lippage (adjacent standard tiles): must NOT exceed 2mm
+- Lippage (polished tiles): must NOT exceed 1.5mm; for joint widths ≤ 3mm, lippage must not exceed 1mm
+
+CONTROL JOINTS — intermediate movement joints required in large tiled areas based on dimension:
+- Internal floors, no sun exposure: required if any dimension exceeds 9m
+- Internal floors, with sun exposure: required if any dimension exceeds 6m
+- External floors: required if any dimension exceeds 4.5m
+
+VISUAL INDICATORS:
+- Visible height difference between adjacent tile edges (lippage) = confirm against 1.5-2mm tolerance depending on tile type
+- Large continuous tiled area (particularly external or sun-exposed) with no visible movement/control joints = confirm dimension against 4.5m/6m/9m thresholds — likely non-compliant if joints absent
+- Tiled floor surface appearing uneven or undulating = confirm flatness against ± 4mm in 2m tolerance
+- Polished tile lippage even slightly visible = flag — tolerance is stricter (1-1.5mm) than standard tiles
+
+---
+
+CHUNK 18: Floors — Timber Flooring
+Section: 15.3, 15.8
+Topic: Timber floorboard gaps and level tolerances
+
+GAPS IN EXPOSED TIMBER FLOORING: Within 12 months, a gap is a DEFECT if:
+- More than 2mm between adjacent boards for a length of more than 1m
+- OR the total of three gaps between four consecutive boards exceeds 5mm
+
+TIMBER FLOOR LEVELS: Within 12 months, levels must not differ by more than 10mm in a room, or more than 4mm in any 2m length.
+
+VISUAL INDICATORS:
+- Visible gap between timber floorboards wider than approximately 2mm running more than 1m = potential defect, confirm measurement
+- Timber floor surface appearing uneven across a room = confirm against 10mm per room / 4mm per 2m tolerance
+- Multiple adjacent boards all showing gaps = check combined gap total across four consecutive boards against 5mm threshold
+
+---
+
+CHUNK 19: Pools and Spas, and General — Glazing Inspection
+Section: 16.3, 16.4, 18.3
+Topic: Pool dimensional tolerances and glass surface imperfection standards
+
+POOL DIMENSIONS: Departures from documented set out must not exceed L/100 or 5mm, whichever is greater.
+
+POOL DATUM: Set outs departing from documented levels by more than 40mm are DEFECTIVE.
+
+GLAZING INSPECTION: Imperfections such as scratches or scars must NOT be visible from a distance of 3m when viewed at a 90-degree angle under natural daylighting (but NOT in direct sunlight).
+
+VISUAL INDICATORS:
+- Pool shell or coping appearing significantly offset from design dimensions = confirm against L/100 or 5mm tolerance
+- Pool level/datum appearing to depart noticeably from surrounding hardscape design = confirm against 40mm tolerance
+- Scratches or marks on glass visible from close inspection but not from 3m at 90 degrees under diffused daylight = not a defect per this standard
+- Scratches or marks clearly visible from 3m under correct viewing conditions = defect
+- Glazing inspected in direct sunlight = invalid inspection condition, re-assess under diffused daylight
