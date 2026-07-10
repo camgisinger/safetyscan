@@ -50,8 +50,8 @@ export default function AppHeader({
                 {title}
               </h1>
             ) : (
-              <button onClick={() => router.push('/dashboard')}
-                style={{ flex: 1, background: 'none', border: 'none', padding: 0, display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer' }}>
+              <button onClick={() => router.push('/dashboard')} className="desktop-hidden"
+                style={{ flex: 1, background: 'none', border: 'none', padding: 0, alignItems: 'center', gap: 10, cursor: 'pointer' }}>
                 <div style={{ width: 28, height: 28, borderRadius: 7, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
                   <img src="/brand/mark-ink.svg" alt="" style={{ width: 20, height: 20 }} />
                 </div>
@@ -60,7 +60,7 @@ export default function AppHeader({
                 </span>
               </button>
             )}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }} className="desktop-hidden">
+            <div className="desktop-hidden" style={{ alignItems: 'center', gap: 8 }}>
               {rightContent}
               <ThemeToggle compact />
             </div>
