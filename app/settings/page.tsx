@@ -1,22 +1,15 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
+import { useUser } from '../../lib/UserContext'
+import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
 import { House, Layers, Folder, TriangleAlert, Building2, BookOpen, LifeBuoy, LogOut, ChevronRight, Users } from 'lucide-react'
 
-type Ctx = {
-  full_name: string | null
-  email: string | null
-  org_name: string | null
-  org_id: string | null
-  role: string | null
-  outstanding_count: number
-}
-
 function toInitials(name: string | null, email: string | null) {
   if (name) return name.trim().split(/\s+/).map(n => n[0]).join('').slice(0, 2).toUpperCase()
-  return email ? email[0].toUpperCase() : 'U'
+  return email ? email[0].toUpperCase() : '?'
 }
 
 function NavRow({ icon, label, badge, onClick }: { icon: React.ReactNode; label: string; badge?: number; onClick: () => void }) {
@@ -59,21 +52,13 @@ function Divider() {
 }
 
 export default function SettingsPage() {
-  const [ctx, setCtx] = useState<Ctx | null>(null)
-  const [ctxLoading, setCtxLoading] = useState(true)
   const [signingOut, setSigningOut] = useState(false)
   const router = useRouter()
+  const { user, orgId, orgName, role, loading } = useUser()
+  const { outstandingCount } = useCount()
 
-  useEffect(() => {
-    const init = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/login'); return }
-      const res = await fetch('/api/user/context')
-      if (res.ok) setCtx(await res.json())
-      setCtxLoading(false)
-    }
-    init()
-  }, [router])
+  const fullName = user?.user_metadata?.full_name ?? null
+  const email = user?.email ?? null
 
   const handleSignOut = async () => {
     setSigningOut(true)
@@ -88,7 +73,7 @@ export default function SettingsPage() {
       <div style={{ maxWidth: 540, margin: '0 auto', padding: '16px 0 0' }}>
 
         {/* Account card */}
-        {ctxLoading ? (
+        {loading ? (
           <div style={{
             margin: '0 18px 16px',
             background: 'var(--surf)', border: '1.5px solid var(--border-card)',
@@ -114,20 +99,20 @@ export default function SettingsPage() {
               display: 'grid', placeItems: 'center',
               fontSize: 17, fontWeight: 700, color: '#1B1A12',
             }}>
-              {toInitials(ctx?.full_name ?? null, ctx?.email ?? null)}
+              {toInitials(fullName, email)}
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontSize: 15.5, fontWeight: 700, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', letterSpacing: '-0.02em' }}>
-                {ctx?.full_name || ctx?.email || ''}
+                {fullName || email || ''}
               </div>
-              {ctx?.email && ctx?.full_name && (
+              {email && fullName && (
                 <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 2 }}>
-                  {ctx.email}
+                  {email}
                 </div>
               )}
-              {ctx?.org_name && (
+              {orgName && (
                 <div style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>
-                  {ctx.org_name}{ctx?.role && ` · ${ctx.role}`}
+                  {orgName}{role && ` · ${role}`}
                 </div>
               )}
             </div>
@@ -142,14 +127,14 @@ export default function SettingsPage() {
           <Divider />
           <NavRow icon={<Folder size={18} strokeWidth={1.75} />} label="Sites" onClick={() => router.push('/sites')} />
           <Divider />
-          <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Issues" badge={ctx?.outstanding_count ?? 0} onClick={() => router.push('/issues')} />
+          <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Issues" badge={outstandingCount ?? 0} onClick={() => router.push('/issues')} />
         </Section>
 
         {/* Organisation */}
-        {ctx?.org_name && (
+        {!loading && orgName && (
           <Section title="Organisation">
-            <NavRow icon={<Building2 size={18} strokeWidth={1.75} />} label={ctx.org_name} onClick={() => router.push('/org')} />
-            {ctx.role === 'admin' && (
+            <NavRow icon={<Building2 size={18} strokeWidth={1.75} />} label={orgName} onClick={() => router.push('/org')} />
+            {role === 'admin' && (
               <>
                 <Divider />
                 <NavRow icon={<Users size={18} strokeWidth={1.75} />} label="Members" onClick={() => router.push('/org?tab=members')} />
