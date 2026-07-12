@@ -9,7 +9,9 @@ type Ctx = {
   full_name: string | null
   email: string | null
   org_name: string | null
+  org_id: string | null
   role: string | null
+  outstanding_count: number
 }
 
 function toInitials(name: string | null, email: string | null) {
@@ -59,7 +61,6 @@ function Divider() {
 export default function SettingsPage() {
   const [ctx, setCtx] = useState<Ctx | null>(null)
   const [ctxLoading, setCtxLoading] = useState(true)
-  const [outstandingCount, setOutstandingCount] = useState(0)
   const [signingOut, setSigningOut] = useState(false)
   const router = useRouter()
 
@@ -67,15 +68,8 @@ export default function SettingsPage() {
     const init = async () => {
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) { router.push('/login'); return }
-      const [ctxRes, issuesRes] = await Promise.all([
-        fetch('/api/user/context'),
-        fetch('/api/issues'),
-      ])
-      if (ctxRes.ok) setCtx(await ctxRes.json())
-      if (issuesRes.ok) {
-        const d = await issuesRes.json()
-        setOutstandingCount(d.outstanding?.length ?? 0)
-      }
+      const res = await fetch('/api/user/context')
+      if (res.ok) setCtx(await res.json())
       setCtxLoading(false)
     }
     init()
@@ -148,7 +142,7 @@ export default function SettingsPage() {
           <Divider />
           <NavRow icon={<Folder size={18} strokeWidth={1.75} />} label="Sites" onClick={() => router.push('/sites')} />
           <Divider />
-          <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Issues" badge={outstandingCount} onClick={() => router.push('/issues')} />
+          <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Issues" badge={ctx?.outstanding_count ?? 0} onClick={() => router.push('/issues')} />
         </Section>
 
         {/* Organisation */}
