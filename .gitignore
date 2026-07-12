@@ -42,6 +42,9 @@ upload_chunks.mjs
 # vercel
 .vercel
 
+# MCP config contains credentials — never commit
+.mcp.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -2,6 +2,7 @@
 import { usePathname, useRouter } from 'next/navigation'
 import { House, Layers, Folder, TriangleAlert, Camera } from 'lucide-react'
 import { useUser } from '../lib/UserContext'
+import { useCount } from '../lib/CountContext'
 import ThemeToggle from './ThemeToggle'
 
 type NavId = 'home' | 'scans' | 'sites' | 'issues'
@@ -38,6 +39,7 @@ export default function DesktopSidebar() {
   const pathname = usePathname()
   const router   = useRouter()
   const { user } = useUser()
+  const { outstandingCount } = useCount()
 
   const fullName = user?.user_metadata?.full_name ?? null
   const email    = user?.email ?? null
@@ -85,7 +87,7 @@ export default function DesktopSidebar() {
       <nav style={{ padding: '0 8px', display: 'flex', flexDirection: 'column', gap: 2 }}>
         {NAV.map(({ id, label, href, Icon }) => {
           const on    = active === id
-          const badge = 0
+          const badge = id === 'issues' ? (outstandingCount ?? 0) : 0
           return (
             <button key={id} onClick={() => router.push(href)} style={{
               width: '100%', height: 38, borderRadius: 10,

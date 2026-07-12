@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { Suspense } from 'react'
 import { supabase } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
+import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
 import { Shield, Ruler, Leaf, Check, ChevronRight } from 'lucide-react'
 
@@ -115,6 +116,7 @@ function IssuesContent() {
   const [loading, setLoading] = useState(true)
   const router = useRouter()
   const { user, loading: userLoading } = useUser()
+  const { adjustCount } = useCount()
 
   useEffect(() => {
     if (userLoading) return
@@ -163,7 +165,8 @@ function IssuesContent() {
 
   const removeOutstanding = useCallback((scanId: string, module: string, findingId: string) => {
     setOutstanding(prev => prev.filter(f => !(f.scan_id === scanId && f.module === module && f.finding_id === findingId)))
-  }, [])
+    adjustCount(-1)
+  }, [adjustCount])
 
   if (loading) return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 48 }}>

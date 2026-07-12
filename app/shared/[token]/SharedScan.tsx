@@ -17,13 +17,12 @@ export default function SharedScan({ token }: { token: string }) {
     setIsDark(localStorage.getItem('theme') !== 'light')
     const load = async () => {
       const { data: scanData, error } = await supabase
-        .from('scans').select('*').eq('share_token', token).eq('share_enabled', true).single()
+        .from('scans').select('*, scan_modules(*)').eq('share_token', token).eq('share_enabled', true).single()
       if (error || !scanData) { setNotFound(true); setLoading(false); return }
-      const { data: modulesData } = await supabase
-        .from('scan_modules').select('*').eq('scan_id', scanData.id)
+      const modulesData: any[] = (scanData as any).scan_modules || []
       setScan(scanData)
       const modOrder = ['safety', 'quality', 'environmental']
-      const sorted = (modulesData || []).sort(
+      const sorted = modulesData.sort(
         (a: any, b: any) => modOrder.indexOf(a.module) - modOrder.indexOf(b.module)
       )
       setScanModules(sorted)

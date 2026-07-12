@@ -13,15 +13,16 @@ export async function GET() {
     const user = await getServerUser()
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-    const { data: mem } = await serviceRole
-      .from('organisation_members')
-      .select('org_id, role, organisations!inner(name)')
-      .eq('user_id', user.id)
-      .limit(1)
-      .single()
-
-    const { data: count } = await serviceRole
-      .rpc('get_outstanding_findings_count', { p_user_id: user.id, p_site_id: null })
+    const [{ data: mem }, { data: count }] = await Promise.all([
+      serviceRole
+        .from('organisation_members')
+        .select('org_id, role, organisations!inner(name)')
+        .eq('user_id', user.id)
+        .limit(1)
+        .single(),
+      serviceRole
+        .rpc('get_outstanding_findings_count', { p_user_id: user.id, p_site_id: null }),
+    ])
 
     return NextResponse.json({
       org_id:            mem?.org_id ?? null,

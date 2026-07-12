@@ -4,7 +4,8 @@ import "./globals.css";
 import "./styles/tokens.css";
 import BottomNav from "../components/BottomNav";
 import DesktopSidebar from "../components/DesktopSidebar";
-import { UserProvider } from "../lib/UserContext";
+import { UserProvider } from "../lib/UserContext"
+import { CountProvider } from "../lib/CountContext";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistMono = Geist_Mono({
@@ -56,13 +57,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body style={{ minHeight: '100svh', background: 'var(--bg)' }}>
         <UserProvider>
-          <div style={{ display: 'flex', minHeight: '100svh' }}>
-            <DesktopSidebar />
-            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
-              {children}
+          <CountProvider>
+            <div style={{ display: 'flex', minHeight: '100svh' }}>
+              <DesktopSidebar />
+              <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+                {children}
+              </div>
             </div>
-          </div>
-          <BottomNav />
+            <BottomNav />
+          </CountProvider>
         </UserProvider>
         <SpeedInsights />
       </body>

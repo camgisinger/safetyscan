@@ -72,17 +72,19 @@ export default function SitesPage() {
   return (
     <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
       <AppHeader title="Sites" rightContent={
-        <button onClick={() => setShowNewSheet(true)} style={{
-          height: 34, padding: '0 14px', borderRadius: 'var(--r-control-sm)',
-          background: 'var(--amber)', border: 'none',
-          color: '#1B1A12', fontSize: 13, fontWeight: 700,
-          cursor: 'pointer', fontFamily: 'inherit',
-          display: 'flex', alignItems: 'center', gap: 6,
-          boxShadow: 'var(--shadow-btn)',
-        }}>
-          <FolderPlus size={14} strokeWidth={2.2} />
-          New site
-        </button>
+        sites.length > 0 ? (
+          <button onClick={() => setShowNewSheet(true)} style={{
+            height: 34, padding: '0 14px', borderRadius: 'var(--r-control-sm)',
+            background: 'var(--amber)', border: 'none',
+            color: '#1B1A12', fontSize: 13, fontWeight: 700,
+            cursor: 'pointer', fontFamily: 'inherit',
+            display: 'flex', alignItems: 'center', gap: 6,
+            boxShadow: 'var(--shadow-btn)',
+          }}>
+            <FolderPlus size={14} strokeWidth={2.2} />
+            New site
+          </button>
+        ) : undefined
       } />
 
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '12px 18px 0' }}>
@@ -139,7 +141,9 @@ export default function SitesPage() {
                   borderRadius: 'var(--r-control)', fontFamily: 'inherit',
                   fontSize: 14, fontWeight: 700, color: '#1B1A12',
                   cursor: 'pointer', boxShadow: 'var(--shadow-btn)',
+                  display: 'flex', alignItems: 'center', gap: 8,
                 }}>
+                  <FolderPlus size={16} strokeWidth={2.2} />
                   New site
                 </button>
               </>
@@ -215,12 +219,13 @@ export default function SitesPage() {
       {/* New site bottom sheet */}
       {showNewSheet && (
         <>
-          <div onClick={() => setShowNewSheet(false)} style={{ position: 'fixed', inset: 0, background: 'var(--scrim)', zIndex: 40 }} />
+          <div onClick={() => setShowNewSheet(false)} style={{ position: 'fixed', inset: 0, background: 'var(--scrim)', zIndex: 100 }} />
           <div style={{
-            position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 50,
+            position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 110,
             background: 'var(--surf-sheet)', borderRadius: 'var(--r-sheet) var(--r-sheet) 0 0',
             boxShadow: 'var(--shadow-sheet)',
-            padding: '0 20px 40px',
+            padding: '0 20px',
+            paddingBottom: 'max(32px, env(safe-area-inset-bottom, 32px))',
             animation: 'slideUpIn 0.28s cubic-bezier(0.2,0.7,0.3,1) forwards',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 0 16px' }}>

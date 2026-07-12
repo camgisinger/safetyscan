@@ -1,8 +1,9 @@
 'use client'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Scan } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
+import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
 import { Camera, ChevronRight, TriangleAlert } from 'lucide-react'
 
@@ -74,39 +75,12 @@ function ScanRow({ scan, siteName, onClick }: { scan: Scan; siteName?: string; o
 export default function DashboardPage() {
   const [scans, setScans] = useState<Scan[]>([])
   const [sites, setSites] = useState<{ id: string; name: string }[]>([])
-  const [outstandingCount, setOutstandingCount] = useState<number | null>(null)
-  const [scansWithIssues, setScansWithIssues] = useState<number | null>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
   const { user, loading: userLoading } = useUser()
+  const { outstandingCount, scansWithIssues } = useCount()
 
   const userName = user?.user_metadata?.full_name?.split(' ')[0] ?? null
-
-  const fetchCounts = useCallback(() => {
-    supabase
-      .from('scan_modules')
-      .select('findings, findings_state, scan_id, scans!inner(id)')
-      .then(({ data: mods }) => {
-        let outstanding = 0
-        const scanIdsWithIssues = new Set<string>()
-        for (const mod of (mods || [])) {
-          const findings: any[] = (mod as any).findings || []
-          const state: Record<string, string> = (mod as any).findings_state || {}
-          const scanId: string = (mod as any).scan_id
-          let modHasIssues = false
-          for (const f of findings) {
-            if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
-            if (f.type === 'critical' || f.type === 'warning' || f.type === 'action') {
-              outstanding++
-              modHasIssues = true
-            }
-          }
-          if (modHasIssues && scanId) scanIdsWithIssues.add(scanId)
-        }
-        setOutstandingCount(outstanding)
-        setScansWithIssues(scanIdsWithIssues.size)
-      })
-  }, [])
 
   useEffect(() => {
     if (userLoading) return
@@ -120,15 +94,9 @@ export default function DashboardPage() {
       setScans(scansRes.data || [])
       setSites((sitesRes.data || []) as { id: string; name: string }[])
       setLoading(false)
-      fetchCounts()
     }
     init()
-
-    // Refetch counts whenever the user switches back to this tab
-    const onVisible = () => { if (document.visibilityState === 'visible') fetchCounts() }
-    document.addEventListener('visibilitychange', onVisible)
-    return () => document.removeEventListener('visibilitychange', onVisible)
-  }, [user, userLoading, router, fetchCounts])
+  }, [user, userLoading, router])
 
   if (loading) return (
     <div style={{ minHeight: '100svh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

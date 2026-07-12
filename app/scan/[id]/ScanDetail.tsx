@@ -1,8 +1,9 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { supabase, Site, Scan } from '../../../lib/supabase'
+import { supabase, Scan } from '../../../lib/supabase'
 import { useOrg } from '../../../lib/useOrg'
+import { useCount } from '../../../lib/CountContext'
 import { convertToJpeg } from '../../../components/PhotoResultCard'
 import AppHeader from '../../../components/AppHeader'
 import LegislationList from '../../../components/LegislationList'
@@ -250,7 +251,7 @@ function FindingRow({ f, state, onMark, onUndo, isLegacy }: {
 
 export default function ScanDetail({ id }: { id: string }) {
   const [scan, setScan] = useState<Scan | null>(null)
-  const [sites, setSites] = useState<Site[]>([])
+  const [sites, setSites] = useState<{ id: string; name: string }[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [checklist, setChecklist] = useState<any[]>([])
@@ -288,6 +289,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const photoStripRef = useRef<HTMLDivElement>(null)
   const { orgId } = useOrg()
+  const { adjustCount } = useCount()
   const router = useRouter()
 
   useEffect(() => {
@@ -296,7 +298,7 @@ export default function ScanDetail({ id }: { id: string }) {
       if (!user) { router.push('/login'); return }
       const [scanRes, sitesRes, modulesRes] = await Promise.all([
         supabase.from('scans').select('*').eq('id', id).single(),
-        supabase.from('sites').select('*').eq('archived', false).order('name', { ascending: true }),
+        supabase.from('sites').select('id, name').eq('archived', false).order('name', { ascending: true }),
         supabase.from('scan_modules').select('*').eq('scan_id', id),
       ])
       if (scanRes.error) { setError(`Could not load scan: ${scanRes.error.message}`); setLoading(false); return }
@@ -442,6 +444,7 @@ export default function ScanDetail({ id }: { id: string }) {
       const newFs = { ...(m.findings_state || {}), [findingId]: state }
       return { ...m, findings_state: newFs, status: calcModuleStatus(m.findings || [], newFs) }
     }))
+    adjustCount(-1)
     fetch('/api/finding-state', {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
       keepalive: true,
@@ -455,6 +458,7 @@ export default function ScanDetail({ id }: { id: string }) {
       const newFs = { ...(m.findings_state || {}) }; delete newFs[findingId]
       return { ...m, findings_state: newFs, status: calcModuleStatus(m.findings || [], newFs) }
     }))
+    adjustCount(+1)
     fetch('/api/finding-state', {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
       keepalive: true,
