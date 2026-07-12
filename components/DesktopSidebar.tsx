@@ -124,7 +124,7 @@ export default function DesktopSidebar() {
 
       {/* Account row */}
       <div style={{ borderTop: '1.5px solid var(--div)', padding: '10px 8px 16px' }}>
-        <button onClick={() => router.push('/more')} style={{
+        <button onClick={() => router.push('/profile')} style={{
           width: '100%', padding: '8px 12px', borderRadius: 10,
           display: 'flex', alignItems: 'center', gap: 10,
           background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
