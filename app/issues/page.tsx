@@ -44,6 +44,7 @@ function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string
     fetch('/api/finding-state', {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
       body: JSON.stringify({ scan_id: f.scan_id, module: f.module, finding_id: f.finding_id, state }),
     })
   }

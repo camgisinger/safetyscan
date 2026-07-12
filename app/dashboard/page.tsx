@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Scan } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
@@ -82,12 +82,37 @@ export default function DashboardPage() {
 
   const userName = user?.user_metadata?.full_name?.split(' ')[0] ?? null
 
+  const fetchCounts = useCallback(() => {
+    supabase
+      .from('scan_modules')
+      .select('findings, findings_state, scan_id, scans!inner(id)')
+      .then(({ data: mods }) => {
+        let outstanding = 0
+        const scanIdsWithIssues = new Set<string>()
+        for (const mod of (mods || [])) {
+          const findings: any[] = (mod as any).findings || []
+          const state: Record<string, string> = (mod as any).findings_state || {}
+          const scanId: string = (mod as any).scan_id
+          let modHasIssues = false
+          for (const f of findings) {
+            if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
+            if (f.type === 'critical' || f.type === 'warning' || f.type === 'action') {
+              outstanding++
+              modHasIssues = true
+            }
+          }
+          if (modHasIssues && scanId) scanIdsWithIssues.add(scanId)
+        }
+        setOutstandingCount(outstanding)
+        setScansWithIssues(scanIdsWithIssues.size)
+      })
+  }, [])
+
   useEffect(() => {
     if (userLoading) return
     if (!user) { router.push('/login'); return }
 
     const init = async () => {
-      // Load page content immediately
       const [scansRes, sitesRes] = await Promise.all([
         supabase.from('scans').select('*').order('created_at', { ascending: false }).limit(20),
         supabase.from('sites').select('id, name').order('name'),
@@ -95,34 +120,15 @@ export default function DashboardPage() {
       setScans(scansRes.data || [])
       setSites((sitesRes.data || []) as { id: string; name: string }[])
       setLoading(false)
-
-      // Load counts non-blocking after page is shown
-      supabase
-        .from('scan_modules')
-        .select('findings, findings_state, scan_id, scans!inner(id)')
-        .then(({ data: mods }) => {
-          let outstanding = 0
-          const scanIdsWithIssues = new Set<string>()
-          for (const mod of (mods || [])) {
-            const findings: any[] = (mod as any).findings || []
-            const state: Record<string, string> = (mod as any).findings_state || {}
-            const scanId: string = (mod as any).scan_id
-            let modHasIssues = false
-            for (const f of findings) {
-              if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
-              if (f.type === 'critical' || f.type === 'warning' || f.type === 'action') {
-                outstanding++
-                modHasIssues = true
-              }
-            }
-            if (modHasIssues && scanId) scanIdsWithIssues.add(scanId)
-          }
-          setOutstandingCount(outstanding)
-          setScansWithIssues(scanIdsWithIssues.size)
-        })
+      fetchCounts()
     }
     init()
-  }, [user, userLoading, router])
+
+    // Refetch counts whenever the user switches back to this tab
+    const onVisible = () => { if (document.visibilityState === 'visible') fetchCounts() }
+    document.addEventListener('visibilitychange', onVisible)
+    return () => document.removeEventListener('visibilitychange', onVisible)
+  }, [user, userLoading, router, fetchCounts])
 
   if (loading) return (
     <div style={{ minHeight: '100svh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

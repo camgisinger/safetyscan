@@ -444,6 +444,7 @@ export default function ScanDetail({ id }: { id: string }) {
     }))
     fetch('/api/finding-state', {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
       body: JSON.stringify({ scan_id: id, module: activeModule, finding_id: findingId, state }),
     })
   }
@@ -456,6 +457,7 @@ export default function ScanDetail({ id }: { id: string }) {
     }))
     fetch('/api/finding-state', {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
       body: JSON.stringify({ scan_id: id, module: activeModule, finding_id: findingId, state: null }),
     })
   }
