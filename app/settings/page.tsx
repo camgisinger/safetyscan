@@ -58,6 +58,7 @@ function Divider() {
 
 export default function SettingsPage() {
   const [ctx, setCtx] = useState<Ctx | null>(null)
+  const [ctxLoading, setCtxLoading] = useState(true)
   const [outstandingCount, setOutstandingCount] = useState(0)
   const [signingOut, setSigningOut] = useState(false)
   const router = useRouter()
@@ -75,6 +76,7 @@ export default function SettingsPage() {
         const d = await issuesRes.json()
         setOutstandingCount(d.outstanding?.length ?? 0)
       }
+      setCtxLoading(false)
     }
     init()
   }, [router])
@@ -92,36 +94,51 @@ export default function SettingsPage() {
       <div style={{ maxWidth: 540, margin: '0 auto', padding: '16px 0 0' }}>
 
         {/* Account card */}
-        <div style={{
-          margin: '0 18px 16px',
-          background: 'var(--surf)', border: '1.5px solid var(--border-card)',
-          borderRadius: 'var(--r-card)', padding: '16px 18px',
-          display: 'flex', alignItems: 'center', gap: 14,
-        }}>
+        {ctxLoading ? (
           <div style={{
-            width: 46, height: 46, borderRadius: '50%',
-            background: 'var(--amber)', flexShrink: 0,
-            display: 'grid', placeItems: 'center',
-            fontSize: 17, fontWeight: 700, color: '#1B1A12',
+            margin: '0 18px 16px',
+            background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+            borderRadius: 'var(--r-card)', padding: '16px 18px',
+            display: 'flex', alignItems: 'center', gap: 14, height: 78,
           }}>
-            {toInitials(ctx?.full_name ?? null, ctx?.email ?? null)}
-          </div>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontSize: 15.5, fontWeight: 700, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', letterSpacing: '-0.02em' }}>
-              {ctx?.full_name || ctx?.email || '…'}
+            <div style={{ width: 46, height: 46, borderRadius: '50%', background: 'var(--surf-inset)', flexShrink: 0, animation: 'pulse 1.4s ease-in-out infinite' }} />
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <div style={{ height: 14, width: '55%', borderRadius: 6, background: 'var(--surf-inset)', animation: 'pulse 1.4s ease-in-out infinite' }} />
+              <div style={{ height: 11, width: '75%', borderRadius: 6, background: 'var(--surf-inset)', animation: 'pulse 1.4s ease-in-out infinite 0.15s' }} />
             </div>
-            {ctx?.email && ctx?.full_name && (
-              <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 2 }}>
-                {ctx.email}
-              </div>
-            )}
-            {ctx?.org_name && (
-              <div style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>
-                {ctx.org_name}{ctx?.role && ` · ${ctx.role}`}
-              </div>
-            )}
           </div>
-        </div>
+        ) : (
+          <div style={{
+            margin: '0 18px 16px',
+            background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+            borderRadius: 'var(--r-card)', padding: '16px 18px',
+            display: 'flex', alignItems: 'center', gap: 14,
+          }}>
+            <div style={{
+              width: 46, height: 46, borderRadius: '50%',
+              background: 'var(--amber)', flexShrink: 0,
+              display: 'grid', placeItems: 'center',
+              fontSize: 17, fontWeight: 700, color: '#1B1A12',
+            }}>
+              {toInitials(ctx?.full_name ?? null, ctx?.email ?? null)}
+            </div>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontSize: 15.5, fontWeight: 700, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', letterSpacing: '-0.02em' }}>
+                {ctx?.full_name || ctx?.email || ''}
+              </div>
+              {ctx?.email && ctx?.full_name && (
+                <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 2 }}>
+                  {ctx.email}
+                </div>
+              )}
+              {ctx?.org_name && (
+                <div style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>
+                  {ctx.org_name}{ctx?.role && ` · ${ctx.role}`}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Get around */}
         <Section title="Get around">
