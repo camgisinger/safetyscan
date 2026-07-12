@@ -3,6 +3,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "../lib/supabase";
 import { useOrg } from "../lib/useOrg";
+import { useUser } from "../lib/UserContext";
 import { convertToJpeg } from "./PhotoResultCard";
 import AppHeader from "./AppHeader";
 import { Camera, ChevronRight } from "lucide-react";
@@ -41,6 +42,7 @@ export default function SiteSpotter() {
   const [currentUser, setCurrentUser] = useState(null);
   const [sites, setSites] = useState([]);
   const { orgId } = useOrg();
+  const { user: contextUser } = useUser();
   const [siteDropdownValue, setSiteDropdownValue] = useState("none");
   const [newSiteName, setNewSiteName] = useState("");
   const fileRef = useRef();
@@ -56,14 +58,15 @@ export default function SiteSpotter() {
     return () => clearInterval(msgTimer);
   }, [analysing]);
 
+  // Sync user from context (already loaded at app boot — no extra auth round-trip)
   useEffect(() => {
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      setCurrentUser(user);
-      if (user) {
-        supabase.from('sites').select('id, name').eq('archived', false).order('name', { ascending: true })
-          .then(({ data }) => setSites(data || []));
-      }
-    });
+    if (!contextUser) return;
+    setCurrentUser(contextUser);
+    supabase.from('sites').select('id, name').eq('archived', false).order('name', { ascending: true })
+      .then(({ data }) => setSites(data || []));
+  }, [contextUser]);
+
+  useEffect(() => {
     const urlSiteId = searchParams.get('site_id');
     if (urlSiteId) setSiteDropdownValue(urlSiteId);
   }, [searchParams]);

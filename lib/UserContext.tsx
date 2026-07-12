@@ -24,7 +24,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
         .select('org_id')
         .eq('user_id', user.id)
         .limit(1)
-        .single()
+        .maybeSingle()
         .then(({ data }) => {
           setOrgId(data?.org_id ?? null)
           setLoading(false)
