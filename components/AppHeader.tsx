@@ -60,8 +60,12 @@ export default function AppHeader({
                 </span>
               </button>
             )}
+            {rightContent && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                {rightContent}
+              </div>
+            )}
             <div className="desktop-hidden" style={{ alignItems: 'center', gap: 8 }}>
-              {rightContent}
               <ThemeToggle compact />
             </div>
           </>

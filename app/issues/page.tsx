@@ -6,7 +6,7 @@ import { supabase } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
-import { Shield, Ruler, Leaf, Check, ChevronRight } from 'lucide-react'
+import { Shield, Ruler, Leaf, Check, ChevronRight, CheckSquare } from 'lucide-react'
 
 type Finding = {
   finding_id: string
@@ -34,7 +34,14 @@ function moduleColor(module: string) {
   return 'var(--amber)'
 }
 
-function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string, module: string, findingId: string, state: string) => void; onView: () => void }) {
+function OutstandingRow({ f, onMark, onView, selectMode, selected, onToggle }: {
+  f: Finding
+  onMark: (id: string, module: string, findingId: string, state: string) => void
+  onView: () => void
+  selectMode: boolean
+  selected: boolean
+  onToggle: () => void
+}) {
   const isCritical = f.type === 'critical'
   const isAction = f.type === 'action'
   const d = new Date(f.created_at)
@@ -56,12 +63,28 @@ function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string
   const badgeLabel = isCritical ? 'Critical' : isAction ? 'Confirm on site' : 'Warning'
 
   return (
-    <div style={{
+    <div onClick={selectMode ? onToggle : undefined} style={{
       display: 'flex', alignItems: 'stretch',
-      background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+      background: selected ? 'var(--brand-tint)' : 'var(--surf)',
+      border: `1.5px solid ${selected ? 'var(--amber)' : 'var(--border-card)'}`,
       borderRadius: 'var(--r-card)', overflow: 'hidden', marginBottom: 8,
+      cursor: selectMode ? 'pointer' : 'default',
+      transition: 'border-color 0.15s, background 0.15s',
     }}>
-      <div style={{ width: 4, flexShrink: 0, background: borderColor }} />
+      {selectMode ? (
+        <div style={{ width: 48, flexShrink: 0, display: 'grid', placeItems: 'center' }}>
+          <div style={{
+            width: 22, height: 22, borderRadius: 6,
+            border: `1.5px solid ${selected ? 'var(--amber)' : 'var(--border-card)'}`,
+            background: selected ? 'var(--amber)' : 'transparent',
+            display: 'grid', placeItems: 'center', transition: 'all 0.15s',
+          }}>
+            {selected && <Check size={13} strokeWidth={2.5} color="#1B1A12" />}
+          </div>
+        </div>
+      ) : (
+        <div style={{ width: 4, flexShrink: 0, background: borderColor }} />
+      )}
       <div style={{ flex: 1, padding: '12px 14px', minWidth: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 5 }}>
           <span style={{ color: moduleColor(f.module), display: 'flex', alignItems: 'center' }}>
@@ -80,43 +103,85 @@ function OutstandingRow({ f, onMark, onView }: { f: Finding; onMark: (id: string
         <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)' }}>
           {[f.scan_name, f.site_name].filter(Boolean).join(' · ')}
         </div>
-        <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
-          <button onClick={() => handleMark('done')} style={{
-            display: 'flex', alignItems: 'center', gap: 5,
-            height: 30, padding: '0 12px', borderRadius: 'var(--r-control-sm)',
-            background: 'var(--pass-tint)', border: '1px solid var(--pass-border)',
-            color: 'var(--pass-deep)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
-          }}>
-            <Check size={12} strokeWidth={2.5} /> Mark done
-          </button>
-          <button onClick={() => handleMark('dismissed')} style={{
-            display: 'flex', alignItems: 'center', gap: 5,
-            height: 30, padding: '0 12px', borderRadius: 'var(--r-control-sm)',
-            background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
-            color: 'var(--text-muted)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
-          }}>
-            Dismiss
-          </button>
-          <button onClick={onView} style={{
-            height: 30, padding: '0 10px', borderRadius: 'var(--r-control-sm)',
-            background: 'transparent', border: '1.5px solid var(--border-card)',
-            color: 'var(--text-muted)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
-            display: 'flex', alignItems: 'center', gap: 4,
-          }}>
-            View <ChevronRight size={11} strokeWidth={2.2} />
-          </button>
-        </div>
+        {!selectMode && (
+          <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
+            <button onClick={() => handleMark('done')} style={{
+              display: 'flex', alignItems: 'center', gap: 5,
+              height: 30, padding: '0 12px', borderRadius: 'var(--r-control-sm)',
+              background: 'var(--pass-tint)', border: '1px solid var(--pass-border)',
+              color: 'var(--pass-deep)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+            }}>
+              <Check size={12} strokeWidth={2.5} /> Mark done
+            </button>
+            <button onClick={() => handleMark('dismissed')} style={{
+              display: 'flex', alignItems: 'center', gap: 5,
+              height: 30, padding: '0 12px', borderRadius: 'var(--r-control-sm)',
+              background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
+              color: 'var(--text-muted)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+            }}>
+              Dismiss
+            </button>
+            <button onClick={onView} style={{
+              height: 30, padding: '0 10px', borderRadius: 'var(--r-control-sm)',
+              background: 'transparent', border: '1.5px solid var(--border-card)',
+              color: 'var(--text-muted)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', alignItems: 'center', gap: 4,
+            }}>
+              View <ChevronRight size={11} strokeWidth={2.2} />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )
 }
 
-function IssuesContent() {
+function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromParent: boolean; onExitSelect: () => void }) {
   const [outstanding, setOutstanding] = useState<Finding[]>([])
   const [loading, setLoading] = useState(true)
+  const [selected, setSelected] = useState<Set<string>>(new Set())
+  const [bulkWorking, setBulkWorking] = useState(false)
+  const selectMode = selectModeFromParent
   const router = useRouter()
   const { user, loading: userLoading } = useUser()
   const { adjustCount } = useCount()
+
+  useEffect(() => { if (!selectModeFromParent) setSelected(new Set()) }, [selectModeFromParent])
+
+  const selKey = (f: Finding) => `${f.scan_id}:${f.module}:${f.finding_id}`
+
+  const toggleSelect = (f: Finding) => {
+    const k = selKey(f)
+    setSelected(prev => { const n = new Set(prev); n.has(k) ? n.delete(k) : n.add(k); return n })
+  }
+
+  const toggleAll = () => {
+    if (selected.size === outstanding.length) {
+      setSelected(new Set())
+    } else {
+      setSelected(new Set(outstanding.map(selKey)))
+    }
+  }
+
+  const exitSelect = () => { onExitSelect(); setSelected(new Set()) }
+
+  const handleBulkMark = async (state: 'done' | 'dismissed') => {
+    const targets = outstanding.filter(f => selected.has(selKey(f)))
+    if (!targets.length) return
+    setBulkWorking(true)
+    setOutstanding(prev => prev.filter(f => !selected.has(selKey(f))))
+    adjustCount(-targets.length)
+    exitSelect()
+    await Promise.all(targets.map(f =>
+      fetch('/api/finding-state', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        keepalive: true,
+        body: JSON.stringify({ scan_id: f.scan_id, module: f.module, finding_id: f.finding_id, state }),
+      })
+    ))
+    setBulkWorking(false)
+  }
 
   useEffect(() => {
     if (userLoading) return
@@ -175,35 +240,103 @@ function IssuesContent() {
   )
 
   const allClearOutstanding = !loading && outstanding.length === 0
+  const allSelected = selected.size === outstanding.length && outstanding.length > 0
 
   return (
-    <div style={{ maxWidth: 720, margin: '0 auto', padding: '14px 18px' }}>
-      {allClearOutstanding ? (
-        <div style={{ textAlign: 'center', padding: '48px 24px' }}>
-          <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'var(--pass-tint)', display: 'grid', placeItems: 'center', margin: '0 auto 16px' }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="var(--pass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+    <>
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '14px 18px', paddingBottom: selectMode && selected.size > 0 ? 140 : 14 }}>
+        {allClearOutstanding ? (
+          <div style={{ textAlign: 'center', padding: '48px 24px' }}>
+            <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'var(--pass-tint)', display: 'grid', placeItems: 'center', margin: '0 auto 16px' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="var(--pass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </div>
+            <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)', marginBottom: 6 }}>All clear</div>
+            <div style={{ fontSize: 13.5, fontWeight: 500, color: 'var(--text-muted)' }}>No outstanding issues right now</div>
           </div>
-          <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)', marginBottom: 6 }}>All clear</div>
-          <div style={{ fontSize: 13.5, fontWeight: 500, color: 'var(--text-muted)' }}>No outstanding issues right now</div>
+        ) : (
+          <>
+            {selectMode && outstanding.length > 1 && (
+              <button onClick={toggleAll} style={{
+                display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10,
+                background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
+                fontSize: 12, fontWeight: 600, color: 'var(--amber)', padding: '2px 0',
+              }}>
+                <div style={{
+                  width: 20, height: 20, borderRadius: 5,
+                  border: `1.5px solid ${allSelected ? 'var(--amber)' : 'var(--border-card)'}`,
+                  background: allSelected ? 'var(--amber)' : 'transparent',
+                  display: 'grid', placeItems: 'center', flexShrink: 0,
+                }}>
+                  {allSelected && <Check size={11} strokeWidth={2.5} color="#1B1A12" />}
+                </div>
+                {allSelected ? 'Deselect all' : 'Select all'}
+              </button>
+            )}
+            {outstanding.map(f => (
+              <OutstandingRow key={`${f.scan_id}-${f.module}-${f.finding_id}`} f={f}
+                onMark={(scanId, module, findingId) => removeOutstanding(scanId, module, findingId)}
+                onView={() => router.push(`/scan/${f.scan_id}`)}
+                selectMode={selectMode}
+                selected={selected.has(selKey(f))}
+                onToggle={() => toggleSelect(f)}
+              />
+            ))}
+          </>
+        )}
+      </div>
+
+      {/* Bulk action bar */}
+      {selectMode && selected.size > 0 && (
+        <div style={{
+          position: 'fixed', bottom: 72, left: 0, right: 0, zIndex: 20,
+          padding: '12px 18px', background: 'var(--surf)',
+          borderTop: '1.5px solid var(--border-card)',
+          boxShadow: '0 -4px 20px rgba(0,0,0,0.12)',
+          display: 'flex', gap: 8, alignItems: 'center',
+        }}>
+          <button onClick={() => handleBulkMark('done')} disabled={bulkWorking} style={{
+            flex: 1, height: 46, background: 'var(--pass)', border: 'none',
+            borderRadius: 'var(--r-control)', color: '#fff',
+            fontSize: 13.5, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+            opacity: bulkWorking ? 0.6 : 1,
+          }}>
+            <Check size={16} strokeWidth={2.5} />
+            Mark {selected.size} done
+          </button>
+          <button onClick={() => handleBulkMark('dismissed')} disabled={bulkWorking} style={{
+            flex: 1, height: 46, background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
+            borderRadius: 'var(--r-control)', color: 'var(--text-secondary)',
+            fontSize: 13.5, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+            opacity: bulkWorking ? 0.6 : 1,
+          }}>
+            Dismiss {selected.size}
+          </button>
         </div>
-      ) : (
-        outstanding.map(f => (
-          <OutstandingRow key={`${f.scan_id}-${f.module}-${f.finding_id}`} f={f}
-            onMark={(scanId, module, findingId) => removeOutstanding(scanId, module, findingId)}
-            onView={() => router.push(`/scan/${f.scan_id}`)}
-          />
-        ))
       )}
-    </div>
+    </>
   )
 }
 
 export default function IssuesPage() {
+  const [selectMode, setSelectMode] = useState(false)
+
   return (
     <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
-      <AppHeader title="Issues" />
+      <AppHeader title="Issues" rightContent={
+        <button onClick={() => setSelectMode(v => !v)} style={{
+          height: 34, padding: '0 14px', borderRadius: 'var(--r-control-sm)',
+          border: '1.5px solid var(--border-card)', background: 'var(--surf)',
+          color: selectMode ? 'var(--amber)' : 'var(--text-secondary)',
+          fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+          display: 'flex', alignItems: 'center', gap: 6,
+        }}>
+          <CheckSquare size={14} strokeWidth={2} />
+          {selectMode ? 'Done' : 'Select'}
+        </button>
+      } />
       <Suspense fallback={<div style={{ padding: 40, textAlign: 'center' }}><div style={{ width: 28, height: 28, border: '2px solid var(--border-card)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite', margin: '0 auto' }} /></div>}>
-        <IssuesContent />
+        <IssuesContent selectModeFromParent={selectMode} onExitSelect={() => setSelectMode(false)} />
       </Suspense>
     </div>
   )

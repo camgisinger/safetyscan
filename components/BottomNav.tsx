@@ -14,7 +14,7 @@ const TABS: { id: TabId; label: string; href: string; Icon: any }[] = [
 // Show nav on these paths (prefix match)
 const NAV_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues']
 // Show FAB on these (subset of NAV_ROOTS)
-const FAB_ROOTS = ['/dashboard', '/scans', '/sites', '/more']
+const FAB_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues']
 
 function matches(path: string, roots: string[]) {
   return roots.some(r => path === r || path.startsWith(r + '/'))
