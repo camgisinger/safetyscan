@@ -138,32 +138,22 @@ export default function BottomNav() {
         })}
       </nav>
 
-      {/* More sheet — floats above the bottom nav */}
+      {/* More sheet */}
       {showMore && (
         <>
           <div
             onClick={() => setShowMore(false)}
-            style={{
-              position: 'fixed', top: 0, left: 0, right: 0,
-              bottom: 'calc(max(72px, 48px + env(safe-area-inset-bottom, 0px)))',
-              background: 'var(--scrim)', zIndex: 100,
-            }}
+            style={{ position: 'fixed', inset: 0, background: 'var(--scrim)', zIndex: 100 }}
           />
           <div style={{
-            position: 'fixed',
-            bottom: 'calc(max(72px, 48px + env(safe-area-inset-bottom, 0px)) + 8px)',
-            left: 10, right: 10, zIndex: 110,
+            position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 110,
             background: 'var(--surf-sheet)',
-            borderRadius: 20,
+            borderRadius: 'var(--r-sheet) var(--r-sheet) 0 0',
             boxShadow: 'var(--shadow-sheet)',
-            paddingBottom: 8,
+            paddingBottom: 'max(32px, env(safe-area-inset-bottom, 32px))',
             animation: 'slideUpIn 0.28s cubic-bezier(0.2,0.7,0.3,1) forwards',
           }}>
-            {/* Drag handle */}
-            <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 12, paddingBottom: 2 }}>
-              <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--border-card)' }} />
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 20px 4px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 20px 4px' }}>
               <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--text)' }}>Menu</span>
               <button onClick={() => setShowMore(false)} style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: 4 }}>
                 <X size={20} strokeWidth={2} />
