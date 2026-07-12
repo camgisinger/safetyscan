@@ -141,7 +141,7 @@ export default function SitesPage() {
                   borderRadius: 'var(--r-control)', fontFamily: 'inherit',
                   fontSize: 14, fontWeight: 700, color: '#1B1A12',
                   cursor: 'pointer', boxShadow: 'var(--shadow-btn)',
-                  display: 'flex', alignItems: 'center', gap: 8,
+                  display: 'inline-flex', alignItems: 'center', gap: 8,
                 }}>
                   <FolderPlus size={16} strokeWidth={2.2} />
                   New site
