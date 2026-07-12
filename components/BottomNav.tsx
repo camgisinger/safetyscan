@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { House, Layers, Camera, Folder, Menu, X, Wrench, User, LifeBuoy, ChevronRight } from 'lucide-react'
+import { House, Layers, Camera, Folder, Menu, X, Wrench, Settings, LifeBuoy, ChevronRight } from 'lucide-react'
 
 type TabId = 'home' | 'scans' | 'sites' | 'more'
 
@@ -12,7 +12,7 @@ const TABS: { id: TabId; label: string; Icon: any }[] = [
   { id: 'more',  label: 'More',  Icon: Menu },
 ]
 
-const NAV_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues', '/profile', '/tools']
+const NAV_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues', '/profile', '/tools', '/settings']
 const FAB_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues']
 
 function matches(path: string, roots: string[]) {
@@ -23,7 +23,7 @@ function activeTab(pathname: string): TabId | null {
   if (pathname === '/dashboard') return 'home'
   if (pathname.startsWith('/scans')) return 'scans'
   if (pathname.startsWith('/sites')) return 'sites'
-  if (pathname.startsWith('/more') || pathname.startsWith('/issues') || pathname.startsWith('/profile') || pathname.startsWith('/tools')) return 'more'
+  if (pathname.startsWith('/more') || pathname.startsWith('/issues') || pathname.startsWith('/profile') || pathname.startsWith('/tools') || pathname.startsWith('/settings')) return 'more'
   return null
 }
 
@@ -36,11 +36,11 @@ const MENU_ITEMS = [
     href: '/tools',
   },
   {
-    icon: <User size={20} strokeWidth={1.75} />,
-    label: 'Profile',
-    sub: 'Your account & settings',
+    icon: <Settings size={20} strokeWidth={1.75} />,
+    label: 'Settings',
+    sub: 'Your account & preferences',
     badge: null,
-    href: '/profile',
+    href: '/settings',
   },
   {
     icon: <LifeBuoy size={20} strokeWidth={1.75} />,
