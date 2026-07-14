@@ -83,8 +83,9 @@ export default function DashboardPage() {
   const userName = user?.user_metadata?.full_name?.split(' ')[0] ?? null
 
   useEffect(() => {
-    if (userLoading || !orgId) return
+    if (userLoading) return
     if (!user) { router.push('/login'); return }
+    if (!orgId) return
     setLoading(true)
 
     const init = async () => {
