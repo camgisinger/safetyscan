@@ -131,7 +131,7 @@ export default function SettingsPage() {
         </Section>
 
         {/* Organisation */}
-        {!loading && orgName && (
+        {orgName && (
           <Section title="Organisation">
             <NavRow icon={<Building2 size={18} strokeWidth={1.75} />} label={orgName} onClick={() => router.push('/org')} />
             {role === 'admin' && (
