@@ -287,7 +287,21 @@ export async function POST(request: NextRequest) {
       }
       console.log('[RAG QUERY SOURCE]', usedClassifier ? 'haiku-classified' : hasUserQuery ? 'user-provided' : 'generic-fallback')
     } else {
-      // New scan — Haiku classifier + INSERT run in parallel
+      // New scan — verify org membership before creating
+      if (!org_id) {
+        return NextResponse.json({ error: 'org_id is required' }, { status: 400 })
+      }
+      const { data: scanMembership } = await serviceRole
+        .from('organisation_members')
+        .select('user_id')
+        .eq('org_id', org_id)
+        .eq('user_id', user.id)
+        .maybeSingle()
+      if (!scanMembership) {
+        return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+      }
+
+      // Haiku classifier + INSERT run in parallel
       const [classifiedQuery, scanInsertResult] = await Promise.all([
         (!hasUserQuery && hasImages)
           ? fetch('https://api.anthropic.com/v1/messages', {

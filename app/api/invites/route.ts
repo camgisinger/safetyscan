@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: sans-serif; max-width: 560px; margin: 0 auto; color: #16181C;">
           <div style="background: #16181C; padding: 24px 28px; border-radius: 8px 8px 0 0;">
-            <span style="font-size: 20px; font-weight: 700; color: #fff;">Safety<span style="color: #F39410;">Scan</span></span>
+            <span style="font-size: 20px; font-weight: 700; color: #fff;">Site<span style="color: #F39410;">Spotter</span></span>
           </div>
           <div style="background: #f9f8f5; border: 1px solid #e5e3da; border-top: none; border-radius: 0 0 8px 8px; padding: 32px 28px;">
             <h2 style="margin: 0 0 8px; font-size: 22px; font-weight: 600; color: #16181C;">You're invited</h2>
