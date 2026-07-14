@@ -37,9 +37,10 @@ export async function searchDocuments(
   workTypes: string[] = [],
   matchCount: number = 4,
   module: string | null = null,
-  threshold: number = 0.4
+  threshold: number = 0.4,
+  precomputedEmbedding?: number[]
 ): Promise<Array<{ title: string; content: string; source: string; similarity: number }>> {
-  const embedding = await generateEmbedding(query)
+  const embedding = precomputedEmbedding ?? await generateEmbedding(query)
 
   const { data, error } = await supabase.rpc('match_documents', {
     query_embedding: embedding,

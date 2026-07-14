@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
-import { searchDocuments } from '../../../lib/embeddings'
+import { generateEmbedding, searchDocuments } from '../../../lib/embeddings'
 import { getServerUser } from '../../../lib/supabase-server'
 
 export const maxDuration = 300
@@ -219,25 +219,19 @@ export async function POST(request: NextRequest) {
       .flatMap((m: any) => Array.isArray(m.content) ? m.content : [])
       .filter((block: any) => block.type === 'image')
     const imageBlocks = urlImageBlocks.length > 0 ? urlImageBlocks : base64ImageBlocks
-    const hasImages = imageBlocks.length > 0
     const textBlocks = (messages ?? [])
       .flatMap((m: any) => Array.isArray(m.content) ? m.content : [])
       .filter((block: any) => block.type === 'text')
     const anthropicMessages = [{ role: 'user' as const, content: [...imageBlocks, ...textBlocks] }]
 
     // ── 3. RAG query resolution — ONCE ────────────────────────────────────────
-    let query = GENERIC_FALLBACK
-    let usedClassifier = false
     const rawQuery = (searchQuery as string | undefined)?.trim() ?? ''
     const hasUserQuery = rawQuery.length > 0 && rawQuery !== GENERIC_FALLBACK
-    if (hasUserQuery) query = rawQuery
-
-    const HAIKU_SYSTEM = 'You are a construction site classifier. Look at this photo and list every work type and hazard category clearly visible. Be comprehensive but only include what is visibly present — do not guess. Respond with ONLY a comma-separated list of short work type terms, nothing else. Example: "asbestos removal, PPE, waste disposal"'
-    const HAIKU_HEADERS = {
-      'Content-Type': 'application/json',
-      'x-api-key': process.env.ANTHROPIC_API_KEY || '',
-      'anthropic-version': '2023-06-01',
-    }
+    const query = hasUserQuery
+      ? rawQuery
+      : workTypes.length > 0
+        ? workTypes.join(', ')
+        : GENERIC_FALLBACK
 
     // ── 4. Scan row ───────────────────────────────────────────────────────────
     let scanId: string
@@ -263,29 +257,6 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
       }
       scanId = scan_id
-
-      // Haiku classifier for re-analysis (sequential — after auth check)
-      if (!hasUserQuery && hasImages) {
-        try {
-          const classifierRes = await fetch('https://api.anthropic.com/v1/messages', {
-            method: 'POST',
-            headers: HAIKU_HEADERS,
-            body: JSON.stringify({
-              model: 'claude-haiku-4-5-20251001',
-              max_tokens: 100,
-              temperature: 0,
-              system: HAIKU_SYSTEM,
-              messages: [{ role: 'user', content: imageBlocks }],
-            }),
-          })
-          if (classifierRes.ok) {
-            const d = await classifierRes.json()
-            const classified = d.content?.[0]?.text?.trim()
-            if (classified) { query = classified; usedClassifier = true }
-          }
-        } catch {}
-      }
-      console.log('[RAG QUERY SOURCE]', usedClassifier ? 'haiku-classified' : hasUserQuery ? 'user-provided' : 'generic-fallback')
     } else {
       // New scan — verify org membership before creating
       if (!org_id) {
@@ -301,41 +272,16 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
       }
 
-      // Haiku classifier + INSERT run in parallel
-      const [classifiedQuery, scanInsertResult] = await Promise.all([
-        (!hasUserQuery && hasImages)
-          ? fetch('https://api.anthropic.com/v1/messages', {
-              method: 'POST',
-              headers: HAIKU_HEADERS,
-              body: JSON.stringify({
-                model: 'claude-haiku-4-5-20251001',
-                max_tokens: 100,
-                temperature: 0,
-                system: HAIKU_SYSTEM,
-                messages: [{ role: 'user', content: imageBlocks }],
-              }),
-            }).then(async r => {
-              if (!r.ok) return null
-              const d = await r.json()
-              return d.content?.[0]?.text?.trim() || null
-            }).catch(() => null)
-          : Promise.resolve(null),
-        serviceRole.from('scans').insert({
-          created_by: user.id,
-          org_id,
-          photo_url: photoUrlList[0] ?? null,
-          photo_urls: photo_urls ?? null,
-          site_id: site_id ?? null,
-          work_types: workTypes.length > 0 ? workTypes : null,
-          work_type: '',
-          status: 'processing',
-        }).select('id').single(),
-      ])
-
-      if (classifiedQuery) { query = classifiedQuery; usedClassifier = true }
-      console.log('[RAG QUERY SOURCE]', usedClassifier ? 'haiku-classified' : hasUserQuery ? 'user-provided' : 'generic-fallback')
-
-      const { data: newScan, error: insertErr } = scanInsertResult
+      const { data: newScan, error: insertErr } = await serviceRole.from('scans').insert({
+        created_by: user.id,
+        org_id,
+        photo_url: photoUrlList[0] ?? null,
+        photo_urls: photo_urls ?? null,
+        site_id: site_id ?? null,
+        work_types: workTypes.length > 0 ? workTypes : null,
+        work_type: '',
+        status: 'processing',
+      }).select('id').single()
       if (insertErr || !newScan) {
         return NextResponse.json({ error: 'Failed to create scan' }, { status: 500 })
       }
@@ -348,11 +294,15 @@ export async function POST(request: NextRequest) {
     // Promise.allSettled provides a safety net if an uncaught error escapes.
     const results: Record<string, any> = {}
 
+    // Pre-generate the embedding once — all modules share it so we only pay
+    // the OpenAI round-trip once regardless of how many modules are running.
+    const sharedEmbedding = await generateEmbedding(query)
+
     await Promise.allSettled(
       moduleList.map(async (module) => {
         try {
           // a. RAG for this module
-          const chunks = await searchDocuments(query, 'QLD', workTypes, 4, module)
+          const chunks = await searchDocuments(query, 'QLD', workTypes, 4, module, 0.4, sharedEmbedding)
 
           console.log('[RAG DEBUG] Query:', query)
           console.log('[RAG DEBUG] Module:', module, '| Chunks:', chunks.length)

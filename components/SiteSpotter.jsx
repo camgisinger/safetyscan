@@ -60,11 +60,11 @@ export default function SiteSpotter() {
 
   // Sync user from context (already loaded at app boot — no extra auth round-trip)
   useEffect(() => {
-    if (!contextUser) return;
+    if (!contextUser || !orgId) return;
     setCurrentUser(contextUser);
-    supabase.from('sites').select('id, name').eq('archived', false).order('name', { ascending: true })
+    supabase.from('sites').select('id, name').eq('org_id', orgId).eq('archived', false).order('name', { ascending: true })
       .then(({ data }) => setSites(data || []));
-  }, [contextUser]);
+  }, [contextUser, orgId]);
 
   useEffect(() => {
     const urlSiteId = searchParams.get('site_id');
