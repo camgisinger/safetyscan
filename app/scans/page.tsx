@@ -2,6 +2,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Scan } from '../../lib/supabase'
+import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
 import { Camera, Archive, Check, Trash2, ChevronRight } from 'lucide-react'
 
@@ -30,21 +31,23 @@ export default function ScansPage() {
   const [deleting, setDeleting] = useState(false)
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
   const router = useRouter()
+  const { user, orgId, loading: userLoading } = useUser()
 
   useEffect(() => {
+    if (userLoading || !orgId) return
+    if (!user) { router.push('/login'); return }
+    setLoading(true)
     const init = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/login'); return }
       const [scansRes, sitesRes] = await Promise.all([
-        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, findings').order('created_at', { ascending: false }).limit(200),
-        supabase.from('sites').select('id, name'),
+        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, findings').eq('org_id', orgId).order('created_at', { ascending: false }).limit(200),
+        supabase.from('sites').select('id, name').eq('org_id', orgId),
       ])
       setScans((scansRes.data || []) as unknown as Scan[])
       setSites((sitesRes.data || []) as { id: string; name: string }[])
       setLoading(false)
     }
     init()
-  }, [router])
+  }, [user, orgId, userLoading, router])
 
   const counts = useMemo(() => ({
     issues: scans.filter(s => s.status === 'fail' && !(s as any).archived).length,

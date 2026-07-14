@@ -143,7 +143,7 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
   const [bulkWorking, setBulkWorking] = useState(false)
   const selectMode = selectModeFromParent
   const router = useRouter()
-  const { user, loading: userLoading } = useUser()
+  const { user, orgId, loading: userLoading } = useUser()
   const { adjustCount } = useCount()
 
   useEffect(() => { if (!selectModeFromParent) setSelected(new Set()) }, [selectModeFromParent])
@@ -184,13 +184,15 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
   }
 
   useEffect(() => {
-    if (userLoading) return
+    if (userLoading || !orgId) return
     if (!user) { router.push('/login'); return }
+    setLoading(true)
 
     const init = async () => {
       const { data: modules } = await supabase
         .from('scan_modules')
-        .select('id, scan_id, module, findings, findings_state, scans!inner(id, work_type, created_at, site_id, sites(name))')
+        .select('id, scan_id, module, findings, findings_state, scans!inner(id, work_type, created_at, site_id, org_id, sites(name))')
+        .eq('scans.org_id', orgId)
 
       const outArr: Finding[] = []
 
@@ -226,7 +228,7 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
       setLoading(false)
     }
     init()
-  }, [user, userLoading, router])
+  }, [user, orgId, userLoading, router])
 
   const removeOutstanding = useCallback((scanId: string, module: string, findingId: string) => {
     setOutstanding(prev => prev.filter(f => !(f.scan_id === scanId && f.module === module && f.finding_id === findingId)))

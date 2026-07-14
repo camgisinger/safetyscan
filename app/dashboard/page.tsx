@@ -77,26 +77,27 @@ export default function DashboardPage() {
   const [sites, setSites] = useState<{ id: string; name: string }[]>([])
   const [loading, setLoading] = useState(true)
   const router = useRouter()
-  const { user, loading: userLoading } = useUser()
+  const { user, orgId, loading: userLoading } = useUser()
   const { outstandingCount, scansWithIssues } = useCount()
 
   const userName = user?.user_metadata?.full_name?.split(' ')[0] ?? null
 
   useEffect(() => {
-    if (userLoading) return
+    if (userLoading || !orgId) return
     if (!user) { router.push('/login'); return }
+    setLoading(true)
 
     const init = async () => {
       const [scansRes, sitesRes] = await Promise.all([
-        supabase.from('scans').select('*').order('created_at', { ascending: false }).limit(20),
-        supabase.from('sites').select('id, name').order('name'),
+        supabase.from('scans').select('*').eq('org_id', orgId).order('created_at', { ascending: false }).limit(20),
+        supabase.from('sites').select('id, name').eq('org_id', orgId).order('name'),
       ])
       setScans(scansRes.data || [])
       setSites((sitesRes.data || []) as { id: string; name: string }[])
       setLoading(false)
     }
     init()
-  }, [user, userLoading, router])
+  }, [user, orgId, userLoading, router])
 
   if (loading) return (
     <div style={{ minHeight: '100svh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

@@ -1,82 +1,120 @@
 'use client'
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react'
 import { supabase } from './supabase'
+
+export type OrgEntry = { id: string; name: string; role: string }
+
+type OrgCache = { all: OrgEntry[]; activeId: string }
 
 type UserCtx = {
   user: any | null
   orgId: string | null
   orgName: string | null
   role: string | null
+  allOrgs: OrgEntry[]
   loading: boolean
+  setActiveOrg: (orgId: string) => void
 }
 
-const CACHE_KEY = 'ss_org'
+const CACHE_KEY = 'ss_orgs'
 
-function readOrgCache(): { orgId: string; orgName: string; role: string } | null {
+function readOrgCache(): OrgCache | null {
   if (typeof window === 'undefined') return null
-  try { return JSON.parse(localStorage.getItem(CACHE_KEY) || 'null') } catch { return null }
+  try {
+    const v = localStorage.getItem(CACHE_KEY)
+    if (v) return JSON.parse(v)
+    // Migrate from old single-org key
+    const old = localStorage.getItem('ss_org')
+    if (old) {
+      const o = JSON.parse(old)
+      if (o?.orgId) return { all: [{ id: o.orgId, name: o.orgName ?? '', role: o.role ?? 'member' }], activeId: o.orgId }
+    }
+    return null
+  } catch { return null }
 }
 
-function writeOrgCache(v: { orgId: string | null; orgName: string | null; role: string | null } | null) {
+function writeOrgCache(v: OrgCache | null) {
   try {
-    if (v?.orgId) localStorage.setItem(CACHE_KEY, JSON.stringify(v))
+    localStorage.removeItem('ss_org')
+    if (v) localStorage.setItem(CACHE_KEY, JSON.stringify(v))
     else localStorage.removeItem(CACHE_KEY)
   } catch {}
 }
 
-const UserContext = createContext<UserCtx>({ user: null, orgId: null, orgName: null, role: null, loading: true })
+const UserContext = createContext<UserCtx>({
+  user: null, orgId: null, orgName: null, role: null, allOrgs: [], loading: true, setActiveOrg: () => {},
+})
 
 export function UserProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<any>(null)
-  const [orgId, setOrgId] = useState<string | null>(null)
-  const [orgName, setOrgName] = useState<string | null>(null)
-  const [role, setRole] = useState<string | null>(null)
+  const [allOrgs, setAllOrgs] = useState<OrgEntry[]>([])
+  const [activeOrgId, setActiveOrgId] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    // Restore org from cache immediately — before any network call
+  const setActiveOrg = useCallback((orgId: string) => {
+    setActiveOrgId(orgId)
     const cached = readOrgCache()
-    if (cached) {
-      setOrgId(cached.orgId)
-      setOrgName(cached.orgName)
-      setRole(cached.role)
+    if (cached) writeOrgCache({ ...cached, activeId: orgId })
+  }, [])
+
+  useEffect(() => {
+    const cached = readOrgCache()
+    if (cached?.all?.length) {
+      setAllOrgs(cached.all)
+      setActiveOrgId(cached.activeId)
     }
 
-    const fetchOrg = async (userId: string) => {
+    const fetchOrgs = async (userId: string) => {
       const { data } = await supabase
         .from('organisation_members')
         .select('org_id, role, organisations(name)')
         .eq('user_id', userId)
-        .limit(1)
-        .maybeSingle()
-      const next = {
-        orgId: data?.org_id ?? null,
-        orgName: (data?.organisations as any)?.name ?? null,
-        role: data?.role ?? null,
-      }
-      setOrgId(next.orgId)
-      setOrgName(next.orgName)
-      setRole(next.role)
-      writeOrgCache(next)
+
+      const orgs: OrgEntry[] = (data || []).map((m: any) => ({
+        id: m.org_id,
+        name: m.organisations?.name ?? '',
+        role: m.role ?? 'member',
+      }))
+
+      setAllOrgs(orgs)
+      setActiveOrgId(prev => {
+        const next = orgs.some(o => o.id === prev) ? prev : (orgs[0]?.id ?? null)
+        writeOrgCache(orgs.length && next ? { all: orgs, activeId: next } : null)
+        return next
+      })
     }
 
-    // onAuthStateChange fires INITIAL_SESSION from localStorage — no network round-trip
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       const u = session?.user ?? null
       setUser(u)
-      setLoading(false)  // Auth resolved — stop showing skeleton immediately
+      setLoading(false)
       if (!u) {
-        setOrgId(null); setOrgName(null); setRole(null)
+        setAllOrgs([])
+        setActiveOrgId(null)
         writeOrgCache(null)
         return
       }
-      fetchOrg(u.id)  // Refresh org in background; cache already in state
+      fetchOrgs(u.id)
     })
 
     return () => subscription.unsubscribe()
   }, [])
 
-  return <UserContext.Provider value={{ user, orgId, orgName, role, loading }}>{children}</UserContext.Provider>
+  const activeOrg = allOrgs.find(o => o.id === activeOrgId) ?? allOrgs[0] ?? null
+
+  return (
+    <UserContext.Provider value={{
+      user,
+      orgId: activeOrg?.id ?? null,
+      orgName: activeOrg?.name ?? null,
+      role: activeOrg?.role ?? null,
+      allOrgs,
+      loading,
+      setActiveOrg,
+    }}>
+      {children}
+    </UserContext.Provider>
+  )
 }
 
 export function useUser(): UserCtx {

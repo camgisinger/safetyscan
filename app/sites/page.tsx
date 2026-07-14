@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Site, Scan } from '../../lib/supabase'
-import { useOrg } from '../../lib/useOrg'
+import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
 import { MapPin, ChevronRight, FolderPlus, X, Archive } from 'lucide-react'
 
@@ -24,32 +24,32 @@ export default function SitesPage() {
   const [newLocation, setNewLocation] = useState('')
   const [creating, setCreating] = useState(false)
   const [showArchived, setShowArchived] = useState(false)
-  const { orgId } = useOrg()
+  const { user, orgId, loading: userLoading } = useUser()
   const router = useRouter()
 
   useEffect(() => {
+    if (userLoading || !orgId) return
+    if (!user) { router.push('/login'); return }
+    setLoading(true)
     const init = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/login'); return }
       const [sitesRes, scansRes] = await Promise.all([
-        supabase.from('sites').select('*').order('name'),
-        supabase.from('scans').select('id, site_id, status, created_at'),
+        supabase.from('sites').select('*').eq('org_id', orgId).order('name'),
+        supabase.from('scans').select('id, site_id, status, created_at').eq('org_id', orgId),
       ])
       setSites(sitesRes.data || [])
       setScans((scansRes.data || []) as Scan[])
       setLoading(false)
     }
     init()
-  }, [router])
+  }, [user, orgId, userLoading, router])
 
   const handleCreate = async () => {
-    if (!newName.trim()) return
+    if (!newName.trim() || !user || !orgId) return
     setCreating(true)
-    const { data: { user } } = await supabase.auth.getUser()
     const { data: site, error } = await supabase.from('sites').insert({
       name: newName.trim(),
       location: newLocation.trim() || null,
-      created_by: user?.id,
+      created_by: user.id,
       org_id: orgId,
       archived: false,
     }).select().single()
