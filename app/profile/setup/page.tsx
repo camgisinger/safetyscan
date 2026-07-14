@@ -3,30 +3,14 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../../lib/supabase'
 
-const JOB_TITLES = [
-  'Site Supervisor',
-  'Project Manager / Superintendent',
-  'Foreman',
-  'Safety Officer',
-  'Engineer',
-  'Inspector / Certifier',
-  'Subcontractor',
-  'Other',
-]
-
 export default function ProfileSetupPage() {
   const router = useRouter()
-  const [fullName,  setFullName]  = useState('')
-  const [jobTitle,  setJobTitle]  = useState('')
-  const [company,   setCompany]   = useState('')
-  const [license,   setLicense]   = useState('')
-  const [saving,    setSaving]    = useState(false)
-  const [error,     setError]     = useState('')
-  const [isDark,    setIsDark]    = useState(true)
+  const [fullName, setFullName] = useState('')
+  const [jobTitle, setJobTitle] = useState('')
+  const [saving,   setSaving]   = useState(false)
+  const [error,    setError]    = useState('')
 
   useEffect(() => {
-    setIsDark(localStorage.getItem('theme') !== 'light')
-    // If already has profile, skip setup
     supabase.auth.getUser().then(({ data: { user } }) => {
       if (!user) { router.push('/login'); return }
       if (user.user_metadata?.full_name) router.push('/dashboard')
@@ -38,7 +22,7 @@ export default function ProfileSetupPage() {
     if (!fullName.trim()) { setError('Full name is required'); return }
     setSaving(true); setError('')
     const { error: err } = await supabase.auth.updateUser({
-      data: { full_name: fullName.trim(), job_title: jobTitle, company: company.trim(), license: license.trim() }
+      data: { full_name: fullName.trim(), job_title: jobTitle.trim() }
     })
     if (err) { setError(err.message); setSaving(false); return }
     router.push('/dashboard')
@@ -53,8 +37,7 @@ export default function ProfileSetupPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', flexDirection: 'column' }}>
-      <style>{`@keyframes spin{to{transform:rotate(360deg)}} input,select{outline:none}`}</style>
-      {/* Hazard stripe */}
+      <style>{`input{outline:none}`}</style>
       <div style={{ height: 7, background: 'var(--hazard-bg)', flexShrink: 0 }} />
 
       <div style={{ flex: 1, maxWidth: 480, width: '100%', margin: '0 auto', padding: '32px 18px 48px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
@@ -62,14 +45,13 @@ export default function ProfileSetupPage() {
         {/* Brand */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 11, marginBottom: 36 }}>
           <div style={{ width: 40, height: 40, borderRadius: 10, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-            <img src={isDark ? '/brand/mark-ink.svg' : '/brand/mark-ink.svg'} alt="" style={{ width: 28, height: 28 }}/>
+            <img src="/brand/mark-ink.svg" alt="" style={{ width: 28, height: 28 }}/>
           </div>
           <span style={{ fontWeight: 600, fontSize: 22, letterSpacing: '-0.02em', color: 'var(--text)' }}>
-            Safety<b style={{ color: 'var(--amber)' }}>Scan</b>
+            Site<b style={{ color: 'var(--amber)' }}>Spotter</b>
           </span>
         </div>
 
-        {/* Heading */}
         <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: '-0.025em', lineHeight: 1.18, color: 'var(--text)', marginBottom: 6 }}>
           Set up your profile.
         </div>
@@ -79,22 +61,17 @@ export default function ProfileSetupPage() {
 
         <form onSubmit={handleSave} style={{ display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}>
 
-          {/* Full name */}
           <div>
             <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>Full name <span style={{ color: 'var(--amber)' }}>*</span></div>
             <input value={fullName} onChange={e => setFullName(e.target.value)} placeholder="e.g. Ellie Marsden" required autoFocus style={inp}/>
           </div>
 
-          {/* Job title */}
           <div>
-            <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>Your role</div>
-            <input value={jobTitle} onChange={e => setJobTitle(e.target.value)} placeholder="e.g. Site Supervisor, Foreman…" style={{ ...inp, background: 'var(--surf)' }}/>
-          </div>
-
-          {/* Company */}
-          <div>
-            <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>Company <span style={{ opacity: 0.5 }}>(optional)</span></div>
-            <input value={company} onChange={e => setCompany(e.target.value)} placeholder="e.g. Marsden Construction" style={{ ...inp, background: 'var(--surf)' }}/>
+            <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>
+              Your role{' '}
+              <span style={{ fontWeight: 400, textTransform: 'none', letterSpacing: 0 }}>(optional)</span>
+            </div>
+            <input value={jobTitle} onChange={e => setJobTitle(e.target.value)} placeholder="e.g. Site Supervisor, Foreman…" style={inp}/>
           </div>
 
           {error && (
