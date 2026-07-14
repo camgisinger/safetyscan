@@ -13,7 +13,7 @@ const TABS: { id: TabId; label: string; Icon: any }[] = [
 ]
 
 const NAV_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues', '/profile', '/tools', '/settings']
-const FAB_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues']
+const FAB_ROOTS = ['/dashboard', '/scans', '/sites', '/issues']
 
 function matches(path: string, roots: string[]) {
   return roots.some(r => path === r || path.startsWith(r + '/'))

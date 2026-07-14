@@ -305,7 +305,7 @@ export default function SiteSpotter() {
                   {photos.map((p, i) => (
                     <div key={i} style={{ position: "relative", flexShrink: 0 }}>
                       <img src={p.dataUrl} alt={`Photo ${i + 1}`} style={{ width: 84, height: 84, borderRadius: "var(--r-card)", objectFit: "cover" }}/>
-                      <button onClick={() => removePhoto(i)} style={{ position: "absolute", top: -5, right: -5, width: 20, height: 20, borderRadius: "50%", background: "var(--issue)", border: "2px solid var(--bg)", color: "#fff", fontSize: 10, cursor: "pointer", display: "grid", placeItems: "center", fontWeight: 700, padding: 0 }}>✕</button>
+                      <button onClick={() => removePhoto(i)} style={{ position: "absolute", top: 5, right: 5, width: 20, height: 20, borderRadius: "50%", background: "rgba(0,0,0,0.55)", border: "none", color: "#fff", fontSize: 10, cursor: "pointer", display: "grid", placeItems: "center", fontWeight: 700, padding: 0 }}>✕</button>
                     </div>
                   ))}
                   {photos.length < MAX_PHOTOS && (
@@ -332,6 +332,38 @@ export default function SiteSpotter() {
             {/* Advanced mode options — only show after photos added */}
             {mode === "advanced" && photos.length > 0 && (
               <>
+                {/* Modules — first so user picks scope before anything else */}
+                <div style={{ marginBottom: 14 }}>
+                  <label style={{ display: "block", fontWeight: 600, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 8 }}>Analysis modules</label>
+                  <div style={{ display: "flex", gap: 6 }}>
+                    {[
+                      { key: "safety", label: "Safety" },
+                      { key: "quality", label: "Quality" },
+                      { key: "environmental", label: "Environmental" },
+                    ].map(({ key, label }) => {
+                      const selected = selectedModules.includes(key);
+                      return (
+                        <button key={key}
+                          onClick={() => setSelectedModules(prev => {
+                            if (prev.includes(key) && prev.length === 1) return prev;
+                            return prev.includes(key) ? prev.filter(m => m !== key) : [...prev, key];
+                          })}
+                          style={{
+                            padding: "6px 14px",
+                            border: `1.5px solid ${selected ? "var(--amber)" : "var(--border-card)"}`,
+                            borderRadius: "var(--r-pill)",
+                            background: selected ? "var(--brand-tint)" : "var(--surf)",
+                            color: selected ? "var(--amber)" : "var(--text-muted)",
+                            fontSize: 13, fontWeight: 600,
+                            cursor: "pointer", fontFamily: "inherit",
+                          }}>
+                          {label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
                 {/* Context */}
                 <div style={{ marginBottom: 12 }}>
                   <label style={{ display: "block", fontWeight: 600, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 6 }}>
@@ -399,37 +431,6 @@ export default function SiteSpotter() {
                   </div>
                 </div>
 
-                {/* Modules */}
-                <div style={{ marginBottom: 14 }}>
-                  <label style={{ display: "block", fontWeight: 600, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 8 }}>Analysis modules</label>
-                  <div style={{ display: "flex", gap: 6 }}>
-                    {[
-                      { key: "safety", label: "Safety" },
-                      { key: "quality", label: "Quality" },
-                      { key: "environmental", label: "Environmental" },
-                    ].map(({ key, label }) => {
-                      const selected = selectedModules.includes(key);
-                      return (
-                        <button key={key}
-                          onClick={() => setSelectedModules(prev => {
-                            if (prev.includes(key) && prev.length === 1) return prev;
-                            return prev.includes(key) ? prev.filter(m => m !== key) : [...prev, key];
-                          })}
-                          style={{
-                            padding: "6px 14px",
-                            border: `1.5px solid ${selected ? "var(--amber)" : "var(--border-card)"}`,
-                            borderRadius: "var(--r-pill)",
-                            background: selected ? "var(--brand-tint)" : "var(--surf)",
-                            color: selected ? "var(--amber)" : "var(--text-muted)",
-                            fontSize: 13, fontWeight: 600,
-                            cursor: "pointer", fontFamily: "inherit",
-                          }}>
-                          {label}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
               </>
             )}
 
