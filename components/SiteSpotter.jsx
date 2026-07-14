@@ -73,12 +73,10 @@ export default function SiteSpotter() {
 
   const uploadPhotos = async (photoList) => {
     if (!currentUser) return [];
-    const photoUrls = [];
-    for (let i = 0; i < photoList.length; i++) {
-      const photo = photoList[i];
+    const results = await Promise.all(photoList.map(async (photo, i) => {
       try {
         const base64 = photo.dataUrl.split(',')[1];
-        if (!base64) continue;
+        if (!base64) return null;
         const byteCharacters = atob(base64);
         const byteArray = new Uint8Array(byteCharacters.length);
         for (let j = 0; j < byteCharacters.length; j++) byteArray[j] = byteCharacters.charCodeAt(j);
@@ -89,13 +87,15 @@ export default function SiteSpotter() {
           .upload(fileName, blob, { contentType: 'image/jpeg', upsert: false });
         if (!uploadError) {
           const { data: urlData } = supabase.storage.from('scan-photos').getPublicUrl(fileName);
-          photoUrls.push(urlData.publicUrl);
+          return urlData.publicUrl;
         }
+        return null;
       } catch (photoErr) {
         console.error('[uploadPhotos] photo processing error:', photoErr);
+        return null;
       }
-    }
-    return photoUrls;
+    }));
+    return results.filter(Boolean);
   };
 
   const addFiles = useCallback(async (files) => {
@@ -149,7 +149,6 @@ export default function SiteSpotter() {
       const photoUrls = await uploadPhotos(photos);
 
       const userContent = [
-        ...photos.map(p => ({ type: "image", source: { type: "base64", media_type: "image/jpeg", data: p.base64 } })),
         {
           type: "text",
           text: `Analyse these ${photos.length} site photo${photos.length > 1 ? "s" : ""} together as a single inspection. Identify all work types present across all photos and return one organised compliance report covering everything you can see.${context ? `\n\nContext: ${context}` : ""}`
@@ -178,7 +177,6 @@ export default function SiteSpotter() {
       const { scanId } = data;
       if (!scanId) throw new Error("No scan ID returned from server");
 
-      await new Promise(resolve => setTimeout(resolve, 1200));
       router.push(`/scan/${scanId}`);
     } catch (e) {
       setGlobalError(e.message || "Analysis failed");

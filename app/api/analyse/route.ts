@@ -209,53 +209,34 @@ export async function POST(request: NextRequest) {
     const moduleList: string[] = Array.isArray(modules) && modules.length > 0 ? modules : ['safety']
     const workTypes: string[] = Array.isArray(work_types) ? work_types : []
 
+    // Build image blocks — prefer URL-based (no base64 payload); fall back to base64 from messages
+    const photoUrlList: string[] = Array.isArray(photo_urls) ? photo_urls : []
+    const urlImageBlocks = photoUrlList.map((url: string) => ({
+      type: 'image' as const,
+      source: { type: 'url' as const, url },
+    }))
+    const base64ImageBlocks = (messages ?? [])
+      .flatMap((m: any) => Array.isArray(m.content) ? m.content : [])
+      .filter((block: any) => block.type === 'image')
+    const imageBlocks = urlImageBlocks.length > 0 ? urlImageBlocks : base64ImageBlocks
+    const hasImages = imageBlocks.length > 0
+    const textBlocks = (messages ?? [])
+      .flatMap((m: any) => Array.isArray(m.content) ? m.content : [])
+      .filter((block: any) => block.type === 'text')
+    const anthropicMessages = [{ role: 'user' as const, content: [...imageBlocks, ...textBlocks] }]
+
     // ── 3. RAG query resolution — ONCE ────────────────────────────────────────
     let query = GENERIC_FALLBACK
     let usedClassifier = false
-    try {
-      const rawQuery = (searchQuery as string | undefined)?.trim() ?? ''
-      const hasUserQuery = rawQuery.length > 0 && rawQuery !== GENERIC_FALLBACK
+    const rawQuery = (searchQuery as string | undefined)?.trim() ?? ''
+    const hasUserQuery = rawQuery.length > 0 && rawQuery !== GENERIC_FALLBACK
+    if (hasUserQuery) query = rawQuery
 
-      const imageBlocks = (messages ?? [])
-        .flatMap((m: any) => Array.isArray(m.content) ? m.content : [])
-        .filter((block: any) => block.type === 'image')
-      const hasImages = imageBlocks.length > 0
-
-      if (hasUserQuery) {
-        query = rawQuery
-      } else if (hasImages) {
-        try {
-          const classifierRes = await fetch('https://api.anthropic.com/v1/messages', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-api-key': process.env.ANTHROPIC_API_KEY || '',
-              'anthropic-version': '2023-06-01',
-            },
-            body: JSON.stringify({
-              model: 'claude-haiku-4-5-20251001',
-              max_tokens: 100,
-              temperature: 0,
-              system: 'You are a construction site classifier. Look at this photo and list every work type and hazard category clearly visible. Be comprehensive but only include what is visibly present — do not guess. Respond with ONLY a comma-separated list of short work type terms, nothing else. Example: "asbestos removal, PPE, waste disposal"',
-              messages: [{ role: 'user', content: imageBlocks }],
-            }),
-          })
-          if (classifierRes.ok) {
-            const classifierData = await classifierRes.json()
-            const classified = classifierData.content?.[0]?.text?.trim()
-            if (classified) {
-              query = classified
-              usedClassifier = true
-            }
-          }
-        } catch {
-          // Classifier failed — silent fallback, never block the scan
-        }
-      }
-
-      console.log('[RAG QUERY SOURCE]', usedClassifier ? 'haiku-classified' : hasUserQuery ? 'user-provided' : 'generic-fallback')
-    } catch {
-      // Keep query = GENERIC_FALLBACK
+    const HAIKU_SYSTEM = 'You are a construction site classifier. Look at this photo and list every work type and hazard category clearly visible. Be comprehensive but only include what is visibly present — do not guess. Respond with ONLY a comma-separated list of short work type terms, nothing else. Example: "asbestos removal, PPE, waste disposal"'
+    const HAIKU_HEADERS = {
+      'Content-Type': 'application/json',
+      'x-api-key': process.env.ANTHROPIC_API_KEY || '',
+      'anthropic-version': '2023-06-01',
     }
 
     // ── 4. Scan row ───────────────────────────────────────────────────────────
@@ -282,23 +263,65 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
       }
       scanId = scan_id
+
+      // Haiku classifier for re-analysis (sequential — after auth check)
+      if (!hasUserQuery && hasImages) {
+        try {
+          const classifierRes = await fetch('https://api.anthropic.com/v1/messages', {
+            method: 'POST',
+            headers: HAIKU_HEADERS,
+            body: JSON.stringify({
+              model: 'claude-haiku-4-5-20251001',
+              max_tokens: 100,
+              temperature: 0,
+              system: HAIKU_SYSTEM,
+              messages: [{ role: 'user', content: imageBlocks }],
+            }),
+          })
+          if (classifierRes.ok) {
+            const d = await classifierRes.json()
+            const classified = d.content?.[0]?.text?.trim()
+            if (classified) { query = classified; usedClassifier = true }
+          }
+        } catch {}
+      }
+      console.log('[RAG QUERY SOURCE]', usedClassifier ? 'haiku-classified' : hasUserQuery ? 'user-provided' : 'generic-fallback')
     } else {
-      // New scan — create with verified user.id
-      const { data: newScan, error: insertErr } = await serviceRole
-        .from('scans')
-        .insert({
+      // New scan — Haiku classifier + INSERT run in parallel
+      const [classifiedQuery, scanInsertResult] = await Promise.all([
+        (!hasUserQuery && hasImages)
+          ? fetch('https://api.anthropic.com/v1/messages', {
+              method: 'POST',
+              headers: HAIKU_HEADERS,
+              body: JSON.stringify({
+                model: 'claude-haiku-4-5-20251001',
+                max_tokens: 100,
+                temperature: 0,
+                system: HAIKU_SYSTEM,
+                messages: [{ role: 'user', content: imageBlocks }],
+              }),
+            }).then(async r => {
+              if (!r.ok) return null
+              const d = await r.json()
+              return d.content?.[0]?.text?.trim() || null
+            }).catch(() => null)
+          : Promise.resolve(null),
+        serviceRole.from('scans').insert({
           created_by: user.id,
           org_id,
-          photo_url: Array.isArray(photo_urls) ? (photo_urls[0] ?? null) : null,
+          photo_url: photoUrlList[0] ?? null,
           photo_urls: photo_urls ?? null,
           site_id: site_id ?? null,
           work_types: workTypes.length > 0 ? workTypes : null,
           work_type: '',
           status: 'processing',
-        })
-        .select('id')
-        .single()
+        }).select('id').single(),
+      ])
 
+      if (classifiedQuery) { query = classifiedQuery; usedClassifier = true }
+      console.log('[RAG QUERY SOURCE]', usedClassifier ? 'haiku-classified' : hasUserQuery ? 'user-provided' : 'generic-fallback')
+
+      const { data: newScan, error: insertErr } = scanInsertResult
       if (insertErr || !newScan) {
         return NextResponse.json({ error: 'Failed to create scan' }, { status: 500 })
       }
@@ -378,7 +401,7 @@ export async function POST(request: NextRequest) {
               max_tokens: 4096,
               temperature: 0.1,
               system: systemBlocks,
-              messages,
+              messages: anthropicMessages,
             }),
           })
 

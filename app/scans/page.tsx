@@ -36,7 +36,7 @@ export default function ScansPage() {
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) { router.push('/login'); return }
       const [scansRes, sitesRes] = await Promise.all([
-        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, findings, archived').order('created_at', { ascending: false }).limit(200),
+        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, findings').order('created_at', { ascending: false }).limit(200),
         supabase.from('sites').select('id, name'),
       ])
       setScans((scansRes.data || []) as unknown as Scan[])
