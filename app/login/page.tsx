@@ -65,7 +65,7 @@ function LoginContent() {
                 <img src="/brand/mark-ink.svg" alt="" style={{ width: 28, height: 28 }}/>
               </div>
               <span style={{ fontWeight: 600, fontSize: 24, letterSpacing: '-0.02em', color: 'var(--text)' }}>
-                Safety<b style={{ color: 'var(--amber)' }}>Scan</b>
+                Site<b style={{ color: 'var(--amber)' }}>Spotter</b>
               </span>
             </div>
 
