@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
@@ -36,7 +36,7 @@ const SectionLabel = ({ children }: { children: React.ReactNode }) => (
   </div>
 )
 
-export default function OrgPage() {
+function OrgPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const { user, orgId, orgName, role: myRole, loading } = useUser()
@@ -466,5 +466,13 @@ export default function OrgPage() {
         )}
       </div>
     </div>
+  )
+}
+
+export default function OrgPageWrapper() {
+  return (
+    <Suspense>
+      <OrgPage />
+    </Suspense>
   )
 }
