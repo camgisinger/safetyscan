@@ -35,32 +35,7 @@ export async function middleware(request: NextRequest) {
   // getUser() is what triggers the token refresh check — must not be removed.
   await supabase.auth.getUser()
 
-  // ── 2. Site-password gate ─────────────────────────────────────────────────
-  // Always return supabaseResponse (not a bare NextResponse.next()) so that
-  // any refreshed session cookies are forwarded to the browser. When we must
-  // redirect, copy those cookies onto the redirect response first.
-  const { pathname } = request.nextUrl
-
-  // /access page and all API routes bypass the gate
-  if (pathname.startsWith('/access') || pathname.startsWith('/api/')) {
-    return supabaseResponse
-  }
-
-  const sitePassword = process.env.SITE_PASSWORD
-  if (!sitePassword) return supabaseResponse
-
-  const accessCookie = request.cookies.get('site_access')
-  if (accessCookie?.value === sitePassword) return supabaseResponse
-
-  // Gate fails — redirect to /access, carrying over any Supabase cookies so
-  // a token refresh that occurred during this request is not silently dropped.
-  const url = request.nextUrl.clone()
-  url.pathname = '/access'
-  const redirect = NextResponse.redirect(url)
-  supabaseResponse.cookies.getAll().forEach(({ name, value, ...rest }) =>
-    redirect.cookies.set({ name, value, ...rest })
-  )
-  return redirect
+  return supabaseResponse
 }
 
 export const config = {
