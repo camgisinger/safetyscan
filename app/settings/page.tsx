@@ -87,11 +87,12 @@ export default function SettingsPage() {
             </div>
           </div>
         ) : (
-          <div style={{
-            margin: '0 18px 16px',
+          <button onClick={() => router.push('/profile/edit')} style={{
+            margin: '0 18px 16px', width: 'calc(100% - 36px)',
             background: 'var(--surf)', border: '1.5px solid var(--border-card)',
             borderRadius: 'var(--r-card)', padding: '16px 18px',
             display: 'flex', alignItems: 'center', gap: 14,
+            cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left',
           }}>
             <div style={{
               width: 46, height: 46, borderRadius: '50%',
@@ -116,7 +117,8 @@ export default function SettingsPage() {
                 </div>
               )}
             </div>
-          </div>
+            <ChevronRight size={16} strokeWidth={1.75} color="var(--text-muted)" style={{ flexShrink: 0 }} />
+          </button>
         )}
 
         {/* Get around */}
