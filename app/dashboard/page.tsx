@@ -5,7 +5,7 @@ import { supabase, Scan } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
-import { Camera, ChevronRight, TriangleAlert, Layers } from 'lucide-react'
+import { Camera, ChevronRight, TriangleAlert, CircleHelp } from 'lucide-react'
 
 function greeting() {
   const h = new Date().getHours()
@@ -187,14 +187,14 @@ export default function DashboardPage() {
               borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-                <Layers size={13} strokeWidth={2} color="var(--text-muted)" />
+                <CircleHelp size={13} strokeWidth={2} color="var(--amber)" />
                 <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Unresolved</span>
               </div>
-              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (scansWithIssues ?? 0) > 0 ? 'var(--text)' : 'var(--text)', lineHeight: 1 }}>{scansWithIssues ?? '—'}</div>
+              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (scansWithIssues ?? 0) > 0 ? 'var(--amber)' : 'var(--text)', lineHeight: 1 }}>{scansWithIssues ?? '—'}</div>
               <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>
                 {scansWithIssues === null ? 'Loading…'
                   : scansWithIssues === 0 ? 'All scans resolved'
-                  : `Scan${scansWithIssues !== 1 ? 's' : ''} with observations`}
+                  : `Pending scan${scansWithIssues !== 1 ? 's' : ''}`}
               </div>
             </button>
           </div>
