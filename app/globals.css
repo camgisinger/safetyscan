@@ -15,6 +15,7 @@ button { font-family: inherit; cursor: pointer; }
 /* Responsive layout shell */
 .bottom-nav      { display: flex; }
 body.sheet-open .bottom-nav { display: none; }
+body.select-mode .bottom-nav { display: none; }
 .desktop-sidebar { display: none; flex-direction: column; }
 .desktop-hidden  { display: flex; }
 

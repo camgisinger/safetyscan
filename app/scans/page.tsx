@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { supabase, Scan } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
-import { Camera, Archive, Check, Trash2, ChevronRight } from 'lucide-react'
+import { Camera, Archive, Check, Trash2, ChevronRight, Folder, X } from 'lucide-react'
 
 type StatusFilter = 'all' | 'issues' | 'compliant' | 'pending'
 
@@ -30,8 +30,15 @@ export default function ScansPage() {
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [deleting, setDeleting] = useState(false)
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
+  const [archiving, setArchiving] = useState(false)
+  const [showAssignSheet, setShowAssignSheet] = useState(false)
   const router = useRouter()
   const { user, loading: userLoading } = useUser()
+
+  useEffect(() => {
+    document.body.classList.toggle('select-mode', selectMode)
+    return () => document.body.classList.remove('select-mode')
+  }, [selectMode])
 
   useEffect(() => {
     if (userLoading) return
@@ -89,6 +96,19 @@ export default function ScansPage() {
     setSelected(new Set()); setSelectMode(false); setShowDeleteConfirm(false); setDeleting(false)
   }
 
+  const handleBulkArchive = async () => {
+    setArchiving(true)
+    await supabase.from('scans').update({ archived: true }).in('id', Array.from(selected))
+    setScans(prev => prev.map(s => selected.has(s.id) ? { ...s, archived: true } as Scan : s))
+    setSelected(new Set()); setSelectMode(false); setArchiving(false)
+  }
+
+  const handleBulkAssign = async (siteId: string) => {
+    await supabase.from('scans').update({ site_id: siteId }).in('id', Array.from(selected))
+    setScans(prev => prev.map(s => selected.has(s.id) ? { ...s, site_id: siteId } as Scan : s))
+    setSelected(new Set()); setSelectMode(false); setShowAssignSheet(false)
+  }
+
   const CHIPS: { key: StatusFilter | 'archived'; label: string; count: number }[] = [
     { key: 'all', label: 'All', count: scans.filter(s => !(s as any).archived).length },
     { key: 'issues', label: 'Observations', count: counts.issues },
@@ -103,7 +123,7 @@ export default function ScansPage() {
   )
 
   return (
-    <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: selectMode && selected.size > 0 ? 160 : 96 }}>
+    <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: selectMode && selected.size > 0 ? 200 : 96 }}>
       <AppHeader title="Scans" rightContent={
         <button onClick={() => { setSelectMode(v => !v); setSelected(new Set()) }} style={{
           height: 34, padding: '0 14px', borderRadius: 'var(--r-control-sm)',
@@ -254,30 +274,105 @@ export default function ScansPage() {
       {/* Bulk action bar */}
       {selectMode && selected.size > 0 && (
         <div style={{
-          position: 'fixed', bottom: 72, left: 0, right: 0, zIndex: 20,
-          padding: '12px 18px', background: 'var(--surf)',
+          position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 120,
+          padding: '12px 18px',
+          paddingBottom: 'max(20px, env(safe-area-inset-bottom, 20px))',
+          background: 'var(--surf)',
           borderTop: '1.5px solid var(--border-card)',
           boxShadow: '0 -4px 20px rgba(0,0,0,0.15)',
-          display: 'flex', gap: 10, alignItems: 'center',
+          display: 'flex', flexDirection: 'column', gap: 8,
         }}>
-          <button onClick={() => setShowDeleteConfirm(true)} style={{
-            flex: 1, height: 46, background: 'var(--issue)', border: 'none',
-            borderRadius: 'var(--r-control)', color: '#fff',
-            fontSize: 13.5, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-          }}>
-            <Trash2 size={16} strokeWidth={2} />
-            Delete {selected.size} scan{selected.size !== 1 ? 's' : ''}
-          </button>
-          <button onClick={() => { setSelectMode(false); setSelected(new Set()) }} style={{
-            height: 46, padding: '0 18px',
-            background: 'var(--surf)', border: '1.5px solid var(--border-card)',
-            borderRadius: 'var(--r-control)', color: 'var(--text-secondary)',
-            fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', flexShrink: 0,
-          }}>
-            Cancel
-          </button>
+          {/* Secondary actions */}
+          <div style={{ display: 'flex', gap: 8 }}>
+            <button onClick={() => setShowAssignSheet(true)} style={{
+              flex: 1, height: 42,
+              background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
+              borderRadius: 'var(--r-control)', color: 'var(--text)',
+              fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7,
+            }}>
+              <Folder size={15} strokeWidth={2} />
+              Add to site
+            </button>
+            <button onClick={handleBulkArchive} disabled={archiving} style={{
+              flex: 1, height: 42,
+              background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
+              borderRadius: 'var(--r-control)', color: 'var(--text-muted)',
+              fontSize: 13, fontWeight: 600, cursor: archiving ? 'not-allowed' : 'pointer', fontFamily: 'inherit',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7,
+              opacity: archiving ? 0.5 : 1,
+            }}>
+              <Archive size={15} strokeWidth={2} />
+              {archiving ? 'Archiving…' : 'Archive'}
+            </button>
+          </div>
+          {/* Primary actions */}
+          <div style={{ display: 'flex', gap: 8 }}>
+            <button onClick={() => setShowDeleteConfirm(true)} style={{
+              flex: 1, height: 46, background: 'var(--issue)', border: 'none',
+              borderRadius: 'var(--r-control)', color: '#fff',
+              fontSize: 13.5, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+            }}>
+              <Trash2 size={16} strokeWidth={2} />
+              Delete {selected.size} scan{selected.size !== 1 ? 's' : ''}
+            </button>
+            <button onClick={() => { setSelectMode(false); setSelected(new Set()) }} style={{
+              height: 46, padding: '0 18px',
+              background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+              borderRadius: 'var(--r-control)', color: 'var(--text-secondary)',
+              fontSize: 13.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', flexShrink: 0,
+            }}>
+              Cancel
+            </button>
+          </div>
         </div>
+      )}
+
+      {/* Assign to site sheet */}
+      {showAssignSheet && (
+        <>
+          <div onClick={() => setShowAssignSheet(false)} style={{ position: 'fixed', inset: 0, background: 'var(--scrim)', zIndex: 200 }} />
+          <div style={{
+            position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 210,
+            background: 'var(--surf-sheet)', borderRadius: 'var(--r-sheet) var(--r-sheet) 0 0',
+            boxShadow: 'var(--shadow-sheet)',
+            padding: '0 20px',
+            paddingBottom: 'max(32px, env(safe-area-inset-bottom, 32px))',
+            animation: 'slideUpIn 0.28s cubic-bezier(0.2,0.7,0.3,1) forwards',
+            maxHeight: '70vh', overflow: 'hidden', display: 'flex', flexDirection: 'column',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 0 14px', flexShrink: 0 }}>
+              <div style={{ fontSize: 17, fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.02em' }}>
+                Add {selected.size} scan{selected.size !== 1 ? 's' : ''} to site
+              </div>
+              <button onClick={() => setShowAssignSheet(false)} style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: 4 }}>
+                <X size={20} strokeWidth={2} />
+              </button>
+            </div>
+            {sites.length === 0 ? (
+              <div style={{ padding: '24px 0', textAlign: 'center', color: 'var(--text-muted)', fontSize: 14, fontWeight: 500 }}>
+                No sites yet. Create a site first.
+              </div>
+            ) : (
+              <div style={{ overflowY: 'auto', flex: 1 }}>
+                {sites.map(site => (
+                  <button key={site.id} onClick={() => handleBulkAssign(site.id)} style={{
+                    width: '100%', display: 'flex', alignItems: 'center', gap: 12,
+                    padding: '13px 0', background: 'none', border: 'none',
+                    borderBottom: '1px solid var(--border-subtle)',
+                    cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left',
+                  }}>
+                    <div style={{ width: 34, height: 34, borderRadius: 9, background: 'var(--brand-tint)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
+                      <Folder size={16} strokeWidth={1.75} color="var(--amber)" />
+                    </div>
+                    <span style={{ fontSize: 15, fontWeight: 600, color: 'var(--text)' }}>{site.name}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </>
       )}
 
       {/* Delete confirm */}
