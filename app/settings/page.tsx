@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
@@ -53,12 +53,19 @@ function Divider() {
 
 export default function SettingsPage() {
   const [signingOut, setSigningOut] = useState(false)
+  const [branding, setBranding] = useState<{ company_name: string | null; logo_url: string | null } | null>(null)
   const router = useRouter()
   const { user, loading } = useUser()
   const { outstandingCount } = useCount()
 
   const fullName = user?.user_metadata?.full_name ?? null
   const email = user?.email ?? null
+
+  useEffect(() => {
+    if (!user) return
+    supabase.from('profiles').select('company_name, logo_url').eq('id', user.id).single()
+      .then(({ data }) => { if (data) setBranding(data) })
+  }, [user])
 
   const handleSignOut = async () => {
     setSigningOut(true)
@@ -115,6 +122,40 @@ export default function SettingsPage() {
             <ChevronRight size={16} strokeWidth={1.75} color="var(--text-muted)" style={{ flexShrink: 0 }} />
           </button>
         )}
+
+        {/* Organisation branding */}
+        <button onClick={() => router.push('/profile/branding')} style={{
+          margin: '0 18px 8px', width: 'calc(100% - 36px)',
+          background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+          borderRadius: 'var(--r-card)', padding: '14px 18px',
+          display: 'flex', alignItems: 'center', gap: 14,
+          cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left',
+        }}>
+          <div style={{
+            width: 42, height: 42, borderRadius: 10, flexShrink: 0, overflow: 'hidden',
+            background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
+            display: 'grid', placeItems: 'center',
+          }}>
+            {branding?.logo_url ? (
+              <img src={branding.logo_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <rect x="2" y="6.5" width="14" height="10" rx="1.5" stroke="var(--text-muted)" strokeWidth="1.4"/>
+                <path d="M6 16.5v-4h2.5v4M9.5 16.5v-4h2.5v4" stroke="var(--text-muted)" strokeWidth="1.4" strokeLinecap="round"/>
+                <path d="M5.5 6.5V5C5.5 3.9 6.4 3 7.5 3h3C11.6 3 12.5 3.9 12.5 5v1.5" stroke="var(--text-muted)" strokeWidth="1.4"/>
+              </svg>
+            )}
+          </div>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', letterSpacing: '-0.01em' }}>
+              {branding?.company_name || 'Organisation Branding'}
+            </div>
+            <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>
+              {branding?.company_name ? 'PDF exports & reports' : 'Add logo & details for PDF exports'}
+            </div>
+          </div>
+          <ChevronRight size={16} strokeWidth={1.75} color="var(--text-muted)" style={{ flexShrink: 0 }} />
+        </button>
 
         {/* Get around */}
         <Section title="Get around">
