@@ -94,7 +94,16 @@ export default function SiteDetail({ id }: { id: string }) {
   )
 
   const totalScans = scans.length
-  const pending = scans.filter(s => s.status === 'uncertain').length
+  const pending = scans.filter(scan => {
+    const scanMods: any[] = (scan as any).scan_modules || []
+    return scanMods.some((mod: any) => {
+      const state: Record<string, string> = mod.findings_state || {}
+      return (mod.findings || []).some((f: any) =>
+        (f.type === 'critical' || f.type === 'warning' || f.type === 'action') &&
+        state[f.id] !== 'done' && state[f.id] !== 'dismissed'
+      )
+    })
+  }).length
   const outstandingCount = modules.reduce((acc, m) => {
     const findings = m.findings || []
     const state = m.findings_state || {}
