@@ -36,8 +36,8 @@ function NavRow({ icon, label, badge, onClick }: { icon: React.ReactNode; label:
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div style={{ marginBottom: 8 }}>
-      <div style={{ padding: '18px 18px 6px', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+    <div style={{ margin: '0 18px 8px' }}>
+      <div style={{ padding: '18px 0 6px', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
         {title}
       </div>
       <div style={{ background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-card)', overflow: 'hidden' }}>
@@ -148,7 +148,7 @@ export default function SettingsPage() {
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', letterSpacing: '-0.01em' }}>
-              {branding?.company_name || 'Organisation Branding'}
+              {branding?.company_name || 'Branding'}
             </div>
             <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>
               {branding?.company_name ? 'PDF exports & reports' : 'Add logo & details for PDF exports'}

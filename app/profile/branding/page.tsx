@@ -147,7 +147,7 @@ export default function BrandingPage() {
         )}
 
         <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: '-0.025em', lineHeight: 1.18, color: 'var(--text)', marginBottom: 6 }}>
-          Organisation branding.
+          Branding.
         </div>
         <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mut)', lineHeight: 1.5, marginBottom: 32 }}>
           Your logo and company details appear on exported PDF reports.
@@ -206,7 +206,7 @@ export default function BrandingPage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <div>
             <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>Company / organisation name</div>
-            <input value={companyName} onChange={e => setCompanyName(e.target.value)} placeholder="e.g. Acme Safety Solutions" style={inp} />
+            <input value={companyName} onChange={e => setCompanyName(e.target.value)} placeholder="e.g. XYZ Constructions" style={inp} />
           </div>
           <div>
             <div style={{ fontWeight: 600, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 6 }}>

@@ -123,7 +123,7 @@ export default function ProfilePage() {
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontWeight: 600, fontSize: 14, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-              {branding?.company_name || 'Organisation Branding'}
+              {branding?.company_name || 'Branding'}
             </div>
             <div style={{ fontWeight: 500, fontSize: 12, color: 'var(--mut)', marginTop: 2 }}>
               {branding?.company_name ? 'PDF reports & exports' : 'Add for branded PDF exports'}
