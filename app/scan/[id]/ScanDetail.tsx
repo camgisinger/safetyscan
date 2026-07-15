@@ -10,6 +10,7 @@ import LegislationList from '../../../components/LegislationList'
 import {
   Share2, Download, Trash2, ArrowLeft, Check, X,
   ChevronDown, RotateCcw, Pencil, Camera, Upload,
+  Shield, Ruler, Leaf,
 } from 'lucide-react'
 
 type Branding = { company_name: string | null; logo_url: string | null; company_email: string | null; company_phone: string | null; company_website: string | null } | null
@@ -728,6 +729,7 @@ export default function ScanDetail({ id }: { id: string }) {
                     const isActive = m.module === activeModule
                     const tabStatusColor = m.status === 'pass' ? 'var(--pass)' : m.status === 'fail' ? 'var(--issue)' : m.status === 'error' ? 'var(--issue)' : 'var(--warning)'
                     const label = m.module === 'safety' ? 'Safety' : m.module === 'quality' ? 'Quality' : 'Environmental'
+                    const ModIcon = m.module === 'safety' ? Shield : m.module === 'quality' ? Ruler : Leaf
                     return (
                       <button key={m.module} onClick={() => setActiveModule(m.module)} style={{
                         display: 'flex', alignItems: 'center', gap: 6, height: 34, padding: '0 14px',
@@ -737,7 +739,7 @@ export default function ScanDetail({ id }: { id: string }) {
                         color: isActive ? '#1B1A12' : 'var(--text-secondary)',
                         fontWeight: isActive ? 700 : 500, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit',
                       }}>
-                        <span style={{ width: 7, height: 7, borderRadius: '50%', background: isActive ? '#1B1A12' : tabStatusColor, flexShrink: 0 }} />
+                        <ModIcon size={13} strokeWidth={isActive ? 2.2 : 1.75} color={isActive ? '#1B1A12' : tabStatusColor} />
                         {label}
                       </button>
                     )
