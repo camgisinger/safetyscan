@@ -18,6 +18,7 @@ function siteCompliance(scans: Scan[]) {
 export default function SitesPage() {
   const [sites, setSites] = useState<Site[]>([])
   const [scans, setScans] = useState<Scan[]>([])
+  const [siteOutstanding, setSiteOutstanding] = useState<Record<string, number>>({})
   const [loading, setLoading] = useState(true)
   const [showNewSheet, setShowNewSheet] = useState(false)
   useEffect(() => {
@@ -36,12 +37,25 @@ export default function SitesPage() {
     if (!user) { router.push('/login'); return }
     setLoading(true)
     const init = async () => {
-      const [sitesRes, scansRes] = await Promise.all([
+      const [sitesRes, scansRes, modulesRes] = await Promise.all([
         supabase.from('sites').select('id, name, location, archived').order('name'),
-        supabase.from('scans').select('id, site_id, status, created_at, findings'),
+        supabase.from('scans').select('id, site_id, status, created_at, archived'),
+        supabase.from('scan_modules').select('findings, findings_state, scans!inner(site_id, archived)'),
       ])
       setSites((sitesRes.data || []) as unknown as Site[])
       setScans((scansRes.data || []) as Scan[])
+      const outstanding: Record<string, number> = {}
+      for (const mod of (modulesRes.data || [])) {
+        const scan = (mod as any).scans
+        if (!scan?.site_id || scan.archived) continue
+        const state: Record<string, string> = (mod as any).findings_state || {}
+        const count = ((mod as any).findings || []).filter((f: any) =>
+          (f.type === 'critical' || f.type === 'warning' || f.type === 'action') &&
+          state[f.id] !== 'done' && state[f.id] !== 'dismissed'
+        ).length
+        outstanding[scan.site_id] = (outstanding[scan.site_id] || 0) + count
+      }
+      setSiteOutstanding(outstanding)
       setLoading(false)
     }
     init()
@@ -154,9 +168,7 @@ export default function SitesPage() {
           </div>
         ) : visibleSites.map(site => {
           const siteScans = scans.filter(s => s.site_id === site.id)
-          const outstanding = siteScans.filter(s => !(s as any).archived)
-            .flatMap(s => (s.findings || []))
-            .filter((f: any) => f.type !== 'pass' && !f.resolved).length
+          const outstanding = siteOutstanding[site.id] || 0
           const { rate, color } = siteCompliance(siteScans)
 
           return (

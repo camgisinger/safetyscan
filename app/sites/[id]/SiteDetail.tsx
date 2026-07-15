@@ -103,7 +103,7 @@ export default function SiteDetail({ id }: { id: string }) {
   const outstandingCount = modules.reduce((acc, m) => {
     const findings = m.findings || []
     const state = m.findings_state || {}
-    return acc + findings.filter((f: any) => (f.type === 'critical' || f.type === 'warning') && !f.tentative && !state[f.id]).length
+    return acc + findings.filter((f: any) => (f.type === 'critical' || f.type === 'warning' || f.type === 'action') && !f.tentative && state[f.id] !== 'done' && state[f.id] !== 'dismissed').length
   }, 0)
 
   const moduleBreakdown = ['safety', 'quality', 'environmental'].map(mod => {
@@ -114,7 +114,7 @@ export default function SiteDetail({ id }: { id: string }) {
     const outstanding = modMods.reduce((acc, m) => {
       const findings = m.findings || []
       const state = m.findings_state || {}
-      return acc + findings.filter((f: any) => (f.type === 'critical' || f.type === 'warning') && !f.tentative && !state[f.id]).length
+      return acc + findings.filter((f: any) => (f.type === 'critical' || f.type === 'warning' || f.type === 'action') && !f.tentative && state[f.id] !== 'done' && state[f.id] !== 'dismissed').length
     }, 0)
     return { mod, modRate, outstanding, total: modMods.length }
   }).filter(m => m.total > 0)
