@@ -44,7 +44,7 @@ export default function SiteDetail({ id }: { id: string }) {
       ])
       if (siteRes.error) { setError(siteRes.error.message); setLoading(false); return }
       const siteScans = (scansRes.data || []) as any[]
-      setSite(siteRes.data)
+      setSite(siteRes.data as unknown as Site)
       setScans(siteScans as Scan[])
       setModules(siteScans.flatMap((s: any) => s.scan_modules || []))
       setLoading(false)
