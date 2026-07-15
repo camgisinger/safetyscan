@@ -38,7 +38,7 @@ export default function SitesPage() {
     const init = async () => {
       const [sitesRes, scansRes] = await Promise.all([
         supabase.from('sites').select('id, name, location, archived').order('name'),
-        supabase.from('scans').select('id, site_id, status, created_at'),
+        supabase.from('scans').select('id, site_id, status, created_at, findings'),
       ])
       setSites((sitesRes.data || []) as unknown as Site[])
       setScans((scansRes.data || []) as Scan[])
@@ -154,7 +154,9 @@ export default function SitesPage() {
           </div>
         ) : visibleSites.map(site => {
           const siteScans = scans.filter(s => s.site_id === site.id)
-          const outstanding = siteScans.filter(s => s.status === 'fail').length
+          const outstanding = siteScans.filter(s => !(s as any).archived)
+            .flatMap(s => (s.findings || []))
+            .filter((f: any) => f.type !== 'pass' && !f.resolved).length
           const { rate, color } = siteCompliance(siteScans)
 
           return (
