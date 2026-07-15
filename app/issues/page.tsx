@@ -141,6 +141,7 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [bulkWorking, setBulkWorking] = useState(false)
+  const [typeFilter, setTypeFilter] = useState<'all' | 'critical' | 'warning' | 'action'>('all')
   const selectMode = selectModeFromParent
   const router = useRouter()
   const { user, loading: userLoading } = useUser()
@@ -155,11 +156,15 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
     setSelected(prev => { const n = new Set(prev); n.has(k) ? n.delete(k) : n.add(k); return n })
   }
 
+  const filteredOutstanding = typeFilter === 'all'
+    ? outstanding
+    : outstanding.filter(f => f.type === typeFilter)
+
   const toggleAll = () => {
-    if (selected.size === outstanding.length) {
+    if (selected.size === filteredOutstanding.length) {
       setSelected(new Set())
     } else {
-      setSelected(new Set(outstanding.map(selKey)))
+      setSelected(new Set(filteredOutstanding.map(selKey)))
     }
   }
 
@@ -241,7 +246,14 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
   )
 
   const allClearOutstanding = !loading && outstanding.length === 0
-  const allSelected = selected.size === outstanding.length && outstanding.length > 0
+  const allSelected = selected.size === filteredOutstanding.length && filteredOutstanding.length > 0
+
+  const FILTER_CHIPS = [
+    { key: 'all' as const, label: 'All' },
+    { key: 'critical' as const, label: 'Critical' },
+    { key: 'warning' as const, label: 'Warning' },
+    { key: 'action' as const, label: 'Confirm on site' },
+  ].filter(chip => chip.key === 'all' || outstanding.some(f => f.type === chip.key))
 
   return (
     <>
@@ -252,11 +264,37 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="var(--pass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </div>
             <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)', marginBottom: 6 }}>All clear</div>
-            <div style={{ fontSize: 13.5, fontWeight: 500, color: 'var(--text-muted)' }}>No outstanding issues right now</div>
+            <div style={{ fontSize: 13.5, fontWeight: 500, color: 'var(--text-muted)' }}>No outstanding observations right now</div>
           </div>
         ) : (
           <>
-            {selectMode && outstanding.length > 1 && (
+            {!selectMode && FILTER_CHIPS.length > 1 && (
+              <div style={{ display: 'flex', gap: 6, marginBottom: 14, flexWrap: 'wrap' }}>
+                {FILTER_CHIPS.map(chip => {
+                  const count = chip.key === 'all' ? outstanding.length : outstanding.filter(f => f.type === chip.key).length
+                  const active = typeFilter === chip.key
+                  return (
+                    <button key={chip.key} onClick={() => setTypeFilter(chip.key)}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: 5,
+                        height: 32, padding: '0 12px', borderRadius: 999,
+                        border: `1.5px solid ${active ? 'var(--amber)' : 'var(--border-card)'}`,
+                        background: active ? 'var(--amber)' : 'var(--surf)',
+                        color: active ? '#1B1A12' : 'var(--text-secondary)',
+                        fontSize: 12.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+                      }}>
+                      {chip.label}
+                      <span style={{
+                        fontSize: 11, fontWeight: 700, borderRadius: 999, padding: '1px 6px',
+                        background: active ? 'rgba(0,0,0,0.15)' : 'var(--surf-inset)',
+                        color: active ? '#1B1A12' : 'var(--text-muted)',
+                      }}>{count}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            )}
+            {selectMode && filteredOutstanding.length > 1 && (
               <button onClick={toggleAll} style={{
                 display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10,
                 background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
@@ -273,7 +311,11 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
                 {allSelected ? 'Deselect all' : 'Select all'}
               </button>
             )}
-            {outstanding.map(f => (
+            {filteredOutstanding.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: '32px 24px', color: 'var(--text-muted)', fontSize: 13.5, fontWeight: 500 }}>
+                No {typeFilter === 'action' ? 'confirm on site' : typeFilter} observations
+              </div>
+            ) : filteredOutstanding.map(f => (
               <OutstandingRow key={`${f.scan_id}-${f.module}-${f.finding_id}`} f={f}
                 onMark={(scanId, module, findingId) => removeOutstanding(scanId, module, findingId)}
                 onView={() => router.push(`/scan/${f.scan_id}`)}
@@ -324,7 +366,7 @@ export default function IssuesPage() {
 
   return (
     <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
-      <AppHeader title="Issues" rightContent={
+      <AppHeader title="Observations" rightContent={
         <button onClick={() => setSelectMode(v => !v)} style={{
           height: 34, padding: '0 14px', borderRadius: 'var(--r-control-sm)',
           border: '1.5px solid var(--border-card)', background: 'var(--surf)',

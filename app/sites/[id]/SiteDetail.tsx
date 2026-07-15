@@ -14,7 +14,7 @@ function scanLeftColor(status: string) {
 
 function statusPill(status: string) {
   if (status === 'pass') return { label: 'Compliant', bg: 'var(--pass-tint)', color: 'var(--pass-deep)' }
-  if (status === 'fail') return { label: 'Issues', bg: 'var(--fail-tint)', color: 'var(--issue)' }
+  if (status === 'fail') return { label: 'Observations', bg: 'var(--fail-tint)', color: 'var(--issue)' }
   return { label: 'Pending', bg: 'var(--warn-tint)', color: 'var(--warning)' }
 }
 

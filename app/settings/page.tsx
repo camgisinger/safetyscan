@@ -165,7 +165,7 @@ export default function SettingsPage() {
           <Divider />
           <NavRow icon={<Folder size={18} strokeWidth={1.75} />} label="Sites" onClick={() => router.push('/sites')} />
           <Divider />
-          <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Issues" badge={outstandingCount ?? 0} onClick={() => router.push('/issues')} />
+          <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Observations" badge={outstandingCount ?? 0} onClick={() => router.push('/issues')} />
         </Section>
 
         {/* Help */}

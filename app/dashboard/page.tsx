@@ -16,7 +16,7 @@ function greeting() {
 
 function statusPill(status: string, issueCount?: number) {
   if (status === 'pass') return { label: 'Compliant', bg: 'var(--pass-tint)', color: 'var(--pass-deep)', border: 'var(--pass-border)' }
-  if (status === 'fail') return { label: issueCount ? `${issueCount} issue${issueCount !== 1 ? 's' : ''}` : 'Issues', bg: 'var(--fail-tint)', color: 'var(--issue)', border: 'transparent' }
+  if (status === 'fail') return { label: issueCount ? `${issueCount} observation${issueCount !== 1 ? 's' : ''}` : 'Observations', bg: 'var(--fail-tint)', color: 'var(--issue)', border: 'transparent' }
   return { label: 'Pending', bg: 'var(--warn-tint)', color: 'var(--warning)', border: 'transparent' }
 }
 
@@ -138,7 +138,7 @@ export default function DashboardPage() {
             </div>
             <div>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--pass-deep)', letterSpacing: '-0.01em' }}>All clear</div>
-              <div style={{ fontSize: 12, fontWeight: 500, color: 'var(--pass-deep)', opacity: 0.75, marginTop: 1 }}>No outstanding issues across all scans</div>
+              <div style={{ fontSize: 12, fontWeight: 500, color: 'var(--pass-deep)', opacity: 0.75, marginTop: 1 }}>No outstanding observations across all scans</div>
             </div>
           </div>
         )}
@@ -178,8 +178,8 @@ export default function DashboardPage() {
               <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (outstandingCount ?? 0) > 0 ? 'var(--issue)' : 'var(--text)', lineHeight: 1 }}>{outstandingCount ?? '—'}</div>
               <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>
                 {outstandingCount === null ? 'Loading…'
-                  : outstandingCount === 0 ? 'No outstanding issues'
-                  : `Issue${outstandingCount !== 1 ? 's' : ''} across ${scansWithIssues ?? '…'} scan${scansWithIssues !== 1 ? 's' : ''}`}
+                  : outstandingCount === 0 ? 'No outstanding observations'
+                  : `Observation${outstandingCount !== 1 ? 's' : ''} across ${scansWithIssues ?? '…'} scan${scansWithIssues !== 1 ? 's' : ''}`}
               </div>
             </button>
           </div>

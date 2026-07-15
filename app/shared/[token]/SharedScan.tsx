@@ -63,7 +63,7 @@ export default function SharedScan({ token }: { token: string }) {
   const issueFindings = displayFindings.filter((f: any) => f.type === 'critical' || f.type === 'warning')
   const issueCount = issueFindings.length
   const statusColor = displayStatus === 'pass' ? 'var(--clear-tx)' : displayStatus === 'fail' ? 'var(--issue-tx-theme)' : 'var(--amber)'
-  const statusLabel = displayStatus === 'pass' ? 'Clear' : displayStatus === 'fail' ? `${issueCount} issue${issueCount !== 1 ? 's' : ''} found` : 'Pending review'
+  const statusLabel = displayStatus === 'pass' ? 'Clear' : displayStatus === 'fail' ? `${issueCount} observation${issueCount !== 1 ? 's' : ''} found` : 'Pending review'
   const statusBarColor = displayStatus === 'pass' ? '#3E8E5A' : displayStatus === 'fail' ? '#D63A26' : 'var(--amber)'
 
   return (
@@ -149,7 +149,7 @@ export default function SharedScan({ token }: { token: string }) {
           <>
             <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '18px 2px 11px' }}>
               <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }}/>
-              <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)' }}>Issues</span>
+              <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--mut)' }}>Observations</span>
             </div>
             {issueFindings.map((f: any, i: number) => (
               <div key={i} style={{ display: 'flex', alignItems: 'stretch', background: 'var(--surf)', border: '1.5px solid var(--line)', borderRadius: 4, overflow: 'hidden', marginBottom: 8 }}>
