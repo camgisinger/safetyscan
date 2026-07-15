@@ -7,6 +7,8 @@ import ThemeToggle from './ThemeToggle'
 
 type NavId = 'home' | 'scans' | 'sites' | 'issues'
 
+const APP_ROOTS = ['/dashboard', '/scans', '/sites', '/issues', '/profile', '/settings', '/org', '/tools', '/scan', '/guide', '/contact', '/privacy', '/terms', '/help']
+
 const NAV: { id: NavId; label: string; href: string; Icon: any }[] = [
   { id: 'home',   label: 'Home',   href: '/dashboard', Icon: House },
   { id: 'scans',  label: 'Scans',  href: '/scans',     Icon: Layers },
@@ -45,6 +47,8 @@ export default function DesktopSidebar() {
   const email    = user?.email ?? null
 
   const active = activeId(pathname)
+
+  if (!APP_ROOTS.some(r => pathname === r || pathname.startsWith(r + '/'))) return null
 
   return (
     <aside
