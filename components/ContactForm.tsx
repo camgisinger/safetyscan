@@ -1,11 +1,10 @@
 'use client'
 import { useState } from 'react'
-import { supabase } from '../lib/supabase'
 import { useUser } from '../lib/UserContext'
 
 export default function ContactForm() {
   const { user } = useUser()
-  const [name, setName] = useState('')
+  const [name, setName] = useState(user?.user_metadata?.full_name || '')
   const [email, setEmail] = useState(user?.email || '')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
@@ -13,21 +12,27 @@ export default function ContactForm() {
   const [done, setDone] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
+  const canSubmit = name.trim() && email.trim() && subject.trim() && message.trim().length >= 20
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!name.trim() || !email.trim() || !message.trim()) return
+    if (!canSubmit) return
     setSubmitting(true)
     setError(null)
-    const { error: err } = await supabase.from('contact_messages').insert({
-      name: name.trim(),
-      email: email.trim(),
-      subject: subject.trim() || null,
-      message: message.trim(),
-      user_id: user?.id ?? null,
-    })
-    setSubmitting(false)
-    if (err) { setError('Something went wrong. Please try again.'); return }
-    setDone(true)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name.trim(), email: email.trim(), subject: subject.trim(), message: message.trim() }),
+      })
+      const data = await res.json()
+      if (!res.ok) { setError(data.error || 'Something went wrong. Please try again.'); return }
+      setDone(true)
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const inp: React.CSSProperties = {
@@ -66,38 +71,31 @@ export default function ContactForm() {
           <label style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: 6 }}>
             Name <span style={{ color: 'var(--issue)' }}>*</span>
           </label>
-          <input
-            value={name} onChange={e => setName(e.target.value)}
-            placeholder="Your name" required
-            style={inp}
-          />
+          <input value={name} onChange={e => setName(e.target.value)} placeholder="Your name" required style={inp} />
         </div>
         <div>
           <label style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: 6 }}>
             Email <span style={{ color: 'var(--issue)' }}>*</span>
           </label>
-          <input
-            type="email" value={email} onChange={e => setEmail(e.target.value)}
-            placeholder="you@example.com" required
-            style={inp}
-          />
+          <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" required style={inp} />
         </div>
       </div>
 
       <div>
         <label style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: 6 }}>
-          Subject <span style={{ fontSize: 10, fontWeight: 400, textTransform: 'none', letterSpacing: 0 }}>(optional)</span>
+          Subject <span style={{ color: 'var(--issue)' }}>*</span>
         </label>
-        <input
-          value={subject} onChange={e => setSubject(e.target.value)}
-          placeholder="e.g. Question about scan results"
-          style={inp}
-        />
+        <input value={subject} onChange={e => setSubject(e.target.value)} placeholder="e.g. Question about scan results" required style={inp} />
       </div>
 
       <div>
         <label style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: 6 }}>
           Message <span style={{ color: 'var(--issue)' }}>*</span>
+          {message.trim().length > 0 && message.trim().length < 20 && (
+            <span style={{ fontWeight: 400, textTransform: 'none', letterSpacing: 0, color: 'var(--warning)', marginLeft: 6 }}>
+              {20 - message.trim().length} more characters needed
+            </span>
+          )}
         </label>
         <textarea
           value={message} onChange={e => setMessage(e.target.value)}
@@ -119,12 +117,12 @@ export default function ContactForm() {
         </div>
       )}
 
-      <button type="submit" disabled={submitting || !name.trim() || !email.trim() || !message.trim()} style={{
+      <button type="submit" disabled={submitting || !canSubmit} style={{
         height: 50, borderRadius: 'var(--r-control)', border: 'none',
         background: 'var(--amber)', color: '#1B1A12',
         fontSize: 15, fontWeight: 700, fontFamily: 'inherit',
-        cursor: submitting || !name.trim() || !email.trim() || !message.trim() ? 'not-allowed' : 'pointer',
-        opacity: submitting || !name.trim() || !email.trim() || !message.trim() ? 0.5 : 1,
+        cursor: submitting || !canSubmit ? 'not-allowed' : 'pointer',
+        opacity: submitting || !canSubmit ? 0.5 : 1,
         boxShadow: 'var(--shadow-btn)',
         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
       }}>
