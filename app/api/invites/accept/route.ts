@@ -98,9 +98,15 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const { data: orgData } = await serviceRole
+      .from('organisations')
+      .select('name')
+      .eq('id', invite.org_id)
+      .single()
+
     const { error: memberErr } = await serviceRole
       .from('organisation_members')
-      .insert({ org_id: invite.org_id, user_id: user.id, role: invite.role, email: user.email })
+      .insert({ org_id: invite.org_id, user_id: user.id, role: invite.role, email: user.email, org_name: orgData?.name ?? null })
     if (memberErr) {
       return NextResponse.json({ error: 'Failed to create membership' }, { status: 500 })
     }
