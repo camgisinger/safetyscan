@@ -208,6 +208,7 @@ export default function ScansPage() {
           </div>
         ) : filtered.map(scan => {
           const photoUrl = scan.photo_urls?.[0] || scan.photo_url
+          const photoCount = scan.photo_urls?.length || (scan.photo_url ? 1 : 0)
           const siteName = sites.find(s => s.id === scan.site_id)?.name
           const issueCount = (scan.findings || []).filter((f: any) => f.type === 'critical').length
           const pill = statusPill(scan.status, issueCount || undefined)
@@ -229,7 +230,15 @@ export default function ScansPage() {
               }}>
               <div style={{ width: 4, flexShrink: 0, background: scanLeftColor(scan.status) }} />
               {photoUrl ? (
-                <img src={photoUrl} alt="" style={{ width: 52, alignSelf: 'stretch', objectFit: 'cover', display: 'block', flexShrink: 0 }} />
+                <div style={{ position: 'relative', width: 52, alignSelf: 'stretch', flexShrink: 0 }}>
+                  <img src={photoUrl} alt="" style={{ width: 52, height: '100%', objectFit: 'cover', display: 'block' }} />
+                  {photoCount > 1 && (
+                    <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.42)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 1 }}>
+                      <span style={{ fontSize: 13, fontWeight: 800, color: '#fff', lineHeight: 1 }}>{photoCount}</span>
+                      <span style={{ fontSize: 8.5, fontWeight: 600, color: 'rgba(255,255,255,0.8)', letterSpacing: '0.04em' }}>photos</span>
+                    </div>
+                  )}
+                </div>
               ) : (
                 <div style={{ width: 52, alignSelf: 'stretch', flexShrink: 0, background: 'var(--surf-inset)', display: 'grid', placeItems: 'center' }}>
                   <Camera size={18} strokeWidth={1.5} color="var(--text-muted)" />
