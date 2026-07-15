@@ -1,16 +1,11 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
+import { useUser } from '../../lib/UserContext'
+import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
-import { House, Layers, Folder, TriangleAlert, Building2, BookOpen, LifeBuoy, LogOut, ChevronRight, Settings, Users } from 'lucide-react'
-
-type Ctx = {
-  full_name: string | null
-  email: string | null
-  org_name: string | null
-  role: string | null
-}
+import { House, Layers, Folder, TriangleAlert, BookOpen, LifeBuoy, LogOut, ChevronRight, Settings } from 'lucide-react'
 
 function toInitials(name: string | null, email: string | null) {
   if (name) return name.trim().split(/\s+/).map(n => n[0]).join('').slice(0, 2).toUpperCase()
@@ -57,27 +52,13 @@ function Divider() {
 }
 
 export default function MorePage() {
-  const [ctx, setCtx] = useState<Ctx | null>(null)
-  const [outstandingCount, setOutstandingCount] = useState(0)
   const [signingOut, setSigningOut] = useState(false)
   const router = useRouter()
+  const { user } = useUser()
+  const { outstandingCount } = useCount()
 
-  useEffect(() => {
-    const init = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/login'); return }
-      const [ctxRes, issuesRes] = await Promise.all([
-        fetch('/api/user/context'),
-        fetch('/api/issues'),
-      ])
-      if (ctxRes.ok) setCtx(await ctxRes.json())
-      if (issuesRes.ok) {
-        const d = await issuesRes.json()
-        setOutstandingCount(d.outstanding?.length ?? 0)
-      }
-    }
-    init()
-  }, [router])
+  const fullName = user?.user_metadata?.full_name ?? null
+  const email = user?.email ?? null
 
   const handleSignOut = async () => {
     setSigningOut(true)
@@ -92,11 +73,12 @@ export default function MorePage() {
       <div style={{ maxWidth: 540, margin: '0 auto', padding: '16px 0 0' }}>
 
         {/* Account card */}
-        <div style={{
-          margin: '0 18px 16px',
+        <button onClick={() => router.push('/profile/edit')} style={{
+          margin: '0 18px 16px', width: 'calc(100% - 36px)',
           background: 'var(--surf)', border: '1.5px solid var(--border-card)',
           borderRadius: 'var(--r-card)', padding: '16px 18px',
           display: 'flex', alignItems: 'center', gap: 14,
+          cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left',
         }}>
           <div style={{
             width: 46, height: 46, borderRadius: '50%',
@@ -104,24 +86,20 @@ export default function MorePage() {
             display: 'grid', placeItems: 'center',
             fontSize: 17, fontWeight: 700, color: '#1B1A12',
           }}>
-            {toInitials(ctx?.full_name ?? null, ctx?.email ?? null)}
+            {toInitials(fullName, email)}
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontSize: 15.5, fontWeight: 700, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', letterSpacing: '-0.02em' }}>
-              {ctx?.full_name || ctx?.email || '…'}
+              {fullName || email || '…'}
             </div>
-            {ctx?.email && ctx?.full_name && (
+            {email && fullName && (
               <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 2 }}>
-                {ctx.email}
-              </div>
-            )}
-            {ctx?.org_name && (
-              <div style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>
-                {ctx.org_name}{ctx?.role && ` · ${ctx.role}`}
+                {email}
               </div>
             )}
           </div>
-        </div>
+          <ChevronRight size={16} strokeWidth={1.75} color="var(--text-muted)" style={{ flexShrink: 0 }} />
+        </button>
 
         {/* Get around */}
         <Section title="Get around">
@@ -131,21 +109,10 @@ export default function MorePage() {
           <Divider />
           <NavRow icon={<Folder size={18} strokeWidth={1.75} />} label="Sites" onClick={() => router.push('/sites')} />
           <Divider />
-          <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Issues" badge={outstandingCount} onClick={() => router.push('/issues')} />
+          <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Issues" badge={outstandingCount ?? 0} onClick={() => router.push('/issues')} />
+          <Divider />
+          <NavRow icon={<Settings size={18} strokeWidth={1.75} />} label="Settings" onClick={() => router.push('/settings')} />
         </Section>
-
-        {/* Organisation */}
-        {ctx?.org_name && (
-          <Section title="Organisation">
-            <NavRow icon={<Building2 size={18} strokeWidth={1.75} />} label={ctx.org_name} onClick={() => router.push('/org')} />
-            {ctx.role === 'admin' && (
-              <>
-                <Divider />
-                <NavRow icon={<Users size={18} strokeWidth={1.75} />} label="Members" onClick={() => router.push('/org?tab=members')} />
-              </>
-            )}
-          </Section>
-        )}
 
         {/* Help */}
         <Section title="Help &amp; preferences">
