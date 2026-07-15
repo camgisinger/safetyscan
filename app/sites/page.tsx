@@ -32,19 +32,18 @@ export default function SitesPage() {
     const init = async () => {
       const [sitesRes, scansRes, modulesRes] = await Promise.all([
         supabase.from('sites').select('id, name, location, archived').order('name'),
-        supabase.from('scans').select('id, site_id, status, created_at, archived'),
+        supabase.from('scans').select('id, site_id, status, created_at'),
         supabase.from('scan_modules').select('scan_id, findings, findings_state, scans!inner(site_id)'),
       ])
       const scansData = (scansRes.data || []) as any[]
       setSites((sitesRes.data || []) as unknown as Site[])
       setScans(scansData as unknown as Scan[])
-      const archivedScanIds = new Set(scansData.filter(s => s.archived).map((s: any) => s.id))
       const scanSiteMap = Object.fromEntries(scansData.map((s: any) => [s.id, s.site_id]))
       const outstanding: Record<string, number> = {}
       const pendingScans: Record<string, Set<string>> = {}
       for (const mod of (modulesRes.data || [])) {
         const scanId: string = (mod as any).scan_id
-        if (!scanId || archivedScanIds.has(scanId)) continue
+        if (!scanId) continue
         const siteId: string = (mod as any).scans?.site_id || scanSiteMap[scanId]
         if (!siteId) continue
         const state: Record<string, string> = (mod as any).findings_state || {}
