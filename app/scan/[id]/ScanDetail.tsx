@@ -313,8 +313,6 @@ export default function ScanDetail({ id }: { id: string }) {
   const [openLeg, setOpenLeg] = useState<number | null>(null)
   const [scanModules, setScanModules] = useState<any[]>([])
   const [activeModule, setActiveModule] = useState<string>('')
-  const [view, setView] = useState<'detail' | 'overview'>('detail')
-  const [openOverviewChecklist, setOpenOverviewChecklist] = useState<string | null>(null)
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const photoStripRef = useRef<HTMLDivElement>(null)
   const { user: currentUser } = useUser()
@@ -637,90 +635,8 @@ export default function ScanDetail({ id }: { id: string }) {
             </div>
           </div>
 
-          {/* View toggle */}
-          {!isLegacy && (
-            <div style={{ display: 'flex', gap: 3, marginBottom: 12, padding: 3, background: 'var(--surf-toggle)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-control)', width: 'fit-content' }}>
-              {(['detail', 'overview'] as const).map(v => (
-                <button key={v} onClick={() => setView(v)} style={{
-                  height: 32, padding: '0 16px', borderRadius: 'calc(var(--r-control) - 4px)', border: 'none',
-                  background: view === v ? 'var(--surf)' : 'transparent',
-                  color: view === v ? 'var(--text)' : 'var(--text-muted)',
-                  fontWeight: view === v ? 700 : 500, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit',
-                  boxShadow: view === v ? 'var(--shadow-toggle)' : 'none',
-                }}>
-                  {v.charAt(0).toUpperCase() + v.slice(1)}
-                </button>
-              ))}
-            </div>
-          )}
-
-          {/* Overview */}
-          {!isLegacy && view === 'overview' && (
-            <div>
-              {scanModules.map((m: any) => {
-                const modIssues = (m.findings || []).filter((f: any) => (f.type === 'critical' || f.type === 'warning') && !(m.findings_state || {})[f.id]).length
-                const modLabel = m.module === 'safety' ? 'Safety' : m.module === 'quality' ? 'Quality' : 'Environmental'
-                const statusColor = m.status === 'pass' ? 'var(--pass-deep)' : m.status === 'fail' ? 'var(--issue)' : m.status === 'error' ? 'var(--issue)' : 'var(--warning)'
-                const modChecklist: any[] = m.checklist || []
-                const modChecklistState: Record<string, any> = m.checklist_state || {}
-                const modVisibleCount = modChecklist.filter((_: any, i: number) => !modChecklistState[`d_${i}`]).length
-                const isChecklistOpen = openOverviewChecklist === m.module
-                return (
-                  <div key={m.module} style={{ background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-card)', marginBottom: 10, overflow: 'hidden' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 14px', borderBottom: '1.5px solid var(--border-card)' }}>
-                      <span style={{ fontWeight: 700, fontSize: 13, color: 'var(--text)' }}>{modLabel}</span>
-                      <span style={{ fontSize: 12.5, fontWeight: 600, color: statusColor }}>
-                        {m.status === 'error' ? 'Error' : modIssues > 0 ? `${modIssues} issue${modIssues !== 1 ? 's' : ''}` : 'No issues'}
-                      </span>
-                    </div>
-                    {m.summary && (
-                      <div style={{ padding: '11px 14px', fontSize: 13, fontWeight: 500, lineHeight: 1.55, color: 'var(--text-muted)', borderBottom: modChecklist.length > 0 ? '1.5px solid var(--border-card)' : 'none', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
-                        {m.summary}
-                      </div>
-                    )}
-                    {modChecklist.length > 0 && (
-                      <div>
-                        <button onClick={() => setOpenOverviewChecklist(isChecklistOpen ? null : m.module)}
-                          style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '10px 14px', background: 'none', border: 'none', borderBottom: isChecklistOpen ? '1.5px solid var(--border-card)' : 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
-                          <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Checklist ({modVisibleCount})</span>
-                          <ChevronDown size={14} strokeWidth={2} color="var(--text-muted)" style={{ transform: isChecklistOpen ? 'rotate(180deg)' : 'none' }} />
-                        </button>
-                        {isChecklistOpen && modChecklist.map((item: any, i: number) => {
-                          if (modChecklistState[`d_${i}`]) return null
-                          const checked = !!modChecklistState[`c_${i}`]
-                          const isLast = modChecklist.slice(i + 1).every((_: any, j: number) => modChecklistState[`d_${i + 1 + j}`])
-                          return (
-                            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 14px', borderBottom: isLast ? 'none' : '1.5px solid var(--border-subtle)' }}>
-                              <div onClick={() => handleChecklistChange({ ...modChecklistState, [`c_${i}`]: !modChecklistState[`c_${i}`] }, m.module)}
-                                style={{ width: 20, height: 20, borderRadius: 6, display: 'grid', placeItems: 'center', flexShrink: 0, cursor: 'pointer', border: `1.5px solid ${checked ? 'var(--amber)' : 'var(--border-card)'}`, background: checked ? 'var(--amber)' : 'transparent' }}>
-                                {checked && <Check size={11} strokeWidth={2.5} color="#1B1A12" />}
-                              </div>
-                              <div style={{ flex: 1, cursor: 'pointer', fontSize: 13, fontWeight: 500, color: checked ? 'var(--text-muted)' : 'var(--text)', textDecoration: checked ? 'line-through' : 'none', opacity: checked ? 0.55 : 1 }} onClick={() => handleChecklistChange({ ...modChecklistState, [`c_${i}`]: !modChecklistState[`c_${i}`] }, m.module)}>
-                                {item.item}
-                              </div>
-                              <button onClick={() => handleChecklistChange({ ...modChecklistState, [`d_${i}`]: true, [`c_${i}`]: false }, m.module)}
-                                style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: 4, lineHeight: 1 }}>
-                                <X size={14} strokeWidth={2} />
-                              </button>
-                            </div>
-                          )
-                        })}
-                      </div>
-                    )}
-                  </div>
-                )
-              })}
-              <div style={{ display: 'flex', gap: 8, marginTop: 8 }}>
-                <button onClick={() => { setView('detail'); setReanalyseExpanded(true) }} style={{ ...btn(), flex: 1 }}>Re-analyse</button>
-                <button onClick={handleExportPDF} disabled={exportingPDF} style={{ ...btn(true), flex: 1, opacity: exportingPDF ? 0.6 : 1 }}>
-                  {exportingPDF ? 'Exporting…' : 'Export PDF'}
-                </button>
-              </div>
-            </div>
-          )}
-
           {/* Detail view */}
-          {(isLegacy || view === 'detail') && (
+          {true && (
             <>
               {/* Module tabs */}
               {!isLegacy && (
