@@ -7,44 +7,15 @@ const serviceRole = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 )
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const user = await getServerUser()
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-    const { searchParams } = new URL(request.url)
-    const requestedOrgId = searchParams.get('org_id')
-
-    let orgId: string
-
-    if (requestedOrgId) {
-      // Verify the caller is actually a member of the requested org before using service role
-      const { data: mem } = await serviceRole
-        .from('organisation_members')
-        .select('org_id')
-        .eq('user_id', user.id)
-        .eq('org_id', requestedOrgId)
-        .maybeSingle()
-
-      if (!mem) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-      orgId = requestedOrgId
-    } else {
-      const { data: mem } = await serviceRole
-        .from('organisation_members')
-        .select('org_id')
-        .eq('user_id', user.id)
-        .limit(1)
-        .single()
-
-      if (!mem?.org_id) return NextResponse.json({ outstanding: [], pending: [] })
-      orgId = mem.org_id
-    }
-
-    // Single JOIN query instead of two sequential queries
     const { data: modules } = await serviceRole
       .from('scan_modules')
-      .select('id, scan_id, module, findings, findings_state, scans!inner(id, work_type, created_at, site_id, org_id, sites(name))')
-      .eq('scans.org_id', orgId)
+      .select('id, scan_id, module, findings, findings_state, scans!inner(id, work_type, created_at, site_id, created_by, sites(name))')
+      .eq('scans.created_by', user.id)
 
     if (!modules || modules.length === 0) return NextResponse.json({ outstanding: [], pending: [] })
 

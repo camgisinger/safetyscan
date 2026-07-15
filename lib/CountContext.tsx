@@ -20,14 +20,14 @@ const CountContext = createContext<CountContextType>({
 export function CountProvider({ children }: { children: React.ReactNode }) {
   const [outstandingCount, setOutstandingCount] = useState<number | null>(null)
   const [scansWithIssues, setScansWithIssues] = useState<number | null>(null)
-  const { user, orgId } = useUser()
+  const { user } = useUser()
 
   const refreshCount = useCallback(() => {
-    if (!user || !orgId) return
+    if (!user) return
     supabase
       .from('scan_modules')
-      .select('findings, findings_state, scan_id, scans!inner(org_id)')
-      .eq('scans.org_id', orgId)
+      .select('findings, findings_state, scan_id, scans!inner(created_by)')
+      .eq('scans.created_by', user.id)
       .then(({ data: mods }) => {
         let outstanding = 0
         const scanIdsWithIssues = new Set<string>()
@@ -48,15 +48,15 @@ export function CountProvider({ children }: { children: React.ReactNode }) {
         setOutstandingCount(outstanding)
         setScansWithIssues(scanIdsWithIssues.size)
       })
-  }, [user, orgId])
+  }, [user])
 
   useEffect(() => {
-    if (!user || !orgId) return
+    if (!user) return
     refreshCount()
     const onVisible = () => { if (document.visibilityState === 'visible') refreshCount() }
     document.addEventListener('visibilitychange', onVisible)
     return () => document.removeEventListener('visibilitychange', onVisible)
-  }, [user, orgId, refreshCount])
+  }, [user, refreshCount])
 
   const adjustCount = useCallback((delta: number) => {
     setOutstandingCount(prev => prev === null ? null : Math.max(0, prev + delta))

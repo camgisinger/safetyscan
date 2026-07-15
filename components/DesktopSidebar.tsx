@@ -7,7 +7,7 @@ import ThemeToggle from './ThemeToggle'
 
 type NavId = 'home' | 'scans' | 'sites' | 'issues'
 
-const APP_ROOTS = ['/dashboard', '/scans', '/sites', '/issues', '/profile', '/settings', '/org', '/tools', '/scan', '/guide', '/contact', '/privacy', '/terms', '/help']
+const APP_ROOTS = ['/dashboard', '/scans', '/sites', '/issues', '/profile', '/settings', '/tools', '/scan', '/guide', '/contact', '/privacy', '/terms', '/help']
 
 const NAV: { id: NavId; label: string; href: string; Icon: any }[] = [
   { id: 'home',   label: 'Home',   href: '/dashboard', Icon: House },

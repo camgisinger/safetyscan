@@ -31,23 +31,23 @@ export default function ScansPage() {
   const [deleting, setDeleting] = useState(false)
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
   const router = useRouter()
-  const { user, orgId, loading: userLoading } = useUser()
+  const { user, loading: userLoading } = useUser()
 
   useEffect(() => {
-    if (userLoading || !orgId) return
+    if (userLoading) return
     if (!user) { router.push('/login'); return }
     setLoading(true)
     const init = async () => {
       const [scansRes, sitesRes] = await Promise.all([
-        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, findings').eq('org_id', orgId).order('created_at', { ascending: false }).limit(200),
-        supabase.from('sites').select('id, name').eq('org_id', orgId),
+        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, findings').order('created_at', { ascending: false }).limit(200),
+        supabase.from('sites').select('id, name'),
       ])
       setScans((scansRes.data || []) as unknown as Scan[])
       setSites((sitesRes.data || []) as { id: string; name: string }[])
       setLoading(false)
     }
     init()
-  }, [user, orgId, userLoading, router])
+  }, [user, userLoading, router])
 
   const counts = useMemo(() => ({
     issues: scans.filter(s => s.status === 'fail' && !(s as any).archived).length,

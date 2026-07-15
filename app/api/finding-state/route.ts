@@ -22,15 +22,11 @@ export async function PATCH(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid state value' }, { status: 400 })
     }
 
-    // Verify org membership
+    // Verify scan ownership
     const { data: scan } = await serviceRole
-      .from('scans').select('org_id').eq('id', scan_id).single()
+      .from('scans').select('created_by').eq('id', scan_id).single()
     if (!scan) return NextResponse.json({ error: 'Scan not found' }, { status: 404 })
-
-    const { data: membership } = await serviceRole
-      .from('organisation_members').select('user_id')
-      .eq('org_id', scan.org_id).eq('user_id', user.id).single()
-    if (!membership) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    if (scan.created_by !== user.id) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
 
     // Single atomic DB operation — replaces 4 sequential queries
     const { data: result, error: rpcError } = await serviceRole.rpc('update_finding_state', {

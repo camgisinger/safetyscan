@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Scan } from '../../../lib/supabase'
-import { useOrg } from '../../../lib/useOrg'
+import { useUser } from '../../../lib/UserContext'
 import { useCount } from '../../../lib/CountContext'
 import { convertToJpeg } from '../../../components/PhotoResultCard'
 import AppHeader from '../../../components/AppHeader'
@@ -288,7 +288,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const [openOverviewChecklist, setOpenOverviewChecklist] = useState<string | null>(null)
   const notesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const photoStripRef = useRef<HTMLDivElement>(null)
-  const { orgId } = useOrg()
+  const { user: currentUser } = useUser()
   const { adjustCount } = useCount()
   const router = useRouter()
 
@@ -358,8 +358,7 @@ export default function ScanDetail({ id }: { id: string }) {
 
   const handleCreateAndAssign = async () => {
     if (!newSiteName.trim()) return; setSavingSite(true)
-    const { data: { user } } = await supabase.auth.getUser()
-    const { data: newSite, error } = await supabase.from('sites').insert({ name: newSiteName.trim(), created_by: user?.id, org_id: orgId, archived: false }).select().single()
+    const { data: newSite, error } = await supabase.from('sites').insert({ name: newSiteName.trim(), created_by: currentUser?.id, archived: false }).select().single()
     if (!error && newSite) {
       await supabase.from('scans').update({ site_id: newSite.id }).eq('id', id)
       setSites(prev => [...prev, newSite].sort((a, b) => a.name.localeCompare(b.name)))

@@ -1,11 +1,11 @@
 'use client'
-import { useState, Fragment } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
-import { House, Layers, Folder, TriangleAlert, Building2, BookOpen, LifeBuoy, LogOut, ChevronRight, Users, Check } from 'lucide-react'
+import { House, Layers, Folder, TriangleAlert, BookOpen, LifeBuoy, LogOut, ChevronRight } from 'lucide-react'
 
 function toInitials(name: string | null, email: string | null) {
   if (name) return name.trim().split(/\s+/).map(n => n[0]).join('').slice(0, 2).toUpperCase()
@@ -54,7 +54,7 @@ function Divider() {
 export default function SettingsPage() {
   const [signingOut, setSigningOut] = useState(false)
   const router = useRouter()
-  const { user, orgId, orgName, role, loading, allOrgs, setActiveOrg } = useUser()
+  const { user, loading } = useUser()
   const { outstandingCount } = useCount()
 
   const fullName = user?.user_metadata?.full_name ?? null
@@ -111,12 +111,7 @@ export default function SettingsPage() {
                   {email}
                 </div>
               )}
-              {orgName && (
-                <div style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>
-                  {orgName}{role && ` · ${role}`}
-                </div>
-              )}
-            </div>
+              </div>
             <ChevronRight size={16} strokeWidth={1.75} color="var(--text-muted)" style={{ flexShrink: 0 }} />
           </button>
         )}
@@ -131,45 +126,6 @@ export default function SettingsPage() {
           <Divider />
           <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Issues" badge={outstandingCount ?? 0} onClick={() => router.push('/issues')} />
         </Section>
-
-        {/* Org switcher — only shown when user is in multiple orgs */}
-        {allOrgs.length > 1 && (
-          <Section title="Switch organisation">
-            {allOrgs.map((org, i) => (
-              <Fragment key={org.id}>
-                {i > 0 && <Divider />}
-                <button onClick={() => setActiveOrg(org.id)} style={{
-                  width: '100%', display: 'flex', alignItems: 'center', gap: 14,
-                  padding: '14px 18px', background: 'none', border: 'none',
-                  cursor: org.id === orgId ? 'default' : 'pointer',
-                  fontFamily: 'inherit', textAlign: 'left',
-                }}>
-                  <span style={{ color: org.id === orgId ? 'var(--amber)' : 'var(--text-secondary)', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-                    <Building2 size={18} strokeWidth={1.75} />
-                  </span>
-                  <span style={{ flex: 1, fontSize: 15, fontWeight: org.id === orgId ? 600 : 500, color: 'var(--text)', letterSpacing: '-0.01em' }}>{org.name}</span>
-                  {org.id === orgId
-                    ? <Check size={16} strokeWidth={2.5} color="var(--amber)" />
-                    : <ChevronRight size={16} strokeWidth={1.75} color="var(--text-muted)" />
-                  }
-                </button>
-              </Fragment>
-            ))}
-          </Section>
-        )}
-
-        {/* Organisation */}
-        {orgName && (
-          <Section title="Organisation">
-            <NavRow icon={<Building2 size={18} strokeWidth={1.75} />} label={orgName} onClick={() => router.push('/org')} />
-            {role === 'admin' && (
-              <>
-                <Divider />
-                <NavRow icon={<Users size={18} strokeWidth={1.75} />} label="Members" onClick={() => router.push('/org?tab=members')} />
-              </>
-            )}
-          </Section>
-        )}
 
         {/* Help */}
         <Section title="Help &amp; preferences">

@@ -24,33 +24,32 @@ export default function SitesPage() {
   const [newLocation, setNewLocation] = useState('')
   const [creating, setCreating] = useState(false)
   const [showArchived, setShowArchived] = useState(false)
-  const { user, orgId, loading: userLoading } = useUser()
+  const { user, loading: userLoading } = useUser()
   const router = useRouter()
 
   useEffect(() => {
-    if (userLoading || !orgId) return
+    if (userLoading) return
     if (!user) { router.push('/login'); return }
     setLoading(true)
     const init = async () => {
       const [sitesRes, scansRes] = await Promise.all([
-        supabase.from('sites').select('*').eq('org_id', orgId).order('name'),
-        supabase.from('scans').select('id, site_id, status, created_at').eq('org_id', orgId),
+        supabase.from('sites').select('*').order('name'),
+        supabase.from('scans').select('id, site_id, status, created_at'),
       ])
       setSites(sitesRes.data || [])
       setScans((scansRes.data || []) as Scan[])
       setLoading(false)
     }
     init()
-  }, [user, orgId, userLoading, router])
+  }, [user, userLoading, router])
 
   const handleCreate = async () => {
-    if (!newName.trim() || !user || !orgId) return
+    if (!newName.trim() || !user) return
     setCreating(true)
     const { data: site, error } = await supabase.from('sites').insert({
       name: newName.trim(),
       location: newLocation.trim() || null,
       created_by: user.id,
-      org_id: orgId,
       archived: false,
     }).select().single()
     if (!error && site) {

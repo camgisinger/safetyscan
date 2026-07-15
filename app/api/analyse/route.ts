@@ -205,7 +205,7 @@ export async function POST(request: NextRequest) {
 
     // ── 2. Parse body ─────────────────────────────────────────────────────────
     const body = await request.json()
-    const { messages, model, modules, scan_id, photo_urls, site_id, work_types, searchQuery, org_id } = body
+    const { messages, model, modules, scan_id, photo_urls, site_id, work_types, searchQuery } = body
     const moduleList: string[] = Array.isArray(modules) && modules.length > 0 ? modules : ['safety']
     const workTypes: string[] = Array.isArray(work_types) ? work_types : []
 
@@ -237,44 +237,21 @@ export async function POST(request: NextRequest) {
     let scanId: string
 
     if (scan_id) {
-      // Re-analysis: verify org membership before proceeding
+      // Re-analysis: verify the scan belongs to this user
       const { data: existing, error: fetchErr } = await serviceRole
         .from('scans')
-        .select('id, org_id')
+        .select('id')
         .eq('id', scan_id)
+        .eq('created_by', user.id)
         .single()
-
       if (fetchErr || !existing) {
         return NextResponse.json({ error: 'Scan not found' }, { status: 404 })
       }
-      const { data: membership } = await serviceRole
-        .from('organisation_members')
-        .select('user_id')
-        .eq('org_id', existing.org_id)
-        .eq('user_id', user.id)
-        .single()
-      if (!membership) {
-        return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-      }
       scanId = scan_id
     } else {
-      // New scan — verify org membership before creating
-      if (!org_id) {
-        return NextResponse.json({ error: 'org_id is required' }, { status: 400 })
-      }
-      const { data: scanMembership } = await serviceRole
-        .from('organisation_members')
-        .select('user_id')
-        .eq('org_id', org_id)
-        .eq('user_id', user.id)
-        .maybeSingle()
-      if (!scanMembership) {
-        return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-      }
-
+      // New scan
       const { data: newScan, error: insertErr } = await serviceRole.from('scans').insert({
         created_by: user.id,
-        org_id,
         photo_url: photoUrlList[0] ?? null,
         photo_urls: photo_urls ?? null,
         site_id: site_id ?? null,

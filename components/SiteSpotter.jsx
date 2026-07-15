@@ -2,7 +2,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "../lib/supabase";
-import { useOrg } from "../lib/useOrg";
 import { useUser } from "../lib/UserContext";
 import { convertToJpeg } from "./PhotoResultCard";
 import AppHeader from "./AppHeader";
@@ -41,7 +40,6 @@ export default function SiteSpotter() {
   const [selectedModules, setSelectedModules] = useState(["safety"]);
   const [currentUser, setCurrentUser] = useState(null);
   const [sites, setSites] = useState([]);
-  const { orgId } = useOrg();
   const { user: contextUser } = useUser();
   const [siteDropdownValue, setSiteDropdownValue] = useState("none");
   const [newSiteName, setNewSiteName] = useState("");
@@ -60,11 +58,11 @@ export default function SiteSpotter() {
 
   // Sync user from context (already loaded at app boot — no extra auth round-trip)
   useEffect(() => {
-    if (!contextUser || !orgId) return;
+    if (!contextUser) return;
     setCurrentUser(contextUser);
-    supabase.from('sites').select('id, name').eq('org_id', orgId).eq('archived', false).order('name', { ascending: true })
+    supabase.from('sites').select('id, name').eq('archived', false).order('name', { ascending: true })
       .then(({ data }) => setSites(data || []));
-  }, [contextUser, orgId]);
+  }, [contextUser]);
 
   useEffect(() => {
     const urlSiteId = searchParams.get('site_id');
@@ -134,7 +132,6 @@ export default function SiteSpotter() {
     if (siteDropdownValue === "new" && newSiteName.trim() && currentUser) {
       const { data } = await supabase.from('sites').insert({
         created_by: currentUser.id,
-        org_id: orgId,
         name: newSiteName.trim(),
         archived: false,
       }).select('id, name').single();
@@ -168,7 +165,6 @@ export default function SiteSpotter() {
           site_id: resolvedSiteId,
           work_types: mode === "quick" ? [] : workTypes,
           searchQuery: searchQuery || "construction site safety compliance Queensland WHS",
-          org_id: orgId,
         }),
       });
 

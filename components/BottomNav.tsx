@@ -12,7 +12,7 @@ const TABS: { id: TabId; label: string; Icon: any }[] = [
   { id: 'more',  label: 'More',  Icon: Menu },
 ]
 
-const NAV_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues', '/profile', '/tools', '/settings', '/org']
+const NAV_ROOTS = ['/dashboard', '/scans', '/sites', '/more', '/issues', '/profile', '/tools', '/settings']
 const FAB_ROOTS = ['/dashboard', '/scans', '/sites', '/issues', '/settings']
 
 function matches(path: string, roots: string[]) {
@@ -23,7 +23,7 @@ function activeTab(pathname: string): TabId | null {
   if (pathname === '/dashboard') return 'home'
   if (pathname.startsWith('/scans')) return 'scans'
   if (pathname.startsWith('/sites')) return 'sites'
-  if (pathname.startsWith('/more') || pathname.startsWith('/issues') || pathname.startsWith('/profile') || pathname.startsWith('/tools') || pathname.startsWith('/settings') || pathname.startsWith('/org')) return 'more'
+  if (pathname.startsWith('/more') || pathname.startsWith('/issues') || pathname.startsWith('/profile') || pathname.startsWith('/tools') || pathname.startsWith('/settings')) return 'more'
   return null
 }
 
