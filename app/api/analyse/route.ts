@@ -58,7 +58,7 @@ ASSESSMENT RULES:
 
 STATUS DEFINITIONS — PHOTO-BASED ASSESSMENT:
 
-pass — the visible controls and conditions for the work shown are present and correct; nothing observably wrong in the photo. IMPORTANT: items that cannot be verified from a photo alone (licences on site, control plans, documentation, powerline clearance not visible in frame, etc.) do NOT prevent a pass — they belong in follow_up_questions and the checklist as things to confirm on site. A pass means "nothing visibly wrong," NOT "verified fully compliant."
+pass — the visible controls and conditions for the work shown are present and correct; nothing observably wrong in the photo. IMPORTANT: items that cannot be verified from a photo alone (licences on site, control plans, documentation, powerline clearance not visible in frame, etc.) do NOT prevent a pass — they belong in follow_up_questions as things to confirm on site. A pass means "nothing visibly wrong," NOT "verified fully compliant."
 
 fail — there is a clear, visible compliance problem in the photo (e.g. missing edge protection, unsealed asbestos waste, a boom operating clearly beneath a powerline, no visible sediment control where required).
 
@@ -66,7 +66,7 @@ uncertain — RESERVED for genuine visual ambiguity: the photo shows something t
 
 not_applicable — this module does not apply to what is shown (e.g. the quality module on an asbestos removal photo with no workmanship visible).
 
-CRITICAL PRINCIPLE: "Unverifiable-from-photo" is NOT a reason for uncertain. When something cannot be confirmed from the photo (documentation, licences, clearances not in frame), put it in follow_up_questions and the checklist — do not use that as grounds for uncertain. Uncertain is ONLY for genuine visual ambiguity about a potential fail condition.
+CRITICAL PRINCIPLE: "Unverifiable-from-photo" is NOT a reason for uncertain. When something cannot be confirmed from the photo (documentation, licences, clearances not in frame), put it in follow_up_questions — do not use that as grounds for uncertain. Uncertain is ONLY for genuine visual ambiguity about a potential fail condition.
 
 WHEN TO REQUEST BETTER PHOTOS:
 
@@ -170,7 +170,7 @@ Assess against Queensland environmental law: the Environmental Protection Act 19
 
 Focus on visible, photo-assessable controls: erosion and sediment control (sediment fences, stabilised site entries/exits, stockpile protection, drainage), stormwater and waterway contamination, dust and air quality (visible dust suppression or lack thereof), spill and chemical storage (visible bunding, containment, labelling), visible regulated or general waste containment, and prevention of visible contamination of soil, water, or stormwater pathways.
 
-Items that cannot be confirmed from a photo — disposal to a licensed facility, waste tracking documentation, consignment notes, transport licences — are NOT assessment criteria and do NOT block a pass. List them in follow_up_questions and the checklist as confirm-items for the site supervisor, exactly as unverifiable documentation items are treated elsewhere in this assessment.
+Items that cannot be confirmed from a photo — disposal to a licensed facility, waste tracking documentation, consignment notes, transport licences — are NOT assessment criteria and do NOT block a pass. List them in follow_up_questions as confirm-items for the site supervisor, exactly as unverifiable documentation items are treated elsewhere in this assessment.
 
 Regulated waste note: when materials such as asbestos are present, assess the ENVIRONMENTAL dimension from what is visible — bag or receptacle integrity, adequate containment preventing soil/water/air contamination, and visible site controls. These ARE assessable from a photo. Licensed disposal and tracking documentation are NOT assessable from a photo — list them as follow_up_questions only. If containment looks correct and nothing is visibly contaminating the environment, that is a PASS with disposal/tracking as follow-ups. Do NOT set uncertain simply because disposal cannot be confirmed from the photo.
 
@@ -378,38 +378,12 @@ export async function POST(request: NextRequest) {
             throw new Error(`Failed to parse Claude JSON for module "${module}"`)
           }
 
-          // f. Normalise finding IDs and remap checklist references atomically.
-          // Always reassigns positional ids f1, f2, … regardless of what the model
-          // emitted — insurance against collisions, gaps, or malformed formats.
-          // Builds original→normalised map first, then rewrites both arrays in a
-          // single pass so links are never broken. Dangling checklist refs (model
-          // hallucinated an id that matches no finding) are silently dropped.
+          // f. Normalise finding IDs.
           if (Array.isArray(parsed.findings)) {
-            const idMap: Record<string, string> = {}
-
-            parsed.findings = parsed.findings.map((f: any, i: number) => {
-              const normalised = `f${i + 1}`
-              const original = f.id != null ? String(f.id).trim() : ''
-              // First occurrence of each original id wins the map slot
-              if (original && !(original in idMap)) idMap[original] = normalised
-              // Self-map so refs already using the correct normalised form pass through
-              if (!(normalised in idMap)) idMap[normalised] = normalised
-              return { ...f, id: normalised }
-            })
-
-            const validIds = new Set(parsed.findings.map((f: any) => f.id as string))
-
-            if (Array.isArray(parsed.checklist)) {
-              parsed.checklist = parsed.checklist.map((item: any) => {
-                const rawIds: string[] = Array.isArray(item.finding_ids) ? item.finding_ids : []
-                const remapped = [...new Set(
-                  rawIds
-                    .map((id: any) => idMap[String(id)] ?? null)
-                    .filter((id): id is string => id !== null && validIds.has(id))
-                )]
-                return { ...item, finding_ids: remapped }
-              })
-            }
+            parsed.findings = parsed.findings.map((f: any, i: number) => ({
+              ...f,
+              id: `f${i + 1}`,
+            }))
           }
 
           // e. Upsert scan_modules

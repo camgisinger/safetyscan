@@ -27,12 +27,10 @@ export type Scan = {
   legislation: any
   findings: any
   summary: string
-  checklist: any
   follow_up_questions: any
   photo_url: string | null
   photo_urls: string[] | null
   notes: string | null
-  checklist_state: Record<string, boolean> | null
   share_token: string | null
   share_enabled: boolean
   created_at: string

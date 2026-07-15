@@ -27,7 +27,7 @@ async function imageUrlToDataUrl(url: string): Promise<string | null> {
   } catch { return null }
 }
 
-async function exportScanPDF(scan: Scan, siteName: string | null, checklist: any[], checklistState: Record<string, any>, notes: string, branding?: Branding) {
+async function exportScanPDF(scan: Scan, siteName: string | null, notes: string, branding?: Branding) {
   const { jsPDF } = await import('jspdf')
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
   const pw = 210, ph = 297, ml = 18, mr = 18, cw = pw - ml - mr
@@ -156,19 +156,6 @@ async function exportScanPDF(scan: Scan, siteName: string | null, checklist: any
       y += cardH + 3
     }; y += 2
   }
-  const visibleIndices = checklist.map((_, i) => i).filter(i => !checklistState[`d_${i}`])
-  if (visibleIndices.length > 0) {
-    const checkedCount = visibleIndices.filter(i => !!checklistState[`c_${i}`]).length
-    section('Checklist', `${checkedCount} of ${visibleIndices.length} items checked`)
-    for (const i of visibleIndices) {
-      if (y > ph - 20) { doc.addPage(); y = 22 }
-      const checked = !!checklistState[`c_${i}`]
-      stroke(CBXLINE); fill(checked ? GREEN : WHITE); doc.roundedRect(ml, y - 0.5, 4, 4, 0.8, 0.8, checked ? 'FD' : 'S')
-      if (checked) { doc.setFont('helvetica', 'bold'); doc.setFontSize(5.5); color(WHITE); doc.text('✓', ml + 0.7, y + 2.7) }
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); color(checked ? MUT : TEXT)
-      const il = doc.splitTextToSize(checklist[i].item || '', cw - 8); doc.text(il, ml + 7, y + 3); y += il.length * 5 + 2
-    }; y += 4
-  }
   if (notes.trim()) { section('Notes'); bodyText(notes); y += 4 }
   y += 6; stroke(LINE); doc.line(ml, y, ml + cw, y); y += 5
   doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); color(MUT)
@@ -283,8 +270,6 @@ export default function ScanDetail({ id }: { id: string }) {
   const [sites, setSites] = useState<{ id: string; name: string }[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [checklist, setChecklist] = useState<any[]>([])
-  const [checklistState, setChecklistState] = useState<Record<string, any>>({})
   const [notes, setNotes] = useState('')
   const [notesSaving, setNotesSaving] = useState(false)
   const [notesSaved, setNotesSaved] = useState(false)
@@ -331,9 +316,8 @@ export default function ScanDetail({ id }: { id: string }) {
       if (!scanRes.data) { setError('Scan not found.'); setLoading(false); return }
       const s = scanRes.data as Scan
       setScan(s); setPhotoUrls(s.photo_urls?.length ? s.photo_urls : s.photo_url ? [s.photo_url] : [])
-      setScanName(s.work_type || ''); setNotes(s.notes || ''); setChecklistState(s.checklist_state || {})
+      setScanName(s.work_type || ''); setNotes(s.notes || '')
       setSelectedSiteId(s.site_id || null); setShareToken(s.share_token || null); setShareEnabled(s.share_enabled || false)
-      if (s.checklist && Array.isArray(s.checklist) && s.checklist.length > 0) setChecklist(s.checklist)
       setSites(sitesRes.data || [])
       const modOrder = ['safety', 'quality', 'environmental']
       const sorted = (modulesRes.data || []).sort((a: any, b: any) => modOrder.indexOf(a.module) - modOrder.indexOf(b.module))
@@ -343,17 +327,6 @@ export default function ScanDetail({ id }: { id: string }) {
     }
     init()
   }, [id, currentUser, router])
-
-  const handleChecklistChange = async (newState: Record<string, any>, module?: string) => {
-    const targetModule = module ?? activeModule
-    if (scanModules.length === 0) {
-      setChecklistState(newState)
-      await supabase.from('scans').update({ checklist_state: newState }).eq('id', id)
-    } else {
-      setScanModules(prev => prev.map((m: any) => m.module === targetModule ? { ...m, checklist_state: newState } : m))
-      await supabase.from('scan_modules').update({ checklist_state: newState }).eq('scan_id', id).eq('module', targetModule)
-    }
-  }
 
   const saveNotes = async (value: string) => {
     if (!value && !scan?.notes) return
@@ -430,7 +403,7 @@ export default function ScanDetail({ id }: { id: string }) {
         .eq('id', currentUser.id).single()
       branding = data as Branding
     }
-    try { await exportScanPDF(scan, siteName, checklist, checklistState, notes, branding) } catch (e) { console.error('[PDF]', e) } finally { setExportingPDF(false) }
+    try { await exportScanPDF(scan, siteName, notes, branding) } catch (e) { console.error('[PDF]', e) } finally { setExportingPDF(false) }
   }
 
   const reanalyseWithContext = async (additionalInfo: string, extraPhotos: { dataUrl: string; base64: string }[], module: string) => {
@@ -543,10 +516,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const displayLegislation: any[] = isLegacy ? (scan.legislation || []) : (activeModuleData?.legislation || [])
   const displaySummary: string = isLegacy ? (scan.summary || '') : (activeModuleData?.summary || '')
   const displayStatus: string = isLegacy ? scan.status : (activeModuleData?.status || 'uncertain')
-  const displayChecklist: any[] = isLegacy ? checklist : (activeModuleData?.checklist || [])
-  const displayChecklistState: Record<string, any> = isLegacy ? checklistState : (activeModuleData?.checklist_state || {})
   const displayFindingsState: Record<string, string> = isLegacy ? {} : (activeModuleData?.findings_state || {})
-  const visibleCount = displayChecklist.filter((_: any, i: number) => !displayChecklistState[`d_${i}`]).length
 
   const openFindings = displayFindings.filter(f => (f.type === 'critical' || f.type === 'warning') && !displayFindingsState[f.id])
   const actionFindings = displayFindings.filter(f => f.type === 'action' && !displayFindingsState[f.id])
@@ -764,43 +734,6 @@ export default function ScanDetail({ id }: { id: string }) {
                       </div>
                     </Accordion>
                   )}
-                </div>
-              )}
-
-              {/* Checklist */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '4px 2px 10px' }}>
-                <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }} />
-                <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                  Checklist{displayChecklist.length > 0 ? ` (${visibleCount})` : ''}
-                </span>
-              </div>
-              {displayChecklist.length === 0 ? (
-                <div style={{ background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-card)', padding: '12px 15px', fontSize: 13, fontWeight: 500, color: 'var(--text-muted)', marginBottom: 14 }}>
-                  Checklist included in next re-analysis.
-                </div>
-              ) : (
-                <div style={{ background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-card)', overflow: 'hidden', marginBottom: 14 }}>
-                  {displayChecklist.map((item: any, i: number) => {
-                    if (displayChecklistState[`d_${i}`]) return null
-                    const checked = !!displayChecklistState[`c_${i}`]
-                    const isLast = displayChecklist.slice(i + 1).every((_: any, j: number) => displayChecklistState[`d_${i + 1 + j}`])
-                    return (
-                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderBottom: isLast ? 'none' : '1.5px solid var(--border-subtle)' }}>
-                        <div onClick={() => handleChecklistChange({ ...displayChecklistState, [`c_${i}`]: !displayChecklistState[`c_${i}`] })}
-                          style={{ width: 20, height: 20, borderRadius: 6, display: 'grid', placeItems: 'center', flexShrink: 0, cursor: 'pointer', border: `1.5px solid ${checked ? 'var(--amber)' : 'var(--border-card)'}`, background: checked ? 'var(--amber)' : 'transparent' }}>
-                          {checked && <Check size={11} strokeWidth={2.5} color="#1B1A12" />}
-                        </div>
-                        <div style={{ flex: 1, cursor: 'pointer' }} onClick={() => handleChecklistChange({ ...displayChecklistState, [`c_${i}`]: !displayChecklistState[`c_${i}`] })}>
-                          <div style={{ fontSize: 13.5, fontWeight: 500, color: checked ? 'var(--text-muted)' : 'var(--text)', textDecoration: checked ? 'line-through' : 'none', opacity: checked ? 0.55 : 1 }}>{item.item}</div>
-                          {item.category && <div style={{ fontWeight: 600, fontSize: 9.5, color: 'var(--text-muted)', marginTop: 2, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{item.category}</div>}
-                        </div>
-                        <button onClick={() => handleChecklistChange({ ...displayChecklistState, [`d_${i}`]: true, [`c_${i}`]: false })}
-                          style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: 4 }}>
-                          <X size={14} strokeWidth={2} />
-                        </button>
-                      </div>
-                    )
-                  })}
                 </div>
               )}
 

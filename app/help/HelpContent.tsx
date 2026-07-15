@@ -100,10 +100,6 @@ const FAQ_CATEGORIES = [
         q: 'How do I share a scan result?',
         a: 'On any scan result, tap the Share button. This generates a unique link that anyone can view without needing a SiteSpotter account — useful for sharing results with a principal contractor or safety officer.',
       },
-      {
-        q: 'Can I generate a checklist from a scan?',
-        a: 'Yes — on any scan result, tap the Checklist tab. SiteSpotter generates a site-specific compliance checklist based on the work types identified in your scan.',
-      },
     ],
   },
   {

@@ -144,13 +144,12 @@ function FollowUp({ questions, onSubmit }) {
   );
 }
 
-export default function PhotoResultCard({ photo, index, total, onReanalyse, checklistContent, photoLabel }) {
+export default function PhotoResultCard({ photo, index, total, onReanalyse, photoLabel }) {
   const [tab, setTab] = useState("findings");
   const [openLeg, setOpenLeg] = useState(null);
   const r = photo.result;
   const tabs = [
     { id: "findings", label: "Findings" },
-    ...(checklistContent != null ? [{ id: "checklist", label: "Checklist" }] : []),
     { id: "example", label: "Example" },
   ];
   const statusColor = { pass: PASS_GREEN, fail: FAIL_RED, uncertain: WARN_AMBER, not_applicable: "#4A4D52" }[r.status] || WARN_AMBER;
@@ -197,7 +196,6 @@ export default function PhotoResultCard({ photo, index, total, onReanalyse, chec
             {r.follow_up_questions?.length > 0 && onReanalyse && <FollowUp questions={r.follow_up_questions} onSubmit={(a, extraPhotos) => onReanalyse(index, a, extraPhotos)} />}
           </div>
         )}
-        {tab === "checklist" && checklistContent}
         {tab === "example" && (
           <div>
             <CompliantPhotoSlot workType={r.work_type} />
