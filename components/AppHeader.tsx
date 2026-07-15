@@ -55,8 +55,8 @@ export default function AppHeader({
                 <div style={{ width: 28, height: 28, borderRadius: 7, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
                   <img src="/brand/mark-black-white.png" alt="" style={{ width: 24, height: 24 }} />
                 </div>
-                <span style={{ fontWeight: 700, fontSize: 18, letterSpacing: '-0.02em', color: 'var(--text)' }}>
-                  SiteSpotter
+                <span style={{ fontSize: 18, letterSpacing: '-0.02em', color: 'var(--text)' }}>
+                  Site<b style={{ fontWeight: 700, color: 'var(--amber)' }}>Spotter</b>
                 </span>
               </button>
             )}

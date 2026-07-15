@@ -48,8 +48,8 @@ export default function ProfileSetupPage() {
           <div style={{ width: 40, height: 40, borderRadius: 10, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
             <img src="/brand/mark-black-white.png" alt="" style={{ width: 34, height: 34 }}/>
           </div>
-          <span style={{ fontWeight: 600, fontSize: 22, letterSpacing: '-0.02em', color: 'var(--text)' }}>
-            Site<b style={{ color: 'var(--amber)' }}>Spotter</b>
+          <span style={{ fontSize: 22, letterSpacing: '-0.02em', color: 'var(--text)' }}>
+            Site<b style={{ fontWeight: 700, color: 'var(--amber)' }}>Spotter</b>
           </span>
         </div>
 
