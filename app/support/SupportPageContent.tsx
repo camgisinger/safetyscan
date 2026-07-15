@@ -8,7 +8,7 @@ export default function SupportPageContent() {
 
   return (
     <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
-      <AppHeader title="Support" />
+      <AppHeader variant="detail" onBack={() => router.back()} title="Support" />
       <div style={{ maxWidth: 600, margin: '0 auto', padding: '20px 18px 0' }}>
 
         {/* FAQs banner */}
