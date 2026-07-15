@@ -224,7 +224,7 @@ export default function SitesPage() {
             background: 'var(--surf-sheet)', borderRadius: 'var(--r-sheet) var(--r-sheet) 0 0',
             boxShadow: 'var(--shadow-sheet)',
             padding: '0 20px',
-            paddingBottom: 'max(32px, env(safe-area-inset-bottom, 32px))',
+            paddingBottom: 'calc(64px + max(16px, env(safe-area-inset-bottom, 16px)))',
             animation: 'slideUpIn 0.28s cubic-bezier(0.2,0.7,0.3,1) forwards',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 0 16px' }}>
