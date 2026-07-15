@@ -69,7 +69,7 @@ function LoginContent() {
             {/* Brand */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 28 }}>
               <div style={{ width: 40, height: 40, borderRadius: 10, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-                <img src="/brand/mark-ink.svg" alt="" style={{ width: 28, height: 28 }}/>
+                <img src="/brand/mark-two-tone.svg" alt="" style={{ width: 28, height: 28 }}/>
               </div>
               <span style={{ fontWeight: 600, fontSize: 24, letterSpacing: '-0.02em', color: 'var(--text)' }}>
                 Site<b style={{ color: 'var(--amber)' }}>Spotter</b>

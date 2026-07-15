@@ -67,7 +67,7 @@ export default function DesktopSidebar() {
         <button onClick={() => router.push('/dashboard')}
           style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, padding: 0 }}>
           <div style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-            <img src="/brand/mark-ink.svg" alt="" style={{ width: 24, height: 24 }} />
+            <img src="/brand/mark-two-tone.svg" alt="" style={{ width: 24, height: 24 }} />
           </div>
           <span style={{ fontWeight: 700, fontSize: 17, letterSpacing: '-0.02em', color: 'var(--text)' }}>SiteSpotter</span>
         </button>
