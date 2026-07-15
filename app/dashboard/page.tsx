@@ -92,7 +92,7 @@ export default function DashboardPage() {
         supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, findings').order('created_at', { ascending: false }).limit(20),
         supabase.from('sites').select('id, name').order('name'),
       ])
-      setScans(scansRes.data || [])
+      setScans((scansRes.data || []) as unknown as Scan[])
       setSites((sitesRes.data || []) as { id: string; name: string }[])
       setLoading(false)
     }
