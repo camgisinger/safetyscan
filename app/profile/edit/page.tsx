@@ -33,7 +33,7 @@ export default function EditProfilePage() {
     })
     if (err) { setError(err.message); setSaving(false); return }
     setSaved(true)
-    setTimeout(() => router.push('/profile'), 800)
+    setTimeout(() => router.push('/settings'), 800)
   }
 
   const initials = fullName.trim()

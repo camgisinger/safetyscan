@@ -106,7 +106,7 @@ export default function BrandingPage() {
     })
     if (err) { setError(err.message); setSaving(false); return }
     setSaved(true)
-    setTimeout(() => router.push(fromSetup ? '/dashboard' : '/profile'), 600)
+    setTimeout(() => router.push(fromSetup ? '/dashboard' : '/settings'), 600)
   }
 
   const inp: React.CSSProperties = {
