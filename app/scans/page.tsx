@@ -207,28 +207,13 @@ export default function ScansPage() {
                 cursor: 'pointer', marginBottom: 8,
                 transition: 'border-color 0.15s, background 0.15s',
               }}>
-              {selectMode ? (
-                <div style={{ width: 52, flexShrink: 0, display: 'grid', placeItems: 'center' }}>
-                  <div style={{
-                    width: 22, height: 22, borderRadius: 6,
-                    border: `1.5px solid ${isSelected ? 'var(--amber)' : 'var(--border-card)'}`,
-                    background: isSelected ? 'var(--amber)' : 'transparent',
-                    display: 'grid', placeItems: 'center', transition: 'all 0.15s',
-                  }}>
-                    {isSelected && <Check size={13} strokeWidth={2.5} color="#1B1A12" />}
-                  </div>
-                </div>
+              <div style={{ width: 4, flexShrink: 0, background: scanLeftColor(scan.status) }} />
+              {photoUrl ? (
+                <img src={photoUrl} alt="" style={{ width: 52, alignSelf: 'stretch', objectFit: 'cover', display: 'block', flexShrink: 0 }} />
               ) : (
-                <>
-                  <div style={{ width: 4, flexShrink: 0, background: scanLeftColor(scan.status) }} />
-                  {photoUrl ? (
-                    <img src={photoUrl} alt="" style={{ width: 52, alignSelf: 'stretch', objectFit: 'cover', display: 'block', flexShrink: 0 }} />
-                  ) : (
-                    <div style={{ width: 52, alignSelf: 'stretch', flexShrink: 0, background: 'var(--surf-inset)', display: 'grid', placeItems: 'center' }}>
-                      <Camera size={18} strokeWidth={1.5} color="var(--text-muted)" />
-                    </div>
-                  )}
-                </>
+                <div style={{ width: 52, alignSelf: 'stretch', flexShrink: 0, background: 'var(--surf-inset)', display: 'grid', placeItems: 'center' }}>
+                  <Camera size={18} strokeWidth={1.5} color="var(--text-muted)" />
+                </div>
               )}
               <div style={{ flex: 1, padding: '11px 13px', minWidth: 0 }}>
                 <div style={{ fontWeight: 600, fontSize: 14.5, lineHeight: 1.2, letterSpacing: '-0.02em', color: 'var(--text)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
@@ -238,18 +223,29 @@ export default function ScansPage() {
                   {[siteName, dateStr, timeStr].filter(Boolean).join(' · ')}
                 </div>
               </div>
-              {!selectMode && (
-                <div style={{ alignSelf: 'center', paddingRight: 13, flexShrink: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <span style={{
-                    fontSize: 11, fontWeight: 600, padding: '3px 9px',
-                    borderRadius: 'var(--r-pill)', whiteSpace: 'nowrap',
-                    background: pill.bg, color: pill.color,
+              <div style={{ alignSelf: 'center', paddingRight: 14, flexShrink: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
+                {selectMode ? (
+                  <div style={{
+                    width: 22, height: 22, borderRadius: 6,
+                    border: `1.5px solid ${isSelected ? 'var(--amber)' : 'var(--border-card)'}`,
+                    background: isSelected ? 'var(--amber)' : 'transparent',
+                    display: 'grid', placeItems: 'center', transition: 'all 0.15s',
                   }}>
-                    {pill.label}
-                  </span>
-                  <ChevronRight size={14} strokeWidth={2} color="var(--text-muted)" />
-                </div>
-              )}
+                    {isSelected && <Check size={13} strokeWidth={2.5} color="#1B1A12" />}
+                  </div>
+                ) : (
+                  <>
+                    <span style={{
+                      fontSize: 11, fontWeight: 600, padding: '3px 9px',
+                      borderRadius: 'var(--r-pill)', whiteSpace: 'nowrap',
+                      background: pill.bg, color: pill.color,
+                    }}>
+                      {pill.label}
+                    </span>
+                    <ChevronRight size={14} strokeWidth={2} color="var(--text-muted)" />
+                  </>
+                )}
+              </div>
             </div>
           )
         })}
