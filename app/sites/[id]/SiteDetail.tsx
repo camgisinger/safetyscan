@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { supabase, Site, Scan } from '../../../lib/supabase'
 import { useUser } from '../../../lib/UserContext'
 import AppHeader from '../../../components/AppHeader'
-import { Camera, MapPin, Archive, Trash2, ChevronRight, ChevronDown, Shield, Ruler, Leaf, TriangleAlert, Check } from 'lucide-react'
+import { Camera, MapPin, Archive, Trash2, ChevronRight, ChevronDown, Shield, Ruler, Leaf, TriangleAlert, Check, FileDown, CircleHelp } from 'lucide-react'
 
 function scanLeftColor(status: string) {
   if (status === 'pass') return 'var(--pass)'
@@ -94,12 +94,7 @@ export default function SiteDetail({ id }: { id: string }) {
   )
 
   const totalScans = scans.length
-  const compliant = scans.filter(s => s.status === 'pass').length
-  const issues = scans.filter(s => s.status === 'fail').length
   const pending = scans.filter(s => s.status === 'uncertain').length
-  const rate = totalScans > 0 ? Math.round((compliant / totalScans) * 100) : null
-  const rateColor = rate === null ? 'var(--text)' : rate >= 80 ? 'var(--pass)' : rate >= 50 ? 'var(--warning)' : 'var(--issue)'
-
   const outstandingCount = modules.reduce((acc, m) => {
     const findings = m.findings || []
     const state = m.findings_state || {}
@@ -125,13 +120,29 @@ export default function SiteDetail({ id }: { id: string }) {
   return (
     <div className="page-slide-right-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
       <AppHeader variant="detail" onBack={() => router.back()} rightContent={
-        <button onClick={() => setShowDelete(true)} style={{
-          width: 38, height: 38, borderRadius: 'var(--r-control-sm)',
-          border: '1.5px solid var(--issue)', background: 'var(--fail-tint)',
-          color: 'var(--issue)', display: 'grid', placeItems: 'center', cursor: 'pointer',
-        }}>
-          <Trash2 size={16} strokeWidth={2} />
-        </button>
+        <div style={{ display: 'flex', gap: 6 }}>
+          <button onClick={toggleArchive} style={{
+            width: 38, height: 38, borderRadius: 'var(--r-control-sm)',
+            border: '1.5px solid var(--border-card)', background: 'var(--surf)',
+            color: 'var(--text-secondary)', display: 'grid', placeItems: 'center', cursor: 'pointer',
+          }}>
+            <Archive size={16} strokeWidth={1.75} />
+          </button>
+          <button onClick={() => {}} style={{
+            width: 38, height: 38, borderRadius: 'var(--r-control-sm)',
+            border: '1.5px solid var(--border-card)', background: 'var(--surf)',
+            color: 'var(--text-secondary)', display: 'grid', placeItems: 'center', cursor: 'pointer',
+          }}>
+            <FileDown size={16} strokeWidth={1.75} />
+          </button>
+          <button onClick={() => setShowDelete(true)} style={{
+            width: 38, height: 38, borderRadius: 'var(--r-control-sm)',
+            border: '1.5px solid var(--issue)', background: 'var(--fail-tint)',
+            color: 'var(--issue)', display: 'grid', placeItems: 'center', cursor: 'pointer',
+          }}>
+            <Trash2 size={16} strokeWidth={2} />
+          </button>
+        </div>
       } />
 
       <div style={{ maxWidth: 640, margin: '0 auto', padding: '0 18px 24px' }}>
@@ -161,12 +172,12 @@ export default function SiteDetail({ id }: { id: string }) {
             <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>Outstanding</div>
           </div>
           <div style={{ padding: '12px', background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-tile)' }}>
-            <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--text)' }}>{totalScans}</div>
-            <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>Scans</div>
+            <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.04em', color: pending > 0 ? 'var(--amber)' : 'var(--text)' }}>{pending}</div>
+            <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>Pending scans</div>
           </div>
           <div style={{ padding: '12px', background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-tile)' }}>
-            <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.04em', color: rateColor }}>{rate !== null ? `${rate}%` : '—'}</div>
-            <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>Compliance</div>
+            <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--text)' }}>{totalScans}</div>
+            <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 2 }}>Total scans</div>
           </div>
         </div>
 
@@ -199,8 +210,7 @@ export default function SiteDetail({ id }: { id: string }) {
                       )}
                       {mOut === 0 && modRate !== null && (
                         <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, fontWeight: 600, color: 'var(--pass-deep)' }}>
-                          <Check size={12} strokeWidth={2.5} />
-                          {modRate}%
+                          <Check size={14} strokeWidth={2.5} />
                         </span>
                       )}
                     </div>
@@ -212,25 +222,34 @@ export default function SiteDetail({ id }: { id: string }) {
         )}
 
         {/* Actions */}
-        <div style={{ display: 'flex', gap: 8, marginBottom: 20 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginBottom: 20 }}>
           <button onClick={() => router.push(`/scan/new?site_id=${site.id}`)} style={{
-            flex: 1, height: 46,
+            height: 50,
             background: 'var(--amber)', border: 'none', borderRadius: 'var(--r-control)',
-            color: '#1B1A12', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7,
+            color: '#1B1A12', fontSize: 12.5, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4,
             boxShadow: 'var(--shadow-btn)',
           }}>
-            <Camera size={16} strokeWidth={2.2} />
+            <Camera size={18} strokeWidth={2.2} />
             New scan
           </button>
           <button onClick={toggleArchive} style={{
-            height: 46, padding: '0 18px',
+            height: 50,
             background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-control)',
-            color: 'var(--text-secondary)', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
-            display: 'flex', alignItems: 'center', gap: 7,
+            color: 'var(--text-secondary)', fontSize: 12.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4,
           }}>
-            <Archive size={15} strokeWidth={1.75} />
+            <Archive size={18} strokeWidth={1.75} />
             {site.archived ? 'Unarchive' : 'Archive'}
+          </button>
+          <button onClick={() => {}} style={{
+            height: 50,
+            background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-control)',
+            color: 'var(--text-secondary)', fontSize: 12.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4,
+          }}>
+            <FileDown size={18} strokeWidth={1.75} />
+            Export
           </button>
         </div>
 
