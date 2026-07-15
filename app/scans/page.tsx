@@ -17,7 +17,7 @@ function scanLeftColor(status: string) {
 function statusPill(status: string, issueCount?: number) {
   if (status === 'pass') return { label: 'Compliant', bg: 'var(--pass-tint)', color: 'var(--pass-deep)' }
   if (status === 'fail') return { label: issueCount ? `${issueCount} observation${issueCount !== 1 ? 's' : ''}` : 'Observations', bg: 'var(--fail-tint)', color: 'var(--issue)' }
-  return { label: 'Pending', bg: 'var(--warn-tint)', color: 'var(--warning)' }
+  return { label: 'Confirm on site', bg: 'var(--warn-tint)', color: 'var(--warning)' }
 }
 
 export default function ScansPage() {

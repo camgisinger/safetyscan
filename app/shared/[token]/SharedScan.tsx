@@ -63,7 +63,7 @@ export default function SharedScan({ token }: { token: string }) {
   const issueFindings = displayFindings.filter((f: any) => f.type === 'critical' || f.type === 'warning')
   const issueCount = issueFindings.length
   const statusColor = displayStatus === 'pass' ? 'var(--clear-tx)' : displayStatus === 'fail' ? 'var(--issue-tx-theme)' : 'var(--amber)'
-  const statusLabel = displayStatus === 'pass' ? 'Clear' : displayStatus === 'fail' ? `${issueCount} observation${issueCount !== 1 ? 's' : ''} found` : 'Pending review'
+  const statusLabel = displayStatus === 'pass' ? 'Clear' : displayStatus === 'fail' ? `${issueCount} observation${issueCount !== 1 ? 's' : ''} found` : 'Confirm on site'
   const statusBarColor = displayStatus === 'pass' ? '#3E8E5A' : displayStatus === 'fail' ? '#D63A26' : 'var(--amber)'
 
   return (

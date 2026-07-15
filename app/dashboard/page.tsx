@@ -17,7 +17,7 @@ function greeting() {
 function statusPill(status: string, issueCount?: number) {
   if (status === 'pass') return { label: 'Compliant', bg: 'var(--pass-tint)', color: 'var(--pass-deep)', border: 'var(--pass-border)' }
   if (status === 'fail') return { label: issueCount ? `${issueCount} observation${issueCount !== 1 ? 's' : ''}` : 'Observations', bg: 'var(--fail-tint)', color: 'var(--issue)', border: 'transparent' }
-  return { label: 'Pending', bg: 'var(--warn-tint)', color: 'var(--warning)', border: 'transparent' }
+  return { label: 'Confirm on site', bg: 'var(--warn-tint)', color: 'var(--warning)', border: 'transparent' }
 }
 
 function scanLeftColor(status: string) {
