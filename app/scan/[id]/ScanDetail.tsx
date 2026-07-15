@@ -293,9 +293,8 @@ export default function ScanDetail({ id }: { id: string }) {
   const router = useRouter()
 
   useEffect(() => {
+    if (!currentUser) return
     const init = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/login'); return }
       const [scanRes, sitesRes, modulesRes] = await Promise.all([
         supabase.from('scans').select('*').eq('id', id).single(),
         supabase.from('sites').select('id, name').eq('archived', false).order('name', { ascending: true }),
@@ -316,7 +315,7 @@ export default function ScanDetail({ id }: { id: string }) {
       setLoading(false)
     }
     init()
-  }, [id, router])
+  }, [id, currentUser, router])
 
   const handleChecklistChange = async (newState: Record<string, any>, module?: string) => {
     const targetModule = module ?? activeModule
@@ -403,11 +402,11 @@ export default function ScanDetail({ id }: { id: string }) {
   const reanalyseWithContext = async (additionalInfo: string, extraPhotos: { dataUrl: string; base64: string }[], module: string) => {
     if (!scan) return; setContinueLoading(true); setContinueError(null)
     try {
-      const { data: { user } } = await supabase.auth.getUser(); const newUrls: string[] = []
-      if (user && extraPhotos.length > 0) {
+      const newUrls: string[] = []
+      if (currentUser && extraPhotos.length > 0) {
         for (let i = 0; i < extraPhotos.length; i++) {
           const blob = await fetch(extraPhotos[i].dataUrl).then(r => r.blob())
-          const fileName = `${user.id}/${Date.now()}-extra-${i}.jpg`
+          const fileName = `${currentUser.id}/${Date.now()}-extra-${i}.jpg`
           const { error: uploadError } = await supabase.storage.from('scan-photos').upload(fileName, blob, { contentType: 'image/jpeg', upsert: false })
           if (!uploadError) { const { data: urlData } = supabase.storage.from('scan-photos').getPublicUrl(fileName); newUrls.push(urlData.publicUrl) }
         }

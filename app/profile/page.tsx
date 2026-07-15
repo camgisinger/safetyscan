@@ -2,13 +2,13 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
+import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
 
 export default function ProfilePage() {
-  const [user, setUser]       = useState<any>(null)
-  const [loading, setLoading] = useState(true)
   const [isDark, setIsDark]   = useState(true)
   const router = useRouter()
+  const { user, loading } = useUser()
 
   useEffect(() => {
     setIsDark(localStorage.getItem('theme') !== 'light')
@@ -16,16 +16,12 @@ export default function ProfilePage() {
       setIsDark(document.documentElement.getAttribute('data-theme') !== 'light')
     })
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
-
-    const init = async () => {
-      const { data: { user: u } } = await supabase.auth.getUser()
-      if (!u) { router.push('/login'); return }
-      setUser(u)
-      setLoading(false)
-    }
-    init()
     return () => observer.disconnect()
-  }, [router])
+  }, [])
+
+  useEffect(() => {
+    if (!loading && !user) router.push('/login')
+  }, [user, loading, router])
 
   const toggleTheme = () => {
     const newDark = !isDark; setIsDark(newDark)
@@ -38,7 +34,7 @@ export default function ProfilePage() {
     await supabase.auth.signOut(); router.push('/login')
   }
 
-  if (loading) return (
+  if (loading || !user) return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
       <div style={{ width: 32, height: 32, border: '2px solid var(--line)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>

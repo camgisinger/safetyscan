@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../../lib/supabase'
+import { useUser } from '../../../lib/UserContext'
 
 export default function ProfileSetupPage() {
   const router = useRouter()
@@ -9,13 +10,13 @@ export default function ProfileSetupPage() {
   const [jobTitle, setJobTitle] = useState('')
   const [saving,   setSaving]   = useState(false)
   const [error,    setError]    = useState('')
+  const { user, loading } = useUser()
 
   useEffect(() => {
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      if (!user) { router.push('/login'); return }
-      if (user.user_metadata?.full_name) router.push('/dashboard')
-    })
-  }, [router])
+    if (loading) return
+    if (!user) { router.push('/login'); return }
+    if (user.user_metadata?.full_name) router.push('/dashboard')
+  }, [user, loading, router])
 
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault()

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase, Site, Scan } from '../../../lib/supabase'
+import { useUser } from '../../../lib/UserContext'
 import AppHeader from '../../../components/AppHeader'
 import { Camera, MapPin, Archive, Trash2, ChevronRight, ChevronDown, Shield, Ruler, Leaf, TriangleAlert, Check } from 'lucide-react'
 
@@ -28,31 +29,28 @@ export default function SiteDetail({ id }: { id: string }) {
   const [deleting, setDeleting] = useState(false)
   const [breakdownOpen, setBreakdownOpen] = useState(false)
   const router = useRouter()
+  const { user, loading: userLoading } = useUser()
 
   useEffect(() => {
+    if (userLoading) return
+    if (!user) { router.push('/login'); return }
     const init = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/login'); return }
       const [siteRes, scansRes] = await Promise.all([
-        supabase.from('sites').select('*').eq('id', id).single(),
-        supabase.from('scans').select('id, work_type, status, created_at, checklist, checklist_state, photo_urls, photo_url').eq('site_id', id).order('created_at', { ascending: false }),
+        supabase.from('sites').select('id, name, location, archived').eq('id', id).single(),
+        supabase.from('scans')
+          .select('id, work_type, status, created_at, photo_urls, photo_url, scan_modules(module, status, findings, findings_state)')
+          .eq('site_id', id)
+          .order('created_at', { ascending: false }),
       ])
       if (siteRes.error) { setError(siteRes.error.message); setLoading(false); return }
-      const siteScans = (scansRes.data || []) as Scan[]
+      const siteScans = (scansRes.data || []) as any[]
       setSite(siteRes.data)
-      setScans(siteScans)
-
-      if (siteScans.length > 0) {
-        const { data: mods } = await supabase
-          .from('scan_modules')
-          .select('module, status, findings, findings_state')
-          .in('scan_id', siteScans.map(s => s.id))
-        setModules(mods || [])
-      }
+      setScans(siteScans as Scan[])
+      setModules(siteScans.flatMap((s: any) => s.scan_modules || []))
       setLoading(false)
     }
     init()
-  }, [id, router])
+  }, [id, user, userLoading, router])
 
   const toggleArchive = async () => {
     if (!site) return

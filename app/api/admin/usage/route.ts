@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
 
     const { data: scans, error: scansError } = await supabase
       .from('scans')
-      .select('user_id, created_at')
+      .select('created_by, created_at')
       .gte('created_at', monthStart)
 
     if (scansError) throw new Error(`scans query failed: ${scansError.message}`)
@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
     let scansToday = 0
 
     for (const scan of scans || []) {
-      monthCounts[scan.user_id] = (monthCounts[scan.user_id] || 0) + 1
+      monthCounts[scan.created_by] = (monthCounts[scan.created_by] || 0) + 1
       if (scan.created_at >= todayStart) scansToday++
     }
 

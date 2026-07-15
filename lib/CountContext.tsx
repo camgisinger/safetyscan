@@ -26,8 +26,7 @@ export function CountProvider({ children }: { children: React.ReactNode }) {
     if (!user) return
     supabase
       .from('scan_modules')
-      .select('findings, findings_state, scan_id, scans!inner(created_by)')
-      .eq('scans.created_by', user.id)
+      .select('findings, findings_state, scan_id')
       .then(({ data: mods }) => {
         let outstanding = 0
         const scanIdsWithIssues = new Set<string>()

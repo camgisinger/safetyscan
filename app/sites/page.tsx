@@ -33,7 +33,7 @@ export default function SitesPage() {
     setLoading(true)
     const init = async () => {
       const [sitesRes, scansRes] = await Promise.all([
-        supabase.from('sites').select('*').order('name'),
+        supabase.from('sites').select('id, name, location, archived').order('name'),
         supabase.from('scans').select('id, site_id, status, created_at'),
       ])
       setSites(sitesRes.data || [])

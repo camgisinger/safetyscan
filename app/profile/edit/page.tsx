@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../../lib/supabase'
+import { useUser } from '../../../lib/UserContext'
 import AppHeader from '../../../components/AppHeader'
 
 export default function EditProfilePage() {
@@ -9,23 +10,19 @@ export default function EditProfilePage() {
   const [fullName, setFullName] = useState('')
   const [jobTitle, setJobTitle] = useState('')
   const [email,    setEmail]    = useState('')
-  const [loading,  setLoading]  = useState(true)
   const [saving,   setSaving]   = useState(false)
   const [error,    setError]    = useState('')
   const [saved,    setSaved]    = useState(false)
+  const { user, loading } = useUser()
 
   useEffect(() => {
-    const load = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/login'); return }
-      const m = user.user_metadata || {}
-      setFullName(m.full_name || '')
-      setJobTitle(m.job_title || '')
-      setEmail(user.email || '')
-      setLoading(false)
-    }
-    load()
-  }, [router])
+    if (loading) return
+    if (!user) { router.push('/login'); return }
+    const m = user.user_metadata || {}
+    setFullName(m.full_name || '')
+    setJobTitle(m.job_title || '')
+    setEmail(user.email || '')
+  }, [user, loading, router])
 
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault()
