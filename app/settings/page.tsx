@@ -172,7 +172,7 @@ export default function SettingsPage() {
         <Section title="Help &amp; preferences">
           <NavRow icon={<BookOpen size={18} strokeWidth={1.75} />} label="Guide" onClick={() => router.push('/guide')} />
           <Divider />
-          <NavRow icon={<LifeBuoy size={18} strokeWidth={1.75} />} label="Help &amp; support" onClick={() => router.push('/contact')} />
+          <NavRow icon={<LifeBuoy size={18} strokeWidth={1.75} />} label="Help &amp; support" onClick={() => router.push('/support')} />
         </Section>
 
         {/* Sign out */}

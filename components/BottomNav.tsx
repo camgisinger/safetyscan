@@ -47,7 +47,7 @@ const MENU_ITEMS = [
     label: 'Support',
     sub: 'Get help or send feedback',
     badge: null,
-    href: '/contact',
+    href: '/support',
   },
 ]
 
