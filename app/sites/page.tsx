@@ -6,19 +6,12 @@ import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
 import { MapPin, ChevronRight, FolderPlus, X, Archive } from 'lucide-react'
 
-function siteCompliance(scans: Scan[]) {
-  const active = scans.filter(s => !(s as any).archived)
-  if (active.length === 0) return { rate: null, color: 'var(--text-muted)' }
-  const passed = active.filter(s => s.status === 'pass').length
-  const rate = Math.round((passed / active.length) * 100)
-  const color = rate >= 80 ? 'var(--pass)' : rate >= 50 ? 'var(--warning)' : 'var(--issue)'
-  return { rate, color }
-}
 
 export default function SitesPage() {
   const [sites, setSites] = useState<Site[]>([])
   const [scans, setScans] = useState<Scan[]>([])
   const [siteOutstanding, setSiteOutstanding] = useState<Record<string, number>>({})
+  const [sitePending, setSitePending] = useState<Record<string, number>>({})
   const [loading, setLoading] = useState(true)
   const [showNewSheet, setShowNewSheet] = useState(false)
   useEffect(() => {
@@ -40,22 +33,33 @@ export default function SitesPage() {
       const [sitesRes, scansRes, modulesRes] = await Promise.all([
         supabase.from('sites').select('id, name, location, archived').order('name'),
         supabase.from('scans').select('id, site_id, status, created_at, archived'),
-        supabase.from('scan_modules').select('findings, findings_state, scans!inner(site_id, archived)'),
+        supabase.from('scan_modules').select('scan_id, findings, findings_state, scans!inner(site_id, archived)'),
       ])
       setSites((sitesRes.data || []) as unknown as Site[])
       setScans((scansRes.data || []) as unknown as Scan[])
       const outstanding: Record<string, number> = {}
+      const pendingScans: Record<string, Set<string>> = {}
       for (const mod of (modulesRes.data || [])) {
         const scan = (mod as any).scans
         if (!scan?.site_id || scan.archived) continue
+        const siteId: string = scan.site_id
+        const scanId: string = (mod as any).scan_id
         const state: Record<string, string> = (mod as any).findings_state || {}
-        const count = ((mod as any).findings || []).filter((f: any) =>
-          (f.type === 'critical' || f.type === 'warning' || f.type === 'action') &&
-          state[f.id] !== 'done' && state[f.id] !== 'dismissed'
-        ).length
-        outstanding[scan.site_id] = (outstanding[scan.site_id] || 0) + count
+        let modHasPending = false
+        for (const f of ((mod as any).findings || [])) {
+          if ((f.type === 'critical' || f.type === 'warning' || f.type === 'action') &&
+              state[f.id] !== 'done' && state[f.id] !== 'dismissed') {
+            outstanding[siteId] = (outstanding[siteId] || 0) + 1
+            modHasPending = true
+          }
+        }
+        if (modHasPending && scanId) {
+          if (!pendingScans[siteId]) pendingScans[siteId] = new Set()
+          pendingScans[siteId].add(scanId)
+        }
       }
       setSiteOutstanding(outstanding)
+      setSitePending(Object.fromEntries(Object.entries(pendingScans).map(([k, v]) => [k, v.size])))
       setLoading(false)
     }
     init()
@@ -169,7 +173,8 @@ export default function SitesPage() {
         ) : visibleSites.map(site => {
           const siteScans = scans.filter(s => s.site_id === site.id)
           const outstanding = siteOutstanding[site.id] || 0
-          const { rate, color } = siteCompliance(siteScans)
+          const pending = sitePending[site.id] || 0
+
 
           return (
             <div key={site.id} onClick={() => router.push(`/sites/${site.id}`)} style={{
@@ -210,19 +215,17 @@ export default function SitesPage() {
                     background: 'var(--surf-inset)', borderRadius: 'var(--r-tile)',
                     border: '1.5px solid var(--border-subtle)',
                   }}>
-                    <div style={{ fontSize: 18, fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.03em' }}>{siteScans.length}</div>
-                    <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 1 }}>Scans</div>
+                    <div style={{ fontSize: 18, fontWeight: 800, color: pending > 0 ? 'var(--amber)' : 'var(--text)', letterSpacing: '-0.03em' }}>{pending}</div>
+                    <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 1 }}>Pending scans</div>
                   </div>
-                  {rate !== null && (
-                    <div style={{
-                      flex: 1, padding: '9px 12px',
-                      background: 'var(--surf-inset)', borderRadius: 'var(--r-tile)',
-                      border: '1.5px solid var(--border-subtle)',
-                    }}>
-                      <div style={{ fontSize: 18, fontWeight: 800, color, letterSpacing: '-0.03em' }}>{rate}%</div>
-                      <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 1 }}>Compliance</div>
-                    </div>
-                  )}
+                  <div style={{
+                    flex: 1, padding: '9px 12px',
+                    background: 'var(--surf-inset)', borderRadius: 'var(--r-tile)',
+                    border: '1.5px solid var(--border-subtle)',
+                  }}>
+                    <div style={{ fontSize: 18, fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.03em' }}>{siteScans.length}</div>
+                    <div style={{ fontSize: 10.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 1 }}>Total scans</div>
+                  </div>
                 </div>
               </div>
               <div style={{ display: 'grid', placeItems: 'center', paddingRight: 14, flexShrink: 0 }}>
