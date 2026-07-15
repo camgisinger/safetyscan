@@ -36,7 +36,7 @@ export default function SitesPage() {
         supabase.from('sites').select('id, name, location, archived').order('name'),
         supabase.from('scans').select('id, site_id, status, created_at'),
       ])
-      setSites(sitesRes.data || [])
+      setSites((sitesRes.data || []) as unknown as Site[])
       setScans((scansRes.data || []) as Scan[])
       setLoading(false)
     }
