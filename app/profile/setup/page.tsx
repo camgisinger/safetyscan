@@ -26,7 +26,7 @@ export default function ProfileSetupPage() {
       data: { full_name: fullName.trim(), job_title: jobTitle.trim() }
     })
     if (err) { setError(err.message); setSaving(false); return }
-    router.push('/dashboard')
+    router.push('/profile/branding?from=setup')
   }
 
   const inp: React.CSSProperties = {

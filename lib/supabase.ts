@@ -6,6 +6,7 @@ export const supabase = createBrowserClient(
 )
 
 export const SCAN_PHOTOS_BUCKET = 'scan-photos'
+export const BRAND_LOGOS_BUCKET = 'brand-logos'
 
 export type Site = {
   id: string
