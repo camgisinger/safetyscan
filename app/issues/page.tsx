@@ -6,7 +6,7 @@ import { supabase } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
-import { Shield, Ruler, Leaf, Check, ChevronRight, CheckSquare } from 'lucide-react'
+import { Shield, Ruler, Leaf, Check, ChevronRight, CheckSquare, ListFilter } from 'lucide-react'
 
 type Finding = {
   finding_id: string
@@ -142,6 +142,8 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [bulkWorking, setBulkWorking] = useState(false)
   const [typeFilter, setTypeFilter] = useState<'all' | 'critical' | 'warning' | 'action'>('all')
+  const [sortOrder, setSortOrder] = useState<'newest' | 'oldest' | 'site'>('newest')
+  const [showSortMenu, setShowSortMenu] = useState(false)
   const selectMode = selectModeFromParent
   const router = useRouter()
   const { user, loading: userLoading } = useUser()
@@ -156,9 +158,14 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
     setSelected(prev => { const n = new Set(prev); n.has(k) ? n.delete(k) : n.add(k); return n })
   }
 
-  const filteredOutstanding = typeFilter === 'all'
+  const filteredOutstanding = (typeFilter === 'all'
     ? outstanding
     : outstanding.filter(f => f.type === typeFilter)
+  ).slice().sort((a, b) => {
+    if (sortOrder === 'oldest') return new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+    if (sortOrder === 'site') return (a.site_name || '').localeCompare(b.site_name || '')
+    return new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+  })
 
   const toggleAll = () => {
     if (selected.size === filteredOutstanding.length) {
@@ -269,29 +276,74 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
         ) : (
           <>
             {!selectMode && FILTER_CHIPS.length > 1 && (
-              <div style={{ display: 'flex', gap: 6, marginBottom: 14, flexWrap: 'wrap' }}>
-                {FILTER_CHIPS.map(chip => {
-                  const count = chip.key === 'all' ? outstanding.length : outstanding.filter(f => f.type === chip.key).length
-                  const active = typeFilter === chip.key
-                  return (
-                    <button key={chip.key} onClick={() => setTypeFilter(chip.key)}
-                      style={{
-                        display: 'flex', alignItems: 'center', gap: 5,
-                        height: 32, padding: '0 12px', borderRadius: 999,
-                        border: `1.5px solid ${active ? 'var(--amber)' : 'var(--border-card)'}`,
-                        background: active ? 'var(--amber)' : 'var(--surf)',
-                        color: active ? '#1B1A12' : 'var(--text-secondary)',
-                        fontSize: 12.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 14 }}>
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', flex: 1 }}>
+                  {FILTER_CHIPS.map(chip => {
+                    const count = chip.key === 'all' ? outstanding.length : outstanding.filter(f => f.type === chip.key).length
+                    const active = typeFilter === chip.key
+                    return (
+                      <button key={chip.key} onClick={() => setTypeFilter(chip.key)}
+                        style={{
+                          display: 'flex', alignItems: 'center', gap: 5,
+                          height: 32, padding: '0 12px', borderRadius: 999,
+                          border: `1.5px solid ${active ? 'var(--amber)' : 'var(--border-card)'}`,
+                          background: active ? 'var(--amber)' : 'var(--surf)',
+                          color: active ? '#1B1A12' : 'var(--text-secondary)',
+                          fontSize: 12.5, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+                        }}>
+                        {chip.label}
+                        <span style={{
+                          fontSize: 11, fontWeight: 700, borderRadius: 999, padding: '1px 6px',
+                          background: active ? 'rgba(0,0,0,0.15)' : 'var(--surf-inset)',
+                          color: active ? '#1B1A12' : 'var(--text-muted)',
+                        }}>{count}</span>
+                      </button>
+                    )
+                  })}
+                </div>
+                {/* Sort button */}
+                <div style={{ position: 'relative', flexShrink: 0 }}>
+                  <button onClick={() => setShowSortMenu(v => !v)} style={{
+                    width: 32, height: 32, borderRadius: 'var(--r-control-sm)',
+                    border: `1.5px solid ${sortOrder !== 'newest' ? 'var(--amber)' : 'var(--border-card)'}`,
+                    background: sortOrder !== 'newest' ? 'var(--brand-tint)' : 'var(--surf)',
+                    color: sortOrder !== 'newest' ? 'var(--amber)' : 'var(--text-muted)',
+                    display: 'grid', placeItems: 'center', cursor: 'pointer',
+                  }}>
+                    <ListFilter size={15} strokeWidth={2} />
+                  </button>
+                  {showSortMenu && (
+                    <>
+                      <div onClick={() => setShowSortMenu(false)} style={{ position: 'fixed', inset: 0, zIndex: 40 }} />
+                      <div style={{
+                        position: 'absolute', top: 38, right: 0, zIndex: 50,
+                        background: 'var(--surf-sheet)', border: '1.5px solid var(--border-card)',
+                        borderRadius: 'var(--r-card)', boxShadow: 'var(--shadow-sheet)',
+                        minWidth: 160, overflow: 'hidden',
                       }}>
-                      {chip.label}
-                      <span style={{
-                        fontSize: 11, fontWeight: 700, borderRadius: 999, padding: '1px 6px',
-                        background: active ? 'rgba(0,0,0,0.15)' : 'var(--surf-inset)',
-                        color: active ? '#1B1A12' : 'var(--text-muted)',
-                      }}>{count}</span>
-                    </button>
-                  )
-                })}
+                        {([
+                          { key: 'newest', label: 'Newest first' },
+                          { key: 'oldest', label: 'Oldest first' },
+                          { key: 'site', label: 'By site' },
+                        ] as const).map(opt => (
+                          <button key={opt.key} onClick={() => { setSortOrder(opt.key); setShowSortMenu(false) }} style={{
+                            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                            width: '100%', padding: '11px 14px',
+                            background: sortOrder === opt.key ? 'var(--brand-tint)' : 'none',
+                            border: 'none', borderBottom: '1px solid var(--border-subtle)',
+                            cursor: 'pointer', fontFamily: 'inherit',
+                            fontSize: 13.5, fontWeight: sortOrder === opt.key ? 600 : 500,
+                            color: sortOrder === opt.key ? 'var(--amber)' : 'var(--text)',
+                            textAlign: 'left',
+                          }}>
+                            {opt.label}
+                            {sortOrder === opt.key && <Check size={13} strokeWidth={2.5} color="var(--amber)" />}
+                          </button>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             )}
             {selectMode && filteredOutstanding.length > 1 && (
