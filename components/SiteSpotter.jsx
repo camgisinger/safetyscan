@@ -428,6 +428,24 @@ export default function SiteSpotter() {
               </>
             )}
 
+            {/* Quick mode site selector */}
+            {mode === "quick" && photos.length > 0 && (
+              <div style={{ marginBottom: 12 }}>
+                <label style={{ display: "block", fontWeight: 600, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 6 }}>
+                  Site <span style={{ opacity: 0.5, fontWeight: 400, textTransform: "none", letterSpacing: 0 }}>(optional)</span>
+                </label>
+                <select value={siteDropdownValue} onChange={e => setSiteDropdownValue(e.target.value)} style={{ ...inp }}>
+                  <option value="none">No site</option>
+                  {sites.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
+                  <option value="new">+ Create new site</option>
+                </select>
+                {siteDropdownValue === "new" && (
+                  <input value={newSiteName} onChange={e => setNewSiteName(e.target.value)} placeholder="Site name"
+                    style={{ ...inp, marginTop: 8, border: "1.5px solid var(--amber)" }}/>
+                )}
+              </div>
+            )}
+
             {/* Analyse button */}
             {photos.length > 0 && (
               <button onClick={runAll}
