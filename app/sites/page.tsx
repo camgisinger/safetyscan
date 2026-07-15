@@ -43,7 +43,7 @@ export default function SitesPage() {
         supabase.from('scan_modules').select('findings, findings_state, scans!inner(site_id, archived)'),
       ])
       setSites((sitesRes.data || []) as unknown as Site[])
-      setScans((scansRes.data || []) as Scan[])
+      setScans((scansRes.data || []) as unknown as Scan[])
       const outstanding: Record<string, number> = {}
       for (const mod of (modulesRes.data || [])) {
         const scan = (mod as any).scans
