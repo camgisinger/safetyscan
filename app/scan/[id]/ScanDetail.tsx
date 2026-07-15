@@ -462,12 +462,20 @@ export default function ScanDetail({ id }: { id: string }) {
     } catch (e: any) { setContinueError(e.message || 'Analysis failed') } finally { setContinueLoading(false) }
   }
 
+  const getModuleStatus = (mod: any): 'fail' | 'action' | 'pass' | 'not_applicable' | 'error' => {
+    if (mod.status === 'not_applicable') return 'not_applicable'
+    if (mod.status === 'error') return 'error'
+    const findings: any[] = mod.findings || []
+    const state: Record<string, string> = mod.findings_state || {}
+    if (findings.some((f: any) => state[f.id] !== 'done' && state[f.id] !== 'dismissed' && (f.type === 'critical' || f.type === 'warning'))) return 'fail'
+    if (findings.some((f: any) => state[f.id] !== 'done' && state[f.id] !== 'dismissed' && f.type === 'action')) return 'action'
+    return 'pass'
+  }
+
   const calcModuleStatus = (findings: any[], newFs: Record<string, string>) => {
-    const hasOpenIssues = findings.some(f => {
-      const s = newFs[f.id]
-      return s !== 'done' && s !== 'dismissed' && (f.type === 'critical' || f.type === 'warning')
-    })
-    return hasOpenIssues ? 'fail' : 'pass'
+    if (findings.some(f => newFs[f.id] !== 'done' && newFs[f.id] !== 'dismissed' && (f.type === 'critical' || f.type === 'warning'))) return 'fail'
+    if (findings.some(f => newFs[f.id] !== 'done' && newFs[f.id] !== 'dismissed' && f.type === 'action')) return 'uncertain'
+    return 'pass'
   }
 
   const markFinding = (findingId: string, state: 'done' | 'dismissed') => {
@@ -529,7 +537,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const siteName = scan.site_id ? sites.find(s => s.id === scan.site_id)?.name : null
   const isLegacy = scanModules.length === 0
   const activeModuleData = isLegacy ? null : scanModules.find((m: any) => m.module === activeModule) ?? null
-  const isErrorTab = !isLegacy && activeModuleData?.status === 'error'
+  const isErrorTab = !isLegacy && activeModuleData ? getModuleStatus(activeModuleData) === 'error' : false
 
   const displayFindings: any[] = isLegacy ? (scan.findings || []) : (activeModuleData?.findings || [])
   const displayLegislation: any[] = isLegacy ? (scan.legislation || []) : (activeModuleData?.legislation || [])
@@ -547,10 +555,16 @@ export default function ScanDetail({ id }: { id: string }) {
   const dismissedFindings = displayFindings.filter(f => displayFindingsState[f.id] === 'dismissed')
 
   const totalIssues = openFindings.length
-  const pillStyle = displayStatus === 'pass'
+  const activeModStatus = !isLegacy && activeModuleData ? getModuleStatus(activeModuleData) : null
+  const pillStatus = isLegacy ? displayStatus : (activeModStatus ?? 'uncertain')
+  const pillStyle = pillStatus === 'pass'
     ? { label: 'Compliant', bg: 'var(--pass-tint)', color: 'var(--pass-deep)' }
-    : displayStatus === 'fail'
+    : pillStatus === 'fail'
     ? { label: `${totalIssues} issue${totalIssues !== 1 ? 's' : ''}`, bg: 'var(--fail-tint)', color: 'var(--issue)' }
+    : pillStatus === 'not_applicable'
+    ? { label: 'Not applicable', bg: 'var(--surf-inset)', color: 'var(--text-muted)' }
+    : pillStatus === 'action'
+    ? { label: `${actionFindings.length} to confirm`, bg: 'var(--warn-tint)', color: 'var(--warning)' }
     : { label: 'Pending', bg: 'var(--warn-tint)', color: 'var(--warning)' }
 
   const inp: React.CSSProperties = { display: 'block', width: '100%', border: '1.5px solid var(--border-card)', background: 'var(--surf-inset)', fontSize: 14, color: 'var(--text)', boxSizing: 'border-box' }
@@ -643,7 +657,8 @@ export default function ScanDetail({ id }: { id: string }) {
                 <div style={{ display: 'flex', gap: 6, marginBottom: 14 }}>
                   {scanModules.map((m: any) => {
                     const isActive = m.module === activeModule
-                    const tabStatusColor = m.status === 'pass' ? 'var(--pass)' : m.status === 'fail' ? 'var(--issue)' : m.status === 'error' ? 'var(--issue)' : 'var(--warning)'
+                    const mst = getModuleStatus(m)
+                    const tabStatusColor = mst === 'pass' ? 'var(--pass)' : mst === 'fail' || mst === 'error' ? 'var(--issue)' : mst === 'not_applicable' ? 'var(--text-muted)' : 'var(--warning)'
                     const label = m.module === 'safety' ? 'Safety' : m.module === 'quality' ? 'Quality' : 'Environmental'
                     const ModIcon = m.module === 'safety' ? Shield : m.module === 'quality' ? Ruler : Leaf
                     return (
