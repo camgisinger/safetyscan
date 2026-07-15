@@ -17,6 +17,7 @@ function greeting() {
 function statusPill(status: string, issueCount?: number) {
   if (status === 'pass') return { label: 'Compliant', bg: 'var(--pass-tint)', color: 'var(--pass-deep)', border: 'var(--pass-border)' }
   if (status === 'fail') return { label: issueCount ? `${issueCount} observation${issueCount !== 1 ? 's' : ''}` : 'Observations', bg: 'var(--fail-tint)', color: 'var(--issue)', border: 'transparent' }
+  if (status === 'action') return { label: 'Confirm on site', bg: 'var(--warn-tint)', color: 'var(--warning)', border: 'transparent' }
   return { label: 'Confirm on site', bg: 'var(--warn-tint)', color: 'var(--warning)', border: 'transparent' }
 }
 
@@ -26,11 +27,41 @@ function scanLeftColor(status: string) {
   return 'var(--warning)'
 }
 
+function scanWorstStatus(scan: any): string {
+  const mods: any[] = (scan as any).scan_modules || []
+  if (mods.length === 0) return scan.status || 'uncertain'
+  let hasAction = false
+  for (const m of mods) {
+    if (m.status === 'not_applicable' || m.status === 'error') continue
+    const state: Record<string, string> = m.findings_state || {}
+    for (const f of (m.findings || [])) {
+      if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
+      if (f.type === 'critical' || f.type === 'warning') return 'fail'
+      if (f.type === 'action') hasAction = true
+    }
+  }
+  return hasAction ? 'action' : 'pass'
+}
+
+function scanIssueCount(scan: any): number {
+  const mods: any[] = (scan as any).scan_modules || []
+  if (mods.length === 0) return (scan.findings || []).filter((f: any) => f.type === 'critical').length
+  let count = 0
+  for (const m of mods) {
+    const state: Record<string, string> = m.findings_state || {}
+    for (const f of (m.findings || [])) {
+      if (state[f.id] !== 'done' && state[f.id] !== 'dismissed' && (f.type === 'critical' || f.type === 'warning')) count++
+    }
+  }
+  return count
+}
+
 function ScanRow({ scan, siteName, onClick }: { scan: Scan; siteName?: string; onClick: () => void }) {
   const photoUrl = scan.photo_urls?.[0] || scan.photo_url
   const photoCount = scan.photo_urls?.length || (scan.photo_url ? 1 : 0)
-  const issueCount = (scan.findings || []).filter((f: any) => f.type === 'critical').length
-  const pill = statusPill(scan.status, issueCount || undefined)
+  const worstSt = scanWorstStatus(scan)
+  const issueCount = scanIssueCount(scan)
+  const pill = statusPill(worstSt, issueCount || undefined)
   const d = new Date(scan.created_at)
   const dateStr = d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' })
   const timeStr = d.toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit', hour12: true })
@@ -41,7 +72,7 @@ function ScanRow({ scan, siteName, onClick }: { scan: Scan; siteName?: string; o
       background: 'var(--surf)', border: '1.5px solid var(--border-card)',
       borderRadius: 'var(--r-card)', overflow: 'hidden', cursor: 'pointer', marginBottom: 8,
     }}>
-      <div style={{ width: 4, flexShrink: 0, background: scanLeftColor(scan.status) }} />
+      <div style={{ width: 4, flexShrink: 0, background: scanLeftColor(worstSt) }} />
       {photoUrl ? (
         <div style={{ position: 'relative', width: 52, alignSelf: 'stretch', flexShrink: 0 }}>
           <img src={photoUrl} alt="" style={{ width: 52, height: '100%', objectFit: 'cover', display: 'block' }} />
@@ -98,7 +129,7 @@ export default function DashboardPage() {
 
     const init = async () => {
       const [scansRes, sitesRes] = await Promise.all([
-        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, findings').order('created_at', { ascending: false }).limit(20),
+        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, scan_modules(module, status, findings, findings_state)').order('created_at', { ascending: false }).limit(20),
         supabase.from('sites').select('id, name').order('name'),
       ])
       setScans((scansRes.data || []) as unknown as Scan[])

@@ -12,9 +12,39 @@ function scanLeftColor(status: string) {
   return 'var(--warning)'
 }
 
-function statusPill(status: string) {
+function scanWorstStatus(scan: any): string {
+  const mods: any[] = (scan as any).scan_modules || []
+  if (mods.length === 0) return scan.status || 'uncertain'
+  let hasAction = false
+  for (const m of mods) {
+    if (m.status === 'not_applicable' || m.status === 'error') continue
+    const state: Record<string, string> = m.findings_state || {}
+    for (const f of (m.findings || [])) {
+      if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
+      if (f.type === 'critical' || f.type === 'warning') return 'fail'
+      if (f.type === 'action') hasAction = true
+    }
+  }
+  return hasAction ? 'action' : 'pass'
+}
+
+function scanIssueCount(scan: any): number {
+  const mods: any[] = (scan as any).scan_modules || []
+  if (mods.length === 0) return (scan.findings || []).filter((f: any) => f.type === 'critical').length
+  let count = 0
+  for (const m of mods) {
+    const state: Record<string, string> = m.findings_state || {}
+    for (const f of (m.findings || [])) {
+      if (state[f.id] !== 'done' && state[f.id] !== 'dismissed' && (f.type === 'critical' || f.type === 'warning')) count++
+    }
+  }
+  return count
+}
+
+function statusPill(status: string, issueCount?: number) {
   if (status === 'pass') return { label: 'Compliant', bg: 'var(--pass-tint)', color: 'var(--pass-deep)' }
-  if (status === 'fail') return { label: 'Observations', bg: 'var(--fail-tint)', color: 'var(--issue)' }
+  if (status === 'fail') return { label: issueCount ? `${issueCount} observation${issueCount !== 1 ? 's' : ''}` : 'Observations', bg: 'var(--fail-tint)', color: 'var(--issue)' }
+  if (status === 'action') return { label: 'Confirm on site', bg: 'var(--warn-tint)', color: 'var(--warning)' }
   return { label: 'Confirm on site', bg: 'var(--warn-tint)', color: 'var(--warning)' }
 }
 
@@ -289,7 +319,9 @@ export default function SiteDetail({ id }: { id: string }) {
         ) : scans.map(scan => {
           const photoUrl = (scan as any).photo_urls?.[0] || (scan as any).photo_url
           const photoCount = (scan as any).photo_urls?.length || ((scan as any).photo_url ? 1 : 0)
-          const pill = statusPill(scan.status)
+          const worstSt = scanWorstStatus(scan)
+          const iCount = scanIssueCount(scan)
+          const pill = statusPill(worstSt, iCount || undefined)
           const d = new Date(scan.created_at)
 
           return (

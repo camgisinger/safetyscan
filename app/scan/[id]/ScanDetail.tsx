@@ -560,7 +560,7 @@ export default function ScanDetail({ id }: { id: string }) {
   const pillStyle = pillStatus === 'pass'
     ? { label: 'Compliant', bg: 'var(--pass-tint)', color: 'var(--pass-deep)' }
     : pillStatus === 'fail'
-    ? { label: `${totalIssues} issue${totalIssues !== 1 ? 's' : ''}`, bg: 'var(--fail-tint)', color: 'var(--issue)' }
+    ? { label: totalIssues ? `${totalIssues} observation${totalIssues !== 1 ? 's' : ''}` : 'Observations', bg: 'var(--fail-tint)', color: 'var(--issue)' }
     : pillStatus === 'not_applicable'
     ? { label: 'Not applicable', bg: 'var(--surf-inset)', color: 'var(--text-muted)' }
     : pillStatus === 'action'

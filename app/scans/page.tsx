@@ -11,13 +11,44 @@ type StatusFilter = 'all' | 'issues' | 'compliant' | 'pending'
 function scanLeftColor(status: string) {
   if (status === 'pass') return 'var(--pass)'
   if (status === 'fail') return 'var(--issue)'
+  if (status === 'action') return 'var(--warning)'
   return 'var(--warning)'
 }
 
 function statusPill(status: string, issueCount?: number) {
   if (status === 'pass') return { label: 'Compliant', bg: 'var(--pass-tint)', color: 'var(--pass-deep)' }
   if (status === 'fail') return { label: issueCount ? `${issueCount} observation${issueCount !== 1 ? 's' : ''}` : 'Observations', bg: 'var(--fail-tint)', color: 'var(--issue)' }
+  if (status === 'action') return { label: 'Confirm on site', bg: 'var(--warn-tint)', color: 'var(--warning)' }
   return { label: 'Confirm on site', bg: 'var(--warn-tint)', color: 'var(--warning)' }
+}
+
+function scanWorstStatus(scan: any): string {
+  const mods: any[] = scan.scan_modules || []
+  if (mods.length === 0) return scan.status || 'uncertain'
+  let hasAction = false
+  for (const m of mods) {
+    if (m.status === 'not_applicable' || m.status === 'error') continue
+    const state: Record<string, string> = m.findings_state || {}
+    for (const f of (m.findings || [])) {
+      if (state[f.id] === 'done' || state[f.id] === 'dismissed') continue
+      if (f.type === 'critical' || f.type === 'warning') return 'fail'
+      if (f.type === 'action') hasAction = true
+    }
+  }
+  return hasAction ? 'action' : 'pass'
+}
+
+function scanIssueCount(scan: any): number {
+  const mods: any[] = scan.scan_modules || []
+  if (mods.length === 0) return (scan.findings || []).filter((f: any) => f.type === 'critical').length
+  let count = 0
+  for (const m of mods) {
+    const state: Record<string, string> = m.findings_state || {}
+    for (const f of (m.findings || [])) {
+      if (state[f.id] !== 'done' && state[f.id] !== 'dismissed' && (f.type === 'critical' || f.type === 'warning')) count++
+    }
+  }
+  return count
 }
 
 export default function ScansPage() {
@@ -46,7 +77,7 @@ export default function ScansPage() {
     setLoading(true)
     const init = async () => {
       const [scansRes, sitesRes] = await Promise.all([
-        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls').order('created_at', { ascending: false }).limit(200),
+        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, scan_modules(module, status, findings, findings_state)').order('created_at', { ascending: false }).limit(200),
         supabase.from('sites').select('id, name'),
       ])
       setScans((scansRes.data || []) as unknown as Scan[])
@@ -210,8 +241,9 @@ export default function ScansPage() {
           const photoUrl = scan.photo_urls?.[0] || scan.photo_url
           const photoCount = scan.photo_urls?.length || (scan.photo_url ? 1 : 0)
           const siteName = sites.find(s => s.id === scan.site_id)?.name
-          const issueCount = (scan.findings || []).filter((f: any) => f.type === 'critical').length
-          const pill = statusPill(scan.status, issueCount || undefined)
+          const worstSt = scanWorstStatus(scan)
+          const issueCount = scanIssueCount(scan)
+          const pill = statusPill(worstSt, issueCount || undefined)
           const d = new Date(scan.created_at)
           const dateStr = d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' })
           const timeStr = d.toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit', hour12: true })
@@ -228,7 +260,7 @@ export default function ScansPage() {
                 cursor: 'pointer', marginBottom: 8,
                 transition: 'border-color 0.15s, background 0.15s',
               }}>
-              <div style={{ width: 4, flexShrink: 0, background: scanLeftColor(scan.status) }} />
+              <div style={{ width: 4, flexShrink: 0, background: scanLeftColor(worstSt) }} />
               {photoUrl ? (
                 <div style={{ position: 'relative', width: 52, alignSelf: 'stretch', flexShrink: 0 }}>
                   <img src={photoUrl} alt="" style={{ width: 52, height: '100%', objectFit: 'cover', display: 'block' }} />
