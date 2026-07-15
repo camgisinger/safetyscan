@@ -31,7 +31,14 @@ function LoginContent() {
         if (error) throw error
         setSignedUp(true)
       }
-    } catch (err: any) { setError(err.message || 'Something went wrong') }
+    } catch (err: any) {
+      const msg = typeof err?.message === 'string' && err.message.trim()
+        ? err.message
+        : typeof err?.error_description === 'string' && err.error_description.trim()
+          ? err.error_description
+          : 'Something went wrong. Please try again.'
+      setError(msg)
+    }
     finally { setLoading(false) }
   }
 
