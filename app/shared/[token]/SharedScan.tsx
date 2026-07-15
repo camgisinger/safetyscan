@@ -75,7 +75,7 @@ export default function SharedScan({ token }: { token: string }) {
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '11px 18px 12px', background: 'var(--bg)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
           <div style={{ width: 30, height: 30, borderRadius: 8, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-            <img src="/brand/mark-black-white.png" alt="" style={{ width: 22, height: 22 }}/>
+            <img src="/brand/mark-black-white.png" alt="" style={{ width: 26, height: 26 }}/>
           </div>
           <span style={{ fontWeight: 600, fontSize: 20, letterSpacing: '-0.02em', color: 'var(--text)' }}>Safety<b style={{ color: 'var(--amber)' }}>Scan</b></span>
         </div>

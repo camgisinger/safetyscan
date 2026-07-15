@@ -53,7 +53,7 @@ export default function AppHeader({
               <button onClick={() => router.push('/dashboard')} className="desktop-hidden"
                 style={{ flex: 1, background: 'none', border: 'none', padding: 0, alignItems: 'center', gap: 10, cursor: 'pointer' }}>
                 <div style={{ width: 28, height: 28, borderRadius: 7, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-                  <img src="/brand/mark-black-white.png" alt="" style={{ width: 20, height: 20 }} />
+                  <img src="/brand/mark-black-white.png" alt="" style={{ width: 24, height: 24 }} />
                 </div>
                 <span style={{ fontWeight: 700, fontSize: 18, letterSpacing: '-0.02em', color: 'var(--text)' }}>
                   SiteSpotter

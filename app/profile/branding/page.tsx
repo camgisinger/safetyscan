@@ -133,7 +133,7 @@ export default function BrandingPage() {
         {/* Brand */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 11, marginBottom: 36 }}>
           <div style={{ width: 40, height: 40, borderRadius: 10, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-            <img src="/brand/mark-black-white.png" alt="" style={{ width: 28, height: 28 }} />
+            <img src="/brand/mark-black-white.png" alt="" style={{ width: 34, height: 34 }} />
           </div>
           <span style={{ fontWeight: 600, fontSize: 22, letterSpacing: '-0.02em', color: 'var(--text)' }}>
             Site<b style={{ color: 'var(--amber)' }}>Spotter</b>
