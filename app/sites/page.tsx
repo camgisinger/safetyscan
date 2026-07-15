@@ -20,6 +20,10 @@ export default function SitesPage() {
   const [scans, setScans] = useState<Scan[]>([])
   const [loading, setLoading] = useState(true)
   const [showNewSheet, setShowNewSheet] = useState(false)
+  useEffect(() => {
+    document.body.classList.toggle('sheet-open', showNewSheet)
+    return () => document.body.classList.remove('sheet-open')
+  }, [showNewSheet])
   const [newName, setNewName] = useState('')
   const [newLocation, setNewLocation] = useState('')
   const [creating, setCreating] = useState(false)
@@ -224,7 +228,7 @@ export default function SitesPage() {
             background: 'var(--surf-sheet)', borderRadius: 'var(--r-sheet) var(--r-sheet) 0 0',
             boxShadow: 'var(--shadow-sheet)',
             padding: '0 20px',
-            paddingBottom: 'calc(64px + max(16px, env(safe-area-inset-bottom, 16px)))',
+            paddingBottom: 'max(32px, env(safe-area-inset-bottom, 32px))',
             animation: 'slideUpIn 0.28s cubic-bezier(0.2,0.7,0.3,1) forwards',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 0 16px' }}>
