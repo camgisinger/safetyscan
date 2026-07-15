@@ -910,6 +910,29 @@ export default function ScanDetail({ id }: { id: string }) {
             )}
           </div>
 
+          {/* Notes */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '4px 2px 10px' }}>
+            <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }} />
+            <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)', flex: 1 }}>Notes</span>
+            {notesSaving && <span style={{ fontSize: 11, fontWeight: 500, color: 'var(--text-muted)' }}>Saving…</span>}
+            {notesSaved && !notesSaving && <span style={{ fontSize: 11, fontWeight: 500, color: 'var(--pass)' }}>Saved</span>}
+          </div>
+          <div style={{ background: 'var(--surf)', border: '1.5px solid var(--border-card)', borderRadius: 'var(--r-card)', marginBottom: 14 }}>
+            <textarea
+              value={notes}
+              onChange={e => handleNotesChange(e.target.value)}
+              placeholder="Add notes, observations, or feedback about this scan…"
+              rows={4}
+              style={{
+                display: 'block', width: '100%', padding: '12px 14px',
+                background: 'transparent', border: 'none', resize: 'vertical',
+                fontSize: 13.5, fontWeight: 500, color: 'var(--text)',
+                fontFamily: 'inherit', lineHeight: 1.6, boxSizing: 'border-box',
+                outline: 'none', minHeight: 100,
+              }}
+            />
+          </div>
+
           {/* Share */}
           <button onClick={() => setShareMenuOpen(v => !v)} style={{ ...btn(shareMenuOpen), width: '100%', marginBottom: shareMenuOpen ? 8 : 0 }}>
             Share scan {shareEnabled ? '(on)' : ''}
