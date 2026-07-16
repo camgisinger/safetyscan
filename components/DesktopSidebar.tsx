@@ -178,7 +178,7 @@ export default function DesktopSidebar() {
           </div>
           <div style={{ flex: 1, minWidth: 0, textAlign: 'left' }}>
             <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-              {toDisplayName(fullName, email)}
+              {fullName || email || ''}
             </div>
             {companyName && (
               <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 1 }}>

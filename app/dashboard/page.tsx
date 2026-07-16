@@ -195,13 +195,13 @@ export default function DashboardPage() {
             width: 52, height: 52, borderRadius: 14,
             background: 'rgba(0,0,0,0.15)', display: 'grid', placeItems: 'center', flexShrink: 0,
           }}>
-            <Camera size={26} strokeWidth={2.2} color="#1B1A12" />
+            <Camera size={26} strokeWidth={2.2} color="#fff" />
           </div>
           <div style={{ flex: 1 }}>
-            <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.03em', color: '#1B1A12', lineHeight: 1.1 }}>New Scan</div>
-            <div style={{ fontSize: 12.5, fontWeight: 500, color: 'rgba(27,26,18,0.65)', marginTop: 4 }}>Upload site photos to check compliance</div>
+            <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.03em', color: '#fff', lineHeight: 1.1 }}>New Scan</div>
+            <div style={{ fontSize: 12.5, fontWeight: 500, color: 'rgba(255,255,255,0.75)', marginTop: 4 }}>Upload site photos to check compliance</div>
           </div>
-          <ChevronRight size={22} strokeWidth={2.5} color="rgba(27,26,18,0.5)" />
+          <ChevronRight size={22} strokeWidth={2.5} color="rgba(255,255,255,0.6)" />
         </button>
 
         {/* Stat cards */}
