@@ -1,11 +1,11 @@
 'use client'
 import { usePathname, useRouter } from 'next/navigation'
-import { House, Layers, Folder, TriangleAlert, Camera } from 'lucide-react'
+import { House, Layers, Folder, TriangleAlert, Camera, Wrench, Settings, LifeBuoy } from 'lucide-react'
 import { useUser } from '../lib/UserContext'
 import { useCount } from '../lib/CountContext'
 import ThemeToggle from './ThemeToggle'
 
-type NavId = 'home' | 'scans' | 'sites' | 'issues'
+type NavId = 'home' | 'scans' | 'sites' | 'issues' | 'tools' | 'settings' | 'support'
 
 const APP_ROOTS = ['/dashboard', '/scans', '/sites', '/issues', '/profile', '/settings', '/tools', '/scan', '/guide', '/support', '/privacy', '/terms', '/help']
 
@@ -14,6 +14,12 @@ const NAV: { id: NavId; label: string; href: string; Icon: any }[] = [
   { id: 'scans',  label: 'Scans',  href: '/scans',     Icon: Layers },
   { id: 'sites',  label: 'Sites',  href: '/sites',     Icon: Folder },
   { id: 'issues', label: 'Issues', href: '/issues',    Icon: TriangleAlert },
+  { id: 'tools',  label: 'Tools',  href: '/tools',     Icon: Wrench },
+]
+
+const BOTTOM_NAV: { id: NavId; label: string; href: string; Icon: any }[] = [
+  { id: 'settings', label: 'Settings', href: '/settings', Icon: Settings },
+  { id: 'support',  label: 'Support',  href: '/support',  Icon: LifeBuoy },
 ]
 
 function toInitials(name: string | null, email: string | null) {
@@ -34,6 +40,9 @@ function activeId(pathname: string): NavId | null {
   if (pathname.startsWith('/scans'))     return 'scans'
   if (pathname.startsWith('/sites'))     return 'sites'
   if (pathname.startsWith('/issues'))    return 'issues'
+  if (pathname.startsWith('/tools'))     return 'tools'
+  if (pathname.startsWith('/settings') || pathname.startsWith('/profile')) return 'settings'
+  if (pathname.startsWith('/support'))   return 'support'
   return null
 }
 
@@ -120,6 +129,27 @@ export default function DesktopSidebar() {
       </nav>
 
       <div style={{ flex: 1 }} />
+
+      {/* Bottom nav — Settings & Support */}
+      <nav style={{ padding: '0 8px 4px', display: 'flex', flexDirection: 'column', gap: 2, borderTop: '1.5px solid var(--div)', paddingTop: 8 }}>
+        {BOTTOM_NAV.map(({ id, label, href, Icon }) => {
+          const on = active === id
+          return (
+            <button key={id} onClick={() => router.push(href)} style={{
+              width: '100%', height: 36, borderRadius: 10,
+              display: 'flex', alignItems: 'center', gap: 10,
+              padding: '0 12px',
+              background: on ? 'var(--brand-tint)' : 'transparent',
+              border: 'none', cursor: 'pointer', fontFamily: 'inherit',
+              color: on ? 'var(--amber)' : 'var(--text-secondary)',
+              fontWeight: on ? 700 : 500, fontSize: 13.5,
+            }}>
+              <Icon size={15} strokeWidth={on ? 2.2 : 1.75} />
+              <span>{label}</span>
+            </button>
+          )
+        })}
+      </nav>
 
       {/* Theme toggle */}
       <div style={{ padding: '4px 12px 8px' }}>
