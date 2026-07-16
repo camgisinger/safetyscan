@@ -69,7 +69,7 @@ export default function DesktopSidebar() {
           <div style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
             <img src="/brand/mark-black-white.png" alt="" style={{ width: 30, height: 30 }} />
           </div>
-          <span style={{ fontWeight: 600, fontSize: 17, letterSpacing: '-0.02em', color: 'var(--text)' }}>Site<b style={{ fontWeight: 700, color: 'var(--amber)' }}>Spotter</b></span>
+          <span style={{ fontWeight: 600, fontSize: 19.5, letterSpacing: '-0.02em', color: 'var(--text)' }}>Site<b style={{ fontWeight: 700, color: 'var(--amber)' }}>Spotter</b></span>
         </button>
       </div>
 
