@@ -193,7 +193,7 @@ export default function DashboardPage() {
         }}>
           <div style={{
             width: 52, height: 52, borderRadius: 14,
-            background: 'rgba(0,0,0,0.15)', display: 'grid', placeItems: 'center', flexShrink: 0,
+            background: 'rgba(255,255,255,0.2)', display: 'grid', placeItems: 'center', flexShrink: 0,
           }}>
             <Camera size={26} strokeWidth={2.2} color="#fff" />
           </div>

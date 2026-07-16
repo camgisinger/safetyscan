@@ -98,7 +98,7 @@ export default function DesktopSidebar() {
           width: '100%', height: 40, borderRadius: 'var(--r-control)',
           background: 'var(--amber)', border: 'none', cursor: 'pointer',
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-          color: '#1B1A12', fontWeight: 700, fontSize: 13.5, fontFamily: 'inherit',
+          color: '#fff', fontWeight: 700, fontSize: 13.5, fontFamily: 'inherit',
           boxShadow: 'var(--shadow-btn)',
         }}>
           <Camera size={15} strokeWidth={2.2} />
