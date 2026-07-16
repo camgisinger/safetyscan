@@ -1,8 +1,10 @@
 'use client'
+import { useState, useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { House, Layers, Folder, TriangleAlert, Camera, Wrench, Settings, LifeBuoy } from 'lucide-react'
 import { useUser } from '../lib/UserContext'
 import { useCount } from '../lib/CountContext'
+import { supabase } from '../lib/supabase'
 import ThemeToggle from './ThemeToggle'
 
 type NavId = 'home' | 'scans' | 'sites' | 'issues' | 'tools' | 'settings' | 'support'
@@ -54,6 +56,13 @@ export default function DesktopSidebar() {
 
   const fullName = user?.user_metadata?.full_name ?? null
   const email    = user?.email ?? null
+  const [companyName, setCompanyName] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (!user) return
+    supabase.from('profiles').select('company_name').eq('id', user.id).single()
+      .then(({ data }) => { if (data?.company_name) setCompanyName(data.company_name) })
+  }, [user])
 
   const active = activeId(pathname)
 
@@ -72,7 +81,7 @@ export default function DesktopSidebar() {
       }}
     >
       {/* Logo */}
-      <div style={{ padding: '24px 20px 16px' }}>
+      <div style={{ padding: '20px 16px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <button onClick={() => router.push('/dashboard')}
           style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, padding: 0 }}>
           <div style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
@@ -80,6 +89,7 @@ export default function DesktopSidebar() {
           </div>
           <span style={{ fontWeight: 600, fontSize: 19.5, letterSpacing: '-0.02em', color: 'var(--text)' }}>Site<b style={{ fontWeight: 700, color: 'var(--amber)' }}>Spotter</b></span>
         </button>
+        <ThemeToggle compact />
       </div>
 
       {/* New scan */}
@@ -151,11 +161,6 @@ export default function DesktopSidebar() {
         })}
       </nav>
 
-      {/* Theme toggle */}
-      <div style={{ padding: '4px 12px 8px' }}>
-        <ThemeToggle compact />
-      </div>
-
       {/* Account row */}
       <div style={{ borderTop: '1.5px solid var(--div)', padding: '10px 8px 16px' }}>
         <button onClick={() => router.push('/settings')} style={{
@@ -164,10 +169,10 @@ export default function DesktopSidebar() {
           background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
         }}>
           <div style={{
-            width: 30, height: 30, borderRadius: '50%',
+            width: 32, height: 32, borderRadius: '50%',
             background: 'var(--amber)', flexShrink: 0,
             display: 'grid', placeItems: 'center',
-            fontSize: 11.5, fontWeight: 700, color: '#1B1A12',
+            fontSize: 12, fontWeight: 700, color: '#1B1A12',
           }}>
             {toInitials(fullName, email)}
           </div>
@@ -175,6 +180,11 @@ export default function DesktopSidebar() {
             <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
               {toDisplayName(fullName, email)}
             </div>
+            {companyName && (
+              <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 1 }}>
+                {companyName}
+              </div>
+            )}
           </div>
         </button>
       </div>
