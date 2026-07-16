@@ -81,7 +81,7 @@ export default function DesktopSidebar() {
       }}
     >
       {/* Logo */}
-      <div style={{ padding: '20px 16px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <div style={{ padding: '24px 20px 16px' }}>
         <button onClick={() => router.push('/dashboard')}
           style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, padding: 0 }}>
           <div style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--amber)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
@@ -89,7 +89,6 @@ export default function DesktopSidebar() {
           </div>
           <span style={{ fontWeight: 600, fontSize: 19.5, letterSpacing: '-0.02em', color: 'var(--text)' }}>Site<b style={{ fontWeight: 700, color: 'var(--amber)' }}>Spotter</b></span>
         </button>
-        <ThemeToggle compact />
       </div>
 
       {/* New scan */}
@@ -162,9 +161,9 @@ export default function DesktopSidebar() {
       </nav>
 
       {/* Account row */}
-      <div style={{ borderTop: '1.5px solid var(--div)', padding: '10px 8px 16px' }}>
+      <div style={{ borderTop: '1.5px solid var(--div)', padding: '10px 8px 16px', display: 'flex', alignItems: 'center', gap: 4 }}>
         <button onClick={() => router.push('/settings')} style={{
-          width: '100%', padding: '8px 12px', borderRadius: 10,
+          flex: 1, minWidth: 0, padding: '8px 12px', borderRadius: 10,
           display: 'flex', alignItems: 'center', gap: 10,
           background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
         }}>
@@ -187,6 +186,7 @@ export default function DesktopSidebar() {
             )}
           </div>
         </button>
+        <ThemeToggle compact />
       </div>
     </aside>
   )
