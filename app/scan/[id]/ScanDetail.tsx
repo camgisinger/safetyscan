@@ -27,149 +27,471 @@ async function imageUrlToDataUrl(url: string): Promise<string | null> {
   } catch { return null }
 }
 
-async function exportScanPDF(scan: Scan, siteName: string | null, notes: string, branding?: Branding) {
+async function exportScanPDF(scan: Scan, siteName: string | null, notes: string, branding: Branding, scanModules: any[]) {
   const { jsPDF } = await import('jspdf')
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
-  const pw = 210, ph = 297, ml = 18, mr = 18, cw = pw - ml - mr
-  let y = 0
+  const PW = 210, PH = 297, ML = 14, MR = 14, CW = PW - ML - MR
+
   type RGB = [number, number, number]
-  const NAVY: RGB = [22, 24, 28]; const AMBER: RGB = [243, 148, 16]; const CREAM: RGB = [241, 239, 232]
-  const TEXT: RGB = [22, 24, 28]; const MUT: RGB = [120, 120, 120]; const LINE: RGB = [220, 218, 210]
-  const WHITE: RGB = [255, 255, 255]; const GREEN: RGB = [26, 122, 69]; const RED: RGB = [225, 75, 61]
-  const WARN: RGB = [163, 98, 0]; const GREY: RGB = [74, 77, 82]; const CARDBG: RGB = [248, 247, 244]
-  const HDIM: RGB = [180, 180, 180]; const CBXLINE: RGB = [160, 160, 160]
+  const NAVY: RGB = [22, 24, 28]
+  const AMBER: RGB = [215, 105, 30]
+  const RED: RGB = [196, 56, 44]
+  const WARN_C: RGB = [165, 90, 15]
+  const GREEN: RGB = [34, 130, 80]
+  const TEXT: RGB = [22, 24, 28]
+  const MUT: RGB = [110, 110, 110]
+  const LIGHT: RGB = [165, 165, 165]
+  const BORDER: RGB = [220, 218, 210]
+  const BG_CARD: RGB = [248, 247, 244]
+  const WHITE: RGB = [255, 255, 255]
+  const RED_TINT: RGB = [255, 241, 239]
+  const WARN_TINT: RGB = [255, 248, 234]
+  const GREEN_TINT: RGB = [235, 248, 240]
+
   const fill = (c: RGB) => doc.setFillColor(c[0], c[1], c[2])
   const stroke = (c: RGB) => doc.setDrawColor(c[0], c[1], c[2])
   const color = (c: RGB) => doc.setTextColor(c[0], c[1], c[2])
+  const lw = (w: number) => doc.setLineWidth(w)
+
+  // ── data prep ─────────────────────────────────────────────────────────────
+  const scanDate = new Date(scan.created_at)
+  const reportId = `SS-${scanDate.getFullYear()}-${scan.id.slice(-4).toUpperCase()}`
+  const dateStr = scanDate.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
+  const dateTimeStr = dateStr + ',  ' + scanDate.toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit', hour12: true })
+
+  const modOrder = ['safety', 'quality', 'environmental']
+  const sortedMods = [...scanModules].sort((a: any, b: any) => modOrder.indexOf(a.module) - modOrder.indexOf(b.module))
+  const isMultiModule = sortedMods.length > 0
+
+  const computeModStatus = (mod: any): 'fail' | 'warning' | 'action' | 'pass' | 'not_applicable' => {
+    if (mod.status === 'not_applicable') return 'not_applicable'
+    const fs: Record<string, string> = mod.findings_state || {}
+    const ff: any[] = mod.findings || []
+    if (ff.some(f => fs[f.id] !== 'done' && fs[f.id] !== 'dismissed' && f.type === 'critical')) return 'fail'
+    if (ff.some(f => fs[f.id] !== 'done' && fs[f.id] !== 'dismissed' && f.type === 'warning')) return 'warning'
+    if (ff.some(f => fs[f.id] !== 'done' && fs[f.id] !== 'dismissed' && f.type === 'action')) return 'action'
+    return 'pass'
+  }
+
+  const worstStatus = isMultiModule
+    ? sortedMods.reduce((w: string, m: any) => {
+        const s = computeModStatus(m)
+        if (w === 'fail' || s === 'fail') return 'fail'
+        if (w === 'warning' || s === 'warning') return 'warning'
+        if (w === 'action' || s === 'action') return 'action'
+        return 'pass'
+      }, 'pass')
+    : (scan.status || 'pass')
+
+  // ── collect all findings ───────────────────────────────────────────────────
+  const allOpen: any[] = isMultiModule
+    ? sortedMods.flatMap((m: any) => {
+        const fs: Record<string, string> = m.findings_state || {}
+        return (m.findings || [])
+          .filter((f: any) => fs[f.id] !== 'done' && fs[f.id] !== 'dismissed' && (f.type === 'critical' || f.type === 'warning' || f.type === 'action'))
+          .map((f: any) => ({ ...f, _mod: m.module }))
+      })
+    : (scan.findings || []).filter((f: any) => f.type !== 'ok')
+
+  const allCompliant: any[] = isMultiModule
+    ? sortedMods.flatMap((m: any) => (m.findings || []).filter((f: any) => f.type === 'ok').map((f: any) => ({ ...f, _mod: m.module })))
+    : (scan.findings || []).filter((f: any) => f.type === 'ok')
+
+  // ── load assets ────────────────────────────────────────────────────────────
   let logoDataUrl: string | null = null
   if (branding?.logo_url) logoDataUrl = await imageUrlToDataUrl(branding.logo_url)
-  const hasBranding = !!(branding?.company_name || logoDataUrl)
-  const HEADER_H = hasBranding ? 26 : 22
-  fill(NAVY); doc.rect(0, 0, pw, HEADER_H, 'F')
-  const hDate = new Date(scan.created_at).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
-  doc.setFont('helvetica', 'normal'); doc.setFontSize(8); color(HDIM)
-  doc.text(siteName ? `${siteName}  ·  ${hDate}` : hDate, pw - mr, HEADER_H / 2 + 1.5, { align: 'right' })
-  if (hasBranding) {
-    let cx = ml
+
+  const photoUrls = scan.photo_urls?.length ? scan.photo_urls : scan.photo_url ? [scan.photo_url] : []
+  type PhotoEntry = { d: string; dims: { w: number; h: number } }
+  const photos: PhotoEntry[] = (await Promise.all(photoUrls.map(async (url: string) => {
+    const d = await imageUrlToDataUrl(url)
+    if (!d) return null
+    const dims = await new Promise<{ w: number; h: number }>(res => {
+      const img = new window.Image()
+      img.onload = () => res({ w: img.naturalWidth, h: img.naturalHeight })
+      img.onerror = () => res({ w: 4, h: 3 })
+      img.src = d
+    })
+    return { d, dims }
+  }))).filter(Boolean) as PhotoEntry[]
+
+  // ── page layout constants ─────────────────────────────────────────────────
+  const H1 = 32          // tall page-1 header height
+  const H2 = 18          // compact continuation header height
+  const FOOTER_TOP = PH - 17
+  const CONTENT_BOT = FOOTER_TOP - 2
+  let y = 0
+
+  // ── header renderers ──────────────────────────────────────────────────────
+  const drawHeader1 = () => {
+    lw(0.3); stroke(BORDER)
+    doc.line(ML, H1 - 0.5, PW - MR, H1 - 0.5)
+    let lx = ML
+    const cy = H1 / 2
+    const logoSz = 18
+    const logoY = cy - logoSz / 2
     if (logoDataUrl) {
-      const lh = 16, ly = (HEADER_H - lh) / 2
-      try { doc.addImage(logoDataUrl, logoDataUrl.startsWith('data:image/png') ? 'PNG' : 'JPEG', cx, ly, lh, lh) } catch {}
-      cx += lh + 4
+      fill(NAVY); doc.roundedRect(lx, logoY, logoSz, logoSz, 2, 2, 'F')
+      try { doc.addImage(logoDataUrl, logoDataUrl.startsWith('data:image/png') ? 'PNG' : 'JPEG', lx, logoY, logoSz, logoSz) } catch {}
+      lx += logoSz + 5
+    } else {
+      fill(NAVY); doc.roundedRect(lx, logoY, logoSz, logoSz, 2, 2, 'F')
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); color(AMBER)
+      doc.text('SS', lx + logoSz / 2, logoY + logoSz / 2 + 1.8, { align: 'center' })
+      lx += logoSz + 5
     }
-    if (branding?.company_name) {
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(12); color(WHITE)
-      doc.text(branding.company_name, cx, HEADER_H / 2 + 2)
-    }
-    doc.setFont('helvetica', 'normal'); doc.setFontSize(6.5); color(AMBER)
-    doc.text('via SiteSpotter', cx, HEADER_H - 4)
-  } else {
-    doc.setFont('helvetica', 'bold'); doc.setFontSize(15); color(WHITE)
-    doc.text('Site', ml, HEADER_H / 2 + 2.5); color(AMBER); doc.text('Spotter', ml + doc.getTextWidth('Site') + 0.8, HEADER_H / 2 + 2.5)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(12.5); color(TEXT)
+    doc.text(branding?.company_name || 'SiteSpotter', lx, cy + 1.5)
+    const rx = PW - MR
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(6.5); color(LIGHT)
+    doc.text('REPORT ID', rx, cy - 5, { align: 'right' })
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); color(TEXT)
+    doc.text(reportId, rx, cy + 1.5, { align: 'right' })
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(6); color(MUT)
+    doc.text('VERIFIED BY SITESPOTTER', rx, cy + 7.5, { align: 'right' })
   }
-  y = HEADER_H + 10
-  doc.setFont('helvetica', 'bold'); doc.setFontSize(18); color(TEXT)
-  const titleLines = doc.splitTextToSize(scan.work_type || 'Compliance Scan', cw)
-  doc.text(titleLines, ml, y); y += titleLines.length * 8 + 3
-  const STATUS: Record<string, { c: RGB; label: string }> = { pass: { c: GREEN, label: 'Compliant' }, fail: { c: RED, label: 'Issues Found' }, uncertain: { c: WARN, label: 'Uncertain' }, not_applicable: { c: GREY, label: 'N/A' } }
-  const sc = STATUS[scan.status] || STATUS.uncertain
-  fill(sc.c); doc.roundedRect(ml, y, 40, 7.5, 2, 2, 'F')
-  doc.setFont('helvetica', 'bold'); doc.setFontSize(8); color(WHITE)
-  doc.text(sc.label, ml + 20, y + 5, { align: 'center' }); y += 14
-  const allPhotoUrls = scan.photo_urls?.length ? scan.photo_urls : scan.photo_url ? [scan.photo_url] : []
-  if (allPhotoUrls.length > 0) {
-    const photos = (await Promise.all(allPhotoUrls.map(async u => {
-      const d = await imageUrlToDataUrl(u); if (!d) return null
-      const dims = await new Promise<{ w: number; h: number }>(res => { const img = new window.Image(); img.onload = () => res({ w: img.naturalWidth, h: img.naturalHeight }); img.onerror = () => res({ w: 4, h: 3 }); img.src = d })
-      return { d, dims }
-    }))).filter(Boolean) as { d: string; dims: { w: number; h: number } }[]
-    if (photos.length > 0) {
-      const n = photos.length; const cols = n === 1 ? 1 : 2; const gap = 3; const cellW = (cw - (cols - 1) * gap) / cols; const rowH = n === 1 ? 80 : 52
-      for (let i = 0; i < n; i += cols) {
-        const row = photos.slice(i, i + cols)
-        row.forEach((p, j) => {
-          const cellX = ml + j * (cellW + gap); const r = p.dims.w / p.dims.h
-          let imgW: number, imgH: number, offX = 0, offY = 0
-          if (r > cellW / rowH) { imgW = cellW; imgH = cellW / r; offY = (rowH - imgH) / 2 } else { imgH = rowH; imgW = rowH * r; offX = (cellW - imgW) / 2 }
-          try { doc.addImage(p.d, 'JPEG', cellX + offX, y + offY, imgW, imgH) } catch (_) {}
-        }); y += rowH + 3
-      }; y += 4
+
+  const drawHeader2 = () => {
+    lw(0.3); stroke(BORDER)
+    doc.line(ML, H2 - 0.5, PW - MR, H2 - 0.5)
+    const cy = H2 / 2
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); color(TEXT)
+    doc.text(branding?.company_name || 'SiteSpotter', ML, cy + 1)
+    const rx = PW - MR
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(AMBER)
+    doc.text('COMPLIANCE REPORT', rx, cy - 1.5, { align: 'right' })
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7); color(MUT)
+    const scanRef = [scan.work_type, dateStr, reportId].filter(Boolean).join('  ·  ')
+    doc.text(scanRef, rx, cy + 5, { align: 'right' })
+  }
+
+  const needsPage = (requiredH: number) => {
+    if (y + requiredH > CONTENT_BOT) {
+      doc.addPage()
+      drawHeader2()
+      y = H2 + 8
     }
   }
-  const section = (title: string, subtitle?: string) => {
-    if (y > ph - 40) { doc.addPage(); y = 22 }
-    fill(CREAM); doc.rect(ml - 2, y - 3, cw + 4, 8.5, 'F')
-    doc.setFont('helvetica', 'bold'); doc.setFontSize(7.5); color(AMBER); doc.text(title.toUpperCase(), ml, y + 2.5)
-    if (subtitle) { doc.setFont('helvetica', 'normal'); doc.setFontSize(8); color(MUT); doc.text(subtitle, pw - mr, y + 2.5, { align: 'right' }) }
-    stroke(LINE); doc.line(ml - 2, y + 5.5, ml + cw + 2, y + 5.5); y += 12
+
+  // ══════════════════ PAGE 1 ══════════════════════════════════════════════════
+  drawHeader1()
+  y = H1 + 8
+
+  // "SITE COMPLIANCE REPORT" label
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(AMBER)
+  doc.text('SITE COMPLIANCE REPORT', ML, y); y += 5
+
+  // Status badge (top-right)
+  const statusLabel = worstStatus === 'fail' ? 'ACTION REQUIRED'
+    : worstStatus === 'warning' ? 'WARNING'
+    : worstStatus === 'action' ? 'CONFIRM ON SITE'
+    : 'COMPLIANT'
+  const statusBg: RGB = worstStatus === 'fail' ? RED : (worstStatus === 'warning' || worstStatus === 'action') ? WARN_C : GREEN
+  const sbW = Math.max(28, statusLabel.length * 1.55 + 8)
+  fill(statusBg)
+  doc.roundedRect(PW - MR - sbW, y - 2, sbW, 8, 2, 2, 'F')
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(WHITE)
+  doc.text(statusLabel, PW - MR - sbW / 2, y + 3.5, { align: 'center' })
+
+  // Title
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(20); color(TEXT)
+  const titleL = doc.splitTextToSize(scan.work_type || 'Compliance Scan', CW - sbW - 6)
+  doc.text(titleL, ML, y + 6); y += titleL.length * 8 + 2
+
+  // Location subtext
+  if (siteName) {
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); color(MUT)
+    doc.text(siteName, ML, y); y += 5
   }
-  const bodyText = (text: string, c: RGB = TEXT) => {
-    if (y > ph - 30) { doc.addPage(); y = 22 }
-    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); color(c)
-    const lines = doc.splitTextToSize(text, cw); doc.text(lines, ml, y); y += lines.length * 5 + 2
+  y += 4
+
+  // ── info grid ─────────────────────────────────────────────────────────────
+  const modLabels = sortedMods.map((m: any) => {
+    const l = m.module.charAt(0).toUpperCase() + m.module.slice(1)
+    return l === 'Environmental' ? 'Env.' : l
+  })
+  const gridCells = [
+    { label: 'SCANNED', value: dateTimeStr },
+    { label: 'WORK TYPE', value: scan.work_type || '—' },
+    { label: 'SITE', value: siteName || '—' },
+    { label: 'MODULES RUN', value: isMultiModule ? modLabels.join(', ') : 'Standard' },
+  ]
+  const cellW = CW / 4
+  const gridH = 16
+  lw(0.3); stroke(BORDER); doc.rect(ML, y, CW, gridH, 'S')
+  gridCells.forEach((cell, i) => {
+    const cx = ML + i * cellW
+    if (i > 0) { lw(0.3); stroke(BORDER); doc.line(cx, y, cx, y + gridH) }
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(6); color(MUT)
+    doc.text(cell.label, cx + 3, y + 5)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(8); color(TEXT)
+    const vl = doc.splitTextToSize(cell.value, cellW - 5)
+    doc.text(vl[0], cx + 3, y + 12)
+  })
+  y += gridH + 8
+
+  // ── photos ────────────────────────────────────────────────────────────────
+  if (photos.length > 0) {
+    needsPage(8 + 40)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(MUT)
+    doc.text(`PHOTOS ANALYSED  ·  ${photos.length}`, ML, y); y += 5
+    const nCols = Math.min(photos.length, 3)
+    const pGap = 3, pH = 38
+    const pW = (CW - (nCols - 1) * pGap) / nCols
+    photos.slice(0, nCols).forEach((p, i) => {
+      const px = ML + i * (pW + pGap)
+      fill(BG_CARD); lw(0.3); stroke(BORDER)
+      doc.roundedRect(px, y, pW, pH, 2, 2, 'FD')
+      try {
+        const r = p.dims.w / p.dims.h, tr = pW / pH
+        let iw: number, ih: number, ox = 0, oy = 0
+        if (r > tr) { iw = pW; ih = pW / r; oy = (pH - ih) / 2 }
+        else { ih = pH; iw = pH * r; ox = (pW - iw) / 2 }
+        doc.addImage(p.d, 'JPEG', px + ox, y + oy, iw, ih)
+      } catch {}
+    })
+    y += pH + 8
   }
-  if (scan.summary) { section('Summary'); bodyText(scan.summary); y += 4 }
-  const legislation = scan.legislation || []
-  if (legislation.length > 0) {
-    section('Applicable Queensland Legislation')
-    for (const leg of legislation) {
-      if (y > ph - 30) { doc.addPage(); y = 22 }
+
+  // ── results summary ───────────────────────────────────────────────────────
+  if (isMultiModule) {
+    needsPage(8 + 36)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(MUT)
+    doc.text('RESULTS SUMMARY', ML, y); y += 5
+    const N = sortedMods.length
+    const mGap = 4
+    const mW = (CW - (N - 1) * mGap) / N
+    const mH = 36
+    sortedMods.forEach((mod: any, i: number) => {
+      const mx = ML + i * (mW + mGap)
+      const mst = computeModStatus(mod)
+      const ff: any[] = mod.findings || []
+      const fs: Record<string, string> = mod.findings_state || {}
+      const cardBg: RGB = mst === 'fail' ? RED_TINT : mst === 'warning' ? WARN_TINT : mst === 'pass' ? GREEN_TINT : BG_CARD
+      const cardBd: RGB = mst === 'fail' ? [215, 185, 180] : mst === 'warning' ? [215, 195, 165] : mst === 'pass' ? [170, 215, 185] : BORDER
+      fill(cardBg); lw(0.4); stroke(cardBd)
+      doc.roundedRect(mx, y, mW, mH, 2, 2, 'FD')
       doc.setFont('helvetica', 'bold'); doc.setFontSize(9); color(TEXT)
-      const legTitle = doc.splitTextToSize(`${leg.code || ''}: ${leg.description || leg.name || ''}`, cw)
-      doc.text(legTitle, ml, y); y += legTitle.length * 5 + 2
-      if (leg.clauses?.length > 0) {
-        const clauses = leg.clauses as { ref?: string; summary?: string }[]
-        const pillH = 4.5, pillPadX = 2, pillFs = 7; let px = ml + 2
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(pillFs)
-        for (const clause of clauses) {
-          if (!clause.ref) continue
-          const pillW = doc.getTextWidth(clause.ref) + pillPadX * 2 + 1
-          if (px + pillW > ml + cw) { px = ml + 2; y += pillH + 2 }
-          fill(NAVY); doc.roundedRect(px, y, pillW, pillH, 1, 1, 'F')
-          color(AMBER); doc.text(clause.ref, px + pillPadX + 0.5, y + 3.3); px += pillW + 2
-        }; y += pillH + 3
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); color(MUT)
-        for (const clause of clauses) {
-          if (!clause.summary) continue
-          const sl = doc.splitTextToSize(`${clause.ref ? clause.ref + ' — ' : ''}${clause.summary}`, cw - 4)
-          doc.text(sl, ml + 4, y); y += sl.length * 4 + 1
+      doc.text(mod.module.charAt(0).toUpperCase() + mod.module.slice(1), mx + 4, y + 7)
+      const bdgText = mst === 'fail' ? 'FAIL' : mst === 'warning' ? 'WARNING' : mst === 'action' ? 'CONFIRM' : mst === 'not_applicable' ? 'N/A' : 'PASS'
+      const bdgBg: RGB = mst === 'fail' ? RED : (mst === 'warning' || mst === 'action') ? WARN_C : mst === 'pass' ? GREEN : LIGHT
+      const bW = Math.max(12, bdgText.length * 1.6 + 6)
+      fill(bdgBg)
+      doc.roundedRect(mx + mW - bW - 3, y + 3, bW, 6.5, 1.5, 1.5, 'F')
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(6); color(WHITE)
+      doc.text(bdgText, mx + mW - bW / 2 - 3, y + 7.3, { align: 'center' })
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); color(MUT)
+      const sl = doc.splitTextToSize(mod.summary || '', mW - 8)
+      doc.text(sl.slice(0, 2), mx + 4, y + 15)
+      const critN = ff.filter(f => f.type === 'critical' && fs[f.id] !== 'done' && fs[f.id] !== 'dismissed').length
+      const warnN = ff.filter(f => f.type === 'warning' && fs[f.id] !== 'done' && fs[f.id] !== 'dismissed').length
+      const actN = ff.filter(f => f.type === 'action' && fs[f.id] !== 'done' && fs[f.id] !== 'dismissed').length
+      const okN = ff.filter(f => f.type === 'ok').length
+      let tx = mx + 4
+      const cy2 = y + mH - 4
+      if (critN > 0) { doc.setFont('helvetica', 'bold'); doc.setFontSize(6); color(RED); const t = `${critN} CRITICAL`; doc.text(t, tx, cy2); tx += doc.getTextDimensions(t).w + 3 }
+      if (warnN > 0) { doc.setFont('helvetica', 'bold'); doc.setFontSize(6); color(WARN_C); const t = `${warnN} WARNING`; doc.text(t, tx, cy2); tx += doc.getTextDimensions(t).w + 3 }
+      if (actN > 0 && critN === 0 && warnN === 0) { doc.setFont('helvetica', 'bold'); doc.setFontSize(6); color(WARN_C); doc.text(`${actN} TO CONFIRM`, tx, cy2) }
+      if (okN > 0 && critN === 0 && warnN === 0 && actN === 0) { doc.setFont('helvetica', 'bold'); doc.setFontSize(6); color(GREEN); doc.text(`${okN} COMPLIANT`, tx, cy2) }
+    })
+    y += mH + 8
+  }
+
+  // ── findings heading ──────────────────────────────────────────────────────
+  if (allOpen.length + allCompliant.length > 0) {
+    needsPage(14)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11.5); color(TEXT)
+    doc.text('Findings', ML, y)
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); color(MUT)
+    doc.text(`${allOpen.length} need action  ·  ${allCompliant.length} compliant`, PW - MR, y, { align: 'right' })
+    y += 9
+  }
+
+  // ── finding card renderer ─────────────────────────────────────────────────
+  const renderFinding = (f: any) => {
+    const isCrit = f.type === 'critical'
+    const isWarn = f.type === 'warning'
+    const isAct = f.type === 'action'
+    const accent: RGB = isCrit ? RED : (isWarn || isAct) ? WARN_C : GREEN
+    const tint: RGB = isCrit ? RED_TINT : (isWarn || isAct) ? WARN_TINT : GREEN_TINT
+    const sevLabel = isCrit ? 'CRITICAL' : isWarn ? 'WARNING' : isAct ? 'CONFIRM ON SITE' : 'COMPLIANT'
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5)
+    const tLines = doc.splitTextToSize(f.text || f.title || '', CW - 12)
+    const legLine = f.legislation ? 1 : 0
+    const cardH = 5 + 7 + 2 + tLines.length * 5.5 + legLine * 5 + 4
+    needsPage(cardH + 3)
+    fill(BG_CARD); lw(0.3); stroke(BORDER)
+    doc.roundedRect(ML, y, CW, cardH, 2, 2, 'FD')
+    fill(accent); doc.roundedRect(ML, y, 3.5, cardH, 1, 1, 'F'); doc.rect(ML + 2, y, 1.5, cardH, 'F')
+    const sevW = Math.max(18, sevLabel.length * 1.5 + 6)
+    fill(tint); lw(0.5); stroke(accent)
+    doc.roundedRect(ML + 5, y + 3.5, sevW, 6, 1.5, 1.5, 'FD')
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(5.5); color(accent)
+    doc.text(sevLabel, ML + 5 + sevW / 2, y + 7.5, { align: 'center' })
+    if (f.category) {
+      const catW = Math.max(12, f.category.toUpperCase().length * 1.4 + 6)
+      const catX = ML + 5 + sevW + 2
+      fill(WHITE); lw(0.3); stroke(BORDER)
+      doc.roundedRect(catX, y + 3.5, catW, 6, 1.5, 1.5, 'FD')
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(5.5); color(MUT)
+      doc.text(f.category.toUpperCase(), catX + catW / 2, y + 7.5, { align: 'center' })
+    }
+    let fy = y + 14
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); color(TEXT)
+    doc.text(tLines, ML + 6, fy); fy += tLines.length * 5.5
+    if (f.legislation) {
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); color(MUT)
+      doc.text(f.legislation, ML + 6, fy + 1)
+    }
+    y += cardH + 3
+  }
+
+  // ── render findings per module ─────────────────────────────────────────────
+  if (isMultiModule) {
+    for (const mod of sortedMods) {
+      const fs: Record<string, string> = mod.findings_state || {}
+      const ff: any[] = mod.findings || []
+      const openF = ff.filter(f => fs[f.id] !== 'done' && fs[f.id] !== 'dismissed' && (f.type === 'critical' || f.type === 'warning' || f.type === 'action'))
+      const compliantF = ff.filter(f => f.type === 'ok')
+      const mst = computeModStatus(mod)
+      if (openF.length === 0 && compliantF.length === 0 && mst !== 'pass' && mst !== 'not_applicable') continue
+      const modLabel = mod.module.charAt(0).toUpperCase() + mod.module.slice(1)
+      const sectionSuffix = mst === 'fail' || mst === 'warning'
+        ? `${openF.length} ISSUE${openF.length !== 1 ? 'S' : ''}`
+        : mst === 'action' ? 'CONFIRM ON SITE'
+        : mst === 'not_applicable' ? 'NOT APPLICABLE'
+        : 'PASS'
+      needsPage(14)
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(7); color(MUT)
+      doc.text(`${modLabel.toUpperCase()}  ·  ${sectionSuffix}`, ML, y); y += 7
+      for (const f of openF) renderFinding(f)
+      if ((mst === 'pass' || mst === 'not_applicable') && openF.length === 0) {
+        needsPage(14)
+        fill(GREEN_TINT); lw(0.4); stroke([172, 215, 186] as RGB)
+        doc.roundedRect(ML, y, CW, 12, 2, 2, 'FD')
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); color(GREEN)
+        const pm = doc.splitTextToSize(mod.summary || `No issues found. ${modLabel} controls are compliant.`, CW - 10)
+        doc.text(pm[0], ML + 5, y + 7.5)
+        y += 15
+      }
+      if (compliantF.length > 0) {
+        needsPage(10)
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(MUT)
+        doc.text(`COMPLIANT OBSERVATIONS  ·  ${compliantF.length}`, ML, y); y += 5
+        lw(0.2); stroke(BORDER); doc.line(ML, y, PW - MR, y)
+        for (const f of compliantF) {
+          needsPage(11)
+          fill(GREEN); doc.circle(ML + 3.5, y + 4.5, 3.5, 'F')
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(WHITE)
+          doc.text('✓', ML + 1.9, y + 6.2)
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(9); color(TEXT)
+          doc.text(f.text || f.title || '', ML + 10, y + 5.5)
+          let tagX = PW - MR
+          const modTag = mod.module === 'environmental' ? 'ENV' : mod.module === 'quality' ? 'QUALITY' : 'SAFETY'
+          const tW = Math.max(12, modTag.length * 1.5 + 5)
+          tagX -= tW
+          fill(BG_CARD); lw(0.3); stroke(BORDER)
+          doc.roundedRect(tagX, y + 1.5, tW, 5.5, 1.5, 1.5, 'FD')
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(5.5); color(MUT)
+          doc.text(modTag, tagX + tW / 2, y + 5.6, { align: 'center' })
+          y += 11
+          lw(0.2); stroke(BORDER); doc.line(ML, y, PW - MR, y)
         }
-      }; y += 4
-    }; y += 2
-  }
-  const findings = scan.findings || []
-  if (findings.length > 0) {
-    section('Findings')
-    const FC: Record<string, RGB> = { ok: GREEN, warning: WARN, critical: RED }
-    for (const f of findings) {
-      if (y > ph - 30) { doc.addPage(); y = 22 }
-      const c = FC[f.type] || FC.warning
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(9)
-      const tl = doc.splitTextToSize(f.title || f.text || '', cw - 10)
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(8)
-      const dl = f.detail ? doc.splitTextToSize(f.detail, cw - 10) : []
-      const cardH = 4 + tl.length * 4.5 + (dl.length > 0 ? 2 + dl.length * 4 : 0) + 5
-      fill(CARDBG); doc.roundedRect(ml, y, cw, cardH, 1.5, 1.5, 'F')
-      fill(c); doc.roundedRect(ml, y, 3.5, cardH, 1, 1, 'F'); doc.rect(ml + 2, y, 1.5, cardH, 'F')
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(9); color(TEXT); doc.text(tl, ml + 7, y + 5)
-      let iy = y + 5 + tl.length * 4.5 + 1
-      if (dl.length > 0) { doc.setFont('helvetica', 'normal'); doc.setFontSize(8); color(MUT); doc.text(dl, ml + 7, iy + 1) }
-      y += cardH + 3
-    }; y += 2
-  }
-  if (notes.trim()) { section('Notes'); bodyText(notes); y += 4 }
-  y += 6; stroke(LINE); doc.line(ml, y, ml + cw, y); y += 5
-  doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); color(MUT)
-  const disclaimer = doc.splitTextToSize('This report is generated by SiteSpotter AI and is indicative only. Verify findings with a qualified WHS professional before sign-off.', cw)
-  doc.text(disclaimer, ml, y); y += disclaimer.length * 4 + 3; color(HDIM)
-  const footerDate = new Date().toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
-  if (branding?.company_name) {
-    const website = branding.company_website || 'sitespotter.com.au'
-    doc.text(`${branding.company_name}  ·  ${website}  ·  ${footerDate}  ·  Powered by SiteSpotter AI`, ml, y)
+        y += 6
+      }
+      y += 3
+    }
   } else {
-    doc.text(`Generated by SiteSpotter  ·  sitespotter.com.au  ·  ${footerDate}`, ml, y)
+    for (const f of allOpen) renderFinding(f)
+    if (allCompliant.length > 0) {
+      needsPage(10)
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(MUT)
+      doc.text(`COMPLIANT OBSERVATIONS  ·  ${allCompliant.length}`, ML, y); y += 5
+      lw(0.2); stroke(BORDER); doc.line(ML, y, PW - MR, y)
+      for (const f of allCompliant) {
+        needsPage(11)
+        fill(GREEN); doc.circle(ML + 3.5, y + 4.5, 3.5, 'F')
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(WHITE)
+        doc.text('✓', ML + 1.9, y + 6.2)
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(9); color(TEXT)
+        doc.text(f.text || f.title || '', ML + 10, y + 5.5)
+        y += 11
+        lw(0.2); stroke(BORDER); doc.line(ML, y, PW - MR, y)
+      }
+      y += 6
+    }
   }
-  const filePrefix = branding?.company_name ? branding.company_name.replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '').toLowerCase() : 'SiteSpotter'
-  doc.save(`${filePrefix}-${(scan.work_type || 'scan').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-${new Date(scan.created_at).toISOString().slice(0, 10)}.pdf`)
+
+  // ── legislation table ─────────────────────────────────────────────────────
+  const allLeg: any[] = isMultiModule
+    ? sortedMods.flatMap((m: any) => m.legislation || [])
+    : (scan.legislation || [])
+  const legSeen = new Set<string>()
+  const dedupedLeg = allLeg.filter((l: any) => {
+    const k = l.code || l.name || ''
+    if (legSeen.has(k)) return false
+    legSeen.add(k); return true
+  })
+  if (dedupedLeg.length > 0) {
+    needsPage(16)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(MUT)
+    doc.text('LEGISLATION REFERENCES CITED', ML, y); y += 5
+    lw(0.2); stroke(BORDER); doc.line(ML, y, PW - MR, y)
+    for (const leg of dedupedLeg) {
+      const clauses = (leg.clauses || []).slice(0, 2)
+      const clauseRef = clauses.map((c: any) => c.ref).filter(Boolean).join(', ')
+      const desc = clauses[0]?.summary || leg.description || ''
+      const rowH = 9
+      needsPage(rowH + 1)
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(7.5); color(TEXT)
+      doc.text(leg.code || leg.name || '', ML + 2, y + 6)
+      if (clauseRef) { doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); color(MUT); doc.text(clauseRef, ML + 66, y + 6) }
+      if (desc) { doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); color(TEXT); const dl = doc.splitTextToSize(desc, CW - 86); doc.text(dl[0] || '', ML + 86, y + 6) }
+      y += rowH
+      lw(0.2); stroke(BORDER); doc.line(ML, y, PW - MR, y)
+    }
+    y += 8
+  }
+
+  // ── notes ─────────────────────────────────────────────────────────────────
+  if (notes.trim()) {
+    needsPage(14)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); color(MUT)
+    doc.text('NOTES', ML, y); y += 5
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); color(TEXT)
+    const nl = doc.splitTextToSize(notes, CW)
+    needsPage(nl.length * 5 + 4)
+    doc.text(nl, ML, y); y += nl.length * 5 + 4
+  }
+
+  // ── end of report ─────────────────────────────────────────────────────────
+  needsPage(12)
+  lw(0.3); stroke(BORDER); doc.line(ML, y, PW - MR, y); y += 5
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); color(MUT)
+  doc.text(
+    `End of report  —  ${allOpen.length} finding${allOpen.length !== 1 ? 's' : ''} need action, ${allCompliant.length} compliant observation${allCompliant.length !== 1 ? 's' : ''} recorded.`,
+    ML + 2, y + 4
+  )
+
+  // ── footers (all pages) ───────────────────────────────────────────────────
+  const total = doc.getNumberOfPages()
+  const today = new Date().toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
+  const disclaimerText = 'This report is an AI-assisted compliance guide generated by SiteSpotter. It is intended to support, not replace, professional judgment and formal inspection. Findings should be verified on site by a competent person. SiteSpotter accepts no liability for reliance on this document.'
+  for (let p = 1; p <= total; p++) {
+    doc.setPage(p)
+    lw(0.25); stroke(BORDER); doc.line(ML, FOOTER_TOP, PW - MR, FOOTER_TOP)
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(5.8); color(LIGHT)
+    const dl = doc.splitTextToSize(disclaimerText, CW * 0.68)
+    doc.text(dl, ML, FOOTER_TOP + 3)
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7); color(MUT)
+    doc.text(`Generated with SiteSpotter  ·  ${today}`, ML, PH - 8)
+    doc.text(`Page ${p} of ${total}`, PW - MR, PH - 8, { align: 'right' })
+  }
+
+  const prefix = branding?.company_name
+    ? branding.company_name.replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '').toLowerCase()
+    : 'sitespotter'
+  doc.save(`${prefix}-${(scan.work_type || 'scan').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-${new Date(scan.created_at).toISOString().slice(0, 10)}.pdf`)
 }
 
 // ─── Accordion ───────────────────────────────────────────────────────────────
@@ -403,7 +725,7 @@ export default function ScanDetail({ id }: { id: string }) {
         .eq('id', currentUser.id).single()
       branding = data as Branding
     }
-    try { await exportScanPDF(scan, siteName, notes, branding) } catch (e) { console.error('[PDF]', e) } finally { setExportingPDF(false) }
+    try { await exportScanPDF(scan, siteName, notes, branding, scanModules) } catch (e) { console.error('[PDF]', e) } finally { setExportingPDF(false) }
   }
 
   const reanalyseWithContext = async (additionalInfo: string, extraPhotos: { dataUrl: string; base64: string }[], module: string) => {
