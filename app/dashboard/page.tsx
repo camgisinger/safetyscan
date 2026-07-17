@@ -155,7 +155,7 @@ export default function DashboardPage() {
     </div>
   )
 
-  const recent = scans.slice(0, 8)
+  const recent = scans.slice(0, 4)
   const isEmpty = scans.length === 0
   const lastScan = scans[0]
 
@@ -193,7 +193,7 @@ export default function DashboardPage() {
     <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
       <AppHeader />
 
-      <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 18px' }}>
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 18px' }}>
 
         {/* Greeting — full width */}
         <div style={{ padding: '20px 0 20px' }}>

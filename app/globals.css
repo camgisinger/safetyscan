@@ -35,8 +35,8 @@ body.select-mode .bottom-nav { display: none; }
 @media (min-width: 1024px) {
   .dashboard-grid {
     display: grid;
-    grid-template-columns: 1fr 264px;
-    gap: 28px;
+    grid-template-columns: 1fr 240px;
+    gap: 24px;
     align-items: start;
   }
 }
