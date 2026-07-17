@@ -5,13 +5,24 @@ import { supabase, Scan } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
-import { Camera, ChevronRight, TriangleAlert, CircleHelp } from 'lucide-react'
+import { Camera, ChevronRight, TriangleAlert, CircleHelp, BookOpen, Folder } from 'lucide-react'
 
 function greeting() {
   const h = new Date().getHours()
   if (h < 12) return 'Good morning'
   if (h < 17) return 'Good afternoon'
   return 'Good evening'
+}
+
+function relativeTime(dateStr: string): string {
+  const diff = Date.now() - new Date(dateStr).getTime()
+  const mins = Math.floor(diff / 60000)
+  if (mins < 2) return 'just now'
+  if (mins < 60) return `${mins} min ago`
+  const hrs = Math.floor(mins / 60)
+  if (hrs < 24) return `${hrs}h ago`
+  if (hrs < 48) return 'yesterday'
+  return `${Math.floor(hrs / 24)} days ago`
 }
 
 function statusPill(status: string, issueCount?: number) {
@@ -126,7 +137,6 @@ export default function DashboardPage() {
     if (userLoading) return
     if (!user) { router.push('/login'); return }
     setLoading(true)
-
     const init = async () => {
       const [scansRes, sitesRes] = await Promise.all([
         supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, scan_modules(module, status, findings, findings_state)').order('created_at', { ascending: false }).limit(20),
@@ -146,148 +156,240 @@ export default function DashboardPage() {
   )
 
   const recent = scans.slice(0, 8)
-  const allClear = scans.length > 0 && outstandingCount === 0
   const isEmpty = scans.length === 0
+  const lastScan = scans[0]
+
+  // Subtitle parts
+  const today = new Date().toLocaleDateString('en-AU', { weekday: 'long', day: 'numeric', month: 'long' })
+  const subtitleParts = [
+    sites.length > 0 ? `${sites.length} site${sites.length !== 1 ? 's' : ''}` : null,
+    lastScan ? `last scan ${relativeTime(lastScan.created_at)}` : null,
+  ].filter(Boolean)
+
+  // Per-site outstanding counts
+  const siteOutstanding = (siteId: string) => {
+    let n = 0
+    for (const s of scans) {
+      if (s.site_id !== siteId) continue
+      n += scanIssueCount(s)
+    }
+    return n
+  }
+  const siteWorst = (siteId: string): string => {
+    for (const s of scans) {
+      if (s.site_id !== siteId) continue
+      if (scanWorstStatus(s) === 'fail') return 'fail'
+    }
+    for (const s of scans) {
+      if (s.site_id !== siteId) continue
+      if (scanWorstStatus(s) === 'action') return 'action'
+    }
+    return 'pass'
+  }
+
+  const dotColor = (status: string) => status === 'fail' ? 'var(--issue)' : status === 'action' ? 'var(--warning)' : 'var(--pass)'
 
   return (
     <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
       <AppHeader />
 
-      <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 18px' }}>
+      <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 18px' }}>
 
-        {/* Greeting */}
-        <div style={{ padding: '20px 0 18px' }}>
-          <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text-muted)', marginBottom: 3 }}>
-            {new Date().toLocaleDateString('en-AU', { weekday: 'long', day: 'numeric', month: 'long' })}
-          </div>
-          <h1 style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text)', margin: 0 }}>
+        {/* Greeting — full width */}
+        <div style={{ padding: '20px 0 20px' }}>
+          <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text-muted)', marginBottom: 3 }}>{today}</div>
+          <h1 style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text)', margin: '0 0 4px' }}>
             {greeting()}{userName ? `, ${userName}` : ''}
           </h1>
+          {subtitleParts.length > 0 && (
+            <div style={{ fontSize: 12.5, fontWeight: 500, color: 'var(--text-muted)' }}>
+              {subtitleParts.join('  ·  ')}
+            </div>
+          )}
         </div>
 
-        {/* All-clear banner */}
-        {allClear && (
-          <div style={{
-            display: 'flex', alignItems: 'center', gap: 12,
-            padding: '14px 16px', marginBottom: 14,
-            background: 'var(--pass-tint)', border: '1.5px solid var(--pass-border)',
-            borderRadius: 'var(--r-card)',
-          }}>
-            <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--pass)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            </div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--pass-deep)', letterSpacing: '-0.01em' }}>All clear</div>
-              <div style={{ fontSize: 12, fontWeight: 500, color: 'var(--pass-deep)', opacity: 0.75, marginTop: 1 }}>No outstanding observations across all scans</div>
-            </div>
-          </div>
-        )}
+        {/* Two-column grid */}
+        <div className="dashboard-grid">
 
-        {/* New scan hero */}
-        <button onClick={() => router.push('/scan/new')} style={{
-          width: '100%', display: 'flex', alignItems: 'center', gap: 18,
-          padding: '20px 22px',
-          background: 'var(--amber)', borderRadius: 'var(--r-card-hero)',
-          boxShadow: 'var(--shadow-hero)', border: 'none', cursor: 'pointer',
-          textAlign: 'left', marginBottom: 12, fontFamily: 'inherit',
-        }}>
-          <div style={{
-            width: 52, height: 52, borderRadius: 14,
-            background: 'rgba(255,255,255,0.2)', display: 'grid', placeItems: 'center', flexShrink: 0,
-          }}>
-            <Camera size={26} strokeWidth={2.2} color="#fff" />
-          </div>
-          <div style={{ flex: 1 }}>
-            <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.03em', color: '#fff', lineHeight: 1.1 }}>New Scan</div>
-            <div style={{ fontSize: 12.5, fontWeight: 500, color: 'rgba(255,255,255,0.75)', marginTop: 4 }}>Upload site photos to check compliance</div>
-          </div>
-          <ChevronRight size={22} strokeWidth={2.5} color="rgba(255,255,255,0.6)" />
-        </button>
-
-        {/* Stat cards */}
-        {!isEmpty && (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
-            <button onClick={() => router.push('/issues')} style={{
-              padding: '16px', background: 'var(--surf)', border: '1.5px solid var(--border-card)',
-              borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-                <TriangleAlert size={13} strokeWidth={2} color="var(--issue)" />
-                <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Outstanding</span>
-              </div>
-              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (outstandingCount ?? 0) > 0 ? 'var(--issue)' : 'var(--text)', lineHeight: 1 }}>{outstandingCount ?? '—'}</div>
-              <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>
-                {outstandingCount === null ? 'Loading…'
-                  : outstandingCount === 0 ? 'No outstanding observations'
-                  : `Observation${outstandingCount !== 1 ? 's' : ''}`}
-              </div>
-            </button>
-            <button onClick={() => router.push('/scans')} style={{
-              padding: '16px', background: 'var(--surf)', border: '1.5px solid var(--border-card)',
-              borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-                <CircleHelp size={13} strokeWidth={2} color="var(--amber)" />
-                <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Unresolved</span>
-              </div>
-              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.04em', color: (scansWithIssues ?? 0) > 0 ? 'var(--amber)' : 'var(--text)', lineHeight: 1 }}>{scansWithIssues ?? '—'}</div>
-              <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>
-                {scansWithIssues === null ? 'Loading…'
-                  : scansWithIssues === 0 ? 'All scans resolved'
-                  : `Pending scan${scansWithIssues !== 1 ? 's' : ''}`}
-              </div>
-            </button>
-          </div>
-        )}
-
-        {/* Empty state */}
-        {isEmpty ? (
-          <div style={{
-            padding: '48px 24px', textAlign: 'center',
-            background: 'var(--surf)', border: '1.5px solid var(--border-card)',
-            borderRadius: 'var(--r-card)',
-          }}>
-            <div style={{
-              width: 60, height: 60, borderRadius: 18, background: 'var(--brand-tint)',
-              display: 'grid', placeItems: 'center', margin: '0 auto 18px',
-            }}>
-              <Camera size={28} strokeWidth={1.75} color="var(--amber)" />
-            </div>
-            <div style={{ fontSize: 19, fontWeight: 700, letterSpacing: '-0.025em', color: 'var(--text)', marginBottom: 8 }}>Start your first scan</div>
-            <div style={{ fontSize: 13.5, fontWeight: 500, color: 'var(--text-muted)', lineHeight: 1.6, maxWidth: 280, margin: '0 auto 24px' }}>
-              Upload a photo of your construction site to instantly identify compliance issues.
-            </div>
+          {/* ── LEFT COLUMN ─────────────────────────────── */}
+          <div>
+            {/* New scan hero */}
             <button onClick={() => router.push('/scan/new')} style={{
-              height: 46, padding: '0 28px',
-              background: 'var(--amber)', border: 'none',
-              borderRadius: 'var(--r-control)', fontFamily: 'inherit',
-              fontSize: 14, fontWeight: 700, color: '#1B1A12',
-              cursor: 'pointer', boxShadow: 'var(--shadow-btn)',
+              width: '100%', display: 'flex', alignItems: 'center', gap: 18,
+              padding: '20px 22px',
+              background: 'var(--amber)', borderRadius: 'var(--r-card-hero)',
+              boxShadow: 'var(--shadow-hero)', border: 'none', cursor: 'pointer',
+              textAlign: 'left', marginBottom: 20, fontFamily: 'inherit',
             }}>
-              New scan
+              <div style={{
+                width: 52, height: 52, borderRadius: 14,
+                background: 'rgba(255,255,255,0.2)', display: 'grid', placeItems: 'center', flexShrink: 0,
+              }}>
+                <Camera size={26} strokeWidth={2.2} color="#fff" />
+              </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.03em', color: '#fff', lineHeight: 1.1 }}>New Scan</div>
+                <div style={{ fontSize: 12.5, fontWeight: 500, color: 'rgba(255,255,255,0.75)', marginTop: 4 }}>Upload site photos to check compliance</div>
+              </div>
+              <ChevronRight size={22} strokeWidth={2.5} color="rgba(255,255,255,0.6)" />
+            </button>
+
+            {/* Empty state */}
+            {isEmpty ? (
+              <div style={{
+                padding: '48px 24px', textAlign: 'center',
+                background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+                borderRadius: 'var(--r-card)',
+              }}>
+                <div style={{ width: 60, height: 60, borderRadius: 18, background: 'var(--brand-tint)', display: 'grid', placeItems: 'center', margin: '0 auto 18px' }}>
+                  <Camera size={28} strokeWidth={1.75} color="var(--amber)" />
+                </div>
+                <div style={{ fontSize: 19, fontWeight: 700, letterSpacing: '-0.025em', color: 'var(--text)', marginBottom: 8 }}>Start your first scan</div>
+                <div style={{ fontSize: 13.5, fontWeight: 500, color: 'var(--text-muted)', lineHeight: 1.6, maxWidth: 280, margin: '0 auto 24px' }}>
+                  Upload a photo of your construction site to instantly identify compliance issues.
+                </div>
+              </div>
+            ) : (
+              <>
+                {/* Recent activity */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '0 2px 12px' }}>
+                  <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }} />
+                  <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Recent activity</span>
+                  <button onClick={() => router.push('/scans')} style={{
+                    marginLeft: 'auto', fontWeight: 600, fontSize: 12,
+                    color: 'var(--amber)', background: 'none', border: 'none',
+                    cursor: 'pointer', fontFamily: 'inherit',
+                  }}>View all</button>
+                </div>
+                {recent.map(scan => (
+                  <ScanRow key={scan.id} scan={scan}
+                    siteName={sites.find(s => s.id === scan.site_id)?.name}
+                    onClick={() => router.push(`/scan/${scan.id}`)}
+                  />
+                ))}
+
+                {/* Sites */}
+                {sites.length > 0 && (
+                  <div style={{ marginTop: 24 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '0 2px 12px' }}>
+                      <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }} />
+                      <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Sites</span>
+                      <button onClick={() => router.push('/sites')} style={{
+                        marginLeft: 'auto', fontWeight: 600, fontSize: 12,
+                        color: 'var(--amber)', background: 'none', border: 'none',
+                        cursor: 'pointer', fontFamily: 'inherit',
+                      }}>View all</button>
+                    </div>
+                    {sites.map(site => {
+                      const outstanding = siteOutstanding(site.id)
+                      const worst = siteWorst(site.id)
+                      return (
+                        <button key={site.id} onClick={() => router.push(`/sites/${site.id}`)} style={{
+                          width: '100%', display: 'flex', alignItems: 'center', gap: 12,
+                          padding: '12px 14px', marginBottom: 8,
+                          background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+                          borderRadius: 'var(--r-card)', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left',
+                        }}>
+                          <div style={{
+                            width: 36, height: 36, borderRadius: 10, flexShrink: 0,
+                            background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
+                            display: 'grid', placeItems: 'center',
+                          }}>
+                            <Folder size={16} strokeWidth={1.75} color="var(--text-muted)" />
+                          </div>
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.01em', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {site.name}
+                            </div>
+                            {outstanding > 0 && (
+                              <div style={{ fontSize: 11.5, fontWeight: 500, color: dotColor(worst), marginTop: 2 }}>
+                                {outstanding} outstanding observation{outstanding !== 1 ? 's' : ''}
+                              </div>
+                            )}
+                            {outstanding === 0 && (
+                              <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--pass-deep)', marginTop: 2 }}>
+                                All clear
+                              </div>
+                            )}
+                          </div>
+                          <ChevronRight size={15} strokeWidth={2} color="var(--text-muted)" />
+                        </button>
+                      )
+                    })}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+
+          {/* ── RIGHT COLUMN ─────────────────────────────── */}
+          <div style={{ position: 'sticky', top: 24 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: 10 }}>
+              Needs attention
+            </div>
+
+            {/* Outstanding */}
+            <button onClick={() => router.push('/issues')} style={{
+              width: '100%', padding: '16px', marginBottom: 8,
+              background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+              borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', flexDirection: 'column',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
+                  <div style={{ width: 9, height: 9, borderRadius: '50%', background: 'var(--issue)', flexShrink: 0 }} />
+                  <span style={{ fontSize: 10.5, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Outstanding</span>
+                </div>
+                <ChevronRight size={13} strokeWidth={2} color="var(--text-muted)" />
+              </div>
+              <div style={{ fontSize: 34, fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--text)', lineHeight: 1 }}>{outstandingCount ?? '—'}</div>
+              <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>
+                {outstandingCount === null ? 'Loading…' : outstandingCount === 0 ? 'No outstanding observations' : `Observation${outstandingCount !== 1 ? 's' : ''}`}
+              </div>
+            </button>
+
+            {/* Unresolved */}
+            <button onClick={() => router.push('/scans')} style={{
+              width: '100%', padding: '16px', marginBottom: 16,
+              background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+              borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', flexDirection: 'column',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
+                  <div style={{ width: 9, height: 9, borderRadius: '50%', background: 'var(--warning)', flexShrink: 0 }} />
+                  <span style={{ fontSize: 10.5, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Unresolved</span>
+                </div>
+                <ChevronRight size={13} strokeWidth={2} color="var(--text-muted)" />
+              </div>
+              <div style={{ fontSize: 34, fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--text)', lineHeight: 1 }}>{scansWithIssues ?? '—'}</div>
+              <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 4 }}>
+                {scansWithIssues === null ? 'Loading…' : scansWithIssues === 0 ? 'All scans resolved' : `Pending scan${scansWithIssues !== 1 ? 's' : ''}`}
+              </div>
+            </button>
+
+            {/* SiteSpotter Guide */}
+            <button onClick={() => router.push('/guide')} style={{
+              width: '100%', padding: '13px 14px',
+              background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+              borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', alignItems: 'center', gap: 12,
+            }}>
+              <div style={{
+                width: 36, height: 36, borderRadius: 10, flexShrink: 0,
+                background: 'var(--brand-tint)', display: 'grid', placeItems: 'center',
+              }}>
+                <BookOpen size={17} strokeWidth={1.75} color="var(--amber)" />
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.01em' }}>SiteSpotter Guide</div>
+                <div style={{ fontSize: 11.5, fontWeight: 500, color: 'var(--text-muted)', marginTop: 1 }}>How scanning & modules work</div>
+              </div>
+              <ChevronRight size={14} strokeWidth={2} color="var(--text-muted)" />
             </button>
           </div>
-        ) : (
-          <>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '4px 2px 12px' }}>
-              <span style={{ width: 13, height: 3, borderRadius: 2, background: 'var(--amber)', flexShrink: 0 }} />
-              <span style={{ fontWeight: 600, fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Recent activity</span>
-              <button onClick={() => router.push('/scans')} style={{
-                marginLeft: 'auto', fontWeight: 600, fontSize: 12,
-                color: 'var(--amber)', background: 'none', border: 'none',
-                cursor: 'pointer', fontFamily: 'inherit',
-              }}>
-                View all
-              </button>
-            </div>
-            {recent.map(scan => (
-              <ScanRow key={scan.id} scan={scan}
-                siteName={sites.find(s => s.id === scan.site_id)?.name}
-                onClick={() => router.push(`/scan/${scan.id}`)}
-              />
-            ))}
-          </>
-        )}
+
+        </div>
       </div>
     </div>
   )

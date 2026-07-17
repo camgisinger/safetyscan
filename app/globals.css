@@ -24,3 +24,19 @@ body.select-mode .bottom-nav { display: none; }
   .desktop-sidebar { display: flex; }
   .desktop-hidden  { display: none; }
 }
+
+/* Dashboard two-column layout */
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 264px;
+    gap: 28px;
+    align-items: start;
+  }
+}
