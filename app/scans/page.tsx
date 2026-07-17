@@ -4,7 +4,8 @@ import { useRouter } from 'next/navigation'
 import { supabase, Scan } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
-import { Camera, Archive, Check, Trash2, ChevronRight, Folder, X } from 'lucide-react'
+import { Camera, Archive, Check, Trash2, ChevronRight, X } from 'lucide-react'
+import SiteIcon from '../../components/SiteIcon'
 
 type StatusFilter = 'all' | 'issues' | 'compliant' | 'pending'
 
@@ -332,7 +333,7 @@ export default function ScansPage() {
               fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7,
             }}>
-              <Folder size={15} strokeWidth={2} />
+              <SiteIcon size={15} strokeWidth={2} />
               Add to site
             </button>
             <button onClick={handleBulkArchive} disabled={archiving} style={{
@@ -405,7 +406,7 @@ export default function ScansPage() {
                     cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left',
                   }}>
                     <div style={{ width: 34, height: 34, borderRadius: 9, background: 'var(--brand-tint)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-                      <Folder size={16} strokeWidth={1.75} color="var(--amber)" />
+                      <SiteIcon size={16} strokeWidth={1.75} color="var(--amber)" />
                     </div>
                     <span style={{ fontSize: 15, fontWeight: 600, color: 'var(--text)' }}>{site.name}</span>
                   </button>

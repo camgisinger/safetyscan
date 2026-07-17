@@ -5,7 +5,8 @@ import { supabase } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
-import { House, Layers, Folder, TriangleAlert, BookOpen, LifeBuoy, LogOut, ChevronRight } from 'lucide-react'
+import { House, Layers, TriangleAlert, BookOpen, LifeBuoy, LogOut, ChevronRight } from 'lucide-react'
+import SiteIcon from '../../components/SiteIcon'
 
 function toInitials(name: string | null, email: string | null) {
   if (name) return name.trim().split(/\s+/).map(n => n[0]).join('').slice(0, 2).toUpperCase()
@@ -163,7 +164,7 @@ export default function SettingsPage() {
           <Divider />
           <NavRow icon={<Layers size={18} strokeWidth={1.75} />} label="Scans" onClick={() => router.push('/scans')} />
           <Divider />
-          <NavRow icon={<Folder size={18} strokeWidth={1.75} />} label="Sites" onClick={() => router.push('/sites')} />
+          <NavRow icon={<SiteIcon size={18} strokeWidth={1.75} />} label="Sites" onClick={() => router.push('/sites')} />
           <Divider />
           <NavRow icon={<TriangleAlert size={18} strokeWidth={1.75} />} label="Observations" badge={outstandingCount ?? 0} onClick={() => router.push('/issues')} />
         </Section>

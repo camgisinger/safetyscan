@@ -5,7 +5,8 @@ import { supabase, Scan } from '../../lib/supabase'
 import { useUser } from '../../lib/UserContext'
 import { useCount } from '../../lib/CountContext'
 import AppHeader from '../../components/AppHeader'
-import { Camera, ChevronRight, TriangleAlert, CircleHelp, BookOpen, Folder } from 'lucide-react'
+import { Camera, ChevronRight, TriangleAlert, CircleHelp, BookOpen } from 'lucide-react'
+import SiteIcon from '../../components/SiteIcon'
 
 function greeting() {
   const h = new Date().getHours()
@@ -295,7 +296,7 @@ export default function DashboardPage() {
                             background: 'var(--surf-inset)', border: '1.5px solid var(--border-card)',
                             display: 'grid', placeItems: 'center',
                           }}>
-                            <Folder size={16} strokeWidth={1.75} color="var(--text-muted)" />
+                            <SiteIcon size={16} strokeWidth={1.75} color="var(--text-muted)" />
                           </div>
                           <div style={{ flex: 1, minWidth: 0 }}>
                             <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.01em', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>

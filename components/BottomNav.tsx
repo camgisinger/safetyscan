@@ -1,14 +1,15 @@
 'use client'
 import { useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { House, Layers, Camera, Folder, Menu, X, Wrench, Settings, LifeBuoy, ChevronRight } from 'lucide-react'
+import { House, Layers, Camera, Menu, X, Wrench, Settings, LifeBuoy, ChevronRight } from 'lucide-react'
+import SiteIcon from './SiteIcon'
 
 type TabId = 'home' | 'scans' | 'sites' | 'more'
 
 const TABS: { id: TabId; label: string; Icon: any }[] = [
   { id: 'home',  label: 'Home',  Icon: House },
   { id: 'scans', label: 'Scans', Icon: Layers },
-  { id: 'sites', label: 'Sites', Icon: Folder },
+  { id: 'sites', label: 'Sites', Icon: SiteIcon },
   { id: 'more',  label: 'More',  Icon: Menu },
 ]
 

@@ -1,7 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { House, Layers, Folder, TriangleAlert, Camera, Wrench, Settings, LifeBuoy } from 'lucide-react'
+import { House, Layers, TriangleAlert, Camera, Wrench, Settings, LifeBuoy } from 'lucide-react'
+import SiteIcon from './SiteIcon'
 import { useUser } from '../lib/UserContext'
 import { useCount } from '../lib/CountContext'
 import { supabase } from '../lib/supabase'
@@ -14,7 +15,7 @@ const APP_ROOTS = ['/dashboard', '/scans', '/sites', '/issues', '/profile', '/se
 const NAV: { id: NavId; label: string; href: string; Icon: any }[] = [
   { id: 'home',   label: 'Home',   href: '/dashboard', Icon: House },
   { id: 'scans',  label: 'Scans',  href: '/scans',     Icon: Layers },
-  { id: 'sites',  label: 'Sites',  href: '/sites',     Icon: Folder },
+  { id: 'sites',  label: 'Sites',  href: '/sites',     Icon: SiteIcon },
   { id: 'issues', label: 'Issues', href: '/issues',    Icon: TriangleAlert },
   { id: 'tools',  label: 'Tools',  href: '/tools',     Icon: Wrench },
 ]
