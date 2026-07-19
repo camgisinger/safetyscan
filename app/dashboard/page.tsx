@@ -8,6 +8,9 @@ import AppHeader from '../../components/AppHeader'
 import { Camera, ChevronRight, TriangleAlert, CircleHelp, BookOpen } from 'lucide-react'
 import SiteIcon from '../../components/SiteIcon'
 
+type DashCache = { userId: string; scans: any[]; sites: { id: string; name: string }[] }
+let _dashCache: DashCache | null = null
+
 function greeting() {
   const h = new Date().getHours()
   if (h < 12) return 'Good morning'
@@ -137,14 +140,25 @@ export default function DashboardPage() {
   useEffect(() => {
     if (userLoading) return
     if (!user) { router.push('/login'); return }
-    setLoading(true)
+
+    if (_dashCache?.userId === user.id) {
+      setScans(_dashCache.scans as unknown as Scan[])
+      setSites(_dashCache.sites)
+      setLoading(false)
+    } else {
+      setLoading(true)
+    }
+
     const init = async () => {
       const [scansRes, sitesRes] = await Promise.all([
         supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, scan_modules(module, status, findings, findings_state)').order('created_at', { ascending: false }).limit(20),
         supabase.from('sites').select('id, name').order('name'),
       ])
-      setScans((scansRes.data || []) as unknown as Scan[])
-      setSites((sitesRes.data || []) as { id: string; name: string }[])
+      const scansData = (scansRes.data || []) as any[]
+      const sitesData = (sitesRes.data || []) as { id: string; name: string }[]
+      _dashCache = { userId: user.id, scans: scansData, sites: sitesData }
+      setScans(scansData as unknown as Scan[])
+      setSites(sitesData)
       setLoading(false)
     }
     init()

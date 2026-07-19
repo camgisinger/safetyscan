@@ -20,6 +20,9 @@ type Finding = {
   created_at: string
 }
 
+type IssuesCache = { userId: string; outstanding: Finding[] }
+let _issuesCache: IssuesCache | null = null
+
 function ModuleIcon({ module }: { module: string }) {
   const size = 14
   const sw = 1.75
@@ -181,7 +184,11 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
     const targets = outstanding.filter(f => selected.has(selKey(f)))
     if (!targets.length) return
     setBulkWorking(true)
-    setOutstanding(prev => prev.filter(f => !selected.has(selKey(f))))
+    setOutstanding(prev => {
+      const next = prev.filter(f => !selected.has(selKey(f)))
+      if (_issuesCache) _issuesCache = { ..._issuesCache, outstanding: next }
+      return next
+    })
     adjustCount(-targets.length)
     exitSelect()
     await Promise.all(targets.map(f =>
@@ -198,7 +205,13 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
   useEffect(() => {
     if (userLoading) return
     if (!user) { router.push('/login'); return }
-    setLoading(true)
+
+    if (_issuesCache?.userId === user.id) {
+      setOutstanding(_issuesCache.outstanding)
+      setLoading(false)
+    } else {
+      setLoading(true)
+    }
 
     const init = async () => {
       const { data: modules } = await supabase
@@ -235,6 +248,7 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
         }
       }
 
+      _issuesCache = { userId: user.id, outstanding: outArr }
       setOutstanding(outArr)
       setLoading(false)
     }
@@ -242,7 +256,11 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
   }, [user, userLoading, router])
 
   const removeOutstanding = useCallback((scanId: string, module: string, findingId: string) => {
-    setOutstanding(prev => prev.filter(f => !(f.scan_id === scanId && f.module === module && f.finding_id === findingId)))
+    setOutstanding(prev => {
+      const next = prev.filter(f => !(f.scan_id === scanId && f.module === module && f.finding_id === findingId))
+      if (_issuesCache) _issuesCache = { ..._issuesCache, outstanding: next }
+      return next
+    })
     adjustCount(-1)
   }, [adjustCount])
 

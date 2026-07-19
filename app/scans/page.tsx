@@ -9,6 +9,9 @@ import SiteIcon from '../../components/SiteIcon'
 
 type StatusFilter = 'all' | 'issues' | 'compliant' | 'pending'
 
+type ScansCache = { userId: string; scans: any[]; sites: { id: string; name: string }[] }
+let _scansCache: ScansCache | null = null
+
 function scanLeftColor(status: string) {
   if (status === 'pass') return 'var(--pass)'
   if (status === 'fail') return 'var(--issue)'
@@ -75,14 +78,25 @@ export default function ScansPage() {
   useEffect(() => {
     if (userLoading) return
     if (!user) { router.push('/login'); return }
-    setLoading(true)
+
+    if (_scansCache?.userId === user.id) {
+      setScans(_scansCache.scans as unknown as Scan[])
+      setSites(_scansCache.sites)
+      setLoading(false)
+    } else {
+      setLoading(true)
+    }
+
     const init = async () => {
       const [scansRes, sitesRes] = await Promise.all([
         supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, scan_modules(module, status, findings, findings_state)').order('created_at', { ascending: false }).limit(100),
         supabase.from('sites').select('id, name'),
       ])
-      setScans((scansRes.data || []) as unknown as Scan[])
-      setSites((sitesRes.data || []) as { id: string; name: string }[])
+      const scansData = (scansRes.data || []) as any[]
+      const sitesData = (sitesRes.data || []) as { id: string; name: string }[]
+      _scansCache = { userId: user.id, scans: scansData, sites: sitesData }
+      setScans(scansData as unknown as Scan[])
+      setSites(sitesData)
       setLoading(false)
     }
     init()
@@ -126,7 +140,11 @@ export default function ScansPage() {
     }
     if (allPaths.length) await supabase.storage.from('scan-photos').remove(allPaths)
     await supabase.from('scans').delete().in('id', Array.from(selected))
-    setScans(prev => prev.filter(s => !selected.has(s.id)))
+    setScans(prev => {
+      const next = prev.filter(s => !selected.has(s.id))
+      if (_scansCache) _scansCache = { ..._scansCache, scans: next }
+      return next
+    })
     setSelected(new Set()); setSelectMode(false); setShowDeleteConfirm(false); setDeleting(false)
   }
 

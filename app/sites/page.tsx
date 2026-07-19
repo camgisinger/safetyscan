@@ -6,6 +6,14 @@ import { useUser } from '../../lib/UserContext'
 import AppHeader from '../../components/AppHeader'
 import { MapPin, ChevronRight, FolderPlus, X, Archive } from 'lucide-react'
 
+type SitesCache = {
+  userId: string
+  sites: any[]
+  scans: any[]
+  siteOutstanding: Record<string, number>
+  sitePending: Record<string, number>
+}
+let _sitesCache: SitesCache | null = null
 
 export default function SitesPage() {
   const [sites, setSites] = useState<Site[]>([])
@@ -28,7 +36,18 @@ export default function SitesPage() {
   useEffect(() => {
     if (userLoading) return
     if (!user) { router.push('/login'); return }
-    setLoading(true)
+
+    // Show cached data instantly, then refresh in background
+    if (_sitesCache?.userId === user.id) {
+      setSites(_sitesCache.sites as unknown as Site[])
+      setScans(_sitesCache.scans as unknown as Scan[])
+      setSiteOutstanding(_sitesCache.siteOutstanding)
+      setSitePending(_sitesCache.sitePending)
+      setLoading(false)
+    } else {
+      setLoading(true)
+    }
+
     const init = async () => {
       const [sitesRes, scansRes, modulesRes] = await Promise.all([
         supabase.from('sites').select('id, name, location, archived').order('name'),
@@ -36,8 +55,6 @@ export default function SitesPage() {
         supabase.from('scan_modules').select('scan_id, findings, findings_state, scans!inner(site_id)'),
       ])
       const scansData = (scansRes.data || []) as any[]
-      setSites((sitesRes.data || []) as unknown as Site[])
-      setScans(scansData as unknown as Scan[])
       const scanSiteMap = Object.fromEntries(scansData.map((s: any) => [s.id, s.site_id]))
       const outstanding: Record<string, number> = {}
       const pendingScans: Record<string, Set<string>> = {}
@@ -60,8 +77,12 @@ export default function SitesPage() {
           pendingScans[siteId].add(scanId)
         }
       }
+      const sitePendingCounts = Object.fromEntries(Object.entries(pendingScans).map(([k, v]) => [k, v.size]))
+      _sitesCache = { userId: user.id, sites: sitesRes.data || [], scans: scansData, siteOutstanding: outstanding, sitePending: sitePendingCounts }
+      setSites((sitesRes.data || []) as unknown as Site[])
+      setScans(scansData as unknown as Scan[])
       setSiteOutstanding(outstanding)
-      setSitePending(Object.fromEntries(Object.entries(pendingScans).map(([k, v]) => [k, v.size])))
+      setSitePending(sitePendingCounts)
       setLoading(false)
     }
     init()
