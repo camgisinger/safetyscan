@@ -235,6 +235,46 @@ export default function DashboardPage() {
               <ChevronRight size={22} strokeWidth={2.5} color="rgba(255,255,255,0.6)" />
             </button>
 
+            {/* Stat cards — mobile only (side by side) */}
+            <div className="mobile-stat-row">
+              <button onClick={() => router.push('/issues')} style={{
+                flex: 1, padding: '13px 14px',
+                background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+                borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
+                display: 'flex', flexDirection: 'column',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--issue)', flexShrink: 0 }} />
+                    <span style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Outstanding</span>
+                  </div>
+                  <ChevronRight size={12} strokeWidth={2} color="var(--text-muted)" />
+                </div>
+                <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--text)', lineHeight: 1 }}>{outstandingCount ?? '—'}</div>
+                <div style={{ fontSize: 11, fontWeight: 500, color: 'var(--text-muted)', marginTop: 3 }}>
+                  {outstandingCount === 0 ? 'All clear' : `Observation${outstandingCount !== 1 ? 's' : ''}`}
+                </div>
+              </button>
+              <button onClick={() => router.push('/scans')} style={{
+                flex: 1, padding: '13px 14px',
+                background: 'var(--surf)', border: '1.5px solid var(--border-card)',
+                borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
+                display: 'flex', flexDirection: 'column',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--warning)', flexShrink: 0 }} />
+                    <span style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Unresolved</span>
+                  </div>
+                  <ChevronRight size={12} strokeWidth={2} color="var(--text-muted)" />
+                </div>
+                <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--text)', lineHeight: 1 }}>{scansWithIssues ?? '—'}</div>
+                <div style={{ fontSize: 11, fontWeight: 500, color: 'var(--text-muted)', marginTop: 3 }}>
+                  {scansWithIssues === 0 ? 'All resolved' : `Pending scan${scansWithIssues !== 1 ? 's' : ''}`}
+                </div>
+              </button>
+            </div>
+
             {/* Empty state */}
             {isEmpty ? (
               <div style={{
@@ -325,12 +365,12 @@ export default function DashboardPage() {
 
           {/* ── RIGHT COLUMN ─────────────────────────────── */}
           <div style={{ position: 'sticky', top: 24 }}>
-            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: 10 }}>
+            <div className="desktop-needs-attention" style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: 10 }}>
               Needs attention
             </div>
 
             {/* Outstanding */}
-            <button onClick={() => router.push('/issues')} style={{
+            <button className="desktop-stat-card" onClick={() => router.push('/issues')} style={{
               width: '100%', padding: '16px', marginBottom: 8,
               background: 'var(--surf)', border: '1.5px solid var(--border-card)',
               borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
@@ -350,7 +390,7 @@ export default function DashboardPage() {
             </button>
 
             {/* Unresolved */}
-            <button onClick={() => router.push('/scans')} style={{
+            <button className="desktop-stat-card" onClick={() => router.push('/scans')} style={{
               width: '100%', padding: '16px', marginBottom: 16,
               background: 'var(--surf)', border: '1.5px solid var(--border-card)',
               borderRadius: 'var(--r-card)', textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',

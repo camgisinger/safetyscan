@@ -40,3 +40,14 @@ body.select-mode .bottom-nav { display: none; }
     align-items: start;
   }
 }
+
+/* Stat cards: shown inline on mobile, hidden on desktop (desktop right column has them) */
+.mobile-stat-row { display: flex; gap: 10px; margin-bottom: 20px; }
+.desktop-stat-card { display: none !important; }
+.desktop-needs-attention { display: none !important; }
+
+@media (min-width: 1024px) {
+  .mobile-stat-row { display: none; }
+  .desktop-stat-card { display: flex !important; }
+  .desktop-needs-attention { display: block !important; }
+}
