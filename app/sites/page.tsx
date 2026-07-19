@@ -38,11 +38,12 @@ export default function SitesPage() {
     if (!user) { router.push('/login'); return }
 
     // Show cached data instantly, then refresh in background
-    if (_sitesCache?.userId === user.id) {
-      setSites(_sitesCache.sites as unknown as Site[])
-      setScans(_sitesCache.scans as unknown as Scan[])
-      setSiteOutstanding(_sitesCache.siteOutstanding)
-      setSitePending(_sitesCache.sitePending)
+    const sitesCached = _sitesCache
+    if (sitesCached && sitesCached.userId === user.id) {
+      setSites(sitesCached.sites as unknown as Site[])
+      setScans(sitesCached.scans as unknown as Scan[])
+      setSiteOutstanding(sitesCached.siteOutstanding)
+      setSitePending(sitesCached.sitePending)
       setLoading(false)
     } else {
       setLoading(true)

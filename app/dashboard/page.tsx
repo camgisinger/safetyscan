@@ -141,9 +141,10 @@ export default function DashboardPage() {
     if (userLoading) return
     if (!user) { router.push('/login'); return }
 
-    if (_dashCache?.userId === user.id) {
-      setScans(_dashCache.scans as unknown as Scan[])
-      setSites(_dashCache.sites)
+    const dashCached = _dashCache
+    if (dashCached && dashCached.userId === user.id) {
+      setScans(dashCached.scans as unknown as Scan[])
+      setSites(dashCached.sites)
       setLoading(false)
     } else {
       setLoading(true)

@@ -206,8 +206,9 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
     if (userLoading) return
     if (!user) { router.push('/login'); return }
 
-    if (_issuesCache?.userId === user.id) {
-      setOutstanding(_issuesCache.outstanding)
+    const issuesCached = _issuesCache
+    if (issuesCached && issuesCached.userId === user.id) {
+      setOutstanding(issuesCached.outstanding)
       setLoading(false)
     } else {
       setLoading(true)

@@ -79,9 +79,10 @@ export default function ScansPage() {
     if (userLoading) return
     if (!user) { router.push('/login'); return }
 
-    if (_scansCache?.userId === user.id) {
-      setScans(_scansCache.scans as unknown as Scan[])
-      setSites(_scansCache.sites)
+    const scansCached = _scansCache
+    if (scansCached && scansCached.userId === user.id) {
+      setScans(scansCached.scans as unknown as Scan[])
+      setSites(scansCached.sites)
       setLoading(false)
     } else {
       setLoading(true)
