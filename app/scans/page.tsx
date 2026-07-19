@@ -78,7 +78,7 @@ export default function ScansPage() {
     setLoading(true)
     const init = async () => {
       const [scansRes, sitesRes] = await Promise.all([
-        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, scan_modules(module, status, findings, findings_state)').order('created_at', { ascending: false }).limit(200),
+        supabase.from('scans').select('id, status, work_type, created_at, site_id, photo_url, photo_urls, scan_modules(module, status, findings, findings_state)').order('created_at', { ascending: false }).limit(100),
         supabase.from('sites').select('id, name'),
       ])
       setScans((scansRes.data || []) as unknown as Scan[])
@@ -113,16 +113,18 @@ export default function ScansPage() {
 
   const handleBulkDelete = async () => {
     setDeleting(true)
+    const allPaths: string[] = []
     for (const id of Array.from(selected)) {
       const scan = scans.find(s => s.id === id)
       if (scan) {
         const urls = scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])
         for (const url of urls) {
           const path = url.split('/scan-photos/')[1]
-          if (path) await supabase.storage.from('scan-photos').remove([path])
+          if (path) allPaths.push(path)
         }
       }
     }
+    if (allPaths.length) await supabase.storage.from('scan-photos').remove(allPaths)
     await supabase.from('scans').delete().in('id', Array.from(selected))
     setScans(prev => prev.filter(s => !selected.has(s.id)))
     setSelected(new Set()); setSelectMode(false); setShowDeleteConfirm(false); setDeleting(false)
@@ -149,8 +151,20 @@ export default function ScansPage() {
   ]
 
   if (loading) return (
-    <div style={{ minHeight: '100svh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ width: 32, height: 32, border: '2px solid var(--border-card)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
+    <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
+      <AppHeader title="Scans" />
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '12px 18px 0' }}>
+        {/* Filter chip skeletons */}
+        <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+          {[72, 100, 80, 70, 72].map((w, i) => (
+            <div key={i} style={{ width: w, height: 32, borderRadius: 999, background: 'var(--surf-inset)', animation: `pulse 1.4s ease-in-out ${i * 0.06}s infinite`, flexShrink: 0 }} />
+          ))}
+        </div>
+        {/* Scan row skeletons */}
+        {[0, 1, 2, 3, 4, 5].map(i => (
+          <div key={i} style={{ height: 70, borderRadius: 'var(--r-card)', background: 'var(--surf-inset)', marginBottom: 8, animation: `pulse 1.4s ease-in-out ${i * 0.06}s infinite` }} />
+        ))}
+      </div>
     </div>
   )
 

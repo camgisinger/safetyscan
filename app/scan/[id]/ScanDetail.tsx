@@ -630,9 +630,9 @@ export default function ScanDetail({ id }: { id: string }) {
     if (!currentUser) return
     const init = async () => {
       const [scanRes, sitesRes, modulesRes] = await Promise.all([
-        supabase.from('scans').select('*').eq('id', id).single(),
+        supabase.from('scans').select('id, work_type, status, notes, site_id, share_token, share_enabled, created_at, photo_url, photo_urls').eq('id', id).single(),
         supabase.from('sites').select('id, name').eq('archived', false).order('name', { ascending: true }),
-        supabase.from('scan_modules').select('*').eq('scan_id', id),
+        supabase.from('scan_modules').select('id, module, status, findings, findings_state, legislation, summary, follow_up_questions').eq('scan_id', id),
       ])
       if (scanRes.error) { setError(`Could not load scan: ${scanRes.error.message}`); setLoading(false); return }
       if (!scanRes.data) { setError('Scan not found.'); setLoading(false); return }
@@ -691,7 +691,8 @@ export default function ScanDetail({ id }: { id: string }) {
   const handleDelete = async () => {
     if (!scan) return
     const urls = scan.photo_urls || (scan.photo_url ? [scan.photo_url] : [])
-    for (const url of urls) { const path = url.split('/scan-photos/')[1]; if (path) await supabase.storage.from('scan-photos').remove([path]) }
+    const paths = urls.map((u: string) => u.split('/scan-photos/')[1]).filter(Boolean)
+    if (paths.length) await supabase.storage.from('scan-photos').remove(paths)
     await supabase.from('scans').delete().eq('id', id); router.push('/dashboard')
   }
 
@@ -733,12 +734,15 @@ export default function ScanDetail({ id }: { id: string }) {
     try {
       const newUrls: string[] = []
       if (currentUser && extraPhotos.length > 0) {
-        for (let i = 0; i < extraPhotos.length; i++) {
-          const blob = await fetch(extraPhotos[i].dataUrl).then(r => r.blob())
-          const fileName = `${currentUser.id}/${Date.now()}-extra-${i}.jpg`
-          const { error: uploadError } = await supabase.storage.from('scan-photos').upload(fileName, blob, { contentType: 'image/jpeg', upsert: false })
-          if (!uploadError) { const { data: urlData } = supabase.storage.from('scan-photos').getPublicUrl(fileName); newUrls.push(urlData.publicUrl) }
-        }
+        const uploaded = await Promise.all(extraPhotos.map(async (p, i) => {
+          const blob = await fetch(p.dataUrl).then(r => r.blob())
+          const fileName = `${currentUser.id}/extra-${id}-${i}-${Date.now()}.jpg`
+          const { error } = await supabase.storage.from('scan-photos').upload(fileName, blob, { contentType: 'image/jpeg', upsert: false })
+          if (error) return null
+          const { data: urlData } = supabase.storage.from('scan-photos').getPublicUrl(fileName)
+          return urlData.publicUrl
+        }))
+        newUrls.push(...(uploaded.filter(Boolean) as string[]))
       }
       const updatedUrls = newUrls.length > 0 ? [...photoUrls, ...newUrls] : photoUrls
       if (newUrls.length > 0) { await supabase.from('scans').update({ photo_urls: updatedUrls }).eq('id', id); setPhotoUrls(updatedUrls) }
@@ -748,7 +752,7 @@ export default function ScanDetail({ id }: { id: string }) {
       const res = await fetch('/api/analyse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'include', body: JSON.stringify({ scan_id: id, modules: [module], messages: [{ role: 'user', content: userContent }], searchQuery: [scan.work_type, additionalInfo].filter(Boolean).join(' '), existing_findings: activeModData?.findings || [], findings_state: activeModData?.findings_state || {} }) })
       const data = await res.json()
       if (!res.ok || data.error) throw new Error(data.error || 'Analysis failed')
-      const { data: freshModules } = await supabase.from('scan_modules').select('*').eq('scan_id', id)
+      const { data: freshModules } = await supabase.from('scan_modules').select('id, module, status, findings, findings_state, legislation, summary, follow_up_questions').eq('scan_id', id)
       if (freshModules) {
         const modOrder = ['safety', 'quality', 'environmental']
         setScanModules(freshModules.sort((a: any, b: any) => modOrder.indexOf(a.module) - modOrder.indexOf(b.module)))

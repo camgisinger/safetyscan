@@ -52,9 +52,6 @@ export function CountProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!user) return
     refreshCount()
-    const onVisible = () => { if (document.visibilityState === 'visible') refreshCount() }
-    document.addEventListener('visibilitychange', onVisible)
-    return () => document.removeEventListener('visibilitychange', onVisible)
   }, [user, refreshCount])
 
   const adjustCount = useCallback((delta: number) => {

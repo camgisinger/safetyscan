@@ -247,8 +247,10 @@ function IssuesContent({ selectModeFromParent, onExitSelect }: { selectModeFromP
   }, [adjustCount])
 
   if (loading) return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 48 }}>
-      <div style={{ width: 28, height: 28, border: '2px solid var(--border-card)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
+    <div style={{ maxWidth: 720, margin: '0 auto', padding: '14px 18px' }}>
+      {[0, 1, 2, 3].map(i => (
+        <div key={i} style={{ height: 118, borderRadius: 'var(--r-card)', background: 'var(--surf-inset)', marginBottom: 8, animation: `pulse 1.4s ease-in-out ${i * 0.08}s infinite` }} />
+      ))}
     </div>
   )
 
@@ -430,7 +432,7 @@ export default function IssuesPage() {
           {selectMode ? 'Done' : 'Select'}
         </button>
       } />
-      <Suspense fallback={<div style={{ padding: 40, textAlign: 'center' }}><div style={{ width: 28, height: 28, border: '2px solid var(--border-card)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite', margin: '0 auto' }} /></div>}>
+      <Suspense fallback={null}>
         <IssuesContent selectModeFromParent={selectMode} onExitSelect={() => setSelectMode(false)} />
       </Suspense>
     </div>

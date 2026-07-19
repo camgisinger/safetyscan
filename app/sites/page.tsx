@@ -32,7 +32,7 @@ export default function SitesPage() {
     const init = async () => {
       const [sitesRes, scansRes, modulesRes] = await Promise.all([
         supabase.from('sites').select('id, name, location, archived').order('name'),
-        supabase.from('scans').select('id, site_id, status, created_at'),
+        supabase.from('scans').select('id, site_id'),
         supabase.from('scan_modules').select('scan_id, findings, findings_state, scans!inner(site_id)'),
       ])
       const scansData = (scansRes.data || []) as any[]
@@ -87,8 +87,13 @@ export default function SitesPage() {
   const archivedCount = sites.filter(s => s.archived).length
 
   if (loading) return (
-    <div style={{ minHeight: '100svh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ width: 32, height: 32, border: '2px solid var(--border-card)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
+    <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
+      <AppHeader title="Sites" />
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '12px 18px 0' }}>
+        {[0, 1, 2].map(i => (
+          <div key={i} style={{ height: 128, borderRadius: 'var(--r-card)', background: 'var(--surf-inset)', marginBottom: 10, animation: `pulse 1.4s ease-in-out ${i * 0.1}s infinite` }} />
+        ))}
+      </div>
     </div>
   )
 

@@ -93,10 +93,12 @@ export default function SiteDetail({ id }: { id: string }) {
     setDeleting(true)
     if (deleteWithScans) {
       const { data: allScans } = await supabase.from('scans').select('id, photo_urls, photo_url').eq('site_id', id)
+      const allPaths: string[] = []
       for (const s of allScans || []) {
         const urls = (s as any).photo_urls || ((s as any).photo_url ? [(s as any).photo_url] : [])
-        for (const url of urls) { const p = url.split('/scan-photos/')[1]; if (p) await supabase.storage.from('scan-photos').remove([p]) }
+        for (const url of urls) { const p = url.split('/scan-photos/')[1]; if (p) allPaths.push(p) }
       }
+      if (allPaths.length) await supabase.storage.from('scan-photos').remove(allPaths)
       await supabase.from('scans').delete().eq('site_id', id)
     } else {
       await supabase.from('scans').update({ site_id: null }).eq('site_id', id)
@@ -106,8 +108,16 @@ export default function SiteDetail({ id }: { id: string }) {
   }
 
   if (loading) return (
-    <div style={{ minHeight: '100svh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ width: 32, height: 32, border: '2px solid var(--border-card)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
+    <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
+      <AppHeader variant="detail" onBack={() => router.back()} />
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '16px 18px' }}>
+        {/* Site header skeleton */}
+        <div style={{ height: 24, width: '50%', borderRadius: 8, background: 'var(--surf-inset)', animation: 'pulse 1.4s ease-in-out infinite', marginBottom: 12 }} />
+        <div style={{ height: 80, borderRadius: 'var(--r-card)', background: 'var(--surf-inset)', animation: 'pulse 1.4s ease-in-out infinite 0.05s', marginBottom: 16 }} />
+        {[0, 1, 2].map(i => (
+          <div key={i} style={{ height: 70, borderRadius: 'var(--r-card)', background: 'var(--surf-inset)', marginBottom: 8, animation: `pulse 1.4s ease-in-out ${i * 0.08}s infinite` }} />
+        ))}
+      </div>
     </div>
   )
 

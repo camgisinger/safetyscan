@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 body {
   background: var(--bg);
   color: var(--text);

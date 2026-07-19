@@ -151,8 +151,38 @@ export default function DashboardPage() {
   }, [user, userLoading, router])
 
   if (loading) return (
-    <div style={{ minHeight: '100svh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ width: 32, height: 32, border: '2px solid var(--border-card)', borderTopColor: 'var(--amber)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
+    <div className="page-fade-in" style={{ minHeight: '100svh', background: 'var(--bg)', paddingBottom: 96 }}>
+      <AppHeader />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 18px' }}>
+        {/* Greeting skeleton */}
+        <div style={{ padding: '20px 0 20px' }}>
+          <div style={{ width: 130, height: 11, borderRadius: 6, background: 'var(--surf-inset)', animation: 'pulse 1.4s ease-in-out infinite', marginBottom: 10 }} />
+          <div style={{ width: '55%', height: 26, borderRadius: 8, background: 'var(--surf-inset)', animation: 'pulse 1.4s ease-in-out infinite 0.1s' }} />
+        </div>
+        <div className="dashboard-grid">
+          <div>
+            {/* Hero button skeleton */}
+            <div style={{ height: 92, borderRadius: 'var(--r-card-hero)', background: 'var(--surf-inset)', animation: 'pulse 1.4s ease-in-out infinite', marginBottom: 20 }} />
+            {/* Stat cards skeleton (mobile) */}
+            <div className="mobile-stat-row">
+              {[0, 1].map(i => (
+                <div key={i} style={{ flex: 1, height: 82, borderRadius: 'var(--r-card)', background: 'var(--surf-inset)', animation: `pulse 1.4s ease-in-out ${i * 0.1}s infinite` }} />
+              ))}
+            </div>
+            {/* Scan row skeletons */}
+            {[0, 1, 2, 3].map(i => (
+              <div key={i} style={{ height: 70, borderRadius: 'var(--r-card)', background: 'var(--surf-inset)', marginBottom: 8, animation: `pulse 1.4s ease-in-out ${i * 0.07}s infinite` }} />
+            ))}
+          </div>
+          <div>
+            {/* Right column skeleton */}
+            <div style={{ height: 14, width: 110, borderRadius: 6, background: 'var(--surf-inset)', animation: 'pulse 1.4s ease-in-out infinite', marginBottom: 10 }} />
+            {[0, 1].map(i => (
+              <div key={i} style={{ height: 90, borderRadius: 'var(--r-card)', background: 'var(--surf-inset)', marginBottom: 8, animation: `pulse 1.4s ease-in-out ${i * 0.1}s infinite` }} />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   )
 

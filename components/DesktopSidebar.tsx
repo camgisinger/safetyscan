@@ -1,11 +1,9 @@
 'use client'
-import { useState, useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { House, Layers, TriangleAlert, Camera, Wrench, Settings, LifeBuoy } from 'lucide-react'
 import SiteIcon from './SiteIcon'
 import { useUser } from '../lib/UserContext'
 import { useCount } from '../lib/CountContext'
-import { supabase } from '../lib/supabase'
 import ThemeToggle from './ThemeToggle'
 
 type NavId = 'home' | 'scans' | 'sites' | 'issues' | 'tools' | 'settings' | 'support'
@@ -52,18 +50,11 @@ function activeId(pathname: string): NavId | null {
 export default function DesktopSidebar() {
   const pathname = usePathname()
   const router   = useRouter()
-  const { user } = useUser()
+  const { user, companyName } = useUser()
   const { outstandingCount } = useCount()
 
   const fullName = user?.user_metadata?.full_name ?? null
   const email    = user?.email ?? null
-  const [companyName, setCompanyName] = useState<string | null>(null)
-
-  useEffect(() => {
-    if (!user) return
-    supabase.from('profiles').select('company_name').eq('id', user.id).single()
-      .then(({ data }) => { if (data?.company_name) setCompanyName(data.company_name) })
-  }, [user])
 
   const active = activeId(pathname)
 
